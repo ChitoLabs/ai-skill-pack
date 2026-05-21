@@ -1,0 +1,57 @@
+---
+name: github-issues
+description: "Trigger: github-issues, Create, update, and manage GitHub issues using MCP tools. Preserve source workflow with portable agent instructions."
+license: Apache-2.0
+metadata:
+  author: LCubero
+  version: 0.1
+  skills_sh_url: "https://www.skills.sh/github/awesome-copilot/github-issues"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/github-issues"
+---
+
+## Activation Contract
+
+Use this skill when the user request matches `github-issues` or the preserved source description: Create, update, and manage GitHub issues using MCP tools. Use this skill when users want to create bug reports, feature requests, or task issues, update existing issues, add labels/assignees/milestones, set issue fields (dates, priority, custom fields), set issue types, manage issue workflows, link issues, add dependencies, or track blocked-by/blocking relationships. Triggers on requests like "create an issue", "file a bug", "request a feature", "update issue X", "set the priority", "set the start date", "link issues", "add dependency", "blocked by", "blocking", or any GitHub issue management task.
+
+Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
+
+## Hard Rules
+
+- Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
+- Prefer current official documentation or source retrieval when the preserved workflow says knowledge may be outdated.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+
+## Decision Gates
+
+| Condition | Action |
+|---|---|
+| Relevant companion file exists | Read it before implementing that part of the workflow. |
+| Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
+| The task could modify external systems | Explain the action and wait for user approval before execution. |
+| Preserved guidance conflicts with current official docs | Prefer current docs and report the discrepancy. |
+
+## Execution Steps
+
+1. Match the user request to the preserved source workflow in `references/source-skill.md`.
+2. Inspect any local companion reference needed for the specific task.
+3. Verify prerequisites, credentials, project context, and safety boundaries before tool use.
+4. Execute the smallest correct workflow using the host runtime's available tools.
+5. Validate the result with the checks named in the preserved source guidance or with an explicit manual verification note.
+
+## Output Contract
+
+Return the completed action, files or commands used, verification evidence, blockers, and any next step the user must approve. If the task is blocked, state the exact missing prerequisite or unsafe condition.
+
+## References
+
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/dependencies.md` - preserved source companion file.
+- `references/images.md` - preserved source companion file.
+- `references/issue-fields.md` - preserved source companion file.
+- `references/issue-types.md` - preserved source companion file.
+- `references/projects.md` - preserved source companion file.
+- `references/search.md` - preserved source companion file.
+- `references/sub-issues.md` - preserved source companion file.
+- `references/templates.md` - preserved source companion file.

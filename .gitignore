@@ -1,0 +1,16 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local agent/runtime state
+.ld9/
+.atl/
+.pi/
+
+# Dependency/build output
+node_modules/
+dist/
+build/
+coverage/

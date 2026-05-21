@@ -1,0 +1,71 @@
+---
+name: vue-best-practices
+description: "Trigger: vue-best-practices, MUST be used for Vue.js tasks. Preserve source workflow with portable agent instructions."
+license: MIT
+metadata:
+  author: github.com/vuejs-ai
+  version: 18.0.0
+  skills_sh_url: "https://www.skills.sh/hyf0/vue-skills/vue-best-practices"
+  github_url: "https://github.com/xingyu4j/skills/tree/HEAD/skills/vue-best-practices"
+---
+
+## Activation Contract
+
+Use this skill when the user request matches `vue-best-practices` or the preserved source description: MUST be used for Vue.js tasks. Strongly recommends Composition API with `<script setup>` and TypeScript as the standard approach. Covers Vue 3, SSR, Volar, vue-tsc. Load for any Vue, .vue files, Vue Router, Pinia, or Vite with Vue work. ALWAYS use Composition API unless the project explicitly requires Options API.
+
+Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
+
+## Hard Rules
+
+- Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
+- Prefer current official documentation or source retrieval when the preserved workflow says knowledge may be outdated.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+
+## Decision Gates
+
+| Condition | Action |
+|---|---|
+| Relevant companion file exists | Read it before implementing that part of the workflow. |
+| Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
+| The task could modify external systems | Explain the action and wait for user approval before execution. |
+| Preserved guidance conflicts with current official docs | Prefer current docs and report the discrepancy. |
+
+## Execution Steps
+
+1. Match the user request to the preserved source workflow in `references/source-skill.md`.
+2. Inspect any local companion reference needed for the specific task.
+3. Verify prerequisites, credentials, project context, and safety boundaries before tool use.
+4. Execute the smallest correct workflow using the host runtime's available tools.
+5. Validate the result with the checks named in the preserved source guidance or with an explicit manual verification note.
+
+## Output Contract
+
+Return the completed action, files or commands used, verification evidence, blockers, and any next step the user must approve. If the task is blocked, state the exact missing prerequisite or unsafe condition.
+
+## References
+
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/animation-class-based-technique.md` - preserved source companion file.
+- `references/animation-state-driven-technique.md` - preserved source companion file.
+- `references/component-async.md` - preserved source companion file.
+- `references/component-data-flow.md` - preserved source companion file.
+- `references/component-fallthrough-attrs.md` - preserved source companion file.
+- `references/component-keep-alive.md` - preserved source companion file.
+- `references/component-slots.md` - preserved source companion file.
+- `references/component-suspense.md` - preserved source companion file.
+- `references/component-teleport.md` - preserved source companion file.
+- `references/component-transition-group.md` - preserved source companion file.
+- `references/component-transition.md` - preserved source companion file.
+- `references/composables.md` - preserved source companion file.
+- `references/directives.md` - preserved source companion file.
+- `references/perf-avoid-component-abstraction-in-lists.md` - preserved source companion file.
+- `references/perf-v-once-v-memo-directives.md` - preserved source companion file.
+- `references/perf-virtualize-large-lists.md` - preserved source companion file.
+- `references/plugins.md` - preserved source companion file.
+- `references/reactivity.md` - preserved source companion file.
+- `references/render-functions.md` - preserved source companion file.
+- `references/sfc.md` - preserved source companion file.
+- `references/state-management.md` - preserved source companion file.
+- `references/updated-hook-performance.md` - preserved source companion file.
