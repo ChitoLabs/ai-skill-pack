@@ -1,8 +1,22 @@
 # AI Skill Pack
 
-Portable, reviewed AI skills by ChitoLabs for agents that understand folder-based skills with a `SKILL.md` entry point.
+Portable, reviewed AI skills collected and adapted by ChitoLabs for agents that understand folder-based skills with a `SKILL.md` entry point.
 
 This repository publishes the curated general pack: **454 skills** reviewed, adapted, formatted, and prepared for use across multiple AI coding-agent environments.
+
+## Attribution Notice
+
+This repository is a curated compilation and adaptation of skills from their original authors and upstream sources. ChitoLabs did not author the individual skills unless explicitly stated inside a skill folder.
+
+The work in this repository focuses on packaging and stewardship:
+
+- collecting the skills into a consistent folder-based format;
+- adapting wording and structure so the skills are more generic across agent runtimes;
+- formatting and organizing references for easier review;
+- checking publication boundaries, duplicates, and security-sensitive content;
+- preserving links back to the original sources and authors wherever available.
+
+Credit for each individual skill belongs to its original author or upstream project. Source links are preserved in [`docs/source-list.md`](docs/source-list.md), [`docs/skills-catalog.md`](docs/skills-catalog.md), and [`manifests/skills-catalog.json`](manifests/skills-catalog.json).
 
 ## What Was Done
 
@@ -54,4 +68,6 @@ The separate Microsoft Fabric candidate root is not included. The general pack i
 
 ## License
 
-This staging repo uses the MIT license for ChitoLabs packaging metadata and generated documentation. Individual skills may originate from upstream sources. Review upstream licenses and terms where applicable before redistribution or production use.
+This staging repo uses the MIT license for ChitoLabs packaging metadata, generated documentation, curation work, formatting changes, and repository structure.
+
+Individual skills remain credited to their original authors and may carry their own upstream licenses, notices, or terms. Review the linked upstream sources before redistribution or production use.

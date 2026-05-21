@@ -19,3 +19,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Additional attribution notice:
+
+This repository is a curated compilation and adaptation of skills from their
+original authors and upstream sources. ChitoLabs did not author the individual
+skills unless explicitly stated inside a skill folder.
+
+The MIT license above applies to ChitoLabs packaging metadata, generated
+documentation, curation work, formatting changes, and repository structure.
+Individual skills may carry their own upstream licenses, notices, or terms.
+Credit for each individual skill belongs to its original author or upstream
+project. Source links are preserved in the repository documentation and
+manifests, including docs/source-list.md, docs/skills-catalog.md, and
+manifests/skills-catalog.json.
