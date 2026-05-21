@@ -18,10 +18,21 @@ This repository publishes the curated general pack: **454 skills** reviewed, ada
 | Path | Purpose |
 | --- | --- |
 | `skills/` | Final curated skill folders. Each skill has a `SKILL.md` entry point. |
-| `docs/skills-catalog.md` | Human-readable catalog of the published skills. |
+| [`docs/skills-catalog.md`](docs/skills-catalog.md) | GitHub-ready catalog of all 454 published skills, grouped by category with intended use and source links. |
 | `docs/audit-summary.md` | Summary of the verified source state and publication boundaries. |
 | `docs/what-was-done.md` | Short operational summary of the packaging work. |
+| [`manifests/skills-catalog.json`](manifests/skills-catalog.json) | Structured catalog for automation, including skill name, path, category, intended use, and source URL. |
 | `manifests/` | Generated lists for review, source tracing, and automation. |
+
+## Skills Catalog
+
+Use [`docs/skills-catalog.md`](docs/skills-catalog.md) to browse the pack by practical category before copying skills into your agent runtime. The catalog includes every published skill and answers three review questions:
+
+- **What is this skill for?** Each entry summarizes the intended use from its `SKILL.md`.
+- **Where did it come from?** Each entry links back to its source URL.
+- **How is it grouped?** Skills are organized into categories such as AI/LLM, Backend & APIs, Cloud & DevOps, Design & Frontend, Mobile, Security & Auth, Testing & QA, and Workflow & Automation.
+
+For tooling, use [`manifests/skills-catalog.json`](manifests/skills-catalog.json), which contains the same reviewed catalog as structured data.
 
 ## How To Use
 
