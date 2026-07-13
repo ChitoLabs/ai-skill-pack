@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-21T19:30:29.462Z",
+  "generated_at": "2026-07-13T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
-  "total_skills": 454,
-  "expected_published_skills": 454,
+  "total_skills": 463,
+  "expected_published_skills": 463,
   "categories": {
     "Accessibility & Quality": 15,
     "AI/LLM": 25,
@@ -10,21 +10,21 @@
     "Cloud & DevOps": 39,
     "Data & BI": 29,
     "Databases": 22,
-    "Design & Frontend": 66,
-    "Docs & Content": 24,
+    "Design & Frontend": 69,
+    "Docs & Content": 26,
     "E-commerce & Marketing": 30,
     "Frameworks & Runtimes": 37,
     "GitHub & Collaboration": 9,
     "Mobile": 36,
     "Security & Auth": 37,
     "Testing & QA": 19,
-    "Workflow & Automation": 33
+    "Workflow & Automation": 37
   },
   "validation": {
     "skill_md_count_matches_expected": true,
-    "entries_with_category": 454,
+    "entries_with_category": 463,
     "entries_missing_category": 0,
-    "entries_with_source_url": 454,
+    "entries_with_source_url": 463,
     "entries_missing_source_url": 0,
     "missing_source_url_skills": []
   },
@@ -61,8 +61,8 @@
       "path": "skills/adapt/",
       "source_url": "https://skills.sh/educlopez/ui-craft/adapt",
       "source_kind": "source-list",
-      "description": "Responsive pass — mobile, tablet, desktop, touch, safe areas.",
-      "intended_use": "Responsive pass — mobile, tablet, desktop, touch, safe areas. Invoke when the user asks for adapt on their UI, or mentions 'adapt' alongside design / UI / frontend work.",
+      "description": "Responsive pass - mobile, tablet, desktop, touch, safe areas.",
+      "intended_use": "Responsive pass - mobile, tablet, desktop, touch, safe areas. Invoke when the user asks for adapt on their UI, or mentions 'adapt' alongside design / UI / frontend work.",
       "category": "Design & Frontend"
     },
     {
@@ -273,6 +273,15 @@
       "category": "Cloud & DevOps"
     },
     {
+      "name": "ask-matt",
+      "path": "skills/ask-matt/",
+      "source_url": "https://www.skills.sh/mattpocock/skills/ask-matt",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: ask matt, choose workflow, skill router. Route work through idea, research, planning, implementation, review, and learning flows.",
+      "intended_use": "Trigger: ask matt, choose workflow, skill router. Route work through idea, research, planning, implementation, review, and learning flows.",
+      "category": "Workflow & Automation"
+    },
+    {
       "name": "aspnet-core",
       "path": "skills/aspnet-core/",
       "source_url": "https://skills.sh/openai/skills/aspnet-core",
@@ -379,6 +388,15 @@
       "description": "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks.",
       "intended_use": "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks.",
       "category": "Docs & Content"
+    },
+    {
+      "name": "baoyu-infographic",
+      "path": "skills/baoyu-infographic/",
+      "source_url": "https://www.skills.sh/jimliu/baoyu-skills/baoyu-infographic",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: baoyu-infographic, infographic, visual summary, 信息图, 可视化. Generate structured prompts for raster infographic creation.",
+      "intended_use": "Trigger: baoyu-infographic, infographic, visual summary, 信息图, 可视化. Generate structured prompts for raster infographic creation.",
+      "category": "Design & Frontend"
     },
     {
       "name": "bash-defensive-patterns",
@@ -498,6 +516,15 @@
       "category": "Data & BI"
     },
     {
+      "name": "canvas-design",
+      "path": "skills/canvas-design/",
+      "source_url": "https://www.skills.sh/anthropics/skills/canvas-design",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: canvas design, poster, static art, visual philosophy. Create design philosophy and pristine PDF or PNG visual artwork.",
+      "intended_use": "Trigger: canvas design, poster, static art, visual philosophy. Create design philosophy and pristine PDF or PNG visual artwork.",
+      "category": "Design & Frontend"
+    },
+    {
       "name": "changelog-automation",
       "path": "skills/changelog-automation/",
       "source_url": "https://www.skills.sh/wshobson/agents/changelog-automation",
@@ -565,8 +592,8 @@
       "path": "skills/clerk-astro-patterns/",
       "source_url": "https://skills.sh/clerk/skills/clerk-astro-patterns",
       "source_kind": "source-list",
-      "description": "'Astro patterns with Clerk — middleware, SSR pages, island components,.",
-      "intended_use": "'Astro patterns with Clerk — middleware, SSR pages, island components,",
+      "description": "'Astro patterns with Clerk - middleware, SSR pages, island components,.",
+      "intended_use": "'Astro patterns with Clerk - middleware, SSR pages, island components,",
       "category": "Security & Auth"
     },
     {
@@ -601,8 +628,8 @@
       "path": "skills/clerk-expo-patterns/",
       "source_url": "https://skills.sh/clerk/skills/clerk-expo-patterns",
       "source_kind": "source-list",
-      "description": "'Expo / React Native patterns with Clerk — SecureStore token cache, OAuth.",
-      "intended_use": "'Expo / React Native patterns with Clerk — SecureStore token cache, OAuth",
+      "description": "'Expo / React Native patterns with Clerk - SecureStore token cache, OAuth.",
+      "intended_use": "'Expo / React Native patterns with Clerk - SecureStore token cache, OAuth",
       "category": "Mobile"
     },
     {
@@ -646,8 +673,8 @@
       "path": "skills/clerk-react-router-patterns/",
       "source_url": "https://skills.sh/clerk/skills/clerk-react-router-patterns",
       "source_kind": "source-list",
-      "description": "'React Router v7 patterns with Clerk — rootAuthLoader, getAuth in loaders,.",
-      "intended_use": "'React Router v7 patterns with Clerk — rootAuthLoader, getAuth in loaders,",
+      "description": "'React Router v7 patterns with Clerk - rootAuthLoader, getAuth in loaders,.",
+      "intended_use": "'React Router v7 patterns with Clerk - rootAuthLoader, getAuth in loaders,",
       "category": "Security & Auth"
     },
     {
@@ -691,8 +718,8 @@
       "path": "skills/clerk-vue-patterns/",
       "source_url": "https://skills.sh/clerk/skills/clerk-vue-patterns",
       "source_kind": "source-list",
-      "description": "'Vue 3 patterns with Clerk — composables (useAuth, useUser,.",
-      "intended_use": "'Vue 3 patterns with Clerk — composables (useAuth, useUser,",
+      "description": "'Vue 3 patterns with Clerk - composables (useAuth, useUser,.",
+      "intended_use": "'Vue 3 patterns with Clerk - composables (useAuth, useUser,",
       "category": "Security & Auth"
     },
     {
@@ -790,8 +817,8 @@
       "path": "skills/copywriting/",
       "source_url": "https://www.skills.sh/coreyhaines31/marketingskills/copywriting",
       "source_kind": "source-list",
-      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.",
-      "intended_use": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page - including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.",
+      "intended_use": "When the user wants to write, rewrite, or improve marketing copy for any page - including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.",
       "category": "Docs & Content"
     },
     {
@@ -1366,8 +1393,8 @@
       "path": "skills/fabric-cli-powerbi/",
       "source_url": "https://www.skills.sh/microsoft/fabric-cli/fabric-cli-powerbi",
       "source_kind": "source-list",
-      "description": "Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways.",
-      "intended_use": "Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways.",
+      "description": "Use Fabric CLI for Power BI operations - semantic models, reports, DAX queries, refresh, gateways.",
+      "intended_use": "Use Fabric CLI for Power BI operations - semantic models, reports, DAX queries, refresh, gateways.",
       "category": "Data & BI"
     },
     {
@@ -1423,6 +1450,15 @@
       "description": "Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.",
       "intended_use": "Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.",
       "category": "Cloud & DevOps"
+    },
+    {
+      "name": "find-skills",
+      "path": "skills/find-skills/",
+      "source_url": "https://www.skills.sh/vercel-labs/skills/find-skills",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: find skills, skill discovery, installable agent capabilities. Discover and evaluate skills before recommending install commands.",
+      "intended_use": "Trigger: find skills, skill discovery, installable agent capabilities. Discover and evaluate skills before recommending install commands.",
+      "category": "Workflow & Automation"
     },
     {
       "name": "flask-api-development",
@@ -1574,7 +1610,7 @@
       "source_url": "https://www.skills.sh/samber/cc-skills-golang/golang-error-handling",
       "source_kind": "source-list",
       "description": "Trigger: golang-error-handling.",
-      "intended_use": "Idiomatic Golang error handling — creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging with slog, HTTP request logging...",
+      "intended_use": "Idiomatic Golang error handling - creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging with slog, HTTP request logging...",
       "category": "Frameworks & Runtimes"
     },
     {
@@ -1650,12 +1686,21 @@
       "category": "Backend & APIs"
     },
     {
+      "name": "grill-me",
+      "path": "skills/grill-me/",
+      "source_url": "https://www.skills.sh/mattpocock/skills/grill-me",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: grill me, challenge my plan, sharpen design. Run a relentless interview to expose assumptions and improve a plan.",
+      "intended_use": "Trigger: grill me, challenge my plan, sharpen design. Run a relentless interview to expose assumptions and improve a plan.",
+      "category": "Workflow & Automation"
+    },
+    {
       "name": "gsap-core",
       "path": "skills/gsap-core/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-core",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion).",
-      "intended_use": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion).",
+      "description": "Official GSAP skill for the core API - gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion).",
+      "intended_use": "Official GSAP skill for the core API - gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion).",
       "category": "Design & Frontend"
     },
     {
@@ -1663,8 +1708,8 @@
       "path": "skills/gsap-frameworks/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-frameworks",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount.",
-      "intended_use": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount.",
+      "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks - lifecycle, scoping selectors, cleanup on unmount.",
+      "intended_use": "Official GSAP skill for Vue, Svelte, and other non-React frameworks - lifecycle, scoping selectors, cleanup on unmount.",
       "category": "Design & Frontend"
     },
     {
@@ -1672,8 +1717,8 @@
       "path": "skills/gsap-performance/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-performance",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching.",
-      "intended_use": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching.",
+      "description": "Official GSAP skill for performance - prefer transforms, avoid layout thrashing, will-change, batching.",
+      "intended_use": "Official GSAP skill for performance - prefer transforms, avoid layout thrashing, will-change, batching.",
       "category": "Design & Frontend"
     },
     {
@@ -1682,7 +1727,7 @@
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-plugins",
       "source_kind": "source-list",
       "description": "Trigger: gsap-plugins.",
-      "intended_use": "Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce,...",
+      "intended_use": "Official GSAP skill for GSAP plugins - registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce,...",
       "category": "Design & Frontend"
     },
     {
@@ -1690,8 +1735,8 @@
       "path": "skills/gsap-react/",
       "source_url": "https://skills.sh/greensock/gsap-skills/gsap-react",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup.",
-      "intended_use": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup.",
+      "description": "Official GSAP skill for React - useGSAP hook, refs, gsap.context(), cleanup.",
+      "intended_use": "Official GSAP skill for React - useGSAP hook, refs, gsap.context(), cleanup.",
       "category": "Design & Frontend"
     },
     {
@@ -1699,8 +1744,8 @@
       "path": "skills/gsap-scrolltrigger/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-scrolltrigger",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers.",
-      "intended_use": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers.",
+      "description": "Official GSAP skill for ScrollTrigger - scroll-linked animations, pinning, scrub, triggers.",
+      "intended_use": "Official GSAP skill for ScrollTrigger - scroll-linked animations, pinning, scrub, triggers.",
       "category": "Design & Frontend"
     },
     {
@@ -1708,8 +1753,8 @@
       "path": "skills/gsap-timeline/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-timeline",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback.",
-      "intended_use": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback.",
+      "description": "Official GSAP skill for timelines - gsap.timeline(), position parameter, nesting, playback.",
+      "intended_use": "Official GSAP skill for timelines - gsap.timeline(), position parameter, nesting, playback.",
       "category": "Design & Frontend"
     },
     {
@@ -1717,9 +1762,18 @@
       "path": "skills/gsap-utils/",
       "source_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-utils",
       "source_kind": "source-list",
-      "description": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe.",
-      "intended_use": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe.",
+      "description": "Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe.",
+      "intended_use": "Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe.",
       "category": "Design & Frontend"
+    },
+    {
+      "name": "handoff",
+      "path": "skills/handoff/",
+      "source_url": "https://www.skills.sh/mattpocock/skills/handoff",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: handoff, resume later, transfer context. Write a redacted continuation document for another agent or fresh session.",
+      "intended_use": "Trigger: handoff, resume later, transfer context. Write a redacted continuation document for another agent or fresh session.",
+      "category": "Workflow & Automation"
     },
     {
       "name": "hono",
@@ -1776,6 +1830,15 @@
       "category": "AI/LLM"
     },
     {
+      "name": "infographic",
+      "path": "skills/infographic/",
+      "source_url": "https://www.skills.sh/claude-office-skills/skills/infographic",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: infographic, visual summary, data story, layout spec. Plan implementable infographic structure, hierarchy, copy, and design specs.",
+      "intended_use": "Trigger: infographic, visual summary, data story, layout spec. Plan implementable infographic structure, hierarchy, copy, and design specs.",
+      "category": "Design & Frontend"
+    },
+    {
       "name": "instagram-account-research",
       "path": "skills/instagram-account-research/",
       "source_url": "https://www.skills.sh/postplusai/postplus-skills/instagram-account-research",
@@ -1825,8 +1888,8 @@
       "path": "skills/interface-design/",
       "source_url": "https://www.skills.sh/dammyjay93/interface-design/interface-design",
       "source_kind": "source-list",
-      "description": "This skill is for interface design — dashboards, admin panels, apps, tools, and interactive products.",
-      "intended_use": "This skill is for interface design — dashboards, admin panels, apps, tools, and interactive products. NOT for marketing design (landing pages, marketing sites, campaigns).",
+      "description": "This skill is for interface design - dashboards, admin panels, apps, tools, and interactive products.",
+      "intended_use": "This skill is for interface design - dashboards, admin panels, apps, tools, and interactive products. NOT for marketing design (landing pages, marketing sites, campaigns).",
       "category": "Design & Frontend"
     },
     {
@@ -1925,7 +1988,7 @@
       "source_url": "https://skills.sh/Kotlin/kotlin-agent-skills/kotlin-tooling-cocoapods-spm-migration",
       "source_kind": "source-list",
       "description": "Trigger: kotlin-tooling-cocoapods-spm-migration.",
-      "intended_use": "Migrate KMP projects from CocoaPods (kotlin(\"native.cocoapods\")) to Swift Package Manager (swiftPMDependencies DSL) — replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and...",
+      "intended_use": "Migrate KMP projects from CocoaPods (kotlin(\"native.cocoapods\")) to Swift Package Manager (swiftPMDependencies DSL) - replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and...",
       "category": "Mobile"
     },
     {
@@ -2311,8 +2374,8 @@
       "path": "skills/nuxt-ui/",
       "source_url": "https://www.skills.sh/nuxt/ui/nuxt-ui",
       "source_kind": "source-list",
-      "description": "Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming.",
-      "intended_use": "Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming.",
+      "description": "Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming.",
+      "intended_use": "Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming.",
       "category": "Design & Frontend"
     },
     {
@@ -2410,8 +2473,8 @@
       "path": "skills/oxlint/",
       "source_url": "https://www.skills.sh/delexw/claude-code-misc/oxlint",
       "source_kind": "source-list",
-      "description": "Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack.",
-      "intended_use": "Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack.",
+      "description": "Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack.",
+      "intended_use": "Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack.",
       "category": "Accessibility & Quality"
     },
     {
@@ -2946,6 +3009,15 @@
       "category": "Accessibility & Quality"
     },
     {
+      "name": "research",
+      "path": "skills/research/",
+      "source_url": "https://www.skills.sh/mattpocock/skills/research",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: research, primary-source investigation, docs lookup. Investigate a question and save cited findings as Markdown.",
+      "intended_use": "Trigger: research, primary-source investigation, docs lookup. Investigate a question and save cited findings as Markdown.",
+      "category": "Docs & Content"
+    },
+    {
       "name": "responsive-design",
       "path": "skills/responsive-design/",
       "source_url": "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/responsive-design",
@@ -2978,7 +3050,7 @@
       "source_url": "https://skills.sh/lucianghinda/superpowers-ruby/ruby",
       "source_kind": "source-list",
       "description": "Write, review, and debug pure Ruby 3.x code using idiomatic patterns, modern language features, error handling conventions, memoization, result objects, and performance idioms.",
-      "intended_use": "Use when writing, reviewing, or debugging pure Ruby code — idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects),...",
+      "intended_use": "Use when writing, reviewing, or debugging pure Ruby code - idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects),...",
       "category": "Frameworks & Runtimes"
     },
     {
@@ -3184,8 +3256,8 @@
       "path": "skills/shadcn/",
       "source_url": "https://github.com/shadcn/ui/tree/HEAD/skills/shadcn",
       "source_kind": "source-list",
-      "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI.",
-      "intended_use": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI.",
+      "description": "Manages shadcn components and projects - adding, searching, fixing, debugging, styling, and composing UI.",
+      "intended_use": "Manages shadcn components and projects - adding, searching, fixing, debugging, styling, and composing UI.",
       "category": "Design & Frontend"
     },
     {
@@ -3383,7 +3455,7 @@
       "source_url": "https://skills.sh/stripe/ai/stripe-best-practices",
       "source_kind": "source-list",
       "description": "Trigger: stripe-best-practices.",
-      "intended_use": "Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration...",
+      "intended_use": "Guides Stripe integration decisions - API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration...",
       "category": "E-commerce & Marketing"
     },
     {
@@ -3527,7 +3599,7 @@
       "source_url": "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design",
       "source_kind": "source-list",
       "description": "Semantic Design System Skill for Google Stitch.",
-      "intended_use": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion,...",
+      "intended_use": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards - strict typography, calibrated color, asymmetric layouts, perpetual micro-motion,...",
       "category": "Design & Frontend"
     },
     {
@@ -3538,6 +3610,15 @@
       "description": "Tauri v2+ cross-platform app development with Rust backend.",
       "intended_use": "Tauri v2+ cross-platform app development with Rust backend.",
       "category": "Frameworks & Runtimes"
+    },
+    {
+      "name": "teach",
+      "path": "skills/teach/",
+      "source_url": "https://www.skills.sh/mattpocock/skills/teach",
+      "source_kind": "skill-frontmatter",
+      "description": "Trigger: teach, learn a concept, learning workspace. Build stateful lessons, references, and learning records in the current project.",
+      "intended_use": "Trigger: teach, learn a concept, learning workspace. Build stateful lessons, references, and learning records in the current project.",
+      "category": "Docs & Content"
     },
     {
       "name": "telegram-bot",

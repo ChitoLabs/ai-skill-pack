@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-05-20T23:44:47.516Z",
+  "generated_at": "2026-07-13T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
   "publication_scope": "curated general pack only",
-  "source_manifest": ".ld9/skill-sanitize/skill-sanitize-upgrade-manifest.json",
+  "source_manifest": "0_skill_pack_v2",
   "note": "This publication manifest is curated from the current post-sanitize state. It intentionally omits the separate Microsoft Fabric candidate pack and duplicate quarantine.",
   "upstream_audit_counts": {
     "manifest_records": 487,
     "manifest_status_ok": 487,
-    "general_candidates": 454,
+    "general_candidates": 463,
     "fabric_candidates": 23,
     "duplicate_quarantine_folders": 10,
     "missing_skill_md_in_kept_packs": 0,
     "candidate_root_anomalies_general_and_fabric": 0,
     "fabric_general_overlap": 0,
     "quarantined_duplicates_still_in_kept_packs": 0,
-    "source_list_entries_total": 487,
-    "source_list_non_fabric_entries": 464,
+    "source_list_entries_total": 496,
+    "source_list_non_fabric_entries": 473,
     "source_list_fabric_entries": 23,
     "backup_source_list_entries_total": 501,
     "backup_source_list_non_fabric_entries": 478,
@@ -320,6 +320,15 @@
       "batch": 2
     },
     {
+      "skill": "ask-matt",
+      "source_skill": "ask-matt",
+      "github_url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/ask-matt",
+      "skills_sh_url": "https://www.skills.sh/mattpocock/skills/ask-matt",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
+    },
+    {
       "skill": "aspnet-core",
       "source_skill": "aspnet-core",
       "github_url": "https://github.com/openai/skills/tree/HEAD/skills/.curated/aspnet-core",
@@ -426,6 +435,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 3
+    },
+    {
+      "skill": "baoyu-infographic",
+      "source_skill": "baoyu-infographic",
+      "github_url": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-infographic",
+      "skills_sh_url": "https://www.skills.sh/jimliu/baoyu-skills/baoyu-infographic",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
     },
     {
       "skill": "bash-defensive-patterns",
@@ -543,6 +561,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 4
+    },
+    {
+      "skill": "canvas-design",
+      "source_skill": "canvas-design",
+      "github_url": "https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design",
+      "skills_sh_url": "https://www.skills.sh/anthropics/skills/canvas-design",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
     },
     {
       "skill": "changelog-automation",
@@ -1472,6 +1499,15 @@
       "batch": 12
     },
     {
+      "skill": "find-skills",
+      "source_skill": "find-skills",
+      "github_url": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills",
+      "skills_sh_url": "https://www.skills.sh/vercel-labs/skills/find-skills",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
+    },
+    {
       "skill": "flask-api-development",
       "source_skill": "flask-api-development",
       "github_url": "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/flask-api-development",
@@ -1697,6 +1733,15 @@
       "batch": 14
     },
     {
+      "skill": "grill-me",
+      "source_skill": "grill-me",
+      "github_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
+      "skills_sh_url": "https://www.skills.sh/mattpocock/skills/grill-me",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
+    },
+    {
       "skill": "gsap-core",
       "source_skill": "gsap-core",
       "github_url": "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-core",
@@ -1769,6 +1814,15 @@
       "batch": 14
     },
     {
+      "skill": "handoff",
+      "source_skill": "handoff",
+      "github_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff",
+      "skills_sh_url": "https://www.skills.sh/mattpocock/skills/handoff",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
+    },
+    {
       "skill": "hono",
       "source_skill": "hono",
       "github_url": "https://github.com/yusukebe/hono-skill/tree/HEAD/skills/hono",
@@ -1821,6 +1875,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 15
+    },
+    {
+      "skill": "infographic",
+      "source_skill": "infographic",
+      "github_url": "https://github.com/claude-office-skills/skills/tree/HEAD/infographic",
+      "skills_sh_url": "https://www.skills.sh/claude-office-skills/skills/infographic",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
     },
     {
       "skill": "instagram-account-research",
@@ -2993,6 +3056,15 @@
       "batch": 24
     },
     {
+      "skill": "research",
+      "source_skill": "research",
+      "github_url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/research",
+      "skills_sh_url": "https://www.skills.sh/mattpocock/skills/research",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
+    },
+    {
       "skill": "responsive-design",
       "source_skill": "responsive-design",
       "github_url": "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/responsive-design",
@@ -3585,6 +3657,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 29
+    },
+    {
+      "skill": "teach",
+      "source_skill": "teach",
+      "github_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/teach",
+      "skills_sh_url": "https://www.skills.sh/mattpocock/skills/teach",
+      "author_action": "kept-upstream",
+      "status": "ok",
+      "batch": 1
     },
     {
       "skill": "telegram-bot",
