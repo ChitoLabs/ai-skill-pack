@@ -16,7 +16,7 @@ The work in this repository focuses on packaging and stewardship:
 - checking publication boundaries, duplicates, and security-sensitive content;
 - preserving links back to the original sources and authors wherever available.
 
-Credit for each individual skill belongs to its original author or upstream project. Source links are preserved in [`docs/source-list.md`](docs/source-list.md), [`docs/skills-catalog.md`](docs/skills-catalog.md), and [`manifests/skills-catalog.json`](manifests/skills-catalog.json).
+Credit for each individual skill belongs to its original author or upstream project. Source links are preserved in [`docs/source-list.md`](docs/source-list.md), [`docs/skills-catalog.md`](docs/skills-catalog.md), and [`manifests/skills-catalog.json`](manifests/skills-catalog.json). Command routing files are listed in [`docs/commands-catalog.md`](docs/commands-catalog.md) and [`manifests/commands-catalog.json`](manifests/commands-catalog.json).
 
 ## What Was Done
 
@@ -34,9 +34,11 @@ Credit for each individual skill belongs to its original author or upstream proj
 | `skills/` | Final curated skill folders. Each skill has a `SKILL.md` entry point. |
 | `commands/` | Optional command markdown files that route to matching skills. |
 | [`docs/skills-catalog.md`](docs/skills-catalog.md) | GitHub-ready catalog of all 466 published skills, grouped by category with intended use and source links. |
+| [`docs/commands-catalog.md`](docs/commands-catalog.md) | Catalog of all 3 published command files and the skills they load. |
 | `docs/audit-summary.md` | Summary of the verified source state and publication boundaries. |
 | `docs/what-was-done.md` | Short operational summary of the packaging work. |
 | [`manifests/skills-catalog.json`](manifests/skills-catalog.json) | Structured catalog for automation, including skill name, path, category, intended use, and source URL. |
+| [`manifests/commands-catalog.json`](manifests/commands-catalog.json) | Structured catalog for automation, including command name, path, loaded skill, and description. |
 | `manifests/` | Generated lists for review, source tracing, and automation. |
 
 ## Skills Catalog
@@ -48,6 +50,10 @@ Use [`docs/skills-catalog.md`](docs/skills-catalog.md) to browse the pack by pra
 - **How is it grouped?** Skills are organized into categories such as AI/LLM, Backend & APIs, Cloud & DevOps, Design & Frontend, Mobile, Security & Auth, Testing & QA, and Workflow & Automation.
 
 For tooling, use [`manifests/skills-catalog.json`](manifests/skills-catalog.json), which contains the same reviewed catalog as structured data.
+
+## Commands Catalog
+
+Use [`docs/commands-catalog.md`](docs/commands-catalog.md) to review the 3 optional command files. For tooling, use [`manifests/commands-catalog.json`](manifests/commands-catalog.json).
 
 ## How To Use
 

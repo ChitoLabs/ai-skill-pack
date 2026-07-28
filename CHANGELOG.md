@@ -9,6 +9,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - Added this root changelog to make release review easier before the first tagged release.
+- Added the `hallmark`, `i-have-adhd`, and `impeccable` skills from the 1402787 repository update.
+- Added matching command files under `commands/` for `hallmark`, `i-have-adhd`, and `impeccable`.
+- Added command catalog artifacts: `docs/commands-catalog.md` and `manifests/commands-catalog.json`.
+
+### Changed
+
+- Refreshed public documentation and manifests to represent 466 published skills and 3 published commands.
+- Updated `manifests/skill-list-downloadURL.md` to use readable `skill-name - URL` rows for source review.
+
+### Fixed
+
+- Fixed raw pipe rendering in the `tailwind-v4-shadcn` entry in `docs/skills-catalog.md`.
 
 ## [2026-07-13]
 
