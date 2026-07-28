@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T00:00:00.000Z",
+  "generated_at": "2026-07-27T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
   "publication_scope": "curated general pack only",
   "source_manifest": "0_skill_pack_v2",
@@ -7,18 +7,18 @@
   "upstream_audit_counts": {
     "manifest_records": 487,
     "manifest_status_ok": 487,
-    "general_candidates": 463,
+    "general_candidates": 466,
     "fabric_candidates": 23,
     "duplicate_quarantine_folders": 10,
     "missing_skill_md_in_kept_packs": 0,
     "candidate_root_anomalies_general_and_fabric": 0,
     "fabric_general_overlap": 0,
     "quarantined_duplicates_still_in_kept_packs": 0,
-    "source_list_entries_total": 496,
-    "source_list_non_fabric_entries": 473,
+    "source_list_entries_total": 499,
+    "source_list_non_fabric_entries": 476,
     "source_list_fabric_entries": 23,
-    "backup_source_list_entries_total": 501,
-    "backup_source_list_non_fabric_entries": 478,
+    "backup_source_list_entries_total": 504,
+    "backup_source_list_non_fabric_entries": 481,
     "backup_source_list_fabric_entries": 23,
     "backup_exact_names_not_in_active": 17,
     "active_exact_names_not_in_backup": 3,
@@ -1814,6 +1814,15 @@
       "batch": 14
     },
     {
+      "skill": "hallmark",
+      "source_skill": "hallmark",
+      "github_url": "https://github.com/Nutlope/hallmark",
+      "skills_sh_url": null,
+      "author_action": "added-from-newSkill",
+      "status": "ok",
+      "batch": 34
+    },
+    {
       "skill": "handoff",
       "source_skill": "handoff",
       "github_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff",
@@ -1839,6 +1848,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 14
+    },
+    {
+      "skill": "i-have-adhd",
+      "source_skill": "i-have-adhd",
+      "github_url": "https://github.com/ayghri/i-have-adhd",
+      "skills_sh_url": null,
+      "author_action": "added-from-newSkill",
+      "status": "ok",
+      "batch": 34
     },
     {
       "skill": "i18n",
@@ -1875,6 +1893,15 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 15
+    },
+    {
+      "skill": "impeccable",
+      "source_skill": "impeccable",
+      "github_url": "https://github.com/pbakaus/impeccable",
+      "skills_sh_url": null,
+      "author_action": "added-from-newSkill",
+      "status": "ok",
+      "batch": 34
     },
     {
       "skill": "infographic",
@@ -4242,6 +4269,26 @@
       "author_action": "kept-upstream",
       "status": "ok",
       "batch": 33
+    }
+  ],
+  "added_commands": [
+    {
+      "command": "hallmark",
+      "path": "commands/hallmark.md",
+      "source": "newCommand",
+      "status": "ok"
+    },
+    {
+      "command": "i-have-adhd",
+      "path": "commands/i-have-adhd.md",
+      "source": "newCommand",
+      "status": "ok"
+    },
+    {
+      "command": "impeccable",
+      "path": "commands/impeccable.md",
+      "source": "newCommand",
+      "status": "ok"
     }
   ]
 }

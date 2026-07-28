@@ -8,10 +8,11 @@ The active source list contains historical and mapped names. When a source name 
 
 | Metric | Count |
 | --- | ---: |
-| Active source list entries and frontmatter sources | 496 |
-| Entries represented in published skills | 463 |
+| Active source list entries and frontmatter sources | 499 |
+| Entries represented in published skills | 466 |
 | Published skill folders without active exact/mapped source entry | 0 |
 | Separate Fabric candidate folders included | 0 |
+| Added command files represented | 3 |
 
 ## Represented Sources
 
@@ -208,13 +209,16 @@ The active source list contains historical and mapped names. When a source name 
 - `gsap-scrolltrigger` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-scrolltrigger
 - `gsap-timeline` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-timeline
 - `gsap-utils` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-utils
+- `hallmark` - https://github.com/Nutlope/hallmark
 - `handoff` - https://www.skills.sh/mattpocock/skills/handoff
 - `hono` - https://skills.sh/yusukebe/hono-skill/hono
 - `hook-development` - https://www.skills.sh/parcadei/continuous-claude-v3/hook-developer
+- `i-have-adhd` - https://github.com/ayghri/i-have-adhd
 - `i18n` - https://www.skills.sh/lobehub/lobe-chat/i18n
 - `i18n-localization` - https://www.skills.sh/sickn33/antigravity-awesome-skills/i18n-localization
 - `image-enhancer` - https://www.skills.sh/composiohq/awesome-claude-skills/image-enhancer
 - `image-to-video` - https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video
+- `impeccable` - https://github.com/pbakaus/impeccable
 - `infographic` - https://www.skills.sh/claude-office-skills/skills/infographic
 - `instagram-account-research` - https://www.skills.sh/postplusai/postplus-skills/instagram-account-research
 - `instagram-content-generation` - https://www.skills.sh/eachlabs/skills/instagram-content-generation

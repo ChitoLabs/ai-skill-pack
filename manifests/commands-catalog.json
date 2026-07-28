@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-07-27T00:00:00.000Z",
+  "repository": "ChitoLabs/ai-skill-pack",
+  "total_commands": 3,
+  "commands": [
+    {
+      "name": "hallmark",
+      "path": "commands/hallmark.md",
+      "description": "Run Hallmark frontend design workflows",
+      "loads_skill": "hallmark",
+      "source_kind": "newCommand"
+    },
+    {
+      "name": "i-have-adhd",
+      "path": "commands/i-have-adhd.md",
+      "description": "Activate ADHD-friendly response shaping",
+      "loads_skill": "i-have-adhd",
+      "source_kind": "newCommand"
+    },
+    {
+      "name": "impeccable",
+      "path": "commands/impeccable.md",
+      "description": "Run Impeccable frontend design workflows",
+      "loads_skill": "impeccable",
+      "source_kind": "newCommand"
+    }
+  ]
+}

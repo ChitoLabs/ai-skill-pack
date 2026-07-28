@@ -2,29 +2,59 @@
 
 This GitHub-ready catalog covers every published skill in `skills/`. Each entry was extracted from its `SKILL.md` and cross-referenced with `docs/source-list.md` and `manifests/skill-sanitize-upgrade-manifest.json` for source URLs.
 
-Total published skills: **463**.
+Total published skills: **466**.
 
 ## Category Index
 
 | Category | Skills |
 | --- | ---: |
-| [Accessibility & Quality](#accessibility-quality) | 15 |
 | [AI/LLM](#aillm) | 25 |
-| [Backend & APIs](#backend-apis) | 33 |
-| [Cloud & DevOps](#cloud-devops) | 39 |
-| [Data & BI](#data-bi) | 29 |
+| [Accessibility & Quality](#accessibility--quality) | 15 |
+| [Backend & APIs](#backend--apis) | 33 |
+| [Cloud & DevOps](#cloud--devops) | 39 |
+| [Data & BI](#data--bi) | 29 |
 | [Databases](#databases) | 22 |
-| [Design & Frontend](#design-frontend) | 69 |
-| [Docs & Content](#docs-content) | 26 |
-| [E-commerce & Marketing](#e-commerce-marketing) | 30 |
-| [Frameworks & Runtimes](#frameworks-runtimes) | 37 |
-| [GitHub & Collaboration](#github-collaboration) | 9 |
+| [Design & Frontend](#design--frontend) | 71 |
+| [Docs & Content](#docs--content) | 27 |
+| [E-commerce & Marketing](#e-commerce--marketing) | 30 |
+| [Frameworks & Runtimes](#frameworks--runtimes) | 37 |
+| [GitHub & Collaboration](#github--collaboration) | 9 |
 | [Mobile](#mobile) | 36 |
-| [Security & Auth](#security-auth) | 37 |
-| [Testing & QA](#testing-qa) | 19 |
-| [Workflow & Automation](#workflow-automation) | 37 |
+| [Security & Auth](#security--auth) | 37 |
+| [Testing & QA](#testing--qa) | 19 |
+| [Workflow & Automation](#workflow--automation) | 37 |
 
 ## Catalog
+
+### AI/LLM
+
+| Skill | Use it for | Source |
+| --- | --- | --- |
+| [`agents-sdk`](../skills/agents-sdk/SKILL.md) | Build AI agents on Cloudflare Workers using the Agents SDK. | [source](https://github.com/cloudflare/skills/tree/HEAD/skills/agents-sdk) |
+| [`ai-image-generation`](../skills/ai-image-generation/SKILL.md) | Generate AI images with GPT-Image-2, FLUX, Gemini, Grok, Seedream, Reve and 50+ models via inference.sh CLI. | [source](https://www.skills.sh/inference-sh-skills/skills/ai-image-generation) |
+| [`ai-video-generation`](../skills/ai-video-generation/SKILL.md) | Generate AI videos with Google Veo, Seedance 2.0, HappyHorse, Wan, Grok and 40+ models via inference.sh CLI. | [source](https://skills.sh/inference-sh-skills/skills/ai-video-generation) |
+| [`boost-prompt`](../skills/boost-prompt/SKILL.md) | Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code. Requires the Joyride extension. | [source](https://www.skills.sh/github/awesome-copilot/boost-prompt) |
+| [`brainstorming`](../skills/brainstorming/SKILL.md) | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation. | [source](https://github.com/obra/superpowers/tree/HEAD/skills/brainstorming) |
+| [`claude-api`](../skills/claude-api/SKILL.md) | Build, debug, and optimize Claude API / Anthropic SDK apps. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/claude-api) |
+| [`context7`](../skills/context7/SKILL.md) | Retrieve up-to-date documentation for software libraries, frameworks, and components via the Context7 API. | [source](https://www.skills.sh/intellectronica/agent-skills/context7) |
+| [`elevenlabs-music`](../skills/elevenlabs-music/SKILL.md) | ElevenLabs AI music generation - create original music from text prompts via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-music) |
+| [`elevenlabs-tts`](../skills/elevenlabs-tts/SKILL.md) | ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts) |
+| [`enhance-prompt`](../skills/enhance-prompt/SKILL.md) | Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results. | [source](https://www.skills.sh/google-labs-code/stitch-skills/enhance-prompt) |
+| [`gemini-api-dev`](../skills/gemini-api-dev/SKILL.md) | Use this skill when building applications with Gemini API hosted models, including Gemini and Gemma 4, working with multimodal content (text, images, audio, video), implementing function calling, using structured... | [source](https://github.com/google-gemini/gemini-skills/tree/HEAD/skills/gemini-api-dev) |
+| [`image-to-video`](../skills/image-to-video/SKILL.md) | Animate any still image on RunComfy - this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog. | [source](https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video) |
+| [`llm-evaluation`](../skills/llm-evaluation/SKILL.md) | Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/llm-evaluation) |
+| [`llm-models`](../skills/llm-models/SKILL.md) | Access Claude, Gemini, Kimi, GLM and 100+ LLMs via inference.sh CLI using OpenRouter. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/llm/llm-models) |
+| [`mcp-builder`](../skills/mcp-builder/SKILL.md) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder) |
+| [`microsoft-foundry`](../skills/microsoft-foundry/SKILL.md) | Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, ACR push, hosted/prompt agent create, container start, batch eval, continuous eval, prompt optimizer workflows, agent.yaml, dataset curation from... | [source](https://www.skills.sh/microsoft/azure-skills/microsoft-foundry) |
+| [`n8n-mcp-tools-expert`](../skills/n8n-mcp-tools-expert/SKILL.md) | Expert guide for using n8n-mcp MCP tools effectively. | [source](https://www.skills.sh/czlonkowski/n8n-skills/n8n-mcp-tools-expert) |
+| [`nano-banana-2`](../skills/nano-banana-2/SKILL.md) | Generate images with Google Gemini 3.1 Flash Image Preview (Nano Banana 2) via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/image/nano-banana-2) |
+| [`openai-docs`](../skills/openai-docs/SKILL.md) | Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance;... | [source](https://www.skills.sh/openai/skills/openai-docs) |
+| [`prompt-builder`](../skills/prompt-builder/SKILL.md) | Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices. | [source](https://www.skills.sh/github/awesome-copilot/prompt-builder) |
+| [`prompt-engineering-patterns`](../skills/prompt-engineering-patterns/SKILL.md) | Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production. Use when optimizing prompts, improving LLM outputs, or designing production prompt templates. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/prompt-engineering-patterns) |
+| [`rag-implementation`](../skills/rag-implementation/SKILL.md) | Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/rag-implementation) |
+| [`skill-judge`](../skills/skill-judge/SKILL.md) | Evaluate Agent Skill design quality against official specifications and best practices. | [source](https://skills.sh/softaworks/agent-toolkit/skill-judge) |
+| [`subagent-driven-development`](../skills/subagent-driven-development/SKILL.md) | Use when executing implementation plans with independent tasks in the current session | [source](https://github.com/obra/superpowers/tree/HEAD/skills/subagent-driven-development) |
+| [`use-ai-sdk`](../skills/use-ai-sdk/SKILL.md) | Answer questions about the AI SDK and help build AI-powered features. | [source](https://skills.sh/vercel/ai/use-ai-sdk) |
 
 ### Accessibility & Quality
 
@@ -45,36 +75,6 @@ Total published skills: **463**.
 | [`web-perf`](../skills/web-perf/SKILL.md) | Analyzes web performance using Chrome DevTools MCP. | [source](https://github.com/cloudflare/skills/tree/HEAD/skills/web-perf) |
 | [`wp-performance`](../skills/wp-performance/SKILL.md) | Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization, autoloaded... | [source](https://skills.sh/wordpress/agent-skills/wp-performance) |
 | [`wp-project-triage`](../skills/wp-project-triage/SKILL.md) | Use when you need a deterministic inspection of a WordPress repository (plugin/theme/block theme/WP core/Gutenberg/full site) including tooling/tests/version hints, and a structured JSON report to guide workflows and... | [source](https://skills.sh/wordpress/agent-skills/wp-project-triage) |
-
-### AI/LLM
-
-| Skill | Use it for | Source |
-| --- | --- | --- |
-| [`agents-sdk`](../skills/agents-sdk/SKILL.md) | Build AI agents on Cloudflare Workers using the Agents SDK. | [source](https://github.com/cloudflare/skills/tree/HEAD/skills/agents-sdk) |
-| [`ai-image-generation`](../skills/ai-image-generation/SKILL.md) | Generate AI images with GPT-Image-2, FLUX, Gemini, Grok, Seedream, Reve and 50+ models via inference.sh CLI. | [source](https://www.skills.sh/inference-sh-skills/skills/ai-image-generation) |
-| [`ai-video-generation`](../skills/ai-video-generation/SKILL.md) | Generate AI videos with Google Veo, Seedance 2.0, HappyHorse, Wan, Grok and 40+ models via inference.sh CLI. | [source](https://skills.sh/inference-sh-skills/skills/ai-video-generation) |
-| [`boost-prompt`](../skills/boost-prompt/SKILL.md) | Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code. Requires the Joyride extension. | [source](https://www.skills.sh/github/awesome-copilot/boost-prompt) |
-| [`brainstorming`](../skills/brainstorming/SKILL.md) | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation. | [source](https://github.com/obra/superpowers/tree/HEAD/skills/brainstorming) |
-| [`claude-api`](../skills/claude-api/SKILL.md) | Build, debug, and optimize Claude API / Anthropic SDK apps. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/claude-api) |
-| [`context7`](../skills/context7/SKILL.md) | Retrieve up-to-date documentation for software libraries, frameworks, and components via the Context7 API. | [source](https://www.skills.sh/intellectronica/agent-skills/context7) |
-| [`elevenlabs-music`](../skills/elevenlabs-music/SKILL.md) | ElevenLabs AI music generation - create original music from text prompts via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-music) |
-| [`elevenlabs-tts`](../skills/elevenlabs-tts/SKILL.md) | ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts) |
-| [`enhance-prompt`](../skills/enhance-prompt/SKILL.md) | Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results. | [source](https://www.skills.sh/google-labs-code/stitch-skills/enhance-prompt) |
-| [`gemini-api-dev`](../skills/gemini-api-dev/SKILL.md) | Use this skill when building applications with Gemini API hosted models, including Gemini and Gemma 4, working with multimodal content (text, images, audio, video), implementing function calling, using structured... | [source](https://github.com/google-gemini/gemini-skills/tree/HEAD/skills/gemini-api-dev) |
-| [`image-to-video`](../skills/image-to-video/SKILL.md) | Animate any still image on RunComfy \u2014 this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog. | [source](https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video) |
-| [`llm-evaluation`](../skills/llm-evaluation/SKILL.md) | Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/llm-evaluation) |
-| [`llm-models`](../skills/llm-models/SKILL.md) | Access Claude, Gemini, Kimi, GLM and 100+ LLMs via inference.sh CLI using OpenRouter. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/llm/llm-models) |
-| [`mcp-builder`](../skills/mcp-builder/SKILL.md) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder) |
-| [`microsoft-foundry`](../skills/microsoft-foundry/SKILL.md) | Deploy, evaluate, and manage Foundry agents end-to-end: Docker build, ACR push, hosted/prompt agent create, container start, batch eval, continuous eval, prompt optimizer workflows, agent.yaml, dataset curation from... | [source](https://www.skills.sh/microsoft/azure-skills/microsoft-foundry) |
-| [`n8n-mcp-tools-expert`](../skills/n8n-mcp-tools-expert/SKILL.md) | Expert guide for using n8n-mcp MCP tools effectively. | [source](https://www.skills.sh/czlonkowski/n8n-skills/n8n-mcp-tools-expert) |
-| [`nano-banana-2`](../skills/nano-banana-2/SKILL.md) | Generate images with Google Gemini 3.1 Flash Image Preview (Nano Banana 2) via inference.sh CLI. | [source](https://github.com/inference-sh-skills/skills/tree/HEAD/tools/image/nano-banana-2) |
-| [`openai-docs`](../skills/openai-docs/SKILL.md) | Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance;... | [source](https://www.skills.sh/openai/skills/openai-docs) |
-| [`prompt-builder`](../skills/prompt-builder/SKILL.md) | Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices. | [source](https://www.skills.sh/github/awesome-copilot/prompt-builder) |
-| [`prompt-engineering-patterns`](../skills/prompt-engineering-patterns/SKILL.md) | Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production. Use when optimizing prompts, improving LLM outputs, or designing production prompt templates. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/prompt-engineering-patterns) |
-| [`rag-implementation`](../skills/rag-implementation/SKILL.md) | Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. | [source](https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/rag-implementation) |
-| [`skill-judge`](../skills/skill-judge/SKILL.md) | Evaluate Agent Skill design quality against official specifications and best practices. | [source](https://skills.sh/softaworks/agent-toolkit/skill-judge) |
-| [`subagent-driven-development`](../skills/subagent-driven-development/SKILL.md) | Use when executing implementation plans with independent tasks in the current session | [source](https://github.com/obra/superpowers/tree/HEAD/skills/subagent-driven-development) |
-| [`use-ai-sdk`](../skills/use-ai-sdk/SKILL.md) | Answer questions about the AI SDK and help build AI-powered features. | [source](https://skills.sh/vercel/ai/use-ai-sdk) |
 
 ### Backend & APIs
 
@@ -244,8 +244,10 @@ Total published skills: **463**.
 | [`gsap-scrolltrigger`](../skills/gsap-scrolltrigger/SKILL.md) | Official GSAP skill for ScrollTrigger - scroll-linked animations, pinning, scrub, triggers. | [source](https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-scrolltrigger) |
 | [`gsap-timeline`](../skills/gsap-timeline/SKILL.md) | Official GSAP skill for timelines - gsap.timeline(), position parameter, nesting, playback. | [source](https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-timeline) |
 | [`gsap-utils`](../skills/gsap-utils/SKILL.md) | Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. | [source](https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-utils) |
+| [`hallmark`](../skills/hallmark/SKILL.md) | Trigger: hallmark, design audit, redesign, study, anti-slop UI. Build or review distinctive frontend interfaces. | [source](https://github.com/Nutlope/hallmark) |
 | [`i18n`](../skills/i18n/SKILL.md) | LobeHub internationalization with react-i18next. Use when adding any user-facing string in `.tsx`/`.ts` files, creating or renaming a key under `src/locales/default/{namespace}.ts`, deciding the... | [source](https://www.skills.sh/lobehub/lobe-chat/i18n) |
 | [`i18n-localization`](../skills/i18n-localization/SKILL.md) | Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. | [source](https://www.skills.sh/sickn33/antigravity-awesome-skills/i18n-localization) |
+| [`impeccable`](../skills/impeccable/SKILL.md) | Trigger: impeccable, frontend design, UI audit, critique, polish. Run a portable manual subset of Impeccable without bundled runtime helpers. | [source](https://github.com/pbakaus/impeccable) |
 | [`infographic`](../skills/infographic/SKILL.md) | Trigger: infographic, visual summary, data story, layout spec. Plan implementable infographic structure, hierarchy, copy, and design specs. | [source](https://www.skills.sh/claude-office-skills/skills/infographic) |
 | [`interface-design`](../skills/interface-design/SKILL.md) | This skill is for interface design - dashboards, admin panels, apps, tools, and interactive products. NOT for marketing design (landing pages, marketing sites, campaigns). | [source](https://www.skills.sh/dammyjay93/interface-design/interface-design) |
 | [`make-interfaces-feel-better`](../skills/make-interfaces-feel-better/SKILL.md) | Design engineering principles for making interfaces feel polished. | [source](https://www.skills.sh/jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better) |
@@ -271,7 +273,7 @@ Total published skills: **463**.
 | [`tailwind`](../skills/tailwind/SKILL.md) | Tailwind CSS v4.2 browser-runtime patterns for HyperFrames compositions. | [source](https://www.skills.sh/heygen-com/hyperframes/tailwind) |
 | [`tailwind-css-patterns`](../skills/tailwind-css-patterns/SKILL.md) | Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. | [source](https://www.skills.sh/giuseppe-trisciuoglio/developer-kit/tailwind-css-patterns) |
 | [`tailwind-design-system`](../skills/tailwind-design-system/SKILL.md) | Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns. | [source](https://www.skills.sh/wshobson/agents/tailwind-design-system) |
-| [`tailwind-v4-shadcn`](../skills/tailwind-v4-shadcn/SKILL.md) | \| Production-tested setup for Tailwind CSS v4 with shadcn/ui, Vite, and React. | [source](https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn) |
+| [`tailwind-v4-shadcn`](../skills/tailwind-v4-shadcn/SKILL.md) | Production-tested setup for Tailwind CSS v4 with shadcn/ui, Vite, and React. | [source](https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn) |
 | [`taste-design`](../skills/taste-design/SKILL.md) | Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards - strict typography, calibrated color, asymmetric layouts, perpetual micro-motion,... | [source](https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design) |
 | [`threejs-animation`](../skills/threejs-animation/SKILL.md) | Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing. Use when animating objects, playing GLTF animations, creating procedural motion, or blending animations. | [source](https://skills.sh/cloudai-x/threejs-skills/threejs-animation) |
 | [`threejs-fundamentals`](../skills/threejs-fundamentals/SKILL.md) | Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms. | [source](https://skills.sh/cloudai-x/threejs-skills/threejs-fundamentals) |
@@ -306,6 +308,7 @@ Total published skills: **463**.
 | [`copywriting`](../skills/copywriting/SKILL.md) | When the user wants to write, rewrite, or improve marketing copy for any page - including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. | [source](https://www.skills.sh/coreyhaines31/marketingskills/copywriting) |
 | [`docx`](../skills/docx/SKILL.md) | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). | [source](https://github.com/anthropics/skills/tree/HEAD/skills/docx) |
 | [`excalidraw-diagram-generator`](../skills/excalidraw-diagram-generator/SKILL.md) | Generate Excalidraw diagrams from natural language descriptions. | [source](https://www.skills.sh/github/awesome-copilot/excalidraw-diagram-generator) |
+| [`i-have-adhd`](../skills/i-have-adhd/SKILL.md) | Trigger: i-have-adhd, adhd mode, ADHD-friendly output. Shape replies for ADHD readers with action-first structure. | [source](https://github.com/ayghri/i-have-adhd) |
 | [`image-enhancer`](../skills/image-enhancer/SKILL.md) | Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts. | [source](https://www.skills.sh/composiohq/awesome-claude-skills/image-enhancer) |
 | [`interview-prep`](../skills/interview-prep/SKILL.md) | Create structured interview plans with competency-based questions and scorecards. | [source](https://www.skills.sh/anthropics/knowledge-work-plugins/interview-prep) |
 | [`interview-prep-generator`](../skills/interview-prep-generator/SKILL.md) | Generate STAR stories, practice questions, and talking points from resume | [source](https://www.skills.sh/paramchoudhary/resumeskills/interview-prep-generator) |
@@ -318,11 +321,11 @@ Total published skills: **463**.
 | [`ocr-document-processor`](../skills/ocr-document-processor/SKILL.md) | Extract text and structure from scans, images, and scanned PDFs. Use for OCR, searchable PDFs, table extraction, receipt parsing, and business card parsing. | [source](https://www.skills.sh/dkyazzentwatwa/chatgpt-skills/ocr-document-processor) |
 | [`paddleocr-text-recognition`](../skills/paddleocr-text-recognition/SKILL.md) | Use this skill whenever the user wants text extracted from images, photos, scans, screenshots, or scanned PDFs. | [source](https://www.skills.sh/aidenwu0209/paddleocr-skills/paddleocr-text-recognition) |
 | [`pdf`](../skills/pdf/SKILL.md) | Use this skill whenever the user wants to do anything with PDF files. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/pdf) |
-| [`pptx`](../skills/pptx/SKILL.md) | Use this skill any time a.pptx file is involved in any way \u2014 as input, output, or both. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/pptx) |
+| [`pptx`](../skills/pptx/SKILL.md) | Use this skill any time a.pptx file is involved in any way - as input, output, or both. | [source](https://github.com/anthropics/skills/tree/HEAD/skills/pptx) |
 | [`readme-i18n`](../skills/readme-i18n/SKILL.md) | Use when the user wants to translate a repository README, make a repo multilingual, localize docs, add a language switcher, internationalize the README, or update localized README variants in a GitHub-style repository. | [source](https://www.skills.sh/xixu-me/skills/readme-i18n) |
 | [`research`](../skills/research/SKILL.md) | Trigger: research, primary-source investigation, docs lookup. Investigate a question and save cited findings as Markdown. | [source](https://www.skills.sh/mattpocock/skills/research) |
 | [`teach`](../skills/teach/SKILL.md) | Trigger: teach, learn a concept, learning workspace. Build stateful lessons, references, and learning records in the current project. | [source](https://www.skills.sh/mattpocock/skills/teach) |
-| [`us-business-english`](../skills/us-business-english/SKILL.md) | American business English writing style for professional communications \u2014 direct, action-oriented, EN-US spelling (color, organize, center). | [source](https://www.skills.sh/jezweb/claude-skills/us-business-english) |
+| [`us-business-english`](../skills/us-business-english/SKILL.md) | American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center). | [source](https://www.skills.sh/jezweb/claude-skills/us-business-english) |
 
 ### E-commerce & Marketing
 

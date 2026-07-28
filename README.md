@@ -2,7 +2,7 @@
 
 Portable, reviewed AI skills collected and adapted by ChitoLabs for agents that understand folder-based skills with a `SKILL.md` entry point.
 
-This repository publishes the curated general pack: **463 skills** reviewed, adapted, formatted, and prepared for use across multiple AI coding-agent environments.
+This repository publishes the curated general pack: **466 skills** reviewed, adapted, formatted, and prepared for use across multiple AI coding-agent environments.
 
 ## Attribution Notice
 
@@ -32,7 +32,8 @@ Credit for each individual skill belongs to its original author or upstream proj
 | Path | Purpose |
 | --- | --- |
 | `skills/` | Final curated skill folders. Each skill has a `SKILL.md` entry point. |
-| [`docs/skills-catalog.md`](docs/skills-catalog.md) | GitHub-ready catalog of all 463 published skills, grouped by category with intended use and source links. |
+| `commands/` | Optional command markdown files that route to matching skills. |
+| [`docs/skills-catalog.md`](docs/skills-catalog.md) | GitHub-ready catalog of all 466 published skills, grouped by category with intended use and source links. |
 | `docs/audit-summary.md` | Summary of the verified source state and publication boundaries. |
 | `docs/what-was-done.md` | Short operational summary of the packaging work. |
 | [`manifests/skills-catalog.json`](manifests/skills-catalog.json) | Structured catalog for automation, including skill name, path, category, intended use, and source URL. |
@@ -50,7 +51,7 @@ For tooling, use [`manifests/skills-catalog.json`](manifests/skills-catalog.json
 
 ## How To Use
 
-Copy the individual folders you want from `skills/` into the skills directory used by your agent runtime.
+Copy the individual folders you want from `skills/` into the skills directory used by your agent runtime. Copy matching files from `commands/` only when your runtime supports markdown command files.
 
 These skills are organized for OpenCode, Pi, Claude-style skill systems, and other agents that discover a folder containing `SKILL.md`. This repository does not claim automatic install support across every tool. Check your agent's documentation for the exact destination path and reload behavior.
 

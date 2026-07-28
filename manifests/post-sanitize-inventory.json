@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T00:00:00.000Z",
+  "generated_at": "2026-07-27T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
   "staging_root": "github",
   "publication_scope": "general skills pack only",
@@ -8,13 +8,15 @@
     "excluded_fabric_root": ".ld9/skill-sanitize/skill_upgrade/0_microsoft_for_fabric"
   },
   "counts": {
-    "skills_published": 463,
-    "skills_with_skill_md": 463,
+    "skills_published": 466,
+    "skills_with_skill_md": 466,
     "missing_skill_md": 0,
     "fabric_candidate_folders_available_but_excluded": 23,
     "fabric_candidate_folders_copied": 0,
-    "source_entries_represented": 463,
-    "published_folders_without_active_source_entry": 0
+    "source_entries_represented": 466,
+    "published_folders_without_active_source_entry": 0,
+    "commands_published": 3,
+    "source_commands_represented": 3
   },
   "exclusions": [
     ".ld9/skill-sanitize/skill_upgrade/0_microsoft_for_fabric",
@@ -219,13 +221,16 @@
     "gsap-scrolltrigger",
     "gsap-timeline",
     "gsap-utils",
+    "hallmark",
     "handoff",
     "hono",
     "hook-development",
+    "i-have-adhd",
     "i18n",
     "i18n-localization",
     "image-enhancer",
     "image-to-video",
+    "impeccable",
     "infographic",
     "instagram-account-research",
     "instagram-content-generation",
@@ -489,5 +494,10 @@
     "zendesk",
     "zendesk-automation",
     "zod"
+  ],
+  "published_commands": [
+    "hallmark",
+    "i-have-adhd",
+    "impeccable"
   ]
 }

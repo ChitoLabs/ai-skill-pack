@@ -6,16 +6,19 @@ This staging folder publishes only the curated general skills pack.
 
 | Check | Result |
 | --- | --- |
-| General candidate root | `0_skill_pack_v2` |
-| General skills copied | 463 |
+| General candidate root | `0_skill_pack_v2` plus `newSkill` additions |
+| General skills copied | 466 |
 | Every copied folder has `SKILL.md` | Yes |
+| Command files copied | 3 |
 | Separate Microsoft Fabric candidate folders copied | 0 |
 | Duplicate quarantine copied | No |
 | Temp or memory backup paths copied | No |
 
 ## Source Audit Notes
 
-The current source inventory reports 463 general skill folders with `SKILL.md`. The repository now includes those 463 published skill folders and keeps the separate Microsoft Fabric candidate pack out of scope.
+The current repository inventory reports 466 published skill folders with `SKILL.md`. This includes the prior curated general pack plus `hallmark`, `i-have-adhd`, and `impeccable` from the `newSkill` source folder.
+
+The repository also includes 3 optional command files from the `newCommand` source folder. These command files route to the matching newly added skills.
 
 Historical download triage still records dropped, mapped, duplicate, or out-of-scope entries. The publication artifacts prefer the final curated folder names under `skills/`.
 

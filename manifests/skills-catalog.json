@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-13T00:00:00.000Z",
+  "generated_at": "2026-07-27T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
-  "total_skills": 463,
-  "expected_published_skills": 463,
+  "total_skills": 466,
+  "expected_published_skills": 466,
   "categories": {
-    "Accessibility & Quality": 15,
     "AI/LLM": 25,
+    "Accessibility & Quality": 15,
     "Backend & APIs": 33,
     "Cloud & DevOps": 39,
     "Data & BI": 29,
     "Databases": 22,
-    "Design & Frontend": 69,
-    "Docs & Content": 26,
+    "Design & Frontend": 71,
+    "Docs & Content": 27,
     "E-commerce & Marketing": 30,
     "Frameworks & Runtimes": 37,
     "GitHub & Collaboration": 9,
@@ -22,9 +22,9 @@
   },
   "validation": {
     "skill_md_count_matches_expected": true,
-    "entries_with_category": 463,
+    "entries_with_category": 466,
     "entries_missing_category": 0,
-    "entries_with_source_url": 463,
+    "entries_with_source_url": 466,
     "entries_missing_source_url": 0,
     "missing_source_url_skills": []
   },
@@ -1767,6 +1767,15 @@
       "category": "Design & Frontend"
     },
     {
+      "name": "hallmark",
+      "path": "skills/hallmark/",
+      "source_url": "https://github.com/Nutlope/hallmark",
+      "source_kind": "newSkill-frontmatter",
+      "description": "Trigger: hallmark, design audit, redesign, study, anti-slop UI. Build or review distinctive frontend interfaces.",
+      "intended_use": "Trigger: hallmark, design audit, redesign, study, anti-slop UI. Build or review distinctive frontend interfaces.",
+      "category": "Design & Frontend"
+    },
+    {
       "name": "handoff",
       "path": "skills/handoff/",
       "source_url": "https://www.skills.sh/mattpocock/skills/handoff",
@@ -1792,6 +1801,15 @@
       "description": "Complete Claude Code hooks reference - input/output schemas, registration, testing patterns.",
       "intended_use": "Complete Claude Code hooks reference - input/output schemas, registration, testing patterns",
       "category": "Testing & QA"
+    },
+    {
+      "name": "i-have-adhd",
+      "path": "skills/i-have-adhd/",
+      "source_url": "https://github.com/ayghri/i-have-adhd",
+      "source_kind": "newSkill-frontmatter",
+      "description": "Trigger: i-have-adhd, adhd mode, ADHD-friendly output. Shape replies for ADHD readers with action-first structure.",
+      "intended_use": "Trigger: i-have-adhd, adhd mode, ADHD-friendly output. Shape replies for ADHD readers with action-first structure.",
+      "category": "Docs & Content"
     },
     {
       "name": "i18n",
@@ -1825,9 +1843,18 @@
       "path": "skills/image-to-video/",
       "source_url": "https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video",
       "source_kind": "manifest.skills_sh_url",
-      "description": "Animate any still image on RunComfy \\u2014 this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog.",
-      "intended_use": "Animate any still image on RunComfy \\u2014 this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog.",
+      "description": "Animate any still image on RunComfy - this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog.",
+      "intended_use": "Animate any still image on RunComfy - this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog.",
       "category": "AI/LLM"
+    },
+    {
+      "name": "impeccable",
+      "path": "skills/impeccable/",
+      "source_url": "https://github.com/pbakaus/impeccable",
+      "source_kind": "newSkill-frontmatter",
+      "description": "Trigger: impeccable, frontend design, UI audit, critique, polish. Run a portable manual subset of Impeccable without bundled runtime helpers.",
+      "intended_use": "Trigger: impeccable, frontend design, UI audit, critique, polish. Run a portable manual subset of Impeccable without bundled runtime helpers.",
+      "category": "Design & Frontend"
     },
     {
       "name": "infographic",
@@ -2644,8 +2671,8 @@
       "path": "skills/pptx/",
       "source_url": "https://github.com/anthropics/skills/tree/HEAD/skills/pptx",
       "source_kind": "source-list",
-      "description": "Use this skill any time a.pptx file is involved in any way \\u2014 as input, output, or both.",
-      "intended_use": "Use this skill any time a.pptx file is involved in any way \\u2014 as input, output, or both.",
+      "description": "Use this skill any time a.pptx file is involved in any way - as input, output, or both.",
+      "intended_use": "Use this skill any time a.pptx file is involved in any way - as input, output, or both.",
       "category": "Docs & Content"
     },
     {
@@ -3877,8 +3904,8 @@
       "path": "skills/us-business-english/",
       "source_url": "https://www.skills.sh/jezweb/claude-skills/us-business-english",
       "source_kind": "source-list",
-      "description": "American business English writing style for professional communications \\u2014 direct, action-oriented, EN-US spelling (color, organize, center).",
-      "intended_use": "American business English writing style for professional communications \\u2014 direct, action-oriented, EN-US spelling (color, organize, center).",
+      "description": "American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center).",
+      "intended_use": "American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center).",
       "category": "Docs & Content"
     },
     {
