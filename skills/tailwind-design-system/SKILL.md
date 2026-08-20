@@ -3,7 +3,7 @@ name: tailwind-design-system
 description: "Trigger: tailwind-design-system, Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/tailwind-design-system"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/frontend-mobile-development/skills/tailwind-design-system"

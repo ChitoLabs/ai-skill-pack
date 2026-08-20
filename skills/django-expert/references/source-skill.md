@@ -3,7 +3,7 @@ name: django-expert
 description: Expert Django backend development guidance. Use when creating Django models, views, serializers, or APIs; debugging ORM queries or migrations; optimizing database performance; implementing authentication; writing tests; or working with Django REST Framework. Follows Django best practices and modern patterns.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vintasoftware
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vintasoftware/django-ai-plugins/django-expert"
   github_url: "https://github.com/vintasoftware/django-ai-plugins/tree/HEAD/plugins/django-expert/skills"

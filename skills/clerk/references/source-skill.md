@@ -4,7 +4,7 @@ description: Clerk authentication router. Use when user asks about adding authen
 license: MIT
 metadata:
   version: 2.0.0
-  author: LCubero
+  author: clerk
   skills_sh_url: "https://skills.sh/clerk/skills/clerk"
   github_url: "https://github.com/clerk/skills"
 ---

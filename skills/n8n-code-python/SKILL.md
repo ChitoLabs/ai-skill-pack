@@ -3,7 +3,7 @@ name: n8n-code-python
 description: "Trigger: n8n-code-python, Write Python code in n8n Code nodes. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-code-python"
   github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-code-python"

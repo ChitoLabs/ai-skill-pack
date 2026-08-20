@@ -3,7 +3,7 @@ name: design-critique
 description: "Trigger: design-critique, Get structured design feedback on usability, hierarchy, and consistency. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/design-critique"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/design/skills/design-critique"

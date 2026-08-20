@@ -3,7 +3,7 @@ name: zod
 description: Zod schema validation best practices for type safety, parsing, and error handling. This skill should be used when defining z.object schemas, using z.string validations, safeParse, or z.infer. This skill does NOT cover React Hook Form integration patterns (use react-hook-form skill) or OpenAPI client generation (use orval skill).
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pproenca
   version: 0.1
   skills_sh_url: "https://skills.sh/pproenca/dot-skills/zod"
   github_url: "https://github.com/thongdn-it/react-agent-skills/tree/HEAD/skills/zod"

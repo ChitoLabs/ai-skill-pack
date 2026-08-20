@@ -3,7 +3,7 @@ name: android-testing-unit
 description: "Trigger: android-testing-unit, Write fast, focused Android unit tests for reducers, use cases, repositories, and lifecycle-safe state holders. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: krutikJain
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-testing-unit"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-testing-unit"

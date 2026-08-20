@@ -3,7 +3,7 @@ name: mobile-design
 description: "Design mobile-first, touch-first interfaces that respect iOS and Android platform patterns, navigation, typography, color, performance, backend, testing, and debugging."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/mobile-design"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/mobile-design"

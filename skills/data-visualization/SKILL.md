@@ -3,7 +3,7 @@ name: data-visualization
 description: "Trigger: data-visualization, Data visualization with chart selection, color theory, and annotation best practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/data-visualization"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/guides/design/data-visualization"

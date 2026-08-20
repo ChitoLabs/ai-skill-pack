@@ -3,7 +3,7 @@ name: chrome-extension-development
 description: "Trigger: chrome-extension-development, Expert guidelines for Chrome extension development with Manifest V3, covering security, performance, and best practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/chrome-extension-development"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/chrome-extension-development"

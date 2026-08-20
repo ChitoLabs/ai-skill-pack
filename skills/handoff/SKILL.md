@@ -3,7 +3,7 @@ name: handoff
 description: "Trigger: handoff, resume later, transfer context. Write a redacted continuation document for another agent or fresh session."
 license: MIT
 metadata:
-  author: LCubero
+  author: mattpocock
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/handoff"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff"

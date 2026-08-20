@@ -3,7 +3,7 @@ name: openai-docs
 description: Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: openai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/openai-docs"
   github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/openai-docs"

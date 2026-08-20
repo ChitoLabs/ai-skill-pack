@@ -3,7 +3,7 @@ name: taste-design
 description: Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://skills.sh/google-labs-code/stitch-skills/taste-design"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design"

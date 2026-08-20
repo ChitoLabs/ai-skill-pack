@@ -18,6 +18,13 @@ The work in this repository focuses on packaging and stewardship:
 
 Credit for each individual skill belongs to its original author or upstream project. Source links are preserved in [`docs/source-list.md`](docs/source-list.md), [`docs/skills-catalog.md`](docs/skills-catalog.md), and [`manifests/skills-catalog.json`](manifests/skills-catalog.json). Command routing files are listed in [`docs/commands-catalog.md`](docs/commands-catalog.md) and [`manifests/commands-catalog.json`](manifests/commands-catalog.json).
 
+### Metadata Convention
+
+- Preserve the official upstream author or publisher in `metadata.author`.
+- Never identify the adapter or pack maintainer as the original author.
+- Use `unknown` when authoritative upstream metadata does not establish an author.
+- Include an official upstream source link when one is available and verified.
+
 ## What Was Done
 
 - Reviewed the skill pack and kept the final general-purpose skills only.

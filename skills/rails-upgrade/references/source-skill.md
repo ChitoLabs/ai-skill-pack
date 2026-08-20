@@ -3,7 +3,7 @@ name: rails-upgrade
 description: Analyzes Rails applications and generates comprehensive upgrade reports with breaking changes, deprecations, and step-by-step migration guides for Rails 2.3 through 8.1. Use when upgrading Rails applications, planning multi-hop upgrades, or querying version-specific changes. Based on FastRuby.io methodology and "The Complete Guide to Upgrade Rails" ebook.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: ombulabs
   version: 0.1
   skills_sh_url: "https://skills.sh/ombulabs/claude-code_rails-upgrade-skill/rails-upgrade"
   github_url: "https://github.com/ombulabs/claude-code_rails-upgrade-skill/tree/HEAD/rails-upgrade"

@@ -3,7 +3,7 @@ name: brainstorming
 description: "Trigger: brainstorming, You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/brainstorming"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/brainstorming"

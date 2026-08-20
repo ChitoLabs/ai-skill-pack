@@ -3,7 +3,7 @@ name: jupyter-notebook
 description: Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: openai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/jupyter-notebook"
   github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/jupyter-notebook"

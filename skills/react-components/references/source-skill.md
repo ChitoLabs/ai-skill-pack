@@ -3,7 +3,7 @@ name: "react:components"
 description: Converts Stitch designs into modular Vite and React components using system-level networking and AST-based validation.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://www.skills.sh/google-labs-code/stitch-skills/react:components"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-build/skills/react-components"

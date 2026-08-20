@@ -3,7 +3,7 @@ name: stitch-code-to-design
 description: "Trigger: stitch-code-to-design, Convert frontend code (Vite, React, etc.) to a Stitch Design by chaining static HTML extraction, design system extraction, and file upload. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: unknown
   version: 0.1
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-design/skills/code-to-design"
 ---

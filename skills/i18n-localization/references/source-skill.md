@@ -3,7 +3,7 @@ name: i18n-localization
 description: Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/i18n-localization"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/i18n-localization"

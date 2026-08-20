@@ -3,7 +3,7 @@ name: sentry-node-sdk
 description: Full Sentry SDK setup for Node.js, Bun, and Deno. Use when asked to "add Sentry to Node.js", "add Sentry to Bun", "add Sentry to Deno", "install @sentry/node", "@sentry/bun", or "@sentry/deno", or configure error monitoring, tracing, logging, profiling, metrics, crons, or AI monitoring for server-side JavaScript/TypeScript runtimes.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-node-sdk"
   github_url: "https://github.com/getsentry/sentry-for-claude/tree/HEAD/skills/sentry-node-sdk"

@@ -3,7 +3,7 @@ name: power-bi-dax-optimization
 description: "Trigger: power-bi-dax-optimization, Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/power-bi-dax-optimization"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/power-bi-dax-optimization"

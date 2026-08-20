@@ -4,7 +4,7 @@ description: When the user needs marketing ideas, inspiration, or strategies for
 license: Apache-2.0
 metadata:
   version: 2.0.0
-  author: LCubero
+  author: coreyhaines31
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/marketing-ideas"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/marketing-ideas"
 ---

@@ -3,7 +3,7 @@ name: wp-block-themes
 description: "Use when developing WordPress block themes: theme.json (global settings/styles), templates and template parts, patterns, style variations, and Site Editor troubleshooting (style hierarchy, overrides, caching)."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-block-themes"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-block-themes"

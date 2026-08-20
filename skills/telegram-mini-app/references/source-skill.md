@@ -3,7 +3,7 @@ name: telegram-mini-app
 description: Expert in building Telegram Mini Apps (TWA) - web apps that run
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/telegram-mini-app"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/telegram-mini-app"

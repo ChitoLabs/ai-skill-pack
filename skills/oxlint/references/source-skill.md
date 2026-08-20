@@ -3,7 +3,7 @@ name: oxlint
 description: Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: delexw
   version: 0.1
   skills_sh_url: "https://www.skills.sh/delexw/claude-code-misc/oxlint"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/oxlint"

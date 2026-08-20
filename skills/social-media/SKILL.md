@@ -3,7 +3,7 @@ name: social-media
 description: "Trigger: social-media, Drafts engaging social media posts, writes hooks, suggests hashtags, creates thread structures, and generates companion images. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: langchain-ai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/langchain-ai/deepagents/social-media"
   github_url: "https://github.com/langchain-ai/deepagents/tree/HEAD/examples/content-builder-agent/skills/social-media"

@@ -3,7 +3,7 @@ name: vue-pinia-best-practices
 description: Pinia stores, state management patterns, store setup, and reactivity with stores.
 license: MIT
 metadata:
-  author: LCubero
+  author: github.com/vuejs-ai
   version: 0.1
   skills_sh_url: "https://skills.sh/hyf0/vue-skills/vue-pinia-best-practices"
   github_url: "https://github.com/vuejs-ai/skills/tree/HEAD/skills/vue-pinia-best-practices"

@@ -3,7 +3,7 @@ name: error-handling-patterns
 description: "Trigger: error-handling-patterns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/error-handling-patterns"
   github_url: "https://github.com/wshobson/agents/tree/main/plugins/developer-essentials/skills/error-handling-patterns"

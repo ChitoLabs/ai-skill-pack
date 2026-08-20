@@ -3,7 +3,7 @@ name: shadcn
 description: "Trigger: shadcn, Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: shadcn
   version: 0.1
   skills_sh_url: "https://skills.sh/shadcn/ui/shadcn"
   github_url: "https://github.com/shadcn/ui/tree/HEAD/skills/shadcn"

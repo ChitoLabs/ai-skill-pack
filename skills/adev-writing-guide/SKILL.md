@@ -3,7 +3,7 @@ name: adev-writing-guide
 description: "Trigger: adev-writing-guide, Comprehensive writing guide for Angular documentation (adev). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: angular
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/adev-writing-guide"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/adev-writing-guide"

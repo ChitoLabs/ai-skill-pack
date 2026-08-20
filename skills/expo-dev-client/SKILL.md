@@ -3,7 +3,7 @@ name: expo-dev-client
 description: "Trigger: expo-dev-client, Build and distribute Expo development clients locally or via TestFlight. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-dev-client"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-dev-client"

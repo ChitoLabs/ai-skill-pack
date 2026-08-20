@@ -6,7 +6,7 @@ metadata:
   postplus: "{}"
   familyId: platform-research
   familyName: LinkedIn, Facebook, and YouTube
-  author: LCubero
+  author: postplusai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/postplusai/postplus-skills/facebook-research"
   github_url: "https://github.com/postplusai/postplus-skills/tree/HEAD/skills/20-research/facebook-research"

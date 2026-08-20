@@ -3,7 +3,7 @@ name: Excel Analysis
 description: Analyze Excel spreadsheets, create pivot tables, generate charts, and perform data analysis. Use when analyzing Excel files, spreadsheets, tabular data, or .xlsx files.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: davila7
   version: 0.1
   skills_sh_url: "https://www.skills.sh/davila7/claude-code-templates/excel-analysis"
   github_url: "https://github.com/davila7/claude-code-templates/tree/HEAD/cli-tool/components/skills/enterprise-communication/excel-analysis"

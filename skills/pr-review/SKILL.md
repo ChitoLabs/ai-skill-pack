@@ -3,7 +3,7 @@ name: pr-review
 description: "Trigger: pr-review, Guidelines and tools for reviewing pull requests in the Angular repository. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: angular
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/pr_review"
   github_url: "https://github.com/angular/angular/tree/HEAD/.agent/skills/pr_review"

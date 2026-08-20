@@ -3,7 +3,7 @@ name: api-design-principles
 description: "Trigger: api-design-principles, Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/api-design-principles"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/backend-development/skills/api-design-principles"

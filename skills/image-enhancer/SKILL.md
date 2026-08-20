@@ -3,7 +3,7 @@ name: image-enhancer
 description: "Trigger: image-enhancer, Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: composiohq
   version: 0.1
   skills_sh_url: "https://www.skills.sh/composiohq/awesome-claude-skills/image-enhancer"
   github_url: "https://github.com/skillcreatorai/awesome-agent-skills/tree/HEAD/image-enhancer"

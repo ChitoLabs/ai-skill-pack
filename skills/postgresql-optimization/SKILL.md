@@ -3,7 +3,7 @@ name: postgresql-optimization
 description: "Trigger: postgresql-optimization, PostgreSQL-specific development assistant focusing on unique PostgreSQL features, advanced data types, and PostgreSQL-exclusive capabilities. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/postgresql-optimization"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/postgresql-optimization"

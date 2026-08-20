@@ -3,7 +3,7 @@ name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/writing-plans"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/writing-plans"

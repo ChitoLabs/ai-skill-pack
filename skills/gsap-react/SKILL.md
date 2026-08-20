@@ -3,7 +3,7 @@ name: gsap-react
 description: "Trigger: gsap-react, Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: greensock
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-react"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/gsap-react"

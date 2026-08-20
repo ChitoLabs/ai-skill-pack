@@ -3,7 +3,7 @@ name: wp-wpcli-and-ops
 description: "Use when working with WP-CLI (wp) for WordPress operations: safe search-replace, db export/import, plugin/theme/user/content management, cron, cache flushing, multisite, and scripting/automation with wp-cli.yml."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-wpcli-and-ops"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-wpcli-and-ops"

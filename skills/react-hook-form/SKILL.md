@@ -3,7 +3,7 @@ name: react-hook-form
 description: "Optimize React Hook Form client-side forms with useForm, useWatch, useController, useFieldArray, v7.55+ subscribe(), validation, and render isolation."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pproenca
   version: 0.1
   skills_sh_url: "https://skills.sh/pproenca/dot-skills/react-hook-form"
   github_url: "https://github.com/pproenca/dot-skills/tree/HEAD/skills/.curated/react-hook-form"

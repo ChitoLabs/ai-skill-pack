@@ -3,7 +3,7 @@ name: postgresql-optimization
 description: PostgreSQL-specific development assistant focusing on unique PostgreSQL features, advanced data types, and PostgreSQL-exclusive capabilities. Covers JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and PostgreSQL extensions ecosystem.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/postgresql-optimization"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/postgresql-optimization"

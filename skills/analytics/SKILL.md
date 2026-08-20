@@ -3,7 +3,7 @@ name: analytics
 description: "Trigger: analytics, When the user wants to set up, improve, or audit analytics tracking and measurement. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: coreyhaines31
   version: 2.0.0
   skills_sh_url: "https://skills.sh/coreyhaines31/marketingskills/analytics"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/analytics"

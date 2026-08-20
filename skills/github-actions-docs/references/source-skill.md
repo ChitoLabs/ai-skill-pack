@@ -3,7 +3,7 @@ name: github-actions-docs
 description: Use when users ask how to write, explain, customize, migrate, secure, or troubleshoot GitHub Actions workflows, workflow syntax, triggers, matrices, runners, reusable workflows, artifacts, caching, secrets, OIDC, deployments, custom actions, or Actions Runner Controller, especially when they need official GitHub documentation, exact links, or docs-grounded YAML guidance.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: xixu-me
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/github-actions-docs"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/github-actions-docs"

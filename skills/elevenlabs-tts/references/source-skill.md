@@ -3,7 +3,7 @@ name: elevenlabs-tts
 description: "ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. Models: eleven_multilingual_v2 (highest quality), eleven_turbo_v2_5 (low latency), eleven_flash_v2_5 (ultra-fast). Capabilities: text-to-speech, voice selection, stability/style control, 32 languages. Use for: voiceovers, audiobooks, video narration, podcasts, accessibility, IVR. Triggers: elevenlabs, eleven labs, elevenlabs tts, premium tts, professional voice, ai voice, high quality tts, multilingual tts, eleven labs voice, voice generation, natural speech, realistic voice, voice over, speech synthesis"
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/elevenlabs-tts"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts"

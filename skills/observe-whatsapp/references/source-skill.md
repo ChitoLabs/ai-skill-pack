@@ -3,7 +3,7 @@ name: observe-whatsapp
 description: "Observe and troubleshoot WhatsApp in Kapso: debug message delivery, inspect webhook deliveries/retries, triage API errors, and run health checks. Use when investigating production issues, message failures, or webhook delivery problems."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: gokapso
   version: 0.1
   skills_sh_url: "https://www.skills.sh/gokapso/agent-skills/observe-whatsapp"
   github_url: "https://github.com/gokapso/kapso-agent-skills/tree/HEAD/skills/observe-whatsapp"

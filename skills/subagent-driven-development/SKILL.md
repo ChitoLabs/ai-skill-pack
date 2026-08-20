@@ -3,7 +3,7 @@ name: subagent-driven-development
 description: "Trigger: subagent-driven-development, Use when executing implementation plans with independent tasks in the current session. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/subagent-driven-development"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/subagent-driven-development"

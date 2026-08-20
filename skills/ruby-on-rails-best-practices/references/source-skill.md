@@ -3,7 +3,7 @@ name: ruby-on-rails-best-practices
 description: Ruby on Rails architecture and coding patterns from Basecamp. Use when writing, reviewing, or refactoring Rails code to follow proven conventions for models, controllers, jobs, and concerns. Triggers on tasks involving Rails models, concerns, controllers, background jobs, or Turbo/Hotwire.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sergiodxa
   version: 0.1
   skills_sh_url: "https://skills.sh/sergiodxa/agent-skills/ruby-on-rails-best-practices"
   github_url: "https://github.com/sergiodxa/agent-skills/tree/HEAD/skills/ruby-on-rails-best-practices"

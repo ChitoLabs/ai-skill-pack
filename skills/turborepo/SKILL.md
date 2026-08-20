@@ -3,7 +3,7 @@ name: turborepo
 description: "Trigger: turborepo, Turborepo monorepo build system guidance. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel
   version: 2.9.15-canary.3
   skills_sh_url: "https://skills.sh/vercel/turborepo/turborepo"
   github_url: "https://github.com/vercel/turborepo/tree/HEAD/skills/turborepo"

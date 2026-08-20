@@ -3,7 +3,7 @@ name: database-schema-designer
 description: Design robust, scalable database schemas for SQL and NoSQL databases. Provides normalization guidelines, indexing strategies, migration patterns, constraint design, and performance optimization. Ensures data integrity, query performance, and maintainable data models.
 license: MIT
 metadata:
-  author: LCubero
+  author: softaworks
   version: 0.1
   skills_sh_url: "https://www.skills.sh/softaworks/agent-toolkit/database-schema-designer"
   github_url: "https://github.com/softaworks/agent-toolkit/tree/HEAD/dist/plugins/database-schema-designer/skills/database-schema-designer"

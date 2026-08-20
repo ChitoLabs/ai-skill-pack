@@ -3,7 +3,7 @@ name: wp-performance
 description: "Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization, autoloaded options, object caching, cron, HTTP API calls, and safe verification."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-performance"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-performance"

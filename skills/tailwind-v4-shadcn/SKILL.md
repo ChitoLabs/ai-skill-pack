@@ -3,7 +3,7 @@ name: tailwind-v4-shadcn
 description: "Trigger: tailwind-v4-shadcn, | Production-tested setup for Tailwind CSS v4 with shadcn/ui, Vite, and React. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: secondsky
   version: 0.1
   skills_sh_url: "https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn"
   github_url: "https://github.com/secondsky/claude-skills/tree/HEAD/plugins/tailwind-v4-shadcn/skills/tailwind-v4-shadcn"

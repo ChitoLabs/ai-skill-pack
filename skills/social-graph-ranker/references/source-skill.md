@@ -3,7 +3,7 @@ name: social-graph-ranker
 description: Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow layered on top of it.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/social-graph-ranker"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/social-graph-ranker"

@@ -3,7 +3,7 @@ name: sentry-setup-ai-monitoring
 description: Setup Sentry AI Agent Monitoring in any project. Use when asked to monitor LLM calls, track AI agents, or instrument OpenAI/Anthropic/Vercel AI/LangChain/Google GenAI/Pydantic AI. Detects installed AI SDKs and configures appropriate integrations.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-setup-ai-monitoring"
   github_url: "https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-setup-ai-monitoring"

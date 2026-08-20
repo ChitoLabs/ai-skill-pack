@@ -3,7 +3,7 @@ name: ai-video-generation
 description: "Trigger: ai-video-generation, Generate AI videos with Google Veo, Seedance 2.0, HappyHorse, Wan, Grok and 40+ models via inference.sh CLI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/ai-video-generation"
   github_url: "https://github.com/inference-sh/skills/tree/HEAD/tools/video/ai-video-generation"

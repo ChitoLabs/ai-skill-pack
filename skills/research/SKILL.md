@@ -3,7 +3,7 @@ name: research
 description: "Trigger: research, primary-source investigation, docs lookup. Investigate a question and save cited findings as Markdown."
 license: MIT
 metadata:
-  author: LCubero
+  author: mattpocock
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/research"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/engineering/research"

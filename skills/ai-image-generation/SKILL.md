@@ -3,7 +3,7 @@ name: ai-image-generation
 description: "Trigger: ai-image-generation, Generate AI images with GPT-Image-2, FLUX, Gemini, Grok, Seedream, Reve and 50+ models via inference.sh CLI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/inference-sh-skills/skills/ai-image-generation"
   github_url: "https://github.com/inference-sh/skills/tree/HEAD/tools/image/ai-image-generation"

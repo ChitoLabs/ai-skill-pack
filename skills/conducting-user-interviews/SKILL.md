@@ -3,7 +3,7 @@ name: conducting-user-interviews
 description: "Trigger: conducting-user-interviews, Help users run better customer and user interviews. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: refoundai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/refoundai/lenny-skills/conducting-user-interviews"
   github_url: "https://github.com/refoundai/lenny-skills/tree/HEAD/skills/conducting-user-interviews"

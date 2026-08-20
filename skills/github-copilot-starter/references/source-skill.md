@@ -3,7 +3,7 @@ name: github-copilot-starter
 description: Set up complete GitHub Copilot configuration for a new project based on technology stack
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/github-copilot-starter"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/github-copilot-starter"

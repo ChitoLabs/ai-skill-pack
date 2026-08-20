@@ -3,7 +3,7 @@ name: i18n
 description: "LobeHub internationalization with react-i18next. Use when adding any user-facing string in `.tsx`/`.ts` files, creating or renaming a key under `src/locales/default/{namespace}.ts`, deciding the `{feature}.{context}.{action}` flat-key pattern, wiring a new namespace into `src/locales/default/index.ts`, or translating zh-CN/en-US JSON for dev preview. Triggers on `useTranslation`, `t('foo.bar')`, `i18next.t`, `{{variable}}` interpolation, hardcoded UI strings (zh or en) that should be extracted, 'add i18n', '\u52a0 i18n key', '\u7ffb\u8bd1', 'locale key', 'namespace', 'pnpm i18n'."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: lobehub
   version: 0.1
   skills_sh_url: "https://www.skills.sh/lobehub/lobe-chat/i18n"
   github_url: "https://github.com/lobehub/lobehub/tree/HEAD/.agents/skills/i18n"

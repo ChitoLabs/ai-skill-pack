@@ -3,7 +3,7 @@ name: xcode-build-orchestrator
 description: Orchestrate Xcode build optimization by benchmarking first, running the specialist analysis skills, prioritizing findings, requesting explicit approval, delegating approved fixes to xcode-build-fixer, and re-benchmarking after changes. Use when a developer wants an end-to-end build optimization workflow, asks to speed up Xcode builds, wants a full build audit, or needs a recommend-first optimization pass covering compilation, project settings, and packages.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/xcode-build-optimization-agent-skill/xcode-build-orchestrator"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/xcode-build-orchestrator"

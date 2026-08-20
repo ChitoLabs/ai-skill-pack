@@ -3,7 +3,7 @@ name: social-media
 description: Drafts engaging social media posts, writes hooks, suggests hashtags, creates thread structures, and generates companion images. Use when the user asks to write a LinkedIn post, tweet, Twitter/X thread, social media caption, social post, or repurpose content for social platforms.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: langchain-ai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/langchain-ai/deepagents/social-media"
   github_url: "https://github.com/langchain-ai/deepagents/tree/HEAD/examples/content-builder-agent/skills/social-media"

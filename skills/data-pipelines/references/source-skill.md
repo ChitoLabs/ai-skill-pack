@@ -3,7 +3,7 @@ name: data-pipelines
 description: Use this skill when building data pipelines, ETL/ELT workflows, or data transformation layers. Triggers on Airflow DAG design, dbt model creation, Spark job optimization, streaming vs batch architecture decisions, data ingestion, data quality checks, pipeline orchestration, incremental loads, CDC (change data capture), schema evolution, and data warehouse modeling. Acts as a senior data engineer advisor for building reliable, scalable data infrastructure.
 license: MIT
 metadata:
-  author: LCubero
+  author: absolutelyskilled
   version: 0.1
   skills_sh_url: "https://www.skills.sh/absolutelyskilled/absolutelyskilled/data-pipelines"
   github_url: "https://github.com/absolutelyskilled/absolutelyskilled/tree/HEAD/skills/data-pipelines"

@@ -3,7 +3,7 @@ name: mobile-ios-design
 description: Master iOS Human Interface Guidelines and SwiftUI patterns for building native iOS apps. Use when designing iOS interfaces, implementing SwiftUI views, or ensuring apps follow Apple's design principles.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/mobile-ios-design"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/mobile-ios-design"

@@ -3,7 +3,7 @@ name: grill-me
 description: "Trigger: grill me, challenge my plan, sharpen design. Run a relentless interview to expose assumptions and improve a plan."
 license: MIT
 metadata:
-  author: LCubero
+  author: mattpocock
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/grill-me"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me"

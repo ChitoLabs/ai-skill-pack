@@ -3,7 +3,7 @@ name: bun-development
 description: "Fast, modern JavaScript/TypeScript development with the Bun runtime, inspired by [oven-sh/bun](https://github.com/oven-sh/bun)."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/bun-development"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/bun-development"

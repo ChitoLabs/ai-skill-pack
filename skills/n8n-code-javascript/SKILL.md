@@ -3,7 +3,7 @@ name: n8n-code-javascript
 description: "Write JavaScript in n8n Code nodes using $input, $json, $node, $helpers, DateTime, Code node modes, SplitInBatches, pairedItem, and production transformation patterns."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-code-javascript"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-code-javascript"

@@ -3,7 +3,7 @@ name: discord-bot
 description: Discord bot development - community management, moderation, notifications, and AI integration
 license: MIT
 metadata:
-  author: LCubero
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/discord-bot"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/discord-bot"

@@ -3,7 +3,7 @@ name: playwright-explore-website
 description: Website exploration for testing using Playwright MCP
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/playwright-explore-website"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/playwright-explore-website"

@@ -3,8 +3,9 @@ name: rails-stack-conventions
 description: "Trigger: rails-stack-conventions, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: igmarin
   version: 0.1
+  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rails-stack-conventions"
 ---
 
 ## Activation Contract

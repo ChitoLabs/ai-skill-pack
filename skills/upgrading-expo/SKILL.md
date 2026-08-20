@@ -3,7 +3,7 @@ name: upgrading-expo
 description: "Trigger: upgrading-expo, Guidelines for upgrading Expo SDK versions and fixing dependency issues. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/upgrading-expo"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/upgrading-expo"

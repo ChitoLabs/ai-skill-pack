@@ -3,7 +3,7 @@ name: integrate-whatsapp
 description: "Connect WhatsApp to your product with Kapso: onboard customers with setup links, detect connections, receive events via webhooks, and send messages/templates/media. Also manage WhatsApp Flows (create/update/publish, data endpoints, encryption). Use when integrating WhatsApp end-to-end."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: gokapso
   version: 0.1
   skills_sh_url: "https://www.skills.sh/gokapso/agent-skills/integrate-whatsapp"
   github_url: "https://github.com/gokapso/kapso-agent-skills/tree/HEAD/skills/integrate-whatsapp"

@@ -3,7 +3,7 @@ name: migrate-to-vinext
 description: Migrates Next.js projects to vinext (Vite-based Next.js reimplementation). Load when asked to migrate, convert, or switch from Next.js to vinext. Handles compatibility scanning, package replacement, Vite config generation, ESM conversion, and deployment setup (Cloudflare Workers natively, other platforms via Nitro).
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/vinext/migrate-to-vinext"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/migrate-to-vinext"

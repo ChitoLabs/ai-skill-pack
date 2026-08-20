@@ -3,7 +3,7 @@ name: ruby
 description: "Write, review, and debug pure Ruby 3.x code using idiomatic patterns, modern language features, error handling conventions, memoization, result objects, and performance idioms."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: lucianghinda
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/ruby"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/ruby"

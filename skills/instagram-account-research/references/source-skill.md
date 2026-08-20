@@ -6,7 +6,7 @@ metadata:
   postplus: "{}"
   familyId: instagram
   familyName: Instagram
-  author: LCubero
+  author: postplusai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/postplusai/postplus-skills/instagram-account-research"
   github_url: "https://github.com/postplusai/postplus-skills/tree/HEAD/skills/20-research/instagram-account-research"

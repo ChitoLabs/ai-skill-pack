@@ -3,8 +3,9 @@ name: bun
 description: "Trigger: bun, Use when building, testing, and deploying JavaScript/TypeScript applications. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: unknown
   version: 1.0
+  skills_sh_url: "https://www.skills.sh/site/bun.sh/bun"
 ---
 
 ## Activation Contract

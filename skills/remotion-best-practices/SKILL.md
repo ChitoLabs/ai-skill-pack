@@ -3,7 +3,7 @@ name: remotion-best-practices
 description: "Trigger: remotion-best-practices, Best practices for Remotion - Video creation in React. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: remotion-dev
   version: 0.1
   skills_sh_url: "https://www.skills.sh/remotion-dev/skills/remotion-best-practices"
   github_url: "https://github.com/remotion-dev/skills/tree/HEAD/skills/remotion"

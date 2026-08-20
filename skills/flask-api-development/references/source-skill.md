@@ -3,7 +3,7 @@ name: flask-api-development
 description: Develop lightweight Flask APIs with routing, blueprints, database integration, authentication, and request/response handling. Use when building RESTful APIs, microservices, or lightweight web services with Flask.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: aj-geddes
   version: 0.1
   skills_sh_url: "https://skills.sh/aj-geddes/useful-ai-prompts/flask-api-development"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/flask-api-development"

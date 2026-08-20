@@ -3,7 +3,7 @@ name: gsap-frameworks
 description: "Trigger: gsap-frameworks, Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: greensock
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-frameworks"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-frameworks"

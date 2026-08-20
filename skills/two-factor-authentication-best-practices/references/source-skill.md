@@ -3,7 +3,7 @@ name: two-factor-authentication-best-practices
 description: Configure TOTP authenticator apps, send OTP codes via email/SMS, manage backup codes, handle trusted devices, and implement 2FA sign-in flows using Better Auth's twoFactor plugin. Use when users need MFA, multi-factor authentication, authenticator setup, or login security with Better Auth.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/two-factor-authentication-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/twoFactor"

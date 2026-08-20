@@ -3,7 +3,7 @@ name: tanstack-start
 description: Full-stack React framework powered by TanStack Router with SSR, streaming, server functions, and deployment to any hosting provider.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: tanstack-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/tanstack-skills/tanstack-skills/tanstack-start"
   github_url: "https://github.com/tanstack-skills/tanstack-skills/tree/HEAD/plugins/tanstack-start/skills/tanstack-start"

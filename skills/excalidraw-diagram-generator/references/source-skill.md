@@ -3,7 +3,7 @@ name: excalidraw-diagram-generator
 description: Generate Excalidraw diagrams from natural language descriptions. Use when asked to "create a diagram", "make a flowchart", "visualize a process", "draw a system architecture", "create a mind map", or "generate an Excalidraw file". Supports flowcharts, relationship diagrams, mind maps, and system architecture diagrams. Outputs .excalidraw JSON files that can be opened directly in Excalidraw.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/excalidraw-diagram-generator"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/excalidraw-diagram-generator"

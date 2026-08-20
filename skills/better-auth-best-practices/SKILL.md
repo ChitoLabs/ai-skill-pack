@@ -3,7 +3,7 @@ name: better-auth-best-practices
 description: "Trigger: better-auth-best-practices, Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/better-auth-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/best-practices"

@@ -3,7 +3,7 @@ name: make-interfaces-feel-better
 description: Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, typography, micro-interactions, enter/exit animations, or any visual detail work. Triggers on UI polish, design details, "make it feel better", "feels off", stagger animations, border radius, optical alignment, font smoothing, tabular numbers, image outlines, box shadows.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: jakubkrehel
   version: 0.1
   skills_sh_url: "https://www.skills.sh/jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better"
   github_url: "https://github.com/julianromli/ai-skills/tree/HEAD/skills/make-interfaces-feel-better"

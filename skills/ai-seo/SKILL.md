@@ -3,7 +3,7 @@ name: ai-seo
 description: "Trigger: ai-seo, When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: coreyhaines31
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/ai-seo"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/ai-seo"

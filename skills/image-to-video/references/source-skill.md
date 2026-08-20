@@ -3,7 +3,7 @@ name: image-to-video
 description: "Animate any still image on RunComfy \u2014 this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog. Picks HappyHorse 1.0 I2V (Arena #1, native audio, identity preservation) for general animations, Wan 2.7 with `audio_url` for custom-voiceover lip-sync, or Seedance 2.0 Pro for multi-modal animation from image + reference video + reference audio. Bundles each model's documented prompting patterns so the caller gets sharper output without burning iterations on the wrong model. Calls `runcomfy run <vendor>/<model>/image-to-video` (or endpoint variant) through the local RunComfy CLI. Triggers on \"image to video\", \"image-to-video\", \"i2v\", \"animate image\", \"make this move\", or any explicit ask to turn a still into video."
 license: MIT
 metadata:
-  author: LCubero
+  author: agentspace-so
   version: 0.1
   skills_sh_url: "https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video"
   github_url: "https://github.com/agentspace-so/runcomfy-agent-skills/tree/HEAD/image-to-video"

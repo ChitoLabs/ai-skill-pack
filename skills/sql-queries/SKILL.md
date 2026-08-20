@@ -3,7 +3,7 @@ name: sql-queries
 description: "Trigger: sql-queries, Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/sql-queries"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/sql-queries"

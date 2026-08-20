@@ -3,7 +3,7 @@ name: baoyu-infographic
 description: "Trigger: baoyu-infographic, infographic, visual summary, 信息图, 可视化. Generate structured prompts for raster infographic creation."
 license: MIT
 metadata:
-  author: LCubero
+  author: jimliu
   version: "1.117.4"
   skills_sh_url: https://www.skills.sh/jimliu/baoyu-skills/baoyu-infographic
   github_url: https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-infographic

@@ -3,7 +3,7 @@ name: svelte-code-writer
 description: CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (.svelte) or Svelte module (.svelte.ts/.svelte.js). If possible, this skill should be executed within the svelte-file-editor agent for optimal results.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sveltejs
   version: 0.1
   skills_sh_url: "https://skills.sh/sveltejs/ai-tools/svelte-code-writer"
   github_url: "https://github.com/sveltejs/ai-tools/tree/HEAD/tools/skills/svelte-code-writer"

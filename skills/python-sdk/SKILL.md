@@ -3,7 +3,7 @@ name: python-sdk
 description: "Trigger: python-sdk, Python SDK for inference.sh - run AI apps, build agents, and integrate with 250+ models. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/python-sdk"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/sdk/python-sdk"

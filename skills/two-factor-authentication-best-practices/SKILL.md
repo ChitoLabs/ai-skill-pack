@@ -3,7 +3,7 @@ name: two-factor-authentication-best-practices
 description: "Trigger: two-factor-authentication-best-practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/two-factor-authentication-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/twoFactor"

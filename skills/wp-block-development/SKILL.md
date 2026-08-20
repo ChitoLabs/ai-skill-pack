@@ -3,7 +3,7 @@ name: wp-block-development
 description: "Trigger: wp-block-development. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-block-development"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-block-development"

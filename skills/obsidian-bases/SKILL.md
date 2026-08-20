@@ -3,7 +3,7 @@ name: obsidian-bases
 description: "Trigger: obsidian-bases, Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: kepano
   version: 0.1
   skills_sh_url: "https://www.skills.sh/kepano/obsidian-skills/obsidian-bases"
   github_url: "https://github.com/pedronauck/skills/tree/HEAD/skills/community/obsidian-bases"

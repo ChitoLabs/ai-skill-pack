@@ -3,7 +3,7 @@ name: oauth
 description: Configure OAuth providers (Google, Apple, Microsoft, Facebook, GitHub, etc.) to work with portless local dev URLs. Use when setting up OAuth redirect URIs, fixing "redirect_uri_mismatch" or "invalid redirect" errors, configuring sign-in providers for local development, or when a provider rejects .localhost subdomains. Triggers include "OAuth not working with portless", "redirect URI mismatch", "Google/Apple/Microsoft sign-in fails locally", "configure OAuth for local dev", or any task involving OAuth callback URLs with portless domains.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vercel-labs/portless/oauth"
   github_url: "https://github.com/vercel-labs/portless/tree/HEAD/skills/oauth"

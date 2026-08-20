@@ -3,7 +3,7 @@ name: find-skills
 description: "Trigger: find skills, skill discovery, installable agent capabilities. Discover and evaluate skills before recommending install commands."
 license: MIT
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/vercel-labs/skills/find-skills"
   github_url: "https://github.com/vercel-labs/skills/tree/main/skills/find-skills"

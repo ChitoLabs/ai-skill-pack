@@ -3,7 +3,7 @@ name: senior-architect
 description: Complete toolkit for senior architect with modern tools and best practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/senior-architect"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/senior-architect"

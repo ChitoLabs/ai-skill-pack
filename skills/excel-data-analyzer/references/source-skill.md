@@ -3,7 +3,7 @@ name: excel-data-analyzer
 description: Analyze messy and unstructured Excel files to identify data quality issues, detect format inconsistencies, find missing values, and generate comprehensive analysis reports. Use when Claude needs to work with Excel files (.xlsx, .xls) for data quality assessment, structure analysis, or when users request data auditing, cleaning recommendations, or statistical summaries of spreadsheet data.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mineru98
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mineru98/skills-store/excel-data-analyzer"
   github_url: "https://github.com/mineru98/skills-store/tree/HEAD/.codex/skills/excel-data-analyzer"

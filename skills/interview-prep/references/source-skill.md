@@ -3,7 +3,7 @@ name: interview-prep
 description: Create structured interview plans with competency-based questions and scorecards. Trigger with "interview plan for", "interview questions for", "how should we interview", "scorecard for", or when the user is preparing to interview candidates.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/interview-prep"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/human-resources/skills/interview-prep"

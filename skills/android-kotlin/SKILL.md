@@ -3,7 +3,7 @@ name: android-kotlin
 description: "Trigger: android-kotlin, Android Kotlin development with Coroutines, Jetpack Compose, Hilt, and MockK testing. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: alinaqi
   version: 0.1
   skills_sh_url: "https://skills.sh/alinaqi/claude-bootstrap/android-kotlin"
   github_url: "https://github.com/alinaqi/claude-bootstrap/tree/HEAD/skills/android-kotlin"

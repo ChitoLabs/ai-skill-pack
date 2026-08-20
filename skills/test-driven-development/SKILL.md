@@ -3,7 +3,7 @@ name: test-driven-development
 description: "Trigger: test-driven-development, Use when implementing any feature or bugfix, before writing implementation code. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/test-driven-development"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/test-driven-development"

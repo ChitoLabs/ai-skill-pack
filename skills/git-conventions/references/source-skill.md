@@ -3,7 +3,7 @@ name: git-workflow
 description: Git conventions and workflow guidelines using Conventional Commits, branching strategies, and best practices for version control
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/git-workflow"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/git-workflow"

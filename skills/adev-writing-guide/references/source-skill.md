@@ -3,7 +3,7 @@ name: adev-writing-guide
 description: Comprehensive writing guide for Angular documentation (adev). Covers Google Technical Writing standards, Angular-specific markdown extensions, code blocks, and components. You MUST use this skill any time you plan to create, edit, or review documentation files in `adev/` or `adev/src/content`.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: angular
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/adev-writing-guide"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/adev-writing-guide"

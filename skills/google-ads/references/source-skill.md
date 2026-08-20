@@ -4,7 +4,7 @@ description: When the user wants to set up, optimize, or manage Google Ads campa
 license: Apache-2.0
 metadata:
   version: 1.4.1
-  author: LCubero
+  author: kostja94
   skills_sh_url: "https://www.skills.sh/kostja94/marketing-skills/google-ads"
   github_url: "https://github.com/kostja94/marketing-skills/tree/HEAD/skills/paid-ads/platforms/google-ads"
 ---

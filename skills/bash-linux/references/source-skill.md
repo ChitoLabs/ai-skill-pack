@@ -3,7 +3,7 @@ name: bash-linux
 description: Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/bash-linux"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/bash-linux"

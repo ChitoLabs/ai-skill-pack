@@ -3,7 +3,7 @@ name: playwright-generate-test
 description: Generate a Playwright test based on a scenario using Playwright MCP
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/playwright-generate-test"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/playwright-generate-test"

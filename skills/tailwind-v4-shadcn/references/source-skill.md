@@ -3,7 +3,7 @@ name: tailwind-v4-shadcn
 description: "| Production-tested setup for Tailwind CSS v4 with shadcn/ui, Vite, and React. Use when: initializing React projects with Tailwind v4, setting up shadcn/ui, implementing dark mode, debugging CSS variable issues, fixing theme switching, migrating from Tailwind v3, or encountering color/theming problems. Covers: @theme inline pattern, CSS variable architecture, dark mode with ThemeProvider, component composition, vite.config setup, common v4 gotchas, and production-tested patterns."
 license: MIT
 metadata:
-  author: LCubero
+  author: secondsky
   version: 0.1
   skills_sh_url: "https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn"
   github_url: "https://github.com/secondsky/claude-skills/tree/HEAD/plugins/tailwind-v4-shadcn/skills/tailwind-v4-shadcn"

@@ -5,6 +5,7 @@ license: MIT
 metadata:
   author: Microsoft
   version: 0.0.0-placeholder
+  skills_sh_url: "https://skills.sh/microsoft/azure-skills/azure-cost-optimization"
 ---
 
 ## Activation Contract

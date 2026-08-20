@@ -3,7 +3,7 @@ name: elevenlabs-music
 description: "Trigger: elevenlabs-music, ElevenLabs AI music generation - create original music from text prompts via inference.sh CLI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/elevenlabs-music"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-music"

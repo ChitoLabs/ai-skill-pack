@@ -3,7 +3,7 @@ name: design-mobile-apps
 description: "Trigger: design-mobile-apps, Use when the user wants to design a mobile app, create screens, build UI, or interact with their Sleek projects. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sleekdotdesign
   version: 0.1
   skills_sh_url: "https://skills.sh/sleekdotdesign/agent-skills/design-mobile-apps"
   github_url: "https://github.com/sleekdotdesign/agent-skills/tree/HEAD/skills/design-mobile-apps"

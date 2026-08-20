@@ -3,7 +3,7 @@ name: discovery-interview
 description: "Trigger: discovery-interview, Deep interview process to transform vague ideas into detailed specs. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: parcadei
   version: 0.1
   skills_sh_url: "https://www.skills.sh/parcadei/continuous-claude-v3/discovery-interview"
   github_url: "https://github.com/parcadei/continuous-claude-v3/tree/HEAD/.claude/skills/discovery-interview"

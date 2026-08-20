@@ -3,7 +3,7 @@ name: excel-automation
 description: ""
 license: MIT
 metadata:
-  author: LCubero
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/excel-automation"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/excel-automation"

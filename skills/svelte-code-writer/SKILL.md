@@ -3,7 +3,7 @@ name: svelte-code-writer
 description: "Trigger: svelte-code-writer, CLI tools for Svelte 5 documentation lookup and code analysis. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sveltejs
   version: 0.1
   skills_sh_url: "https://skills.sh/sveltejs/ai-tools/svelte-code-writer"
   github_url: "https://github.com/sveltejs/ai-tools/tree/HEAD/tools/skills/svelte-code-writer"

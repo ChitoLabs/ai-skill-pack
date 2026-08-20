@@ -3,7 +3,7 @@ name: scikit-learn
 description: Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: davila7
   version: 0.1
   skills_sh_url: "https://skills.sh/davila7/claude-code-templates/scikit-learn"
   github_url: "https://github.com/wu-yc/labclaw/tree/HEAD/skills/general/scikit-learn"

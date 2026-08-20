@@ -3,7 +3,7 @@ name: nuxt-ui
 description: Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, customizing themes to match a brand, building forms, or composing layouts like dashboards, docs sites, and chat interfaces.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: nuxt
   version: 0.1
   skills_sh_url: "https://www.skills.sh/nuxt/ui/nuxt-ui"
   github_url: "https://github.com/nuxt/ui/tree/HEAD/skills/nuxt-ui"

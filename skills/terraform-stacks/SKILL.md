@@ -3,7 +3,7 @@ name: terraform-stacks
 description: "Trigger: terraform-stacks, Comprehensive guide for working with HashiCorp Terraform Stacks. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: hashicorp
   version: 0.0.1
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/terraform-stacks"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/terraform-stacks"

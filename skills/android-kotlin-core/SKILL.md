@@ -3,7 +3,7 @@ name: android-kotlin-core
 description: "Trigger: android-kotlin-core, Use Kotlin idioms safely in Android apps, including nullability, data classes, sealed types, extension functions, and collection pipelines. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: krutikJain
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-kotlin-core"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-kotlin-core"

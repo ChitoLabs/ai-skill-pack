@@ -3,7 +3,7 @@ name: android-gradle-build-logic
 description: "Trigger: android-gradle-build-logic, Shape Android build logic with Gradle, version catalogs, plugins, convention patterns, and toolchain compatibility. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: krutikJain
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-gradle-build-logic"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-gradle-build-logic"

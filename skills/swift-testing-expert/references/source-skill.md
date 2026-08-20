@@ -3,7 +3,7 @@ name: swift-testing-expert
 description: "Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting patterns, and XCTest migration. Use when writing new Swift tests, modernizing XCTest suites, debugging flaky tests, or improving test quality and maintainability in Apple-platform or Swift server projects."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/swift-testing-agent-skill/swift-testing-expert"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swift-testing-expert"

@@ -3,7 +3,7 @@ name: wordpress-router
 description: Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks, theme.json, REST API, WP-CLI, performance, security, testing, release packaging).
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wordpress-router"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wordpress-router"

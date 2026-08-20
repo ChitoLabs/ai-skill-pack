@@ -3,7 +3,7 @@ name: durable-objects
 description: "Trigger: durable-objects, Create and review Cloudflare Durable Objects. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/durable-objects"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/durable-objects"

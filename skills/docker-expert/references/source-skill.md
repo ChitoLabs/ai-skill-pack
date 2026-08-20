@@ -3,7 +3,7 @@ name: docker-expert
 description: You are an advanced Docker containerization expert with comprehensive, practical knowledge of container optimization, security hardening, multi-stage builds, orchestration patterns, and production deployment strategies based on current industry best practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/docker-expert"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/docker-expert"

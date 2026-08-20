@@ -3,7 +3,7 @@ name: n8n-expression-syntax
 description: "Trigger: n8n-expression-syntax, Validate n8n expression syntax and fix common errors. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-expression-syntax"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-expression-syntax"

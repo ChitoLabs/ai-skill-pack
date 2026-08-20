@@ -3,8 +3,9 @@ name: data-analysis
 description: "Trigger: data-analysis, Master data manipulation, analysis, and visualization with Pandas, NumPy, and Matplotlib. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: supercent-io
   version: 0.1
+  skills_sh_url: "https://www.skills.sh/supercent-io/skills-template/data-analysis"
 ---
 
 ## Activation Contract

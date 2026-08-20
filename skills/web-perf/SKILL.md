@@ -3,7 +3,7 @@ name: web-perf
 description: "Trigger: web-perf, Analyzes web performance using Chrome DevTools MCP. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/web-perf"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/web-perf"

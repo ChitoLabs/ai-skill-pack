@@ -3,7 +3,7 @@ name: fluentui-blazor
 description: "Trigger: fluentui-blazor, Guide for using the Microsoft Fluent UI Blazor component library (Microsoft.FluentUI.AspNetCore.Components NuGet package) in Blazor applications. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/fluentui-blazor"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/fluentui-blazor"

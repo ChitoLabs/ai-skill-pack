@@ -3,7 +3,7 @@ name: tailwind-design-system
 description: Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/tailwind-design-system"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/frontend-mobile-development/skills/tailwind-design-system"

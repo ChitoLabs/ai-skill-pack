@@ -3,7 +3,7 @@ name: business-analyst
 description: "Trigger: business-analyst, Product discovery and requirements analysis specialist. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: aj-geddes
   version: 0.1
   skills_sh_url: "https://www.skills.sh/aj-geddes/claude-code-bmad-skills/business-analyst"
   github_url: "https://github.com/aj-geddes/claude-code-bmad-skills/tree/HEAD/bmad-skills/business-analyst"

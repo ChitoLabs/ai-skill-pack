@@ -3,7 +3,7 @@ name: elevenlabs-tts
 description: "Trigger: elevenlabs-tts, ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/elevenlabs-tts"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts"

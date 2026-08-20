@@ -3,7 +3,7 @@ name: react-three-fiber
 description: React Three Fiber 3D renderer for json-render. Use when working with @json-render/react-three-fiber, building 3D scenes from JSON specs, rendering meshes/lights/models/environments, or integrating Three.js with json-render catalogs.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/json-render/react-three-fiber"
   github_url: "https://github.com/vercel-labs/json-render/tree/HEAD/skills/react-three-fiber"

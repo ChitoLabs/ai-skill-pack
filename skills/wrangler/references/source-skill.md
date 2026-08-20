@@ -3,7 +3,7 @@ name: wrangler
 description: Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/wrangler"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/wrangler"

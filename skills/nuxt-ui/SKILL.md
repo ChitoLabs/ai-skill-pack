@@ -3,7 +3,7 @@ name: nuxt-ui
 description: "Trigger: nuxt-ui, Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: nuxt
   version: 0.1
   skills_sh_url: "https://www.skills.sh/nuxt/ui/nuxt-ui"
   github_url: "https://github.com/nuxt/ui/tree/HEAD/skills/nuxt-ui"

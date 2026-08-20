@@ -3,7 +3,7 @@ name: ai-sdk
 description: "Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents, chatbots, RAG systems, or text generation features, (3) Have questions about AI providers (OpenAI, Anthropic, Google, etc.), streaming, tool calling, structured output, or embeddings, (4) Use React hooks like useChat or useCompletion. Triggers on: \"AI SDK\", \"Vercel AI SDK\", \"generateText\", \"streamText\", \"add AI to my app\", \"build an agent\", \"tool calling\", \"structured output\", \"useChat\"."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel/ai/use-ai-sdk"
   github_url: "https://github.com/vercel/ai/tree/HEAD/skills/use-ai-sdk"

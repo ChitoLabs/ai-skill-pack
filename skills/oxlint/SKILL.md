@@ -3,7 +3,7 @@ name: oxlint
 description: "Trigger: oxlint, Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: delexw
   version: 0.1
   skills_sh_url: "https://www.skills.sh/delexw/claude-code-misc/oxlint"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/oxlint"

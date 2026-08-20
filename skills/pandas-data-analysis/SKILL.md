@@ -3,7 +3,7 @@ name: pandas-data-analysis
 description: "Trigger: pandas-data-analysis, Master data manipulation, analysis, and visualization with Pandas, NumPy, and Matplotlib. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pluginagentmarketplace
   version: 2.1.0
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-python/pandas-data-analysis"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-python/tree/HEAD/skills/pandas-data-analysis"

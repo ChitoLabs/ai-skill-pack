@@ -3,7 +3,7 @@ name: better-auth-best-practices
 description: Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Use when users mention Better Auth, betterauth, auth.ts, or need to set up TypeScript authentication with email/password, OAuth, or plugin configuration.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/better-auth-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/best-practices"

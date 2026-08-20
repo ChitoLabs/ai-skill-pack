@@ -3,7 +3,7 @@ name: postgresql-table-design
 description: "Trigger: postgresql-table-design, Use this skill when designing or reviewing a PostgreSQL-specific schema. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: unknown
   version: 0.1
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/database-design/skills/postgresql"
 ---

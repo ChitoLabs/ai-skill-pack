@@ -3,7 +3,7 @@ name: discord
 description: "Discord message-tool ops: send/read/edit/delete, react, poll, pin, thread, search, presence, media/components."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: steipete
   version: 0.1
   skills_sh_url: "https://www.skills.sh/steipete/clawdis/discord"
   github_url: "https://github.com/steipete/clawdis/tree/HEAD/skills/discord"

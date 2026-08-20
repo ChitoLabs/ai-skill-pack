@@ -3,7 +3,7 @@ name: java-coding-standards
 description: "Trigger: java-coding-standards. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/java-coding-standards"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/java-coding-standards"

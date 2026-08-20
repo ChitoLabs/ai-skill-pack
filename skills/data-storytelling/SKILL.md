@@ -3,7 +3,7 @@ name: data-storytelling
 description: "Trigger: data-storytelling, Transform data into compelling narratives using visualization, context, and persuasive structure. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/data-storytelling"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/business-analytics/skills/data-storytelling"

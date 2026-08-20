@@ -3,7 +3,7 @@ name: nginx-expert
 description: Expert-level Nginx configuration, reverse proxy, load balancing, SSL/TLS, caching, and performance tuning
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: PCL Team
   version: 0.1
   skills_sh_url: "https://www.skills.sh/personamanagmentlayer/pcl/nginx-expert"
   github_url: "https://github.com/personamanagmentlayer/pcl/tree/HEAD/stdlib/devops/nginx-expert"

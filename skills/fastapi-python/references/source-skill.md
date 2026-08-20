@@ -3,7 +3,7 @@ name: fastapi-python
 description: Expert in FastAPI Python development with best practices for APIs and async operations
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/fastapi-python"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/fastapi-python"

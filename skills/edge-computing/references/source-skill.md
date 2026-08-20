@@ -3,7 +3,7 @@ name: edge-computing
 description: Edge computing with Cloudflare Workers, Deno Deploy, Bun, Vercel Edge Functions, AWS Lambda@Edge, and edge databases (Turso, D1, DynamoDB Global Tables). Use when building low-latency edge applications, edge-side rendering, or globally distributed compute.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: travisjneuman
   version: 0.1
   skills_sh_url: "https://skills.sh/travisjneuman/.claude/edge-computing"
   github_url: "https://github.com/travisjneuman/.claude/tree/HEAD/skills/edge-computing"

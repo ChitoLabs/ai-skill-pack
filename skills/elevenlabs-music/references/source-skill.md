@@ -3,7 +3,7 @@ name: elevenlabs-music
 description: "ElevenLabs AI music generation - create original music from text prompts via inference.sh CLI. Capabilities: text-to-music, custom duration up to 10 minutes, genre/mood/instrument control, royalty-free commercial use. Use for: background music, soundtracks, jingles, podcasts, video scores, game audio. Triggers: elevenlabs music, eleven labs music, ai music, generate music, music generation, compose music, ai composer, create song, soundtrack, background music, jingle, elevenlabs compose, music ai"
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/elevenlabs-music"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-music"

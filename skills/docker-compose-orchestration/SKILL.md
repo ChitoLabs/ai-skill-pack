@@ -3,7 +3,7 @@ name: docker-compose-orchestration
 description: "Trigger: docker-compose-orchestration, Container orchestration with Docker Compose for multi-container applications, networking, volumes, and production deployment. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: manutej
   version: 0.1
   skills_sh_url: "https://www.skills.sh/manutej/luxor-claude-marketplace/docker-compose-orchestration"
   github_url: "https://github.com/manutej/luxor-claude-marketplace/tree/HEAD/plugins/luxor-devops-suite/skills/docker-compose-orchestration"

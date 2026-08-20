@@ -3,7 +3,7 @@ name: enhance-prompt
 description: "Trigger: enhance-prompt, Transforms vague UI ideas into polished, Stitch-optimized prompts. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://www.skills.sh/google-labs-code/stitch-skills/enhance-prompt"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/enhance-prompt"

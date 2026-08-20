@@ -3,7 +3,7 @@ name: sqlalchemy-orm
 description: SQLAlchemy Python SQL toolkit and ORM with powerful query builder, relationship mapping, and database migrations via Alembic
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: bobmatnyc
   version: 0.1
   skills_sh_url: "https://skills.sh/bobmatnyc/claude-mpm-skills/sqlalchemy"
   github_url: "https://github.com/bobmatnyc/claude-mpm-skills/tree/HEAD/toolchains/python/data/sqlalchemy"

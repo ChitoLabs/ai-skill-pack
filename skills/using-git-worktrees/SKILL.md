@@ -3,7 +3,7 @@ name: using-git-worktrees
 description: "Create safe isolated git worktrees before feature work or implementation plans, with workspace-aware parent directory selection, branch naming, dirty-tree checks, and fallback to native git worktree commands."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/using-git-worktrees"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/using-git-worktrees"

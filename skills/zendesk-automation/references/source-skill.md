@@ -3,7 +3,7 @@ name: Zendesk Automation
 description: Automate customer support workflows with Zendesk ticket management, routing, and analytics
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: Claude Office Skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/zendesk-automation"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/zendesk-automation"

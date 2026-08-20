@@ -3,7 +3,7 @@ name: fabric-cli-core
 description: Use Microsoft Fabric CLI (fab) to manage workspaces, semantic models, reports, notebooks, and Fabric resources. Activate when users mention fab, Fabric CLI, or need to automate Fabric operations.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: microsoft
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/fabric-cli/fabric-cli-core"
   github_url: "https://github.com/microsoft/fabric-cli/tree/HEAD/.ai-assets/skills/fabric-cli-core"

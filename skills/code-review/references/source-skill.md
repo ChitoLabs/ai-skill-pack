@@ -4,7 +4,7 @@ description: AI-powered code review using CodeRabbit. Default code-review skill.
 license: Apache-2.0
 metadata:
   version: 0.1.0
-  author: LCubero
+  author: coderabbitai
   skills_sh_url: "https://www.skills.sh/coderabbitai/skills/code-review"
   github_url: "https://github.com/coderabbitai/skills/tree/HEAD/skills/code-review"
 ---

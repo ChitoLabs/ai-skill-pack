@@ -3,7 +3,7 @@ name: mobile-android-design
 description: "Trigger: mobile-android-design, Master Material Design 3 and Jetpack Compose patterns for building native Android apps. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/mobile-android-design"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/mobile-android-design"

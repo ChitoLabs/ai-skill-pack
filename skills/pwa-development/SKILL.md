@@ -3,7 +3,7 @@ name: pwa-development
 description: "Trigger: pwa-development, Progressive Web App development guidelines covering service workers, caching strategies, offline functionality, and installability. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/pwa-development"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/pwa-development"

@@ -3,7 +3,7 @@ name: fastapi-templates
 description: Create production-ready FastAPI projects with async patterns, dependency injection, and comprehensive error handling. Use when building new FastAPI applications or setting up backend API projects.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/fastapi-templates"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/api-scaffolding/skills/fastapi-templates"

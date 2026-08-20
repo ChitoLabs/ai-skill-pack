@@ -3,7 +3,7 @@ name: golang-lint
 description: Provides linting best practices and golangci-lint configuration for Go projects. Covers running linters, configuring .golangci.yml, suppressing warnings with nolint directives, interpreting lint output, and managing linter settings. Use this skill whenever the user runs linters, configures golangci-lint, asks about lint warnings or suppressions, sets up code quality tooling, or asks which linters to enable for a Go project. Also use when the user mentions golangci-lint, go vet, staticcheck, revive, or any Go linting tool.
 license: MIT
 metadata:
-  author: LCubero
+  author: samber
   version: 0.1
   skills_sh_url: "https://www.skills.sh/samber/cc-skills-golang/golang-lint"
   github_url: "https://github.com/samber/cc-skills-golang/tree/HEAD/skills/golang-lint"

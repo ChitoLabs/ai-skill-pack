@@ -3,7 +3,7 @@ name: python-background-jobs
 description: Python background job patterns including task queues, workers, and event-driven architecture. Use when implementing async task processing, job queues, long-running operations, or decoupling work from request/response cycles.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/python-background-jobs"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-background-jobs"

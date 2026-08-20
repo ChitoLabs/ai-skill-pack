@@ -3,7 +3,7 @@ name: expo-deployment
 description: "Trigger: expo-deployment, Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-deployment"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-deployment"

@@ -3,7 +3,7 @@ name: gsap-performance
 description: "Trigger: gsap-performance, Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: greensock
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-performance"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-performance"

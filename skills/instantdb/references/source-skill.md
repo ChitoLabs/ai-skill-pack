@@ -3,7 +3,7 @@ name: instantdb
 description: Build complete, functional apps with InstantDB as the backend. Use when creating React/vanilla JS or expo applications. Triggers on requests for building apps.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: instantdb
   version: 0.1
   skills_sh_url: "https://skills.sh/instantdb/skills/instantdb"
   github_url: "https://github.com/instantdb/skills/tree/HEAD/skills/instantdb"

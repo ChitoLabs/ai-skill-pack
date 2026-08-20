@@ -3,7 +3,7 @@ name: sandbox-sdk
 description: Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/sandbox-sdk"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/sandbox-sdk"

@@ -3,7 +3,7 @@ name: facebook-research
 description: "Trigger: facebook-research, Research public Facebook page, group, and post content using PostPlus Cloud collection service. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: postplusai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/postplusai/postplus-skills/facebook-research"
   github_url: "https://github.com/postplusai/postplus-skills/tree/HEAD/skills/20-research/facebook-research"

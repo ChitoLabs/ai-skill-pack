@@ -3,7 +3,7 @@ name: skill-judge
 description: "Trigger: skill-judge, Evaluate Agent Skill design quality against official specifications and best practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: softaworks
   version: 0.1
   skills_sh_url: "https://skills.sh/softaworks/agent-toolkit/skill-judge"
   github_url: "https://github.com/softaworks/agent-toolkit/tree/HEAD/skills/skill-judge"

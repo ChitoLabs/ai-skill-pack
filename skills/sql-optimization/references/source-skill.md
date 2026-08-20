@@ -3,7 +3,7 @@ name: sql-optimization
 description: Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/sql-optimization"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/sql-optimization"

@@ -3,7 +3,7 @@ name: hono
 description: "Trigger: hono, Use when building Hono web applications or when the user asks about Hono APIs, routing, middleware, JSX, validation, testing, or streaming. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: yusukebe
   version: 0.1
   skills_sh_url: "https://skills.sh/yusukebe/hono-skill/hono"
   github_url: "https://github.com/yusukebe/hono-skill/tree/HEAD/skills/hono"

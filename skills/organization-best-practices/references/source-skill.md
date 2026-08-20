@@ -3,7 +3,7 @@ name: organization-best-practices
 description: Configure multi-tenant organizations, manage members and invitations, define custom roles and permissions, set up teams, and implement RBAC using Better Auth's organization plugin. Use when users need org setup, team management, member roles, access control, or the Better Auth organization plugin.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/organization-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/organization"

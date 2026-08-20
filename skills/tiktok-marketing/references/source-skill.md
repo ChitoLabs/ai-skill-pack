@@ -3,7 +3,7 @@ name: tiktok-marketing
 description: TikTok content strategy, video creation workflows, posting optimization, and analytics. Based on n8n automation templates.
 license: MIT
 metadata:
-  author: LCubero
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/tiktok-marketing"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/tiktok-marketing"

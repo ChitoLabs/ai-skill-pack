@@ -3,7 +3,7 @@ name: next-cache-components
 description: Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/next-skills/next-cache-components"
   github_url: "https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-cache-components"

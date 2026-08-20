@@ -3,7 +3,7 @@ name: swift-testing-expert
 description: "Trigger: swift-testing-expert. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/swift-testing-agent-skill/swift-testing-expert"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swift-testing-expert"

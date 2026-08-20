@@ -3,7 +3,7 @@ name: text-to-sql
 description: "Trigger: text-to-sql, Convert natural language queries to SQL. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: oimiragieo
   version: 1.0.0
   skills_sh_url: "https://www.skills.sh/oimiragieo/agent-studio/text-to-sql"
   github_url: "https://github.com/oimiragieo/agent-studio/tree/HEAD/.claude/skills/text-to-sql"

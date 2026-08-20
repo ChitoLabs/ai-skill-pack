@@ -3,7 +3,7 @@ name: xlsx
 description: "Trigger: xlsx, Use this skill any time a spreadsheet file is the primary input or output. Preserve source workflow with portable agent instructions."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/xlsx"
   github_url: "https://github.com/openakita/openakita/tree/HEAD/skills/xlsx"

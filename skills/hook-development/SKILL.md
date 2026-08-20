@@ -3,7 +3,7 @@ name: hook-development
 description: "Trigger: hook-development, Complete Claude Code hooks reference - input/output schemas, registration, testing patterns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: parcadei
   version: 0.1
   skills_sh_url: "https://www.skills.sh/parcadei/continuous-claude-v3/hook-developer"
   github_url: "https://github.com/parcadei/continuous-claude-v3/tree/HEAD/.claude/skills/hook-developer"

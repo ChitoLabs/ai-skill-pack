@@ -3,7 +3,7 @@ name: tailwind
 description: Tailwind CSS v4.2 browser-runtime patterns for HyperFrames compositions. Use when scaffolding or editing projects created with `hyperframes init --tailwind`, writing Tailwind utility classes in composition HTML, adding CSS-first Tailwind v4 theme tokens, debugging v3 vs v4 syntax, or deciding when to compile Tailwind to CSS instead of using the browser runtime.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: heygen-com
   version: 0.1
   skills_sh_url: "https://www.skills.sh/heygen-com/hyperframes/tailwind"
   github_url: "https://github.com/heygen-com/hyperframes/tree/HEAD/skills/tailwind"

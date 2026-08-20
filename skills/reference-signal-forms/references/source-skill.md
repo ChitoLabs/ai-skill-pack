@@ -3,7 +3,7 @@ name: reference-signal-forms
 description: Explains the mental model and architecture of the code under `packages/forms/signals`. You MUST use this skill any time you plan to work with code in `packages/forms/signals`
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: angular
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/reference-signal-forms"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/reference-signal-forms"

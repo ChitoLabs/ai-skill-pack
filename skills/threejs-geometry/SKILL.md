@@ -3,7 +3,7 @@ name: threejs-geometry
 description: "Trigger: threejs-geometry, Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-geometry"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-geometry"

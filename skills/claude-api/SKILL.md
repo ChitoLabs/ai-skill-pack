@@ -3,7 +3,7 @@ name: claude-api
 description: "Trigger: claude-api, Build, debug, and optimize Claude API / Anthropic SDK apps. Preserve source workflow with portable agent instructions."
 license: Complete terms in LICENSE.txt
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/claude-api"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/claude-api"

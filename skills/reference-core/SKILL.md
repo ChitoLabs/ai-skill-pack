@@ -3,7 +3,7 @@ name: reference-core
 description: "Trigger: reference-core, Explains the mental model and architecture of the code under `packages/core`. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: angular
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/reference-core"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/reference-core"

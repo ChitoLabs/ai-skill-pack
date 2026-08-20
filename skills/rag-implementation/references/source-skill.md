@@ -3,7 +3,7 @@ name: rag-implementation
 description: Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. Use when implementing knowledge-grounded AI, building document Q&A systems, or integrating LLMs with external knowledge bases.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/rag-implementation"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/rag-implementation"

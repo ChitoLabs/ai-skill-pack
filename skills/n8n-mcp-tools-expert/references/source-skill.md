@@ -3,7 +3,7 @@ name: n8n-mcp-tools-expert
 description: Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT — Always consult this skill before calling any n8n-mcp tool — it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, and inefficient tool usage. If the user mentions n8n, workflows, nodes, or automation and you have n8n MCP tools available, use this skill first.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-mcp-tools-expert"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-mcp-tools-expert"

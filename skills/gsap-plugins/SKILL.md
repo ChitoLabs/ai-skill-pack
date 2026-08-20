@@ -3,7 +3,7 @@ name: gsap-plugins
 description: "Trigger: gsap-plugins. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: greensock
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-plugins"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-plugins"

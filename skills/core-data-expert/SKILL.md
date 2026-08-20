@@ -3,7 +3,7 @@ name: core-data-expert
 description: "Expert Core Data guidance (iOS/macOS): stack setup, fetch requests & NSFetchedResultsController, saving/merge conflicts, threading & Swift Concurrency, batch operations & persistent history, migrations, performance, and NSPersistentCloudKitContainer/CloudKit sync."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/core-data-agent-skill/core-data-expert"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/core-data-expert"

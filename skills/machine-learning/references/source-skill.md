@@ -3,7 +3,7 @@ name: Machine Learning
 description: Python machine learning with scikit-learn, PyTorch, and TensorFlow
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pluginagentmarketplace
   version: 0.1
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-python/machine-learning"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-python/tree/HEAD/skills/machine-learning"

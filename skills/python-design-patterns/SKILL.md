@@ -3,7 +3,7 @@ name: python-design-patterns
 description: "Trigger: python-design-patterns, Python design patterns including KISS, Separation of Concerns, Single Responsibility, and composition over inheritance. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/python-design-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-design-patterns"

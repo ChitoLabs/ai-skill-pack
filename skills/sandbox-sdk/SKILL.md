@@ -3,7 +3,7 @@ name: sandbox-sdk
 description: "Trigger: sandbox-sdk, Build sandboxed applications for secure code execution. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/sandbox-sdk"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/sandbox-sdk"

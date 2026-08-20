@@ -3,7 +3,7 @@ name: bash-defensive-patterns
 description: Master defensive Bash programming techniques for production-grade scripts. Use when writing robust shell scripts, CI/CD pipelines, or system utilities requiring fault tolerance and safety.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/bash-defensive-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/shell-scripting/skills/bash-defensive-patterns"

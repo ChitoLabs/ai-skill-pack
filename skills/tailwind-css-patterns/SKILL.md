@@ -3,7 +3,7 @@ name: tailwind-css-patterns
 description: "Trigger: tailwind-css-patterns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: giuseppe-trisciuoglio
   version: 0.1
   skills_sh_url: "https://www.skills.sh/giuseppe-trisciuoglio/developer-kit/tailwind-css-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/tailwind-css-patterns"

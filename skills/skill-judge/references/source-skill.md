@@ -3,7 +3,7 @@ name: skill-judge
 description: Evaluate Agent Skill design quality against official specifications and best practices. Use when reviewing, auditing, or improving SKILL.md files and skill packages. Provides multi-dimensional scoring and actionable improvement suggestions.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: softaworks
   version: 0.1
   skills_sh_url: "https://skills.sh/softaworks/agent-toolkit/skill-judge"
   github_url: "https://github.com/softaworks/agent-toolkit/tree/HEAD/skills/skill-judge"

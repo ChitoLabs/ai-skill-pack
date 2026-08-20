@@ -3,7 +3,7 @@ name: whatsapp-automation
 description: WhatsApp Business automation - customer support, notifications, chatbots, and broadcast messaging
 license: MIT
 metadata:
-  author: LCubero
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/whatsapp-automation"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/whatsapp-automation"

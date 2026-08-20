@@ -3,7 +3,7 @@ name: design-critique
 description: Get structured design feedback on usability, hierarchy, and consistency. Trigger with "review this design", "critique this mockup", "what do you think of this screen?", or when sharing a Figma link or screenshot for feedback at any stage from exploration to final polish.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/design-critique"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/design/skills/design-critique"

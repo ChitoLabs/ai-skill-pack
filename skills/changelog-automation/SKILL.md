@@ -3,7 +3,7 @@ name: changelog-automation
 description: "Trigger: changelog-automation, Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/changelog-automation"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/documentation-generation/skills/changelog-automation"

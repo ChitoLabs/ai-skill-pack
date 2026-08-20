@@ -3,7 +3,7 @@ name: scrape
 description: Scrape web content as clean markdown/HTML/JSON via the Bright Data CLI (`bdata scrape`). Use when the user wants to fetch a page, extract content from a list of URLs, or crawl paginated listings. Hands off to `data-feeds` for supported platforms (Amazon, LinkedIn, TikTok, Instagram, YouTube, Reddit, etc.) and to `search` when URLs must be discovered first. Requires the Bright Data CLI; proactively guides install + login if missing.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: brightdata
   version: 0.1
   skills_sh_url: "https://www.skills.sh/brightdata/skills/scrape"
   github_url: "https://github.com/brightdata/skills/tree/HEAD/skills/scrape"

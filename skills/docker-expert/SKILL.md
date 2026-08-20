@@ -3,7 +3,7 @@ name: docker-expert
 description: "Trigger: docker-expert. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/docker-expert"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/docker-expert"

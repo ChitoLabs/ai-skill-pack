@@ -3,7 +3,7 @@ name: python-performance-optimization
 description: Profile and optimize Python code using cProfile, memory profilers, and performance best practices. Use when debugging slow Python code, optimizing bottlenecks, or improving application performance.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/python-performance-optimization"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-performance-optimization"

@@ -3,7 +3,7 @@ name: obsidian-vault
 description: "Trigger: obsidian-vault, Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mattpocock
   version: 0.1
   skills_sh_url: "https://skills.sh/mattpocock/skills/obsidian-vault"
   github_url: "https://github.com/mattpocock/skills/tree/HEAD/skills/personal/obsidian-vault"

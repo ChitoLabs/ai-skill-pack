@@ -3,7 +3,7 @@ name: email-and-password-best-practices
 description: Configure email verification, implement password reset flows, set password policies, and customise hashing algorithms for Better Auth email/password authentication. Use when users need to set up login, sign-in, sign-up, credential authentication, or password security with Better Auth.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: better-auth
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/email-and-password-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/emailAndPassword"

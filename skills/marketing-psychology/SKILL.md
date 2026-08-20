@@ -3,7 +3,7 @@ name: marketing-psychology
 description: "Trigger: marketing-psychology, When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: coreyhaines31
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/marketing-psychology"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/marketing-psychology"

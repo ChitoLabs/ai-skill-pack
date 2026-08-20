@@ -3,7 +3,7 @@ name: ui-ux-pro-max
 description: "Trigger: ui-ux-pro-max, UI/UX design intelligence for web and mobile. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: nextlevelbuilder
   version: 0.1
   skills_sh_url: "https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max"
   github_url: "https://github.com/ninehills/skills/tree/HEAD/ui-ux-pro-max"

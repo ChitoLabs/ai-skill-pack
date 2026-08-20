@@ -3,7 +3,7 @@ name: social
 description: "Trigger: social, When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: coreyhaines31
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/social"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/social"

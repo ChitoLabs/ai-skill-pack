@@ -3,7 +3,7 @@ name: shadcn
 description: Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for "shadcn init", "create an app with --preset", or "switch to --preset".
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: shadcn
   version: 0.1
   skills_sh_url: "https://skills.sh/shadcn/ui/shadcn"
   github_url: "https://github.com/shadcn/ui/tree/HEAD/skills/shadcn"

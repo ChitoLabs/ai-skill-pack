@@ -3,7 +3,7 @@ name: medallion-architecture
 description: Bronze/Silver/Gold layer design patterns and templates for building scalable data lakehouse architectures. Includes incremental processing, data quality checks, and optimization strategies.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vivekgana
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vivekgana/databricks-platform-marketplace/medallion-architecture"
   github_url: "https://github.com/vivekgana/databricks-platform-marketplace/tree/HEAD/plugins/databricks-engineering/skills/medallion-architecture"

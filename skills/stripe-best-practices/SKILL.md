@@ -3,7 +3,7 @@ name: stripe-best-practices
 description: "Trigger: stripe-best-practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: stripe
   version: 0.1
   skills_sh_url: "https://skills.sh/stripe/ai/stripe-best-practices"
   github_url: "https://github.com/stripe/ai/tree/HEAD/skills/stripe-best-practices"

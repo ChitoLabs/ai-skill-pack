@@ -3,7 +3,7 @@ name: database-schema-design
 description: "Trigger: database-schema-design, Design robust, scalable database schemas for SQL and NoSQL databases. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: softaworks
   version: 0.1
   skills_sh_url: "https://www.skills.sh/softaworks/agent-toolkit/database-schema-designer"
   github_url: "https://github.com/softaworks/agent-toolkit/tree/HEAD/dist/plugins/database-schema-designer/skills/database-schema-designer"

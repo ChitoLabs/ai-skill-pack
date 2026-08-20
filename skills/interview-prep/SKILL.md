@@ -3,7 +3,7 @@ name: interview-prep
 description: "Trigger: interview-prep, Create structured interview plans with competency-based questions and scorecards. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/interview-prep"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/human-resources/skills/interview-prep"

@@ -13,6 +13,9 @@ This staging folder publishes only the curated general skills pack.
 | Separate Microsoft Fabric candidate folders copied | 0 |
 | Duplicate quarantine copied | No |
 | Temp or memory backup paths copied | No |
+| Skill entry points with author metadata | 466 |
+| Skill entry points with source links | 466 |
+| Unresolved upstream authors | 7 |
 
 ## Source Audit Notes
 
@@ -21,6 +24,8 @@ The current repository inventory reports 466 published skill folders with `SKILL
 The repository also includes 3 optional command files from the `newCommand` source folder. These command files route to the matching newly added skills.
 
 Historical download triage still records dropped, mapped, duplicate, or out-of-scope entries. The publication artifacts prefer the final curated folder names under `skills/`.
+
+Attribution metadata preserves an explicit upstream author when present, otherwise it uses the official skills.sh publisher namespace. GitHub repository ownership alone is not treated as personal authorship. When upstream frontmatter and official publisher metadata do not establish an author, the value remains `unknown`.
 
 ## Caveats
 

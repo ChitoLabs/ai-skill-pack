@@ -3,7 +3,7 @@ name: agents-sdk
 description: "Trigger: agents-sdk, Build AI agents on Cloudflare Workers using the Agents SDK. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudflare
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/agents-sdk"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/agents-sdk"

@@ -3,7 +3,7 @@ name: us-business-english
 description: "Trigger: us-business-english, American business English writing style for professional communications \u2014 direct, action-oriented, EN-US spelling (color, organize, center). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: jezweb
   version: 0.1
   skills_sh_url: "https://www.skills.sh/jezweb/claude-skills/us-business-english"
   github_url: "https://github.com/jezweb/claude-skills/tree/HEAD/plugins/writing/skills/us-business-english"

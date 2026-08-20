@@ -3,7 +3,7 @@ name: react-three-fiber
 description: "Trigger: react-three-fiber, React Three Fiber 3D renderer for json-render. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/json-render/react-three-fiber"
   github_url: "https://github.com/vercel-labs/json-render/tree/HEAD/skills/react-three-fiber"

@@ -3,7 +3,7 @@ name: n8n-node-configuration
 description: "Trigger: n8n-node-configuration, Operation-aware node configuration guidance. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-node-configuration"
   github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-node-configuration"

@@ -3,7 +3,7 @@ name: teach
 description: "Trigger: teach, learn a concept, learning workspace. Build stateful lessons, references, and learning records in the current project."
 license: MIT
 metadata:
-  author: LCubero
+  author: mattpocock
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/teach"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/productivity/teach"

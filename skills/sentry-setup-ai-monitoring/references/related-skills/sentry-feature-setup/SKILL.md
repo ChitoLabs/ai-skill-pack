@@ -3,7 +3,7 @@ name: sentry-feature-setup
 description: Configure specific Sentry features beyond basic SDK setup. Use when asked to monitor AI/LLM calls, set up OpenTelemetry pipelines, or create alerts and notifications.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-feature-setup"
   github_url: "https://github.com/getsentry/sentry-for-claude/tree/HEAD/skills/sentry-feature-setup"

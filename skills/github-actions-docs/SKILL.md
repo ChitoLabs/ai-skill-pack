@@ -3,7 +3,7 @@ name: github-actions-docs
 description: "Trigger: github-actions-docs. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: xixu-me
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/github-actions-docs"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/github-actions-docs"

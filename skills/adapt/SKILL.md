@@ -3,7 +3,7 @@ name: adapt
 description: "Trigger: adapt, Responsive pass — mobile, tablet, desktop, touch, safe areas. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: educlopez
   version: 0.1
   skills_sh_url: "https://skills.sh/educlopez/ui-craft/adapt"
   github_url: "https://github.com/educlopez/ui-craft/tree/HEAD/.codex/skills/adapt"

@@ -3,7 +3,7 @@ name: wp-rest-api
 description: "Use when building, extending, or debugging WordPress REST API endpoints/routes: register_rest_route, WP_REST_Controller/controller classes, schema/argument validation, permission_callback/authentication, response shaping, register_rest_field/register_meta, or exposing CPTs/taxonomies via show_in_rest."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-rest-api"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-rest-api"

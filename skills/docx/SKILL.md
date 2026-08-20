@@ -3,7 +3,7 @@ name: docx
 description: "Trigger: docx, Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Preserve source workflow with portable agent instructions."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/docx"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/docx"

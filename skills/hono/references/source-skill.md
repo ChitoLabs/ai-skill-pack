@@ -3,7 +3,7 @@ name: hono
 description: Use when building Hono web applications or when the user asks about Hono APIs, routing, middleware, JSX, validation, testing, or streaming. TRIGGER when code imports from 'hono' or 'hono/*', or user mentions Hono. Use `npx hono request` to test endpoints.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: yusukebe
   version: 0.1
   skills_sh_url: "https://skills.sh/yusukebe/hono-skill/hono"
   github_url: "https://github.com/yusukebe/hono-skill/tree/HEAD/skills/hono"

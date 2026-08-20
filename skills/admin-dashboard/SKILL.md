@@ -3,7 +3,7 @@ name: admin-dashboard
 description: "Trigger: admin-dashboard, Extend and modify the admin dashboard, developer portal, and operations console. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: erichowens
   version: 0.1
   skills_sh_url: "https://skills.sh/erichowens/some_claude_skills/admin-dashboard"
   github_url: "https://github.com/erichowens/some_claude_skills/tree/HEAD/.claude/skills/admin-dashboard"

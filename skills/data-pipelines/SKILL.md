@@ -3,7 +3,7 @@ name: data-pipelines
 description: "Trigger: data-pipelines, Use this skill when building data pipelines, ETL/ELT workflows, or data transformation layers. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: absolutelyskilled
   version: 0.1.0
   skills_sh_url: "https://www.skills.sh/absolutelyskilled/absolutelyskilled/data-pipelines"
   github_url: "https://github.com/absolutelyskilled/absolutelyskilled/tree/HEAD/skills/data-pipelines"

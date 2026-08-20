@@ -3,7 +3,7 @@ name: software-architecture
 description: Guide for quality focused software architecture. This skill should be used when users want to write code, design architecture, analyze code, in any case that relates to software development.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/software-architecture"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/software-architecture"

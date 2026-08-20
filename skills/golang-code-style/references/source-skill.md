@@ -3,7 +3,7 @@ name: golang-code-style
 description: Golang code style, formatting and conventions. Use when writing Go code, reviewing style, configuring linters, writing comments, or establishing project standards.
 license: MIT
 metadata:
-  author: LCubero
+  author: samber
   version: 0.1
   skills_sh_url: "https://www.skills.sh/samber/cc-skills-golang/golang-code-style"
   github_url: "https://github.com/samber/cc-skills-golang/tree/HEAD/skills/golang-code-style"

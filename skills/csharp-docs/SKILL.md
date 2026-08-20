@@ -3,7 +3,7 @@ name: csharp-docs
 description: "Ensure that C# types are documented with XML comments and follow best practices for documentation."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/csharp-docs"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/csharp-docs"

@@ -3,7 +3,7 @@ name: llm-evaluation
 description: Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. Use when testing LLM performance, measuring AI application quality, or establishing evaluation frameworks.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/llm-evaluation"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/llm-evaluation"

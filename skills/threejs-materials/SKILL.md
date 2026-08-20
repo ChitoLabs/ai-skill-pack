@@ -3,7 +3,7 @@ name: threejs-materials
 description: "Trigger: threejs-materials, Three.js materials - PBR, basic, phong, shader materials, material properties. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-materials"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/threejs-materials"

@@ -3,7 +3,7 @@ name: chrome-devtools
 description: "Trigger: chrome-devtools, Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: chromedevtools
   version: 0.1
   skills_sh_url: "https://www.skills.sh/chromedevtools/chrome-devtools-mcp/chrome-devtools"
   github_url: "https://github.com/wenerme/ai/tree/HEAD/skills/chrome-devtools"

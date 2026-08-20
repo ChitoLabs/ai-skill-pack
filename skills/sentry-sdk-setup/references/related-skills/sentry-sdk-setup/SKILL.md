@@ -3,7 +3,7 @@ name: sentry-sdk-setup
 description: Set up Sentry in any language or framework. Detects the user's platform and loads the right SDK skill. Use when asked to add Sentry, install an SDK, or set up error monitoring in a project.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-sdk-setup"
   github_url: "https://github.com/getsentry/sentry-for-claude/tree/HEAD/skills/sentry-sdk-setup"

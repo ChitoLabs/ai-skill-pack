@@ -3,7 +3,7 @@ name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/systematic-debugging"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/systematic-debugging"

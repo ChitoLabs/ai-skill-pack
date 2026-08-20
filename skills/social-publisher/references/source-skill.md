@@ -3,7 +3,7 @@ name: social-publisher
 description: Multi-platform social media publishing automation - schedule, post, and track content across TikTok, Instagram, YouTube, LinkedIn, and more
 license: MIT
 metadata:
-  author: LCubero
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/social-publisher"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/social-publisher"

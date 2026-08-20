@@ -3,7 +3,7 @@ name: next-best-practices
 description: Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/next-skills/next-best-practices"
   github_url: "https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-best-practices"

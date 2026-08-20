@@ -3,7 +3,7 @@ name: analytics-metrics
 description: Build data visualization and analytics dashboards. Use when creating charts, KPI displays, metrics dashboards, or data visualization components. Triggers on analytics, dashboard, charts, metrics, KPI, data visualization, Recharts.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: hoodini
   version: 0.1
   skills_sh_url: "https://skills.sh/hoodini/ai-agents-skills/analytics-metrics"
   github_url: "https://github.com/hoodini/ai-agents-skills/tree/HEAD/skills/analytics-metrics"

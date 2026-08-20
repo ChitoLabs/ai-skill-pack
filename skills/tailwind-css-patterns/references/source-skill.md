@@ -3,7 +3,7 @@ name: tailwind-css-patterns
 description: Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling React/Vue/Svelte components, building responsive layouts, implementing design systems, or optimizing CSS workflow.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: giuseppe-trisciuoglio
   version: 0.1
   skills_sh_url: "https://www.skills.sh/giuseppe-trisciuoglio/developer-kit/tailwind-css-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/tailwind-css-patterns"

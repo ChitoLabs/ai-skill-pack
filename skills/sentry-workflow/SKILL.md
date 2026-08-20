@@ -3,7 +3,7 @@ name: sentry-workflow
 description: "Trigger: sentry-workflow, Fix production issues and review code with Sentry context. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-workflow"
   github_url: "https://github.com/getsentry/sentry-for-claude/tree/HEAD/skills/sentry-workflow"

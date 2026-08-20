@@ -3,7 +3,7 @@ name: instagram-account-research
 description: "Trigger: instagram-account-research, Research Instagram accounts for creator discovery, competitor profiling, and account health snapshots using hosted profile and post collection. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: postplusai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/postplusai/postplus-skills/instagram-account-research"
   github_url: "https://github.com/postplusai/postplus-skills/tree/HEAD/skills/20-research/instagram-account-research"

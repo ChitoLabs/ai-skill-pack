@@ -3,7 +3,7 @@ name: golang-testing
 description: Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/golang-testing"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/golang-testing"

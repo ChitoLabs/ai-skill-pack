@@ -3,7 +3,7 @@ name: boost-prompt
 description: "Trigger: boost-prompt, Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/boost-prompt"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/boost-prompt"

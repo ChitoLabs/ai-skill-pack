@@ -3,7 +3,7 @@ name: sentry-setup-ai-monitoring
 description: "Trigger: sentry-setup-ai-monitoring, Setup Sentry AI Agent Monitoring in any project. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-setup-ai-monitoring"
   github_url: "https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-setup-ai-monitoring"

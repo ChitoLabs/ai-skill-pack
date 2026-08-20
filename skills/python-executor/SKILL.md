@@ -3,7 +3,7 @@ name: python-executor
 description: "Trigger: python-executor, Execute Python code in a safe sandboxed environment via [inference.sh](https://inference.sh). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inferen-sh
   version: 0.1
   skills_sh_url: "https://skills.sh/inferen-sh/skills/python-executor"
   github_url: "https://github.com/inference-sh/skills/tree/HEAD/tools/utilities/python-executor"

@@ -3,7 +3,7 @@ name: canvas-design
 description: "Trigger: canvas design, poster, static art, visual philosophy. Create design philosophy and pristine PDF or PNG visual artwork."
 license: Complete terms in references/LICENSE.txt
 metadata:
-  author: LCubero
+  author: anthropics
   version: "1.0.0"
   skills_sh_url: https://www.skills.sh/anthropics/skills/canvas-design
   github_url: https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design

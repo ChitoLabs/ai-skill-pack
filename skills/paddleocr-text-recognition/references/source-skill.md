@@ -3,7 +3,7 @@ name: paddleocr-text-recognition
 description: "Use this skill whenever the user wants text extracted from images, photos, scans, screenshots, or scanned PDFs. Returns exact machine-readable strings with line-level text and optional bbox coordinates. Strong accuracy for CJK, small print, and handwritten text. Trigger terms: OCR, \u6587\u5b57\u8bc6\u522b, \u56fe\u7247\u8f6c\u6587\u5b57, \u622a\u56fe\u8bc6\u5b57, \u63d0\u53d6\u56fe\u4e2d\u6587\u5b57, \u626b\u63cf\u8bc6\u5b57, \u8bc6\u5b57, \u7eaf\u6587\u5b57, plain text extraction, \u5750\u6807, \u68c0\u6d4b\u6846, bbox, bounding box, image to text, screenshot, photo scan, recognize text."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: aidenwu0209
   version: 0.1
   skills_sh_url: "https://www.skills.sh/aidenwu0209/paddleocr-skills/paddleocr-text-recognition"
   github_url: "https://github.com/paddlepaddle/paddleocr/tree/HEAD/skills/paddleocr-text-recognition"

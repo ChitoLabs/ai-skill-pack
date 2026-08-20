@@ -3,7 +3,7 @@ name: telegram-bot-builder
 description: Expert in building Telegram bots that solve real problems - from
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/telegram-bot-builder"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/telegram-bot-builder"

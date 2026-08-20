@@ -3,7 +3,7 @@ name: edge-computing
 description: "Trigger: edge-computing, Edge computing with Cloudflare Workers, Deno Deploy, Bun, Vercel Edge Functions, AWS Lambda@Edge, and edge databases (Turso, D1, DynamoDB Global Tables). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: travisjneuman
   version: 0.1
   skills_sh_url: "https://skills.sh/travisjneuman/.claude/edge-computing"
   github_url: "https://github.com/travisjneuman/.claude/tree/HEAD/skills/edge-computing"

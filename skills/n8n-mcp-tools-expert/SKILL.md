@@ -3,7 +3,7 @@ name: n8n-mcp-tools-expert
 description: "Trigger: n8n-mcp-tools-expert, Expert guide for using n8n-mcp MCP tools effectively. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-mcp-tools-expert"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-mcp-tools-expert"

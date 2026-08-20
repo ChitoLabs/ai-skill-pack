@@ -3,7 +3,7 @@ name: tailwind
 description: "Trigger: tailwind, Tailwind CSS v4.2 browser-runtime patterns for HyperFrames compositions. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: heygen-com
   version: 0.1
   skills_sh_url: "https://www.skills.sh/heygen-com/hyperframes/tailwind"
   github_url: "https://github.com/heygen-com/hyperframes/tree/HEAD/skills/tailwind"

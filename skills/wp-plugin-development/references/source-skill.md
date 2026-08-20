@@ -3,7 +3,7 @@ name: wp-plugin-development
 description: "Use when developing WordPress plugins: architecture and hooks, activation/deactivation/uninstall, admin UI and Settings API, data storage, cron/tasks, security (nonces/capabilities/sanitization/escaping), and release packaging."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-plugin-development"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-plugin-development"

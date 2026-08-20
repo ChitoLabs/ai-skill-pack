@@ -3,7 +3,7 @@ name: expo-tailwind-setup
 description: "Trigger: expo-tailwind-setup, Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-tailwind-setup"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-tailwind-setup"

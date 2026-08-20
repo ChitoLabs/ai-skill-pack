@@ -3,7 +3,7 @@ name: build-dashboard
 description: Build an interactive HTML dashboard with charts, filters, and tables. Use when creating an executive overview with KPI cards, turning query results into a shareable self-contained report, building a team monitoring snapshot, or needing multiple charts with filters in one browser-openable file.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/build-dashboard"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/build-dashboard"

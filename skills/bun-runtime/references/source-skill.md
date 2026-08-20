@@ -3,7 +3,7 @@ name: bun-runtime
 description: Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/bun-runtime"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/bun-runtime"

@@ -3,7 +3,7 @@ name: email-design
 description: "Trigger: email-design, Email marketing design with layout patterns, subject line formulas, and deliverability rules. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/email-design"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/guides/design/email-design"

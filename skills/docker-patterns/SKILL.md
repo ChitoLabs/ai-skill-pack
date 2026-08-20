@@ -3,7 +3,7 @@ name: docker-patterns
 description: "Trigger: docker-patterns, Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/docker-patterns"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/docker-patterns"

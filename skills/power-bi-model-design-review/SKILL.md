@@ -3,7 +3,7 @@ name: power-bi-model-design-review
 description: "Trigger: power-bi-model-design-review, Comprehensive Power BI data model design review prompt for evaluating model architecture, relationships, and optimization opportunities. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/power-bi-model-design-review"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/power-bi-model-design-review"

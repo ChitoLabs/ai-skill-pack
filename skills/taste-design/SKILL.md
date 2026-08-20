@@ -3,7 +3,7 @@ name: taste-design
 description: "Trigger: taste-design, Semantic Design System Skill for Google Stitch. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://skills.sh/google-labs-code/stitch-skills/taste-design"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design"

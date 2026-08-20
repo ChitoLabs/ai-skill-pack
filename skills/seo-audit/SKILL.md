@@ -3,7 +3,7 @@ name: seo-audit
 description: "Trigger: seo-audit, When the user wants to audit, review, or diagnose SEO issues on their site. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: coreyhaines31
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/seo-audit"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/seo-audit"

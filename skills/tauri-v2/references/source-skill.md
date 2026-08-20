@@ -3,7 +3,7 @@ name: tauri-v2
 description: "Tauri v2+ cross-platform app development with Rust backend. Use when configuring tauri.conf.json, implementing Rust commands (#[tauri::command]), setting up IPC patterns (invoke, emit, channels), configuring permissions/capabilities, troubleshooting build issues, or deploying desktop/mobile apps. Triggers on Tauri, src-tauri, invoke, emit, capabilities.json."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: nodnarbnitram
   version: 0.1
   skills_sh_url: "https://skills.sh/nodnarbnitram/claude-code-extensions/tauri-v2"
   github_url: "https://github.com/nodnarbnitram/claude-code-extensions/tree/HEAD/.claude/skills/tauri-v2"

@@ -3,7 +3,7 @@ name: oauth
 description: "Trigger: oauth, Configure OAuth providers (Google, Apple, Microsoft, Facebook, GitHub, etc.) to work with portless local dev URLs. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: vercel-labs
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vercel-labs/portless/oauth"
   github_url: "https://github.com/vercel-labs/portless/tree/HEAD/skills/oauth"

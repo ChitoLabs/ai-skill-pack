@@ -3,7 +3,7 @@ name: powershell-windows
 description: PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/powershell-windows"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/powershell-windows"

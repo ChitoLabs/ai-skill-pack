@@ -3,7 +3,7 @@ name: nano-banana-2
 description: "Trigger: nano-banana-2, Generate images with Google Gemini 3.1 Flash Image Preview (Nano Banana 2) via inference.sh CLI. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: inference-sh-skills
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/nano-banana-2"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/image/nano-banana-2"

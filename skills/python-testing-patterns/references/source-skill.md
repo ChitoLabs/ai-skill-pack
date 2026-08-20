@@ -3,7 +3,7 @@ name: python-testing-patterns
 description: Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/python-testing-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-testing-patterns"

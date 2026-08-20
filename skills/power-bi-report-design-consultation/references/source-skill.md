@@ -3,7 +3,7 @@ name: power-bi-report-design-consultation
 description: Power BI report visualization design prompt for creating effective, user-friendly, and accessible reports with optimal chart selection and layout design.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/power-bi-report-design-consultation"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/power-bi-report-design-consultation"

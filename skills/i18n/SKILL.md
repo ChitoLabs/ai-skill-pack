@@ -3,7 +3,7 @@ name: i18n
 description: "Trigger: i18n, LobeHub internationalization with react-i18next. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: lobehub
   version: 0.1
   skills_sh_url: "https://www.skills.sh/lobehub/lobe-chat/i18n"
   github_url: "https://github.com/lobehub/lobehub/tree/HEAD/.agents/skills/i18n"

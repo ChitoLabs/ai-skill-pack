@@ -3,7 +3,7 @@ name: git-commit
 description: "Trigger: git-commit, Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/git-commit"
   github_url: "https://github.com/workleap/wl-squide/tree/HEAD/.agents/skills/git-commit"

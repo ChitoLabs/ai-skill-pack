@@ -3,7 +3,7 @@ name: tiktok-research
 description: "Research high-performing TikTok videos from tracked accounts using Apify's TikTok Scraper. Identifies outlier content, analyzes top 5 videos with AI, and generates reports with actionable hook formulas. Use when asked to: - Find trending TikTok content in a niche - Research what's performing on TikTok - Identify high-performing video patterns - Analyze competitors' TikTok content - Generate content ideas from TikTok trends - Run TikTok research - Find viral TikToks - Analyze hooks and content structure Triggers: \"tiktok research\", \"tt research\", \"find trending tiktoks\", \"analyze tiktok accounts\", \"what's working on tiktok\", \"content research tiktok\", \"tiktok analysis\", \"tiktok trends\""
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: bradautomates
   version: 0.1
   skills_sh_url: "https://www.skills.sh/bradautomates/head-of-content/tiktok-research"
   github_url: "https://github.com/bradautomates/head-of-content/tree/HEAD/.claude/skills/tiktok-research"

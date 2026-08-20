@@ -3,7 +3,7 @@ name: readme-i18n
 description: Use when the user wants to translate a repository README, make a repo multilingual, localize docs, add a language switcher, internationalize the README, or update localized README variants in a GitHub-style repository.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: xixu-me
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/readme-i18n"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/readme-i18n"

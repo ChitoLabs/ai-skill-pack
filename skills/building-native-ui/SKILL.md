@@ -3,7 +3,7 @@ name: building-native-ui
 description: "Trigger: building-native-ui, Complete guide for building beautiful apps with Expo Router. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.1
   skills_sh_url: "https://skills.sh/expo/skills/building-native-ui"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/building-native-ui"

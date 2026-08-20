@@ -3,7 +3,7 @@ name: sentry-fix-issues
 description: "Trigger: sentry-fix-issues, Find and fix issues from Sentry using MCP. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-fix-issues"
   github_url: "https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-fix-issues"

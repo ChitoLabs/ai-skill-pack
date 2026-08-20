@@ -3,7 +3,7 @@ name: openclaw-secure-linux-cloud
 description: Use when self-hosting OpenClaw on a cloud server, hardening a remote OpenClaw gateway, choosing between SSH tunneling, Tailscale, or reverse-proxy exposure, or reviewing Podman, pairing, sandboxing, token auth, and tool-permission defaults for a secure personal deployment.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: xixu-me
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/openclaw-secure-linux-cloud"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/openclaw-secure-linux-cloud"

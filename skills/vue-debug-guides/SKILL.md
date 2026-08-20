@@ -3,7 +3,7 @@ name: vue-debug-guides
 description: "Trigger: vue-debug-guides, Vue 3 debugging and error handling for runtime errors, warnings, async failures, and SSR/hydration issues. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: hyf0
   version: 0.1
   skills_sh_url: "https://www.skills.sh/hyf0/vue-skills/vue-debug-guides"
   github_url: "https://github.com/vuejs-ai/skills/tree/HEAD/skills/vue-debug-guides"

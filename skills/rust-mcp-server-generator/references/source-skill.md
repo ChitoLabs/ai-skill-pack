@@ -3,7 +3,7 @@ name: rust-mcp-server-generator
 description: Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/rust-mcp-server-generator"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/rust-mcp-server-generator"

@@ -3,7 +3,7 @@ name: terraform-module-library
 description: Build reusable Terraform modules for AWS, Azure, GCP, and OCI infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or implementing reusable IaC components.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/terraform-module-library"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/cloud-infrastructure/skills/terraform-module-library"

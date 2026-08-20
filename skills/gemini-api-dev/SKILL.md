@@ -3,7 +3,7 @@ name: gemini-api-dev
 description: "Trigger: gemini-api-dev. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-gemini
   version: 0.1
   skills_sh_url: "https://skills.sh/google-gemini/gemini-skills/gemini-api-dev"
   github_url: "https://github.com/google-gemini/gemini-skills/tree/HEAD/skills/gemini-api-dev"

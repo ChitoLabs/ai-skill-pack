@@ -3,7 +3,7 @@ name: python-mcp-server-generator
 description: Generate a complete MCP server project in Python with tools, resources, and proper configuration
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/python-mcp-server-generator"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/python-mcp-server-generator"

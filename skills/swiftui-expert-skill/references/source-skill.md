@@ -3,7 +3,7 @@ name: swiftui-expert-skill
 description: Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management, view composition, performance, Liquid Glass adoption, or Instruments `.trace` capture/analysis for hangs, hitches, CPU hotspots, or
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://www.skills.sh/avdlee/swiftui-agent-skill/swiftui-expert-skill"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swiftui-expert-skill"

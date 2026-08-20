@@ -5,6 +5,7 @@ license: MIT
 metadata:
   author: web-quality-skills
   version: 1.1
+  skills_sh_url: "https://www.skills.sh/supercent-io/skills-template/web-accessibility"
 ---
 
 ## Activation Contract

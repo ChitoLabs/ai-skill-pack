@@ -3,8 +3,9 @@ name: rails-security-review
 description: "Trigger: rails-security-review, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: igmarin
   version: 0.1
+  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rails-security-review"
 ---
 
 ## Activation Contract

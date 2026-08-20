@@ -3,7 +3,7 @@ name: postgresql-table-design
 description: Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: unknown
   version: 0.1
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/database-design/skills/postgresql"
 ---

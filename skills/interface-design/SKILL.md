@@ -3,7 +3,7 @@ name: interface-design
 description: "Trigger: interface-design, This skill is for interface design — dashboards, admin panels, apps, tools, and interactive products. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: dammyjay93
   version: 0.1
   skills_sh_url: "https://www.skills.sh/dammyjay93/interface-design/interface-design"
   github_url: "https://github.com/fellipeutaka/leon/tree/HEAD/skills/interface-design"

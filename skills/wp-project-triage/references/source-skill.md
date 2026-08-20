@@ -3,7 +3,7 @@ name: wp-project-triage
 description: Use when you need a deterministic inspection of a WordPress repository (plugin/theme/block theme/WP core/Gutenberg/full site) including tooling/tests/version hints, and a structured JSON report to guide workflows and guardrails.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-project-triage"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-project-triage"

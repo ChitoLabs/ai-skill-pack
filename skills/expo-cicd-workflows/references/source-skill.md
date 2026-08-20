@@ -3,7 +3,7 @@ name: expo-cicd-workflows
 description: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.
 license: MIT License
 metadata:
-  author: LCubero
+  author: expo
   version: 0.1
   skills_sh_url: "https://skills.sh/expo/skills/expo-cicd-workflows"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-cicd-workflows"

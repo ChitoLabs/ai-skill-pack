@@ -3,7 +3,7 @@ name: machine-learning
 description: "Trigger: machine-learning, Python machine learning with scikit-learn, PyTorch, and TensorFlow. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pluginagentmarketplace
   version: 2.1.0
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-python/machine-learning"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-python/tree/HEAD/skills/machine-learning"

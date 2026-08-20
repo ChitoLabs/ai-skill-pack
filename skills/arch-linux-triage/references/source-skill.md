@@ -3,7 +3,7 @@ name: arch-linux-triage
 description: Triage and resolve Arch Linux issues with pacman, systemd, and rolling-release best practices.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/arch-linux-triage"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/arch-linux-triage"

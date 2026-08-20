@@ -3,7 +3,7 @@ name: java-coding-standards
 description: "Java coding standards for Spring Boot and Quarkus services: naming, immutability, Optional usage, streams, exceptions, generics, CDI, reactive patterns, and project layout. Automatically applies framework-specific conventions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/java-coding-standards"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/java-coding-standards"

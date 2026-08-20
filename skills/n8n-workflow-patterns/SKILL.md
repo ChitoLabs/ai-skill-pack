@@ -3,7 +3,7 @@ name: n8n-workflow-patterns
 description: "Trigger: n8n-workflow-patterns, Proven workflow architectural patterns from real n8n workflows. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-workflow-patterns"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-workflow-patterns"

@@ -3,7 +3,7 @@ name: instagram-research
 description: "Research high-performing Instagram content (posts and reels) from tracked accounts using Apify's Instagram Scraper. Identifies outlier content, analyzes top 5 videos with AI, and generates reports with actionable hook formulas. Use when asked to: - Find trending Instagram content in a niche - Research what's performing on Instagram - Identify high-performing reel patterns - Analyze competitors' Instagram content - Generate content ideas from Instagram trends - Run Instagram research - Find viral reels - Analyze hooks and content structure Triggers: \"instagram research\", \"ig research\", \"find trending reels\", \"analyze instagram accounts\", \"what's working on instagram\", \"content research instagram\", \"reel analysis\", \"instagram trends\""
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: bradautomates
   version: 0.1
   skills_sh_url: "https://www.skills.sh/bradautomates/head-of-content/instagram-research"
   github_url: "https://github.com/bradautomates/head-of-content/tree/HEAD/.claude/skills/instagram-research"

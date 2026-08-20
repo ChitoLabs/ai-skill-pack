@@ -3,7 +3,7 @@ name: scrape
 description: "Trigger: scrape, Scrape web content as clean markdown/HTML/JSON via the Bright Data CLI (`bdata scrape`). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: brightdata
   version: 0.1
   skills_sh_url: "https://www.skills.sh/brightdata/skills/scrape"
   github_url: "https://github.com/brightdata/skills/tree/HEAD/skills/scrape"

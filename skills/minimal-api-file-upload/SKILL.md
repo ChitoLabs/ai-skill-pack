@@ -3,7 +3,7 @@ name: minimal-api-file-upload
 description: "Trigger: minimal-api-file-upload, File upload endpoints in ASP.NET minimal APIs (.NET 8+). Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: dotnet
   version: 0.1
   skills_sh_url: "https://skills.sh/dotnet/skills/minimal-api-file-upload"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/minimal-api-file-upload"

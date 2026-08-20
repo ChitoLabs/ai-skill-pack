@@ -3,7 +3,7 @@ name: elasticsearch-best-practices
 description: Elasticsearch development best practices for indexing, querying, and search optimization
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/elasticsearch-best-practices"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/elasticsearch-best-practices"

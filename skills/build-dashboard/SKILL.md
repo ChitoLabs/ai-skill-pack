@@ -3,7 +3,7 @@ name: build-dashboard
 description: "Trigger: build-dashboard, Build an interactive HTML dashboard with charts, filters, and tables. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/build-dashboard"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/build-dashboard"

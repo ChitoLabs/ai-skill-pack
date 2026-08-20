@@ -3,7 +3,7 @@ name: react-hook-form
 description: React Hook Form performance optimization for client-side form validation using useForm, useWatch, useController, useFieldArray, and the v7.55+ subscribe() API. This skill should be used when building client-side controlled forms with React Hook Form library. This skill does NOT cover React 19 Server Actions, useActionState, or server-side form handling (use react-19 skill for those).
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pproenca
   version: 0.1
   skills_sh_url: "https://skills.sh/pproenca/dot-skills/react-hook-form"
   github_url: "https://github.com/pproenca/dot-skills/tree/HEAD/skills/.curated/react-hook-form"

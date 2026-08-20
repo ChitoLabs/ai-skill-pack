@@ -3,7 +3,7 @@ name: expo-cicd-workflows
 description: "Trigger: expo-cicd-workflows, Helps understand and write EAS workflow YAML files for Expo projects. Preserve source workflow with portable agent instructions."
 license: MIT License
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-cicd-workflows"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-cicd-workflows"

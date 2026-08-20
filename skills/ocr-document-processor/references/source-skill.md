@@ -3,7 +3,7 @@ name: ocr-document-processor
 description: Extract text and structure from scans, images, and scanned PDFs. Use for OCR, searchable PDFs, table extraction, receipt parsing, and business card parsing.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: dkyazzentwatwa
   version: 0.1
   skills_sh_url: "https://www.skills.sh/dkyazzentwatwa/chatgpt-skills/ocr-document-processor"
   github_url: "https://github.com/dkyazzentwatwa/chatgpt-skills/tree/HEAD/ocr-document-processor"

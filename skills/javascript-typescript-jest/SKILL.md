@@ -3,7 +3,7 @@ name: javascript-typescript-jest
 description: "Trigger: javascript-typescript-jest, Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/javascript-typescript-jest"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/javascript-typescript-jest"

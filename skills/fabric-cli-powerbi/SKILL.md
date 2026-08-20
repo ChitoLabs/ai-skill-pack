@@ -3,7 +3,7 @@ name: fabric-cli-powerbi
 description: "Trigger: fabric-cli-powerbi, Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: microsoft
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/fabric-cli/fabric-cli-powerbi"
   github_url: "https://github.com/microsoft/fabric-cli/tree/HEAD/.ai-assets/skills/fabric-cli-powerbi"

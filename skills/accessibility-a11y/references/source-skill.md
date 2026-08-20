@@ -3,7 +3,7 @@ name: accessibility-a11y
 description: Implement web accessibility (a11y) best practices following WCAG guidelines to create inclusive, accessible user interfaces.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mindrally/skills/accessibility-a11y"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/accessibility-a11y"

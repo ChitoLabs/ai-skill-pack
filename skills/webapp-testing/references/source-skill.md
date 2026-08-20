@@ -3,7 +3,7 @@ name: webapp-testing
 description: Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 license: Complete terms in LICENSE.txt
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/webapp-testing"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/webapp-testing"

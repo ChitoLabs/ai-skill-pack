@@ -3,7 +3,7 @@ name: interview-script
 description: "Trigger: interview-script, Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: phuryn
   version: 0.1
   skills_sh_url: "https://www.skills.sh/phuryn/pm-skills/interview-script"
   github_url: "https://github.com/phuryn/pm-skills/tree/HEAD/pm-product-discovery/skills/interview-script"

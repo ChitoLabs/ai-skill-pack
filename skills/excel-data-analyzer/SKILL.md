@@ -3,7 +3,7 @@ name: excel-data-analyzer
 description: "Trigger: excel-data-analyzer. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mineru98
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mineru98/skills-store/excel-data-analyzer"
   github_url: "https://github.com/mineru98/skills-store/tree/HEAD/.codex/skills/excel-data-analyzer"

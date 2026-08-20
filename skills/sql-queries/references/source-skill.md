@@ -3,7 +3,7 @@ name: sql-queries
 description: Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Use when writing queries, optimizing slow SQL, translating between dialects, or building complex analytical queries with CTEs, window functions, or aggregations.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/sql-queries"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/sql-queries"

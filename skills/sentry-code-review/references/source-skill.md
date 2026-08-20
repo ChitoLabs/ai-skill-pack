@@ -3,7 +3,7 @@ name: sentry-code-review
 description: Analyze and resolve Sentry comments on GitHub Pull Requests. Use this when asked to review or fix issues identified by Sentry in PR comments. Can review specific PRs by number or automatically find recent PRs with Sentry feedback.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: getsentry
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-code-review"
   github_url: "https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-code-review"

@@ -3,7 +3,7 @@ name: verification-before-completion
 description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/verification-before-completion"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/verification-before-completion"

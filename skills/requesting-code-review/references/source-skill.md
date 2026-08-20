@@ -3,7 +3,7 @@ name: requesting-code-review
 description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: obra
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/requesting-code-review"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/requesting-code-review"

@@ -3,7 +3,7 @@ name: stripe-best-practices
 description: Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration surfaces (Checkout, Payment Element), migrating from deprecated Stripe APIs, and security best practices (API key management, restricted keys, webhooks, OAuth). Use when building, modifying, or reviewing any Stripe integration — including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, creating connected accounts, or implementing secure key handling.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: stripe
   version: 0.1
   skills_sh_url: "https://skills.sh/stripe/ai/stripe-best-practices"
   github_url: "https://github.com/stripe/ai/tree/HEAD/skills/stripe-best-practices"

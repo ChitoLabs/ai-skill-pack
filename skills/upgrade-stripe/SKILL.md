@@ -3,7 +3,7 @@ name: upgrade-stripe
 description: "Trigger: upgrade-stripe, Guide for upgrading Stripe API versions and SDKs. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: stripe
   version: 0.1
   skills_sh_url: "https://skills.sh/stripe/ai/upgrade-stripe"
   github_url: "https://github.com/stripe/ai/tree/HEAD/skills/upgrade-stripe"

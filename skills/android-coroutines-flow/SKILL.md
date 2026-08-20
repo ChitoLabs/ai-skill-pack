@@ -3,7 +3,7 @@ name: android-coroutines-flow
 description: "Trigger: android-coroutines-flow, Use coroutines, Flow, structured concurrency, dispatchers, and cancellation-safe Android async pipelines. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: krutikJain
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-coroutines-flow"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-coroutines-flow"

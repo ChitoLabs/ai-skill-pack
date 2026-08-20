@@ -3,7 +3,7 @@ name: graphql
 description: Build GraphQL APIs with Node.js using Apollo Server, type definitions, resolvers, and real-time subscriptions
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: pluginagentmarketplace
   version: 0.1
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-nodejs/graphql"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-nodejs/tree/HEAD/skills/graphql"

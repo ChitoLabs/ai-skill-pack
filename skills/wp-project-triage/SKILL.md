@@ -3,7 +3,7 @@ name: wp-project-triage
 description: "Trigger: wp-project-triage. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wordpress
   version: 0.1
   skills_sh_url: "https://skills.sh/wordpress/agent-skills/wp-project-triage"
   github_url: "https://github.com/wordpress/agent-skills/tree/HEAD/skills/wp-project-triage"

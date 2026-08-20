@@ -3,7 +3,7 @@ name: google-ads
 description: "Trigger: google-ads, When the user wants to set up, optimize, or manage Google Ads campaigns. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: kostja94
   version: 1.4.1
   skills_sh_url: "https://www.skills.sh/kostja94/marketing-skills/google-ads"
   github_url: "https://github.com/kostja94/marketing-skills/tree/HEAD/skills/paid-ads/platforms/google-ads"

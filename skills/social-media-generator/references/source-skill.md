@@ -3,7 +3,7 @@ name: social-media-generator
 description: This skill should be used when the user requests social media content creation for Twitter, Instagram, LinkedIn, or Facebook. It generates platform-optimized posts and saves them in an organized folder structure with meaningful filenames based on event details.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: ailabs-393
   version: 0.1
   skills_sh_url: "https://www.skills.sh/ailabs-393/ai-labs-claude-skills/social-media-generator"
   github_url: "https://github.com/ailabs-393/ai-labs-claude-skills/tree/HEAD/dist/skills/social-media-generator"

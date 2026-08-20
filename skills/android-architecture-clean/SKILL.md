@@ -3,7 +3,7 @@ name: android-architecture-clean
 description: "Trigger: android-architecture-clean, Apply clean architecture boundaries, use cases, repositories, and lifecycle-aware presentation models in Android projects. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: krutikJain
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-architecture-clean"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-architecture-clean"

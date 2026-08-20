@@ -3,7 +3,7 @@ name: use-dom
 description: Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 0.1
   skills_sh_url: "https://skills.sh/expo/skills/use-dom"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/use-dom"

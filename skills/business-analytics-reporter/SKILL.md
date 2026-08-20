@@ -3,7 +3,7 @@ name: business-analytics-reporter
 description: "Trigger: business-analytics-reporter. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: ailabs-393
   version: 0.1
   skills_sh_url: "https://www.skills.sh/ailabs-393/ai-labs-claude-skills/business-analytics-reporter"
   github_url: "https://github.com/mamba-mental/agent-skill-manager/tree/HEAD/skills/business-analytics-reporter"

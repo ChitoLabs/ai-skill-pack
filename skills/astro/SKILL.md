@@ -3,7 +3,7 @@ name: astro
 description: "Trigger: astro, Skill for building with the Astro web framework. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: astrolicious
   version: 0.0.1
   skills_sh_url: "https://www.skills.sh/astrolicious/agent-skills/astro"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/astro"

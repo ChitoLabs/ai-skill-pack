@@ -3,7 +3,7 @@ name: prompt-builder
 description: "Trigger: prompt-builder, Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/prompt-builder"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/prompt-builder"

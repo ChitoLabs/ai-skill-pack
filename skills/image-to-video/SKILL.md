@@ -3,7 +3,7 @@ name: image-to-video
 description: "Trigger: image-to-video, Animate any still image on RunComfy \u2014 this skill is a smart router that matches the user's intent to the right i2v model in the RunComfy catalog. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: agentspace-so
   version: 0.1
   skills_sh_url: "https://www.skills.sh/agentspace-so/runcomfy-agent-skills/image-to-video"
   github_url: "https://github.com/agentspace-so/runcomfy-agent-skills/tree/HEAD/image-to-video"

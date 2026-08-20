@@ -3,7 +3,7 @@ name: shellcheck-configuration
 description: Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/shellcheck-configuration"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/shell-scripting/skills/shellcheck-configuration"

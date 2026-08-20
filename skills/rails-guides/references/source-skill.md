@@ -3,7 +3,7 @@ name: rails-guides
 description: Official Rails documentation. Use when asked about any Rails-specific topic including ActiveRecord, routing, controllers, views, mailers, jobs, Action Cable, Action Text, Active Storage, migrations, validations, callbacks, associations, caching, security, or internals.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: lucianghinda
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/rails-guides"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/rails-guides"

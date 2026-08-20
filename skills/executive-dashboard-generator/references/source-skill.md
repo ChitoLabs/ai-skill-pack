@@ -3,7 +3,7 @@ name: executive-dashboard-generator
 description: Transform raw data from CSVs, Google Sheets, or databases into executive-ready reports with visualizations, key metrics, trend analysis, and actionable recommendations. Creates data-driven narratives for leadership. Use when users need to turn spreadsheets into executive summaries or board reports.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: onewave-ai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/onewave-ai/claude-skills/executive-dashboard-generator"
   github_url: "https://github.com/onewave-ai/claude-skills/tree/HEAD/executive-dashboard-generator"

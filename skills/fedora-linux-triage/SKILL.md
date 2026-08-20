@@ -3,7 +3,7 @@ name: fedora-linux-triage
 description: "Trigger: fedora-linux-triage, Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/fedora-linux-triage"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/fedora-linux-triage"

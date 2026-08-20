@@ -3,7 +3,7 @@ name: nodejs-best-practices
 description: Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not copying.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/nodejs-best-practices"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/nodejs-best-practices"

@@ -3,7 +3,7 @@ name: stitch-loop
 description: "Trigger: stitch-loop, Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://skills.sh/google-labs-code/stitch-skills/stitch-loop"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/stitch-loop"

@@ -3,7 +3,7 @@ name: prompt-engineering-patterns
 description: Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production. Use when optimizing prompts, improving LLM outputs, or designing production prompt templates.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/prompt-engineering-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/prompt-engineering-patterns"

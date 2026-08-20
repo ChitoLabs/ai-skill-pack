@@ -3,7 +3,7 @@ name: pptx
 description: "Trigger: pptx, Use this skill any time a .pptx file is involved in any way \u2014 as input, output, or both. Preserve source workflow with portable agent instructions."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/pptx"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/pptx"

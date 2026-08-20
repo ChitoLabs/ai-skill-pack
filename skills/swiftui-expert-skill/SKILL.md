@@ -3,7 +3,7 @@ name: swiftui-expert-skill
 description: "Trigger: swiftui-expert-skill. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://www.skills.sh/avdlee/swiftui-agent-skill/swiftui-expert-skill"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swiftui-expert-skill"

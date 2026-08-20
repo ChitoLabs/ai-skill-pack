@@ -3,7 +3,7 @@ name: swift-concurrency
 description: Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendable, data races, thread safety, or concurrency-related compiler and linter warnings.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/swift-concurrency-agent-skill/swift-concurrency"
   github_url: "https://github.com/avdlee/swift-concurrency-agent-skill/tree/HEAD/swift-concurrency"

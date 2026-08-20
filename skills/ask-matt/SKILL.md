@@ -3,7 +3,7 @@ name: ask-matt
 description: "Trigger: ask matt, choose workflow, skill router. Route work through idea, research, planning, implementation, review, and learning flows."
 license: MIT
 metadata:
-  author: LCubero
+  author: mattpocock
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/ask-matt"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/engineering/ask-matt"

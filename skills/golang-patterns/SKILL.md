@@ -3,7 +3,7 @@ name: golang-patterns
 description: "Trigger: golang-patterns, Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/golang-patterns"
   github_url: "https://github.com/pony-unicorn/ai-coding-kit/tree/HEAD/.agents/skills/golang-patterns"

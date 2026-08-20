@@ -3,7 +3,7 @@ name: mobile-ios-design
 description: "Trigger: mobile-ios-design, Master iOS Human Interface Guidelines and SwiftUI patterns for building native iOS apps. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: wshobson
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/mobile-ios-design"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/mobile-ios-design"

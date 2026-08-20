@@ -3,7 +3,7 @@ name: native-data-fetching
 description: "Trigger: native-data-fetching, Use when implementing or debugging ANY network request, API call, or data fetching. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/native-data-fetching"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/native-data-fetching"

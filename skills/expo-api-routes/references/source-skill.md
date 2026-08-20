@@ -3,7 +3,7 @@ name: expo-api-routes
 description: Guidelines for creating API routes in Expo Router with EAS Hosting
 license: MIT
 metadata:
-  author: LCubero
+  author: expo
   version: 0.1
   skills_sh_url: "https://skills.sh/expo/skills/expo-api-routes"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-api-routes"

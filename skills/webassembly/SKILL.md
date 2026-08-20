@@ -3,7 +3,7 @@ name: webassembly
 description: "Trigger: webassembly, TODO - fill from upstream context. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: unknown
   version: 0.1
   github_url: "https://github.com/ffsshhttiikk/opencode-agents-skills/tree/HEAD/webassembly"
 ---

@@ -3,7 +3,7 @@ name: gsap-core
 description: "Trigger: gsap-core, Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: LCubero
+  author: greensock
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-core"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-core"

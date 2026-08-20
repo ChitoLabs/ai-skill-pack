@@ -3,7 +3,7 @@ name: text-to-sql
 description: Convert natural language queries to SQL. Use for database queries, data analysis, and reporting.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: oimiragieo
   version: 0.1
   skills_sh_url: "https://www.skills.sh/oimiragieo/agent-studio/text-to-sql"
   github_url: "https://github.com/oimiragieo/agent-studio/tree/HEAD/.claude/skills/text-to-sql"

@@ -3,7 +3,7 @@ name: ruby-on-rails-best-practices
 description: "Trigger: ruby-on-rails-best-practices, Ruby on Rails architecture and coding patterns from Basecamp. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: sergiodxa
   version: 0.1
   skills_sh_url: "https://skills.sh/sergiodxa/agent-skills/ruby-on-rails-best-practices"
   github_url: "https://github.com/sergiodxa/agent-skills/tree/HEAD/skills/ruby-on-rails-best-practices"

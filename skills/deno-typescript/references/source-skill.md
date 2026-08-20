@@ -3,7 +3,7 @@ name: deno-typescript
 description: Guidelines for developing with Deno and TypeScript using modern runtime features, security model, and native tooling
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: mindrally
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mindrally/skills/deno-typescript"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/deno-typescript"

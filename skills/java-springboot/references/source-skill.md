@@ -3,7 +3,7 @@ name: java-springboot
 description: Get best practices for developing applications with Spring Boot.
 license: Apache-2.0
 metadata:
-  author: LCubero
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/java-springboot"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/java-springboot"

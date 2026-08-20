@@ -3,7 +3,7 @@ name: frontend-design
 description: "Trigger: frontend-design, Create distinctive, production-grade frontend interfaces with high design quality. Preserve source workflow with portable agent instructions."
 license: Complete terms in LICENSE.txt
 metadata:
-  author: LCubero
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/frontend-design"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/frontend-design"
