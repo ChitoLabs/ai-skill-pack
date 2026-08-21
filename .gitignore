@@ -9,3 +9,6 @@ Thumbs.db
 /.pi/
 /.claude/
 /.opencode/
+/.codegraph/
+/.engram/*
+!/.engram/config.json

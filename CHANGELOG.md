@@ -6,24 +6,49 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [2026-08-21]
+
 ### Added
 
-- Added this root changelog to make release review easier before the first tagged release.
-- Added the `hallmark`, `i-have-adhd`, and `impeccable` skills from the 1402787 repository update.
-- Added matching command files under `commands/` for `hallmark`, `i-have-adhd`, and `impeccable`.
-- Added command catalog artifacts: `docs/commands-catalog.md` and `manifests/commands-catalog.json`.
 - Added the `grill-me` command for explicit activation of the matching challenge interview skill.
 
 ### Changed
 
-- Refreshed public documentation and manifests to represent 466 published skills.
-- Upgraded `grill-me` to the self-contained 2.0.0 decision-tree interview workflow with local protocol and provenance references.
+- Upgraded `grill-me` to the self-contained 2.0.0 decision-tree interview workflow, adding local interview protocol and provenance references.
 - Refreshed command documentation and manifests to represent 4 published commands.
+
+### Fixed
+
+- Fixed a contradictory published command count in this changelog.
+
+## [2026-08-20]
+
+### Fixed
+
+- Preserved upstream authorship and official source links across the published skill pack. Each skill now records its original author instead of the adapter, and authorship that could not be confirmed from an authoritative source is recorded as `unknown`.
+
+## [2026-07-27]
+
+### Added
+
+- Added the `hallmark`, `i-have-adhd`, and `impeccable` design workflow skills.
+- Added matching command files under `commands/` for `hallmark`, `i-have-adhd`, and `impeccable`.
+- Added command catalog artifacts: `docs/commands-catalog.md` and `manifests/commands-catalog.json`.
+
+### Changed
+
+- Refreshed public documentation and manifests to represent 466 published skills.
 - Updated `manifests/skill-list-downloadURL.md` to use readable `skill-name - URL` rows for source review.
 
 ### Fixed
 
 - Fixed raw pipe rendering in the `tailwind-v4-shadcn` entry in `docs/skills-catalog.md`.
+
+## [2026-07-14]
+
+### Added
+
+- Added this root changelog to make release review easier before the first tagged release.
 
 ## [2026-07-13]
 
