@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- Refreshed public documentation and manifests to represent 466 published skills and 3 published commands.
+- Refreshed public documentation and manifests to represent 466 published skills.
 - Upgraded `grill-me` to the self-contained 2.0.0 decision-tree interview workflow with local protocol and provenance references.
 - Refreshed command documentation and manifests to represent 4 published commands.
 - Updated `manifests/skill-list-downloadURL.md` to use readable `skill-name - URL` rows for source review.
