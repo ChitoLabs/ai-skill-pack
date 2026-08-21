@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T00:00:00.000Z",
+  "generated_at": "2026-08-21T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
   "staging_root": "github",
   "publication_scope": "general skills pack only",
@@ -15,8 +15,8 @@
     "fabric_candidate_folders_copied": 0,
     "source_entries_represented": 466,
     "published_folders_without_active_source_entry": 0,
-    "commands_published": 3,
-    "source_commands_represented": 3
+    "commands_published": 4,
+    "source_commands_represented": 4
   },
   "exclusions": [
     ".ld9/skill-sanitize/skill_upgrade/0_microsoft_for_fabric",

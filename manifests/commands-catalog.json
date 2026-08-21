@@ -1,8 +1,15 @@
 {
-  "generated_at": "2026-07-27T00:00:00.000Z",
+  "generated_at": "2026-08-21T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
-  "total_commands": 3,
+  "total_commands": 4,
   "commands": [
+    {
+      "name": "grill-me",
+      "path": "commands/grill-me.md",
+      "description": "Activate the Grill Me challenge interview",
+      "loads_skill": "grill-me",
+      "source_kind": "newCommand"
+    },
     {
       "name": "hallmark",
       "path": "commands/hallmark.md",

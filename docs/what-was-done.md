@@ -6,11 +6,11 @@ This folder stages the public GitHub-ready package for `ChitoLabs/ai-skill-pack`
 
 - Copied the curated general candidate root into `github/skills/`.
 - Added 3 reviewed skills from `newSkill`: `hallmark`, `i-have-adhd`, and `impeccable`.
-- Added 3 matching command files from `newCommand` under `commands/`.
+- Added 4 reviewed command files under `commands/`.
 - Excluded the separate Microsoft Fabric candidate root.
 - Excluded temp files, memory backups, legacy found folders, duplicate quarantine, internal scripts, and internal audit reports.
 - Generated publication-focused docs and manifests under `github/docs/` and `github/manifests/`.
-- Generated command catalog documentation and manifest files for the 3 published commands.
+- Generated command catalog documentation and manifest files for the 4 published commands.
 - Used curated manifests instead of copying raw full manifests that include historical Fabric and quarantine context.
 
 ## Boundaries

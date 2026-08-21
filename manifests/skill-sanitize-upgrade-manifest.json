@@ -1921,10 +1921,10 @@
       "source_skill": "grill-me",
       "github_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
       "skills_sh_url": "https://www.skills.sh/mattpocock/skills/grill-me",
-      "author_action": "corrected-to-official-publisher",
+      "author_action": "preserved-explicit-upstream-author",
       "status": "ok",
       "batch": 1,
-      "author": "mattpocock"
+      "author": "Matt Pocock"
     },
     {
       "skill": "gsap-core",

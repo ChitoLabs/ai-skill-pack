@@ -196,7 +196,7 @@ Publication-focused source URL list for the curated general skills pack.
 - google-ads - https://www.skills.sh/kostja94/marketing-skills/google-ads
 - google-merchant-center - https://www.skills.sh/membranedev/application-skills/google-merchant-center
 - graphql - https://skills.sh/pluginagentmarketplace/custom-plugin-nodejs/graphql
-- grill-me - https://www.skills.sh/mattpocock/skills/grill-me
+- grill-me - https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me
 - gsap-core - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-core
 - gsap-frameworks - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-frameworks
 - gsap-performance - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-performance

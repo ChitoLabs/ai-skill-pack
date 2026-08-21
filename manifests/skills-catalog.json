@@ -1884,12 +1884,12 @@
     {
       "name": "grill-me",
       "path": "skills/grill-me/",
-      "source_url": "https://www.skills.sh/mattpocock/skills/grill-me",
+      "source_url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
       "source_kind": "skill-frontmatter",
       "description": "Trigger: grill me, challenge my plan, sharpen design. Run a relentless interview to expose assumptions and improve a plan.",
       "intended_use": "Trigger: grill me, challenge my plan, sharpen design. Run a relentless interview to expose assumptions and improve a plan.",
       "category": "Workflow & Automation",
-      "author": "mattpocock"
+      "author": "Matt Pocock"
     },
     {
       "name": "gsap-core",

@@ -41,7 +41,7 @@ Credit for each individual skill belongs to its original author or upstream proj
 | `skills/` | Final curated skill folders. Each skill has a `SKILL.md` entry point. |
 | `commands/` | Optional command markdown files that route to matching skills. |
 | [`docs/skills-catalog.md`](docs/skills-catalog.md) | GitHub-ready catalog of all 466 published skills, grouped by category with intended use and source links. |
-| [`docs/commands-catalog.md`](docs/commands-catalog.md) | Catalog of all 3 published command files and the skills they load. |
+| [`docs/commands-catalog.md`](docs/commands-catalog.md) | Catalog of all 4 published command files and the skills they load. |
 | `docs/audit-summary.md` | Summary of the verified source state and publication boundaries. |
 | `docs/what-was-done.md` | Short operational summary of the packaging work. |
 | [`manifests/skills-catalog.json`](manifests/skills-catalog.json) | Structured catalog for automation, including skill name, path, category, intended use, and source URL. |
@@ -60,7 +60,7 @@ For tooling, use [`manifests/skills-catalog.json`](manifests/skills-catalog.json
 
 ## Commands Catalog
 
-Use [`docs/commands-catalog.md`](docs/commands-catalog.md) to review the 3 optional command files. For tooling, use [`manifests/commands-catalog.json`](manifests/commands-catalog.json).
+Use [`docs/commands-catalog.md`](docs/commands-catalog.md) to review the 4 optional command files. For tooling, use [`manifests/commands-catalog.json`](manifests/commands-catalog.json).
 
 ## How To Use
 
