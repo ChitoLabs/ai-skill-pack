@@ -1,9 +1,10 @@
 ---
 name: markdown-to-html
-description: "Convert Markdown files to HTML with marked.js, pandoc, gomarkdown, Jekyll, Hugo, GFM, CommonMark, code blocks, tables, math, and collapsible sections."
+description: "Trigger: convert Markdown to HTML using a specified renderer or dialect. Preserve requested code blocks, tables, math, and collapsible content."
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/markdown-to-html"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/markdown-to-html"

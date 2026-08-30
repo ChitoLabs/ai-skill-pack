@@ -7,9 +7,9 @@ tags: ctrl, useController, Controller, controlled-components, re-renders
 
 ## Isolate Controlled Inputs in Dedicated Child Components
 
-`Controller` and `useController` are equivalent — `Controller` is a thin component wrapper around `useController`. Re-render isolation does **not** come from picking one over the other. It comes from putting the subscription in a **child component**, so that when the field value changes, only the child re-renders. Inlining `Controller` (or `useController`) in the parent form makes every parent re-render flow through every controlled input.
+`Controller` and `useController` are equivalent - `Controller` is a thin component wrapper around `useController`. Re-render isolation does **not** come from picking one over the other. It comes from putting the subscription in a **child component**, so that when the field value changes, only the child re-renders. Inlining `Controller` (or `useController`) in the parent form makes every parent re-render flow through every controlled input.
 
-**Incorrect (Controllers inlined in parent — every parent re-render re-renders all controlled inputs):**
+**Incorrect (Controllers inlined in parent - every parent re-render re-renders all controlled inputs):**
 
 ```typescript
 function PaymentForm() {
@@ -57,7 +57,7 @@ function CurrencySelectField({ control }: { control: Control<PaymentFormData> })
 }
 ```
 
-**Equivalent with `Controller` (also correct — same isolation):**
+**Equivalent with `Controller` (also correct - same isolation):**
 
 ```typescript
 function AmountField({ control }: { control: Control<PaymentFormData> }) {
@@ -72,8 +72,8 @@ function AmountField({ control }: { control: Control<PaymentFormData> }) {
 ```
 
 **When to prefer one API over the other:**
-- `useController` — when you also need `fieldState`/`formState` in the same component, or want to compose with custom logic
-- `Controller` — when you want a single JSX-only declaration and don't need to read state in the surrounding component
+- `useController` - when you also need `fieldState`/`formState` in the same component, or want to compose with custom logic
+- `Controller` - when you want a single JSX-only declaration and don't need to read state in the surrounding component
 
 Both achieve the same re-render isolation when placed in a child component.
 

@@ -4,6 +4,7 @@ description: "Trigger: n8n-expression-syntax, Validate n8n expression syntax and
 license: Apache-2.0
 metadata:
   author: czlonkowski
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-expression-syntax"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-expression-syntax"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `n8n-expression-syntax` or the preserved source description: Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes \u2014 expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors.
+Use this skill when the user request matches `n8n-expression-syntax` or the preserved source description: Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes - expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

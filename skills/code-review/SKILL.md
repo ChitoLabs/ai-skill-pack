@@ -4,6 +4,7 @@ description: "Trigger: code-review, AI-powered code review using CodeRabbit. Pre
 license: Apache-2.0
 metadata:
   author: coderabbitai
+  adapter: LCubero
   version: 0.1.0
   skills_sh_url: "https://www.skills.sh/coderabbitai/skills/code-review"
   github_url: "https://github.com/coderabbitai/skills/tree/HEAD/skills/code-review"

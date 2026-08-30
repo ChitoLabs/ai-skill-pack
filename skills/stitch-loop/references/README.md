@@ -33,14 +33,14 @@ Read my next-prompt.md and generate the page using Stitch, then prepare the next
 
 ```
 stitch-loop/
-├── SKILL.md              — Core pattern instructions
-├── README.md             — This file
+├── SKILL.md              - Core pattern instructions
+├── README.md             - This file
 ├── resources/
-│   ├── baton-schema.md   — Baton file format spec
-│   └── site-template.md  — SITE.md/DESIGN.md templates
+│   ├── baton-schema.md   - Baton file format spec
+│   └── site-template.md  - SITE.md/DESIGN.md templates
 └── examples/
-    ├── next-prompt.md    — Example baton
-    └── SITE.md           — Example site constitution
+    ├── next-prompt.md    - Example baton
+    └── SITE.md           - Example site constitution
 ```
 
 ## Works With

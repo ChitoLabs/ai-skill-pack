@@ -68,7 +68,7 @@ export default clerkMiddleware(async (auth, req) => {
 });
 ```
 
-Prefer permissions over roles — permissions are more granular and easier to reassign across roles in the Dashboard.
+Prefer permissions over roles - permissions are more granular and easier to reassign across roles in the Dashboard.
 
 > **Core 2 ONLY (skip if current SDK):** Middleware uses synchronous `clerkMiddleware((auth, req) => { auth().protect((has) => ...) })`. Note `auth()` is called as a function (not `auth.protect`) and the callback signature is the same.
 

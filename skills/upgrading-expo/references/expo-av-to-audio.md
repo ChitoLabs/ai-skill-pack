@@ -122,9 +122,9 @@ await setAudioModeAsync({
 
 - **No auto-reset on finish**: After `play()` completes, the player stays paused at the end. To replay, call `player.seekTo(0)` then `play()`
 - **Time in seconds**: expo-audio uses seconds, not milliseconds (matching web standards)
-- **Immediate loading**: Audio loads immediately when the hook mounts—no explicit preloading needed
+- **Immediate loading**: Audio loads immediately when the hook mounts-no explicit preloading needed
 - **Automatic cleanup**: No need to call `unloadAsync()`, hooks handle resource cleanup on unmount
-- **Multiple players**: Create multiple `useAudioPlayer` instances and store them—all load immediately
+- **Multiple players**: Create multiple `useAudioPlayer` instances and store them-all load immediately
 - **Direct property access**: Set volume, rate, loop directly on the player object (`player.volume = 0.5`)
 
 ## API Reference

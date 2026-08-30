@@ -20,49 +20,49 @@ Best practices for Redis including data structures, memory management, Redis Que
 
 ## Table of Contents
 
-1. [Data Structures & Keys](#1-data-structures--keys) — **HIGH**
+1. [Data Structures & Keys](#1-data-structures--keys) - **HIGH**
    - 1.1 [Choose the Right Data Structure](#11-choose-the-right-data-structure)
    - 1.2 [Use Consistent Key Naming Conventions](#12-use-consistent-key-naming-conventions)
    - 1.3 [Use Hash Field Expiration for Per-Field TTL](#13-use-hash-field-expiration-for-per-field-ttl)
    - 1.4 [Use INCR for Atomic Counters](#14-use-incr-for-atomic-counters)
    - 1.5 [Use Transactions for Atomic Multi-Command Operations](#15-use-transactions-for-atomic-multi-command-operations)
-2. [Memory & Expiration](#2-memory--expiration) — **HIGH**
+2. [Memory & Expiration](#2-memory--expiration) - **HIGH**
    - 2.1 [Configure Memory Limits and Eviction Policies](#21-configure-memory-limits-and-eviction-policies)
    - 2.2 [Set TTL on Cache Keys](#22-set-ttl-on-cache-keys)
-3. [Connection & Performance](#3-connection--performance) — **HIGH**
+3. [Connection & Performance](#3-connection--performance) - **HIGH**
    - 3.1 [Avoid Slow Commands in Production](#31-avoid-slow-commands-in-production)
    - 3.2 [Configure Connection Timeouts](#32-configure-connection-timeouts)
    - 3.3 [Use Client-Side Caching for Frequently Read Data](#33-use-client-side-caching-for-frequently-read-data)
    - 3.4 [Use Connection Pooling or Multiplexing](#34-use-connection-pooling-or-multiplexing)
    - 3.5 [Use Pipelining for Bulk Operations](#35-use-pipelining-for-bulk-operations)
-4. [JSON Documents](#4-json-documents) — **MEDIUM**
+4. [JSON Documents](#4-json-documents) - **MEDIUM**
    - 4.1 [Choose JSON vs Hash vs String Appropriately](#41-choose-json-vs-hash-vs-string-appropriately)
    - 4.2 [Use JSON Paths for Partial Updates](#42-use-json-paths-for-partial-updates)
-5. [Redis Query Engine](#5-redis-query-engine) — **HIGH**
+5. [Redis Query Engine](#5-redis-query-engine) - **HIGH**
    - 5.1 [Choose the Correct Field Type](#51-choose-the-correct-field-type)
    - 5.2 [Index Only Fields You Query](#52-index-only-fields-you-query)
    - 5.3 [Manage Indexes for Zero-Downtime Updates](#53-manage-indexes-for-zero-downtime-updates)
    - 5.4 [Use DIALECT 2 for Query Syntax](#54-use-dialect-2-for-query-syntax)
    - 5.5 [Use SKIPINITIALSCAN for New Data Only Indexes](#55-use-skipinitialscan-for-new-data-only-indexes)
    - 5.6 [Write Efficient Queries](#56-write-efficient-queries)
-6. [Vector Search & RedisVL](#6-vector-search--redisvl) — **HIGH**
+6. [Vector Search & RedisVL](#6-vector-search--redisvl) - **HIGH**
    - 6.1 [Choose HNSW vs FLAT Based on Requirements](#61-choose-hnsw-vs-flat-based-on-requirements)
    - 6.2 [Configure Vector Indexes Properly](#62-configure-vector-indexes-properly)
    - 6.3 [Implement RAG Pattern Correctly](#63-implement-rag-pattern-correctly)
    - 6.4 [Use Hybrid Search for Better Results](#64-use-hybrid-search-for-better-results)
-7. [Semantic Caching](#7-semantic-caching) — **MEDIUM**
+7. [Semantic Caching](#7-semantic-caching) - **MEDIUM**
    - 7.1 [Configure Semantic Cache Properly](#71-configure-semantic-cache-properly)
    - 7.2 [Use LangCache for LLM Response Caching](#72-use-langcache-for-llm-response-caching)
-8. [Streams & Pub/Sub](#8-streams--pub/sub) — **MEDIUM**
+8. [Streams & Pub/Sub](#8-streams--pub/sub) - **MEDIUM**
    - 8.1 [Choose Streams vs Pub/Sub Appropriately](#81-choose-streams-vs-pubsub-appropriately)
-9. [Clustering & Replication](#9-clustering--replication) — **MEDIUM**
+9. [Clustering & Replication](#9-clustering--replication) - **MEDIUM**
    - 9.1 [Use Hash Tags for Multi-Key Operations](#91-use-hash-tags-for-multi-key-operations)
    - 9.2 [Use Read Replicas for Read-Heavy Workloads](#92-use-read-replicas-for-read-heavy-workloads)
-10. [Security](#10-security) — **HIGH**
+10. [Security](#10-security) - **HIGH**
    - 10.1 [Always Use Authentication in Production](#101-always-use-authentication-in-production)
    - 10.2 [Secure Network Access](#102-secure-network-access)
    - 10.3 [Use ACLs for Fine-Grained Access Control](#103-use-acls-for-fine-grained-access-control)
-11. [Observability](#11-observability) — **MEDIUM**
+11. [Observability](#11-observability) - **MEDIUM**
    - 11.1 [Monitor Key Redis Metrics](#111-monitor-key-redis-metrics)
    - 11.2 [Use Observability Commands for Debugging](#112-use-observability-commands-for-debugging)
 
@@ -200,7 +200,7 @@ jedis.set("http://www.verylongurlkey.com/store/products/product.html?id=8361",
 
 **Key naming tips:**
 
-- Keep keys short but readable—they consume memory
+- Keep keys short but readable-they consume memory
 
 - Consider key prefixes for multi-tenant applications
 

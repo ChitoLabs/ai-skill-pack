@@ -3,9 +3,9 @@ name: rspec-best-practices
 description: "Trigger: rspec-best-practices, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: igmarin
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rspec-best-practices"
 ---
 
 ## Activation Contract

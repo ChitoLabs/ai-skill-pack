@@ -60,23 +60,23 @@ const content = ref({
 
 ## Key components
 
-- `UEditor` — rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` — `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
-- `UEditorToolbar` — toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
-- `UEditorDragHandle` — block drag-and-drop handle.
-- `UEditorSuggestionMenu` — slash command menu (type `/` to open).
-- `UEditorMentionMenu` — `@` mention menu.
-- `UEditorEmojiMenu` — emoji picker (type `:` to open).
+- `UEditor` - rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` - `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
+- `UEditorToolbar` - toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
+- `UEditorDragHandle` - block drag-and-drop handle.
+- `UEditorSuggestionMenu` - slash command menu (type `/` to open).
+- `UEditorMentionMenu` - `@` mention menu.
+- `UEditorEmojiMenu` - emoji picker (type `:` to open).
 
 ## Toolbar modes
 
 ```vue
-<!-- Fixed (default) — always visible at top -->
+<!-- Fixed (default) - always visible at top -->
 <UEditorToolbar :editor="editor" />
 
-<!-- Bubble — appears on text selection -->
+<!-- Bubble - appears on text selection -->
 <UEditorToolbar :editor="editor" layout="bubble" />
 
-<!-- Floating — appears on empty lines -->
+<!-- Floating - appears on empty lines -->
 <UEditorToolbar :editor="editor" layout="floating" />
 ```
 

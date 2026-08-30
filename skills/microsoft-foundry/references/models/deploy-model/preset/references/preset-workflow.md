@@ -152,9 +152,9 @@ echo "Model format: $MODEL_FORMAT"
 ```
 
 > 💡 **Model format determines the deployment path:**
-> - `OpenAI` — Standard CLI deployment, TPM-based capacity, RAI policies apply
-> - `Anthropic` — REST API deployment with `modelProviderData`, capacity=1, no RAI
-> - All other formats (`Meta-Llama`, `Mistral`, `Cohere`, etc.) — Standard CLI deployment, capacity=1 (MaaS), no RAI
+> - `OpenAI` - Standard CLI deployment, TPM-based capacity, RAI policies apply
+> - `Anthropic` - REST API deployment with `modelProviderData`, capacity=1, no RAI
+> - All other formats (`Meta-Llama`, `Mistral`, `Cohere`, etc.) - Standard CLI deployment, capacity=1 (MaaS), no RAI
 
 ---
 
@@ -263,7 +263,7 @@ if [ -z "$AVAILABLE_REGIONS" ]; then
   echo "No regions have available capacity for $MODEL_NAME with GlobalStandard SKU."
   echo ""
   echo "Next Steps:"
-  echo "1. Request quota increase — use the quota skill (../../../quota/quota.md)"
+  echo "1. Request quota increase - use the quota skill (../../../quota/quota.md)"
   echo ""
   echo "2. Check existing deployments (may be using quota):"
   echo "   az cognitiveservices account deployment list \\"
@@ -416,11 +416,11 @@ if [ "$MODEL_FORMAT" = "OpenAI" ]; then
 else
   # Non-OpenAI models (MaaS): capacity is always 1
   DEPLOY_CAPACITY=1
-  echo "MaaS model — deploying with capacity: 1 (pay-per-token billing)"
+  echo "MaaS model - deploying with capacity: 1 (pay-per-token billing)"
 fi
 ```
 
-### If MODEL_FORMAT is NOT "Anthropic" — Standard CLI Deployment
+### If MODEL_FORMAT is NOT "Anthropic" - Standard CLI Deployment
 
 > 💡 **Note:** The Azure CLI supports all non-Anthropic model formats directly.
 
@@ -456,7 +456,7 @@ az cognitiveservices account deployment create `
 
 > 💡 **Note:** For non-OpenAI MaaS models (Meta-Llama, Mistral, Cohere, etc.), `$DEPLOY_CAPACITY` is `1` (set in capacity calculation above).
 
-### If MODEL_FORMAT is "Anthropic" — REST API Deployment with modelProviderData
+### If MODEL_FORMAT is "Anthropic" - REST API Deployment with modelProviderData
 
 The Azure CLI does not support `--model-provider-data`. You must use the ARM REST API directly.
 
@@ -486,7 +486,7 @@ Present the following list and ask the user to choose one:
 19. Other                   (API value: other)
 ```
 
-> ⚠️ **Do NOT pick a default industry or hardcode a value. Always ask the user.** This is required by Anthropic's terms of service. The industry list is static — there is no REST API that provides it.
+> ⚠️ **Do NOT pick a default industry or hardcode a value. Always ask the user.** This is required by Anthropic's terms of service. The industry list is static - there is no REST API that provides it.
 
 Store selection as `SELECTED_INDUSTRY` (use the API value, e.g., `technology`).
 

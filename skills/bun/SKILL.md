@@ -4,8 +4,8 @@ description: "Trigger: bun, Use when building, testing, and deploying JavaScript
 license: Apache-2.0
 metadata:
   author: unknown
+  adapter: LCubero
   version: 1.0
-  skills_sh_url: "https://www.skills.sh/site/bun.sh/bun"
 ---
 
 ## Activation Contract

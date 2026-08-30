@@ -1,6 +1,6 @@
 ---
 name: clerk-setup
-description: "Trigger: clerk-setup, Add Clerk authentication to any project by following the official quickstart. Preserve source workflow with portable agent instructions."
+description: "Trigger: add Clerk authentication, configure Clerk, follow a Clerk quickstart. Set up Clerk only for the selected project and framework."
 license: MIT
 metadata:
   author: clerk

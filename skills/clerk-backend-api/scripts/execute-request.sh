@@ -5,9 +5,9 @@
 # Usage: bash execute-request.sh [--admin] <METHOD> <PATH> [BODY]
 #
 # Scope enforcement:
-#   GET     — always allowed
-#   POST, PUT, PATCH — requires CLERK_BAPI_SCOPES="write" or --admin flag
-#   DELETE  — requires CLERK_BAPI_SCOPES="write,delete" or --admin flag
+#   GET     - always allowed
+#   POST, PUT, PATCH - requires CLERK_BAPI_SCOPES="write" or --admin flag
+#   DELETE  - requires CLERK_BAPI_SCOPES="write,delete" or --admin flag
 
 set -euo pipefail
 

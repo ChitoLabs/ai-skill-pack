@@ -5,7 +5,7 @@ license: MIT
 metadata:
   authors: Astro Team
   version: 0.0.1
-  author: astrolicious
+  author: midudev
   skills_sh_url: "https://www.skills.sh/astrolicious/agent-skills/astro"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/astro"
 ---
@@ -71,7 +71,7 @@ export default defineConfig({
 
 ### Creating a Basic Page
 
-Add a file to `src/pages/` — the filename becomes the route:
+Add a file to `src/pages/` - the filename becomes the route:
 
 ```astro
 ---

@@ -1,10 +1,11 @@
 ---
 name: content-strategy
-description: When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," "content marketing," "content roadmap," "what content should I create," "blog topics," "content pillars," or "I don't know what to write." Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social.
+description: "Trigger: plan content strategy, choose content topics, build an editorial calendar or topic cluster. Define what content to produce and why."
 license: Apache-2.0
 metadata:
   version: 2.0.0
   author: coreyhaines31
+  adapter: LCubero
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/content-strategy"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/content-strategy"
 ---
@@ -45,7 +46,7 @@ Gather this context (ask if not provided):
 
 ## Searchable vs Shareable
 
-Every piece of content must be searchable, shareable, or both. Prioritize in that order—search traffic is the foundation.
+Every piece of content must be searchable, shareable, or both. Prioritize in that order-search traffic is the foundation.
 
 **Searchable content** captures existing demand. Optimized for people actively looking for answers.
 
@@ -54,7 +55,7 @@ Every piece of content must be searchable, shareable, or both. Prioritize in tha
 ### When Writing Searchable Content
 
 - Target a specific keyword or question
-- Match search intent exactly—answer what the searcher wants
+- Match search intent exactly-answer what the searcher wants
 - Use clear titles that match search queries
 - Structure with headings that mirror search patterns
 - Place keywords in title, headings, first paragraph, URL

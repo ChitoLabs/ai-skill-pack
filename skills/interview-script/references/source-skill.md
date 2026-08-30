@@ -1,6 +1,6 @@
 ---
 name: interview-script
-description: Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.
+description: Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles - no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.
 license: Apache-2.0
 metadata:
   author: phuryn
@@ -11,11 +11,11 @@ metadata:
 
 ## Customer Interview Script
 
-Create a structured interview script that surfaces real insights, not just opinions. Follows "The Mom Test" principles — ask about their life, not your idea.
+Create a structured interview script that surfaces real insights, not just opinions. Follows "The Mom Test" principles - ask about their life, not your idea.
 
 ### Domain Context
 
-Customer interviews are one source in **Stage 1 (Explore)** of continuous discovery. Other sources: stakeholder interviews, usage analytics, data analytics, surveys, market trends, SEO/SEM analysis. The PM needs direct access to users, stakeholders, engineers, and designers — "without proxies." The **Product Trio** (PM + Designer + Engineer — Teresa Torres) should work together on discovery, not just the PM alone.
+Customer interviews are one source in **Stage 1 (Explore)** of continuous discovery. Other sources: stakeholder interviews, usage analytics, data analytics, surveys, market trends, SEO/SEM analysis. The PM needs direct access to users, stakeholders, engineers, and designers - "without proxies." The **Product Trio** (PM + Designer + Engineer - Teresa Torres) should work together on discovery, not just the PM alone.
 
 ### Context
 
@@ -66,19 +66,19 @@ If the user provides files (personas, hypothesis lists, product briefs, or previ
 
    ### Probing Techniques
    Use these when you hit an interesting thread:
-   - **"Tell me more about that"** — opens up any topic
-   - **"Why?"** (asked gently, 2-3 times) — gets to root causes
-   - **"Can you give me a specific example?"** — moves from opinions to facts
-   - **"What happened next?"** — follows the story
-   - **"How did that make you feel?"** — captures emotional intensity
+   - **"Tell me more about that"** - opens up any topic
+   - **"Why?"** (asked gently, 2-3 times) - gets to root causes
+   - **"Can you give me a specific example?"** - moves from opinions to facts
+   - **"What happened next?"** - follows the story
+   - **"How did that make you feel?"** - captures emotional intensity
 
    ### The Mom Test Rules
    - Ask about **their life**, not your idea
    - Ask about **the past**, not the future ("Would you use X?" is useless)
-   - **Talk less, listen more** — aim for 80/20 split
+   - **Talk less, listen more** - aim for 80/20 split
    - **Never pitch** during the interview
-   - Look for **strong emotions** — they signal real pain or delight
-   - **Compliments are noise** — "That sounds cool!" tells you nothing
+   - Look for **strong emotions** - they signal real pain or delight
+   - **Compliments are noise** - "That sounds cool!" tells you nothing
 
    ### Wrap-Up (3-5 min)
    - "Is there anything I didn't ask that you think is important?"

@@ -7,11 +7,11 @@ row is written with both endpoints as metadata values.
 
 This lane aggregates those edges two ways:
 
-- **By source node** — which attribute graph nodes are driving the most
+- **By source node** - which attribute graph nodes are driving the most
   updates overall. The canonical "why is my app thrashing?" view; a
   `UserDefaultObserver.send()` showing up with 11k outgoing edges is a
   feedback storm.
-- **By destination node** — which views/modifiers receive the most
+- **By destination node** - which views/modifiers receive the most
   invalidations, and from whom. Use this to trace a hot view back to the
   source that keeps poking it.
 
@@ -137,7 +137,7 @@ def fanin_for(
 
     Used when the agent has a suspect view from the `swiftui` lane and wants
     to know *who keeps invalidating it*. Does a full pass over the causes
-    schema each time — cheap enough at typical trace sizes.
+    schema each time - cheap enough at typical trace sizes.
     """
     if SCHEMA not in toc_schemas:
         return {"available": False, "matches": []}

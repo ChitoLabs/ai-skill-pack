@@ -4,6 +4,7 @@ description: "Trigger: next-best-practices. Preserve source workflow with portab
 license: Apache-2.0
 metadata:
   author: vercel-labs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/next-skills/next-best-practices"
   github_url: "https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-best-practices"

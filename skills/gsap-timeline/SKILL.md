@@ -1,9 +1,10 @@
 ---
 name: gsap-timeline
-description: "Trigger: gsap-timeline, Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Preserve source workflow with portable agent instructions."
+description: "Trigger: gsap-timeline, Official GSAP skill for timelines - gsap.timeline(), position parameter, nesting, playback. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: greensock
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-timeline"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-timeline"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `gsap-timeline` or the preserved source description: Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).
+Use this skill when the user request matches `gsap-timeline` or the preserved source description: Official GSAP skill for timelines - gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

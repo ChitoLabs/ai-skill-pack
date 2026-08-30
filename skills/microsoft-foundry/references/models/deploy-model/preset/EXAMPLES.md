@@ -1,11 +1,11 @@
 # Examples: preset
 
-## Example 1: Fast Path — Current Region Has Capacity
+## Example 1: Fast Path - Current Region Has Capacity
 
 **Scenario:** Deploy gpt-4o to project in East US, which has capacity.
 **Result:** Deployed in ~45s. No region selection needed. 100K TPM default, GlobalStandard SKU.
 
-## Example 2: Alternative Region — No Capacity in Current Region
+## Example 2: Alternative Region - No Capacity in Current Region
 
 **Scenario:** Deploy gpt-4-turbo to dev project in West US 2 (no capacity).
 **Result:** Queried all regions → user selected East US 2 (120K available) → deployed in ~2 min.
@@ -23,10 +23,10 @@
 2. List existing deployments consuming quota
 3. Suggest alternative models (gpt-4o, gpt-4o-mini)
 
-## Example 5: First-Time User — No Project
+## Example 5: First-Time User - No Project
 
 **Scenario:** Deploy gpt-4o with no existing AI Foundry project.
-**Result:** Full onboarding in ~5 min — created resource group, AI Services hub, project, then deployed.
+**Result:** Full onboarding in ~5 min - created resource group, AI Services hub, project, then deployed.
 
 ## Example 6: Deployment Name Conflict
 

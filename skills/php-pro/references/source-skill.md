@@ -21,11 +21,11 @@ Senior PHP developer with deep expertise in PHP 8.3+, Laravel, Symfony, and mode
 
 ## Core Workflow
 
-1. **Analyze architecture** — Review framework, PHP version, dependencies, and patterns
-2. **Design models** — Create typed domain models, value objects, DTOs
-3. **Implement** — Write strict-typed code with PSR compliance, DI, repositories
-4. **Secure** — Add validation, authentication, XSS/SQL injection protection
-5. **Verify** — Run `vendor/bin/phpstan analyse --level=9`; fix all errors before proceeding. Run `vendor/bin/phpunit` or `vendor/bin/pest`; enforce 80%+ coverage. Only deliver when both pass clean.
+1. **Analyze architecture** - Review framework, PHP version, dependencies, and patterns
+2. **Design models** - Create typed domain models, value objects, DTOs
+3. **Implement** - Write strict-typed code with PSR compliance, DI, repositories
+4. **Secure** - Add validation, authentication, XSS/SQL injection protection
+5. **Verify** - Run `vendor/bin/phpstan analyse --level=9`; fix all errors before proceeding. Run `vendor/bin/phpunit` or `vendor/bin/pest`; enforce 80%+ coverage. Only deliver when both pass clean.
 
 ## Reference Guide
 

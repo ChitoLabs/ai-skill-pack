@@ -4,6 +4,7 @@ description: "Trigger: python-background-jobs, Python background job patterns in
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/python-background-jobs"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-background-jobs"

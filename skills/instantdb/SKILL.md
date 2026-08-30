@@ -4,6 +4,7 @@ description: "Trigger: instantdb, Build complete, functional apps with InstantDB
 license: Apache-2.0
 metadata:
   author: instantdb
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/instantdb/skills/instantdb"
   github_url: "https://github.com/instantdb/skills/tree/HEAD/skills/instantdb"

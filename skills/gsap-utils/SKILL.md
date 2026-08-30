@@ -1,9 +1,10 @@
 ---
 name: gsap-utils
-description: "Trigger: gsap-utils, Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Preserve source workflow with portable agent instructions."
+description: "Trigger: gsap-utils, Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: greensock
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-utils"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-utils"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `gsap-utils` or the preserved source description: Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
+Use this skill when the user request matches `gsap-utils` or the preserved source description: Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

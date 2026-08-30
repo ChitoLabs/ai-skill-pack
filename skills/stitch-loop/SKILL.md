@@ -4,6 +4,7 @@ description: "Trigger: stitch-loop, Teaches agents to iteratively build websites
 license: Apache-2.0
 metadata:
   author: google-labs-code
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/google-labs-code/stitch-skills/stitch-loop"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/stitch-loop"

@@ -256,7 +256,7 @@ rails routes
 #### 10. `redirect_to :back` Deprecated
 
 **What Changed:**
-`redirect_to :back` is deprecated in Rails 5.0. It still works and emits a deprecation warning, but it is **removed outright in Rails 5.1** — fix all call sites now to avoid a runtime break on the next hop.
+`redirect_to :back` is deprecated in Rails 5.0. It still works and emits a deprecation warning, but it is **removed outright in Rails 5.1** - fix all call sites now to avoid a runtime break on the next hop.
 
 **Detection Pattern:**
 ```ruby
@@ -274,7 +274,7 @@ redirect_back(fallback_location: root_path)
 redirect_back(fallback_location: root_path, notice: 'Done!')
 ```
 
-`redirect_back` accepts a `fallback_location:` used when `HTTP_REFERER` is missing — without it, requests with no referer raise `ActionController::RedirectBackError`.
+`redirect_back` accepts a `fallback_location:` used when `HTTP_REFERER` is missing - without it, requests with no referer raise `ActionController::RedirectBackError`.
 
 ---
 

@@ -13,12 +13,12 @@
 | KGP (Kotlin Gradle Plugin)    | 2.0.0              | 2.3.0+              | 2.0.0 is minimum for KMP library plugin; 2.3.0+ has best compatibility                                                                                                                                                                                                           |
 | KGP (built-in Kotlin runtime) | 2.2.10             | 2.3.0+              | AGP 9.0 has runtime dependency on KGP 2.2.10; auto-upgrades if lower                                                                                                                                                                                                             |
 | KSP                           | 2.3.1              | 2.3.6               | KSP version is no longer tied to the Kotlin compiler version since 2.3.0. AGP 9.0 and built-in Kotlin support added in 2.3.1. KSP migrated away from the deprecated compilerOptions KGP API in 2.3.3; earlier versions may have compatibility problems with other Gradle plugins |
-| NDK                           | —                  | 28.2.13676358       | Default changed to r28c; specify explicitly if needed                                                                                                                                                                                                                            |
+| NDK                           | -                  | 28.2.13676358       | Default changed to r28c; specify explicitly if needed                                                                                                                                                                                                                            |
 | Android Studio                | Otter 3 (2025.2.3) | Latest stable       | First version with full AGP 9.0 + KMP library plugin IDE support                                                                                                                                                                                                                 |
-| IntelliJ IDEA                 | Not supported      | —                   | Does not support AGP 9.0 as of 2026.1, use Android Studio instead. Can still be used for non-Android KMP targets (JVM, iOS, JS/Wasm)                                                                                                                                             |
-| Max API Level                 | —                  | 36.1                | Highest supported API level in AGP 9.0                                                                                                                                                                                                                                           |
+| IntelliJ IDEA                 | Not supported      | -                   | Does not support AGP 9.0 as of 2026.1, use Android Studio instead. Can still be used for non-Android KMP targets (JVM, iOS, JS/Wasm)                                                                                                                                             |
+| Max API Level                 | -                  | 36.1                | Highest supported API level in AGP 9.0                                                                                                                                                                                                                                           |
 | Compose Multiplatform         | 1.9.3              | 1.10.0+             | AGP 9.0 support was added in 1.9.3                                                                                                                                                                                                                                               |
-| Compose Compiler Plugin       | 2.0.0              | Matches KGP version | Since KGP 2.0, use `org.jetbrains.kotlin.plugin.compose` — version is tied to KGP automatically                                                                                                                                                                                  |
+| Compose Compiler Plugin       | 2.0.0              | Matches KGP version | Since KGP 2.0, use `org.jetbrains.kotlin.plugin.compose` - version is tied to KGP automatically                                                                                                                                                                                  |
 | Kotlin Coroutines             | 1.8.0              | 1.10.0+             | 1.8.0+ for full K2 support                                                                                                                                                                                                                                                       |
 | Kotlin Serialization          | 1.6.0              | 1.8.0+              | 1.8.0+ for K2 compiler plugin support                                                                                                                                                                                                                                            |
 | Ktor                          | 2.3.0              | 3.0.0+              | 3.0.0 for best KMP library plugin compatibility                                                                                                                                                                                                                                  |
@@ -35,16 +35,16 @@
 - Built-in Kotlin compilation for `com.android.application` and `com.android.library` (no separate `kotlin-android` plugin needed).
 - Removes support for `com.android.application` + `org.jetbrains.kotlin.multiplatform` in the same module.
 - Single-variant model for KMP libraries (no build types/flavors).
-- Runtime dependency on KGP 2.2.10 — projects using lower KGP versions are auto-upgraded.
+- Runtime dependency on KGP 2.2.10 - projects using lower KGP versions are auto-upgraded.
 - If the project uses KSP, upgrade to 2.3.1+ for AGP 9.0 support.
-- New DSL interfaces only — `BaseExtension` and legacy types removed.
-- `org.jetbrains.kotlin.kapt` incompatible — use KSP or `com.android.legacy-kapt`.
+- New DSL interfaces only - `BaseExtension` and legacy types removed.
+- `org.jetbrains.kotlin.kapt` incompatible - use KSP or `com.android.legacy-kapt`.
 - Java source/target default changed from Java 8 to Java 11.
 - R class is compile-time non-final in application modules by default.
 - `targetSdk` defaults to `compileSdk` when not set (was `minSdk`).
 - NDK default changed to r28c.
 - Requires JDK 17+, Gradle 9.1.0+, SDK Build Tools 36.0.0.
-- Many Gradle property defaults changed — see SKILL.md "Gradle Properties Default Changes".
+- Many Gradle property defaults changed - see SKILL.md "Gradle Properties Default Changes".
 - Removed: embedded Wear OS app support, density split APKs, legacy variant APIs.
 - New: IDE support for test fixtures, fused library plugin (preview).
 

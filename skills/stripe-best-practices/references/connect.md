@@ -32,17 +32,17 @@ Always describe accounts in terms of their responsibility settings, dashboard ac
 
 ## Charge types
 
-Choose one charge type per integration — don’t mix them. For most platforms, start with destination charges:
+Choose one charge type per integration - don’t mix them. For most platforms, start with destination charges:
 
-- **Destination charges** — Use when the platform accepts liability for negative balances. Funds route to the connected account via `transfer_data.destination`.
-- **Direct charges** — Use when the platform wants Stripe to take risk on the connected account. The charge is created on the connected account directly.
+- **Destination charges** - Use when the platform accepts liability for negative balances. Funds route to the connected account via `transfer_data.destination`.
+- **Direct charges** - Use when the platform wants Stripe to take risk on the connected account. The charge is created on the connected account directly.
 
 Use `on_behalf_of` to control the merchant of record, but only after reading [how charges work in Connect](https://docs.stripe.com/connect/charges.md).
 
-**Traps to avoid:** Don’t use the Charges API for Connect fund flows — use PaymentIntents or Checkout Sessions with `transfer_data` or `on_behalf_of`. Don’t mix charge types within a single integration.
+**Traps to avoid:** Don’t use the Charges API for Connect fund flows - use PaymentIntents or Checkout Sessions with `transfer_data` or `on_behalf_of`. Don’t mix charge types within a single integration.
 
 ## Integration guides
 
-- [SaaS platforms and marketplaces guide](https://docs.stripe.com/connect/saas-platforms-and-marketplaces.md) — Choosing the right integration shape.
-- [Interactive platform guide](https://docs.stripe.com/connect/interactive-platform-guide.md) — Step-by-step platform builder.
-- [Design an integration](https://docs.stripe.com/connect/design-an-integration.md) — Detailed risk and responsibility decisions.
+- [SaaS platforms and marketplaces guide](https://docs.stripe.com/connect/saas-platforms-and-marketplaces.md) - Choosing the right integration shape.
+- [Interactive platform guide](https://docs.stripe.com/connect/interactive-platform-guide.md) - Step-by-step platform builder.
+- [Design an integration](https://docs.stripe.com/connect/design-an-integration.md) - Detailed risk and responsibility decisions.

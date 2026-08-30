@@ -1,9 +1,10 @@
 ---
 name: us-business-english
-description: "Trigger: us-business-english, American business English writing style for professional communications \u2014 direct, action-oriented, EN-US spelling (color, organize, center). Preserve source workflow with portable agent instructions."
+description: "Trigger: us-business-english, American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
   author: jezweb
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/jezweb/claude-skills/us-business-english"
   github_url: "https://github.com/jezweb/claude-skills/tree/HEAD/plugins/writing/skills/us-business-english"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `us-business-english` or the preserved source description: American business English writing style for professional communications \u2014 direct, action-oriented, EN-US spelling (color, organize, center). Use whenever the user is writing for an American audience: emails, chat messages, proposals, client communications, blog posts, web copy, or any business writing. Apply to drafting, editing, and tone-checking professional text.
+Use this skill when the user request matches `us-business-english` or the preserved source description: American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center). Use whenever the user is writing for an American audience: emails, chat messages, proposals, client communications, blog posts, web copy, or any business writing. Apply to drafting, editing, and tone-checking professional text.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

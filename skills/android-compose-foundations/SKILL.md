@@ -3,7 +3,8 @@ name: android-compose-foundations
 description: "Trigger: android-compose-foundations, Build Android UI with Jetpack Compose foundations, layouts, modifiers, theming, and stable component structure. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: krutikJain
+  author: midudev
+  adapter: LCubero
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-compose-foundations"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-compose-foundations"

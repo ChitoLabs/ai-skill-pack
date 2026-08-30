@@ -4,6 +4,7 @@ description: "Trigger: rust-mcp-server-generator, Generate a complete Rust Model
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/rust-mcp-server-generator"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/rust-mcp-server-generator"

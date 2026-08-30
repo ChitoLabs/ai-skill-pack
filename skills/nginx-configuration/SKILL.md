@@ -4,6 +4,7 @@ description: "Trigger: nginx-configuration, Configure Nginx web server for high-
 license: Apache-2.0
 metadata:
   author: aj-geddes
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/aj-geddes/useful-ai-prompts/nginx-configuration"
   github_url: "https://github.com/aj-geddes/useful-ai-prompts/tree/HEAD/skills/nginx-configuration"

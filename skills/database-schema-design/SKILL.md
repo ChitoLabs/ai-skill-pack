@@ -4,6 +4,7 @@ description: "Trigger: database-schema-design, Design robust, scalable database 
 license: MIT
 metadata:
   author: softaworks
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/softaworks/agent-toolkit/database-schema-designer"
   github_url: "https://github.com/softaworks/agent-toolkit/tree/HEAD/dist/plugins/database-schema-designer/skills/database-schema-designer"

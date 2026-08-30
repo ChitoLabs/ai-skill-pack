@@ -16,13 +16,13 @@ Access real-time web information via Bing Search. Unlike the [Web Search tool](t
 - A [Grounding with Bing Search resource](https://portal.azure.com/#create/Microsoft.BingGroundingSearch) in Azure portal
 - `Contributor` or `Owner` role at subscription/RG level to create Bing resource and get keys
 - `Azure AI Project Manager` role on the project to create a connection
-- A project connection configured with the Bing resource key — see [connections](../../../project/connections.md)
+- A project connection configured with the Bing resource key - see [connections](../../../project/connections.md)
 
 ## Setup
 
 1. Register the Bing provider: `az provider register --namespace 'Microsoft.Bing'`
 2. Create a Grounding with Bing Search resource in the Azure portal
-3. Create a project connection with the Bing resource key — see [connections](../../../project/connections.md)
+3. Create a project connection with the Bing resource key - see [connections](../../../project/connections.md)
 4. Set `BING_PROJECT_CONNECTION_NAME` environment variable
 
 ## Important Disclosures
@@ -30,7 +30,7 @@ Access real-time web information via Bing Search. Unlike the [Web Search tool](t
 - Bing data flows **outside Azure compliance boundary**
 - Review [Grounding with Bing terms of use](https://www.microsoft.com/bing/apis/grounding-legal-enterprise)
 - Not supported with VPN/Private Endpoints
-- Usage incurs costs — see [pricing](https://www.microsoft.com/bing/apis/grounding-pricing)
+- Usage incurs costs - see [pricing](https://www.microsoft.com/bing/apis/grounding-pricing)
 
 ## Troubleshooting
 

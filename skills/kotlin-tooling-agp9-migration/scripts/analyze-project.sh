@@ -124,7 +124,7 @@ for BUILD_FILE in $BUILD_FILES; do
     [ "$HAS_KMP" = "yes" ] && echo "    - kotlin.multiplatform"
     [ "$HAS_KOTLIN_ANDROID" = "yes" ] && echo "    - kotlin.android"
     [ "$HAS_COMPOSE" = "yes" ] && echo "    - org.jetbrains.compose"
-    [ "$HAS_APPLY_FALSE" = "yes" ] && echo "    - (declarations with apply false — root buildscript)"
+    [ "$HAS_APPLY_FALSE" = "yes" ] && echo "    - (declarations with apply false - root buildscript)"
 
     # Check for android {} block
     HAS_ANDROID_BLOCK="no"

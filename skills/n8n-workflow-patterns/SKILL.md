@@ -4,6 +4,7 @@ description: "Trigger: n8n-workflow-patterns, Proven workflow architectural patt
 license: Apache-2.0
 metadata:
   author: czlonkowski
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-workflow-patterns"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-workflow-patterns"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `n8n-workflow-patterns` or the preserved source description: Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services — even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
+Use this skill when the user request matches `n8n-workflow-patterns` or the preserved source description: Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services - even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

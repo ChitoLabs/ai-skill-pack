@@ -45,7 +45,7 @@ az webapp log deployment show -n APP -g RG --deployment-id DEPLOY_ID
 az webapp log tail -n APP -g RG
 ```
 
-**KQL — Failed deployments:**
+**KQL - Failed deployments:**
 ```kql
 // Replace <app-service-resource-id> with the full resource ID, for example:
 // /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Web/sites/<app-name>
@@ -78,7 +78,7 @@ az monitor activity-log list -g RG --resource-id APP_RESOURCE_ID \
 az webapp log download -n APP -g RG --log-file logs.zip
 ```
 
-**KQL — App crashes and errors:**
+**KQL - App crashes and errors:**
 ```kql
 AppServiceConsoleLogs
 | where TimeGenerated > ago(1h)
@@ -113,7 +113,7 @@ az monitor metrics list --resource APP_RESOURCE_ID \
 az webapp log config -n APP -g RG --failed-request-tracing true
 ```
 
-**KQL — Slow requests with dependency analysis:**
+**KQL - Slow requests with dependency analysis:**
 ```kql
 AppServiceHTTPLogs
 | where TimeGenerated > ago(1h)
@@ -123,7 +123,7 @@ AppServiceHTTPLogs
 | take 20
 ```
 
-**Auto-Heal — Automatic mitigation:**
+**Auto-Heal - Automatic mitigation:**
 ```bash
 # Configure auto-heal to recycle on slow requests
 az webapp config set -n APP -g RG \
@@ -168,7 +168,7 @@ az webapp config ssl show --certificate-name CERT -g RG
 | `mcp_azure_mcp_monitor` | `monitor_resource_log_query` | Run KQL against Log Analytics |
 | `mcp_azure_mcp_resourcehealth` | `get` | Check platform-level health status |
 
-> 💡 **Tip:** Start with `mcp_azure_mcp_appservice` (`diagnose`) — it automatically runs relevant detectors and surfaces the most likely root cause before you dig into logs manually.
+> 💡 **Tip:** Start with `mcp_azure_mcp_appservice` (`diagnose`) - it automatically runs relevant detectors and surfaces the most likely root cause before you dig into logs manually.
 
 ---
 

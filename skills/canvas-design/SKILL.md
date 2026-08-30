@@ -4,6 +4,7 @@ description: "Trigger: canvas design, poster, static art, visual philosophy. Cre
 license: Complete terms in references/LICENSE.txt
 metadata:
   author: anthropics
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: https://www.skills.sh/anthropics/skills/canvas-design
   github_url: https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design

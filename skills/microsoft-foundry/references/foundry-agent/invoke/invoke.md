@@ -44,9 +44,9 @@ Hosted agents support two invocation protocols declared at deployment time.
 | `responses` | `1.0.0` | `.../agents/{agentName}/endpoint/protocols/openai/responses` | Conversational agents, OpenAI-compatible |
 | `invocations` | `1.0.0` | `.../agents/{agentName}/endpoint/protocols/invocations` | Custom payloads, protocol bridges, webhook callers |
 
-Key difference: `responses` takes a natural language `inputText` message with platform-managed history. `invocations` is **bytes in, bytes out** — the request body is forwarded as-is to the container and the raw response is returned. The developer defines the schema; the platform is pure pass-through. See [Invocations Protocol Guide](references/invocations-protocol.md) for I/O details, schema discovery, and examples.
+Key difference: `responses` takes a natural language `inputText` message with platform-managed history. `invocations` is **bytes in, bytes out** - the request body is forwarded as-is to the container and the raw response is returned. The developer defines the schema; the platform is pure pass-through. See [Invocations Protocol Guide](references/invocations-protocol.md) for I/O details, schema discovery, and examples.
 
-> ⚠️ **Critical for invocations:** `inputText` is forwarded as the raw HTTP request body. The agent developer defines what the container accepts. **Do not guess** — fetch the agent's OpenAPI spec or inspect its source code first.
+> ⚠️ **Critical for invocations:** `inputText` is forwarded as the raw HTTP request body. The agent developer defines what the container accepts. **Do not guess** - fetch the agent's OpenAPI spec or inspect its source code first.
 
 > 💡 **Tip:** The `agent_invoke` MCP tool supports both protocols. Set `protocol: 'invocations'` when targeting an invocations-protocol agent.
 
@@ -60,7 +60,7 @@ Use `agent_get` to verify the agent exists. For hosted agents, also verify the t
 
 For hosted agents, create a session before invoking using `session_create` with `projectEndpoint` and `agentName`. Optionally provide a `sessionId` (must match `^[A-Za-z0-9_-]{8,128}$`). Store the returned `sessionId` for subsequent calls.
 
-> ⚠️ Skip this step for prompt agents — they do not use sessions.
+> ⚠️ Skip this step for prompt agents - they do not use sessions.
 
 For full session lifecycle details, see [Session Management](references/session-management.md).
 
@@ -72,7 +72,7 @@ Use the project endpoint and agent name from the project context. Use `agent_inv
 
 **Responses protocol** (default): `inputText` is a natural language message string. Multi-turn via `conversationId`.
 
-**Invocations protocol**: Set `protocol: 'invocations'`. This is **bytes in, bytes out** — `inputText` is forwarded as the raw HTTP request body to the container. The developer defines the expected schema.
+**Invocations protocol**: Set `protocol: 'invocations'`. This is **bytes in, bytes out** - `inputText` is forwarded as the raw HTTP request body to the container. The developer defines the expected schema.
 
 > ⚠️ **Do not guess the invocations request body.** To discover the expected schema:
 > 1. **Fetch the OpenAPI spec**: `GET {projectEndpoint}/agents/{agentName}/endpoint/protocols/invocations/docs/openapi.json` (if the developer registered one)
@@ -91,7 +91,7 @@ See [Invocations Protocol Guide](references/invocations-protocol.md) for full de
 
 **Responses protocol** → Pass `conversationId` from previous response to continue the thread. Platform manages history.
 
-**Invocations protocol** → Reuse same `sessionId`; conversation state is agent-managed via `$HOME`. Do **not** pass `conversationId` — it has no effect for invocations.
+**Invocations protocol** → Reuse same `sessionId`; conversation state is agent-managed via `$HOME`. Do **not** pass `conversationId` - it has no effect for invocations.
 
 ### Step 5: File Operations (Hosted Agents)
 

@@ -461,7 +461,7 @@ If the shared module was renamed from `composeApp` to `shared`:
    ./gradlew :shared:embedAndSignAppleFrameworkForXcode
    ```
 
-3. **Update Swift imports** — in all `.swift` files, change the framework import to match `baseName`:
+3. **Update Swift imports** - in all `.swift` files, change the framework import to match `baseName`:
    ```swift
    // Old
    import ComposeApp

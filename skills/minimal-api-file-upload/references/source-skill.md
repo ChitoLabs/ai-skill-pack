@@ -3,7 +3,7 @@ name: minimal-api-file-upload
 description: File upload endpoints in ASP.NET minimal APIs (.NET 8+)
 license: MIT
 metadata:
-  author: dotnet
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/dotnet/skills/minimal-api-file-upload"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/minimal-api-file-upload"
@@ -31,7 +31,7 @@ metadata:
 
 ## Workflow
 
-### Step 1: CRITICAL — Understand IFormFile Binding in Minimal APIs
+### Step 1: CRITICAL - Understand IFormFile Binding in Minimal APIs
 
 ```csharp
 // In .NET 8+ minimal APIs, IFormFile binds automatically from multipart/form-data
@@ -54,18 +54,18 @@ app.MapPost("/upload-multiple", (IFormFileCollection files) =>
 });
 ```
 
-### Step 2: CRITICAL — File Size Limits Are Separate from Request Size Limits
+### Step 2: CRITICAL - File Size Limits Are Separate from Request Size Limits
 
 ```csharp
 // CRITICAL: There are TWO different size limits and you need to configure BOTH
 
-// 1. Request body size limit (Kestrel level) — default is 30MB
+// 1. Request body size limit (Kestrel level) - default is 30MB
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.Limits.MaxRequestBodySize = 10 * 1024 * 1024; // 10 MB
 });
 
-// 2. Form options — multipart body length limit — default is 128MB
+// 2. Form options - multipart body length limit - default is 128MB
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
@@ -92,7 +92,7 @@ app.MapPost("/upload-unlimited", [DisableRequestSizeLimit] async (HttpContext co
 });
 ```
 
-### Step 3: CRITICAL — Anti-Forgery Auto-Validates Form Uploads in .NET 8+
+### Step 3: CRITICAL - Anti-Forgery Auto-Validates Form Uploads in .NET 8+
 
 ```csharp
 // CRITICAL: In .NET 8+ with UseAntiforgery(), ALL form-bound endpoints
@@ -120,13 +120,13 @@ app.MapPost("/api/upload", (IFormFile file) => Results.Ok(file.FileName))
 // For cookie-authenticated endpoints, include a valid antiforgery token instead.
 ```
 
-### Step 4: CRITICAL — Validate File Content, Not Just Extension
+### Step 4: CRITICAL - Validate File Content, Not Just Extension
 
 ```csharp
 app.MapPost("/upload", async (IFormFile file) =>
 {
     // CRITICAL: Check content type AND file signature (magic bytes)
-    // NEVER trust file extension alone — it can be spoofed
+    // NEVER trust file extension alone - it can be spoofed
 
     // Allow only JPEG/PNG by default. To support more (e.g., GIF),
     // add the MIME type here AND validate its magic bytes below.
@@ -155,7 +155,7 @@ app.MapPost("/upload", async (IFormFile file) =>
     if (!string.Equals(file.ContentType, detectedContentType, StringComparison.OrdinalIgnoreCase))
         return Results.BadRequest("File content type does not match the declared ContentType header.");
 
-    // CRITICAL: Never use the user-provided filename directly for the save path — it can
+    // CRITICAL: Never use the user-provided filename directly for the save path - it can
     // contain path traversal characters (e.g., "../../../etc/passwd").
     // Generate a safe filename; derive the extension from validated content, not user input.
     var extension = detectedContentType == "image/jpeg" ? ".jpg" : ".png";
@@ -172,13 +172,13 @@ app.MapPost("/upload", async (IFormFile file) =>
 });
 ```
 
-### Step 5: CRITICAL — Streaming Large Files Without Buffering
+### Step 5: CRITICAL - Streaming Large Files Without Buffering
 
 ```csharp
 // CRITICAL: IFormFile relies on multipart form parsing that buffers content in memory
 // (up to a threshold) then spills to temp files on disk. For very large uploads,
 // this overhead is unnecessary if you can process the data in chunks.
-// Use MultipartReader to stream directly — e.g., to a final storage location —
+// Use MultipartReader to stream directly - e.g., to a final storage location -
 // without buffering the entire file first.
 
 app.MapPost("/upload-stream",
@@ -215,7 +215,7 @@ app.MapPost("/upload-stream",
             var sanitizedFileName = Path.GetFileName(originalFileName.Trim('"'));
             var safeFile = $"{Guid.NewGuid()}";
 
-            // CRITICAL: Stream directly to disk — avoids buffering in memory
+            // CRITICAL: Stream directly to disk - avoids buffering in memory
             Directory.CreateDirectory("uploads");
             using var fileStream = File.Create(Path.Combine("uploads", safeFile));
             await section.Body.CopyToAsync(fileStream);

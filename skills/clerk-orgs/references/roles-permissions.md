@@ -6,10 +6,10 @@ Clerk Organizations use Role-Based Access Control (RBAC). Every member has one R
 
 | Role | Default meaning |
 |------|-----------------|
-| `org:admin` | Full access — holds all System Permissions, can manage the Organization and its memberships |
+| `org:admin` | Full access - holds all System Permissions, can manage the Organization and its memberships |
 | `org:member` | Read-only members. By default has only `org:sys_memberships:read` and `org:sys_billing:read` |
 
-Both slugs are automatically created when Organizations are enabled. You cannot delete a default Role if it's set as the org's **Creator** or **Default** Role — reassign to another Role first.
+Both slugs are automatically created when Organizations are enabled. You cannot delete a default Role if it's set as the org's **Creator** or **Default** Role - reassign to another Role first.
 
 ## System Permissions (canonical catalog)
 
@@ -38,8 +38,8 @@ If you reassign the Creator Role, ensure the replacement Role has these three at
 
 Up to 10 custom Roles per instance. Create via [Dashboard → Roles & Permissions](https://dashboard.clerk.com/last-active?path=organizations-settings/roles) → **Add role**, or via `clerk api -X POST /v1/organization_roles` with body `{"name":"Billing Manager","key":"org:billing","description":"..."}`. The key follows `org:<role>` format. Examples:
 
-- `org:billing` — carries `org:sys_billing:manage`
-- `org:reports_viewer` — carries your custom `org:reports:view`
+- `org:billing` - carries `org:sys_billing:manage`
+- `org:reports_viewer` - carries your custom `org:reports:view`
 
 ## Custom Permissions
 
@@ -49,7 +49,7 @@ Create via [Dashboard → Roles & Permissions](https://dashboard.clerk.com/last-
 
 ## Role Sets
 
-Roles are surfaced to Organizations through **Role Sets** — this controls which Roles can be assigned within a given Organization. Each Organization is assigned exactly one Role Set.
+Roles are surfaced to Organizations through **Role Sets** - this controls which Roles can be assigned within a given Organization. Each Organization is assigned exactly one Role Set.
 
 Default behavior: all orgs share the default Role Set. If you need per-org role variations (e.g. one customer org has its own `org:support` role), create a second Role Set and assign it.
 
@@ -59,8 +59,8 @@ When Clerk Billing is enabled, a custom Permission `org:<feature>:<action>` only
 
 Example: user has role `org:admin` with Permission `org:posts:edit`. `has({ permission: 'org:posts:edit' })` returns:
 
-- `false` — if the active Plan does not include the `posts` Feature
-- `true` — if the active Plan includes the `posts` Feature
+- `false` - if the active Plan does not include the `posts` Feature
+- `true` - if the active Plan includes the `posts` Feature
 
 This applies regardless of role assignment. See `clerk-billing` skill for the full feature-vs-plan model.
 
@@ -115,6 +115,6 @@ import { Show } from '@clerk/nextjs'
 
 - **Never invent permission slugs.** If you don't see it in the System Permissions catalog above or you haven't created it as a custom Permission (Dashboard or BAPI), it doesn't exist.
 - **`org:` prefix is mandatory** for all org-scoped permissions.
-- **Always check `isLoaded` before trusting `has` on the client.** On first render `has` can be `undefined` — use optional chaining (`has?.()`) or guard on `isLoaded`.
+- **Always check `isLoaded` before trusting `has` on the client.** On first render `has` can be `undefined` - use optional chaining (`has?.()`) or guard on `isLoaded`.
 - **Case-sensitive.** `org:Admin` is not `org:admin`.
 - **Role changes require session refresh.** If you change a user's role and `has()` still returns the old value, the session token is stale. `await clerk.session?.reload()` on the client, or navigate to force a new session.

@@ -4,6 +4,7 @@ description: "Trigger: remotion-best-practices, Best practices for Remotion - Vi
 license: Apache-2.0
 metadata:
   author: remotion-dev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/remotion-dev/skills/remotion-best-practices"
   github_url: "https://github.com/remotion-dev/skills/tree/HEAD/skills/remotion"

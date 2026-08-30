@@ -1,4 +1,4 @@
-# Step 1 — Auto-Setup Evaluators & Dataset
+# Step 1 - Auto-Setup Evaluators & Dataset
 
 > **This step runs automatically after deployment.** If the agent was deployed via the [deploy skill](../../deploy/deploy.md), `.foundry` cache and metadata may already be configured. Check `.foundry/evaluators/`, `.foundry/datasets/`, and the selected metadata file under the selected agent root before re-creating them.
 >

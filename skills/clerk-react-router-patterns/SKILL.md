@@ -1,6 +1,6 @@
 ---
 name: clerk-react-router-patterns
-description: "Trigger: clerk-react-router-patterns, 'React Router v7 patterns with Clerk — rootAuthLoader, getAuth in loaders,. Preserve source workflow with portable agent instructions."
+description: "Trigger: clerk-react-router-patterns, 'React Router v7 patterns with Clerk - rootAuthLoader, getAuth in loaders,. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: clerk
@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `clerk-react-router-patterns` or the preserved source description: 'React Router v7 patterns with Clerk — rootAuthLoader, getAuth in loaders,
+Use this skill when the user request matches `clerk-react-router-patterns` or the preserved source description: 'React Router v7 patterns with Clerk - rootAuthLoader, getAuth in loaders,
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

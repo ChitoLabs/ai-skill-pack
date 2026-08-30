@@ -4,6 +4,7 @@ description: "Trigger: gemini-api-dev. Preserve source workflow with portable ag
 license: Apache-2.0
 metadata:
   author: google-gemini
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/google-gemini/gemini-skills/gemini-api-dev"
   github_url: "https://github.com/google-gemini/gemini-skills/tree/HEAD/skills/gemini-api-dev"

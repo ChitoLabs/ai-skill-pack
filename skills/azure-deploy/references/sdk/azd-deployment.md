@@ -1,4 +1,4 @@
-# Azure Developer CLI — Quick Reference
+# Azure Developer CLI - Quick Reference
 
 > Condensed from **azd-deployment**. Full patterns (Bicep modules,
 > hooks, RBAC post-provision, service discovery, idempotent deploys)
@@ -15,8 +15,8 @@ azd up    # provision + build + deploy
 ```
 
 ## Best Practices
-- Always use remoteBuild: true — local builds fail on ARM Macs deploying to AMD64
-- Bicep outputs auto-populate .azure/<env>/.env — don't manually edit
-- Use azd env set for secrets — not main.parameters.json defaults
+- Always use remoteBuild: true - local builds fail on ARM Macs deploying to AMD64
+- Bicep outputs auto-populate .azure/<env>/.env - don't manually edit
+- Use azd env set for secrets - not main.parameters.json defaults
 - Service tags (azd-service-name) are required for azd to find Container Apps
-- Use `|| true` in hooks — prevent RBAC "already exists" errors from failing deploy
+- Use `|| true` in hooks - prevent RBAC "already exists" errors from failing deploy

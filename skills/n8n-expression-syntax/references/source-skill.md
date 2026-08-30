@@ -1,6 +1,6 @@
 ---
 name: n8n-expression-syntax
-description: "Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes \u2014 expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors."
+description: "Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes - expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors."
 license: Apache-2.0
 metadata:
   author: czlonkowski

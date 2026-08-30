@@ -4,6 +4,7 @@ description: "Trigger: nano-banana-2, Generate images with Google Gemini 3.1 Fla
 license: Apache-2.0
 metadata:
   author: inference-sh-skills
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/nano-banana-2"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/image/nano-banana-2"

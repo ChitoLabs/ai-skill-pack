@@ -40,7 +40,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "config/application.rb"
-      explanation: "FILE MARKER (manual review required): Rails 4.2 still suppresses exceptions in after_commit/after_rollback callbacks but emits a deprecation warning. The application file should opt-in to raising (the Rails 5.0+ default). Grep cannot detect absence of a setting, so this pattern flags config/application.rb itself — open it and verify the setting is present"
+      explanation: "FILE MARKER (manual review required): Rails 4.2 still suppresses exceptions in after_commit/after_rollback callbacks but emits a deprecation warning. The application file should opt-in to raising (the Rails 5.0+ default). Grep cannot detect absence of a setting, so this pattern flags config/application.rb itself - open it and verify the setting is present"
       fix: "If config.active_record.raise_in_transactional_callbacks is NOT present in config/application.rb, add: config.active_record.raise_in_transactional_callbacks = true. If it is already set to true, no action needed"
       variable_name: "TRANSACTIONAL_CALLBACKS"
 
@@ -85,7 +85,7 @@ upgrade_findings:
       search_paths:
         - "app/"
         - "lib/"
-      explanation: "Rails 4.2 deprecates passing AR objects where an id is expected. Manual review needed — numeric ids and expressions ending in .id are already correct and excluded"
+      explanation: "Rails 4.2 deprecates passing AR objects where an id is expected. Manual review needed - numeric ids and expressions ending in .id are already correct and excluded"
       fix: "Pass .id explicitly when the argument is an AR object (e.g., Comment.find(comment.id) instead of Comment.find(comment))"
       variable_name: "FIND_WITH_OBJECT"
 
@@ -105,7 +105,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "config/environments/test.rb"
-      explanation: "FILE MARKER (manual review required): Rails 4.2 emits a deprecation warning when config.active_support.test_order is not explicitly set. Grep cannot detect absence of a setting, so this pattern flags the config file itself — open config/environments/test.rb and verify the setting is present"
+      explanation: "FILE MARKER (manual review required): Rails 4.2 emits a deprecation warning when config.active_support.test_order is not explicitly set. Grep cannot detect absence of a setting, so this pattern flags the config file itself - open config/environments/test.rb and verify the setting is present"
       fix: "If config.active_support.test_order is NOT present in config/environments/test.rb, add: config.active_support.test_order = :random (or :sorted to preserve 4.1 behavior)"
       variable_name: "TEST_ORDER"
 

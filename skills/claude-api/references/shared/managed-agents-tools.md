@@ -1,4 +1,4 @@
-# Managed Agents — Tools & Skills
+# Managed Agents - Tools & Skills
 
 ## Tools
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | **Prebuilt Claude Agent tools** (`agent_toolset_20260401`) | Anthropic, on the session's container | File ops, bash, web search, etc. Enable all at once or configure individually with `enabled: true/false`. |
 | **MCP tools** (`mcp_toolset`) | Anthropic, on the session's container | Capabilities exposed by connected MCP servers. Grant access per-server via the toolset. |
-| **Custom tools** | **You** — your application handles the call and returns results | Agent emits a `agent.custom_tool_use` event, session goes `idle`, you send back a `user.custom_tool_result` event. |
+| **Custom tools** | **You** - your application handles the call and returns results | Agent emits a `agent.custom_tool_use` event, session goes `idle`, you send back a `user.custom_tool_result` event. |
 
 **Recommendation:** Enable all prebuilt tools via `agent_toolset_20260401`, then disable individually as needed.
 
@@ -121,7 +121,7 @@ Custom tools are executed by **your application**, not Anthropic. The flow:
 4. You send back a `user.custom_tool_result` event with the output
 5. Session resumes `running`
 
-No permission policy needed — you're the one executing.
+No permission policy needed - you're the one executing.
 
 ```json
 {
@@ -146,17 +146,17 @@ No permission policy needed — you're the one executing.
 
 MCP (Model Context Protocol) servers expose standardized third-party capabilities (e.g. Asana, GitHub, Linear). **Configuration is split across agent and vault:**
 
-1. **Agent creation** declares which servers to connect to (`type`, `name`, `url` — no auth). The agent's `mcp_servers` array has no auth field.
+1. **Agent creation** declares which servers to connect to (`type`, `name`, `url` - no auth). The agent's `mcp_servers` array has no auth field.
 2. **Vault** stores the OAuth credentials. Attach via `vault_ids` on session create.
 
 This keeps secrets out of reusable agent definitions. Each vault credential is tied to one MCP server URL; Anthropic matches credentials to servers by URL.
 
-**Agent side — declare servers (no auth):**
+**Agent side - declare servers (no auth):**
 
 | Field | Required | Description |
 |---|---|---|
 | `type` | ✅ | `"url"` |
-| `name` | ✅ | Unique name — referenced by `mcp_toolset.mcp_server_name` |
+| `name` | ✅ | Unique name - referenced by `mcp_toolset.mcp_server_name` |
 | `url` | ✅ | The MCP server's endpoint URL (Streamable HTTP transport) |
 
 ```json
@@ -170,7 +170,7 @@ This keeps secrets out of reusable agent definitions. Each vault credential is t
 }
 ```
 
-**Session side — attach vault:**
+**Session side - attach vault:**
 
 ```json
 {
@@ -184,30 +184,30 @@ This keeps secrets out of reusable agent definitions. Each vault credential is t
 
 > ⚠️ **MCP auth tokens ≠ REST API tokens.** Hosted MCP servers (`mcp.notion.com`, `mcp.linear.app`, etc.) typically require **OAuth bearer tokens**, not the service's native API keys. A Notion `ntn_` integration token authenticates against Notion's REST API but will **not** work as a vault credential for the Notion MCP server. These are different auth systems.
 
-### Vaults — the MCP credential store
+### Vaults - the MCP credential store
 
 **Vaults** store OAuth credentials (access token + refresh token) that Anthropic auto-refreshes on your behalf via standard OAuth 2.0 `refresh_token` grant. This is the only way to authenticate MCP servers in the launch SDK.
 
 #### Credentials and the sandbox
 
-Vaults store credentials; those credentials **never enter the sandbox**. This is a deliberate security boundary — code running in the sandbox (including anything the agent writes) cannot read or exfiltrate a vaulted credential, even under prompt injection. Instead, credentials are injected by Anthropic-side proxies **after** a request leaves the sandbox:
+Vaults store credentials; those credentials **never enter the sandbox**. This is a deliberate security boundary - code running in the sandbox (including anything the agent writes) cannot read or exfiltrate a vaulted credential, even under prompt injection. Instead, credentials are injected by Anthropic-side proxies **after** a request leaves the sandbox:
 
 - **MCP tool calls** are routed through an Anthropic-side proxy that fetches the credential from the vault and adds it to the outbound request.
 - **Git operations on attached GitHub repositories** (`git pull`, `git push`, GitHub REST calls) are routed through a git proxy that injects the `github_repository` resource's `authorization_token` the same way.
 
 **Not yet supported:** running other authenticated CLIs (e.g. `aws`, `gcloud`, `stripe`) directly inside the sandbox. There is currently no way to set container environment variables or expose vault credentials to arbitrary processes. If you need one of these today:
 
-- **Prefer an MCP server** for that service if one exists — it gets the same vault-backed injection.
+- **Prefer an MCP server** for that service if one exists - it gets the same vault-backed injection.
 - **Otherwise, register a custom tool:** the agent emits `agent.custom_tool_use`, your orchestrator (which already holds the credential) executes the call and returns `user.custom_tool_result` over the same authenticated event stream. No public endpoint is exposed; the sandbox never sees the secret. See `shared/managed-agents-client-patterns.md` → Pattern 9.
 
-**Do not put API keys in the system prompt or user messages as a workaround** — they persist in the session's event history.
+**Do not put API keys in the system prompt or user messages as a workaround** - they persist in the session's event history.
 
 > Formerly known internally as TATs (Tool/Tenant Access Tokens).
 
 **Flow:**
 
-1. Create a vault (`client.beta.vaults.create(...)`) — one per tenant/user, or one shared, depending on your model
-2. Add MCP credentials to it (`client.beta.vaults.credentials.create(...)`) — each credential is tied to one MCP server URL
+1. Create a vault (`client.beta.vaults.create(...)`) - one per tenant/user, or one shared, depending on your model
+2. Add MCP credentials to it (`client.beta.vaults.credentials.create(...)`) - each credential is tied to one MCP server URL
 3. Reference the vault on session create via `vault_ids: ["vlt_..."]`
 4. Anthropic auto-refreshes tokens before they expire; the agent uses the current access token when calling MCP tools
 
@@ -231,7 +231,7 @@ Vaults store credentials; those credentials **never enter the sandbox**. This is
 }
 ```
 
-The `refresh` block is what enables auto-refresh — `token_endpoint` is where Anthropic posts the `refresh_token` grant. `token_endpoint_auth` is a discriminated union:
+The `refresh` block is what enables auto-refresh - `token_endpoint` is where Anthropic posts the `refresh_token` grant. `token_endpoint_auth` is a discriminated union:
 
 | `type` | Shape | Use when |
 |---|---|---|
@@ -239,11 +239,11 @@ The `refresh` block is what enables auto-refresh — `token_endpoint` is where A
 | `"client_secret_basic"` | `{type: "client_secret_basic", client_secret: "..."}` | Confidential client, secret via HTTP Basic auth |
 | `"client_secret_post"` | `{type: "client_secret_post", client_secret: "..."}` | Confidential client, secret in request body |
 
-Omit `refresh` entirely if you only have an access token with no refresh capability — it'll work until it expires, then the agent loses access.
+Omit `refresh` entirely if you only have an access token with no refresh capability - it'll work until it expires, then the agent loses access.
 
-> 💡 **Getting an OAuth token.** How you obtain the initial access and refresh tokens depends on the MCP server — consult its documentation. Once you have them, store them in a vault credential using the shape above; Anthropic auto-refreshes via the `refresh.token_endpoint` from there.
+> 💡 **Getting an OAuth token.** How you obtain the initial access and refresh tokens depends on the MCP server - consult its documentation. Once you have them, store them in a vault credential using the shape above; Anthropic auto-refreshes via the `refresh.token_endpoint` from there.
 
-**Scoping:** Vaults are workspace-scoped. Anyone with developer+ role in the API workspace can create, read (metadata only — secrets are write-only), and attach vaults. `vault_ids` can be set at session **create** time but not via session update (the SDK docstring says "Not yet supported; requests setting this field are rejected").
+**Scoping:** Vaults are workspace-scoped. Anyone with developer+ role in the API workspace can create, read (metadata only - secrets are write-only), and attach vaults. `vault_ids` can be set at session **create** time but not via session update (the SDK docstring says "Not yet supported; requests setting this field are rejected").
 
 ---
 
@@ -251,7 +251,7 @@ Omit `refresh` entirely if you only have an access token with no refresh capabil
 
 Skills are reusable, filesystem-based resources that provide your agent with domain-specific expertise: workflows, context, and best practices that transform general-purpose agents into specialists. Unlike prompts (conversation-level instructions for one-off tasks), skills load on-demand and eliminate the need to repeatedly provide the same guidance across multiple conversations.
 
-Two types — both work the same way; the agent automatically uses them when relevant to the task at hand:
+Two types - both work the same way; the agent automatically uses them when relevant to the task at hand:
 
 | Type | What it is |
 |---|---|
@@ -298,7 +298,7 @@ agent = client.beta.agents.create(
 |---|---|---|
 | `type` | `"anthropic"` | `"custom"` |
 | `skill_id` | Skill name (e.g. `"xlsx"`, `"docx"`, `"pptx"`, `"pdf"`) | Skill ID from Skills API (e.g. `"skill_abc123"`) |
-| `version` | — | `"latest"` or a specific version number |
+| `version` | - | `"latest"` or a specific version number |
 
 ### Skills API
 

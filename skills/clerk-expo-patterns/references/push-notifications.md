@@ -60,6 +60,6 @@ async function sendNotification(userId: string, title: string, body: string) {
 
 ## CRITICAL
 
-- `user.update()` is client-side — it writes `unsafeMetadata` without server auth
+- `user.update()` is client-side - it writes `unsafeMetadata` without server auth
 - For verified/sensitive data, use the Clerk Backend SDK from your server to write `publicMetadata`
 - Re-register the push token if `user.id` changes (org switch does not change user.id, but sign-out/sign-in as different user does)

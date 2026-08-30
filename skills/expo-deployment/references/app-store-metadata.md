@@ -208,7 +208,7 @@ Primary category is most important for browsing and rankings.
 
 ## Localization
 
-Localize metadata for each target market. Keywords should be researched per locale—direct translations often miss regional search terms.
+Localize metadata for each target market. Keywords should be researched per locale-direct translations often miss regional search terms.
 
 ```json
 {
@@ -476,4 +476,4 @@ jobs:
 - Apps with 4+ star ratings get featured more often
 - Localized apps see 128% more downloads per country
 - First 3 lines of description are most critical (shown before "more")
-- Use all 100 keyword characters—every character counts
+- Use all 100 keyword characters-every character counts

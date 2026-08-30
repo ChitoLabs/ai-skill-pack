@@ -67,7 +67,7 @@ azd show
 >
 > Azure Functions `[HttpTrigger]` with `"get"` does **not** automatically handle HEAD requests. HEAD returns 404 from the routing layer even when GET works correctly, causing false-negative results and misdirected debugging.
 
-### ✅ DO — Use GET with output suppression
+### ✅ DO - Use GET with output suppression
 
 ```bash
 # Check status code only (GET, don't follow redirects)
@@ -80,10 +80,10 @@ curl -s -o /dev/null -w "Status: %{http_code}\nRedirect: %{redirect_url}" "https
 curl -sS -D - -o /dev/null "https://<func-name>.azurewebsites.net/api/<route>"
 ```
 
-### ❌ DON'T — Use HEAD requests
+### ❌ DON'T - Use HEAD requests
 
 ```bash
-# DO NOT use this — returns 404 even when the function works
+# DO NOT use this - returns 404 even when the function works
 curl -I "https://<func-name>.azurewebsites.net/api/<route>"
 ```
 

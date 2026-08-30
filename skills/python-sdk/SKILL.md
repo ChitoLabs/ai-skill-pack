@@ -4,6 +4,7 @@ description: "Trigger: python-sdk, Python SDK for inference.sh - run AI apps, bu
 license: Apache-2.0
 metadata:
   author: inference-sh-skills
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/python-sdk"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/sdk/python-sdk"

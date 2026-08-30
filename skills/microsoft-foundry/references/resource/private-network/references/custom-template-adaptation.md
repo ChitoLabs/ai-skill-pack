@@ -1,6 +1,6 @@
 # Custom Template Adaptation
 
-For the EXTEND path — when the user has existing Bicep or Terraform templates.
+For the EXTEND path - when the user has existing Bicep or Terraform templates.
 
 ## Instructions
 
@@ -14,7 +14,7 @@ For the EXTEND path — when the user has existing Bicep or Terraform templates.
 
 3. **Present** findings to the user as a gap analysis table: resource, status (✅ present / ⚠️ misconfigured / ❌ missing), and what needs to change. Include any issues found.
 
-4. **Propose** an end-to-end plan to address all gaps — ordered by dependency. Explain what will be added, what will be modified, and why. Never overwrite existing modules — add alongside and reference existing resources.
+4. **Propose** an end-to-end plan to address all gaps - ordered by dependency. Explain what will be added, what will be modified, and why. Never overwrite existing modules - add alongside and reference existing resources.
 
 5. **Wait** for user approval before making any changes.
 
@@ -22,5 +22,5 @@ For the EXTEND path — when the user has existing Bicep or Terraform templates.
 
 ## Retry Safety
 
-> ⚠️ If a deployment fails after the capability host step starts, Azure Container Apps leaves a `legionservicelink` service association on the agent subnet that **cannot be removed**. On retry, use a **new subnet or new VNet** — never reuse the same agent subnet.
+> ⚠️ If a deployment fails after the capability host step starts, Azure Container Apps leaves a `legionservicelink` service association on the agent subnet that **cannot be removed**. On retry, use a **new subnet or new VNet** - never reuse the same agent subnet.
 

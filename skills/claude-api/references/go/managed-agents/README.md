@@ -1,8 +1,8 @@
-# Managed Agents — Go
+# Managed Agents - Go
 
 > **Bindings not shown here:** This README covers the most common managed-agents flows for Go. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Go SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.
 
-> **Agents are persistent — create once, reference by ID.** Store the agent ID returned by `agents.New` and pass it to every subsequent `sessions.New`; do not call `agents.New` in the request path. The Anthropic CLI is one convenient way to create agents and environments from version-controlled YAML — its URL is in `shared/live-sources.md`. The examples below show in-code creation for completeness; in production the create call belongs in setup, not in the request path.
+> **Agents are persistent - create once, reference by ID.** Store the agent ID returned by `agents.New` and pass it to every subsequent `sessions.New`; do not call `agents.New` in the request path. The Anthropic CLI is one convenient way to create agents and environments from version-controlled YAML - its URL is in `shared/live-sources.md`. The examples below show in-code creation for completeness; in production the create call belongs in setup, not in the request path.
 
 ## Installation
 
@@ -54,7 +54,7 @@ fmt.Println(environment.ID) // env_...
 
 ## Create an Agent (required first step)
 
-> ⚠️ **There is no inline agent config.** `Model`/`System`/`Tools` live on the agent object, not the session. Always start with `Beta.Agents.New()` — the session only takes `Agent: anthropic.BetaSessionNewParamsAgentUnion{OfString: anthropic.String(agent.ID)}` (or the typed `OfBetaManagedAgentsAgents` variant when you need a specific version).
+> ⚠️ **There is no inline agent config.** `Model`/`System`/`Tools` live on the agent object, not the session. Always start with `Beta.Agents.New()` - the session only takes `Agent: anthropic.BetaSessionNewParamsAgentUnion{OfString: anthropic.String(agent.ID)}` (or the typed `OfBetaManagedAgentsAgents` variant when you need a specific version).
 
 ### Minimal
 
@@ -149,7 +149,7 @@ if err != nil {
 }
 ```
 
-> 💡 **Stream-first:** Open the stream *before* (or concurrently with) sending the message. The stream only delivers events that occur after it opens — stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
+> 💡 **Stream-first:** Open the stream *before* (or concurrently with) sending the message. The stream only delivers events that occur after it opens - stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
 
 ---
 
@@ -376,7 +376,7 @@ if err != nil {
 ## MCP Server Integration
 
 ```go
-// Agent declares MCP server (no auth here — auth goes in a vault)
+// Agent declares MCP server (no auth here - auth goes in a vault)
 agent, err := client.Beta.Agents.New(ctx, anthropic.BetaAgentNewParams{
     Name: "GitHub Assistant",
     Model: anthropic.BetaManagedAgentsModelConfigParams{

@@ -1,9 +1,10 @@
 ---
 name: adapt
-description: "Trigger: adapt, Responsive pass — mobile, tablet, desktop, touch, safe areas. Preserve source workflow with portable agent instructions."
+description: "Trigger: adapt, Responsive pass - mobile, tablet, desktop, touch, safe areas. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
   author: educlopez
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/educlopez/ui-craft/adapt"
   github_url: "https://github.com/educlopez/ui-craft/tree/HEAD/.codex/skills/adapt"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `adapt` or the preserved source description: Responsive pass — mobile, tablet, desktop, touch, safe areas. Invoke when the user asks for adapt on their UI, or mentions 'adapt' alongside design / UI / frontend work.
+Use this skill when the user request matches `adapt` or the preserved source description: Responsive pass - mobile, tablet, desktop, touch, safe areas. Invoke when the user asks for adapt on their UI, or mentions 'adapt' alongside design / UI / frontend work.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
@@ -46,4 +47,4 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.

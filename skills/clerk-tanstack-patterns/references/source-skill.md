@@ -54,7 +54,7 @@ export const startInstance = createStart(() => {
 })
 ```
 
-`src/routes/__root.tsx` — wrap with `<ClerkProvider>`:
+`src/routes/__root.tsx` - wrap with `<ClerkProvider>`:
 ```tsx
 import { ClerkProvider } from '@clerk/tanstack-react-start'
 
@@ -75,8 +75,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
 TanStack Start runs on Vinxi. Auth flows through two layers:
 
-1. **Server layer** — `createServerFn` + `auth()` from `@clerk/tanstack-react-start/server`
-2. **Router layer** — `beforeLoad` on route definitions, throws `redirect` for unauthenticated
+1. **Server layer** - `createServerFn` + `auth()` from `@clerk/tanstack-react-start/server`
+2. **Router layer** - `beforeLoad` on route definitions, throws `redirect` for unauthenticated
 
 Both layers are server-executed. Client hooks (`useAuth`, `useUser`) are React hooks for the browser side.
 

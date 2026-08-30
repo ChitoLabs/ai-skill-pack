@@ -4,6 +4,7 @@ description: "Trigger: nodejs-backend-patterns. Preserve source workflow with po
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/nodejs-backend-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/javascript-typescript/skills/nodejs-backend-patterns"

@@ -277,7 +277,7 @@ module Stripe
     def individual_name; end
     sig { params(_individual_name: T.nilable(String)).returns(T.nilable(String)) }
     def individual_name=(_individual_name); end
-    # The prefix for the customer used to generate unique invoice numbers. Must be 3–12 uppercase letters or numbers.
+    # The prefix for the customer used to generate unique invoice numbers. Must be 3-12 uppercase letters or numbers.
     sig { returns(T.nilable(String)) }
     def invoice_prefix; end
     sig { params(_invoice_prefix: T.nilable(String)).returns(T.nilable(String)) }

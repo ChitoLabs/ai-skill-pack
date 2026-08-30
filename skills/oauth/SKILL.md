@@ -4,6 +4,7 @@ description: "Trigger: oauth, Configure OAuth providers (Google, Apple, Microsof
 license: Apache-2.0
 metadata:
   author: vercel-labs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vercel-labs/portless/oauth"
   github_url: "https://github.com/vercel-labs/portless/tree/HEAD/skills/oauth"

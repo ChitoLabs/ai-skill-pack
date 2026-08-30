@@ -1,4 +1,4 @@
-# Claude API — Go
+# Claude API - Go
 
 > **Note:** The Go SDK supports the Claude API and beta tool use with `BetaToolRunner`. Agent SDK is not yet available for Go.
 
@@ -93,7 +93,7 @@ if err := stream.Err(); err != nil { log.Fatal(err) }
 
 ## Tool Use
 
-### Tool Runner (Beta — Recommended)
+### Tool Runner (Beta - Recommended)
 
 **Beta:** The Go SDK provides `BetaToolRunner` for automatic tool use loops via the `toolrunner` package.
 
@@ -150,7 +150,7 @@ if err != nil {
 }
 
 // RunToCompletion returns *BetaMessage; content is []BetaContentBlockUnion.
-// Narrow via AsAny() switch — note the Beta-namespace types (BetaTextBlock,
+// Narrow via AsAny() switch - note the Beta-namespace types (BetaTextBlock,
 // not TextBlock):
 for _, block := range message.Content {
     switch block := block.AsAny().(type) {
@@ -231,7 +231,7 @@ func main() {
                 fmt.Println(variant.Text)
             case anthropic.ToolUseBlock:
                 // 4. Parse the tool input. Use variant.JSON.Input.Raw() to get the
-                //    raw JSON — block.Input is json.RawMessage, not the parsed value.
+                //    raw JSON - block.Input is json.RawMessage, not the parsed value.
                 var in struct {
                     A int `json:"a"`
                     B int `json:"b"`
@@ -281,7 +281,7 @@ Enable Claude's internal reasoning by setting `Thinking` in `MessageNewParams`. 
 Derived from `anthropic-sdk-go/message.go` (`ThinkingConfigParamUnion`, `NewThinkingConfigAdaptiveParam`).
 
 ```go
-// There is no ThinkingConfigParamOfAdaptive helper — construct the union
+// There is no ThinkingConfigParamOfAdaptive helper - construct the union
 // struct-literal directly and take the address of the variant.
 adaptive := anthropic.NewThinkingConfigAdaptiveParam()
 params := anthropic.MessageNewParams{
@@ -334,7 +334,7 @@ Verify hits via `resp.Usage.CacheCreationInputTokens` / `resp.Usage.CacheReadInp
 
 ## Server-Side Tools
 
-Version-suffixed struct names with `Param` suffix. `Name`/`Type` are `constant.*` types — zero value marshals correctly, so `{}` works. Wrap in `ToolUnionParam` with the matching `Of*` field.
+Version-suffixed struct names with `Param` suffix. `Name`/`Type` are `constant.*` types - zero value marshals correctly, so `{}` works. Wrap in `ToolUnionParam` with the matching `Of*` field.
 
 ```go
 Tools: []anthropic.ToolUnionParam{
@@ -387,7 +387,7 @@ Other `Beta.Files` methods: `List`, `Delete`, `Download`, `GetMetadata`.
 
 ## Context Editing / Compaction (Beta)
 
-Use `Beta.Messages.New` with `ContextManagement` on `BetaMessageNewParams`. There is no `NewBetaAssistantMessage` — use `.ToParam()` for the round-trip.
+Use `Beta.Messages.New` with `ContextManagement` on `BetaMessageNewParams`. There is no `NewBetaAssistantMessage` - use `.ToParam()` for the round-trip.
 
 ```go
 params := anthropic.BetaMessageNewParams{

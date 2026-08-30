@@ -4,6 +4,7 @@ description: "Trigger: email-and-password-best-practices. Preserve source workfl
 license: Apache-2.0
 metadata:
   author: better-auth
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/email-and-password-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/emailAndPassword"

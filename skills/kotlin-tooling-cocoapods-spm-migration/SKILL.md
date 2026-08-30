@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `kotlin-tooling-cocoapods-spm-migration` or the preserved source description: Migrate KMP projects from CocoaPods (kotlin("native.cocoapods")) to Swift Package Manager (swiftPMDependencies DSL) — replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and reconfigures the Xcode project.
+Use this skill when the user request matches `kotlin-tooling-cocoapods-spm-migration` or the preserved source description: Migrate KMP projects from CocoaPods (kotlin("native.cocoapods")) to Swift Package Manager (swiftPMDependencies DSL) - replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and reconfigures the Xcode project.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

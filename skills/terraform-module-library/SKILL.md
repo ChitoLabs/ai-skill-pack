@@ -4,6 +4,7 @@ description: "Trigger: terraform-module-library, Build reusable Terraform module
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/terraform-module-library"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/cloud-infrastructure/skills/terraform-module-library"

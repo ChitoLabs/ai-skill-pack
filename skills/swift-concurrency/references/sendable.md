@@ -294,7 +294,7 @@ store.filter { [query] contact in
 
 ## @unchecked Sendable
 
-**Use as last resort.** Tells compiler to skip verification—you guarantee thread-safety.
+**Use as last resort.** Tells compiler to skip verification-you guarantee thread-safety.
 
 ### When to use
 

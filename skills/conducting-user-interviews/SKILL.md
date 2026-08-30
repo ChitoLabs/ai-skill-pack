@@ -4,6 +4,7 @@ description: "Trigger: conducting-user-interviews, Help users run better custome
 license: Apache-2.0
 metadata:
   author: refoundai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/refoundai/lenny-skills/conducting-user-interviews"
   github_url: "https://github.com/refoundai/lenny-skills/tree/HEAD/skills/conducting-user-interviews"

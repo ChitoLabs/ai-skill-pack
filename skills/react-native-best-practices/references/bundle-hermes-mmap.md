@@ -111,7 +111,7 @@ cd android
 
 **React Native 0.78 and earlier**: Apply this optimization manually.
 
-**React Native 0.79+**: Skip this—bundle compression is disabled by default.
+**React Native 0.79+**: Skip this-bundle compression is disabled by default.
 
 ## Verification
 

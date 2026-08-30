@@ -1,6 +1,6 @@
 ---
 name: vue-best-practices
-description: "Trigger: vue-best-practices, MUST be used for Vue.js tasks. Preserve source workflow with portable agent instructions."
+description: "Trigger: review or implement Vue.js code using current Vue best practices. Apply focused guidance to an explicit Vue task."
 license: MIT
 metadata:
   author: github.com/vuejs-ai

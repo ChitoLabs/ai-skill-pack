@@ -1,4 +1,4 @@
-# Managed Agents — Endpoint Reference
+# Managed Agents - Endpoint Reference
 
 All endpoints require `x-api-key` and `anthropic-version: 2023-06-01` headers. Managed Agents endpoints additionally require the `anthropic-beta` header.
 
@@ -32,19 +32,19 @@ All resources are under the `beta` namespace. Python and TypeScript share identi
 | Memory Versions | `memory_stores.memory_versions.list` / `retrieve` / `redact` | `MemoryStores.MemoryVersions.List` / `Get` / `Redact` |
 
 **Naming quirks to watch for:**
-- Agents and Session Threads have **no delete** — only `archive`. Archive is **permanent**: the agent becomes read-only, new sessions cannot reference it, and there is no unarchive. Confirm with the user before archiving a production agent. Environments, Sessions, Vaults, Credentials, and Memory Stores have both `delete` and `archive`; Session Resources, Files, Skills, and Memories are `delete`-only; Memory Versions have neither — only `redact`.
+- Agents and Session Threads have **no delete** - only `archive`. Archive is **permanent**: the agent becomes read-only, new sessions cannot reference it, and there is no unarchive. Confirm with the user before archiving a production agent. Environments, Sessions, Vaults, Credentials, and Memory Stores have both `delete` and `archive`; Session Resources, Files, Skills, and Memories are `delete`-only; Memory Versions have neither - only `redact`.
 - Session resources use `add` (not `create`).
 - Go's event stream is `StreamEvents` (not `Stream`).
 
-**Agent shorthand:** `agent` on session create accepts either a bare string (`agent="agent_abc123"` — uses latest version) or the full reference object (`{type: "agent", id: "agent_abc123", version: 123}`).
+**Agent shorthand:** `agent` on session create accepts either a bare string (`agent="agent_abc123"` - uses latest version) or the full reference object (`{type: "agent", id: "agent_abc123", version: 123}`).
 
-**Model shorthand:** `model` on agent create accepts either a bare string (`model="claude-opus-4-7"` — uses `standard` speed) or the full config object (`{id: "claude-opus-4-6", speed: "fast"}`). Note: `speed: "fast"` is only supported on Opus 4.6.
+**Model shorthand:** `model` on agent create accepts either a bare string (`model="claude-opus-4-7"` - uses `standard` speed) or the full config object (`{id: "claude-opus-4-6", speed: "fast"}`). Note: `speed: "fast"` is only supported on Opus 4.6.
 
 ---
 
 ## Agents
 
-**Step one of every flow.** Sessions require a pre-created agent — there is no inline agent config under `managed-agents-2026-04-01`.
+**Step one of every flow.** Sessions require a pre-created agent - there is no inline agent config under `managed-agents-2026-04-01`.
 
 | Method   | Path                                             | Operation        | Description                              |
 | -------- | ------------------------------------------------ | ---------------- | ---------------------------------------- |
@@ -52,7 +52,7 @@ All resources are under the `beta` namespace. Python and TypeScript share identi
 | `POST` | `/v1/agents` | CreateAgent | Create a saved agent configuration |
 | `GET` | `/v1/agents/{agent_id}` | GetAgent | Get agent details |
 | `POST` | `/v1/agents/{agent_id}` | UpdateAgent | Update agent configuration |
-| `POST` | `/v1/agents/{agent_id}/archive` | ArchiveAgent | Archive an agent. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive — this is the terminal state. |
+| `POST` | `/v1/agents/{agent_id}/archive` | ArchiveAgent | Archive an agent. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive - this is the terminal state. |
 | `GET` | `/v1/agents/{agent_id}/versions` | ListAgentVersions | List agent versions |
 
 ## Sessions
@@ -105,11 +105,11 @@ Per-subagent event streams in multiagent sessions. See `shared/managed-agents-mu
 | `GET`    | `/v1/environments/{environment_id}`                    | GetEnvironment       | Get environment details             |
 | `POST`   | `/v1/environments/{environment_id}`                    | UpdateEnvironment    | Update environment                  |
 | `DELETE` | `/v1/environments/{environment_id}`                    | DeleteEnvironment    | Delete environment. Returns 204. |
-| `POST`   | `/v1/environments/{environment_id}/archive`            | ArchiveEnvironment   | Archive environment. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive — this is the terminal state. |
+| `POST`   | `/v1/environments/{environment_id}/archive`            | ArchiveEnvironment   | Archive environment. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive - this is the terminal state. |
 
 ## Vaults
 
-Vaults store MCP credentials that Anthropic manages on your behalf — OAuth credentials with auto-refresh, or static bearer tokens. Attach to sessions via `vault_ids`. See `managed-agents-tools.md` §Vaults for the conceptual guide and credential shapes.
+Vaults store MCP credentials that Anthropic manages on your behalf - OAuth credentials with auto-refresh, or static bearer tokens. Attach to sessions via `vault_ids`. See `managed-agents-tools.md` §Vaults for the conceptual guide and credential shapes.
 
 | Method   | Path                                             | Operation        | Description                              |
 | -------- | ------------------------------------------------ | ---------------- | ---------------------------------------- |
@@ -149,7 +149,7 @@ Workspace-scoped persistent memory that survives across sessions. Attach to a se
 
 ## Memories
 
-Individual text documents inside a store (≤ 100KB each). `create` creates at a `path` and returns `409` (`memory_path_conflict_error`, with `conflicting_memory_id`) if the path is occupied; `update` mutates by `mem_...` ID (rename and/or content). Only `update` accepts a `precondition` (`{"type": "content_sha256", "content_sha256": ...}`) — on mismatch returns `409` (`memory_precondition_failed_error`). List endpoints accept `view: "basic"|"full"` (controls whether `content` is populated; `retrieve` defaults to `full`).
+Individual text documents inside a store (≤ 100KB each). `create` creates at a `path` and returns `409` (`memory_path_conflict_error`, with `conflicting_memory_id`) if the path is occupied; `update` mutates by `mem_...` ID (rename and/or content). Only `update` accepts a `precondition` (`{"type": "content_sha256", "content_sha256": ...}`) - on mismatch returns `409` (`memory_precondition_failed_error`). List endpoints accept `view: "basic"|"full"` (controls whether `content` is populated; `retrieve` defaults to `full`).
 
 | Method   | Path                                                              | Operation      | Description                              |
 | -------- | ----------------------------------------------------------------- | -------------- | ---------------------------------------- |
@@ -161,7 +161,7 @@ Individual text documents inside a store (≤ 100KB each). `create` creates at a
 
 ## Memory Versions
 
-Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surface. `operation` ∈ `created` / `modified` / `deleted`.
+Immutable per-mutation snapshots (`memver_...`) - the audit and rollback surface. `operation` ∈ `created` / `modified` / `deleted`.
 
 | Method   | Path                                                                          | Operation             | Description                              |
 | -------- | ----------------------------------------------------------------------------- | --------------------- | ---------------------------------------- |
@@ -198,12 +198,12 @@ Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surfa
 
 ### CreateAgent Request Body
 
-**Always start here.** `model`, `system`, `tools`, `mcp_servers`, `skills` are top-level fields on this object — they do NOT go on the session.
+**Always start here.** `model`, `system`, `tools`, `mcp_servers`, `skills` are top-level fields on this object - they do NOT go on the session.
 
 ```json
 {
   "name": "string (required, 1-256 chars)",
-  "model": "claude-opus-4-7 (required — bare string, or {id, speed} object)",
+  "model": "claude-opus-4-7 (required - bare string, or {id, speed} object)",
   "description": "string (optional, up to 2048 chars)",
   "system": "string (optional, up to 100,000 chars)",
   "tools": [
@@ -234,13 +234,13 @@ Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surfa
 }
 ```
 
-> Limits: `tools` max 128, `skills` max 20, `mcp_servers` max 20 (unique names). `multiagent.agents` 1–20 entries (string ID | `{type:"agent",id,version?}` | `{type:"self"}`) — see `shared/managed-agents-multiagent.md`.
+> Limits: `tools` max 128, `skills` max 20, `mcp_servers` max 20 (unique names). `multiagent.agents` 1-20 entries (string ID | `{type:"agent",id,version?}` | `{type:"self"}`) - see `shared/managed-agents-multiagent.md`.
 
 ### CreateSession Request Body
 
 ```json
 {
-  "agent": "agent_abc123 (required — string shorthand for latest version, or {type: \"agent\", id, version} object)",
+  "agent": "agent_abc123 (required - string shorthand for latest version, or {type: \"agent\", id, version} object)",
   "environment_id": "env_abc123 (required)",
   "title": "string (optional)",
   "resources": [
@@ -248,18 +248,18 @@ Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surfa
       "type": "github_repository",
       "url": "https://github.com/owner/repo (required)",
       "authorization_token": "ghp_... (required)",
-      "mount_path": "/workspace/repo (optional — defaults to /workspace/<repo-name>)",
+      "mount_path": "/workspace/repo (optional - defaults to /workspace/<repo-name>)",
       "checkout": { "type": "branch", "name": "main" }
     }
   ],
-  "vault_ids": ["vlt_abc123 (optional — MCP credentials with auto-refresh)"],
+  "vault_ids": ["vlt_abc123 (optional - MCP credentials with auto-refresh)"],
   "metadata": {
     "key": "value"
   }
 }
 ```
 
-> The `agent` field accepts only a string ID or `{type: "agent", id, version}` — `model`/`system`/`tools` live on the agent, not here.
+> The `agent` field accepts only a string ID or `{type: "agent", id, version}` - `model`/`system`/`tools` live on the agent, not here.
 >
 > **`checkout`** accepts `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Omit for the repo's default branch.
 
@@ -272,7 +272,7 @@ Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surfa
   "config": {
     "type": "cloud",
     "networking": {
-      "type": "unrestricted | limited (union — see SDK types)"
+      "type": "unrestricted | limited (union - see SDK types)"
     },
     "packages": { }
   },
@@ -339,7 +339,7 @@ Managed Agents endpoints use the standard Anthropic API error format. Errors are
 }
 ```
 
-Include the `request_id` when reporting issues to Anthropic — it lets us trace the request end-to-end. The inner `error.type` is one of the following:
+Include the `request_id` when reporting issues to Anthropic - it lets us trace the request end-to-end. The inner `error.type` is one of the following:
 
 | Status | Error type | Description |
 |---|---|---|
@@ -349,9 +349,9 @@ Include the `request_id` when reporting issues to Anthropic — it lets us trace
 | 404 | `not_found_error` | The requested resource doesn't exist |
 | 409 | `invalid_request_error` | The request conflicts with the resource's current state (e.g., sending to an archived session) |
 | 413 | `request_too_large` | The request body exceeds the maximum allowed size |
-| 429 | `rate_limit_error` | Too many requests — check rate limit headers for retry timing |
+| 429 | `rate_limit_error` | Too many requests - check rate limit headers for retry timing |
 | 500 | `api_error` | An internal server error occurred |
-| 529 | `overloaded_error` | The service is temporarily overloaded — retry with backoff |
+| 529 | `overloaded_error` | The service is temporarily overloaded - retry with backoff |
 
 Note that `409 Conflict` carries `error.type: "invalid_request_error"` (there is no separate `conflict_error` type); inspect both the HTTP status and the `message` to distinguish conflicts from other invalid requests.
 
@@ -363,8 +363,8 @@ Managed Agents endpoints have per-organization request-per-minute (RPM) limits, 
 
 | Endpoint group | Scope | RPM | Max concurrent |
 |---|---|---|---|
-| Create operations (Agents, Sessions, Vaults) | organization | 60 | — |
-| All other operations (Agents, Sessions, Vaults) | organization | 600 | — |
+| Create operations (Agents, Sessions, Vaults) | organization | 60 | - |
+| All other operations (Agents, Sessions, Vaults) | organization | 600 | - |
 | All operations (Environments) | organization | 60 | 5 |
 
 Files and Skills endpoints use the standard tier-based [rate limits](https://platform.claude.com/docs/en/api/rate-limits).

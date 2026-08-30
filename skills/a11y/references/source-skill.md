@@ -41,15 +41,15 @@ accessibility semantics, keyboard behavior, and screen reader support.
 - Use `<a href>` instead of `<span role="link">`
 - Use `<input type="checkbox">` instead of `<div role="checkbox">`
 - Use `<nav>`, `<main>`, `<header>`, `<footer>`, `<aside>` for landmarks
-- Use `<h1>`–`<h6>` in proper hierarchy (never skip levels)
+- Use `<h1>`-`<h6>` in proper hierarchy (never skip levels)
 - Use `<ul>`, `<ol>`, `<dl>` for lists
 - Use `<table>` with `<th>`, `<caption>` for data tables
 - Use `<label>` associated with form controls via `for`/`id`
 
 ### The Five Rules of ARIA
 
-1. **Don't use ARIA if native HTML provides the semantics** — a `<button>` is better than `<div role="button">`
-2. **Don't change native semantics** — don't add `role="heading"` to a `<h2>`
+1. **Don't use ARIA if native HTML provides the semantics** - a `<button>` is better than `<div role="button">`
+2. **Don't change native semantics** - don't add `role="heading"` to a `<h2>`
 3. **All interactive ARIA controls must be keyboard operable**
 4. **Don't use `role="presentation"` or `aria-hidden="true"` on focusable elements**
 5. **All interactive elements must have an accessible name**
@@ -169,7 +169,7 @@ Common patterns:
 
 ### Contrast Rules
 
-- Never convey information by color alone — provide text, icons, or patterns
+- Never convey information by color alone - provide text, icons, or patterns
 - Ensure links are distinguishable from surrounding text (underline or 3:1 contrast + non-color indicator on hover/focus)
 - Test with color blindness simulators
 - Provide sufficient contrast for placeholder text
@@ -199,7 +199,7 @@ Common patterns:
 - Provide error suggestions when possible (WCAG 3.3.3)
 - Associate error messages with `aria-describedby`
 - Move focus to first error or use an error summary
-- Prevent redundant entry — don't ask for the same information twice (WCAG 3.3.7)
+- Prevent redundant entry - don't ask for the same information twice (WCAG 3.3.7)
 
 ### Authentication (WCAG 2.2)
 
@@ -236,7 +236,7 @@ Common patterns:
   - Paragraph spacing: 2× font size
   - Letter spacing: 0.12× font size
   - Word spacing: 0.16× font size
-- Touch targets: minimum 24×24 CSS pixels (WCAG 2.5.8) — see also Section 5 for contrast requirements
+- Touch targets: minimum 24×24 CSS pixels (WCAG 2.5.8) - see also Section 5 for contrast requirements
 - Provide alternatives for drag-based interactions (WCAG 2.5.7)
 
 ## 9. Testing

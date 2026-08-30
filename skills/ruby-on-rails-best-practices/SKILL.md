@@ -4,6 +4,7 @@ description: "Trigger: ruby-on-rails-best-practices, Ruby on Rails architecture 
 license: Apache-2.0
 metadata:
   author: sergiodxa
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/sergiodxa/agent-skills/ruby-on-rails-best-practices"
   github_url: "https://github.com/sergiodxa/agent-skills/tree/HEAD/skills/ruby-on-rails-best-practices"

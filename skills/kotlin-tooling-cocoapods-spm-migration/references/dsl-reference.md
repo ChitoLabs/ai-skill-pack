@@ -45,7 +45,7 @@ Plain strings for URL, version, and products. The `version` parameter maps to a 
 ```kotlin
 swiftPackage(
     url = "https://github.com/owner/repo.git",
-    version = "1.0.0",   // Equivalent to from("1.0.0") — minimum version
+    version = "1.0.0",   // Equivalent to from("1.0.0") - minimum version
     products = listOf("ProductName", "AnotherProduct"),
 )
 ```
@@ -111,7 +111,7 @@ fun useLocalPackage() {
 
 | Syntax | Description | Use Case |
 |--------|-------------|----------|
-| `version = "1.0.0"` (simple API) | Minimum version — equivalent to `from("1.0.0")` | Most packages |
+| `version = "1.0.0"` (simple API) | Minimum version - equivalent to `from("1.0.0")` | Most packages |
 | `version = exact("1.0")` | Exact version pin | Strict dependencies, migration |
 | `version = from("1.0")` | Minimum version (explicit) | Same as simple string |
 | `version = branch("name")` | Git branch | Development, testing |
@@ -132,7 +132,7 @@ products = listOf("FirebaseAnalytics", "FirebaseAuth")
 
 With the simple API, `importedClangModules` defaults to the same list as `products`. This works when product names match Clang module names.
 
-### Typed API — Platform Constraints
+### Typed API - Platform Constraints
 
 For packages that only support certain platforms, use the typed `product()` function:
 
@@ -144,7 +144,7 @@ products = listOf(
 
 Available platforms: `iOS()`, `macOS()`, `tvOS()`, `watchOS()`
 
-### Typed API — Per-Product Clang Module Override
+### Typed API - Per-Product Clang Module Override
 
 ```kotlin
 products = listOf(
@@ -239,14 +239,14 @@ kotlin {
     swiftPMDependencies {
         iosMinimumDeploymentTarget = "16.0"
 
-        // Simple API — most packages
+        // Simple API - most packages
         swiftPackage(
             url = "https://github.com/lukaskubanek/LoremIpsum.git",
             version = "2.0.1",
             products = listOf("LoremIpsum"),
         )
 
-        // Simple API — Google Maps
+        // Simple API - Google Maps
         swiftPackage(
             url = "https://github.com/googlemaps/ios-maps-sdk.git",
             version = "10.3.0",

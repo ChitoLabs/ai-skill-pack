@@ -127,7 +127,7 @@ const tertiary = await client.networkInterconnects.interconnects.create({
 5. CF accepts in portal
 6. Configure BGP
 
-**No API automation** – partner portals managed separately.
+**No API automation** - partner portals managed separately.
 
 ## Failover & Security
 

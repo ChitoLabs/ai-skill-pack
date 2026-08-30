@@ -1,6 +1,6 @@
 ---
 name: clerk-vue-patterns
-description: 'Vue 3 patterns with Clerk — composables (useAuth, useUser,
+description: 'Vue 3 patterns with Clerk - composables (useAuth, useUser,
   useClerk, useOrganization), Vue Router guards, Pinia auth store
   integration. Triggers on: vue clerk, useAuth vue, clerk composables,
   vue router clerk guard, pinia auth clerk. For Nuxt, use clerk-nuxt-patterns instead.'
@@ -27,10 +27,10 @@ SDK: `@clerk/vue` v2+ (Vue 3). For Nuxt, use `clerk-nuxt-patterns`.
 
 Vue uses composables from `@clerk/vue`:
 
-- **`useAuth()`** — reactive `isSignedIn`, `userId`, `signOut`
-- **`useUser()`** — reactive `user` object
-- **`useClerk()`** — full Clerk instance for advanced operations
-- **`useOrganization()`** — reactive `organization`, `membership`
+- **`useAuth()`** - reactive `isSignedIn`, `userId`, `signOut`
+- **`useUser()`** - reactive `user` object
+- **`useClerk()`** - full Clerk instance for advanced operations
+- **`useOrganization()`** - reactive `organization`, `membership`
 
 ## Setup
 

@@ -8,15 +8,15 @@ Three modes:
 
 Attach vs launch vs all-processes is mutually exclusive and passed straight
 through to xctrace. The default template is "SwiftUI" (matches the
-SwiftUI template in Xcode 26+ — change with --template).
+SwiftUI template in Xcode 26+ - change with --template).
 
 Manual stop options, most to least automated:
-  * Send SIGINT (Ctrl+C) to this script — forwarded to xctrace, which
+  * Send SIGINT (Ctrl+C) to this script - forwarded to xctrace, which
     finalises the trace before exiting.
   * Pass --stop-file PATH; when that file appears on disk, this script
     sends SIGINT to xctrace. Useful for `Bash run_in_background`
     workflows where there's no interactive terminal.
-  * Pass --time-limit 30s / 5m / etc. — xctrace stops itself.
+  * Pass --time-limit 30s / 5m / etc. - xctrace stops itself.
 """
 from __future__ import annotations
 
@@ -115,7 +115,7 @@ def main(argv: list[str] | None = None) -> int:
     except KeyboardInterrupt:
         _forward_sigint(proc)
 
-    # Give xctrace up to 60s to finalise after SIGINT — large traces take time.
+    # Give xctrace up to 60s to finalise after SIGINT - large traces take time.
     try:
         rc = proc.wait(timeout=60)
     except subprocess.TimeoutExpired:
@@ -127,7 +127,7 @@ def main(argv: list[str] | None = None) -> int:
     if output.exists():
         print(f"[record] done. trace written: {output}", flush=True)
     else:
-        print("[record] done but output file not found — did xctrace error?",
+        print("[record] done but output file not found - did xctrace error?",
               file=sys.stderr)
         return rc or 1
     return rc
@@ -145,7 +145,7 @@ def _build_xctrace_cmd(args, output: Path) -> list[str]:
         cmd += ["--instrument", inst]
     for env in args.env:
         cmd += ["--env", env]
-    # Target must come last — --launch consumes the remainder.
+    # Target must come last - --launch consumes the remainder.
     if args.attach:
         cmd += ["--attach", args.attach]
     elif args.all_processes:

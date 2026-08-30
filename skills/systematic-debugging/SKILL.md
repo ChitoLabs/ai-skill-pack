@@ -1,9 +1,10 @@
 ---
 name: systematic-debugging
-description: "Trigger: systematic-debugging, Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes. Preserve source workflow with portable agent instructions."
+description: "Trigger: debug a reproducible defect, test failure, or unexpected behavior. Use root-cause evidence and one hypothesis at a time; defer systemic issue classes and managed review or receipt defects to their owning workflow."
 license: Apache-2.0
 metadata:
   author: obra
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/systematic-debugging"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/systematic-debugging"
@@ -11,7 +12,9 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `systematic-debugging` or the preserved source description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+Use this skill for an explicit, reproducible defect, test failure, or unexpected behavior.
+
+First consult repository policy and detect any active managed workflow. Defer systemic issue classes and managed review or receipt defects to their designated owner.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

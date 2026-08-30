@@ -1,9 +1,10 @@
 ---
 name: n8n-code-javascript
-description: "Write JavaScript in n8n Code nodes using $input, $json, $node, $helpers, DateTime, Code node modes, SplitInBatches, pairedItem, and production transformation patterns."
+description: "Trigger: write or debug JavaScript in an n8n Code node. Use n8n inputs, helpers, node modes, paired items, and production transformation patterns."
 license: Apache-2.0
 metadata:
   author: czlonkowski
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-code-javascript"
   github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-code-javascript"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `n8n-code-javascript` or the preserved source description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node — whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns.
+Use this skill when the user request matches `n8n-code-javascript` or the preserved source description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node - whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

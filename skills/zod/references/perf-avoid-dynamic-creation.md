@@ -7,7 +7,7 @@ tags: perf, dynamic, hot-path, optimization
 
 ## Avoid Dynamic Schema Creation in Hot Paths
 
-Zod 4 uses JIT (Just-In-Time) compilation to speed up repeated parsing, but this makes initial schema creation slower. Avoid creating schemas inside loops or frequently-called functions—pre-create them instead.
+Zod 4 uses JIT (Just-In-Time) compilation to speed up repeated parsing, but this makes initial schema creation slower. Avoid creating schemas inside loops or frequently-called functions-pre-create them instead.
 
 **Incorrect (schema creation in hot path):**
 

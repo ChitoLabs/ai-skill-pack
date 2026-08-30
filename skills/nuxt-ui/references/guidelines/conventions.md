@@ -20,7 +20,7 @@ Disable any of them: `ui: { fonts: false }`, `ui: { colorMode: false }`.
 
 ## Content module integration
 
-When using `@nuxt/content`, it **must** come after `@nuxt/ui` in the `modules` array — otherwise prose components won't be available:
+When using `@nuxt/content`, it **must** come after `@nuxt/ui` in the `modules` array - otherwise prose components won't be available:
 
 ```ts
 // nuxt.config.ts
@@ -65,7 +65,7 @@ Recommended `.vscode/settings.json` for Tailwind IntelliSense autocomplete with 
 
 ## UApp wrapper
 
-Always wrap your app in `UApp` — it provides:
+Always wrap your app in `UApp` - it provides:
 - Toast container (`useToast`)
 - Tooltip provider
 - Programmatic overlay context (`useOverlay`)
@@ -149,7 +149,7 @@ Most components follow consistent slot naming:
 
 Many components accept an `items` prop. Two patterns:
 
-**Flat array** — plain list:
+**Flat array** - plain list:
 
 ```ts
 const items = [
@@ -158,7 +158,7 @@ const items = [
 ]
 ```
 
-**Nested array** — groups with automatic separators between them:
+**Nested array** - groups with automatic separators between them:
 
 ```ts
 const items = [
@@ -196,7 +196,7 @@ toast.clear()
 
 ### useOverlay
 
-Programmatic modals, slideovers, drawers — no template `v-model` needed. See [overlays recipe](../recipes/overlays.md) for full patterns.
+Programmatic modals, slideovers, drawers - no template `v-model` needed. See [overlays recipe](../recipes/overlays.md) for full patterns.
 
 ```ts
 const overlay = useOverlay()
@@ -235,7 +235,7 @@ defineShortcuts(extractShortcuts(items))
 
 ### Internationalization (i18n)
 
-Nuxt UI supports 50+ locales. Set the locale on `UApp` — all components inherit it.
+Nuxt UI supports 50+ locales. Set the locale on `UApp` - all components inherit it.
 
 #### Static locale
 
@@ -323,11 +323,11 @@ Each locale has a `dir` property (`'ltr'` or `'rtl'`). `UApp` uses it to set dir
 ## Color mode
 
 Nuxt UI registers `@nuxtjs/color-mode` automatically. Built-in components for switching:
-- `UColorModeButton` — single button toggle (light/dark)
-- `UColorModeSwitch` — toggle switch
-- `UColorModeSelect` — dropdown with system/light/dark options
-- `UColorModeAvatar` — displays different avatar per mode
-- `UColorModeImage` — displays different image per mode
+- `UColorModeButton` - single button toggle (light/dark)
+- `UColorModeSwitch` - toggle switch
+- `UColorModeSelect` - dropdown with system/light/dark options
+- `UColorModeAvatar` - displays different avatar per mode
+- `UColorModeImage` - displays different image per mode
 
 For custom color mode UI, use `useColorMode` with `ClientOnly` to avoid hydration mismatch:
 
@@ -371,5 +371,5 @@ npx nuxi@latest init -t ui/changelog    # Changelog
 
 - Dashboard sidebar hides on mobile, shows a slideover/drawer via `UDashboardSidebar` `mode` prop
 - `UHeader` body slot is the mobile menu content (shown when hamburger is tapped)
-- Most components handle responsiveness automatically — avoid manual breakpoint classes unless needed
+- Most components handle responsiveness automatically - avoid manual breakpoint classes unless needed
 - Use `UPageAside` for sidebars that should hide below `lg` breakpoint

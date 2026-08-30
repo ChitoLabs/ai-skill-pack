@@ -8,19 +8,19 @@ Full per-area check criteria for use during the 15-step Review Order.
 - Per-environment logging configured
 
 ## 2. Routing
-- RESTful `resources`/`resource` — max one level nesting (prefer shallow)
+- RESTful `resources`/`resource` - max one level nesting (prefer shallow)
 - Named routes used consistently
 - Route constraints where input must be validated
 
 ## 3. Controllers
 - Action order: index, show, new, edit, create, update, destroy
-- Strong params with explicit `permit` — no `permit!`
+- Strong params with explicit `permit` - no `permit!`
 - `before_action` scoped with `only:`/`except:`
-- Skinny: no business logic inline — delegate to services
+- Skinny: no business logic inline - delegate to services
 - `respond_to` for multi-format responses
 
 ## 4. Action View
-- No logic in views — use helpers or presenters
+- No logic in views - use helpers or presenters
 - `content_for`/`yield` for layout composition
 - Rails helpers over raw HTML
 
@@ -30,7 +30,7 @@ Full per-area check criteria for use during the 15-step Review Order.
 - Explicit enum values (`enum status: { active: 0, inactive: 1 }`)
 - `validates` not `validates_presence_of`
 - Scopes for reusable queries
-- Limit callbacks — prefer service objects for orchestration
+- Limit callbacks - prefer service objects for orchestration
 
 ## 6. Associations
 - `dependent:` set for all has_many/has_one associations

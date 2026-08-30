@@ -3,7 +3,8 @@ name: playwright-cli
 description: "Trigger: playwright-cli, Automate browser interactions, test web pages and work with Playwright tests. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: microsoft
+  author: sonofmagic
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/playwright-cli/playwright-cli"
   github_url: "https://github.com/sonofmagic/skills/tree/HEAD/skills/playwright-cli/playwright-cli"

@@ -4,6 +4,7 @@ description: "Trigger: ai-seo, When the user wants to optimize content for AI se
 license: Apache-2.0
 metadata:
   author: coreyhaines31
+  adapter: LCubero
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/ai-seo"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/ai-seo"
@@ -46,7 +47,7 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
-- `references/content-patterns.md` — preserved source companion file.
-- `references/evals/evals.json` — preserved source companion file.
-- `references/platform-ranking-factors.md` — preserved source companion file.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/content-patterns.md` - preserved source companion file.
+- `references/evals/evals.json` - preserved source companion file.
+- `references/platform-ranking-factors.md` - preserved source companion file.

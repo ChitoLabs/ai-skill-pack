@@ -1,4 +1,4 @@
-# Error Monitoring — Sentry Node.js SDK
+# Error Monitoring - Sentry Node.js SDK
 
 > Minimum SDK: `@sentry/node` ≥8.0.0  
 > NestJS integration: `@sentry/nestjs` ≥8.0.0  
@@ -9,10 +9,10 @@
 
 ## The Instrument-First Rule
 
-`@sentry/node` patches modules at import time via OpenTelemetry. The instrument file **must be loaded before everything else** — before your framework, before your database driver, before any HTTP client.
+`@sentry/node` patches modules at import time via OpenTelemetry. The instrument file **must be loaded before everything else** - before your framework, before your database driver, before any HTTP client.
 
 ```javascript
-// instrument.js — loaded first
+// instrument.js - loaded first
 const Sentry = require("@sentry/node");
 
 Sentry.init({
@@ -65,17 +65,17 @@ NODE_OPTIONS="--import ./instrument.mjs" npm start
 > **"If you catch an error and don't re-throw it, Sentry never sees it."**
 
 ```javascript
-// ✅ Auto-captured — unhandled, bubbles up
+// ✅ Auto-captured - unhandled, bubbles up
 throw new Error("Unhandled");
 
-// ✅ Auto-captured — re-thrown
+// ✅ Auto-captured - re-thrown
 try {
   await doSomething();
 } catch (err) {
   throw err;
 }
 
-// ❌ NOT captured — swallowed by graceful return
+// ❌ NOT captured - swallowed by graceful return
 try {
   await doSomething();
 } catch (err) {
@@ -102,7 +102,7 @@ try {
 | Express | `setupExpressErrorHandler(app)` | **AFTER routes** | No |
 | Fastify | `setupFastifyErrorHandler(app)` | **BEFORE routes** | No |
 | Koa | `setupKoaErrorHandler(app)` | **FIRST middleware** | No |
-| Hapi | `setupHapiErrorHandler(server)` | Before routes | **YES — must `await`** |
+| Hapi | `setupHapiErrorHandler(server)` | Before routes | **YES - must `await`** |
 | Connect | `setupConnectErrorHandler(app)` | **BEFORE routes** | No |
 | NestJS | `SentryGlobalFilter` + `SentryModule.forRoot()` | AppModule providers | No |
 
@@ -206,13 +206,13 @@ app.use(router.allowedMethods());
 app.listen(3000);
 ```
 
-> **Note:** `setupKoaErrorHandler` has no `shouldHandleError` option — it captures all errors.
+> **Note:** `setupKoaErrorHandler` has no `shouldHandleError` option - it captures all errors.
 
 ---
 
 ## Hapi
 
-`setupHapiErrorHandler` is **async** — you must `await` it. Internally registers a Hapi lifecycle extension on `onPreResponse`.
+`setupHapiErrorHandler` is **async** - you must `await` it. Internally registers a Hapi lifecycle extension on `onPreResponse`.
 
 ```javascript
 require("./instrument");
@@ -289,7 +289,7 @@ require("http").createServer(app).listen(3000);
 
 ## Vanilla Node.js (`http` Module)
 
-No framework integration needed — rely on the global `uncaughtException` / `unhandledRejection` handlers plus manual `captureException` for caught errors.
+No framework integration needed - rely on the global `uncaughtException` / `unhandledRejection` handlers plus manual `captureException` for caught errors.
 
 ```javascript
 require("./instrument");
@@ -315,7 +315,7 @@ server.listen(3000);
 
 ---
 
-## `captureException` — Full API
+## `captureException` - Full API
 
 ```typescript
 function captureException(
@@ -351,7 +351,7 @@ Sentry.captureException(error, {
   },
 });
 
-// Scope callback form — most flexible
+// Scope callback form - most flexible
 Sentry.captureException(error, (scope) => {
   scope.setTag("component", "payment");
   scope.setLevel("error");
@@ -402,7 +402,7 @@ Sentry.captureMessage("Rate limit exceeded", {
 
 ---
 
-## Scope Management (v8+ — Hub Removed)
+## Scope Management (v8+ - Hub Removed)
 
 In SDK v8, `Hub` is removed. Use the three scope types directly.
 
@@ -420,7 +420,7 @@ Sentry.setTag("key", "value");
 // identical to:
 Sentry.getIsolationScope().setTag("key", "value");
 
-// Global scope — survives the lifetime of the process
+// Global scope - survives the lifetime of the process
 Sentry.getGlobalScope().setTag("server_region", "eu-west-1");
 Sentry.getGlobalScope().setContext("runtime", {
   name: "node",
@@ -428,7 +428,7 @@ Sentry.getGlobalScope().setContext("runtime", {
 });
 ```
 
-### `withScope` — Temporary Per-Capture Context
+### `withScope` - Temporary Per-Capture Context
 
 Primary tool for adding context to a single capture without contaminating other events.
 
@@ -445,7 +445,7 @@ Sentry.withScope((scope) => {
 });
 ```
 
-### `withIsolationScope` — Full Isolation (Background Jobs)
+### `withIsolationScope` - Full Isolation (Background Jobs)
 
 Use for background jobs, workers, and queue processors where you need a completely clean scope.
 
@@ -472,9 +472,9 @@ Sentry.withIsolationScope(async (scope) => {
 
 ## Context Enrichment
 
-### `setTag` / `setTags` — Indexed, Searchable
+### `setTag` / `setTags` - Indexed, Searchable
 
-Tags are **indexed** — use them for filtering, grouping, and alerting. Key: max 32 chars, `[a-zA-Z0-9_.:−]`. Value: max 200 chars.
+Tags are **indexed** - use them for filtering, grouping, and alerting. Key: max 32 chars, `[a-zA-Z0-9_.:−]`. Value: max 200 chars.
 
 ```javascript
 Sentry.setTag("db_region", "us-east-1");
@@ -486,9 +486,9 @@ Sentry.setTags({
 });
 ```
 
-### `setContext` — Structured, Non-Searchable
+### `setContext` - Structured, Non-Searchable
 
-Attaches structured data visible in the issue detail view. Not indexed. Normalized to 3 levels deep. The `type` key is reserved — don't use it.
+Attaches structured data visible in the issue detail view. Not indexed. Normalized to 3 levels deep. The `type` key is reserved - don't use it.
 
 ```javascript
 Sentry.setContext("order", {
@@ -505,10 +505,10 @@ Sentry.setContext("database", {
 Sentry.setContext("order", null); // clear it
 ```
 
-### `setUser` — User Identity
+### `setUser` - User Identity
 
 ```javascript
-// On login (writes to isolation scope — safe per-request)
+// On login (writes to isolation scope - safe per-request)
 Sentry.setUser({
   id: user.id,
   email: user.email,
@@ -519,7 +519,7 @@ Sentry.setUser({
 // On logout
 Sentry.setUser(null);
 
-// Express middleware pattern — set per-request
+// Express middleware pattern - set per-request
 app.use((req, res, next) => {
   if (req.user) {
     Sentry.setUser({ id: req.user.id, email: req.user.email });
@@ -528,7 +528,7 @@ app.use((req, res, next) => {
 });
 ```
 
-### `setExtra` / `setExtras` — Arbitrary Data
+### `setExtra` / `setExtras` - Arbitrary Data
 
 Non-indexed supplementary data. Prefer `setContext` for structured objects.
 
@@ -605,9 +605,9 @@ Sentry.addBreadcrumb({
 
 ## `beforeSend` and Filtering Hooks
 
-### `beforeSend` — Modify or Drop Error Events
+### `beforeSend` - Modify or Drop Error Events
 
-Last chance to modify or drop events. Runs after all event processors. Return `null` to drop. **Only one `beforeSend` is allowed** — use `addEventProcessor` for multiple processors.
+Last chance to modify or drop events. Runs after all event processors. Return `null` to drop. **Only one `beforeSend` is allowed** - use `addEventProcessor` for multiple processors.
 
 ```javascript
 Sentry.init({
@@ -661,7 +661,7 @@ Sentry.init({
 });
 ```
 
-### `beforeBreadcrumb` — Filter or Mutate Breadcrumbs
+### `beforeBreadcrumb` - Filter or Mutate Breadcrumbs
 
 ```javascript
 Sentry.init({
@@ -690,7 +690,7 @@ Sentry.init({
 });
 ```
 
-### `ignoreErrors` — Pattern-Based Filtering
+### `ignoreErrors` - Pattern-Based Filtering
 
 ```javascript
 Sentry.init({
@@ -763,7 +763,7 @@ Sentry.init({
 
 | Variable | Description |
 |----------|-------------|
-| `{{ default }}` | Sentry's normally computed hash — extend rather than replace |
+| `{{ default }}` | Sentry's normally computed hash - extend rather than replace |
 | `{{ transaction }}` | Current transaction name |
 | `{{ function }}` | Top function in stack trace |
 | `{{ type }}` | Exception type name |
@@ -775,7 +775,7 @@ Sentry.init({
 Unlike `beforeSend` (one allowed), multiple event processors can be registered. Order is not guaranteed. `beforeSend` always runs last.
 
 ```javascript
-// Runs on every event — enrich with deploy metadata
+// Runs on every event - enrich with deploy metadata
 Sentry.addEventProcessor((event, hint) => {
   event.tags = {
     ...event.tags,
@@ -812,9 +812,9 @@ Sentry.withScope((scope) => {
 
 ---
 
-## `requestDataIntegration` — Per-Request Data
+## `requestDataIntegration` - Per-Request Data
 
-Auto-enabled. Attaches HTTP request data to all events during a request. Each framework auto-forks an isolation scope per request via OpenTelemetry `AsyncLocalStorage` — concurrent requests stay separate.
+Auto-enabled. Attaches HTTP request data to all events during a request. Each framework auto-forks an isolation scope per request via OpenTelemetry `AsyncLocalStorage` - concurrent requests stay separate.
 
 | Field | Captured | Notes |
 |-------|----------|-------|
@@ -852,7 +852,7 @@ Sentry.init({
 `linkedErrorsIntegration` is auto-enabled and follows the standard `Error.cause` chain.
 
 ```javascript
-// Standard Error.cause — captured automatically
+// Standard Error.cause - captured automatically
 try {
   await connectToDatabase();
 } catch (dbError) {
@@ -868,7 +868,7 @@ Sentry.init({
 });
 ```
 
-### `extraErrorDataIntegration` — Custom Error Properties
+### `extraErrorDataIntegration` - Custom Error Properties
 
 Captures non-standard properties on Error subclasses:
 
@@ -894,7 +894,7 @@ class HttpError extends Error {
 `@sentry/node` batches events and sends asynchronously. Always flush before process exit to avoid losing the last events.
 
 ```javascript
-// Graceful shutdown — HTTP server
+// Graceful shutdown - HTTP server
 process.on("SIGTERM", async () => {
   server.close(async () => {
     await Sentry.flush(2000); // wait up to 2s for queue to drain
@@ -902,7 +902,7 @@ process.on("SIGTERM", async () => {
   });
 });
 
-// Serverless (Lambda, Cloud Functions) — close disables SDK after flush
+// Serverless (Lambda, Cloud Functions) - close disables SDK after flush
 export const handler = async (event) => {
   try {
     return await processEvent(event);
@@ -916,7 +916,7 @@ export const handler = async (event) => {
 
 ---
 
-## `Sentry.init()` — Error-Relevant Options
+## `Sentry.init()` - Error-Relevant Options
 
 ```typescript
 Sentry.init({
@@ -928,8 +928,8 @@ Sentry.init({
   enabled?: boolean;               // default: true
 
   // Sampling
-  sampleRate?: number;             // 0.0–1.0 error event sample rate
-  tracesSampleRate?: number;       // 0.0–1.0 transaction sample rate
+  sampleRate?: number;             // 0.0-1.0 error event sample rate
+  tracesSampleRate?: number;       // 0.0-1.0 transaction sample rate
 
   // Data limits
   maxBreadcrumbs?: number;         // default: 100
@@ -937,7 +937,7 @@ Sentry.init({
   normalizeDepth?: number;         // default: 3
 
   // Privacy
-  sendDefaultPii?: boolean;        // default: false — enables body/cookies/IP
+  sendDefaultPii?: boolean;        // default: false - enables body/cookies/IP
 
   // Filtering
   ignoreErrors?: Array<string | RegExp>;
@@ -949,7 +949,7 @@ Sentry.init({
   beforeBreadcrumb?: (breadcrumb: Breadcrumb, hint?: BreadcrumbHint) => Breadcrumb | null;
 
   // Node-specific
-  enableLogs?: boolean;             // default: false — Sentry.logger.*
+  enableLogs?: boolean;             // default: false - Sentry.logger.*
   attachStacktrace?: boolean;       // add stack traces to captureMessage
   includeLocalVariables?: boolean;  // include local vars in stack frames
   onFatalError?: (error: Error) => void;
@@ -961,7 +961,7 @@ Sentry.init({
 
 ## Bun
 
-`@sentry/bun` is a thin wrapper over `@sentry/node`. The API is identical — use `--preload` instead of `require("./instrument")` first.
+`@sentry/bun` is a thin wrapper over `@sentry/node`. The API is identical - use `--preload` instead of `require("./instrument")` first.
 
 ```typescript
 // instrument.ts
@@ -989,13 +989,13 @@ const server = Bun.serve({
     return new Response("Hello from Bun!");
   },
   error(error) {
-    Sentry.captureException(error); // manual — no setupErrorHandler for Bun.serve
+    Sentry.captureException(error); // manual - no setupErrorHandler for Bun.serve
     return new Response("Internal Server Error", { status: 500 });
   },
 });
 ```
 
-> **Profiling:** `@sentry/profiling-node` uses a native addon — incompatible with Bun's runtime. Omit `nodeProfilingIntegration()` in Bun apps.
+> **Profiling:** `@sentry/profiling-node` uses a native addon - incompatible with Bun's runtime. Omit `nodeProfilingIntegration()` in Bun apps.
 
 ---
 
@@ -1026,7 +1026,7 @@ Deno.serve({ port: 3000 }, async (request) => {
 });
 ```
 
-> **Requirements:** Deno 2+. Run with `--allow-net --allow-env --allow-read`. No `setupExpressErrorHandler` equivalent — use `try/catch` + `captureException`.
+> **Requirements:** Deno 2+. Run with `--allow-net --allow-env --allow-read`. No `setupExpressErrorHandler` equivalent - use `try/catch` + `captureException`.
 
 ---
 
@@ -1065,7 +1065,7 @@ await Sentry.withIsolationScope(async (scope) => {
 // Global (all events, process lifetime)
 Sentry.getGlobalScope().setTag("app", "my-api");
 
-// Framework error handlers — placement matters!
+// Framework error handlers - placement matters!
 Sentry.setupExpressErrorHandler(app);          // Express: AFTER routes
 Sentry.setupFastifyErrorHandler(app);          // Fastify: BEFORE routes
 Sentry.setupKoaErrorHandler(app);              // Koa: FIRST middleware
@@ -1085,11 +1085,11 @@ await Sentry.flush(2000);
 | Errors not appearing in Sentry | `instrument.js` loaded too late | Ensure it's the first `require()` or loaded via `--import` / `--preload` before app code |
 | Express errors not captured | `setupExpressErrorHandler` placed before routes | Move it **after** all route definitions |
 | Fastify errors not captured | `setupFastifyErrorHandler` placed after routes | Move it **before** route definitions (opposite of Express) |
-| Hapi error handler silently fails | `setupHapiErrorHandler` not awaited | Must `await Sentry.setupHapiErrorHandler(server)` — it's the only async handler |
-| NestJS `HttpException` not captured | Intentional — `SentryGlobalFilter` skips control flow exceptions | Create a custom filter extending `SentryGlobalFilter` and override `catch()` to capture `HttpException` if desired |
-| `setUser()` leaks between requests | Using global scope for user data | Use `Sentry.setUser()` (isolation scope) — it's auto-forked per request by framework integrations |
-| `withScope` changes persisting | Wrong scope layer | `withScope` creates a temporary current scope — changes don't survive the callback. Use `setTag()` for request-lifetime data |
-| `beforeSend` returning wrong type | Not returning `event` or `null` | `beforeSend` must return the event object or `null` to drop — `undefined` causes silent failures |
-| Breadcrumbs not showing | `maxBreadcrumbs: 0` | Check init config — default is 100; set to desired max |
-| Duplicate error events | Multiple capture paths | Ensure only one handler captures each error — e.g., don't both re-throw and call `captureException` |
+| Hapi error handler silently fails | `setupHapiErrorHandler` not awaited | Must `await Sentry.setupHapiErrorHandler(server)` - it's the only async handler |
+| NestJS `HttpException` not captured | Intentional - `SentryGlobalFilter` skips control flow exceptions | Create a custom filter extending `SentryGlobalFilter` and override `catch()` to capture `HttpException` if desired |
+| `setUser()` leaks between requests | Using global scope for user data | Use `Sentry.setUser()` (isolation scope) - it's auto-forked per request by framework integrations |
+| `withScope` changes persisting | Wrong scope layer | `withScope` creates a temporary current scope - changes don't survive the callback. Use `setTag()` for request-lifetime data |
+| `beforeSend` returning wrong type | Not returning `event` or `null` | `beforeSend` must return the event object or `null` to drop - `undefined` causes silent failures |
+| Breadcrumbs not showing | `maxBreadcrumbs: 0` | Check init config - default is 100; set to desired max |
+| Duplicate error events | Multiple capture paths | Ensure only one handler captures each error - e.g., don't both re-throw and call `captureException` |
 | Stack traces show minified code | Source maps not uploaded | Configure `@sentry/cli` sourcemap upload in your build pipeline |

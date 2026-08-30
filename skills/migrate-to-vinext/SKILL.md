@@ -3,7 +3,8 @@ name: migrate-to-vinext
 description: "Trigger: migrate-to-vinext, Migrates Next.js projects to vinext (Vite-based Next.js reimplementation). Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: cloudflare
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/vinext/migrate-to-vinext"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/migrate-to-vinext"

@@ -4,6 +4,7 @@ description: "Trigger: n8n-conventions, Quick reference for n8n patterns. Preser
 license: Apache-2.0
 metadata:
   author: n8n-io
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/n8n-io/n8n/n8n-conventions"
   github_url: "https://github.com/n8n-io/n8n/tree/HEAD/.claude/plugins/n8n/skills/conventions"

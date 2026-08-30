@@ -3,9 +3,9 @@ name: rails-migration-safety
 description: "Trigger: rails-migration-safety, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: igmarin
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rails-migration-safety"
 ---
 
 ## Activation Contract

@@ -17,7 +17,7 @@ UApp
     └── UDashboardGroup
         ├── UDashboardSidebar
         │   ├── #header (logo, search button)
-        │   ├── #default (navigation) — receives { collapsed } slot prop
+        │   ├── #default (navigation) - receives { collapsed } slot prop
         │   └── #footer (user menu)
         └── NuxtPage
             └── UDashboardPanel
@@ -111,9 +111,9 @@ definePageMeta({ layout: 'dashboard' })
 
 ### Common mistakes
 
-- Forgetting `definePageMeta({ layout: 'dashboard' })` — the page won't use the dashboard layout without it.
-- Putting content directly in `UDashboardPanel` without using `#body` slot — content won't scroll properly.
-- Not handling the `collapsed` slot prop — sidebar content should adapt when collapsed (hide labels, center icons).
+- Forgetting `definePageMeta({ layout: 'dashboard' })` - the page won't use the dashboard layout without it.
+- Putting content directly in `UDashboardPanel` without using `#body` slot - content won't scroll properly.
+- Not handling the `collapsed` slot prop - sidebar content should adapt when collapsed (hide labels, center icons).
 
 ## Key components
 
@@ -137,7 +137,7 @@ Resizable, collapsible sidebar. Must be inside `DashboardGroup`.
 | `side` | `'left'` | `'left'` or `'right'` |
 | `mode` | `'slideover'` | Mobile: `'modal'`, `'slideover'`, `'drawer'` |
 
-All slots receive `{ collapsed, collapse }` — `collapsed` is the boolean state, `collapse(value)` toggles it programmatically. Use `v-model:collapsed` and `v-model:open` (mobile) for state control.
+All slots receive `{ collapsed, collapse }` - `collapsed` is the boolean state, `collapse(value)` toggles it programmatically. Use `v-model:collapsed` and `v-model:open` (mobile) for state control.
 
 ### DashboardPanel
 
@@ -150,7 +150,7 @@ Toolbar: same slots, sits below navbar for filters/actions.
 
 ### UNavigationMenu in sidebar
 
-Always pass `:collapsed="collapsed"` to `UNavigationMenu` inside a collapsible sidebar — it auto-hides labels and centers icons. Use `NavigationMenuItem[][]` (array of arrays) for separate groups (main nav + footer links).
+Always pass `:collapsed="collapsed"` to `UNavigationMenu` inside a collapsible sidebar - it auto-hides labels and centers icons. Use `NavigationMenuItem[][]` (array of arrays) for separate groups (main nav + footer links).
 
 ## Multi-panel (list-detail)
 

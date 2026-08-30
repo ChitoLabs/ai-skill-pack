@@ -1,9 +1,10 @@
 ---
 name: webapp-testing
-description: "Interact with and test local web applications using Playwright: verify frontend behavior, debug UI state, capture screenshots, collect browser logs, and automate local browser checks."
+description: "Trigger: test or debug a local web application with Playwright. Verify specified frontend behavior, UI state, screenshots, browser logs, or local checks."
 license: Complete terms in LICENSE.txt
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/webapp-testing"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/webapp-testing"

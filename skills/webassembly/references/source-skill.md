@@ -3,7 +3,7 @@ name: webassembly
 description: TODO - fill from upstream context
 license: Apache-2.0
 metadata:
-  author: unknown
+  author: ffsshhttiikk
   version: 0.1
   github_url: "https://github.com/ffsshhttiikk/opencode-agents-skills/tree/HEAD/webassembly"
 ---

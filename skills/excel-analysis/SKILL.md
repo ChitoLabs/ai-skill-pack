@@ -4,6 +4,7 @@ description: "Trigger: excel-analysis, Analyze Excel spreadsheets, create pivot 
 license: Apache-2.0
 metadata:
   author: davila7
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/davila7/claude-code-templates/excel-analysis"
   github_url: "https://github.com/davila7/claude-code-templates/tree/HEAD/cli-tool/components/skills/enterprise-communication/excel-analysis"

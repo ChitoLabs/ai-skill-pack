@@ -4,6 +4,7 @@ description: "Trigger: excalidraw-diagram-generator, Generate Excalidraw diagram
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/excalidraw-diagram-generator"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/excalidraw-diagram-generator"

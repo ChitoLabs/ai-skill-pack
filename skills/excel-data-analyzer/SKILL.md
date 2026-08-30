@@ -4,6 +4,7 @@ description: "Trigger: excel-data-analyzer. Preserve source workflow with portab
 license: Apache-2.0
 metadata:
   author: mineru98
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mineru98/skills-store/excel-data-analyzer"
   github_url: "https://github.com/mineru98/skills-store/tree/HEAD/.codex/skills/excel-data-analyzer"

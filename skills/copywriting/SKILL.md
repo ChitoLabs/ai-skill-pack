@@ -1,10 +1,11 @@
 ---
 name: copywriting
-description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "subheadline," "hero section copy," "above the fold," "this copy is weak," "make this more compelling," or "help me describe my product." Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing.
+description: "Trigger: write marketing copy, rewrite a landing page, improve a headline or CTA. Create persuasive website copy for a defined audience and conversion goal."
 license: Apache-2.0
 metadata:
   version: 2.0.0
   author: coreyhaines31
+  adapter: LCubero
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/copywriting"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/copywriting"
 ---
@@ -66,12 +67,12 @@ Each section should advance one argument. Build a logical flow down the page.
 
 ### Core Principles
 
-1. **Simple over complex** — "Use" not "utilize," "help" not "facilitate"
-2. **Specific over vague** — Avoid "streamline," "optimize," "innovative"
-3. **Active over passive** — "We generate reports" not "Reports are generated"
-4. **Confident over qualified** — Remove "almost," "very," "really"
-5. **Show over tell** — Describe the outcome instead of using adverbs
-6. **Honest over sensational** — Fabricated statistics or testimonials erode trust and create legal liability
+1. **Simple over complex** - "Use" not "utilize," "help" not "facilitate"
+2. **Specific over vague** - Avoid "streamline," "optimize," "innovative"
+3. **Active over passive** - "We generate reports" not "Reports are generated"
+4. **Confident over qualified** - Remove "almost," "very," "really"
+5. **Show over tell** - Describe the outcome instead of using adverbs
+6. **Honest over sensational** - Fabricated statistics or testimonials erode trust and create legal liability
 
 ### Quick Quality Check
 
@@ -103,7 +104,7 @@ Questions engage readers and make them think about their own situation.
 Analogies make abstract concepts concrete and memorable.
 
 ### Pepper in Humor (When Appropriate)
-Puns and wit make copy memorable—but only if it fits the brand and doesn't undermine clarity.
+Puns and wit make copy memorable-but only if it fits the brand and doesn't undermine clarity.
 
 ---
 
@@ -238,8 +239,8 @@ For key elements, explain:
 
 ### Alternatives
 For headlines and CTAs, provide 2-3 options:
-- Option A: [copy] — [rationale]
-- Option B: [copy] — [rationale]
+- Option A: [copy] - [rationale]
+- Option B: [copy] - [rationale]
 
 ### Meta Content (if relevant)
 - Page title (for SEO)

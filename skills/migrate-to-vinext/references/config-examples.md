@@ -2,7 +2,7 @@
 
 These examples stay minimal on purpose. If you add custom build tuning on Vite 8, prefer `oxc`, `optimizeDeps.rolldownOptions`, and `build.rolldownOptions` / `worker.rolldownOptions` over older `esbuild` and `build.rollupOptions` settings.
 
-## Pages Router — Local Development
+## Pages Router - Local Development
 
 No Cloudflare, no deployment. Simplest possible config.
 
@@ -15,7 +15,7 @@ export default defineConfig({
 });
 ```
 
-## App Router — Local Development
+## App Router - Local Development
 
 vinext auto-registers `@vitejs/plugin-rsc` when an `app/` directory is detected and the `rsc` option is not `false`. No extra config needed.
 
@@ -36,7 +36,7 @@ export default defineConfig({
 });
 ```
 
-## Pages Router — Cloudflare Workers
+## Pages Router - Cloudflare Workers
 
 ```ts
 import vinext from "vinext";
@@ -48,7 +48,7 @@ export default defineConfig({
 });
 ```
 
-## App Router — Cloudflare Workers
+## App Router - Cloudflare Workers
 
 Full manual config with explicit RSC plugin registration and Cloudflare multi-environment setup:
 
@@ -77,7 +77,7 @@ export default defineConfig({
 
 In most cases `vinext deploy` generates this automatically. Only use manual config when customizing the worker entry or adding bindings.
 
-## wrangler.jsonc — Cloudflare Workers
+## wrangler.jsonc - Cloudflare Workers
 
 Minimal config for deployment:
 
@@ -154,7 +154,7 @@ Run `wrangler types` to generate TypeScript types for the `env` object.
 
 Do NOT use `getPlatformProxy()`, `getRequestContext()`, or custom worker entries with `fetch(request, env)`. These are older patterns. `cloudflare:workers` is the recommended approach.
 
-## App Router — Other Platforms (via Nitro)
+## App Router - Other Platforms (via Nitro)
 
 For deploying to Vercel, Netlify, AWS, Deno Deploy, or any other Nitro-supported platform:
 

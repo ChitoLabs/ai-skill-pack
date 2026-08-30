@@ -4,6 +4,7 @@ description: "Trigger: sleek-design-mobile-apps, Use when the user wants to desi
 license: Apache-2.0
 metadata:
   author: sleekdotdesign
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/sleekdotdesign/agent-skills/sleek-design-mobile-apps"
   github_url: "https://github.com/sleekdotdesign/agent-skills/tree/HEAD/skills/design-mobile-apps"

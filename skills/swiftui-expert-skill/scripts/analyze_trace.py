@@ -255,7 +255,7 @@ def _resolve_run(info, requested: int | None):
     If `requested` is given, return that run or None on miss (with a friendly
     error). If unset and the trace has exactly one run, default to it. If
     unset and there are multiple runs, error out so the agent picks
-    explicitly — silently picking run 1 lost data for the user.
+    explicitly - silently picking run 1 lost data for the user.
     """
     if not info.runs:
         print("error: trace has no runs", file=sys.stderr)

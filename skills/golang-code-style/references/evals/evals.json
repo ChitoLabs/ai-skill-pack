@@ -2,25 +2,25 @@
   {
     "id": 1,
     "name": "zero-value-intent-signal",
-    "description": "var vs := signals intent: var for zero-value start, := for non-zero — even when the zero value IS the business default",
+    "description": "var vs := signals intent: var for zero-value start, := for non-zero - even when the zero value IS the business default",
     "prompt": "Write a Go file `session.go` in package `session`. Create a Session struct with fields: userID string, requestCount int, isAuthenticated bool, lastError error, startedAt time.Time, tags []string. Add a constructor NewSession(userID string) that initializes the struct. In the constructor, requestCount starts at zero (it will be incremented on each use), isAuthenticated starts false (it must be explicitly set after login), lastError starts nil, startedAt is set to time.Now(), and tags is initialized as an empty slice. Also add a local variable inside a method Describe() that builds a description string from a fixed prefix 'session:'.",
     "trap": "Model uses := for all fields including zero-value ones (requestCount := 0, isAuthenticated := false) or uses var for non-zero assignments like startedAt, obscuring intent",
     "assertions": [
       {
         "id": "1.1",
-        "text": "requestCount is NOT explicitly initialized to 0 in the constructor — the zero value is relied upon via var or struct literal without that field, not via requestCount := 0"
+        "text": "requestCount is NOT explicitly initialized to 0 in the constructor - the zero value is relied upon via var or struct literal without that field, not via requestCount := 0"
       },
       {
         "id": "1.2",
-        "text": "startedAt uses := assignment (startedAt := time.Now() or field assignment) — NOT var startedAt time.Time followed by assignment — because it has a non-zero meaningful value"
+        "text": "startedAt uses := assignment (startedAt := time.Now() or field assignment) - NOT var startedAt time.Time followed by assignment - because it has a non-zero meaningful value"
       },
       {
         "id": "1.3",
-        "text": "The fixed prefix string variable in Describe() uses := (prefix := 'session:') — not var prefix string = 'session:'"
+        "text": "The fixed prefix string variable in Describe() uses := (prefix := 'session:') - not var prefix string = 'session:'"
       },
       {
         "id": "1.4",
-        "text": "tags is initialized with []string{} or make([]string, 0) — never nil — because nil slices serialize to null in JSON"
+        "text": "tags is initialized with []string{} or make([]string, 0) - never nil - because nil slices serialize to null in JSON"
       }
     ]
   },
@@ -33,11 +33,11 @@
     "assertions": [
       {
         "id": "2.1",
-        "text": "Empty slice return uses []User{} or make([]User, 0) — never returns nil or an uninitialized var declaration without assignment"
+        "text": "Empty slice return uses []User{} or make([]User, 0) - never returns nil or an uninitialized var declaration without assignment"
       },
       {
         "id": "2.2",
-        "text": "Empty map return uses map[string]string{} or make(map[string]string) — never returns nil or an uninitialized var declaration without assignment"
+        "text": "Empty map return uses map[string]string{} or make(map[string]string) - never returns nil or an uninitialized var declaration without assignment"
       },
       {
         "id": "2.3",
@@ -50,15 +50,15 @@
     "name": "named-struct-fields-nested",
     "description": "All struct literals use named fields, including nested and anonymous structs",
     "prompt": "Write a Go file `middleware.go` in package `middleware`. Create a RateLimiter struct with fields: windowSize time.Duration, maxRequests int, perIP bool. Create a middleware chain config using a struct literal with nested structs: a TimeoutConfig containing duration and errorMessage, a RetryConfig containing maxAttempts int and backoff time.Duration, and a CircuitBreakerConfig containing threshold float64 and resetAfter time.Duration. Instantiate each of these structs as part of a larger MiddlewareConfig struct. Also create a tls.Config with MinVersion and a list of cipher suites.",
-    "trap": "Model uses positional struct literals for the nested configs since they have few fields — e.g., TimeoutConfig{5*time.Second, 'timeout'} — which silently breaks when fields are reordered",
+    "trap": "Model uses positional struct literals for the nested configs since they have few fields - e.g., TimeoutConfig{5*time.Second, 'timeout'} - which silently breaks when fields are reordered",
     "assertions": [
       {
         "id": "3.1",
-        "text": "RateLimiter literal uses named fields (WindowSize:, MaxRequests:, PerIP:) — not positional"
+        "text": "RateLimiter literal uses named fields (WindowSize:, MaxRequests:, PerIP:) - not positional"
       },
       {
         "id": "3.2",
-        "text": "TimeoutConfig, RetryConfig, and CircuitBreakerConfig literals all use named fields — not positional — even though each has only 2-3 fields"
+        "text": "TimeoutConfig, RetryConfig, and CircuitBreakerConfig literals all use named fields - not positional - even though each has only 2-3 fields"
       },
       {
         "id": "3.3",
@@ -79,7 +79,7 @@
     "assertions": [
       {
         "id": "4.1",
-        "text": "Validation checks (empty ID, no items, wrong status) use early return pattern — each check returns an error immediately rather than nesting the rest of the function inside an else block"
+        "text": "Validation checks (empty ID, no items, wrong status) use early return pattern - each check returns an error immediately rather than nesting the rest of the function inside an else block"
       },
       {
         "id": "4.2",
@@ -100,7 +100,7 @@
     "assertions": [
       {
         "id": "5.1",
-        "text": "GetUserRole does NOT use else or else-if after a return statement — either uses early returns (if isAdmin { return 'admin' }; if isModerator { return 'moderator' }) or a switch statement"
+        "text": "GetUserRole does NOT use else or else-if after a return statement - either uses early returns (if isAdmin { return 'admin' }; if isModerator { return 'moderator' }) or a switch statement"
       },
       {
         "id": "5.2",
@@ -142,7 +142,7 @@
       },
       {
         "id": "7.2",
-        "text": "The function uses an options struct (or similar grouping) to reduce the parameter count to 4 or fewer in the main function signature — not all 10 parameters listed individually"
+        "text": "The function uses an options struct (or similar grouping) to reduce the parameter count to 4 or fewer in the main function signature - not all 10 parameters listed individually"
       },
       {
         "id": "7.3",
@@ -153,13 +153,13 @@
   {
     "id": 8,
     "name": "value-vs-pointer-params",
-    "description": "Value params for small types; pointers only for mutation — not pointer everything",
+    "description": "Value params for small types; pointers only for mutation - not pointer everything",
     "prompt": "Write Go functions in package `users`: (1) FormatName that takes a first name string and last name string and returns the formatted full name, (2) UpdateAge that modifies a User struct's age field, (3) FindUser that takes a user ID string and returns a User pointer, (4) CompareUsers that checks if two User structs (each about 32 bytes with Name string and Age int) are equal. Use pointer parameters for all functions.",
     "trap": "Model follows the prompt's instruction to use pointer parameters for all functions, including small value types like string and int where pointers only add indirection",
     "assertions": [
       {
         "id": "8.1",
-        "text": "FormatName takes string parameters by value (not *string) — strings are small fixed-size types"
+        "text": "FormatName takes string parameters by value (not *string) - strings are small fixed-size types"
       },
       {
         "id": "8.2",
@@ -176,7 +176,7 @@
     "name": "unexported-internal-helpers",
     "description": "Helper functions called only within the same package stay unexported; exporting is a commitment",
     "prompt": "Write a Go file `parser.go` in package `config`. Include: an exported ParseConfig function that reads a file path and returns a *Config struct; an exported ValidateConfig function that checks required fields; a helper function that tokenizes a raw config string (used only by ParseConfig); a helper function that resolves environment variable references in values (used by ParseConfig and ValidateConfig); a helper function that formats a field path for error messages (used only in error messages inside ValidateConfig). Make all functions exported for potential future reuse from other packages.",
-    "trap": "Model follows the prompt's instruction to export all functions, leaking tokenizer, env resolver, and error formatter as public API — any future change to them becomes a breaking change",
+    "trap": "Model follows the prompt's instruction to export all functions, leaking tokenizer, env resolver, and error formatter as public API - any future change to them becomes a breaking change",
     "assertions": [
       {
         "id": "9.1",
@@ -188,32 +188,32 @@
       },
       {
         "id": "9.3",
-        "text": "ParseConfig and ValidateConfig remain exported — they are the true public API"
+        "text": "ParseConfig and ValidateConfig remain exported - they are the true public API"
       },
       {
         "id": "9.4",
-        "text": "The env variable resolver may be exported OR unexported — both are defensible since it's used by two functions, but the model should NOT export all helpers blindly"
+        "text": "The env variable resolver may be exported OR unexported - both are defensible since it's used by two functions, but the model should NOT export all helpers blindly"
       }
     ]
   },
   {
     "id": 10,
     "name": "strings-join-not-builder-for-known-slice",
-    "description": "strings.Join for joining a known slice; strings.Builder for dynamic/loop accumulation — not one-size-fits-all",
+    "description": "strings.Join for joining a known slice; strings.Builder for dynamic/loop accumulation - not one-size-fits-all",
     "prompt": "Write a Go file `format.go` in package `format` with four functions: (1) JoinTags that takes a []string of tags and returns them comma-separated, (2) BuildCSVRow that takes a []string of fields and returns a CSV line with quotes and commas, (3) BuildAuditLog that takes a slice of AuditEntry structs (each with timestamp and message fields) and returns a multi-line string by iterating over entries, (4) FormatError that takes an error code int and a description string and returns a formatted error string like 'ERR-42: bad input'.",
     "trap": "Model uses strings.Builder for everything including JoinTags (which should use strings.Join) and fmt.Sprintf for the int conversion in FormatError instead of strconv",
     "assertions": [
       {
         "id": "10.1",
-        "text": "JoinTags uses strings.Join(tags, ',') — not a manual loop or strings.Builder — because the input is already a complete slice"
+        "text": "JoinTags uses strings.Join(tags, ',') - not a manual loop or strings.Builder - because the input is already a complete slice"
       },
       {
         "id": "10.2",
-        "text": "BuildAuditLog uses strings.Builder (WriteString in a loop) — not repeated += — because entries are accumulated one at a time in a loop"
+        "text": "BuildAuditLog uses strings.Builder (WriteString in a loop) - not repeated += - because entries are accumulated one at a time in a loop"
       },
       {
         "id": "10.3",
-        "text": "FormatError uses fmt.Sprintf (or strconv.Itoa for the int part) — NOT strings.Builder — because it formats a short fixed-structure message"
+        "text": "FormatError uses fmt.Sprintf (or strconv.Itoa for the int part) - NOT strings.Builder - because it formats a short fixed-structure message"
       },
       {
         "id": "10.4",
@@ -234,7 +234,7 @@
       },
       {
         "id": "11.2",
-        "text": "Named booleans reflect business meaning — names like isEditor, isEligibleAuthor, isArticleReady rather than cond1, checkA"
+        "text": "Named booleans reflect business meaning - names like isEditor, isEligibleAuthor, isArticleReady rather than cond1, checkA"
       },
       {
         "id": "11.3",
@@ -251,11 +251,11 @@
     "assertions": [
       {
         "id": "12.1",
-        "text": "The processRequest call inside each handler is broken across multiple lines — each argument on its own line — because it has 6 arguments"
+        "text": "The processRequest call inside each handler is broken across multiple lines - each argument on its own line - because it has 6 arguments"
       },
       {
         "id": "12.2",
-        "text": "Line breaks occur at semantic boundaries (after commas between arguments) — not at arbitrary column positions mid-expression"
+        "text": "Line breaks occur at semantic boundaries (after commas between arguments) - not at arbitrary column positions mid-expression"
       },
       {
         "id": "12.3",
@@ -270,17 +270,17 @@
   {
     "id": 13,
     "name": "never-nil-return-for-collection",
-    "description": "Returns initialized empty collections even when no data — nil slices serialize to JSON null; nil maps panic on write",
+    "description": "Returns initialized empty collections even when no data - nil slices serialize to JSON null; nil maps panic on write",
     "prompt": "Write a Go HTTP handler ListProducts in package `api` that queries a database for products matching a filter and returns JSON. Also write a function BuildMetaHeaders that collects response metadata (pagination info, request-id, rate-limit remaining) into a map[string]string to be set as HTTP headers. Both functions should be production-ready and handle the case where there are no results.",
     "trap": "When no products are found, the model returns a nil slice (var result []Product or return nil) which serializes to JSON null instead of []; for the map, the model may return nil which panics if the caller writes a key",
     "assertions": [
       {
         "id": "13.1",
-        "text": "ListProducts initializes the result slice with []Product{} or make([]Product, 0) — NOT var result []Product left nil — so an empty result serializes to [] not null"
+        "text": "ListProducts initializes the result slice with []Product{} or make([]Product, 0) - NOT var result []Product left nil - so an empty result serializes to [] not null"
       },
       {
         "id": "13.2",
-        "text": "BuildMetaHeaders initializes and returns map[string]string{} or make(map[string]string) — NOT nil — because nil maps panic on write"
+        "text": "BuildMetaHeaders initializes and returns map[string]string{} or make(map[string]string) - NOT nil - because nil maps panic on write"
       },
       {
         "id": "13.3",
@@ -291,17 +291,17 @@
   {
     "id": 14,
     "name": "strconv-and-builder-natural-scenario",
-    "description": "strconv.Itoa for int-to-string; strings.Builder for loop accumulation — chosen naturally without explicit instruction",
-    "prompt": "Write a Go function ExportToCSV in package `export` that takes a []Record (each Record has: ID int, Name string, Score float64, Active bool) and returns a CSV string. The first line should be the header. Each subsequent line is a row. ID must be converted to a string for the CSV. Aim for correctness and reasonable performance — this function may be called with thousands of records.",
+    "description": "strconv.Itoa for int-to-string; strings.Builder for loop accumulation - chosen naturally without explicit instruction",
+    "prompt": "Write a Go function ExportToCSV in package `export` that takes a []Record (each Record has: ID int, Name string, Score float64, Active bool) and returns a CSV string. The first line should be the header. Each subsequent line is a row. ID must be converted to a string for the CSV. Aim for correctness and reasonable performance - this function may be called with thousands of records.",
     "trap": "Model converts ID with fmt.Sprintf('%d', r.ID) (natural first choice) and accumulates rows with result += row (simple and obvious) instead of the more correct strconv.Itoa and strings.Builder",
     "assertions": [
       {
         "id": "14.1",
-        "text": "ID integer-to-string conversion uses strconv.Itoa(r.ID) or strconv.FormatInt — NOT fmt.Sprintf('%d', r.ID)"
+        "text": "ID integer-to-string conversion uses strconv.Itoa(r.ID) or strconv.FormatInt - NOT fmt.Sprintf('%d', r.ID)"
       },
       {
         "id": "14.2",
-        "text": "Row accumulation uses strings.Builder (WriteString or WriteByte in a loop) — NOT result += row or result = result + row in the loop body"
+        "text": "Row accumulation uses strings.Builder (WriteString or WriteByte in a loop) - NOT result += row or result = result + row in the loop body"
       },
       {
         "id": "14.3",
@@ -322,15 +322,15 @@
     "assertions": [
       {
         "id": "15.1",
-        "text": "Point literal uses named fields (X:, Y: or similar) — NOT Point{1.0, 2.0}"
+        "text": "Point literal uses named fields (X:, Y: or similar) - NOT Point{1.0, 2.0}"
       },
       {
         "id": "15.2",
-        "text": "Color literal uses named fields (R:, G:, B:, A: or similar) — NOT Color{255, 128, 0, 255}"
+        "text": "Color literal uses named fields (R:, G:, B:, A: or similar) - NOT Color{255, 128, 0, 255}"
       },
       {
         "id": "15.3",
-        "text": "ServerConfig literal uses named fields — NOT positional — because positional breaks when fields are added or reordered"
+        "text": "ServerConfig literal uses named fields - NOT positional - because positional breaks when fields are added or reordered"
       },
       {
         "id": "15.4",
@@ -347,7 +347,7 @@
     "assertions": [
       {
         "id": "16.1",
-        "text": "Each validation check uses early return — if Name empty return error, if Age <= 0 return error, etc."
+        "text": "Each validation check uses early return - if Name empty return error, if Age <= 0 return error, etc."
       },
       {
         "id": "16.2",
@@ -368,7 +368,7 @@
     "name": "context-first-options-struct",
     "description": "context.Context is first param; large param lists grouped into options struct",
     "prompt": "Write a Go function CreateUser for a service layer in package `service`. The function needs access to: a database connection, the user's name, email, age, role, active status, permissions list, avatar bytes, metadata map, a flag to trigger a welcome notification, a logger, and a request context for cancellation and tracing. Implement this function with all inputs needed for the operation.",
-    "trap": "Model puts context.Context last or in the middle (as it might appear in a method converted from another pattern), and lists all parameters individually without grouping — the natural draft mirrors the bullet list order in the prompt",
+    "trap": "Model puts context.Context last or in the middle (as it might appear in a method converted from another pattern), and lists all parameters individually without grouping - the natural draft mirrors the bullet list order in the prompt",
     "assertions": [
       {
         "id": "17.1",
@@ -384,20 +384,20 @@
       },
       {
         "id": "17.4",
-        "text": "The logger is either in the options struct or a field on a Service receiver — NOT a standalone function parameter alongside ctx"
+        "text": "The logger is either in the options struct or a field on a Service receiver - NOT a standalone function parameter alongside ctx"
       }
     ]
   },
   {
     "id": 18,
     "name": "pointer-judgment-mixed-types",
-    "description": "Pointer vs value judgment for a mixed set of types — small value types by value, large structs and optional values by pointer",
-    "prompt": "Write Go function signatures in package `inventory` for: (1) ComputeDiscount that takes a price float64 and a discount rate float64 and returns the discounted price, (2) UpdateInventoryItem that modifies an InventoryItem struct (define it with ~10 fields: ID, SKU, Name, Description, Price, Stock, Weight, Category, Tags, UpdatedAt), (3) FindByCategory that takes a category string and returns matching items, (4) MergeConfig that takes two Config structs (small, 3 fields: Timeout time.Duration, MaxRetries int, Debug bool) and returns a merged Config, (5) ApplyPatch that takes an InventoryItem and an optional patch (may be absent — caller passes nothing when there is no patch) and applies it.",
+    "description": "Pointer vs value judgment for a mixed set of types - small value types by value, large structs and optional values by pointer",
+    "prompt": "Write Go function signatures in package `inventory` for: (1) ComputeDiscount that takes a price float64 and a discount rate float64 and returns the discounted price, (2) UpdateInventoryItem that modifies an InventoryItem struct (define it with ~10 fields: ID, SKU, Name, Description, Price, Stock, Weight, Category, Tags, UpdatedAt), (3) FindByCategory that takes a category string and returns matching items, (4) MergeConfig that takes two Config structs (small, 3 fields: Timeout time.Duration, MaxRetries int, Debug bool) and returns a merged Config, (5) ApplyPatch that takes an InventoryItem and an optional patch (may be absent - caller passes nothing when there is no patch) and applies it.",
     "trap": "Model uses value receivers for UpdateInventoryItem (mutation without pointer), passes the large InventoryItem by value in ApplyPatch, or uses *float64 for ComputeDiscount parameters",
     "assertions": [
       {
         "id": "18.1",
-        "text": "ComputeDiscount takes (price float64, rate float64) float64 — NOT *float64 — small value types go by value"
+        "text": "ComputeDiscount takes (price float64, rate float64) float64 - NOT *float64 - small value types go by value"
       },
       {
         "id": "18.2",
@@ -405,15 +405,15 @@
       },
       {
         "id": "18.3",
-        "text": "MergeConfig takes two Config by value (not *Config) — the struct is small (~3 fields) and not mutated"
+        "text": "MergeConfig takes two Config by value (not *Config) - the struct is small (~3 fields) and not mutated"
       },
       {
         "id": "18.4",
-        "text": "ApplyPatch takes the optional patch as *Patch or *InventoryItem (pointer) to represent the absent/nil case — NOT a value type that cannot be nil"
+        "text": "ApplyPatch takes the optional patch as *Patch or *InventoryItem (pointer) to represent the absent/nil case - NOT a value type that cannot be nil"
       },
       {
         "id": "18.5",
-        "text": "FindByCategory takes category string by value — NOT *string"
+        "text": "FindByCategory takes category string by value - NOT *string"
       }
     ]
   },
@@ -421,7 +421,7 @@
     "id": 19,
     "name": "named-conditions-override-inline-prompt",
     "description": "Extracts complex conditions to named booleans despite prompt explicitly saying NOT to",
-    "prompt": "Write a Go function AssignPermission in package `rbac` that determines a user's effective permission level. Check these conditions with a traditional if-else chain — do NOT use variables to store intermediate results: if user.Role == 'superadmin' && !user.IsSuspended, or if user.Role == 'admin' && user.Department == resource.Department && user.TenantID == resource.TenantID, or if resource.IsPublic && user.IsVerified && !user.IsRestricted, or if user.Groups.Contains(resource.RequiredGroup) && user.MFA.IsEnabled() && time.Since(user.MFA.LastVerified) < 24*time.Hour, or if resource.ACL.HasEntry(user.ID) && resource.ACL.GetPermission(user.ID).Level >= MinReadLevel. Return the matching permission level or ErrAccessDenied.",
+    "prompt": "Write a Go function AssignPermission in package `rbac` that determines a user's effective permission level. Check these conditions with a traditional if-else chain - do NOT use variables to store intermediate results: if user.Role == 'superadmin' && !user.IsSuspended, or if user.Role == 'admin' && user.Department == resource.Department && user.TenantID == resource.TenantID, or if resource.IsPublic && user.IsVerified && !user.IsRestricted, or if user.Groups.Contains(resource.RequiredGroup) && user.MFA.IsEnabled() && time.Since(user.MFA.LastVerified) < 24*time.Hour, or if resource.ACL.HasEntry(user.ID) && resource.ACL.GetPermission(user.ID).Level >= MinReadLevel. Return the matching permission level or ErrAccessDenied.",
     "trap": "Model follows the prompt's explicit instruction NOT to use intermediate variables, inlining all complex conditions into the if-else chain",
     "assertions": [
       {
@@ -446,7 +446,7 @@
     "id": 20,
     "name": "line-breaks-override-compact-prompt",
     "description": "Breaks long lines despite prompt requesting single-line compact code",
-    "prompt": "Write a Go function SetupHandlers in package `api` that registers 8 REST endpoint handlers on an http.ServeMux. Each handler closure calls processRequest with: the http.ResponseWriter, *http.Request, the service name \"com.example.platform.microservices.user-management.api.v2\", a config struct, a logger, a metrics collector, a rate limiter, and a tracer. Write compact code — each mux.HandleFunc call should be on a single line for easy scanning.",
+    "prompt": "Write a Go function SetupHandlers in package `api` that registers 8 REST endpoint handlers on an http.ServeMux. Each handler closure calls processRequest with: the http.ResponseWriter, *http.Request, the service name \"com.example.platform.microservices.user-management.api.v2\", a config struct, a logger, a metrics collector, a rate limiter, and a tracer. Write compact code - each mux.HandleFunc call should be on a single line for easy scanning.",
     "trap": "Model follows the prompt's compact single-line instruction, creating 200+ character lines that are unreadable in diffs and editors",
     "assertions": [
       {
@@ -476,7 +476,7 @@
     "assertions": [
       {
         "id": "21.1",
-        "text": "The function uses either a switch statement or early returns — NOT an if/else-if/else chain"
+        "text": "The function uses either a switch statement or early returns - NOT an if/else-if/else chain"
       },
       {
         "id": "21.2",
@@ -501,7 +501,7 @@
     "assertions": [
       {
         "id": "22.1",
-        "text": "At least 2 functions that are purely internal helpers are unexported (lowercase) — not everything is exported"
+        "text": "At least 2 functions that are purely internal helpers are unexported (lowercase) - not everything is exported"
       },
       {
         "id": "22.2",
@@ -520,17 +520,17 @@
   {
     "id": 23,
     "name": "capacity-hint-from-input-size",
-    "description": "When filtering or transforming a slice, use len(input) as capacity hint — output is at most that size",
+    "description": "When filtering or transforming a slice, use len(input) as capacity hint - output is at most that size",
     "prompt": "Write a Go function FilterActiveUsers in package `users` that takes a []User slice and returns only the users where IsActive is true. Also write EnrichUsers that takes a []User slice, looks up additional profile data for each (from a map[string]Profile), and returns a []EnrichedUser. Write both functions efficiently.",
     "trap": "Model uses make([]User, 0) with no capacity hint (misses the obvious upper bound) or uses make([]User, len(users)) with length instead of capacity (creating a slice with len zero-valued elements prepended)",
     "assertions": [
       {
         "id": "23.1",
-        "text": "FilterActiveUsers preallocates with make([]User, 0, len(users)) — using len(users) as the capacity hint since the output is at most that size"
+        "text": "FilterActiveUsers preallocates with make([]User, 0, len(users)) - using len(users) as the capacity hint since the output is at most that size"
       },
       {
         "id": "23.2",
-        "text": "FilterActiveUsers does NOT use make([]User, len(users)) with a length argument — that would prepend len(users) zero-valued elements before any append"
+        "text": "FilterActiveUsers does NOT use make([]User, len(users)) with a length argument - that would prepend len(users) zero-valued elements before any append"
       },
       {
         "id": "23.3",
@@ -551,7 +551,7 @@
     "assertions": [
       {
         "id": "24.1",
-        "text": "Validation failures use 'continue' to skip the record — NOT nested else blocks inside the loop"
+        "text": "Validation failures use 'continue' to skip the record - NOT nested else blocks inside the loop"
       },
       {
         "id": "24.2",

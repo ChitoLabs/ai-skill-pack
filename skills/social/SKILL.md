@@ -4,6 +4,7 @@ description: "Trigger: social, When the user wants help creating, scheduling, or
 license: Apache-2.0
 metadata:
   author: coreyhaines31
+  adapter: LCubero
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/social"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/social"

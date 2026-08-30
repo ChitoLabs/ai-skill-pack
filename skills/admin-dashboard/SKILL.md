@@ -4,6 +4,7 @@ description: "Trigger: admin-dashboard, Extend and modify the admin dashboard, d
 license: Apache-2.0
 metadata:
   author: erichowens
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/erichowens/some_claude_skills/admin-dashboard"
   github_url: "https://github.com/erichowens/some_claude_skills/tree/HEAD/.claude/skills/admin-dashboard"
@@ -46,4 +47,4 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.

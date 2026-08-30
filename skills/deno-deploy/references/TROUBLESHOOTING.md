@@ -10,7 +10,7 @@ deno deploy env --help
 deno deploy database --help
 ```
 
-Exit code 2 almost always means a flag is missing or invalid — `--help` will show you exactly what's required.
+Exit code 2 almost always means a flag is missing or invalid - `--help` will show you exactly what's required.
 
 ## Common Errors
 
@@ -140,8 +140,8 @@ deno deploy create \
 | "authorization required" | Token expired/missing | Re-authenticate or set `DENO_DEPLOY_TOKEN` |
 | "Minimum Deno version required" | Deno too old | Run `deno upgrade` |
 | Exit code 2 (usage error) | Missing or invalid flags | Run `deno deploy create --help` to see required flags |
-| Warmup failure (exit code 1) | App crashes on startup | Check for missing database or env vars — see [Warmup Failure](#warmup-failure-after-deploy) |
-| Fresh preset API error | Auto-detection bug | Use `--do-not-use-detected-build-config` — see [Fresh workaround](#fresh-auto-detection--preset-fails) |
+| Warmup failure (exit code 1) | App crashes on startup | Check for missing database or env vars - see [Warmup Failure](#warmup-failure-after-deploy) |
+| Fresh preset API error | Auto-detection bug | Use `--do-not-use-detected-build-config` - see [Fresh workaround](#fresh-auto-detection--preset-fails) |
 
 ## Verifying Deployment Success
 

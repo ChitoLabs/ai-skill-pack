@@ -34,13 +34,13 @@ The CLI prints your Team ID when you run `npx testflight`. Copy it.
 
 **Internal (100 max)**: Your team. Immediate access. Use for every build.
 
-**External (10,000 max)**: Beta users. First build needs review (~24h), then instant. Always have an external group—even if it's just friends. Real feedback beats assumptions.
+**External (10,000 max)**: Beta users. First build needs review (~24h), then instant. Always have an external group-even if it's just friends. Real feedback beats assumptions.
 
 ## Tips
 
 - Submit to external TestFlight the moment internal looks stable
 - Beta App Review is faster and more lenient than App Store Review
-- Add release notes—testers actually read them
+- Add release notes-testers actually read them
 - Use TestFlight's built-in feedback and screenshots
 - Never go straight to App Store. Ever.
 

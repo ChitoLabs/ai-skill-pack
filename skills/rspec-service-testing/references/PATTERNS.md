@@ -1,4 +1,4 @@
-# RSpec Service Testing — Patterns
+# RSpec Service Testing - Patterns
 
 ## FactoryBot Hash Factory for API Responses
 

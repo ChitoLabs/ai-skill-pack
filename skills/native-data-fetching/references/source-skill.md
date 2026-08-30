@@ -366,7 +366,7 @@ export const apiClient = {
 **Important notes**:
 
 - Only variables prefixed with `EXPO_PUBLIC_` are exposed to the client bundle
-- Never put secrets (API keys with write access, database passwords) in `EXPO_PUBLIC_` variables—they're visible in the built app
+- Never put secrets (API keys with write access, database passwords) in `EXPO_PUBLIC_` variables-they're visible in the built app
 - Environment variables are inlined at **build time**, not runtime
 - Restart the dev server after changing `.env` files
 - For server-side secrets in API routes, use variables without the `EXPO_PUBLIC_` prefix
@@ -424,7 +424,7 @@ useEffect(() => {
 ```
 User asks about networking
   |-- Route-level data loading (web, SDK 55+)?
-  |   \-- Expo Router loaders — see references/expo-router-loaders.md
+  |   \-- Expo Router loaders - see references/expo-router-loaders.md
   |
   |-- Basic fetch?
   |   \-- Use fetch API with error handling

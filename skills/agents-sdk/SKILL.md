@@ -4,6 +4,7 @@ description: "Trigger: agents-sdk, Build AI agents on Cloudflare Workers using t
 license: Apache-2.0
 metadata:
   author: cloudflare
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/agents-sdk"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/agents-sdk"
@@ -46,23 +47,23 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
-- `references/browse-the-web.md` — preserved source companion file.
-- `references/callable.md` — preserved source companion file.
-- `references/client-sdk.md` — preserved source companion file.
-- `references/codemode.md` — preserved source companion file.
-- `references/configuration.md` — preserved source companion file.
-- `references/durable-execution.md` — preserved source companion file.
-- `references/email.md` — preserved source companion file.
-- `references/human-in-the-loop.md` — preserved source companion file.
-- `references/mcp.md` — preserved source companion file.
-- `references/observability.md` — preserved source companion file.
-- `references/queue-retries.md` — preserved source companion file.
-- `references/routing.md` — preserved source companion file.
-- `references/server-driven-messages.md` — preserved source companion file.
-- `references/state-scheduling.md` — preserved source companion file.
-- `references/streaming-chat.md` — preserved source companion file.
-- `references/think.md` — preserved source companion file.
-- `references/voice.md` — preserved source companion file.
-- `references/webhooks-push.md` — preserved source companion file.
-- `references/workflows.md` — preserved source companion file.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/browse-the-web.md` - preserved source companion file.
+- `references/callable.md` - preserved source companion file.
+- `references/client-sdk.md` - preserved source companion file.
+- `references/codemode.md` - preserved source companion file.
+- `references/configuration.md` - preserved source companion file.
+- `references/durable-execution.md` - preserved source companion file.
+- `references/email.md` - preserved source companion file.
+- `references/human-in-the-loop.md` - preserved source companion file.
+- `references/mcp.md` - preserved source companion file.
+- `references/observability.md` - preserved source companion file.
+- `references/queue-retries.md` - preserved source companion file.
+- `references/routing.md` - preserved source companion file.
+- `references/server-driven-messages.md` - preserved source companion file.
+- `references/state-scheduling.md` - preserved source companion file.
+- `references/streaming-chat.md` - preserved source companion file.
+- `references/think.md` - preserved source companion file.
+- `references/voice.md` - preserved source companion file.
+- `references/webhooks-push.md` - preserved source companion file.
+- `references/workflows.md` - preserved source companion file.

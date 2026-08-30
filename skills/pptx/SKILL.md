@@ -1,9 +1,10 @@
 ---
 name: pptx
-description: "Trigger: pptx, Use this skill any time a .pptx file is involved in any way \u2014 as input, output, or both. Preserve source workflow with portable agent instructions."
+description: "Trigger: create, read, edit, or inspect a PowerPoint .pptx file. Handle presentation content only when a .pptx artifact is explicitly involved."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/pptx"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/pptx"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `pptx` or the preserved source description: Use this skill any time a .pptx file is involved in any way \u2014 as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
+Use this skill when the user request matches `pptx` or the preserved source description: Use this skill any time a .pptx file is involved in any way - as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

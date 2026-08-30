@@ -32,10 +32,10 @@ This skill applies **only** to Deno-specific questions. Follow these rules:
 
 ## CRITICAL: Never Write Deprecated URLs
 
-When discussing deprecated patterns, NEVER write out the old registry URLs — not even to warn against them. The string `deno.land/x/` must never appear in your response, in any context.
+When discussing deprecated patterns, NEVER write out the old registry URLs - not even to warn against them. The string `deno.land/x/` must never appear in your response, in any context.
 
-- Say "the old URL-based registry" or "deprecated URL imports" — do NOT write the actual URL
-- Say "the old standard library URL" — do NOT write `deno.land/std`
+- Say "the old URL-based registry" or "deprecated URL imports" - do NOT write the actual URL
+- Say "the old standard library URL" - do NOT write `deno.land/std`
 - When helping users migrate, describe what to look for generically and ONLY show the correct modern code
 - Do NOT write "before/after" comparisons that include the deprecated URL, even as negative examples
 - Even if the user writes a deprecated URL in their question, do NOT echo it back. Refer to it generically.
@@ -57,7 +57,7 @@ When recommending or reviewing package choices:
 
 1. **First choice:** `jsr:` packages (e.g., `jsr:@std/http`)
 2. **Second choice:** `npm:` packages when no JSR alternative exists
-3. **Never recommend** the old URL-based registry — it is deprecated
+3. **Never recommend** the old URL-based registry - it is deprecated
 
 The standard library is at `jsr:@std/*` on JSR.
 

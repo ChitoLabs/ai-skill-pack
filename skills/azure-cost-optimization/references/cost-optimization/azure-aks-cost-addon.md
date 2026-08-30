@@ -45,4 +45,4 @@ Namespace-level cost data is available in:
 - Azure Portal: AKS cluster -> Cost Analysis blade
 - Azure Cost Management: filter by cluster resource ID + `kubernetes namespace` dimension
 
-> Risk: Low for enabling the add-on. Upgrading tier (Free -> Standard) has a cost — always confirm with user first.
+> Risk: Low for enabling the add-on. Upgrading tier (Free -> Standard) has a cost - always confirm with user first.

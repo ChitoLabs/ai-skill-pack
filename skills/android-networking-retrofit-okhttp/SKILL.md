@@ -3,7 +3,8 @@ name: android-networking-retrofit-okhttp
 description: "Trigger: android-networking-retrofit-okhttp, Build Android networking stacks with Retrofit, OkHttp, interceptors, API contracts, and resilient error handling. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: krutikJain
+  author: midudev
+  adapter: LCubero
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-networking-retrofit-okhttp"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-networking-retrofit-okhttp"

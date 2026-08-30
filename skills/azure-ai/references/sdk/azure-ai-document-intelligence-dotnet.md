@@ -1,4 +1,4 @@
-# Azure Document Intelligence — .NET SDK Quick Reference
+# Azure Document Intelligence - .NET SDK Quick Reference
 
 > Condensed from **azure-ai-document-intelligence-dotnet**. Full patterns (custom models, classifiers, layout extraction)
 > in the **azure-ai-document-intelligence-dotnet** plugin skill if installed.
@@ -22,9 +22,9 @@ var adminClient = new DocumentIntelligenceAdministrationClient(new Uri(endpoint)
 - Entra ID requires custom subdomain, not regional endpoint
 
 ## Best Practices
-1. Use DefaultAzureCredential for **local development only**. In production, use ManagedIdentityCredential — see [auth-best-practices.md](../auth-best-practices.md)
-2. Reuse client instances — clients are thread-safe
+1. Use DefaultAzureCredential for **local development only**. In production, use ManagedIdentityCredential - see [auth-best-practices.md](../auth-best-practices.md)
+2. Reuse client instances - clients are thread-safe
 3. Handle long-running operations with `WaitUntil.Completed`
-4. Check field confidence — always verify `Confidence` property
-5. Use appropriate model — prebuilt for common docs, custom for specialized
-6. Use custom subdomain — required for Entra ID authentication
+4. Check field confidence - always verify `Confidence` property
+5. Use appropriate model - prebuilt for common docs, custom for specialized
+6. Use custom subdomain - required for Entra ID authentication

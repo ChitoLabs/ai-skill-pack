@@ -1,9 +1,10 @@
 ---
 name: rails-upgrade
-description: "Analyze Rails applications and produce upgrade reports, breaking-change checks, deprecation guidance, multi-hop migration plans, and version-specific Rails 2.3 through 8.1 upgrade steps."
+description: "Trigger: analyze or plan a Ruby on Rails version upgrade. Produce scoped compatibility, deprecation, breaking-change, and migration guidance."
 license: Apache-2.0
 metadata:
   author: ombulabs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/ombulabs/claude-code_rails-upgrade-skill/rails-upgrade"
   github_url: "https://github.com/ombulabs/claude-code_rails-upgrade-skill/tree/HEAD/rails-upgrade"

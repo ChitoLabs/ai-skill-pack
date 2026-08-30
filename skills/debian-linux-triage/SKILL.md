@@ -4,6 +4,7 @@ description: "Trigger: debian-linux-triage, Triage and resolve Debian Linux issu
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/debian-linux-triage"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/debian-linux-triage"

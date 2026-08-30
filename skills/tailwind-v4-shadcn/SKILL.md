@@ -4,6 +4,7 @@ description: "Trigger: tailwind-v4-shadcn, | Production-tested setup for Tailwin
 license: MIT
 metadata:
   author: secondsky
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn"
   github_url: "https://github.com/secondsky/claude-skills/tree/HEAD/plugins/tailwind-v4-shadcn/skills/tailwind-v4-shadcn"

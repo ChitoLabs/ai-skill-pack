@@ -1,6 +1,6 @@
 ---
 name: us-business-english
-description: "American business English writing style for professional communications \u2014 direct, action-oriented, EN-US spelling (color, organize, center). Use whenever the user is writing for an American audience: emails, chat messages, proposals, client communications, blog posts, web copy, or any business writing. Apply to drafting, editing, and tone-checking professional text."
+description: "American business English writing style for professional communications - direct, action-oriented, EN-US spelling (color, organize, center). Use whenever the user is writing for an American audience: emails, chat messages, proposals, client communications, blog posts, web copy, or any business writing. Apply to drafting, editing, and tone-checking professional text."
 license: Apache-2.0
 metadata:
   author: jezweb

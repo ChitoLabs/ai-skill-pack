@@ -4,6 +4,7 @@ description: "Trigger: graphql, Build GraphQL APIs with Node.js using Apollo Ser
 license: Apache-2.0
 metadata:
   author: pluginagentmarketplace
+  adapter: LCubero
   version: 2.1.0
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-nodejs/graphql"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-nodejs/tree/HEAD/skills/graphql"

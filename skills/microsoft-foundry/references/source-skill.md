@@ -19,7 +19,7 @@ This skill helps developers work with Microsoft Foundry resources, covering mode
 
 ## Sub-Skills
 
-> **MANDATORY: Before executing ANY workflow-specific steps, you MUST read the corresponding sub-skill document.** Do not call workflow-specific MCP tools for a workflow without reading its skill document. This applies even if you already know the MCP tool parameters — the skill document contains required workflow steps, pre-checks, and validation logic that must be followed. This rule applies on every new user message that triggers a different workflow, even if the skill is already loaded.
+> **MANDATORY: Before executing ANY workflow-specific steps, you MUST read the corresponding sub-skill document.** Do not call workflow-specific MCP tools for a workflow without reading its skill document. This applies even if you already know the MCP tool parameters - the skill document contains required workflow steps, pre-checks, and validation logic that must be followed. This rule applies on every new user message that triggers a different workflow, even if the skill is already loaded.
 
 This skill includes specialized sub-skills for specific workflows. **Use these instead of the main skill when they match your task:**
 
@@ -42,7 +42,7 @@ This skill includes specialized sub-skills for specific workflows. **Use these i
 
 > 💡 **Tip:** For a complete onboarding flow: `project/create` (public) or `private-network` (VNet isolation) → `models/deploy-model` → agent workflows (`create` → `deploy` → `invoke`).
 
-> 💡 **Model Deployment:** Use `models/deploy-model` for all deployment scenarios — it intelligently routes between quick preset deployment, customized deployment with full control, and capacity discovery across regions.
+> 💡 **Model Deployment:** Use `models/deploy-model` for all deployment scenarios - it intelligently routes between quick preset deployment, customized deployment with full control, and capacity discovery across regions.
 
 > 💡 **Prompt Optimization:** For requests like "optimize my prompt" or "improve my agent instructions," load [observe](foundry-agent/observe/observe.md) and use the `prompt_optimize` MCP tool through that eval-driven workflow.
 
@@ -154,13 +154,13 @@ On any metadata write (deploy, auto-setup, dataset refresh, or trace-to-dataset 
 ### Step 5: Collect Missing Values
 
 Use the `ask_user` or `askQuestions` tool **only for values not resolved** from the user's message, session context, metadata, or azd bootstrap. Common values skills may need:
-- **Agent root** — Target folder containing `.foundry/agent-metadata*.yaml`
-- **Metadata file** — `agent-metadata.yaml` for local/dev, or an explicit sidecar such as `agent-metadata.prod.yaml`
-- **Environment** — `dev`, `prod`, or another environment key from metadata
-- **Project endpoint** — AI Foundry project endpoint URL
-- **Agent name** — Name of the target agent
+- **Agent root** - Target folder containing `.foundry/agent-metadata*.yaml`
+- **Metadata file** - `agent-metadata.yaml` for local/dev, or an explicit sidecar such as `agent-metadata.prod.yaml`
+- **Environment** - `dev`, `prod`, or another environment key from metadata
+- **Project endpoint** - AI Foundry project endpoint URL
+- **Agent name** - Name of the target agent
 
-> 💡 **Tip:** If the user already provides the agent path, environment, project endpoint, or agent name, extract it directly — do not ask again.
+> 💡 **Tip:** If the user already provides the agent path, environment, project endpoint, or agent name, extract it directly - do not ask again.
 
 ## Agent: Agent Types
 

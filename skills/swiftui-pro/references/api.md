@@ -36,4 +36,4 @@ Text("\(red)\(blue)")
 
 ## Using ObservableObject
 
-If using `ObservableObject` is absolutely required – for example if you are trying to create a debouncer using a Combine publisher – you should always make sure `import Combine` is added. This was previously provided through SwiftUI, but that is no longer the case.
+If using `ObservableObject` is absolutely required - for example if you are trying to create a debouncer using a Combine publisher - you should always make sure `import Combine` is added. This was previously provided through SwiftUI, but that is no longer the case.

@@ -131,7 +131,7 @@ What this is, who it's for, what it needs to accomplish.
 The single most important thing a user should do or understand here.
 
 **3. Design Direction**
-Color strategy (Restrained / Committed / Full palette / Drenched) + the theme scene sentence + 2–3 named anchor references. Reference PRODUCT.md and DESIGN.md where they already answer, and note any per-surface overrides.
+Color strategy (Restrained / Committed / Full palette / Drenched) + the theme scene sentence + 2-3 named anchor references. Reference PRODUCT.md and DESIGN.md where they already answer, and note any per-surface overrides.
 
 If you ran the Visual Direction Probe step, name which probe direction won and what changed in the brief because of it.
 

@@ -1,9 +1,10 @@
 ---
 name: readme-i18n
-description: "Translate and maintain multilingual repository README files, localized README variants, GitHub-style language selectors, glossaries, and repo-specific Markdown conventions."
+description: "Trigger: translate or maintain multilingual repository README files. Preserve localized variants, language selectors, glossaries, and repository Markdown conventions."
 license: Apache-2.0
 metadata:
   author: xixu-me
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/readme-i18n"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/readme-i18n"

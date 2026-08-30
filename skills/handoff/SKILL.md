@@ -4,6 +4,7 @@ description: "Trigger: handoff, resume later, transfer context. Write a redacted
 license: MIT
 metadata:
   author: mattpocock
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/handoff"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff"

@@ -80,7 +80,7 @@ For manual control over where the zoom lands on the destination, use `alignmentR
 </Link.AppleZoom>
 ```
 
-Coordinates are in the destination screen's coordinate space. Prefer `Link.AppleZoomTarget` when possible — use `alignmentRect` only when the target element isn't available as a React component.
+Coordinates are in the destination screen's coordinate space. Prefer `Link.AppleZoomTarget` when possible - use `alignmentRect` only when the target element isn't available as a React component.
 
 ## Controlling Dismissal
 
@@ -112,7 +112,7 @@ usePreventZoomTransitionDismissal({
 });
 ```
 
-This is useful when the destination contains a zoomable scroll view — the system gives that scroll view precedence over the dismiss gesture.
+This is useful when the destination contains a zoomable scroll view - the system gives that scroll view precedence over the dismiss gesture.
 
 ## Combining with Link.Preview
 
@@ -140,15 +140,15 @@ Zoom transitions work alongside long-press previews:
 - Source and destination with similar aspect ratios
 
 **Avoid:**
-- Skinny full-width list rows as zoom sources — the transition looks unnatural
+- Skinny full-width list rows as zoom sources - the transition looks unnatural
 - Mismatched aspect ratios between source and destination without `alignmentRect`
-- Using zoom with sheets or popovers — only works in Stack navigator
-- Hiding the navigation bar — known issues with header visibility during transitions
+- Using zoom with sheets or popovers - only works in Stack navigator
+- Hiding the navigation bar - known issues with header visibility during transitions
 
 **Tips:**
-- Always provide a close or back button — dismissal gestures are not discoverable
+- Always provide a close or back button - dismissal gestures are not discoverable
 - If the destination has a zoomable scroll view, use `unstable_dismissalBoundsRect` to avoid gesture conflicts
-- Source view doesn't need to match the tap target — only the `Link.AppleZoom` wrapped element animates
+- Source view doesn't need to match the tap target - only the `Link.AppleZoom` wrapped element animates
 - When source is unavailable (e.g., scrolled off screen), the transition zooms from the center of the screen
 
 ## References

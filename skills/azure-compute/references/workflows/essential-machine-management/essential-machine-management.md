@@ -54,15 +54,15 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/providers/Micros
 | Response | Meaning |
 | -------- | ------- |
 | `200` with `provisioningState: Succeeded` | Subscription is enrolled |
-| `200` with `provisioningState: Failed` | Enrollment attempted but failed — check error details |
+| `200` with `provisioningState: Failed` | Enrollment attempted but failed - check error details |
 | `404` | Subscription is not enrolled |
 
 When enrolled, the response includes:
-- **SKU/tier** — e.g. Essential
-- **Enabled services** — Azure Monitor Insights, Update Manager, Change Tracking, Policy & Machine Configuration, Defender CSPM, Defender for Servers
-- **UAMI** — the user-assigned managed identity resource ID
-- **Workspaces** — Log Analytics and Azure Monitor workspace resource IDs
-- **Created by / date** — who enrolled and when (in `systemData`)
+- **SKU/tier** - e.g. Essential
+- **Enabled services** - Azure Monitor Insights, Update Manager, Change Tracking, Policy & Machine Configuration, Defender CSPM, Defender for Servers
+- **UAMI** - the user-assigned managed identity resource ID
+- **Workspaces** - Log Analytics and Azure Monitor workspace resource IDs
+- **Created by / date** - who enrolled and when (in `systemData`)
 
 To scan multiple subscriptions, use `mcp_azure_mcp_subscription_list` to list available subscriptions, then query each one. Report results as a table:
 
@@ -74,7 +74,7 @@ To scan multiple subscriptions, use `mcp_azure_mcp_subscription_list` to list av
 
 To disable EMM for a subscription, follow the "Disable EMM (Offboard)" section in [EMM Enable Flow](references/emm-enable-flow.md).
 
-> ⚠️ **Warning:** When you disable a subscription, machines no longer use consolidated pricing. Pricing reverts to standard per-service pricing which may increase costs. Existing VM configurations are not removed — disable unneeded services manually.
+> ⚠️ **Warning:** When you disable a subscription, machines no longer use consolidated pricing. Pricing reverts to standard per-service pricing which may increase costs. Existing VM configurations are not removed - disable unneeded services manually.
 
 ## Troubleshooting
 

@@ -21,7 +21,7 @@ Use `create_file` with path `output/costoptimizereport<YYYYMMDD_HHMMSS>.md` and 
 [Resources operating within free tiers]
 
 ## Orphaned Resources (Immediate Savings)
-[From azqr — resources that can be deleted immediately]
+[From azqr - resources that can be deleted immediately]
 
 ## Optimization Recommendations
 

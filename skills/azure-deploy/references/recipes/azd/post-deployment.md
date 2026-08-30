@@ -111,10 +111,10 @@ try { Invoke-WebRequest "$Endpoint/api/test-db" } catch { Write-Output "Database
 
 ## Best Practices
 
-1. **Automate with azd hooks** — Add `postprovision` hook to `azure.yaml` for repeatable deployments
-2. **Use idempotent scripts** — Generate SQL with `dotnet ef migrations script --idempotent`
-3. **Verify incrementally** — Test SQL access, then migrations, then endpoint
-4. **Log everything** — Enable verbose logging during initial setup for troubleshooting
+1. **Automate with azd hooks** - Add `postprovision` hook to `azure.yaml` for repeatable deployments
+2. **Use idempotent scripts** - Generate SQL with `dotnet ef migrations script --idempotent`
+3. **Verify incrementally** - Test SQL access, then migrations, then endpoint
+4. **Log everything** - Enable verbose logging during initial setup for troubleshooting
 
 ## References
 

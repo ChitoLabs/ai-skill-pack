@@ -4,6 +4,7 @@ description: "Trigger: svelte-code-writer, CLI tools for Svelte 5 documentation 
 license: Apache-2.0
 metadata:
   author: sveltejs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/sveltejs/ai-tools/svelte-code-writer"
   github_url: "https://github.com/sveltejs/ai-tools/tree/HEAD/tools/skills/svelte-code-writer"

@@ -4,6 +4,7 @@ description: "Trigger: teach, learn a concept, learning workspace. Build statefu
 license: MIT
 metadata:
   author: mattpocock
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/teach"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/productivity/teach"

@@ -18,9 +18,9 @@ This repository follows the **Agent Skills** open standard. Each skill is self-c
 
 ```text
 enhance-prompt/
-├── SKILL.md           — Core instructions & workflow
-├── references/        — UI/UX vocabulary and adjective palettes
-└── README.md          — This file
+├── SKILL.md           - Core instructions & workflow
+├── references/        - UI/UX vocabulary and adjective palettes
+└── README.md          - This file
 ```
 
 ## How it Works

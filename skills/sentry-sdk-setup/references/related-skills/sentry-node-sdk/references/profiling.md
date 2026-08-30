@@ -1,6 +1,7 @@
-# Profiling — Sentry Node.js SDK
+# Profiling - Sentry Node.js SDK
 
-> Node.js profiling: `@sentry/profiling-node` — must match your `@sentry/node` version exactly  
+> Node.js profiling: `@sentry/profiling-node` - must match your `@sentry/node` version exactly
+
 > **Bun and Deno are NOT supported.** The profiler is a native C++ addon (`node-gyp`) that only runs in Node.js.
 
 ---
@@ -21,7 +22,7 @@ Profiling is **Node.js only**:
 
 ## How Profiling Relates to Tracing
 
-Profiles attach to **spans** — they require tracing to be enabled:
+Profiles attach to **spans** - they require tracing to be enabled:
 
 1. `tracesSampleRate` / `tracesSampler` decides whether a request is traced at all
 2. `profileSessionSampleRate` decides whether the session opts into profiling
@@ -148,7 +149,7 @@ Process lifetime:
 └──────────────────┴──────────────────┴──────────────────┘
 ```
 
-This means there's no 30-second max like in the legacy V1 API — the profiler runs as long as your process does.
+This means there's no 30-second max like in the legacy V1 API - the profiler runs as long as your process does.
 
 ---
 
@@ -201,13 +202,13 @@ async function runNightlyBatch() {
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `profileSessionSampleRate` | `0.0–1.0` | Session-level sampling. Decision made once at process startup. |
+| `profileSessionSampleRate` | `0.0-1.0` | Session-level sampling. Decision made once at process startup. |
 | `profileLifecycle` | `"trace" \| "manual"` | `"trace"` = auto-attach to spans; `"manual"` = explicit `startProfiler()`/`stopProfiler()` |
 | `nodeProfilingIntegration()` | integration | Enables V8 CpuProfiler. Must be in `integrations` array. |
 
 ### `profileSessionSampleRate` Semantics
 
-The profiling sampling decision is made **once per process startup** — not per request.
+The profiling sampling decision is made **once per process startup** - not per request.
 
 A "profiling session" either opts in or opts out for its entire lifetime. Within a profiling session, every traced span gets a profile attached (in `trace` mode).
 
@@ -231,16 +232,16 @@ Precompiled native binaries are available for:
 
 | OS | Architecture | Node.js |
 |----|--------------|---------|
-| macOS | x64 (Intel) | 18–24 |
-| macOS | ARM64 (Apple Silicon) | 18–24 |
-| Linux (glibc) | x64 | 18–24 |
-| Linux (glibc) | ARM64 | 18–24 |
-| Linux (musl/Alpine) | x64 | 18–24 |
-| Linux (musl/Alpine) | ARM64 | 18–24 |
-| Windows | x64 | 18–24 |
+| macOS | x64 (Intel) | 18-24 |
+| macOS | ARM64 (Apple Silicon) | 18-24 |
+| Linux (glibc) | x64 | 18-24 |
+| Linux (glibc) | ARM64 | 18-24 |
+| Linux (musl/Alpine) | x64 | 18-24 |
+| Linux (musl/Alpine) | ARM64 | 18-24 |
+| Windows | x64 | 18-24 |
 
 > ❌ **FreeBSD, 32-bit systems, Bun, and Deno are not supported.**  
-> The native addon requires Node.js — it cannot run in other runtimes.
+> The native addon requires Node.js - it cannot run in other runtimes.
 
 ### Alpine Linux / Docker
 
@@ -268,8 +269,8 @@ SENTRY_PROFILER_BINARY_PATH=/custom/path/sentry_cpu_profiler.node
 SENTRY_PROFILER_BINARY_DIR=/path/to/dir
 
 # Profiler logging mode:
-# "eager" (default) — faster startProfiler calls, slightly more CPU overhead
-# "lazy"            — lower CPU overhead, slightly slower startProfiler
+# "eager" (default) - faster startProfiler calls, slightly more CPU overhead
+# "lazy"            - lower CPU overhead, slightly slower startProfiler
 SENTRY_PROFILER_LOGGING_MODE=lazy node server.js
 ```
 
@@ -289,15 +290,15 @@ Sentry.init({
 **Performance impact notes:**
 
 - **Sampling rate (~100Hz):** The V8 CpuProfiler adds CPU overhead. Test with realistic load before deploying `profileSessionSampleRate: 1.0` to high-traffic production.
-- **Memory:** Each 60-second chunk uses ~10–20 MB of buffer. Capped at 50 chunks (~100 MB max).
+- **Memory:** Each 60-second chunk uses ~10-20 MB of buffer. Capped at 50 chunks (~100 MB max).
 - **Network:** One profiling upload per 60-second window per process.
 
-> "For high-throughput environments, we recommend testing prior to deployment to ensure that your service's performance characteristics maintain expectations." — Sentry docs
+> "For high-throughput environments, we recommend testing prior to deployment to ensure that your service's performance characteristics maintain expectations." - Sentry docs
 
 For high-traffic servers, start conservative:
 
 ```typescript
-// Start at 1–5% and increase after measuring overhead
+// Start at 1-5% and increase after measuring overhead
 profileSessionSampleRate: 0.01
 ```
 
@@ -356,4 +357,4 @@ app.listen(3000);
 | Profiling works locally but not in Docker | Ensure `npm install --include=optional` runs in the Docker build; musl variant must be present |
 | Flame graphs show minified names | Upload source maps via `authToken` in Sentry config; use `NODE_OPTIONS=--enable-source-maps` |
 | Last ~60s of data lost on shutdown | Call `Sentry.profiler.stopProfiler()` in your SIGTERM/SIGINT handler before `process.exit()` |
-| Bun or Deno profiling doesn't work | Native addon only supports Node.js — profiling is not available in Bun or Deno |
+| Bun or Deno profiling doesn't work | Native addon only supports Node.js - profiling is not available in Bun or Deno |

@@ -1,9 +1,10 @@
 ---
 name: nuxt-ui
-description: "Trigger: nuxt-ui, Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Preserve source workflow with portable agent instructions."
+description: "Trigger: nuxt-ui, Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
   author: nuxt
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/nuxt/ui/nuxt-ui"
   github_url: "https://github.com/nuxt/ui/tree/HEAD/skills/nuxt-ui"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `nuxt-ui` or the preserved source description: Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, customizing themes to match a brand, building forms, or composing layouts like dashboards, docs sites, and chat interfaces.
+Use this skill when the user request matches `nuxt-ui` or the preserved source description: Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, customizing themes to match a brand, building forms, or composing layouts like dashboards, docs sites, and chat interfaces.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

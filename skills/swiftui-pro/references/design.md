@@ -15,12 +15,12 @@ Prefer to place standard fonts, sizes, colors, stack spacing, padding, rounding,
 ## Standard system styling
 
 - Strongly prefer to use `ContentUnavailableView` when data is missing or empty, rather than designing something custom.
-- When using `searchable()`, you can show empty results using `ContentUnavailableView.search` and it will include the search term they used automatically – there’s no need to use `ContentUnavailableView.search(text: searchText)` or similar.
+- When using `searchable()`, you can show empty results using `ContentUnavailableView.search` and it will include the search term they used automatically - there’s no need to use `ContentUnavailableView.search(text: searchText)` or similar.
 - If you need an icon and some text placed horizontally side by side, prefer `Label` over `HStack`.
 - Prefer system hierarchical styles (e.g. secondary/tertiary) over manual opacity when possible, so the system can adapt to the correct context automatically.
 - When using `Form`, wrap controls such as `Slider` in `LabeledContent` so the title and control are laid out correctly.
 - `LabeledContent` also works outside `Form` for any title-value display; it might be necessary to define a custom `LabeledContentStyle` for consistent layout across views.
-- When using `RoundedRectangle`, the default rounding style is `.continuous` – there is no need to specify it explicitly.
+- When using `RoundedRectangle`, the default rounding style is `.continuous` - there is no need to specify it explicitly.
 
 
 ## Ensuring designs work for everyone

@@ -4,6 +4,7 @@ description: "Trigger: durable-objects, Create and review Cloudflare Durable Obj
 license: Apache-2.0
 metadata:
   author: cloudflare
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/durable-objects"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/durable-objects"

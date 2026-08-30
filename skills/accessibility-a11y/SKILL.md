@@ -4,6 +4,7 @@ description: "Trigger: accessibility-a11y, Implement web accessibility (a11y) be
 license: Apache-2.0
 metadata:
   author: mindrally
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mindrally/skills/accessibility-a11y"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/accessibility-a11y"
@@ -46,4 +47,4 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.

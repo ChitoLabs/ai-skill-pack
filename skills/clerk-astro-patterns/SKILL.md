@@ -1,6 +1,6 @@
 ---
 name: clerk-astro-patterns
-description: "Trigger: clerk-astro-patterns, 'Astro patterns with Clerk — middleware, SSR pages, island components,. Preserve source workflow with portable agent instructions."
+description: "Trigger: clerk-astro-patterns, 'Astro patterns with Clerk - middleware, SSR pages, island components,. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: clerk
@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `clerk-astro-patterns` or the preserved source description: 'Astro patterns with Clerk — middleware, SSR pages, island components,
+Use this skill when the user request matches `clerk-astro-patterns` or the preserved source description: 'Astro patterns with Clerk - middleware, SSR pages, island components,
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

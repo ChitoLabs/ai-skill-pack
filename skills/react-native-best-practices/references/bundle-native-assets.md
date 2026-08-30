@@ -17,7 +17,7 @@ Configure platform-specific asset delivery to reduce app download size.
 export EXTRA_PACKAGER_ARGS="--asset-catalog-dest ./"
 ```
 
-**Android**: Automatic via AAB — Play Store delivers correct density per device.
+**Android**: Automatic via AAB - Play Store delivers correct density per device.
 
 ## When to Use
 

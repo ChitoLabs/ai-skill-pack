@@ -374,7 +374,7 @@ return [{
 
 ## Security: Treat Tool Output as Untrusted Input
 
-Any AI tool that fetches third-party content (HTTP Request, Serper, Wikipedia, GitHub search, MCP Client, web scrapers) can return attacker-controlled text. That text flows back into the agent's context and can attempt **indirect prompt injection** — steering the agent into destructive tool calls, data exfiltration, or bypassing your system prompt.
+Any AI tool that fetches third-party content (HTTP Request, Serper, Wikipedia, GitHub search, MCP Client, web scrapers) can return attacker-controlled text. That text flows back into the agent's context and can attempt **indirect prompt injection** - steering the agent into destructive tool calls, data exfiltration, or bypassing your system prompt.
 
 **Guidelines**:
 

@@ -4,6 +4,7 @@ description: "Trigger: sentry-code-review, Analyze and resolve Sentry comments o
 license: Apache-2.0
 metadata:
   author: getsentry
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/getsentry/sentry-for-ai/sentry-code-review"
   github_url: "https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-code-review"

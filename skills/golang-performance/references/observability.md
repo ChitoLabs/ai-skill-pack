@@ -4,7 +4,7 @@ Third-party monitoring tools complement local profiling (pprof, benchmarks) by p
 
 ## Prometheus Metrics for Go
 
-**Setup:** `github.com/prometheus/client_golang` — expose `/metrics` endpoint with `promhttp.Handler()`. Default collectors automatically export Go runtime metrics (`go_goroutines`, `go_memstats_*`, `go_gc_duration_seconds`, `process_cpu_seconds_total`, etc.).
+**Setup:** `github.com/prometheus/client_golang` - expose `/metrics` endpoint with `promhttp.Handler()`. Default collectors automatically export Go runtime metrics (`go_goroutines`, `go_memstats_*`, `go_gc_duration_seconds`, `process_cpu_seconds_total`, etc.).
 
 → See `samber/cc-skills-golang@golang-benchmark` skill (investigation-session.md) for the full runtime metrics table, investigation session setup (scrape interval tuning, env-var toggling), and cost warnings for profiling tools.
 
@@ -14,16 +14,16 @@ Third-party monitoring tools complement local profiling (pprof, benchmarks) by p
 
 | PromQL | What to look for |
 | --- | --- |
-| `rate(go_gc_duration_seconds_count[5m])` | GC cycles/s — >2/s sustained suggests excessive allocation rate |
-| `rate(go_gc_duration_seconds_sum[5m]) / rate(go_gc_duration_seconds_count[5m])` | Average GC pause — increasing trend means heap is growing or has too many pointers |
-| `go_gc_duration_seconds{quantile="1"}` | Worst-case GC pause — spikes here cause tail latency |
+| `rate(go_gc_duration_seconds_count[5m])` | GC cycles/s - >2/s sustained suggests excessive allocation rate |
+| `rate(go_gc_duration_seconds_sum[5m]) / rate(go_gc_duration_seconds_count[5m])` | Average GC pause - increasing trend means heap is growing or has too many pointers |
+| `go_gc_duration_seconds{quantile="1"}` | Worst-case GC pause - spikes here cause tail latency |
 
 #### Memory leaks
 
 | PromQL | What to look for |
 | --- | --- |
 | `go_memstats_alloc_bytes` | Should be roughly stable under constant load; continuous increase = memory leak |
-| `rate(go_memstats_alloc_bytes_total[5m])` | Allocation rate (bytes/s) — drives GC frequency; compare before/after deploy for regressions |
+| `rate(go_memstats_alloc_bytes_total[5m])` | Allocation rate (bytes/s) - drives GC frequency; compare before/after deploy for regressions |
 | `process_resident_memory_bytes - go_memstats_sys_bytes` | Gap = non-Go memory (cgo, mmap); growing gap = non-Go leak |
 
 #### Goroutine leaks
@@ -49,7 +49,7 @@ Third-party monitoring tools complement local profiling (pprof, benchmarks) by p
 
 ### Alerting rules (examples)
 
-[Example alerting rules](../assets/prometheus-alerts.yml) — adjust thresholds to your application; a high-throughput data pipeline will have different baselines than a lightweight API server.
+[Example alerting rules](../assets/prometheus-alerts.yml) - adjust thresholds to your application; a high-throughput data pipeline will have different baselines than a lightweight API server.
 
 → See `samber/cc-skills@promql-cli` skill for interactively testing these PromQL expressions against your Prometheus instance from the CLI.
 
@@ -89,7 +89,7 @@ pyroscope.Start(pyroscope.Config{
 
 ### Pyroscope pull mode (via Grafana Alloy)
 
-No code changes required — Alloy scrapes `/debug/pprof/*` endpoints periodically. Configure Alloy to target your service's pprof endpoint.
+No code changes required - Alloy scrapes `/debug/pprof/*` endpoints periodically. Configure Alloy to target your service's pprof endpoint.
 
 When using third-party profiling libraries, refer to the library's official documentation for current API signatures.
 
@@ -97,5 +97,5 @@ When using third-party profiling libraries, refer to the library's official docu
 
 | Tool | What it does |
 | --- | --- |
-| **statsviz** (`github.com/arl/statsviz`) | Real-time browser dashboard at `/debug/statsviz` — heap, GC pauses, goroutines, scheduler. Register with `statsviz.Register(mux)`. Great for local development |
-| **expvar** (stdlib `expvar`) | JSON metrics at `/debug/vars` — lightweight, no dependencies. Integrates with Netdata, Telegraf, or custom dashboards |
+| **statsviz** (`github.com/arl/statsviz`) | Real-time browser dashboard at `/debug/statsviz` - heap, GC pauses, goroutines, scheduler. Register with `statsviz.Register(mux)`. Great for local development |
+| **expvar** (stdlib `expvar`) | JSON metrics at `/debug/vars` - lightweight, no dependencies. Integrates with Netdata, Telegraf, or custom dashboards |

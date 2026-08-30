@@ -1,9 +1,10 @@
 ---
 name: verification-before-completion
-description: "Trigger: verification-before-completion. Preserve source workflow with portable agent instructions."
+description: "Trigger: verify a completion claim with fresh evidence, output, and exit-status checks. In an active managed workflow, supply evidence to the managed verification owner and never issue the managed verdict or a delivery decision."
 license: Apache-2.0
 metadata:
   author: obra
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/verification-before-completion"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/verification-before-completion"
@@ -11,7 +12,9 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `verification-before-completion` or the preserved source description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
+Use this skill to verify an explicit completion claim with fresh evidence.
+
+First consult repository policy and detect any active managed workflow. When verification is managed, supply evidence to its owner without issuing the managed verdict or deciding delivery.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

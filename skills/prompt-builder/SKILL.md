@@ -4,6 +4,7 @@ description: "Trigger: prompt-builder, Guide users through creating high-quality
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/prompt-builder"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/prompt-builder"

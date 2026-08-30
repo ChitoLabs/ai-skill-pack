@@ -16,7 +16,7 @@
 ## PR comment shape (markdown, matches SKILL.md)
 
 ```text
-## Review — Add order totals
+## Review - Add order totals
 
 ### Critical
 - [app/controllers/orders_controller.rb:42] (Controllers) `permit!` on nested params. **Mitigation:** replace with explicit `.permit(:amount, :currency)`.
@@ -27,7 +27,7 @@
 ### Nice to have
 - [spec/requests/orders_spec.rb:12] (Tests) Describe block could name the unauthorized case. **Mitigation:** add a `context` for the missing-session case.
 
-**Actions required:** Critical — block merge until fixed and re-reviewed. Suggestion — fix in this PR. Nice to have — optional.
+**Actions required:** Critical - block merge until fixed and re-reviewed. Suggestion - fix in this PR. Nice to have - optional.
 ```
 
 ## Reviewer note examples

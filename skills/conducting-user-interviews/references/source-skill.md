@@ -22,19 +22,19 @@ When the user asks for help with user interviews:
 Teresa Torres: "Interviewing is a grossly underestimated skill. If you're not collecting rich stories, you won't identify opportunities." Don't ask "What do you like?" Ask "Tell me about the last time you..."
 
 ### Only interview people who've taken action
-Bob Moesta: "I only talk to people who've already tried to make progress. What made them try? Ignore 'bitching' (complaining)—look for 'switching' (actual behavior change)."
+Bob Moesta: "I only talk to people who've already tried to make progress. What made them try? Ignore 'bitching' (complaining)-look for 'switching' (actual behavior change)."
 
 ### Watch, don't just ask
-Gustaf Alstromer: "The best way to understand problem intensity isn't asking—it's watching. Have them screen share and walk through their daily workflow. Look for pain they've normalized."
+Gustaf Alstromer: "The best way to understand problem intensity isn't asking-it's watching. Have them screen share and walk through their daily workflow. Look for pain they've normalized."
 
 ### Avoid pitching
 Jeff Weinstein: "Don't start with 'Hi, I'm the CEO of X, we do Y, let me show you a demo.' What a wasted opportunity. Listen first. Use silence to let them open up."
 
 ### Falsify, don't validate
-Judd Antin: "We don't validate, we falsify. We look to be wrong. Many PMs want to be right—they do user-centered performance, not real research."
+Judd Antin: "We don't validate, we falsify. We look to be wrong. Many PMs want to be right-they do user-centered performance, not real research."
 
 ### Never ask what they want built
-Judd Antin: "A researcher who asks customers what they want is a bad researcher. Focus on understanding behaviors and problems—not having users design your solution."
+Judd Antin: "A researcher who asks customers what they want is a bad researcher. Focus on understanding behaviors and problems-not having users design your solution."
 
 ### Probe for the emotion
 Nan Yu: "My goal is to feel bad the same way customers feel bad. Dig past the feature request to find the underlying negative emotion motivating it."
@@ -46,16 +46,16 @@ Bob Moesta: "Not having a script drives people crazy, but rigid guides prevent y
 Shaun Clowes: "Between 7-14 interviews, you stop learning new things. Less than 7, not enough data. More than 14, diminishing returns."
 
 ### Expect 90% rejection
-Gustaf Alstromer: "90% of people aren't early adopters. You need to reach 10 to find 1. Rejection isn't failure—it's filtering for the right users."
+Gustaf Alstromer: "90% of people aren't early adopters. You need to reach 10 to find 1. Rejection isn't failure-it's filtering for the right users."
 
 ### Get direct exposure
-Marty Cagan: "I wasn't allowed to make product decisions until I'd visited 30 customers. Those visits changed my life—I thought I knew our customers and I really didn't."
+Marty Cagan: "I wasn't allowed to make product decisions until I'd visited 30 customers. Those visits changed my life-I thought I knew our customers and I really didn't."
 
 ### Respond with extreme speed
 Jeff Weinstein: "When a customer goes out of their way to share a problem, that's a gift. I'll leave a meeting to reply. Be 'text message friendly' with 5-10 power users."
 
 ### Interview the non-users
-Mihika Kapoor: "The most insightful conversations are with non-users. Ask why they're not using your product—you'll find perception gaps users can't see."
+Mihika Kapoor: "The most insightful conversations are with non-users. Ask why they're not using your product-you'll find perception gaps users can't see."
 
 ### Test willingness to pay
 Jeff Weinstein: "Have them send you a $1 invoice right now. The gap between 'willingness to pay' and actually paying is massive. This tests real commitment."

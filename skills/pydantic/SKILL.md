@@ -1,9 +1,10 @@
 ---
 name: pydantic
-description: "Python data validation with Pydantic v2 type hints, runtime validation, settings/config models, FastAPI/Django integration, performance, validators, serialization, and schema design."
+description: "Trigger: design, implement, or debug Pydantic v2 models and validation. Guide settings, validators, serialization, schema design, integration, and performance."
 license: Apache-2.0
 metadata:
-  author: bobmatnyc
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/bobmatnyc/claude-mpm-skills/pydantic"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/pydantic"

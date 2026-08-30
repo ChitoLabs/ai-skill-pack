@@ -3,7 +3,7 @@ name: aspnet-minimal-api-openapi
 description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation
 license: Apache-2.0
 metadata:
-  author: github
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/aspnet-minimal-api-openapi"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/aspnet-minimal-api-openapi"

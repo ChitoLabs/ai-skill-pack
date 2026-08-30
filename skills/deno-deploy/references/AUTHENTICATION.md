@@ -95,7 +95,7 @@ This opens a browser to create the app. **Important:**
 - The CLI waits until you finish - it won't proceed automatically
 - The app name becomes your URL: `<app-name>.deno.dev`
 
-**Non-interactive creation** (for AI agents and CI/CD — no browser needed):
+**Non-interactive creation** (for AI agents and CI/CD - no browser needed):
 ```bash
 deno deploy create \
   --org your-org-name \

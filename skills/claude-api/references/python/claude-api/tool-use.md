@@ -1,4 +1,4 @@
-# Tool Use — Python
+# Tool Use - Python
 
 For conceptual overview (tool definitions, tool choice, tips), see [shared/tool-use-concepts.md](../../shared/tool-use-concepts.md).
 
@@ -42,7 +42,7 @@ For async usage, use `@beta_async_tool` with `async def` functions.
 
 **Key benefits of the tool runner:**
 
-- No manual loop — the SDK handles calling tools and feeding results back
+- No manual loop - the SDK handles calling tools and feeding results back
 - Type-safe tool inputs via decorators
 - Tool schemas are generated automatically from function signatures
 - Iteration stops automatically when Claude has no more tool calls
@@ -70,7 +70,7 @@ async with stdio_client(StdioServerParameters(command="mcp-server")) as (read, w
         await mcp_client.initialize()
 
         tools_result = await mcp_client.list_tools()
-        # tool_runner is sync — returns the runner, not a coroutine
+        # tool_runner is sync - returns the runner, not a coroutine
         runner = client.beta.messages.tool_runner(
             model="claude-opus-4-7",
             max_tokens=16000,
@@ -460,7 +460,7 @@ For full implementation examples, use WebFetch:
 
 ## Structured Outputs
 
-### JSON Outputs (Pydantic — Recommended)
+### JSON Outputs (Pydantic - Recommended)
 
 ```python
 from pydantic import BaseModel

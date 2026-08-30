@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Replaced the published skill inventory with the authorized 466-skill v3 source pack.
+- Replaced the command inventory with the 3-command v3 collection.
+- Regenerated publication documentation and manifests from the final v3 state.
+
+### Removed
+
+- Removed the `grill-me` command while retaining the `grill-me` skill.
+- Excluded identified compiled cache and operating-system metadata junk from publication.
+
 ## [2026-08-21]
 
 ### Added

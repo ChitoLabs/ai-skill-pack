@@ -1,4 +1,4 @@
-# Managed Agents — cURL / Raw HTTP
+# Managed Agents - cURL / Raw HTTP
 
 Use these examples when the user needs raw HTTP requests or is working without an SDK.
 
@@ -53,7 +53,7 @@ curl -X POST https://api.anthropic.com/v1/environments \
 
 ## Create an Agent (required first step)
 
-> ⚠️ **There is no inline agent config.** Under `managed-agents-2026-04-01`, `model`/`system`/`tools` are top-level fields on `POST /v1/agents`, not on the session. Always create the agent first — the session only takes `"agent": {"type": "agent", "id": "..."}`.
+> ⚠️ **There is no inline agent config.** Under `managed-agents-2026-04-01`, `model`/`system`/`tools` are top-level fields on `POST /v1/agents`, not on the session. Always create the agent first - the session only takes `"agent": {"type": "agent", "id": "..."}`.
 
 ### Minimal
 
@@ -171,7 +171,7 @@ data: {"type":"session.status_idle","id":"sevt_...","processed_at":"..."}
 curl https://api.anthropic.com/v1/sessions/$SESSION_ID/events \
   "${HEADERS[@]}"
 
-# Paginated — get next page of events
+# Paginated - get next page of events
 curl "https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123" \
   "${HEADERS[@]}"
 ```
@@ -286,7 +286,7 @@ curl https://api.anthropic.com/v1/agents \
 ## MCP Server Integration
 
 ```bash
-# 1. Agent declares MCP server (no auth here — auth goes in a vault)
+# 1. Agent declares MCP server (no auth here - auth goes in a vault)
 curl -X POST https://api.anthropic.com/v1/agents \
   "${HEADERS[@]}" \
   -d '{

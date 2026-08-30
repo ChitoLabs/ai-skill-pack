@@ -17,11 +17,11 @@ Activate this workflow when the user explicitly asks about Capacity Reservation 
 
 Also **proactively suggest** CRG when the user's scenario matches any of these patterns:
 
-- **Deployment failure is unacceptable** — disaster recovery, customer-facing services, or mission-critical workloads where capacity unavailability would cause an outage
-- **Known scale-out events** — product launches, seasonal traffic spikes, or planned migrations where capacity must be guaranteed ahead of time
-- **In-demand SKUs** — GPU, high-memory, or new/popular VM sizes that are frequently capacity-constrained
-- **Specific SKU + zone + region required** — the workload cannot fall back to a different size, zone, or region
-- **Centralized capacity pooling** — capacity is being managed centrally across multiple subscriptions (CRGs support cross-subscription sharing)
+- **Deployment failure is unacceptable** - disaster recovery, customer-facing services, or mission-critical workloads where capacity unavailability would cause an outage
+- **Known scale-out events** - product launches, seasonal traffic spikes, or planned migrations where capacity must be guaranteed ahead of time
+- **In-demand SKUs** - GPU, high-memory, or new/popular VM sizes that are frequently capacity-constrained
+- **Specific SKU + zone + region required** - the workload cannot fall back to a different size, zone, or region
+- **Centralized capacity pooling** - capacity is being managed centrally across multiple subscriptions (CRGs support cross-subscription sharing)
 
 > **Note:** CRGs are typically used for critical workloads only, not all deployments. They are SLA-backed but billed at pay-as-you-go rates whether capacity is consumed or not.
 
@@ -44,7 +44,7 @@ Ask the user for (infer when possible, except where noted):
 |--------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Region**               | Yes      | Infer from context if possible (e.g., eastus, westeurope)                                                                                                                                              |
 | **VM size(s)**           | Yes      | e.g., Standard_D4s_v5, Standard_E8s_v5                                                                                                                                                                 |
-| **Quantity**             | Yes      | **Always ask — do not infer.**                                                                                                                                                                         |
+| **Quantity**             | Yes      | **Always ask - do not infer.**                                                                                                                                                                         |
 | **Availability Zone(s)** | No       | CRGs can be created without zones. Only include zones if the user explicitly requests a zonal reservation. **Do not pick a zone on the user's behalf** unless they explicitly ask for any/random zone  |
 | **Resource group**       | Yes      | Existing or new resource group name                                                                                                                                                                    |
 
@@ -98,9 +98,9 @@ az capacity reservation show \
 
 For operations beyond creation, see the relevant section in the [Capacity Reservation Overview](references/capacity-reservation-overview.md):
 
-- **Associate a VM or VMSS** with a CRG — see [Association & Disassociation](references/association-disassociation.md)
-- **Disassociate a VM or VMSS** from a CRG — see [Association & Disassociation](references/association-disassociation.md)
-- **Find a matching CRG** for a VM, or enumerate all reservations/groups — see [Finding Valid CRGs](references/capacity-reservation-overview.md#finding-valid-crgs-for-a-vm)
+- **Associate a VM or VMSS** with a CRG - see [Association & Disassociation](references/association-disassociation.md)
+- **Disassociate a VM or VMSS** from a CRG - see [Association & Disassociation](references/association-disassociation.md)
+- **Find a matching CRG** for a VM, or enumerate all reservations/groups - see [Finding Valid CRGs](references/capacity-reservation-overview.md#finding-valid-crgs-for-a-vm)
 
 ## Error Handling
 

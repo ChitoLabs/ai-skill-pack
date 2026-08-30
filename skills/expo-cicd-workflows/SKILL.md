@@ -4,6 +4,7 @@ description: "Trigger: expo-cicd-workflows, Helps understand and write EAS workf
 license: MIT License
 metadata:
   author: expo
+  adapter: LCubero
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-cicd-workflows"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-cicd-workflows"

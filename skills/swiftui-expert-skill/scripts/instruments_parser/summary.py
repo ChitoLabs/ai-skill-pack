@@ -29,10 +29,10 @@ def render(result: dict) -> str:
 
 def _skipped_block(title: str, lane: dict | None) -> list[str]:
     if lane is None:
-        return [f"## {title} — skipped (lane module not run)", ""]
+        return [f"## {title} - skipped (lane module not run)", ""]
     notes = lane.get("notes") or []
-    note_text = f" — {notes[0]}" if notes else ""
-    return [f"## {title} — skipped{note_text}", ""]
+    note_text = f" - {notes[0]}" if notes else ""
+    return [f"## {title} - skipped{note_text}", ""]
 
 
 def _render_time_profiler(lines: list[str], lane: dict | None) -> None:
@@ -41,7 +41,7 @@ def _render_time_profiler(lines: list[str], lane: dict | None) -> None:
         return
     m = lane["metrics"]
     lines.append(
-        f"## Time Profiler — {m['total_samples']:,} samples, "
+        f"## Time Profiler - {m['total_samples']:,} samples, "
         f"{m['total_weight_ms']:.0f}ms CPU time"
     )
     if m.get("processes"):
@@ -51,7 +51,7 @@ def _render_time_profiler(lines: list[str], lane: dict | None) -> None:
         lines.append("Top offenders:")
         for i, o in enumerate(lane["top_offenders"], 1):
             lines.append(
-                f"{i}. `{_truncate(o['symbol'], 90)}` — "
+                f"{i}. `{_truncate(o['symbol'], 90)}` - "
                 f"{o['percent']:.1f}% ({o['weight_ms']:.0f}ms, "
                 f"{o['samples']} samples, {_short_thread(o['thread'])})"
             )
@@ -67,12 +67,12 @@ def _render_hangs(lines: list[str], lane: dict | None) -> None:
     m = lane["metrics"]
     buckets = m["severity_buckets"]
     lines.append(
-        f"## Hangs — {m['count']} hangs, {m['total_duration_ms']:.0f}ms total, "
+        f"## Hangs - {m['count']} hangs, {m['total_duration_ms']:.0f}ms total, "
         f"worst {m['worst_duration_ms']:.0f}ms"
     )
     lines.append(
         f"Severity: <250ms={buckets['lt_250ms']}, "
-        f"250ms–1s={buckets['250ms_1s']}, >1s={buckets['gt_1s']}"
+        f"250ms-1s={buckets['250ms_1s']}, >1s={buckets['gt_1s']}"
     )
     lines.append("")
     for i, h in enumerate(lane["top_offenders"], 1):
@@ -89,7 +89,7 @@ def _render_hitches(lines: list[str], lane: dict | None) -> None:
         return
     m = lane["metrics"]
     lines.append(
-        f"## Animation Hitches — {m['count']} hitches, "
+        f"## Animation Hitches - {m['count']} hitches, "
         f"{m['total_hitch_ms']:.0f}ms total, worst {m['worst_hitch_ms']:.0f}ms"
     )
     if m.get("per_process"):
@@ -106,7 +106,7 @@ def _render_hitches(lines: list[str], lane: dict | None) -> None:
         )
     lines.append("")
     for i, h in enumerate(lane["top_offenders"], 1):
-        narrative = f" — {h['narrative']}" if h.get("narrative") else ""
+        narrative = f" - {h['narrative']}" if h.get("narrative") else ""
         src = " [system]" if h.get("is_system") else ""
         proc = f" ({h['process']})" if h.get("process") else ""
         lines.append(
@@ -122,7 +122,7 @@ def _render_swiftui(lines: list[str], lane: dict | None) -> None:
         return
     m = lane["metrics"]
     lines.append(
-        f"## SwiftUI — {m['total_events']:,} updates across "
+        f"## SwiftUI - {m['total_events']:,} updates across "
         f"{m['unique_views']} views, {m['total_duration_ms']:.0f}ms total"
     )
     if m.get("severity_breakdown"):
@@ -136,7 +136,7 @@ def _render_swiftui(lines: list[str], lane: dict | None) -> None:
         lines.append("Heaviest views (by total body time):")
         for i, v in enumerate(lane["top_offenders"], 1):
             lines.append(
-                f"{i}. `{_truncate(v['view'], 80)}` — {v['total_ms']:.0f}ms total, "
+                f"{i}. `{_truncate(v['view'], 80)}` - {v['total_ms']:.0f}ms total, "
                 f"{v['count']} updates (avg {v['avg_ms']:.2f}ms)"
             )
     if lane.get("high_severity_events"):
@@ -145,7 +145,7 @@ def _render_swiftui(lines: list[str], lane: dict | None) -> None:
         for i, e in enumerate(lane["high_severity_events"][:5], 1):
             cat = f" [{e['category']}]" if e.get("category") else ""
             lines.append(
-                f"{i}. `{_truncate(e['view'], 60)}` — "
+                f"{i}. `{_truncate(e['view'], 60)}` - "
                 f"{e['severity']} ({e['duration_ms']:.2f}ms at {e['start_ms']:.2f}ms){cat}"
             )
     lines.append("")
@@ -157,14 +157,14 @@ def _render_causes(lines: list[str], lane: dict | None) -> None:
         return
     m = lane["metrics"]
     lines.append(
-        f"## SwiftUI Cause Graph — {m['total_edges']:,} edges, "
+        f"## SwiftUI Cause Graph - {m['total_edges']:,} edges, "
         f"{m['unique_sources']} sources → {m['unique_destinations']} destinations"
     )
     lines.append("")
     if lane.get("top_sources"):
         lines.append("Top sources (who's driving the most updates):")
         for i, s in enumerate(lane["top_sources"][:5], 1):
-            lines.append(f"{i}. `{_truncate(s['source'], 80)}` — {s['edges']:,} edges")
+            lines.append(f"{i}. `{_truncate(s['source'], 80)}` - {s['edges']:,} edges")
             for d in s["top_destinations"][:3]:
                 lines.append(
                     f"    → `{_truncate(d['destination'], 70)}` {d['edges']:,}"
@@ -173,7 +173,7 @@ def _render_causes(lines: list[str], lane: dict | None) -> None:
         lines.append("")
         lines.append("Top destinations (who's being invalidated most):")
         for i, d in enumerate(lane["top_destinations"][:5], 1):
-            lines.append(f"{i}. `{_truncate(d['destination'], 80)}` — {d['edges']:,} edges")
+            lines.append(f"{i}. `{_truncate(d['destination'], 80)}` - {d['edges']:,} edges")
             for s in d["top_sources"][:3]:
                 lines.append(
                     f"    ← `{_truncate(s['source'], 70)}` {s['edges']:,}"
@@ -193,7 +193,7 @@ def _render_correlations(lines: list[str], correlations: list[dict]) -> None:
             f"({t['duration_ms']:.0f}ms)"
         )
         if t.get("hang_type"):
-            head += f" — {t['hang_type']}"
+            head += f" - {t['hang_type']}"
         lines.append(head)
 
         tp = c.get("time_profiler_main_thread")
@@ -201,7 +201,7 @@ def _render_correlations(lines: list[str], correlations: list[dict]) -> None:
             cov = tp["main_running_coverage_pct"]
             lines.append(
                 f"  - Main thread: {tp['samples_on_main']} running samples "
-                f"({cov:.0f}% coverage — "
+                f"({cov:.0f}% coverage - "
                 f"{'blocked' if cov < 25 else 'mostly running'})"
             )
             for s in tp["hot_symbols"][:3]:

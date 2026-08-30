@@ -24,9 +24,9 @@ Use this skill when the hardest part of the task is deciding where TDD should st
 | Multi-step orchestration across collaborators | Service spec | `spec/services/` | Focuses on the workflow boundary |
 | Enqueue/run/retry/discard behavior | Job spec | `spec/jobs/` | Captures async semantics directly |
 | Critical Turbo/Stimulus or browser-visible flow | System spec | `spec/system/` | Use only when browser interaction is the real risk |
-| Engine routing, generators, host integration | Engine spec | `spec/requests/` or engine path | Normal app specs miss engine wiring — see `rails-engine-testing` |
+| Engine routing, generators, host integration | Engine spec | `spec/requests/` or engine path | Normal app specs miss engine wiring - see `rails-engine-testing` |
 | Bug fix | Reproduction spec | Where the bug is observed | Proves the fix and prevents regression |
-| Unsure between layers | Higher boundary first | — | Easier to prove real behavior before drilling down |
+| Unsure between layers | Higher boundary first | - | Easier to prove real behavior before drilling down |
 
 ## HARD-GATE
 
@@ -113,13 +113,13 @@ CHECKPOINT: Test Design Review
 
 | Pitfall | What to do |
 |---------|------------|
-| Starting with a PORO spec because it is easy | Easy ≠ high-signal — choose the boundary that proves the real behavior |
+| Starting with a PORO spec because it is easy | Easy ≠ high-signal - choose the boundary that proves the real behavior |
 | Writing three spec types before running any | Pick one slice, run it, prove the failure, then proceed |
 | Defaulting to request specs for everything | Some domain rules are better proven at the model or service layer |
 | Defaulting to model specs for controller behavior | Controllers and APIs need request-level proof |
 | Using controller specs as the default HTTP entry point | Prefer request specs unless the repo has an existing reason |
 | Jumping to system specs too early | Reserve for critical browser flows that lower layers cannot prove |
-| "We'll add the request spec later" | The spec is the gate — implement only after the first slice is failing for the right reason |
+| "We'll add the request spec later" | The spec is the gate - implement only after the first slice is failing for the right reason |
 | First spec requires excessive factory setup | Excessive setup = wrong boundary. Simplify or move the slice. |
 
 ## Integration

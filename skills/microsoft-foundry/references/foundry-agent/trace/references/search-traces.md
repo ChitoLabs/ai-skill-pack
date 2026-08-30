@@ -1,4 +1,4 @@
-# Search Traces — Conversation-Level Search
+# Search Traces - Conversation-Level Search
 
 Search agent traces at the conversation level. Returns summaries grouped by conversation or operation, not individual spans.
 
@@ -46,7 +46,7 @@ dependencies
 
 Then drill into the full conversation:
 
-> ⚠️ **STOP — read [Conversation Detail](conversation-detail.md) before writing your own drill-down query.** It contains the correct span tree reconstruction logic, event/exception queries, and eval correlation steps.
+> ⚠️ **STOP - read [Conversation Detail](conversation-detail.md) before writing your own drill-down query.** It contains the correct span tree reconstruction logic, event/exception queries, and eval correlation steps.
 
 Quick drill-down using the `operation_Id` from above:
 
@@ -93,7 +93,7 @@ dependencies
 
 ## Search by Hosted Agent Name
 
-For hosted agents, the Foundry agent name (e.g., `hosted-agent-022-001`) appears on `requests` and `traces` — NOT on `dependencies`. Use `requests` as the preferred entry point, materialize the matching request rows, then join downstream spans on `operation_Id`:
+For hosted agents, the Foundry agent name (e.g., `hosted-agent-022-001`) appears on `requests` and `traces` - NOT on `dependencies`. Use `requests` as the preferred entry point, materialize the matching request rows, then join downstream spans on `operation_Id`:
 
 ```kql
 let agentRequests = materialize(
@@ -160,4 +160,4 @@ union dependencies, requests, exceptions, traces
 
 ## After Successful Query
 
-> 📝 **Reminder:** If this is the first trace query in this session, ensure App Insights connection info was persisted to the selected metadata file for the selected environment (see [trace.md — Before Starting](../trace.md#before-starting--resolve-app-insights-connection)).
+> 📝 **Reminder:** If this is the first trace query in this session, ensure App Insights connection info was persisted to the selected metadata file for the selected environment (see [trace.md - Before Starting](../trace.md#before-starting--resolve-app-insights-connection)).

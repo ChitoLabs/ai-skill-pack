@@ -3,7 +3,8 @@ name: reference-compiler-cli
 description: "Trigger: reference-compiler-cli, Explains the mental model and architecture of the code under `packages/compiler-cli`. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: angular
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/reference-compiler-cli"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/reference-compiler-cli"

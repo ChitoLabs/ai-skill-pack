@@ -3,7 +3,8 @@ name: n8n-node-configuration
 description: "Trigger: n8n-node-configuration, Operation-aware node configuration guidance. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: czlonkowski
+  author: wilkomarketing
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-node-configuration"
   github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-node-configuration"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `n8n-node-configuration` or the preserved source description: Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters — it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.
+Use this skill when the user request matches `n8n-node-configuration` or the preserved source description: Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters - it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

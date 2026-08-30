@@ -3,7 +3,8 @@ name: scikit-learn
 description: "Trigger: scikit-learn, Machine learning in Python with scikit-learn. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: davila7
+  author: wu-yc
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/davila7/claude-code-templates/scikit-learn"
   github_url: "https://github.com/wu-yc/labclaw/tree/HEAD/skills/general/scikit-learn"

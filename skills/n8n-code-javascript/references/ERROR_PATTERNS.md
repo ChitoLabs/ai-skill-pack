@@ -648,7 +648,7 @@ const timeout = $json.settings?.advanced?.timeout ?? 30000;
 
 ### The Problem
 
-Since n8n v2.0, Code nodes execute in the **task runner sandbox** which deliberately blocks the auth helpers. The legacy vm2 sandbox used to bind them, which is why old forum posts and tutorials show them working. n8n's source comment explains why: the Code node has no credential of its own, so the helper had nothing to authenticate against — it was always semantically broken, just not always loud about it.
+Since n8n v2.0, Code nodes execute in the **task runner sandbox** which deliberately blocks the auth helpers. The legacy vm2 sandbox used to bind them, which is why old forum posts and tutorials show them working. n8n's source comment explains why: the Code node has no credential of its own, so the helper had nothing to authenticate against - it was always semantically broken, just not always loud about it.
 
 ```javascript
 // ❌ BLOCKED in task runner sandbox (default since v2.0)
@@ -661,16 +661,16 @@ const data = await $helpers.httpRequestWithAuthentication.call(
 
 ### The Solution
 
-There is **no env flag** to re-enable these in the runner — the deny-list is compiled-in. Pick one of:
+There is **no env flag** to re-enable these in the runner - the deny-list is compiled-in. Pick one of:
 
-**Option A — Replace the Code node with an HTTP Request node** (best):
+**Option A - Replace the Code node with an HTTP Request node** (best):
 
 The HTTP Request node natively supports credential attachment with full expression support for URL/body/headers. Most "Code-node-makes-an-API-call" patterns are leftovers from before HTTP Request had pagination and expression support.
 
-**Option B — Sub-workflow with HTTP Request node** (when you need code-level logic before/after):
+**Option B - Sub-workflow with HTTP Request node** (when you need code-level logic before/after):
 
 ```javascript
-// Parent Code node — prepare payloads, then delegate
+// Parent Code node - prepare payloads, then delegate
 return $input.all().map(i => ({ json: {
   url: 'https://api.example.com/things',
   method: 'POST',
@@ -680,10 +680,10 @@ return $input.all().map(i => ({ json: {
 
 Then wire to **Execute Workflow** → child workflow with **Execute Workflow Trigger** → **HTTP Request** node using `={{ $json.url }}`, `={{ $json.body }}`, with the credential attached natively.
 
-**Option C — Token as runtime data** (only when the token genuinely flows through the workflow):
+**Option C - Token as runtime data** (only when the token genuinely flows through the workflow):
 
 ```javascript
-// ✅ Works — manual auth header, token came from upstream
+// ✅ Works - manual auth header, token came from upstream
 const token = $('Get Token').first().json.access_token;
 
 const data = await $helpers.httpRequest({
@@ -699,7 +699,7 @@ const data = await $helpers.httpRequest({
 | Single authenticated API call | HTTP Request node directly |
 | Many API calls + pre/post processing | Sub-workflow pattern (Option B) |
 | Token already in the data flow | Manual `$helpers.httpRequest()` with header |
-| `httpRequestWithAuthentication` | **Doesn't work — pick A, B, or C above** |
+| `httpRequestWithAuthentication` | **Doesn't work - pick A, B, or C above** |
 
 ---
 
@@ -729,7 +729,7 @@ Treat secrets as a **credential concern**, not a Code-node concern:
 const apiKey = $('Set Secret').first().json.apiKey;
 
 // Or: secret was attached server-side by an HTTP Request node with the credential
-// — your Code node never sees the raw secret, which is the whole point
+// - your Code node never sees the raw secret, which is the whole point
 ```
 
 For values you genuinely need to inject from outside the workflow (config, not secrets), use:
@@ -739,7 +739,7 @@ For values you genuinely need to inject from outside the workflow (config, not s
 
 ### Why This Matters
 
-Skills and tutorials written before 2024 routinely use `$env.API_KEY` because it was the path of least resistance. Modern n8n setups block it because letting Code nodes read arbitrary env vars is a privilege escalation surface — any user with workflow-edit access could exfiltrate `DB_PASSWORD`, `N8N_ENCRYPTION_KEY`, etc. Don't fight the restriction; route secrets through credentials.
+Skills and tutorials written before 2024 routinely use `$env.API_KEY` because it was the path of least resistance. Modern n8n setups block it because letting Code nodes read arbitrary env vars is a privilege escalation surface - any user with workflow-edit access could exfiltrate `DB_PASSWORD`, `N8N_ENCRYPTION_KEY`, etc. Don't fight the restriction; route secrets through credentials.
 
 ---
 

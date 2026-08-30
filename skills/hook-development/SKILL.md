@@ -4,6 +4,7 @@ description: "Trigger: hook-development, Complete Claude Code hooks reference - 
 license: Apache-2.0
 metadata:
   author: parcadei
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/parcadei/continuous-claude-v3/hook-developer"
   github_url: "https://github.com/parcadei/continuous-claude-v3/tree/HEAD/.claude/skills/hook-developer"

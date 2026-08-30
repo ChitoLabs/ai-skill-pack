@@ -4,6 +4,7 @@ description: "Trigger: elasticsearch, Elasticsearch development best practices f
 license: Apache-2.0
 metadata:
   author: mindrally
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/elasticsearch-best-practices"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/elasticsearch-best-practices"

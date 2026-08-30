@@ -39,7 +39,7 @@ az rest --method GET --url "https://graph.microsoft.com/v1.0/me" --query id -o t
 GET https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/roleAssignments?api-version=2022-04-01&$filter=assignedTo('{objectId}')
 ```
 
-> 💡 **Tip:** The `assignedTo` filter is self-scoped — it allows the user to query their own role assignments without needing `Microsoft.Authorization/roleAssignments/read`. However, a 403 will still occur if the user has no role on the subscription at all.
+> 💡 **Tip:** The `assignedTo` filter is self-scoped - it allows the user to query their own role assignments without needing `Microsoft.Authorization/roleAssignments/read`. However, a 403 will still occur if the user has no role on the subscription at all.
 
 **Step 2c: Get all role definitions on the subscription**
 
@@ -127,7 +127,7 @@ az provider register --namespace Microsoft.ManagedIdentity --subscription <subsc
 az provider register --namespace Microsoft.Security --subscription <subscriptionId>
 ```
 
-> 💡 **Tip:** RP registration is idempotent — safe to run even if already registered.
+> 💡 **Tip:** RP registration is idempotent - safe to run even if already registered.
 
 ### Step 7: Deploy EMM via ARM API
 

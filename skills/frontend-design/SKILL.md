@@ -4,6 +4,7 @@ description: "Trigger: frontend-design, Create distinctive, production-grade fro
 license: Complete terms in LICENSE.txt
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/frontend-design"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/frontend-design"

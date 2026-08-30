@@ -91,7 +91,7 @@ Once identified, update the dependency or contact the vendor for a 16KB-compatib
 
 * Waiting for Play Store rejection instead of checking in CI
 * Assuming a React Native upgrade rebuilds third-party native binaries
-* Only checking 32-bit ABIs (`armeabi-v7a`, `x86`) — these are not affected
+* Only checking 32-bit ABIs (`armeabi-v7a`, `x86`) - these are not affected
 * Using `zipalign` without the `-P 16` flag (checks 4 KB, not 16 KB)
 * Validating only debug builds
 
@@ -110,4 +110,4 @@ See [official remediation steps][] for detailed guidance.
 
 ## Related Skills
 
-* [native-profiling.md](./native-profiling.md) — Native debugging tools
+* [native-profiling.md](./native-profiling.md) - Native debugging tools

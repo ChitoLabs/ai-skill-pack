@@ -1,35 +1,28 @@
 {
-  "generated_at": "2026-08-21T00:00:00.000Z",
+  "generated_at": "2026-08-29T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
-  "total_commands": 4,
+  "total_commands": 3,
   "commands": [
-    {
-      "name": "grill-me",
-      "path": "commands/grill-me.md",
-      "description": "Activate the Grill Me challenge interview",
-      "loads_skill": "grill-me",
-      "source_kind": "newCommand"
-    },
     {
       "name": "hallmark",
       "path": "commands/hallmark.md",
       "description": "Run Hallmark frontend design workflows",
       "loads_skill": "hallmark",
-      "source_kind": "newCommand"
+      "source_kind": "v3-command-collection"
     },
     {
       "name": "i-have-adhd",
       "path": "commands/i-have-adhd.md",
       "description": "Activate ADHD-friendly response shaping",
       "loads_skill": "i-have-adhd",
-      "source_kind": "newCommand"
+      "source_kind": "v3-command-collection"
     },
     {
       "name": "impeccable",
       "path": "commands/impeccable.md",
       "description": "Run Impeccable frontend design workflows",
       "loads_skill": "impeccable",
-      "source_kind": "newCommand"
+      "source_kind": "v3-command-collection"
     }
   ]
 }

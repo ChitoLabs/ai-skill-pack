@@ -1,9 +1,10 @@
 ---
 name: gsap-performance
-description: "Trigger: gsap-performance, Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Preserve source workflow with portable agent instructions."
+description: "Trigger: gsap-performance, Official GSAP skill for performance - prefer transforms, avoid layout thrashing, will-change, batching. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: greensock
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-performance"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-performance"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `gsap-performance` or the preserved source description: Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.
+Use this skill when the user request matches `gsap-performance` or the preserved source description: Official GSAP skill for performance - prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

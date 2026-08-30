@@ -1,4 +1,4 @@
-# Authentication — .NET SDK Quick Reference
+# Authentication - .NET SDK Quick Reference
 
 > Condensed from **azure-identity-dotnet**. Full patterns (ASP.NET DI,
 > sovereign clouds, brokered auth, certificate credentials)
@@ -17,7 +17,7 @@ var credential = new DefaultAzureCredential();
 ```
 
 ## Best Practices
-- Use DefaultAzureCredential for **local development only**. In production, use deterministic credentials (ManagedIdentityCredential) — see [auth-best-practices.md](../auth-best-practices.md)
-- Reuse credential instances — single instance shared across clients
+- Use DefaultAzureCredential for **local development only**. In production, use deterministic credentials (ManagedIdentityCredential) - see [auth-best-practices.md](../auth-best-practices.md)
+- Reuse credential instances - single instance shared across clients
 - Configure retry policies for credential operations
 - Enable logging with AzureEventSourceListener for debugging auth issues

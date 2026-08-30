@@ -1,50 +1,50 @@
 ---
 name: writing-plans
-description: "Trigger: writing-plans, Use when you have a spec or requirements for a multi-step task, before touching code. Preserve source workflow with portable agent instructions."
+description: "Trigger: write an implementation plan when repository policy explicitly requests this template and no managed SDD task plan owns the work. Consume existing canonical inputs; never create a parallel source of truth."
 license: Apache-2.0
 metadata:
   author: obra
-  version: 0.1
+  adapter: LCubero
+  version: 0.2
   skills_sh_url: "https://skills.sh/obra/superpowers/writing-plans"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/writing-plans"
 ---
 
+# Repository-Local Template: Implementation Plan
+
 ## Activation Contract
 
-Use this skill when the user request matches `writing-plans` or the preserved source description: Use when you have a spec or requirements for a multi-step task, before touching code
+Use only when the user or repository policy explicitly selects this template and no managed SDD task plan owns the work. In managed SDD, consume or summarize canonical artifacts only when requested.
 
-Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
+Read `references/source-skill.md` before drafting. Use `references/plan-document-reviewer-prompt.md` only when independent review is authorized.
 
 ## Hard Rules
 
-- Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
-- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
-- Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
-- Prefer current official documentation or source retrieval when the preserved workflow says knowledge may be outdated.
-- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+- Never create a second source of truth beside canonical proposal, specification, design, or task artifacts.
+- Repository policy owns the output path, format, approval, implementation phases, and delivery workflow.
+- Do not impose task duration, commit strategy, delegation, or automatic handoffs.
+- Do not write a plan until its canonical inputs and destination are confirmed.
 
 ## Decision Gates
 
 | Condition | Action |
 |---|---|
-| Relevant companion file exists | Read it before implementing that part of the workflow. |
-| Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
-| The task could modify external systems | Explain the action and wait for user approval before execution. |
-| Preserved guidance conflicts with current official docs | Prefer current docs and report the discrepancy. |
+| Managed task plan owns the work | Do not create another plan; provide the requested summary or gap analysis. |
+| Canonical inputs conflict | Report the conflict and stop. |
+| Output location is not approved | Return a preview only. |
 
 ## Execution Steps
 
-1. Match the user request to the preserved source workflow in `references/source-skill.md`.
-2. Inspect any local companion reference needed for the specific task.
-3. Verify prerequisites, credentials, project context, and safety boundaries before tool use.
-4. Execute the smallest correct workflow using the host runtime's available tools.
-5. Validate the result with the checks named in the preserved source guidance or with an explicit manual verification note.
+1. Identify repository policy and the canonical requirements owner.
+2. Extract affected paths, observable acceptance criteria, verification, risks, dependencies, and rollback boundaries.
+3. Draft the smallest plan that preserves those inputs without adding authority.
+4. Request review or approval according to repository policy.
 
 ## Output Contract
 
-Return the completed action, files or commands used, verification evidence, blockers, and any next step the user must approve. If the task is blocked, state the exact missing prerequisite or unsafe condition.
+Return canonical inputs used, proposed plan or summary, evidence gaps, destination approval status, and next actions requiring authorization.
 
 ## References
 
-- `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/plan-document-reviewer-prompt.md` - preserved source companion file.
+- `references/source-skill.md`
+- `references/plan-document-reviewer-prompt.md`

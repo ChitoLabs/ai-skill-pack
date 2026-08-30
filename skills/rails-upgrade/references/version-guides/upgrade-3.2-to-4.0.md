@@ -98,7 +98,7 @@ The `strong_parameters` gem is built into Rails 4.0. Any `require 'strong_parame
 # BEFORE
 require 'strong_parameters' # in engine.rb or controller
 
-# AFTER — remove the require entirely
+# AFTER - remove the require entirely
 # (strong_parameters is built into Rails 4)
 ```
 
@@ -183,7 +183,7 @@ has_one :active_visit, class_name: "Visit",
 belongs_to :clinic_patient_link, primary_key: :person_id, foreign_key: :person_id,
   conditions: clinic_id_conditions_proc, extend: MultiKeyAssociation::BelongsTo
 
-# AFTER — this pattern is rare and complex; verify manually
+# AFTER - this pattern is rare and complex; verify manually
 belongs_to :clinic_patient_link, ->(object) {
   where(clinic_id_conditions_proc.call(object)).extending(MultiKeyAssociation::BelongsTo)
 }, primary_key: :person_id, foreign_key: :person_id
@@ -284,7 +284,7 @@ has_many :items, through: :joins, readonly: false
 # BEFORE
 has_many :items, through: :joins, readonly: false
 
-# AFTER — simply remove the option
+# AFTER - simply remove the option
 has_many :items, through: :joins
 ```
 
@@ -302,12 +302,12 @@ has_many :invitations, :finder_sql => 'SELECT id from items where id is NULL'
 # BEFORE
 has_many :invitations, :finder_sql => 'SELECT * FROM invitations WHERE invited_by_id = #{id}'
 
-# AFTER — rewrite as a standard association with a lambda
+# AFTER - rewrite as a standard association with a lambda
 # Note: the owner must be passed as a parameter, since `id` inside a
 # bare lambda refers to the relation scope, not the owning record.
 has_many :invitations, ->(owner) { where(invited_by_id: owner.id) }
 
-# OR — if the SQL is too complex for a lambda, use a method
+# OR - if the SQL is too complex for a lambda, use a method
 def invitations
   Invitation.find_by_sql(["SELECT * FROM invitations WHERE invited_by_id = ?", id])
 end
@@ -369,7 +369,7 @@ get '/home' => 'home#index'
 
 ### 🟡 MEDIUM PRIORITY
 
-#### 6. `rescue_action` Removed — Use `rescue_from`
+#### 6. `rescue_action` Removed - Use `rescue_from`
 
 **What Changed:**
 The `rescue_action` method was removed in Rails 4.0 with no deprecation warning. Use `rescue_from` instead.
@@ -397,7 +397,7 @@ rescue_from *Exceptions::NOT_FOUND do |exception|
 end
 ```
 
-Note: `rescue_from` does not support `super`, so re-raise the exception if needed. Avoid `rescue_from Exception` — it catches all exceptions including `SystemExit` and `SignalException`. Use specific exception classes instead.
+Note: `rescue_from` does not support `super`, so re-raise the exception if needed. Avoid `rescue_from Exception` - it catches all exceptions including `SystemExit` and `SignalException`. Use specific exception classes instead.
 
 ---
 
@@ -424,7 +424,7 @@ Pass the variable explicitly via `locals:`:
 <%= render partial: "something", locals: { something: nil } %>
 ```
 
-No fix is needed when rendering with `collection:` or `object:` — the variable is still defined in those cases.
+No fix is needed when rendering with `collection:` or `object:` - the variable is still defined in those cases.
 
 **Detection Script:**
 ```ruby
@@ -454,7 +454,7 @@ Find.find(SEARCH_DIR) do |path|
 end
 ```
 
-Results need manual review — only partials rendered without `collection:`, `object:`, or `locals:` require changes.
+Results need manual review - only partials rendered without `collection:`, `object:`, or `locals:` require changes.
 
 ---
 
@@ -483,7 +483,7 @@ If your code stores cache keys externally (e.g., in Redis, a database, or a back
 1. Invalidate/regenerate stored cache keys after upgrading
 2. Or set `self.cache_timestamp_format = :number` on affected models to preserve the old format
 
-**Skill behavior:** When this change is detected, ask the user which approach they prefer — the right choice depends on whether external systems rely on the cache key format.
+**Skill behavior:** When this change is detected, ask the user which approach they prefer - the right choice depends on whether external systems rely on the cache key format.
 
 ---
 
@@ -511,7 +511,7 @@ Sweepers are no longer included.
 gem 'rails-observers'
 ```
 
-Note: This is the same gem as #9 (Observers) — `rails-observers` bundles both Observers and Sweepers.
+Note: This is the same gem as #9 (Observers) - `rails-observers` bundles both Observers and Sweepers.
 
 ---
 
@@ -851,10 +851,10 @@ rails app:update
 
 Review changes to:
 - `config/application.rb`
-- `config/environments/*.rb` — ensure `config.eager_load` is set in every environment
-- `config/environments/*.rb` — replace `config.assets.compress` with `config.assets.js_compressor` / `config.assets.css_compressor`
+- `config/environments/*.rb` - ensure `config.eager_load` is set in every environment
+- `config/environments/*.rb` - replace `config.assets.compress` with `config.assets.js_compressor` / `config.assets.css_compressor`
 - `config/initializers/*.rb`
-- `config/routes.rb` — check for `config.paths["config/routes"]` → `config.paths["config/routes.rb"]`
+- `config/routes.rb` - check for `config.paths["config/routes"]` → `config.paths["config/routes.rb"]`
 
 ### Phase 5: Testing
 - Run full test suite
@@ -862,11 +862,11 @@ Review changes to:
 - Test all routes
 - Test model callbacks (if using observers)
 - Update test specs: `request.env.merge!` → `request.headers.merge!`
-- Check fixture date errors — cast dynamic dates to strings with `.to_s(:db)`
+- Check fixture date errors - cast dynamic dates to strings with `.to_s(:db)`
 - Check cache key mismatches if storing keys externally (format changed to `:nsec`)
 - Check partials for `undefined local variable` errors from removed magic variables
-- Check JSON serialization — Rails 4 may add `id: nil` to serialized objects
-- Check error message assertions — SQL quoting changed (parentheses → backticks)
+- Check JSON serialization - Rails 4 may add `id: nil` to serialized objects
+- Check error message assertions - SQL quoting changed (parentheses → backticks)
 
 ---
 
@@ -882,24 +882,24 @@ For each model with `attr_accessible`:
 
 ---
 
-## Common Issues — Quick Reference
+## Common Issues - Quick Reference
 
 Error → section lookup for the most common errors encountered during this upgrade:
 
 | Error | See |
 |-------|-----|
-| `ActiveModel::ForbiddenAttributesError` | Section 2 (Strong Parameters) — use `user_params` not `params[:user]` |
-| Scope returns wrong results or errors | Section 3a (Scopes) — add lambda |
-| `Unknown key: :conditions` | Section 3b (Association conditions) — move to lambda |
-| `No route matches` | Section 5 (Routes) — add HTTP method |
-| `NoMethodError: undefined method 'rescue_action'` | Section 6 (rescue_action) — use `rescue_from` |
-| `undefined local variable or method` in partial | Section 7 (Partial magic variables) — pass `locals:` |
-| Cache misses after upgrade | Section 8 (cache_key format) — changed to `:nsec` |
-| `invalid date` in fixtures | Section 14 (Fixture dates) — cast with `.to_s(:db)` |
-| `eager_load is set to nil` | Section 15 (config.eager_load) — set in all environments |
-| `NameError: uninitialized constant ActiveSupport::BufferedLogger` | Section 17 (BufferedLogger) — renamed to `ActiveSupport::Logger` |
-| `ActiveRecord::ImmutableRelation` | Section 23 (ImmutableRelation) — use `.distinct.count` |
-| Controller specs don't see custom headers | Section 22 (Test headers) — use `request.headers.merge!` |
+| `ActiveModel::ForbiddenAttributesError` | Section 2 (Strong Parameters) - use `user_params` not `params[:user]` |
+| Scope returns wrong results or errors | Section 3a (Scopes) - add lambda |
+| `Unknown key: :conditions` | Section 3b (Association conditions) - move to lambda |
+| `No route matches` | Section 5 (Routes) - add HTTP method |
+| `NoMethodError: undefined method 'rescue_action'` | Section 6 (rescue_action) - use `rescue_from` |
+| `undefined local variable or method` in partial | Section 7 (Partial magic variables) - pass `locals:` |
+| Cache misses after upgrade | Section 8 (cache_key format) - changed to `:nsec` |
+| `invalid date` in fixtures | Section 14 (Fixture dates) - cast with `.to_s(:db)` |
+| `eager_load is set to nil` | Section 15 (config.eager_load) - set in all environments |
+| `NameError: uninitialized constant ActiveSupport::BufferedLogger` | Section 17 (BufferedLogger) - renamed to `ActiveSupport::Logger` |
+| `ActiveRecord::ImmutableRelation` | Section 23 (ImmutableRelation) - use `.distinct.count` |
+| Controller specs don't see custom headers | Section 22 (Test headers) - use `request.headers.merge!` |
 
 ---
 

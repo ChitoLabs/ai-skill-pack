@@ -62,7 +62,7 @@
     {
       "id": 5,
       "prompt": "I need you to apply the 'So What' and 'Zero Risk' sweeps to this pricing page copy: 'Our Pro plan includes unlimited projects, advanced reporting, priority support, and custom integrations. Starting at $99/month.'",
-      "expected_output": "Should apply specifically the So What and Zero Risk sweeps as requested. So What: for each feature, ask 'so what does this mean for the customer?' — unlimited projects (what does that enable?), advanced reporting (what decisions can they make?), priority support (what does that mean in practice? response time?), custom integrations (which ones? what workflow does it enable?). Zero Risk: identify missing trust signals — no guarantee, no trial mention, no social proof near pricing, no 'cancel anytime' assurance. Should provide rewritten copy addressing both sweeps.",
+      "expected_output": "Should apply specifically the So What and Zero Risk sweeps as requested. So What: for each feature, ask 'so what does this mean for the customer?' - unlimited projects (what does that enable?), advanced reporting (what decisions can they make?), priority support (what does that mean in practice? response time?), custom integrations (which ones? what workflow does it enable?). Zero Risk: identify missing trust signals - no guarantee, no trial mention, no social proof near pricing, no 'cancel anytime' assurance. Should provide rewritten copy addressing both sweeps.",
       "assertions": [
         "Applies So What sweep to each feature",
         "Translates features to customer benefits",

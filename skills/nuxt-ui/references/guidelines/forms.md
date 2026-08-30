@@ -18,7 +18,7 @@ type Schema = z.output<typeof schema>
 const state = reactive<Partial<Schema>>({ email: '', password: '' })
 
 function onSubmit(event: FormSubmitEvent<Schema>) {
-  // UForm validates before emitting @submit — access validated data via event.data
+  // UForm validates before emitting @submit - access validated data via event.data
 }
 </script>
 
@@ -39,9 +39,9 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 
 ## Key rules
 
-- Always use `UFormField` around inputs — it connects validation errors via the `name` prop
+- Always use `UFormField` around inputs - it connects validation errors via the `name` prop
 - The `name` prop on `UFormField` must match the schema field name exactly
-- Use `reactive<Partial<Schema>>({})` for state — `Partial` allows empty initial values
+- Use `reactive<Partial<Schema>>({})` for state - `Partial` allows empty initial values
 - `@submit` only fires when validation passes
 - For nested objects, use dot notation: `name="address.city"`
 
@@ -183,7 +183,7 @@ const form = useTemplateRef('form')
 async function validateAndSubmit() {
   const result = await form.value?.validate()
   if (result) {
-    // valid — submit
+    // valid - submit
   }
 }
 

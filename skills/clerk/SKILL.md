@@ -4,6 +4,7 @@ description: "Trigger: clerk, Clerk authentication router. Preserve source workf
 license: MIT
 metadata:
   author: clerk
+  adapter: LCubero
   version: 2.0.0
   skills_sh_url: "https://skills.sh/clerk/skills/clerk"
   github_url: "https://github.com/clerk/skills"

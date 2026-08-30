@@ -3,7 +3,8 @@ name: changelog-generator
 description: "Trigger: changelog-generator. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: composiohq
+  author: skillcreatorai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/composiohq/awesome-claude-skills/changelog-generator"
   github_url: "https://github.com/skillcreatorai/awesome-agent-skills/tree/HEAD/changelog-generator"

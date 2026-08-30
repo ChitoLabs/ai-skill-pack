@@ -60,7 +60,7 @@ export default {
 1. Add keys to `src/locales/default/{namespace}.ts`
 2. Export new namespace in `src/locales/default/index.ts`
 3. For dev preview: manually translate `locales/zh-CN/{namespace}.json` and `locales/en-US/{namespace}.json`
-4. Remind the user to run `pnpm i18n` before creating PR — do NOT run it yourself (very slow)
+4. Remind the user to run `pnpm i18n` before creating PR - do NOT run it yourself (very slow)
 
 ## Usage
 

@@ -3,7 +3,7 @@ name: design-md
 description: Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files
 license: Apache-2.0
 metadata:
-  author: google-labs-code
+  author: jstarfilms
   version: 0.1
   skills_sh_url: "https://www.skills.sh/google-labs-code/stitch-skills/design-md"
   github_url: "https://github.com/jstarfilms/vibecode-protocol-suite/tree/HEAD/assets/.agent/skills/stitch/design-md"

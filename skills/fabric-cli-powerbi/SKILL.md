@@ -1,9 +1,10 @@
 ---
 name: fabric-cli-powerbi
-description: "Trigger: fabric-cli-powerbi, Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways. Preserve source workflow with portable agent instructions."
+description: "Trigger: fabric-cli-powerbi, Use Fabric CLI for Power BI operations - semantic models, reports, DAX queries, refresh, gateways. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
   author: microsoft
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/fabric-cli/fabric-cli-powerbi"
   github_url: "https://github.com/microsoft/fabric-cli/tree/HEAD/.ai-assets/skills/fabric-cli-powerbi"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `fabric-cli-powerbi` or the preserved source description: Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways. Activate when users work with Power BI items, need to refresh datasets, execute DAX, manage reports, or troubleshoot refresh failures.
+Use this skill when the user request matches `fabric-cli-powerbi` or the preserved source description: Use Fabric CLI for Power BI operations - semantic models, reports, DAX queries, refresh, gateways. Activate when users work with Power BI items, need to refresh datasets, execute DAX, manage reports, or troubleshoot refresh failures.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

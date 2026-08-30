@@ -24,7 +24,7 @@ Call `mcp__github__projects_write` with `method: "delete_project_item"`, `projec
 
 ## Workflow for project operations
 
-1. **Find the project** — see [Finding a project by name](#finding-a-project-by-name) below
+1. **Find the project** - see [Finding a project by name](#finding-a-project-by-name) below
 2. **Discover fields** - use `projects_list` with `list_project_fields` to get field IDs and option IDs
 3. **Find items** - use `projects_list` with `list_project_items` to get item IDs
 4. **Mutate** - use `projects_write` to add, update, or delete items
@@ -86,7 +86,7 @@ Call `mcp__github__projects_list` with `method: "list_projects"`. This works wel
 
 When a user asks for a progress update on a project (e.g., "Give me a progress update for Project X"), follow this workflow:
 
-1. **Find the project** — use the [finding a project](#finding-a-project-by-name) strategies above. Ask the user for a known issue number if name search fails.
+1. **Find the project** - use the [finding a project](#finding-a-project-by-name) strategies above. Ask the user for a known issue number if name search fails.
 
 2. **Discover fields** - call `projects_list` with `list_project_fields` to find the Status field (its options tell you the workflow stages) and any Iteration field (to scope to the current sprint).
 

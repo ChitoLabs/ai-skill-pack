@@ -3,7 +3,8 @@ name: zod
 description: "Trigger: zod, Zod schema validation best practices for type safety, parsing, and error handling. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: pproenca
+  author: thongdn-it
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/pproenca/dot-skills/zod"
   github_url: "https://github.com/thongdn-it/react-agent-skills/tree/HEAD/skills/zod"

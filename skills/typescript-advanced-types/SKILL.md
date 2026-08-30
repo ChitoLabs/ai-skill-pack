@@ -4,6 +4,7 @@ description: "Trigger: typescript-advanced-types. Preserve source workflow with 
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/typescript-advanced-types"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/javascript-typescript/skills/typescript-advanced-types"

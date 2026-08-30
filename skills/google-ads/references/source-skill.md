@@ -13,18 +13,18 @@ metadata:
 
 Guides Google Ads setup, campaign structure, keyword targeting, and optimization. Google Ads excels at high-intent search traffic; use when people actively search for your solution.
 
-**When invoking**: On **first use**, if helpful, open with 1–2 sentences on what this skill covers and why it matters, then provide the main output. On **subsequent use** or when the user asks to skip, go directly to the main output.
+**When invoking**: On **first use**, if helpful, open with 1-2 sentences on what this skill covers and why it matters, then provide the main output. On **subsequent use** or when the user asks to skip, go directly to the main output.
 
 ## Two Modes: PMF Testing vs Conversion-Driven
 
 | Mode | When | Budget | Landing page | Metrics |
 |------|------|--------|--------------|---------|
-| **PMF testing** | Pre-PMF; validate idea before building | $47–500; start small | Simple LP: headline, benefits, problem solved, CTA ("Join Waitlist," "Get Early Access") | CTR, sign-up rate, bounce rate; low CTR/high bounce = messaging/positioning issue |
+| **PMF testing** | Pre-PMF; validate idea before building | $47-500; start small | Simple LP: headline, benefits, problem solved, CTA ("Join Waitlist," "Get Early Access") | CTR, sign-up rate, bounce rate; low CTR/high bounce = messaging/positioning issue |
 | **Conversion-driven** | PMF validated; commercialization | Scale; ROAS target | Full funnel; ad-to-page alignment | ROAS, CAC, conversion rate |
 
-**PMF testing**: No full product needed. Build landing page with Unbounce, Carrd, or Webflow. Run ads to relevant search terms; measure clicks, engagement, signups. Test messaging (e.g., "Fastest App for Freelancers" vs "Simplest Time Tracker for Teams"), pricing (different price points in ads/LP), and audiences (keyword targeting, in-market). Allow 4–6 weeks for PMax learning phase. Use as learning tool, not just marketing channel.
+**PMF testing**: No full product needed. Build landing page with Unbounce, Carrd, or Webflow. Run ads to relevant search terms; measure clicks, engagement, signups. Test messaging (e.g., "Fastest App for Freelancers" vs "Simplest Time Tracker for Teams"), pricing (different price points in ads/LP), and audiences (keyword targeting, in-market). Allow 4-6 weeks for PMax learning phase. Use as learning tool, not just marketing channel.
 
-**Reference**: [Marketing Cactus – Using Google Ads to Test Product-Market Fit](https://mktcactus.com/en/using-google-ads-to-test-product-market-fit-before-launching/)
+**Reference**: [Marketing Cactus - Using Google Ads to Test Product-Market Fit](https://mktcactus.com/en/using-google-ads-to-test-product-market-fit-before-launching/)
 
 ## Campaign Structure
 
@@ -32,7 +32,7 @@ Guides Google Ads setup, campaign structure, keyword targeting, and optimization
 Account
 ├── Campaign: Brand (Search)
 ├── Campaign: Non-Brand (Search)
-├── Campaign: Competitor (Search) — optional; bid on competitor brand + "alternative"/"vs"
+├── Campaign: Competitor (Search) - optional; bid on competitor brand + "alternative"/"vs"
 ├── Campaign: Retargeting (Display)
 └── Campaign: Performance Max
 ```
@@ -41,7 +41,7 @@ Account
 
 **When**: Bid on "[Competitor] alternative," "[Competitor] vs [You]" to intercept high-intent traffic. Google allows competitor terms as keywords; you cannot use competitor names in ad copy without permission.
 
-**Landing page**: Use a **dedicated landing page** (comparison/alternatives page), not a blog article. Users searching competitor brands expect direct alternatives—a blog increases bounce; a comparison page matches intent and converts better. See **alternatives-page-generator** for structure.
+**Landing page**: Use a **dedicated landing page** (comparison/alternatives page), not a blog article. Users searching competitor brands expect direct alternatives-a blog increases bounce; a comparison page matches intent and converts better. See **alternatives-page-generator** for structure.
 
 **Best practices**:
 - Separate campaign; exact/phrase match; add your brand as negative
@@ -79,7 +79,7 @@ Account
 ## Keyword Strategy
 
 - **Brand**: Protect brand terms; exclude from non-brand campaigns
-- **Negative keywords**: Build weekly; avoid irrelevant queries. Add **support terms** (login, forum, pricing, help) from **keyword-research**—these are existing customers, not prospects.
+- **Negative keywords**: Build weekly; avoid irrelevant queries. Add **support terms** (login, forum, pricing, help) from **keyword-research**-these are existing customers, not prospects.
 - **Match types**: Broad (discovery) → Phrase → Exact (control)
 
 **Keyword sources**: Use **keyword-research** for keyword list, clusters, and intent. Map each cluster to a dedicated landing page; relevance improves Quality Score and lowers CPC.
@@ -92,15 +92,15 @@ Account
 | Ad relevance | Align ad copy to keyword intent |
 | Landing page | Ad-to-page alignment; fast load; mobile-friendly |
 
-**Target**: Quality Score ≥6; higher = lower CPC, better ad rank. **Benchmark**: Improving Quality Score from 5 to 7 can reduce CPC by 30–50%.
+**Target**: Quality Score ≥6; higher = lower CPC, better ad rank. **Benchmark**: Improving Quality Score from 5 to 7 can reduce CPC by 30-50%.
 
 ## Bidding Strategy
 
 | Conversions/month | Strategy |
 |-------------------|----------|
 | &lt;30 | Manual CPC (smart bidding needs volume to optimize) |
-| 30–50 | Target CPA; minimum for effective smart bidding |
-| 50–100 | Target CPA |
+| 30-50 | Target CPA; minimum for effective smart bidding |
+| 50-100 | Target CPA |
 | 100+ | Target ROAS |
 
 **Smart bidding**: AI-powered bidding (Target CPA, Target ROAS) typically delivers better ROI than manual when conversion volume is sufficient; requires ≥30 conversions in 30 days to work effectively.
@@ -111,11 +111,11 @@ Account
 - **Offline conversion imports**: B2B; CRM → Google Ads
 - **UTM**: Consistent parameters for GA4 cross-check
 
-## Paid–Organic Cannibalization
+## Paid-Organic Cannibalization
 
 When you rank organically (position 4+) for a keyword and also run PPC, paid ads can absorb clicks that would go to organic. **Audit**: Cross-reference GSC organic rankings with Search Terms report. If organic ranks well, test pausing PPC on those terms to free budget for higher-impact keywords.
 
-**Reference**: [Backlinko – SEO and PPC: 8 Smart Ways to Align](https://backlinko.com/seo-and-ppc)
+**Reference**: [Backlinko - SEO and PPC: 8 Smart Ways to Align](https://backlinko.com/seo-and-ppc)
 
 ## Pre-Launch Checklist
 
@@ -131,6 +131,6 @@ When you rank organically (position 4+) for a keyword and also run PPC, paid ads
 - **paid-ads-strategy**: Channel selection; budget allocation; ad-to-page alignment; competitor brand bidding
 - **alternatives-page-generator**: Competitor brand keyword ads → dedicated LP (not blog); comparison page structure
 - **keyword-research**: Keyword list, clusters, intent; support terms for negative keywords; PPC data feeds back SEO priority
-- **traffic-analysis**: UTM for attribution; paid–organic cannibalization audit
+- **traffic-analysis**: UTM for attribution; paid-organic cannibalization audit
 - **landing-page-generator**: LP structure for paid traffic; PAA → FAQ
 - **analytics-tracking**: Conversion tracking; ROAS measurement

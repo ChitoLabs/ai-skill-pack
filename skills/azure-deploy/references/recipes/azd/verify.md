@@ -40,9 +40,9 @@ Expected: HTTP 200 response.
 
 ## Step 3: Report Results to User
 
-> ⛔ **MANDATORY** — You **MUST** present the deployed endpoint URLs to the user in your response. A deployment is not considered complete until the user has received the URLs.
+> ⛔ **MANDATORY** - You **MUST** present the deployed endpoint URLs to the user in your response. A deployment is not considered complete until the user has received the URLs.
 
-> ⛔ **ALWAYS run `azd show`** after deployment to extract endpoint URLs. Do NOT rely on the `azd deploy` output alone — it is frequently truncated before endpoint URLs appear.
+> ⛔ **ALWAYS run `azd show`** after deployment to extract endpoint URLs. Do NOT rely on the `azd deploy` output alone - it is frequently truncated before endpoint URLs appear.
 
 ```bash
 azd show

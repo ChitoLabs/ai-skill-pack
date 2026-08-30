@@ -9,7 +9,7 @@ metadata:
 
 # Azure Diagnostics
 
-> **AUTHORITATIVE GUIDANCE — MANDATORY COMPLIANCE**
+> **AUTHORITATIVE GUIDANCE - MANDATORY COMPLIANCE**
 >
 > This document is the **official source** for debugging and troubleshooting Azure production issues. Follow these instructions to diagnose and resolve common Azure service problems systematically.
 

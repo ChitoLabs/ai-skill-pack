@@ -3,7 +3,8 @@ name: backend-fundamentals
 description: "Trigger: backend-fundamentals, Reviews API design, REST conventions, and backend architecture. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: unknown
+  author: DanielPodolsky
+  adapter: LCubero
   version: 0.1
   github_url: "https://github.com/DanielPodolsky/ownyourcode/tree/HEAD/.claude/skills/fundamentals/backend"
 ---

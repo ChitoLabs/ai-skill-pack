@@ -2,7 +2,7 @@
 
 ## Semantic colors
 
-Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
+Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in components - always use these semantic names.
 
 | Color | Default | When to use |
 |---|---|---|
@@ -25,7 +25,7 @@ Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in compone
 ### Configuring colors
 
 ```ts
-// Nuxt — app.config.ts
+// Nuxt - app.config.ts
 export default defineAppConfig({
   ui: {
     colors: {
@@ -40,7 +40,7 @@ export default defineAppConfig({
 ```
 
 ```ts
-// Vue — vite.config.ts
+// Vue - vite.config.ts
 ui({
   ui: {
     colors: { primary: 'indigo', secondary: 'violet', neutral: 'zinc' }
@@ -48,20 +48,20 @@ ui({
 })
 ```
 
-Only colors that exist in your theme work — either Tailwind's defaults or custom colors defined with `@theme`.
+Only colors that exist in your theme work - either Tailwind's defaults or custom colors defined with `@theme`.
 
 Available color palettes:
 - **Standard Tailwind**: red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
-- **Neutral palettes** (for `neutral` key — pick one that matches the aesthetic):
-  - `slate` — cool blue-gray, professional (default)
-  - `gray` — true neutral, clean
-  - `zinc` — slightly cool, modern, techy
-  - `neutral` — perfectly balanced
-  - `stone` — warm gray, earthy
-  - `taupe` — warm brown-gray, sophisticated
-  - `mauve` — purple-tinted gray, elegant
-  - `mist` — soft blue-gray, airy
-  - `olive` — green-tinted gray, natural
+- **Neutral palettes** (for `neutral` key - pick one that matches the aesthetic):
+  - `slate` - cool blue-gray, professional (default)
+  - `gray` - true neutral, clean
+  - `zinc` - slightly cool, modern, techy
+  - `neutral` - perfectly balanced
+  - `stone` - warm gray, earthy
+  - `taupe` - warm brown-gray, sophisticated
+  - `mauve` - purple-tinted gray, elegant
+  - `mist` - soft blue-gray, airy
+  - `olive` - green-tinted gray, natural
 
 ### Adding custom brand colors
 
@@ -106,25 +106,25 @@ export default defineNuxtConfig({
 Use these everywhere instead of raw palette colors:
 
 ### Text
-- `text-default` — primary body text
-- `text-muted` — secondary text (descriptions, hints)
-- `text-toned` — medium-emphasis text (between muted and default)
-- `text-dimmed` — tertiary text (placeholders, disabled)
-- `text-highlighted` — emphasized text (headings, important labels)
-- `text-inverted` — text on inverted backgrounds (pair with `bg-inverted`)
+- `text-default` - primary body text
+- `text-muted` - secondary text (descriptions, hints)
+- `text-toned` - medium-emphasis text (between muted and default)
+- `text-dimmed` - tertiary text (placeholders, disabled)
+- `text-highlighted` - emphasized text (headings, important labels)
+- `text-inverted` - text on inverted backgrounds (pair with `bg-inverted`)
 
 ### Backgrounds
-- `bg-default` — page background
-- `bg-muted` — subtle backgrounds (hover states, alternating rows)
-- `bg-elevated` — raised surfaces (cards, dropdowns)
-- `bg-accented` — accent backgrounds (active states, selected items)
-- `bg-inverted` — inverse background (dark on light, light on dark)
+- `bg-default` - page background
+- `bg-muted` - subtle backgrounds (hover states, alternating rows)
+- `bg-elevated` - raised surfaces (cards, dropdowns)
+- `bg-accented` - accent backgrounds (active states, selected items)
+- `bg-inverted` - inverse background (dark on light, light on dark)
 
 ### Borders
-- `border-default` — standard borders
-- `border-muted` — subtle borders (dividers, separators)
-- `border-accented` — accent borders (active states)
-- `border-inverted` — inverse borders
+- `border-default` - standard borders
+- `border-muted` - subtle borders (dividers, separators)
+- `border-accented` - accent borders (active states)
+- `border-inverted` - inverse borders
 
 ## Variants
 
@@ -141,15 +141,15 @@ Most components accept a `variant` prop. Choose based on visual weight:
 
 ### Rules
 
-- **One solid primary button per view** — everything else should be lower weight
-- **Destructive buttons** use `color="error"` but not necessarily `variant="solid"` — use `variant="soft"` or `"outline"` unless it's the primary action on a confirmation dialog
-- **Button groups** should use consistent variants — don't mix `solid` and `outline` siblings
+- **One solid primary button per view** - everything else should be lower weight
+- **Destructive buttons** use `color="error"` but not necessarily `variant="solid"` - use `variant="soft"` or `"outline"` unless it's the primary action on a confirmation dialog
+- **Button groups** should use consistent variants - don't mix `solid` and `outline` siblings
 
 ## Customizing components
 
 ### `ui` prop
 
-Override theme **slots** on a single instance — wins over global config and variants.
+Override theme **slots** on a single instance - wins over global config and variants.
 
 ```vue
 <UButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
@@ -158,12 +158,12 @@ Override theme **slots** on a single instance — wins over global config and va
 
 Rules for `ui` overrides:
 - **Prefer `defaultVariants`** over slot class overrides when possible (e.g., changing default button variant/size).
-- **Don't duplicate default classes** — check the generated theme file first to see what's already there.
+- **Don't duplicate default classes** - check the generated theme file first to see what's already there.
 - Border radius defaults come from `--ui-radius`, but you can override with `rounded-*` classes in `ui` or `class` when you need a specific radius on a component.
 
 ### `class` prop
 
-Override the **root** (or `base`) slot only — simpler than `ui` for single-slot changes.
+Override the **root** (or `base`) slot only - simpler than `ui` for single-slot changes.
 
 ```vue
 <UButton class="font-bold" />
@@ -182,7 +182,7 @@ These files show every available slot name, variant combination, and default cla
 Override `slots`, `variants`, `compoundVariants`, and `defaultVariants` globally in `app.config.ts` (Nuxt) or `vite.config.ts` (Vue):
 
 ```ts
-// Nuxt — app.config.ts
+// Nuxt - app.config.ts
 export default defineAppConfig({
   ui: {
     button: {
@@ -203,11 +203,11 @@ export default defineAppConfig({
 })
 ```
 
-Tailwind Variants uses `tailwind-merge` under the hood — conflicting classes are resolved automatically.
+Tailwind Variants uses `tailwind-merge` under the hood - conflicting classes are resolved automatically.
 
 ### `UTheme` (scoped overrides)
 
-Override theme for a section of the component tree without affecting the rest of the app. Renders no DOM element — uses `provide`/`inject`:
+Override theme for a section of the component tree without affecting the rest of the app. Renders no DOM element - uses `provide`/`inject`:
 
 ```vue
 <UTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
@@ -239,7 +239,7 @@ export default defineNuxtConfig({
 Controls whether interactive components get `transition-colors`. Enabled by default.
 
 ```ts
-// nuxt.config.ts — disable transitions
+// nuxt.config.ts - disable transitions
 export default defineNuxtConfig({
   ui: {
     theme: {

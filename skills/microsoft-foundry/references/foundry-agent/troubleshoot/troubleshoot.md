@@ -10,7 +10,7 @@ Troubleshoot and debug Foundry agents by collecting hosted-agent session logs, d
 | MCP servers | `azure` |
 | Key Foundry MCP tools | `agent_get` |
 | Related skills | `trace` (telemetry analysis) |
-| Preferred query tool | `monitor_resource_log_query` (Azure MCP) — preferred over `azure-kusto` for App Insights |
+| Preferred query tool | `monitor_resource_log_query` (Azure MCP) - preferred over `azure-kusto` for App Insights |
 | CLI references | `az cognitiveservices account connection`, `az rest`, `curl` |
 
 ## When to Use This Skill
@@ -33,8 +33,8 @@ Troubleshoot and debug Foundry agents by collecting hosted-agent session logs, d
 ### Step 1: Collect Agent Information
 
 Use the project endpoint and agent name from the project context (see Common: Project Context Resolution). Ask the user only for values not already resolved:
-- **Project endpoint** — AI Foundry project endpoint URL
-- **Agent name** — Name of the agent to troubleshoot
+- **Project endpoint** - AI Foundry project endpoint URL
+- **Agent name** - Name of the agent to troubleshoot
 
 ### Step 2: Determine Agent Type
 
@@ -46,9 +46,9 @@ Use `agent_get` with `projectEndpoint` and `agentName` to retrieve the agent def
 
 Hosted-agent logs are scoped to individual **sessions** (sandbox instances).
 
-1. **Check agent version status** — Use `agent_get` to verify the agent version status is `active`. If it is not active, the agent may still be provisioning or may have failed to become active.
+1. **Check agent version status** - Use `agent_get` to verify the agent version status is `active`. If it is not active, the agent may still be provisioning or may have failed to become active.
 
-2. **List sessions** — Hosted-agent logs require a `sessionId`. If the user does not have one, list available sessions:
+2. **List sessions** - Hosted-agent logs require a `sessionId`. If the user does not have one, list available sessions:
    ```bash
    az rest --method GET \
      --url "<projectEndpoint>/agents/<agentName>/sessions?api-version=2025-11-15-preview" \
@@ -56,7 +56,7 @@ Hosted-agent logs are scoped to individual **sessions** (sandbox instances).
      --resource "https://ai.azure.com"
    ```
 
-3. **Retrieve session logs** — The log stream endpoint uses Server-Sent Events (SSE). Use `curl` with a timeout:
+3. **Retrieve session logs** - The log stream endpoint uses Server-Sent Events (SSE). Use `curl` with a timeout:
    ```bash
    TOKEN=$(az account get-access-token --resource "https://ai.azure.com" --query accessToken -o tsv)
    curl -s --max-time 15 \
@@ -68,7 +68,7 @@ Hosted-agent logs are scoped to individual **sessions** (sandbox instances).
 
    > ⚠️ **404 is expected** if the session sandbox has not been created yet. Advise the user to send a message to the agent first to trigger sandbox creation, then retry.
 
-4. **Interpret the logs** — Each SSE frame is `event: log\ndata: {...}\n\n`:
+4. **Interpret the logs** - Each SSE frame is `event: log\ndata: {...}\n\n`:
    - **Preamble** (first event): JSON with `session_state`, `session_id`, `agent`, `version`, `last_accessed`
    - **Log lines** (subsequent events): JSON with `stream` (`stdout`/`stderr`/`status`), `message`, and `timestamp`
    - **Error events**: `event: error` frames indicate server-side errors within the session sandbox
@@ -88,17 +88,17 @@ If no observability connection is found, inform the user and suggest setting up 
 
 Use **`monitor_resource_log_query`** (Azure MCP tool) to run KQL queries against the Application Insights resource discovered in Step 4. This is preferred over delegating to the `azure-kusto` skill. Pass the App Insights resource ID and the KQL query directly.
 
-> ⚠️ **Always pass `subscription` explicitly** to Azure MCP tools like `monitor_resource_log_query` — they don't extract it from resource IDs.
+> ⚠️ **Always pass `subscription` explicitly** to Azure MCP tools like `monitor_resource_log_query` - they don't extract it from resource IDs.
 
 Use `* contains "<response_id>"` or `* contains "<agent_name>"` filters to narrow down results to the specific agent instance.
 
 ### Step 6: Summarize Findings
 
 Present a summary to the user including:
-- **Agent type and status** — hosted or prompt; hosted agent version status when relevant
-- **Log errors** — key errors from hosted-agent session logs
-- **Telemetry insights** — exceptions, failed requests, latency trends
-- **Recommended actions** — specific steps to resolve identified issues
+- **Agent type and status** - hosted or prompt; hosted agent version status when relevant
+- **Log errors** - key errors from hosted-agent session logs
+- **Telemetry insights** - exceptions, failed requests, latency trends
+- **Recommended actions** - specific steps to resolve identified issues
 
 ## Error Handling
 
@@ -106,7 +106,7 @@ Present a summary to the user including:
 |-------|-------|------------|
 | Agent not found | Invalid agent name or project endpoint | Use `agent_get` to list available agents and verify name |
 | Hosted agent not active | Hosted agent is still provisioning or failed | Check that the ACR image was pushed correctly and agent identity permissions are assigned; wait and re-check status |
-| Session logs 404 | Session sandbox has not been created yet | The sandbox is created on first invocation — send a message to the agent to trigger sandbox creation, then retry |
+| Session logs 404 | Session sandbox has not been created yet | The sandbox is created on first invocation - send a message to the agent to trigger sandbox creation, then retry |
 | SSE error event | Server-side error within the session sandbox | Check the error event `data` field for details |
 | No session ID | User does not know which session to troubleshoot | List sessions via REST API (see Step 3) |
 | No observability connection | Application Insights not configured for the project | Suggest configuring Application Insights for the Foundry project |

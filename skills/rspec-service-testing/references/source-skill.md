@@ -21,7 +21,7 @@ Use this skill when writing tests for service classes under `spec/services/`.
 2. RUN:     bundle exec rspec spec/services/your_service_spec.rb
 3. VERIFY:  Confirm failures are for the right reason (not a typo or missing factory)
 4. FIX:     Implement or fix until the spec passes
-5. SUITE:   bundle exec rspec spec/services/ — verify no regressions
+5. SUITE:   bundle exec rspec spec/services/ - verify no regressions
 ```
 
 **DO NOT implement the service before step 1 is written and failing for the right reason.**
@@ -134,9 +134,9 @@ See [PATTERNS.md](PATTERNS.md) for the full pattern and factory placement guidan
 
 | Mistake | Correct approach |
 |---------|------------------|
-| No error scenario tests | Happy path only = false confidence — always test failures |
+| No error scenario tests | Happy path only = false confidence - always test failures |
 | `let!` everywhere | Use `let` (lazy) unless the value is needed unconditionally for setup |
-| Huge factory setup | Keep factories minimal — only attributes required for the test |
+| Huge factory setup | Keep factories minimal - only attributes required for the test |
 | Spec breaks when implementation changes but behavior is unchanged | Tests that break on refactoring are testing internals, not contracts |
 
 ## Integration

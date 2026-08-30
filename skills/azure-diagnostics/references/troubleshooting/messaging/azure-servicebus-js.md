@@ -1,4 +1,4 @@
-# Azure Service Bus SDK — JavaScript
+# Azure Service Bus SDK - JavaScript
 
 Package: `@azure/service-bus` | [README](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/TROUBLESHOOTING.md)
 
@@ -6,7 +6,7 @@ Package: `@azure/service-bus` | [README](https://github.com/Azure/azure-sdk-for-
 
 | Error Code | Cause | Fix |
 |------------|-------|-----|
-| `ServiceTimeout` | Service didn't respond; or no unlocked sessions | Transient — auto-retried. Verify state if persists |
+| `ServiceTimeout` | Service didn't respond; or no unlocked sessions | Transient - auto-retried. Verify state if persists |
 | `MessageLockLost` | Processing exceeded lock duration or link detached | Reduce processing time, ensure autolock renewal works |
 | `SessionLockLost` | Session lock expired or link detached | Re-accept session, keep renewing lock |
 | `QuotaExceeded` | Too many concurrent receives | Reduce receivers or use batch receives |

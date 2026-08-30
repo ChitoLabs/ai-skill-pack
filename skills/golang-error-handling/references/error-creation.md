@@ -13,14 +13,14 @@ type error interface {
 This means errors are returned, not thrown. Every function that can fail returns an `error` as its last return value, and every caller must check it.
 
 ```go
-// ✗ Bad — silently discarding errors
+// ✗ Bad - silently discarding errors
 data, _ := os.ReadFile("config.yaml")
 
-// ✗ Bad — only checking in some branches
+// ✗ Bad - only checking in some branches
 result, err := doSomething()
 fmt.Println(result) // using result without checking err
 
-// ✓ Good — always check before using other return values
+// ✓ Good - always check before using other return values
 data, err := os.ReadFile("config.yaml")
 if err != nil {
     return fmt.Errorf("reading config: %w", err)
@@ -32,11 +32,11 @@ if err != nil {
 Error strings MUST be lowercase, without trailing punctuation, and should not duplicate the context that wrapping will add.
 
 ```go
-// ✗ Bad — capitalized, punctuation, redundant prefix
+// ✗ Bad - capitalized, punctuation, redundant prefix
 return errors.New("Failed to connect to database.")
 return fmt.Errorf("UserService: failed to fetch user: %w", err)
 
-// ✓ Good — lowercase, no punctuation, concise
+// ✓ Good - lowercase, no punctuation, concise
 return errors.New("connection refused")
 return fmt.Errorf("fetching user: %w", err)
 ```
@@ -49,22 +49,22 @@ creating order: charging card: connecting to payment gateway: connection refused
 
 ## Creating Errors
 
-### `errors.New` — static error messages
+### `errors.New` - static error messages
 
 ```go
 var ErrNotFound = errors.New("not found")
 var ErrUnauthorized = errors.New("unauthorized")
 ```
 
-### `fmt.Errorf` — dynamic error messages
+### `fmt.Errorf` - dynamic error messages
 
 ```go
 import "github.com/samber/oops"
 
-// ✗ Avoid — high-cardinality message, each user/tenant combo is a unique string
+// ✗ Avoid - high-cardinality message, each user/tenant combo is a unique string
 return fmt.Errorf("user %s not found in tenant %s", userID, tenantID)
 
-// ✓ Prefer — static message, variable data as structured attributes
+// ✓ Prefer - static message, variable data as structured attributes
 return oops.With("user_id", userID).With("tenant_id", tenantID).Errorf("user not found")
 ```
 
@@ -81,26 +81,26 @@ See [Low-Cardinality Error Messages](#low-cardinality-error-messages) for why th
 
 ## Low-Cardinality Error Messages
 
-APM and log aggregation tools (Datadog, Loki, Sentry) group errors by message. When you interpolate variable data into error strings, every unique combination creates a separate group — dashboards become unusable and alerting breaks.
+APM and log aggregation tools (Datadog, Loki, Sentry) group errors by message. When you interpolate variable data into error strings, every unique combination creates a separate group - dashboards become unusable and alerting breaks.
 
 ```go
 import "github.com/samber/oops"
 
-// ✗ Bad — high cardinality: each file/line combo creates a unique error message
+// ✗ Bad - high cardinality: each file/line combo creates a unique error message
 fmt.Errorf("error in %s at line %d of the csv", csvPath, line)
 
-// ✓ Good (stdlib) — static error, structured attributes at the log site
+// ✓ Good (stdlib) - static error, structured attributes at the log site
 err := errors.New("csv parsing error")
 // ... later, at the logging boundary:
 slog.Error("csv parsing failed", "error", err, "csv_file_path", csvPath, "csv_file_line", line)
 
-// ✓ Good (samber/oops, external dependency) — attributes travel with the error
+// ✓ Good (samber/oops, external dependency) - attributes travel with the error
 oops.With("csv_file_path", csvPath).With("csv_file_line", line).Errorf("csv parsing error")
 ```
 
 The stdlib approach works but scatters context: the error travels up the stack and the handler logging it may no longer have access to the variable data. `samber/oops` (external dependency `github.com/samber/oops`) solves this by attaching structured attributes directly to the error, so they're available wherever the error is eventually logged.
 
-**Static wrapping prefixes are fine** — `fmt.Errorf("fetching user: %w", err)` is low-cardinality because the prefix never changes. What to avoid is interpolating IDs, paths, counts, or other variable data into the message itself.
+**Static wrapping prefixes are fine** - `fmt.Errorf("fetching user: %w", err)` is low-cardinality because the prefix never changes. What to avoid is interpolating IDs, paths, counts, or other variable data into the message itself.
 
 ## Custom Error Types
 

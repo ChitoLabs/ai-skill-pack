@@ -1,7 +1,7 @@
 /*
   VPN Gateway + DNS Private Resolver
   ------------------------------------
-  Post-deployment add-on for private network templates (T10, T15–T19).
+  Post-deployment add-on for private network templates (T10, T15-T19).
   Creates a P2S VPN Gateway (AAD auth, OpenVPN) and a DNS Private Resolver
   so the user can connect from their dev machine and resolve private DNS zones.
 
@@ -22,13 +22,13 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-05-01' existing = {
 
 var location = vnet.location
 
-@description('CIDR for GatewaySubnet — agent must compute from available VNet space')
+@description('CIDR for GatewaySubnet - agent must compute from available VNet space')
 param gatewaySubnetCidr string
 
-@description('CIDR for DNS resolver inbound subnet — agent must compute from available VNet space')
+@description('CIDR for DNS resolver inbound subnet - agent must compute from available VNet space')
 param dnsResolverSubnetCidr string
 
-@description('VPN client address pool — must not overlap with VNet')
+@description('VPN client address pool - must not overlap with VNet')
 param vpnClientAddressPool string = '172.16.201.0/24'
 
 @description('Azure AD tenant ID for VPN authentication')

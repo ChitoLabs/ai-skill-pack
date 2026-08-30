@@ -1,18 +1,17 @@
 # What Was Done
 
-This folder stages the public GitHub-ready package for `ChitoLabs/ai-skill-pack`.
+The public package was destructively replaced with the authorized v3 sources.
 
 ## Actions
 
-- Copied the curated general candidate root into `github/skills/`.
-- Added 3 reviewed skills from `newSkill`: `hallmark`, `i-have-adhd`, and `impeccable`.
-- Added 4 reviewed command files under `commands/`.
-- Excluded the separate Microsoft Fabric candidate root.
-- Excluded temp files, memory backups, legacy found folders, duplicate quarantine, internal scripts, and internal audit reports.
-- Generated publication-focused docs and manifests under `github/docs/` and `github/manifests/`.
-- Generated command catalog documentation and manifest files for the 4 published commands.
-- Used curated manifests instead of copying raw full manifests that include historical Fabric and quarantine context.
+- Recreated `skills/` from the authorized v3 source pack.
+- Recreated `commands/` from the v3 command collection.
+- Published 466 skill folders, each with a `SKILL.md` entry point.
+- Published 3 command files: `hallmark`, `i-have-adhd`, and `impeccable`.
+- Kept `grill-me` as a skill without publishing a command for it.
+- Excluded the identified compiled cache and operating-system metadata junk.
+- Regenerated the human-readable catalogs and structured manifests from the final v3 state.
 
 ## Boundaries
 
-The packaging process did not create a remote repository. Candidate sources and `.ld9/` were not modified.
+The source collection was not modified. No dependencies were installed, and no files were staged, committed, or pushed.

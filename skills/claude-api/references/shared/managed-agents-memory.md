@@ -1,8 +1,8 @@
-# Managed Agents — Memory Stores
+# Managed Agents - Memory Stores
 
 > **Public beta.** Memory stores ship under the `managed-agents-2026-04-01` beta header; the SDK sets it automatically on all `client.beta.memory_stores.*` calls. If `client.beta.memory_stores` is missing, upgrade to the latest SDK release.
 
-Sessions are ephemeral by default — when one ends, anything the agent learned is gone. A **memory store** is a workspace-scoped collection of small text documents that persists across sessions. When a store is attached to a session (via `resources[]`), it is mounted into the container as a filesystem directory; the agent reads and writes it with the ordinary file tools, and a system-prompt note tells it the mount is there.
+Sessions are ephemeral by default - when one ends, anything the agent learned is gone. A **memory store** is a workspace-scoped collection of small text documents that persists across sessions. When a store is attached to a session (via `resources[]`), it is mounted into the container as a filesystem directory; the agent reads and writes it with the ordinary file tools, and a system-prompt note tells it the mount is there.
 
 Every mutation to a memory produces an immutable **memory version** (`memver_...`), giving you an audit trail and point-in-time rollback/redact.
 
@@ -11,12 +11,12 @@ Every mutation to a memory produces an immutable **memory version** (`memver_...
 | Object | ID prefix | Scope | Notes |
 | --- | --- | --- | --- |
 | Memory store | `memstore_...` | Workspace | Attach to sessions via `resources[]` |
-| Memory | `mem_...` | Store | One text file, addressed by `path` (≤ 100KB each — prefer many small files) |
+| Memory | `mem_...` | Store | One text file, addressed by `path` (≤ 100KB each - prefer many small files) |
 | Memory version | `memver_...` | Memory | Immutable snapshot per mutation; `operation` ∈ `created` / `modified` / `deleted` |
 
 ## Create a store
 
-`description` is passed to the agent so it knows what the store contains — write it for the model, not for humans.
+`description` is passed to the agent so it knows what the store contains - write it for the model, not for humans.
 
 ```python
 store = client.beta.memory_stores.create(
@@ -28,7 +28,7 @@ print(store.id)  # memstore_01Hx...
 
 Other SDKs: TypeScript `client.beta.memoryStores.create({...})`; Go `client.Beta.MemoryStores.New(ctx, ...)`. See `shared/managed-agents-api-reference.md` → SDK Method Reference for the full per-language table.
 
-Stores support `retrieve` / `update` / `list` (with `include_archived`, `created_at_{gte,lte}` filters) / `delete` / **`archive`**. Archive makes the store read-only — existing session attachments continue, new sessions cannot reference it; no unarchive.
+Stores support `retrieve` / `update` / `list` (with `include_archived`, `created_at_{gte,lte}` filters) / `delete` / **`archive`**. Archive makes the store read-only - existing session attachments continue, new sessions cannot reference it; no unarchive.
 
 ### Seed with content (optional)
 
@@ -44,7 +44,7 @@ client.beta.memory_stores.memories.create(
 
 ## Attach to a session
 
-Memory stores go in the session's `resources[]` array alongside `file` and `github_repository` resources (see `shared/managed-agents-environments.md` → Resources). Memory stores attach at **session create time only** — `sessions.resources.add()` does not accept `memory_store`.
+Memory stores go in the session's `resources[]` array alongside `file` and `github_repository` resources (see `shared/managed-agents-environments.md` → Resources). Memory stores attach at **session create time only** - `sessions.resources.add()` does not accept `memory_store`.
 
 ```python
 session = client.beta.sessions.create(
@@ -65,14 +65,14 @@ session = client.beta.sessions.create(
 | --- | --- | --- |
 | `type` | ✅ | `"memory_store"` |
 | `memory_store_id` | ✅ | `memstore_...` |
-| `access` | — | `"read_write"` (default) or `"read_only"` — enforced at the filesystem level on the mount |
-| `instructions` | — | Session-specific guidance for this store, in addition to the store's `name`/`description`. ≤ 4,096 chars. |
+| `access` | - | `"read_write"` (default) or `"read_only"` - enforced at the filesystem level on the mount |
+| `instructions` | - | Session-specific guidance for this store, in addition to the store's `name`/`description`. ≤ 4,096 chars. |
 
-**Max 8 memory stores per session.** Attach multiple when different slices of memory have different owners or lifecycles — e.g. one read-only shared-reference store plus one read-write per-user store, or one store per end-user/team/project sharing a single agent config.
+**Max 8 memory stores per session.** Attach multiple when different slices of memory have different owners or lifecycles - e.g. one read-only shared-reference store plus one read-write per-user store, or one store per end-user/team/project sharing a single agent config.
 
 ### How the agent sees it (FUSE mount)
 
-Each attached store is mounted in the session container at `/mnt/memory/<store-name>/`. The agent interacts with it using the standard file tools (`bash`, `read`, `write`, `edit`, `glob`, `grep`) — there are no dedicated memory tools. `access: "read_only"` makes the mount read-only at the filesystem level; `"read_write"` allows the agent to create, edit, and delete files under it. A short description of each mount (name, path, `instructions`, access) is automatically injected into the system prompt so the agent knows the store exists without you having to mention it.
+Each attached store is mounted in the session container at `/mnt/memory/<store-name>/`. The agent interacts with it using the standard file tools (`bash`, `read`, `write`, `edit`, `glob`, `grep`) - there are no dedicated memory tools. `access: "read_only"` makes the mount read-only at the filesystem level; `"read_write"` allows the agent to create, edit, and delete files under it. A short description of each mount (name, path, `instructions`, access) is automatically injected into the system prompt so the agent knows the store exists without you having to mention it.
 
 Writes the agent makes under the mount are persisted back to the store and produce memory versions just like host-side `memories.update` calls.
 
@@ -82,7 +82,7 @@ Use these for review workflows, correcting bad memories, or seeding stores out-o
 
 ### List
 
-Returns `Memory | MemoryPrefix` entries — a `MemoryPrefix` (`type: "memory_prefix"`, just a `path`) is a directory-like node when listing hierarchically. Use `path_prefix` to scope (include a trailing slash: `"/notes/"` matches `/notes/a.md` but not `/notes_backup/old.md`) and `depth` to bound the tree walk. `order_by` / `order` sort the result. Pass `view="full"` to include `content` in each item; the default `"basic"` returns metadata only.
+Returns `Memory | MemoryPrefix` entries - a `MemoryPrefix` (`type: "memory_prefix"`, just a `path`) is a directory-like node when listing hierarchically. Use `path_prefix` to scope (include a trailing slash: `"/notes/"` matches `/notes/a.md` but not `/notes_backup/old.md`) and `depth` to bound the tree walk. `order_by` / `order` sort the result. Pass `view="full"` to include `content` in each item; the default `"basic"` returns metadata only.
 
 ```python
 for m in client.beta.memory_stores.memories.list(store.id, path_prefix="/"):
@@ -124,7 +124,7 @@ client.beta.memory_stores.memories.update(
 
 ### Optimistic concurrency (precondition on `update`)
 
-`memories.update` accepts a `precondition` so you can read → modify → write back without clobbering a concurrent writer. The only supported type is `content_sha256`. On mismatch the API returns `409` (`memory_precondition_failed_error`) — re-read and retry against fresh state.
+`memories.update` accepts a `precondition` so you can read → modify → write back without clobbering a concurrent writer. The only supported type is `content_sha256`. On mismatch the API returns `409` (`memory_precondition_failed_error`) - re-read and retry against fresh state.
 
 ```python
 client.beta.memory_stores.memories.update(
@@ -143,7 +143,7 @@ client.beta.memory_stores.memories.delete(mem.id, memory_store_id=store.id)
 
 Pass `expected_content_sha256` for a conditional delete.
 
-## Audit and rollback — memory versions
+## Audit and rollback - memory versions
 
 Every mutation creates an immutable `memver_...` snapshot. Versions accumulate for the lifetime of the parent memory; `memories.retrieve` always returns the current head, the version endpoints give you history.
 
@@ -153,7 +153,7 @@ Every mutation creates an immutable `memver_...` snapshot. Versions accumulate f
 | `memories.update` changing `content`, `path`, or both (or an agent-side write to the mount) | `"modified"` |
 | `memories.delete` | `"deleted"` |
 
-Each version also records `created_by` — an actor object with `type` ∈ `session_actor` / `api_actor` / `user_actor` — and, after redaction, `redacted_at` + `redacted_by`.
+Each version also records `created_by` - an actor object with `type` ∈ `session_actor` / `api_actor` / `user_actor` - and, after redaction, `redacted_at` + `redacted_by`.
 
 ### List versions
 

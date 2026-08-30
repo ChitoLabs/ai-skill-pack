@@ -3,7 +3,8 @@ name: n8n-validation-expert
 description: "Trigger: n8n-validation-expert, Interpret validation errors and guide fixing them. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: czlonkowski
+  author: wilkomarketing
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-validation-expert"
   github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-validation-expert"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `n8n-validation-expert` or the preserved source description: Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, the validation loop process, or auto-fix capabilities. Consult this skill whenever a validate_node or validate_workflow call returns errors or warnings — it knows which warnings are false positives and which errors need real fixes.
+Use this skill when the user request matches `n8n-validation-expert` or the preserved source description: Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, the validation loop process, or auto-fix capabilities. Consult this skill whenever a validate_node or validate_workflow call returns errors or warnings - it knows which warnings are false positives and which errors need real fixes.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

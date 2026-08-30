@@ -35,7 +35,7 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 - Use `UNavigationMenu` with `orientation="vertical"` in sidebars, default horizontal in headers
 - Use `UTabs` when switching views that don't need their own URL
 - Use route-based navigation (`to` prop) when views should have shareable URLs
-- `UCommandPalette` is typically opened via `Cmd+K` shortcut — use `defineShortcuts` to wire it up
+- `UCommandPalette` is typically opened via `Cmd+K` shortcut - use `defineShortcuts` to wire it up
 
 ## Inputs
 
@@ -60,7 +60,7 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 | File upload | `UFileUpload` | Button or drop area variants |
 
 ### Rules
-- Use `UAuthForm` for login/signup pages — handles fields, social providers, validation, and layout out of the box
+- Use `UAuthForm` for login/signup pages - handles fields, social providers, validation, and layout out of the box
 - Use `USelect` for short, known lists (country, status, role)
 - Use `USelectMenu` when the list is long or needs search
 - Use `UInputMenu` when the user might want to type a value that's not in the list
@@ -81,11 +81,11 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 - Use `useToast()` for action feedback: "Item saved", "Email sent", "Error occurred"
 - Use `UAlert` for contextual warnings in forms or sections
 - Use `UBanner` for site-wide messages (maintenance, new feature)
-- Never use a toast for information the user needs to act on — use an alert or modal instead
+- Never use a toast for information the user needs to act on - use an alert or modal instead
 
 ## Markdown
 
-When rendering Markdown (for instance with Comark), **prefer Prose components** — they are styled and tuned for Markdown contexts. Generic Nuxt UI components can also be used. `<ComarkRenderer>` (or `<Comark>`) auto-resolves `ProseX` components when `@nuxt/ui` is installed. In Markdown, the `Prose` prefix can be omitted (`::callout`, `::steps`, etc.).
+When rendering Markdown (for instance with Comark), **prefer Prose components** - they are styled and tuned for Markdown contexts. Generic Nuxt UI components can also be used. `<ComarkRenderer>` (or `<Comark>`) auto-resolves `ProseX` components when `@nuxt/ui` is installed. In Markdown, the `Prose` prefix can be omitted (`::callout`, `::steps`, etc.).
 
 | Need | Use | Not |
 |---|---|---|
@@ -97,7 +97,7 @@ When rendering Markdown (for instance with Comark), **prefer Prose components** 
 | Tabbed code blocks | `CodeGroup` | manual tabs |
 
 ### Rules
-- Prose components use native Vue slots — Comark maps named `#slot` blocks directly to `<slot name="..." />`
+- Prose components use native Vue slots - Comark maps named `#slot` blocks directly to `<slot name="..." />`
 - Theme via `appConfig.ui.prose.<name>` using the same override pattern as other Nuxt UI components
 - `Callout` colors: `neutral` (default), `primary`, `secondary`, `info`, `success`, `warning`, `error`
 
@@ -106,7 +106,7 @@ When rendering Markdown (for instance with Comark), **prefer Prose components** 
 | Need | Component | Why |
 |---|---|---|
 | Grouped content with header/body/footer | `UCard` | Bordered/shadow container with slots |
-| Rich content card with icon, badge, links | `UPageCard` | Extended card for grids — supports icon, badge, highlight, links |
+| Rich content card with icon, badge, links | `UPageCard` | Extended card for grids - supports icon, badge, highlight, links |
 | Marketing page section | `UPageSection` | Full-width section with headline, title, features |
 | Page hero | `UPageHero` | Title + description + links + optional media |
 | Call to action | `UPageCTA` | Highlighted section with action links |
@@ -116,7 +116,7 @@ When rendering Markdown (for instance with Comark), **prefer Prose components** 
 | Accordion (multiple collapsibles) | `UAccordion` | FAQ, grouped collapsible content |
 
 ### Rules
-- Don't overuse `UCard` — plain content with spacing is often better than wrapping everything in cards
-- Use `UPageCard` instead of `UCard` when you need icon, badge, highlight, or links — it's designed for feature grids and landing pages
+- Don't overuse `UCard` - plain content with spacing is often better than wrapping everything in cards
+- Use `UPageCard` instead of `UCard` when you need icon, badge, highlight, or links - it's designed for feature grids and landing pages
 - Use `UPageSection` for marketing/landing page sections, not for app UI
 - Use `UContainer` inside `UDashboardPanel` body for consistent content width

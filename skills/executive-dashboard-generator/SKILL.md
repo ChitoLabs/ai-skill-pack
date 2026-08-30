@@ -4,6 +4,7 @@ description: "Trigger: executive-dashboard-generator. Preserve source workflow w
 license: Apache-2.0
 metadata:
   author: onewave-ai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/onewave-ai/claude-skills/executive-dashboard-generator"
   github_url: "https://github.com/onewave-ai/claude-skills/tree/HEAD/executive-dashboard-generator"

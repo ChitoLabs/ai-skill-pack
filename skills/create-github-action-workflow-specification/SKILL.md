@@ -1,9 +1,10 @@
 ---
 name: create-github-action-workflow-specification
-description: Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for AI consumption and workflow maintenance.
+description: "Trigger: specify an existing GitHub Actions workflow for maintenance or AI consumption. Produce a formal workflow specification from repository evidence."
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/create-github-action-workflow-specification"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/create-github-action-workflow-specification"

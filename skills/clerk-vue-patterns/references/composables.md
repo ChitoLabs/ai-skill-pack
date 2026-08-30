@@ -81,6 +81,6 @@ async function submit(email: string, password: string) {
 
 ## CRITICAL
 
-- All composables return refs — access values with `.value` outside of templates
+- All composables return refs - access values with `.value` outside of templates
 - Check `isLoaded` before rendering auth-gated UI to prevent flashes
-- `useOrganizationList` returns `userMemberships` as a paginated resource — access `.data` for the array
+- `useOrganizationList` returns `userMemberships` as a paginated resource - access `.data` for the array

@@ -4,6 +4,7 @@ description: "Trigger: react-components, Converts Stitch designs into modular Vi
 license: Apache-2.0
 metadata:
   author: google-labs-code
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/google-labs-code/stitch-skills/react:components"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-build/skills/react-components"

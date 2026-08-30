@@ -34,7 +34,7 @@ hooks:
       run: ./scripts/apply-migrations.ps1
 ```
 
-**Copy the pre-built scripts** — Read [scripts/apply-migrations.sh](scripts/apply-migrations.sh) and [scripts/apply-migrations.ps1](scripts/apply-migrations.ps1) and write them verbatim to the project's `scripts/` folder. Adjust `APP_PROJECT_PATH` / `$AppProjectPath` in the script to the location of the `.csproj` directory.
+**Copy the pre-built scripts** - Read [scripts/apply-migrations.sh](scripts/apply-migrations.sh) and [scripts/apply-migrations.ps1](scripts/apply-migrations.ps1) and write them verbatim to the project's `scripts/` folder. Adjust `APP_PROJECT_PATH` / `$AppProjectPath` in the script to the location of the `.csproj` directory.
 
 Key behaviours of the scripts:
 - Loads `azd env get-values` safely (no `eval`)
@@ -66,7 +66,7 @@ az sql db query --server $env:SQL_SERVER --database $env:SQL_DATABASE `
 
 ### Method 3: Application Startup (Dev Only)
 
-⚠️ **Development only** — production should use explicit migration steps.
+⚠️ **Development only** - production should use explicit migration steps.
 
 ```csharp
 // Program.cs
@@ -91,7 +91,7 @@ hooks:
       run: ./scripts/grant-and-migrate.ps1
 ```
 
-**Copy the pre-built scripts** — Read [scripts/grant-and-migrate.sh](scripts/grant-and-migrate.sh) and [scripts/grant-and-migrate.ps1](scripts/grant-and-migrate.ps1) and write them verbatim to the project's `scripts/` folder. Adjust `APP_PROJECT_PATH` / `$AppProjectPath` in the script to the location of the `.csproj` directory.
+**Copy the pre-built scripts** - Read [scripts/grant-and-migrate.sh](scripts/grant-and-migrate.sh) and [scripts/grant-and-migrate.ps1](scripts/grant-and-migrate.ps1) and write them verbatim to the project's `scripts/` folder. Adjust `APP_PROJECT_PATH` / `$AppProjectPath` in the script to the location of the `.csproj` directory.
 
 > 💡 Make executable: `chmod +x scripts/*.sh`
 

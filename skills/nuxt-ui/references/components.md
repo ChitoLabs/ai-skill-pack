@@ -6,25 +6,25 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 
 | Component | Purpose |
 |---|---|
-| `UApp` | **Required** root wrapper — toasts, tooltips, overlays, i18n |
+| `UApp` | **Required** root wrapper - toasts, tooltips, overlays, i18n |
 | `UHeader` | Responsive header with mobile menu |
 | `UFooter` | Footer with left/right/top/bottom slots |
 | `UFooterColumns` | Multi-column footer with link groups |
 | `UMain` | Main content area |
 | `UContainer` | Centered max-width container |
-| `ULink` | Enhanced link — NuxtLink/RouterLink with active states |
+| `ULink` | Enhanced link - NuxtLink/RouterLink with active states |
 
 ## Element
 
 | Component | Purpose |
 |---|---|
-| `UButton` | Buttons — links, actions, icons, loading states |
+| `UButton` | Buttons - links, actions, icons, loading states |
 | `UBadge` | Labels, tags, status indicators |
 | `UAvatar` | User photos, initials, icons |
 | `UAvatarGroup` | Stacked avatars with `max` limit |
 | `UIcon` | Iconify icons (`i-{collection}-{name}`) |
 | `UCard` | Bordered container with header/body/footer |
-| `UAlert` | Inline messages — info, warning, error, success |
+| `UAlert` | Inline messages - info, warning, error, success |
 | `UBanner` | App-wide sticky announcement bar |
 | `UChip` | Notification dot overlay on children |
 | `UKbd` | Keyboard key display |
@@ -41,15 +41,15 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | `UError` | Error display with retry action |
 | `UScrollArea` | Scrollable area with custom scrollbar |
 | `UTimeline` | Timeline display for events and activity |
-| `UUser` | User display — avatar + name + description |
-| `UTheme` | Theme provider — scoped color overrides for children |
+| `UUser` | User display - avatar + name + description |
+| `UTheme` | Theme provider - scoped color overrides for children |
 
 ## Form
 
 | Component | Purpose |
 |---|---|
 | `UAuthForm` | Pre-built auth form with social providers |
-| `UInput` | Text input — text, email, password, search |
+| `UInput` | Text input - text, email, password, search |
 | `UTextarea` | Multi-line text with autoresize |
 | `USelect` | Native-like dropdown for small lists |
 | `USelectMenu` | Rich searchable dropdown, multi-select, groups |
@@ -73,9 +73,9 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 
 | Component | Purpose |
 |---|---|
-| `UModal` | Centered dialog — confirmations, forms |
-| `USlideover` | Side panel — details, editing |
-| `UDrawer` | Bottom sheet — mobile actions |
+| `UModal` | Centered dialog - confirmations, forms |
+| `USlideover` | Side panel - details, editing |
+| `UDrawer` | Bottom sheet - mobile actions |
 | `UPopover` | Contextual popup attached to trigger |
 | `UTooltip` | Hover/focus hint (non-interactive) |
 | `UContextMenu` | Right-click menu |
@@ -86,7 +86,7 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | Component | Purpose |
 |---|---|
 | `USidebar` | Standalone sidebar with header/body/footer |
-| `UNavigationMenu` | Primary nav — horizontal or vertical |
+| `UNavigationMenu` | Primary nav - horizontal or vertical |
 | `UTabs` | Tab switcher within a page |
 | `UBreadcrumb` | Location hierarchy |
 | `UDropdownMenu` | Action menu on a trigger |
@@ -121,7 +121,7 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | Component | Purpose |
 |---|---|
 | `UPage` | Multi-column layout with left/right sidebars |
-| `UPageHero` | Hero section — title, description, links, media |
+| `UPageHero` | Hero section - title, description, links, media |
 | `UPageSection` | Content section with features grid |
 | `UPageCTA` | Call to action block |
 | `UPageHeader` | Page title and description |
@@ -153,13 +153,13 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | `UPricingPlan` | Individual pricing plan card |
 | `UPricingTable` | Feature comparison table |
 
-## Prose — Base Typography
+## Prose - Base Typography
 
-Standard Markdown elements auto-resolved by Comark/Content/MDC. No `::` prefix needed — they map directly from markdown syntax (`# Heading` → `ProseH1`, `**bold**` → `ProseStrong`, etc.). Themed via `appConfig.ui.prose.<name>`.
+Standard Markdown elements auto-resolved by Comark/Content/MDC. No `::` prefix needed - they map directly from markdown syntax (`# Heading` → `ProseH1`, `**bold**` → `ProseStrong`, etc.). Themed via `appConfig.ui.prose.<name>`.
 
 | Component | Renders | Notable |
 |---|---|---|
-| `H1` `H2` `H3` `H4` | Headings | H1–H3 get anchor links + TOC entries |
+| `H1` `H2` `H3` `H4` | Headings | H1-H3 get anchor links + TOC entries |
 | `P` | Paragraph | |
 | `A` | Link | External links get target/rel handling |
 | `Strong` | Bold | |
@@ -172,7 +172,7 @@ Standard Markdown elements auto-resolved by Comark/Content/MDC. No `::` prefix n
 | `Pre` | Code block | Copy button, filename + icon, line highlighting (`{2,4-6}`), diff |
 | `Code` | Inline code | `color` and `lang` props |
 
-## Prose — Feature Components
+## Prose - Feature Components
 
 Nuxt UI-specific Prose components. In markdown files they are used **without the `Prose` prefix** (e.g. `::callout`, `::steps`). In Vue they are referenced as `ProseCallout`, `ProseSteps`, etc. Comark resolves them automatically when `@nuxt/ui` is installed.
 

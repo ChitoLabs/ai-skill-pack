@@ -209,7 +209,7 @@ new Table({
 
 **Table width calculation:**
 
-Always use `WidthType.DXA` — `WidthType.PERCENTAGE` breaks in Google Docs.
+Always use `WidthType.DXA` - `WidthType.PERCENTAGE` breaks in Google Docs.
 
 ```javascript
 // Table width = sum of columnWidths = content width
@@ -219,7 +219,7 @@ columnWidths: [7000, 2360]  // Must sum to table width
 ```
 
 **Width rules:**
-- **Always use `WidthType.DXA`** — never `WidthType.PERCENTAGE` (incompatible with Google Docs)
+- **Always use `WidthType.DXA`** - never `WidthType.PERCENTAGE` (incompatible with Google Docs)
 - Table width must equal the sum of `columnWidths`
 - Cell `width` must match corresponding `columnWidth`
 - Cell `margins` are internal padding - they reduce content area, not add to cell width

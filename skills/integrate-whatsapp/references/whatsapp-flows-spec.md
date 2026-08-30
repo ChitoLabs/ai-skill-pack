@@ -31,7 +31,7 @@ Flow JSON consists of the following sections:
 | **Actions**           | Syntax to invoke client-side logic. Allowed actions: `navigate`, `data_exchange`, `complete`, `open_url` (v6.0+), `update_data` (v6.0+). |
 
 ## Data Exchange quick spec (Kapso Functions)
-- WhatsApp sends (POST): `action` (`INIT`/`data_exchange`/`BACK`), `screen`, `data` (fields), `flow_token`, optional `flow_token_signature` (JWT with Meta app secret). Expect response in ~10–15s.
+- WhatsApp sends (POST): `action` (`INIT`/`data_exchange`/`BACK`), `screen`, `data` (fields), `flow_token`, optional `flow_token_signature` (JWT with Meta app secret). Expect response in ~10-15s.
 - Kapso forwards to your Function as JSON: `{ source: "whatsapp_flow", flow: { id, meta_flow_id }, data_exchange: <original payload>, signature_valid: true|false, received_at: "<iso8601>" }`.
 - Your Function must return JSON:
   - Next screen: `{ "screen": "NEXT_SCREEN", "data": { ... } }`
@@ -307,7 +307,7 @@ Example (validation failure):
 
 When a component uses a data source from the endpoint, the field name and shape must match exactly.
 
-Example – dropdown with dynamic options:
+Example - dropdown with dynamic options:
 
 ```json
 {
@@ -1298,10 +1298,10 @@ produce flows that feel fast, clear, and trustworthy.
 
 - **Initiation message should match the first screen.**
   - The chat message + CTA that opens the flow must clearly describe the task.
-  - The first screen should immediately reflect that task—no surprises.
+  - The first screen should immediately reflect that task-no surprises.
 - **Set expectations up front.**
   - In either the chat copy or the first screen, indicate roughly how long it
-    will take (for example, “This will take about 2–3 minutes.”).
+    will take (for example, “This will take about 2-3 minutes.”).
 - **Use clear, action-oriented titles.**
   - Examples: “Book appointment”, “Confirm details”, “Update contact info”.
   - Use titles to show progress where it helps, for example “Step 1 of 3”.

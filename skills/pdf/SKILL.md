@@ -3,7 +3,8 @@ name: pdf
 description: "Trigger: pdf, Use this skill whenever the user wants to do anything with PDF files. Preserve source workflow with portable agent instructions."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: unknown
+  author: anthropics
+  adapter: LCubero
   version: 0.1
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/pdf"
 ---

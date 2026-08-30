@@ -174,7 +174,7 @@ colors:
 - **Display** ([weight], [size/clamp], [line-height]): [Purpose; where it appears.]
 - **Headline** ([weight], [size], [line-height]): [Purpose.]
 - **Title** ([weight], [size], [line-height]): [Purpose.]
-- **Body** ([weight], [size], [line-height]): [Purpose. Include max line length like 65–75ch if relevant.]
+- **Body** ([weight], [size], [line-height]): [Purpose. Include max line length like 65-75ch if relevant.]
 - **Label** ([weight], [size], [letter-spacing], [case if uppercase]): [Purpose.]
 
 ### Named Rules (optional)
@@ -351,8 +351,8 @@ Group into one `AskUserQuestion` interaction. Options must be concrete.
 
 1. **Color strategy.** Pick one:
    - Restrained: tinted neutrals + one accent ≤10%
-   - Committed: one saturated color carries 30–60% of the surface
-   - Full palette: 3–4 named color roles, each deliberate
+   - Committed: one saturated color carries 30-60% of the surface
+   - Full palette: 3-4 named color roles, each deliberate
    - Drenched: the surface IS the color
    
    Then: one hue family or anchor reference ("deep teal", "mustard", "Klim #ff4500 orange").

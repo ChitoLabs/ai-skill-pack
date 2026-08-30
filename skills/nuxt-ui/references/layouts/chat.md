@@ -190,13 +190,13 @@ function onSubmit() {
 
 ## Key components
 
-- `UChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
-- `UChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
-- `UChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `@nuxt/ui/utils/ai`.
-- `UChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
-- `UChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
-- `UChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
-- `UChatPalette` — layout wrapper for chat inside overlays.
+- `UChatMessages` - scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
+- `UChatMessage` - individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
+- `UChatReasoning` - collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `@nuxt/ui/utils/ai`.
+- `UChatTool` - tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
+- `UChatPrompt` - enhanced textarea. Accepts all Textarea props + `error` prop.
+- `UChatPromptSubmit` - submit button with automatic status handling (send/stop/reload).
+- `UChatPalette` - layout wrapper for chat inside overlays.
 
 ## Chat in a modal
 

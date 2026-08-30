@@ -99,7 +99,7 @@ func freeTryLimits(_ tier: Tier, expected: Int) {
 
 ### `zip` pitfalls to avoid
 
-**Silent truncation**: `zip` stops at the shorter collection. If the two arrays differ in length, the extra elements are silently dropped — no compiler error, no test failure, just missing coverage.
+**Silent truncation**: `zip` stops at the shorter collection. If the two arrays differ in length, the extra elements are silently dropped - no compiler error, no test failure, just missing coverage.
 
 ```swift
 // ❌ Silent gap: the fifth input is never tested
@@ -167,7 +167,7 @@ func cook(_ ingredient: Ingredient, into dish: Dish) {
 
 ### Fixed-size `zip` with `InlineArray` (Swift 6.2+)
 
-A custom `zip` overload for `InlineArray` enforces equal-length arrays at compile time via a generic length parameter. This is not part of the standard library — you must define the helper yourself.
+A custom `zip` overload for `InlineArray` enforces equal-length arrays at compile time via a generic length parameter. This is not part of the standard library - you must define the helper yourself.
 
 ```swift
 import Testing
@@ -180,7 +180,7 @@ func zip<let N: Int, A, B>(
   zip(Array(a), Array(b))
 }
 
-// ✅ Compile error if lengths differ — enforced at compile time
+// ✅ Compile error if lengths differ - enforced at compile time
 @Test(arguments: zip(
   InlineArray<2, Ingredient>(.rice, .potato),
   InlineArray<2, Dish>(.onigiri, .curry)
@@ -198,7 +198,7 @@ func cook(_ ingredient: Ingredient, into dish: Dish) {
 
 ## When `CaseIterable.allCases` is appropriate
 
-Using `allCases` as arguments is a valid pattern for **property-based tests** — tests that verify a universal property holds for every member of a type. The key distinction: the expected result is derived from the *property being tested*, not from a hard-coded mapping.
+Using `allCases` as arguments is a valid pattern for **property-based tests** - tests that verify a universal property holds for every member of a type. The key distinction: the expected result is derived from the *property being tested*, not from a hard-coded mapping.
 
 ```swift
 import Testing
@@ -220,7 +220,7 @@ func fullRotation(orientation: Orientation) {
 }
 ```
 
-Avoid `allCases` when you need concrete, case-specific expected values — use explicit arrays or tuples instead.
+Avoid `allCases` when you need concrete, case-specific expected values - use explicit arrays or tuples instead.
 
 ## Common pitfalls
 
@@ -247,7 +247,7 @@ func dayLabel(day: Day, expected: String) {
 - **Control flow in test bodies**: `if`/`switch` inside a parameterized test body mirrors implementation logic. Tests that branch the same way as production code verify themselves rather than the behavior independently.
 
 ```swift
-// ❌ Mirrors implementation — not independent verification.
+// ❌ Mirrors implementation - not independent verification.
 @Test(arguments: Day.allCases)
 func greeting(day: Day) {
  if day == .friday {

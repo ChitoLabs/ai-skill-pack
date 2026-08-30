@@ -4,6 +4,7 @@ description: "Trigger: social-graph-ranker, Weighted social-graph ranking for wa
 license: Apache-2.0
 metadata:
   author: affaan-m
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/social-graph-ranker"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/social-graph-ranker"

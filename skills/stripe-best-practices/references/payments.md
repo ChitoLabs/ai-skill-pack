@@ -22,9 +22,9 @@ Use the [PaymentIntents API](https://docs.stripe.com/payments/paymentintents/lif
 
 Prioritize Stripe-hosted or embedded Checkout where possible. Use in this order of preference:
 
-1. **Payment Links** — No-code. Best for simple products.
-1. **Checkout** ([docs](https://docs.stripe.com/payments/checkout.md)) — Stripe-hosted or embedded form. Best for most web apps.
-1. **Payment Element** ([docs](https://docs.stripe.com/payments/payment-element.md)) — Embedded UI component for advanced customization.
+1. **Payment Links** - No-code. Best for simple products.
+1. **Checkout** ([docs](https://docs.stripe.com/payments/checkout.md)) - Stripe-hosted or embedded form. Best for most web apps.
+1. **Payment Element** ([docs](https://docs.stripe.com/payments/payment-element.md)) - Embedded UI component for advanced customization.
    - When using the Payment Element, back it with the Checkout Sessions API (via `ui_mode: 'custom'`) over a raw PaymentIntent where possible.
 
 **Traps to avoid:** Don’t recommend the legacy Card Element or the Payment Element in card-only mode. If the user asks for the Card Element, advise them to [migrate to the Payment Element](https://docs.stripe.com/payments/payment-element/migration.md).
@@ -37,7 +37,7 @@ For surcharging or inspecting card details before payment (e.g., rendering the P
 
 Use the [Setup Intents API](https://docs.stripe.com/api/setup_intents.md) to save a payment method for later use.
 
-**Traps to avoid:** Don’t use the Sources API to save cards to customers. The Sources API is deprecated — Setup Intents is the correct approach.
+**Traps to avoid:** Don’t use the Sources API to save cards to customers. The Sources API is deprecated - Setup Intents is the correct approach.
 
 ## Dynamic payment methods
 
@@ -56,8 +56,8 @@ See the [integration options guide](https://docs.stripe.com/payments/payment-met
 **Traps to avoid:**
 
 - Never hardcode `payment_method_types: ['card']` even if the user only mentions credit cards. Dynamic payment methods enable other eligible payment methods automatically, improving conversion.
-- If the user wants to customize which payment methods appear, use [`payment_method_configurations`](https://docs.stripe.com/payments/payment-method-configurations.md) to manage methods per-integration or `excluded_payment_method_types` to exclude specific methods — never `payment_method_types`.
-- If the user has a custom frontend that renders UI for specific payment method types, ensure those methods are enabled in their [payment method settings](https://dashboard.stripe.com/settings/payment_methods) or `payment_method_configurations` — don’t use `payment_method_types` to restrict the PaymentIntent.
+- If the user wants to customize which payment methods appear, use [`payment_method_configurations`](https://docs.stripe.com/payments/payment-method-configurations.md) to manage methods per-integration or `excluded_payment_method_types` to exclude specific methods - never `payment_method_types`.
+- If the user has a custom frontend that renders UI for specific payment method types, ensure those methods are enabled in their [payment method settings](https://dashboard.stripe.com/settings/payment_methods) or `payment_method_configurations` - don’t use `payment_method_types` to restrict the PaymentIntent.
 
 ## Deprecated APIs and migration paths
 
@@ -69,7 +69,7 @@ Don’t call other deprecated or outdated API endpoints unless there is a specif
 | ------------ | ---------- | ----------------------------------- | ---------------------------------------------------------------------------------------- |
 | Charges API  | Never use  | Checkout Sessions or PaymentIntents | [Migration guide](https://docs.stripe.com/payments/payment-intents/migration/charges.md) |
 | Sources API  | Deprecated | Setup Intents                       | [Setup Intents docs](https://docs.stripe.com/api/setup_intents.md)                       |
-| Tokens API   | Outdated   | Setup Intents or Checkout Sessions  | —                                                                                        |
+| Tokens API   | Outdated   | Setup Intents or Checkout Sessions  | -                                                                                        |
 | Card Element | Legacy     | Payment Element                     | [Migration guide](https://docs.stripe.com/payments/payment-element/migration.md)         |
 
 ## PCI compliance

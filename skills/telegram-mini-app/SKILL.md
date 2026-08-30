@@ -4,6 +4,7 @@ description: "Trigger: telegram-mini-app, Expert in building Telegram Mini Apps 
 license: Apache-2.0
 metadata:
   author: sickn33
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/telegram-mini-app"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/telegram-mini-app"

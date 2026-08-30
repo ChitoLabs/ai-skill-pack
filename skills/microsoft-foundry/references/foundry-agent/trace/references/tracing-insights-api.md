@@ -4,7 +4,7 @@ Automatically detect quality regressions and anomalies in agent traces using cha
 
 ## When to Use
 
-Use this instead of manual KQL queries when you want **automated anomaly detection** across evaluation dimensions (task adherence, intent resolution, fluency, latency, token usage). The API finds statistical changepoints in score distributions — no manual threshold tuning needed.
+Use this instead of manual KQL queries when you want **automated anomaly detection** across evaluation dimensions (task adherence, intent resolution, fluency, latency, token usage). The API finds statistical changepoints in score distributions - no manual threshold tuning needed.
 
 **Prerequisites:**
 - App Insights connected to the Foundry project (with `gen_ai.evaluation.result` custom events)
@@ -16,7 +16,7 @@ Use this instead of manual KQL queries when you want **automated anomaly detecti
 POST https://{region}.api.azureml.ms/notification/v1-beta2/subscriptions/{sub}/resourceGroups/{rg}/providers/microsoft.insights/components/{component}/:insights
 ```
 
-The API is region-agnostic — any regional endpoint can serve requests for any project. For lowest latency, use the same region as the Foundry project (e.g., `eastus2`, `westus2`, `westcentralus`). If the project region is unknown, use `eastus2` as the default.
+The API is region-agnostic - any regional endpoint can serve requests for any project. For lowest latency, use the same region as the Foundry project (e.g., `eastus2`, `westus2`, `westcentralus`). If the project region is unknown, use `eastus2` as the default.
 
 **Query parameters:**
 | Parameter          | Required | Description                                                            |
@@ -24,12 +24,12 @@ The API is region-agnostic — any regional endpoint can serve requests for any 
 | `startDateTimeUtc` | Yes      | ISO 8601 start of analysis window                                      |
 | `endDateTimeUtc`   | Yes      | ISO 8601 end of analysis window                                        |
 | `agent`            | Yes      | Agent name (URL-encoded)                                               |
-| `projectId`        | Yes      | ARM resource ID of the Foundry project (URL-encoded — contains slashes)|
+| `projectId`        | Yes      | ARM resource ID of the Foundry project (URL-encoded - contains slashes)|
 | `top`              | No       | Max insights to return (default 50)                                    |
 
 **Auth:** `az account get-access-token --resource https://ai.azure.com`
 
-**Body:** Must send `{}` (empty JSON object) — POST with no body returns 400.
+**Body:** Must send `{}` (empty JSON object) - POST with no body returns 400.
 
 ## Example
 
@@ -91,7 +91,7 @@ This returns the user query and agent response for the specific trace flagged by
 
 ## How Changepoint Detection Works
 
-The API finds **statistical inflection points within the queried time window**. `meanBefore`/`meanAfter` represent averages on either side of the detected shift — not comparisons to a historical baseline.
+The API finds **statistical inflection points within the queried time window**. `meanBefore`/`meanAfter` represent averages on either side of the detected shift - not comparisons to a historical baseline.
 
 - 10+ data points give better signal for changepoint detection
 - `confidence` close to 1.0 = statistically significant shift

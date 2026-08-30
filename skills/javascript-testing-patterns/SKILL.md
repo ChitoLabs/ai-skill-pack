@@ -4,6 +4,7 @@ description: "Trigger: javascript-testing-patterns. Preserve source workflow wit
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/javascript-testing-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/javascript-typescript/skills/javascript-testing-patterns"

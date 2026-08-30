@@ -3,7 +3,8 @@ name: terraform-style-guide
 description: "Trigger: terraform-style-guide, Generate Terraform HCL code following HashiCorp's official style conventions and best practices. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: hashicorp
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/terraform-style-guide"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/terraform-style-guide"

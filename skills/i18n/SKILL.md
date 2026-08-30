@@ -4,6 +4,7 @@ description: "Trigger: i18n, LobeHub internationalization with react-i18next. Pr
 license: Apache-2.0
 metadata:
   author: lobehub
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/lobehub/lobe-chat/i18n"
   github_url: "https://github.com/lobehub/lobehub/tree/HEAD/.agents/skills/i18n"

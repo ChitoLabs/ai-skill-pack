@@ -4,6 +4,7 @@ description: "Trigger: ask matt, choose workflow, skill router. Route work throu
 license: MIT
 metadata:
   author: mattpocock
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/ask-matt"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/engineering/ask-matt"

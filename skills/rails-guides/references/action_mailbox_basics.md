@@ -444,7 +444,7 @@ class ForwardsMailbox < ApplicationMailbox
   private
     def require_projects
       if forwarder.projects.none?
-        # Use Action Mailers to bounce incoming emails back to sender – this halts processing
+        # Use Action Mailers to bounce incoming emails back to sender - this halts processing
         bounce_with Forwards::BounceMailer.no_projects(inbound_email, forwarder: forwarder)
       end
     end

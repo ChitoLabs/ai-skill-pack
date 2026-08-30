@@ -21,7 +21,7 @@ See `SKILL.md` §Thinking & Effort for model support and parameter details.
 
 Claude doesn't know your application's security boundary, approval policy, or UX surface. Claude emits tool calls; your harness handles them. The shape of those tool calls determines what the harness can do.
 
-A **bash tool** gives Claude broad programmatic leverage — it can perform almost any action. But it gives the harness only an opaque command string, the same shape for every action. Promoting an action to a **dedicated tool** gives the harness an action-specific hook with typed arguments it can intercept, gate, render, or audit.
+A **bash tool** gives Claude broad programmatic leverage - it can perform almost any action. But it gives the harness only an opaque command string, the same shape for every action. Promoting an action to a **dedicated tool** gives the harness an action-specific hook with typed arguments it can intercept, gate, render, or audit.
 
 **When to promote an action to a dedicated tool:**
 
@@ -45,7 +45,7 @@ A **bash tool** gives Claude broad programmatic leverage — it can perform almo
 | **Web search / fetch** | Server | Claude needs information past its training cutoff (news, current events, recent docs) or the content of a specific URL. | Claude issues a query or URL; Anthropic executes it and returns results with citations. |
 | **Memory** | Client | Claude needs to save context across sessions. | Claude reads/writes a `/memories` directory. You implement the storage backend. |
 
-**Client-side** tools are defined by Anthropic (name, schema, Claude's usage pattern) but executed by your harness. Anthropic provides reference implementations. **Server-side** tools run entirely on Anthropic infrastructure — declare them in `tools` and Claude handles the rest.
+**Client-side** tools are defined by Anthropic (name, schema, Claude's usage pattern) but executed by your harness. Anthropic provides reference implementations. **Server-side** tools run entirely on Anthropic infrastructure - declare them in `tools` and Claude handles the rest.
 
 ---
 
@@ -53,7 +53,7 @@ A **bash tool** gives Claude broad programmatic leverage — it can perform almo
 
 With standard tool use, each tool call is a round trip: Claude calls the tool, the result lands in Claude's context, Claude reasons about it, then calls the next tool. Three sequential actions (read profile → look up orders → check inventory) means three round trips. Each adds latency and tokens, and most of the intermediate data is never needed again.
 
-**Programmatic tool calling (PTC)** lets Claude compose those calls into a script instead. The script runs in the code execution container. When the script calls a tool, the container pauses, the call is executed (client-side or server-side), and the result returns to the running code — not to Claude's context. The script processes it with normal control flow (loops, filters, branches). Only the script's final output returns to Claude.
+**Programmatic tool calling (PTC)** lets Claude compose those calls into a script instead. The script runs in the code execution container. When the script calls a tool, the container pauses, the call is executed (client-side or server-side), and the result returns to the running code - not to Claude's context. The script processes it with normal control flow (loops, filters, branches). Only the script's final output returns to Claude.
 
 | When to use it | What to expect |
 | --- | --- |
@@ -65,7 +65,7 @@ With standard tool use, each tool call is a round trip: Claude calls the tool, t
 
 | Feature | When to use it | What to expect |
 | --- | --- | --- |
-| **Tool search** | Many tools available, but only a few relevant per request. Don't want all schemas in context upfront. | Claude searches the tool set and loads only relevant schemas. Tool definitions are appended, not swapped — preserves cache (see Caching below). |
+| **Tool search** | Many tools available, but only a few relevant per request. Don't want all schemas in context upfront. | Claude searches the tool set and loads only relevant schemas. Tool definitions are appended, not swapped - preserves cache (see Caching below). |
 | **Skills** | Task-specific instructions Claude should load only when relevant. | Each skill is a folder with a `SKILL.md`. The skill's description sits in context by default; Claude reads the full file when the task calls for it. |
 
 Both patterns keep the fixed context small and load detail on demand.
@@ -80,7 +80,7 @@ Both patterns keep the fixed context small and load detail on demand.
 | **Compaction** | Conversation likely to reach or exceed the context window limit. | Earlier context is summarized into a compaction block server-side. See `SKILL.md` §Compaction for the critical `response.content` handling. |
 | **Memory** | State must persist across sessions (not just within one conversation). | Claude reads/writes files in a memory directory. Survives process restarts. |
 
-**Choosing between them:** Context editing and compaction operate within a session — editing prunes stale turns, compaction summarizes when you're near the limit. Memory is for cross-session persistence. Many long-running agents use all three.
+**Choosing between them:** Context editing and compaction operate within a session - editing prunes stale turns, compaction summarizes when you're near the limit. Memory is for cross-session persistence. Many long-running agents use all three.
 
 ---
 
@@ -92,9 +92,9 @@ Both patterns keep the fixed context small and load detail on demand.
 | --- | --- |
 | Editing the system prompt mid-session invalidates the cache. | Append a `<system-reminder>` block in the `messages` array instead. The cached prefix stays intact. Claude Code uses this for time updates and mode transitions. |
 | Switching models mid-session invalidates the cache. | Spawn a **subagent** with the cheaper model for the sub-task; keep the main loop on one model. Claude Code's Explore subagents use Haiku this way. |
-| Adding/removing tools mid-session invalidates the cache. | Use **tool search** for dynamic discovery — it appends tool schemas rather than swapping them, so the existing prefix is preserved. |
+| Adding/removing tools mid-session invalidates the cache. | Use **tool search** for dynamic discovery - it appends tool schemas rather than swapping them, so the existing prefix is preserved. |
 
-For multi-turn breakpoint placement, use top-level auto-caching — see `prompt-caching.md` §Placement patterns.
+For multi-turn breakpoint placement, use top-level auto-caching - see `prompt-caching.md` §Placement patterns.
 
 ---
 

@@ -315,8 +315,8 @@ force a database read), call `#reload_association` on the parent object.
 @author = @book.reload_author
 ```
 
-To unload the cached version of the associated object—causing the next access,
-if any, to query it from the database—call `#reset_association` on the parent
+To unload the cached version of the associated object-causing the next access,
+if any, to query it from the database-call `#reset_association` on the parent
 object.
 
 ```ruby
@@ -539,8 +539,8 @@ force a database read), call `#reload_association` on the parent object.
 @account = @supplier.reload_account
 ```
 
-To unload the cached version of the associated object—forcing the next access,
-if any, to query it from the database—call `#reset_association` on the parent
+To unload the cached version of the associated object-forcing the next access,
+if any, to query it from the database-call `#reset_association` on the parent
 object.
 
 ```ruby

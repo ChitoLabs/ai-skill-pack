@@ -25,7 +25,7 @@ belt login
 
 # Generate email header banner
 belt app run infsh/html-to-image --input '{
-  "html": "<div style=\"width:600px;height:250px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;font-family:system-ui;color:white;text-align:center\"><div><h1 style=\"font-size:36px;margin:0\">Spring Sale — 30% Off</h1><p style=\"font-size:18px;opacity:0.9\">This weekend only</p></div></div>"
+  "html": "<div style=\"width:600px;height:250px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;font-family:system-ui;color:white;text-align:center\"><div><h1 style=\"font-size:36px;margin:0\">Spring Sale - 30% Off</h1><p style=\"font-size:18px;opacity:0.9\">This weekend only</p></div></div>"
 }'
 ```
 
@@ -85,9 +85,9 @@ The most effective email layout funnels attention to a single CTA:
 | Rule | Value |
 |------|-------|
 | **Length** | 30-50 characters (mobile truncates at ~35) |
-| **Preview text** | First 40-100 chars after subject — design this intentionally |
+| **Preview text** | First 40-100 chars after subject - design this intentionally |
 | **Emoji** | Max 1, at start or end, test with your audience |
-| **ALL CAPS** | Never — triggers spam filters |
+| **ALL CAPS** | Never - triggers spam filters |
 | **Spam trigger words** | Avoid: "free", "act now", "limited time", "click here" in subject |
 | **Personalization** | [First name] in subject lifts open rates 20%+ |
 
@@ -103,7 +103,7 @@ The preview text appears after the subject line in the inbox. Don't waste it.
    Preview: "Number 3 saved us 6 hours per week"
 
 ✅ Subject: "Your monthly report is ready"
-   Preview: "Revenue up 23% — here's what drove it"
+   Preview: "Revenue up 23% - here's what drove it"
 ```
 
 ## Email Types
@@ -112,7 +112,7 @@ The preview text appears after the subject line in the inbox. Don't waste it.
 
 | Element | Content |
 |---------|---------|
-| Subject | "Welcome to [Product] — here's what's next" |
+| Subject | "Welcome to [Product] - here's what's next" |
 | Header | Brand image or product screenshot |
 | Body | 3-4 sentences: what they signed up for, what to expect, one quick win |
 | CTA | "Complete your setup" or "Try your first [action]" |
@@ -217,12 +217,12 @@ HTML buttons render differently across email clients. Use the "bulletproof butto
 | Factor | Rule |
 |--------|------|
 | Image-to-text ratio | Max 40% images, 60% text (spam filters flag image-heavy emails) |
-| Alt text on images | Always — images blocked by default in many clients |
-| Unsubscribe link | Required by law (CAN-SPAM, GDPR) — make it easy to find |
+| Alt text on images | Always - images blocked by default in many clients |
+| Unsubscribe link | Required by law (CAN-SPAM, GDPR) - make it easy to find |
 | From name | Recognizable person or brand name |
 | Reply-to | Real address, not no-reply@ (hurts deliverability) |
 | List hygiene | Remove bounces, clean inactive subscribers quarterly |
-| SPF/DKIM/DMARC | Technical authentication — set up once, critical for inbox |
+| SPF/DKIM/DMARC | Technical authentication - set up once, critical for inbox |
 
 ## Common Mistakes
 

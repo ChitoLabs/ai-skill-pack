@@ -1,52 +1,55 @@
 ---
 name: subagent-driven-development
-description: "Trigger: subagent-driven-development, Use when executing implementation plans with independent tasks in the current session. Preserve source workflow with portable agent instructions."
+description: "Trigger: repository-local delegated implementation workflow explicitly selected by the user or repository policy. Do not auto-activate globally; defer to the repository-designated orchestration owner and any managed review or receipt workflow."
 license: Apache-2.0
 metadata:
   author: obra
-  version: 0.1
+  adapter: LCubero
+  version: 0.2
   skills_sh_url: "https://skills.sh/obra/superpowers/subagent-driven-development"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/subagent-driven-development"
 ---
 
+# Repository-Local Template: Delegated Implementation
+
 ## Activation Contract
 
-Use this skill when the user request matches `subagent-driven-development` or the preserved source description: Use when executing implementation plans with independent tasks in the current session
+Use only when the user or repository policy explicitly adopts this template and names the orchestration owner. Never auto-activate globally.
 
-Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
+Read `references/source-skill.md` and the relevant prompt templates before any authorized delegation.
 
 ## Hard Rules
 
-- Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
-- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
-- Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
-- Prefer current official documentation or source retrieval when the preserved workflow says knowledge may be outdated.
-- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+- The designated orchestration owner controls work units, delegation, checkpoints, phases, review, and delivery.
+- Do not create child workers when runtime capability or repository policy does not permit them.
+- Do not commit, advance phases, continue across checkpoints, or issue delivery decisions without explicit authorization.
+- Keep specification conformance review separate from technical quality review.
+- Use canonical task inputs; never create a parallel plan or review authority.
 
 ## Decision Gates
 
 | Condition | Action |
 |---|---|
-| Relevant companion file exists | Read it before implementing that part of the workflow. |
-| Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
-| The task could modify external systems | Explain the action and wait for user approval before execution. |
-| Preserved guidance conflicts with current official docs | Prefer current docs and report the discrepancy. |
+| Template was not explicitly adopted | Do not run. |
+| Delegation capability is unavailable | Return manual work-unit instructions. |
+| A checkpoint, phase, or review owner exists | Return evidence to that owner and wait. |
+| Scope or canonical inputs conflict | Stop and report the conflict. |
 
 ## Execution Steps
 
-1. Match the user request to the preserved source workflow in `references/source-skill.md`.
-2. Inspect any local companion reference needed for the specific task.
-3. Verify prerequisites, credentials, project context, and safety boundaries before tool use.
-4. Execute the smallest correct workflow using the host runtime's available tools.
-5. Validate the result with the checks named in the preserved source guidance or with an explicit manual verification note.
+1. Confirm the owner, canonical task, scope, permitted capability, and checkpoint.
+2. Prepare isolated context for one authorized work unit.
+3. Delegate or provide manual instructions using the implementer template.
+4. Collect evidence, then run separately authorized specification and quality reviews.
+5. Report results and blockers to the owner without advancing automatically.
 
 ## Output Contract
 
-Return the completed action, files or commands used, verification evidence, blockers, and any next step the user must approve. If the task is blocked, state the exact missing prerequisite or unsafe condition.
+Return the work unit, capability used, files changed, verification evidence, separate review results, blockers, and the next checkpoint awaiting authorization.
 
 ## References
 
-- `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/code-quality-reviewer-prompt.md` - preserved source companion file.
-- `references/implementer-prompt.md` - preserved source companion file.
-- `references/spec-reviewer-prompt.md` - preserved source companion file.
+- `references/source-skill.md`
+- `references/implementer-prompt.md`
+- `references/spec-reviewer-prompt.md`
+- `references/code-quality-reviewer-prompt.md`

@@ -1,6 +1,6 @@
 ---
 name: playwright-best-practices
-description: "Write, debug, and maintain Playwright tests across E2E, component, API, visual, accessibility, security, Electron, extension, mobile, CI/CD, authentication, mocking, and flaky-test workflows."
+description: "Trigger: write, debug, review, or maintain Playwright tests. Apply focused practices for the selected E2E, component, API, visual, accessibility, or CI test scope."
 license: MIT
 metadata:
   author: currents.dev

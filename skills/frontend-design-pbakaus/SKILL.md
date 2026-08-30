@@ -1,9 +1,10 @@
 ---
 name: frontend-design-pbakaus
-description: "Use when designing, redesigning, critiquing, polishing, adapting, animating, auditing, or otherwise improving frontend interfaces. Covers websites, landing pages, dashboards, product UI, components, forms, visual hierarchy, accessibility, responsiveness, motion, UX copy, and design-system craft."
+description: "Trigger: design, critique, polish, or audit a frontend interface. Improve a specified UI across hierarchy, accessibility, responsiveness, motion, and design-system craft."
 license: Apache 2.0. Based on Anthropic's frontend-design skill. See NOTICE.md for attribution.
 metadata:
-  author: unknown
+  author: pbakaus
+  adapter: LCubero
   version: 3.1.1
   github_url: "https://github.com/pbakaus/impeccable/tree/HEAD/.pi/skills/impeccable"
 ---

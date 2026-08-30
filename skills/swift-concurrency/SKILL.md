@@ -4,6 +4,7 @@ description: "Trigger: swift-concurrency. Preserve source workflow with portable
 license: Apache-2.0
 metadata:
   author: avdlee
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/swift-concurrency-agent-skill/swift-concurrency"
   github_url: "https://github.com/avdlee/swift-concurrency-agent-skill/tree/HEAD/swift-concurrency"

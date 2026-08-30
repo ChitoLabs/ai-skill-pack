@@ -34,9 +34,9 @@ Pods that are running but not Ready are removed from Endpoints. Check `kubectl g
 
 Use the [IG base command pattern](references/inspektor-gadget.md) with `--k8s-namespace <ns> --k8s-podname <pod-name>` and these gadgets:
 
-- `snapshot_socket` (timeout 5) — check what ports the pod is listening on
-- `trace_tcp` (timeout 30) — trace connect/accept/close events
-- `trace_tcpretrans` (timeout 30) — packet retransmissions
+- `snapshot_socket` (timeout 5) - check what ports the pod is listening on
+- `trace_tcp` (timeout 30) - trace connect/accept/close events
+- `trace_tcpretrans` (timeout 30) - packet retransmissions
 
 See [references/inspektor-gadget.md](references/inspektor-gadget.md).
 

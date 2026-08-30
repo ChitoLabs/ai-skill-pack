@@ -4,6 +4,7 @@ description: "Trigger: tailwind, Tailwind CSS v4.2 browser-runtime patterns for 
 license: Apache-2.0
 metadata:
   author: heygen-com
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/heygen-com/hyperframes/tailwind"
   github_url: "https://github.com/heygen-com/hyperframes/tree/HEAD/skills/tailwind"

@@ -33,10 +33,10 @@ SwiftLint provides several rules targeting async/await and concurrency patterns.
 - **Legit use of `Task.yield()`**: OK in tests or scheduling control when you truly need a yield; not as a lint workaround.
 
 ### Diagnose why the declaration is `async`
-1) **Protocol requirement** — the protocol method/property is `async`.
-2) **Override requirement** — base class API is `async`.
-3) **`@concurrent` requirement** — stays `async` even without `await`.
-4) **Accidental/legacy `async`** — no caller needs async semantics.
+1) **Protocol requirement** - the protocol method/property is `async`.
+2) **Override requirement** - base class API is `async`.
+3) **`@concurrent` requirement** - stays `async` even without `await`.
+4) **Accidental/legacy `async`** - no caller needs async semantics.
 
 ### Preferred fixes (order)
 1) **Remove `async`** (and adjust call sites) when no async semantics are needed.

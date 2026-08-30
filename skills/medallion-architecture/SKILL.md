@@ -4,6 +4,7 @@ description: "Trigger: medallion-architecture, Bronze/Silver/Gold layer design p
 license: Apache-2.0
 metadata:
   author: vivekgana
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vivekgana/databricks-platform-marketplace/medallion-architecture"
   github_url: "https://github.com/vivekgana/databricks-platform-marketplace/tree/HEAD/plugins/databricks-engineering/skills/medallion-architecture"

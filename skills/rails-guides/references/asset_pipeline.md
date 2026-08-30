@@ -56,7 +56,7 @@ Rails Asset Pipeline has evolved over time.
 Propshaft Features
 ------------------
 
-Propshaft expects that your assets are already in a browser-ready format—like
+Propshaft expects that your assets are already in a browser-ready format-like
 plain CSS, JavaScript, or preprocessed images (like JPEGs or PNGs). Its job is
 to organize, version, and serve those assets efficiently. In this section, we’ll
 cover the main features of Propshaft and how they work.
@@ -185,8 +185,8 @@ asset filenames.
 
 Fingerprinting is a technique that makes the name of a file dependent on its
 content. A digest of the file's content is generated and appended to the
-filename. This ensures that when the file content changes, its digest—and
-consequently its filename—also changes. This mechanism is crucial for caching
+filename. This ensures that when the file content changes, its digest-and
+consequently its filename-also changes. This mechanism is crucial for caching
 assets effectively, as the browser will always load the updated version of an
 asset when its content changes, thereby improving performance. For static or
 infrequently changed content, this provides an easy way to tell whether two
@@ -329,8 +329,8 @@ their digested paths during the precompilation process.
 
 #### Bypassing the Digest Step
 
-If you need to reference files that refer to each other—like a JavaScript file
-and its source map—and want to avoid the digesting process, you can pre-digest
+If you need to reference files that refer to each other-like a JavaScript file
+and its source map-and want to avoid the digesting process, you can pre-digest
 these files manually. Propshaft recognizes files with the pattern
 `-[digest].digested.js` as files that have already been digested and will
 preserve their stable file names.
@@ -1007,9 +1007,9 @@ JavaScript workflows into Rails projects.
 - Use `Propshaft` for asset management and need a reliable way to integrate
   precompiled JavaScript with the broader Rails asset pipeline.
 - Utilize libraries or frameworks that depend on a build step. For example,
-  projects requiring transpilation—such as those using
+  projects requiring transpilation-such as those using
   [Babel](https://babeljs.io/), [TypeScript](https://www.typescriptlang.org/),
-  or React JSX—benefit greatly from `jsbundling-rails`. These tools rely on a
+  or React JSX-benefit greatly from `jsbundling-rails`. These tools rely on a
   build step, which the gem seamlessly supports.
 
 By integrating with Rails tools like `Propshaft` and simplifying JavaScript
@@ -1140,7 +1140,7 @@ convention over configuration.
   delivered without manual intervention.
 
 **NOTE**: While Propshaft ensures proper asset handling, it does not handle
-JavaScript processing or transformations — `importmap-rails` assumes your
+JavaScript processing or transformations - `importmap-rails` assumes your
 JavaScript is already in a browser-compatible format. This is why it works best
 for projects that don't require transpiling or bundling.
 

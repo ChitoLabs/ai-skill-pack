@@ -1,6 +1,6 @@
 ---
 name: clerk-expo-patterns
-description: "Trigger: clerk-expo-patterns, 'Expo / React Native patterns with Clerk — SecureStore token cache, OAuth. Preserve source workflow with portable agent instructions."
+description: "Trigger: clerk-expo-patterns, 'Expo / React Native patterns with Clerk - SecureStore token cache, OAuth. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: clerk
@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `clerk-expo-patterns` or the preserved source description: 'Expo / React Native patterns with Clerk — SecureStore token cache, OAuth
+Use this skill when the user request matches `clerk-expo-patterns` or the preserved source description: 'Expo / React Native patterns with Clerk - SecureStore token cache, OAuth
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

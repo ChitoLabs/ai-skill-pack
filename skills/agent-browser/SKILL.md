@@ -4,6 +4,7 @@ description: "Trigger: agent-browser, Browser automation CLI for AI agents. Pres
 license: Apache-2.0
 metadata:
   author: vercel-labs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/agent-browser/agent-browser"
   github_url: "https://github.com/vercel-labs/agent-browser/tree/HEAD/skills/agent-browser"
@@ -46,4 +47,4 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.

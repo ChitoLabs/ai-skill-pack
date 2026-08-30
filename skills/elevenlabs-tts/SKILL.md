@@ -4,6 +4,7 @@ description: "Trigger: elevenlabs-tts, ElevenLabs text-to-speech with 22+ premiu
 license: Apache-2.0
 metadata:
   author: inference-sh-skills
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/elevenlabs-tts"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts"

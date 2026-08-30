@@ -26,17 +26,17 @@ Azure AI Foundry supports two agent setup configurations:
 
 Before starting deployment, confirm the following with the user:
 
-1. **RBAC role on the resource group:** The user must have **Owner** or **User Access Administrator** role on the target resource group. The Bicep template assigns RBAC roles (Storage Blob Data Contributor, Cosmos DB Operator, AI Search roles) to the project's managed identity — this will fail without `Microsoft.Authorization/roleAssignments/write` permission.
+1. **RBAC role on the resource group:** The user must have **Owner** or **User Access Administrator** role on the target resource group. The Bicep template assigns RBAC roles (Storage Blob Data Contributor, Cosmos DB Operator, AI Search roles) to the project's managed identity - this will fail without `Microsoft.Authorization/roleAssignments/write` permission.
 2. **Subscription quota:** Verify the target region has available quota for AI Services. If quota is exhausted, try an alternate region (e.g., `swedencentral`, `eastus`, `westus3`).
 3. **Azure Policy compliance:** Some subscriptions enforce policies (e.g., storage accounts must disable public network access). If the Bicep template fails due to policy violations, patch the template to comply (e.g., set `publicNetworkAccess: 'Disabled'` and `defaultAction: 'Deny'` on the storage account).
 
 ## Deployment
 
-- Standard setup always creates a **new Foundry resource and a new project**. Do not ask the user for a project endpoint — one will be provisioned as part of the deployment.
+- Standard setup always creates a **new Foundry resource and a new project**. Do not ask the user for a project endpoint - one will be provisioned as part of the deployment.
 - **Always use the official Bicep template:**
   [Standard Agent Setup Bicep Template](https://github.com/azure-ai-foundry/foundry-samples/blob/main/infrastructure/infrastructure-setup-bicep/43-standard-agent-setup-with-customization/main.bicep)
 
-> ⚠️ **Warning:** Capability host provisioning is **asynchronous** and can take 10–20 minutes. After deploying the Bicep template, you **must poll** the deployment status until it succeeds. Do not assume the setup is complete immediately.
+> ⚠️ **Warning:** Capability host provisioning is **asynchronous** and can take 10-20 minutes. After deploying the Bicep template, you **must poll** the deployment status until it succeeds. Do not assume the setup is complete immediately.
 
 ## Post-Deployment: Model & Agent
 
@@ -47,5 +47,5 @@ After infrastructure provisioning succeeds:
 
 ## References
 
-- [Capability Hosts — Agent Setup Types](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/capability-hosts?view=foundry)
+- [Capability Hosts - Agent Setup Types](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/capability-hosts?view=foundry)
 - [Standard Agent Setup](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/standard-agent-setup?view=foundry)

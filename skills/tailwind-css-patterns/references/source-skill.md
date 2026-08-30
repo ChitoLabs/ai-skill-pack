@@ -3,7 +3,7 @@ name: tailwind-css-patterns
 description: Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling React/Vue/Svelte components, building responsive layouts, implementing design systems, or optimizing CSS workflow.
 license: Apache-2.0
 metadata:
-  author: giuseppe-trisciuoglio
+  author: midudev
   version: 0.1
   skills_sh_url: "https://www.skills.sh/giuseppe-trisciuoglio/developer-kit/tailwind-css-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/tailwind-css-patterns"
@@ -142,14 +142,14 @@ function ProductCard({ product }: { product: Product }) {
 
 ## References
 
-- **[references/layout-patterns.md](layout-patterns.md)** — Flexbox, grid, spacing, typography, colors
-- **[references/component-patterns.md](component-patterns.md)** — Cards, navigation, forms, modals, React patterns
-- **[references/responsive-design.md](responsive-design.md)** — Responsive patterns, dark mode, container queries
-- **[references/animations.md](animations.md)** — Transitions, transforms, built-in animations, motion preferences
-- **[references/performance.md](performance.md)** — Bundle optimization, CSS optimization, production builds
-- **[references/accessibility.md](accessibility.md)** — Focus management, screen readers, color contrast, ARIA
-- **[references/configuration.md](configuration.md)** — CSS-first config, JavaScript config, plugins, presets
-- **[references/reference.md](reference.md)** — Additional reference materials
+- **[references/layout-patterns.md](layout-patterns.md)** - Flexbox, grid, spacing, typography, colors
+- **[references/component-patterns.md](component-patterns.md)** - Cards, navigation, forms, modals, React patterns
+- **[references/responsive-design.md](responsive-design.md)** - Responsive patterns, dark mode, container queries
+- **[references/animations.md](animations.md)** - Transitions, transforms, built-in animations, motion preferences
+- **[references/performance.md](performance.md)** - Bundle optimization, CSS optimization, production builds
+- **[references/accessibility.md](accessibility.md)** - Focus management, screen readers, color contrast, ARIA
+- **[references/configuration.md](configuration.md)** - CSS-first config, JavaScript config, plugins, presets
+- **[references/reference.md](reference.md)** - Additional reference materials
 
 ## External Resources
 

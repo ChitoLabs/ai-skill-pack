@@ -684,7 +684,7 @@ get "photos/:id/:user_id", to: "photos#show"
 
 This route will respond to paths such as `/photos/1/2`. The `params` hash will be { controller: 'photos', action: 'show', id: '1', user_id: '2' }.
 
-TIP: By default, dynamic segments don't accept dots - this is because the dot is used as a separator for formatted routes. If you need to use a dot within a dynamic segment, add a constraint that overrides this – for example, `id: /[^\/]+/` allows anything except a slash.
+TIP: By default, dynamic segments don't accept dots - this is because the dot is used as a separator for formatted routes. If you need to use a dot within a dynamic segment, add a constraint that overrides this - for example, `id: /[^\/]+/` allows anything except a slash.
 
 ### Static Segments
 

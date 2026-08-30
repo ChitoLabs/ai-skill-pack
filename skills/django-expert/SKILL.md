@@ -4,6 +4,7 @@ description: "Trigger: django-expert, Expert Django backend development guidance
 license: Apache-2.0
 metadata:
   author: vintasoftware
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/vintasoftware/django-ai-plugins/django-expert"
   github_url: "https://github.com/vintasoftware/django-ai-plugins/tree/HEAD/plugins/django-expert/skills"

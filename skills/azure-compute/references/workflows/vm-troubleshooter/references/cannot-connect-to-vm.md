@@ -5,7 +5,7 @@ Index of VM connectivity troubleshooting references. Route to the appropriate fi
 > ⚠️ **Determine OS first.** If the user hasn't stated their OS, check via CLI (`az vm get-instance-view`) or ask. OS matters because:
 > - **Windows** → RDP (port 3389), Windows Firewall, TermService, PowerShell Run Commands
 > - **Linux** → SSH (port 22), iptables/firewalld/UFW, sshd, Shell Run Commands
-> - **Other images** (FreeBSD, Flatcar, etc.) → SSH; firewall and init systems vary — fetch the latest docs
+> - **Other images** (FreeBSD, Flatcar, etc.) → SSH; firewall and init systems vary - fetch the latest docs
 
 ## Routing
 
@@ -44,7 +44,7 @@ az vm extension list --vm-name <vm-name> -g <resource-group> \
   --query "[].{name:name, provisioningState:provisioningState}" -o table
 ```
 
-| Check | Safe Value | Unsafe — Do NOT proceed |
+| Check | Safe Value | Unsafe - Do NOT proceed |
 | ----- | ---------- | ----------------------- |
 | Power state | `PowerState/running` | Any other value, missing, or query error |
 | Provisioning state | `ProvisioningState/succeeded` | `Updating`, `Creating`, `Failed`, `Deleting`, missing, or query error |
@@ -57,7 +57,7 @@ az vm extension list --vm-name <vm-name> -g <resource-group> \
 1. **Stop.** Do NOT run any extension-backed command.
 2. Inform the user which check(s) failed and what the current state is.
 3. Use non-agent alternatives: **Serial Console**, **offline repair VM**, or **Portal-based actions**.
-4. If the state appears transient (e.g., VM just started, provisioning briefly not `succeeded`), wait 30–60 seconds and **re-run the checks only** — do not run the extension command until all checks pass.
+4. If the state appears transient (e.g., VM just started, provisioning briefly not `succeeded`), wait 30-60 seconds and **re-run the checks only** - do not run the extension command until all checks pass.
 
 ---
 
@@ -65,9 +65,9 @@ az vm extension list --vm-name <vm-name> -g <resource-group> \
 
 If the issue doesn't match any symptom above, or if the documented solutions don't resolve it:
 
-1. **Check Azure Resource Health** — Portal > VM > Resource health (checks for platform-level issues)
-2. **Offer to restart the VM** (requires user approval) — `az vm restart --name <vm-name> -g <resource-group>`
-3. **Offer to redeploy the VM** (requires user approval — moves to new host) — `az vm redeploy --name <vm-name> -g <resource-group>`
+1. **Check Azure Resource Health** - Portal > VM > Resource health (checks for platform-level issues)
+2. **Offer to restart the VM** (requires user approval) - `az vm restart --name <vm-name> -g <resource-group>`
+3. **Offer to redeploy the VM** (requires user approval - moves to new host) - `az vm redeploy --name <vm-name> -g <resource-group>`
 4. **Comprehensive troubleshooting:**
    - Windows: [Troubleshoot RDP connections](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-connection)
    - Linux: [Troubleshoot SSH connections](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)

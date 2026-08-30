@@ -4,6 +4,7 @@ description: "Trigger: fastapi-templates, Create production-ready FastAPI projec
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/wshobson/agents/fastapi-templates"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/api-scaffolding/skills/fastapi-templates"

@@ -44,7 +44,7 @@ Congratulations, the callback has run!
 ```
 
 As you will see, there are many life cycle events and multiple options to hook
-into these — either before, after, or even around them.
+into these - either before, after, or even around them.
 
 Callback Registration
 ---------------------
@@ -293,7 +293,7 @@ Update Cache
 #### Create Callbacks
 
 Create callbacks are triggered whenever the record is persisted (i.e. "saved")
-to the underlying database **for the first time** — in other words, when we're
+to the underlying database **for the first time** - in other words, when we're
 saving a new record, via the `create` or `save` methods. They are called before,
 after and around the object is created.
 

@@ -1,9 +1,10 @@
 ---
 name: csharp-async
-description: "Get best practices for C# async programming"
+description: "Trigger: implement, review, or debug asynchronous C# code. Apply focused C# async and cancellation best practices."
 license: Apache-2.0
 metadata:
-  author: github
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/csharp-async"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/csharp-async"

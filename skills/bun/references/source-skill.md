@@ -69,7 +69,7 @@ bun = true                   # Auto-alias node to bun in scripts
 
 ### File Types Supported
 
-Bun natively handles: `.js`, `.jsx`, `.ts`, `.tsx`, `.json`, `.jsonc`, `.toml`, `.yaml`, `.html`, `.css`, `.wasm`, `.node`. No configuration needed—just import and use.
+Bun natively handles: `.js`, `.jsx`, `.ts`, `.tsx`, `.json`, `.jsonc`, `.toml`, `.yaml`, `.html`, `.css`, `.wasm`, `.node`. No configuration needed-just import and use.
 
 ### Key Bun APIs
 
@@ -217,14 +217,14 @@ Before submitting work with Bun:
 
 ## Resources
 
-**Comprehensive navigation**: https://bun.com/docs/llms.txt — Page-by-page listing of all Bun documentation.
+**Comprehensive navigation**: https://bun.com/docs/llms.txt - Page-by-page listing of all Bun documentation.
 
 **Critical pages**:
-1. [Bun Runtime](https://bun.com/docs/runtime) — Execute files, scripts, and manage the runtime
-2. [Package Manager](https://bun.com/docs/pm/cli/install) — Install, add, remove packages and manage dependencies
-3. [Bundler](https://bun.com/docs/bundler) — Bundle JavaScript/TypeScript for production
-4. [Test Runner](https://bun.com/docs/test) — Write and run Jest-compatible tests
-5. [bunfig.toml](https://bun.com/docs/runtime/bunfig) — Configure Bun's behavior
+1. [Bun Runtime](https://bun.com/docs/runtime) - Execute files, scripts, and manage the runtime
+2. [Package Manager](https://bun.com/docs/pm/cli/install) - Install, add, remove packages and manage dependencies
+3. [Bundler](https://bun.com/docs/bundler) - Bundle JavaScript/TypeScript for production
+4. [Test Runner](https://bun.com/docs/test) - Write and run Jest-compatible tests
+5. [bunfig.toml](https://bun.com/docs/runtime/bunfig) - Configure Bun's behavior
 
 ---
 

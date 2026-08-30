@@ -13,17 +13,17 @@ metadata:
 
 # Organizations (B2B SaaS)
 
-> **STOP — prerequisite.** Organizations must be enabled before any org-related API, hook, or component works. Two paths: (1) [Dashboard → Organizations settings](https://dashboard.clerk.com/last-active?path=organizations-settings), or (2) `clerk enable orgs` (see "Agent-first: Programmatic org management" below). Pick the Membership mode deliberately: `Membership required` (default since 2025-08-22) routes signed-in users through the `choose-organization` task and disables personal accounts, while `Membership optional` keeps personal accounts available for B2C + B2B coexistence. Pick `optional` if you need personal subscriptions alongside org subscriptions.
+> **STOP - prerequisite.** Organizations must be enabled before any org-related API, hook, or component works. Two paths: (1) [Dashboard → Organizations settings](https://dashboard.clerk.com/last-active?path=organizations-settings), or (2) `clerk enable orgs` (see "Agent-first: Programmatic org management" below). Pick the Membership mode deliberately: `Membership required` (default since 2025-08-22) routes signed-in users through the `choose-organization` task and disables personal accounts, while `Membership optional` keeps personal accounts available for B2C + B2B coexistence. Pick `optional` if you need personal subscriptions alongside org subscriptions.
 >
-> **Version**: This skill targets current SDKs (`@clerk/nextjs` v7+, `@clerk/react` v6+ — Core 3). Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts — see `clerk` skill for the full version table.
+> **Version**: This skill targets current SDKs (`@clerk/nextjs` v7+, `@clerk/react` v6+ - Core 3). Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts - see `clerk` skill for the full version table.
 
 ## Quick Start
 
-1. **Enable Organizations** — via [Dashboard → Organizations settings](https://dashboard.clerk.com/last-active?path=organizations-settings) or `clerk enable orgs` (see Agent-first section). Pick `Membership required` (B2B-only) or `Membership optional` (B2C + B2B).
-2. **Create an org** — via `<OrganizationSwitcher />`, `<CreateOrganization />`, or programmatically with `clerkClient().organizations.createOrganization()`.
-3. **Protect routes** — read `orgId` / `orgSlug` from `auth()` and gate with `has({ role })` or `has({ permission })`.
-4. **Manage members** — send invitations via Backend API or the built-in `<OrganizationProfile />` tab.
-5. **Cap membership** — set `maxAllowedMemberships` at org creation or pick a seat-limited Billing Plan (see `clerk-billing` skill).
+1. **Enable Organizations** - via [Dashboard → Organizations settings](https://dashboard.clerk.com/last-active?path=organizations-settings) or `clerk enable orgs` (see Agent-first section). Pick `Membership required` (B2B-only) or `Membership optional` (B2C + B2B).
+2. **Create an org** - via `<OrganizationSwitcher />`, `<CreateOrganization />`, or programmatically with `clerkClient().organizations.createOrganization()`.
+3. **Protect routes** - read `orgId` / `orgSlug` from `auth()` and gate with `has({ role })` or `has({ permission })`.
+4. **Manage members** - send invitations via Backend API or the built-in `<OrganizationProfile />` tab.
+5. **Cap membership** - set `maxAllowedMemberships` at org creation or pick a seat-limited Billing Plan (see `clerk-billing` skill).
 
 ## What Do You Need?
 
@@ -127,7 +127,7 @@ clerk api -X POST /v1/organizations/<org_id>/invitations/<inv_id>/revoke \
 ### Notes
 
 - This handles **org config + CRUD**. Subscription / billing for orgs (org plans, seat-limit pricing) flows through `clerk-billing` skill.
-- Roles + permissions catalog is editable in `references/roles-permissions.md`. Custom role creation goes through `clerk config patch` (instance-level role definitions) — see Dashboard's role editor for the UX equivalent.
+- Roles + permissions catalog is editable in `references/roles-permissions.md`. Custom role creation goes through `clerk config patch` (instance-level role definitions) - see Dashboard's role editor for the UX equivalent.
 - For SSO / verified domain provisioning, see `references/enterprise-sso.md`.
 
 ## Documentation
@@ -143,7 +143,7 @@ clerk api -X POST /v1/organizations/<org_id>/invitations/<inv_id>/revoke \
 
 ## Key Patterns
 
-Examples use `@clerk/nextjs` by default. For other frameworks swap the import to `@clerk/react` (Vite/CRA), `@clerk/astro/components`, `@clerk/vue`, `@clerk/expo`, `@clerk/react-router`, or `@clerk/tanstack-react-start` — the feature-level APIs (`has()`, `orgId`, `<OrganizationSwitcher />`, `<Show>`) are identical across SDKs. Framework-specific patterns (middleware, redirects) live in `references/nextjs-patterns.md`.
+Examples use `@clerk/nextjs` by default. For other frameworks swap the import to `@clerk/react` (Vite/CRA), `@clerk/astro/components`, `@clerk/vue`, `@clerk/expo`, `@clerk/react-router`, or `@clerk/tanstack-react-start` - the feature-level APIs (`has()`, `orgId`, `<OrganizationSwitcher />`, `<Show>`) are identical across SDKs. Framework-specific patterns (middleware, redirects) live in `references/nextjs-patterns.md`.
 
 ### 1. Read Organization from Auth
 
@@ -154,7 +154,7 @@ import { auth } from '@clerk/nextjs/server'
 
 const { orgId, orgSlug, orgRole } = await auth()
 if (!orgId) {
-  // user has no active org — either not in any, or viewing Personal Account
+  // user has no active org - either not in any, or viewing Personal Account
 }
 ```
 
@@ -169,7 +169,7 @@ app/orgs/[slug]/page.tsx
 app/orgs/[slug]/settings/page.tsx
 ```
 
-Always verify the URL slug matches the active org slug — otherwise users can hit `/orgs/other-org/...` with a stale `orgSlug` in their session:
+Always verify the URL slug matches the active org slug - otherwise users can hit `/orgs/other-org/...` with a stale `orgSlug` in their session:
 
 ```typescript
 export default async function OrgPage({ params }: { params: { slug: string } }) {
@@ -199,14 +199,14 @@ if (!has({ permission: 'org:sys_memberships:manage' })) {
 }
 ```
 
-**Permission naming convention.** System Permissions prefix with `org:sys_`; custom Permissions use `org:<resource>:<action>`. The full System Permissions catalog lives in `references/roles-permissions.md` — the short list is:
+**Permission naming convention.** System Permissions prefix with `org:sys_`; custom Permissions use `org:<resource>:<action>`. The full System Permissions catalog lives in `references/roles-permissions.md` - the short list is:
 
 - `org:sys_memberships:{read, manage}`
 - `org:sys_profile:{manage, delete}`
 - `org:sys_domains:{read, manage}`
 - `org:sys_billing:{read, manage}`
 
-Do NOT invent names like `org:create`, `org:manage_members`, `org:update_metadata` — those are not real permission slugs. See `references/roles-permissions.md` for custom roles and the permission table.
+Do NOT invent names like `org:create`, `org:manage_members`, `org:update_metadata` - those are not real permission slugs. See `references/roles-permissions.md` for custom roles and the permission table.
 
 ### 4. Conditional Rendering with `<Show>`
 
@@ -245,13 +245,13 @@ import { OrganizationSwitcher } from '@clerk/nextjs'
 ```
 
 Key props:
-- `hidePersonal: boolean` — hide the Personal Account option. Defaults to `false`. Pass `true` for B2B-only apps.
-- `afterCreateOrganizationUrl`, `afterSelectOrganizationUrl`, `afterLeaveOrganizationUrl`, `afterSelectPersonalUrl` — navigation hooks. `:slug` is substituted at runtime.
-- `createOrganizationMode`, `organizationProfileMode` — `'modal' | 'navigation'` (default `'modal'`).
+- `hidePersonal: boolean` - hide the Personal Account option. Defaults to `false`. Pass `true` for B2B-only apps.
+- `afterCreateOrganizationUrl`, `afterSelectOrganizationUrl`, `afterLeaveOrganizationUrl`, `afterSelectPersonalUrl` - navigation hooks. `:slug` is substituted at runtime.
+- `createOrganizationMode`, `organizationProfileMode` - `'modal' | 'navigation'` (default `'modal'`).
 
 The full prop list lives in the [component reference](https://clerk.com/docs/reference/components/organization/organization-switcher).
 
-### 6. Session Task — Choose Organization
+### 6. Session Task - Choose Organization
 
 When `Membership required` is enabled (the default), users without an org are routed through a `choose-organization` session task after sign-in. Clerk handles this automatically inside `<SignIn />`, but you can host the UI yourself:
 
@@ -280,10 +280,10 @@ export default function Page() {
 
 | Role | Default meaning |
 |------|-------------|
-| `org:admin` | Full access — all System Permissions, can manage org + memberships |
+| `org:admin` | Full access - all System Permissions, can manage org + memberships |
 | `org:member` | Read members + Read billing Permissions only |
 
-You can create up to 10 custom roles per instance in Dashboard → Organizations → Roles & Permissions. Role-per-org is controlled via **Role Sets** — see `references/roles-permissions.md` for the full model (custom roles, Creator/Default role settings, role sets, and the System Permissions catalog).
+You can create up to 10 custom roles per instance in Dashboard → Organizations → Roles & Permissions. Role-per-org is controlled via **Role Sets** - see `references/roles-permissions.md` for the full model (custom roles, Creator/Default role settings, role sets, and the System Permissions catalog).
 
 ## Billing Checks
 
@@ -333,7 +333,7 @@ For tier-based seat limits tied to a subscription, use a seat-limited Billing Pl
 
 ### Billing gates Permissions at the Feature level
 
-When Clerk Billing is enabled, `has({ permission: 'org:posts:edit' })` returns `false` if the Feature associated with that permission is not included in the organization's active Plan — even if the user has the Permission assigned via their role. Ensure the Feature is attached to the active Plan in Dashboard → Billing → Plans → Features.
+When Clerk Billing is enabled, `has({ permission: 'org:posts:edit' })` returns `false` if the Feature associated with that permission is not included in the organization's active Plan - even if the user has the Permission assigned via their role. Ensure the Feature is attached to the active Plan in Dashboard → Billing → Plans → Features.
 
 ### Metadata updates REPLACE, not merge
 
@@ -412,17 +412,17 @@ The full lifecycle (list, revoke, bulk create, built-in `<OrganizationProfile />
 
 ## Workflow
 
-1. **Enable** — Organizations + Membership mode in Dashboard
-2. **Create org** — via UI component or Backend API
-3. **Invite members** — Backend API or built-in UI, with `inviterUserId`
-4. **Gate access** — `has({ role })` / `has({ permission })` with canonical `org:sys_*` names
-5. **Scope routes** — `orgSlug === params.slug` on every protected page
-6. **Switch orgs** — `<OrganizationSwitcher />` handles the whole flow
+1. **Enable** - Organizations + Membership mode in Dashboard
+2. **Create org** - via UI component or Backend API
+3. **Invite members** - Backend API or built-in UI, with `inviterUserId`
+4. **Gate access** - `has({ role })` / `has({ permission })` with canonical `org:sys_*` names
+5. **Scope routes** - `orgSlug === params.slug` on every protected page
+6. **Switch orgs** - `<OrganizationSwitcher />` handles the whole flow
 
 ## See Also
 
-- `clerk-setup` — Initial Clerk install
-- `clerk-billing` — Seat-limit plans, per-plan billing, `has({ plan })` / `has({ feature })`
-- `clerk-webhooks` — Sync org events to your database (`organization.created`, `organizationMembership.*`)
-- `clerk-backend-api` — Full Backend API reference
-- `clerk-nextjs-patterns` — Framework-specific middleware, server actions, caching
+- `clerk-setup` - Initial Clerk install
+- `clerk-billing` - Seat-limit plans, per-plan billing, `has({ plan })` / `has({ feature })`
+- `clerk-webhooks` - Sync org events to your database (`organization.created`, `organizationMembership.*`)
+- `clerk-backend-api` - Full Backend API reference
+- `clerk-nextjs-patterns` - Framework-specific middleware, server actions, caching

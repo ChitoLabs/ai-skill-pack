@@ -8,7 +8,7 @@ Build documentation sites with sidebar navigation, table of contents, and surrou
 - Knowledge bases, help centers
 - Any content-heavy site with hierarchical navigation
 
-> Requires `@nuxt/content` — see [conventions](../guidelines/conventions.md#content-module-integration) for setup (module order + `@source`).
+> Requires `@nuxt/content` - see [conventions](../guidelines/conventions.md#content-module-integration) for setup (module order + `@source`).
 
 ## Component tree
 
@@ -133,20 +133,20 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 
 ### How nesting works
 
-The outer `UPage` in the layout handles the **left sidebar**. The inner `UPage` in the page handles the **right sidebar**. They nest correctly — this is intentional.
+The outer `UPage` in the layout handles the **left sidebar**. The inner `UPage` in the page handles the **right sidebar**. They nest correctly - this is intentional.
 
 ### Common mistakes
 
-- Not providing navigation via `provide`/`inject` — the layout needs it from the app shell.
-- Forgetting `UContentSearch` in app.vue — search won't work without it.
-- Using `UContentSearchButton` without `UContentSearch` — the button opens search, but the search component must exist.
+- Not providing navigation via `provide`/`inject` - the layout needs it from the app shell.
+- Forgetting `UContentSearch` in app.vue - search won't work without it.
+- Using `UContentSearchButton` without `UContentSearch` - the button opens search, but the search component must exist.
 
 ## Key components
 
-- `UPage` — multi-column grid with `#left`, `#default`, `#right` slots
-- `UPageAside` — sticky sidebar wrapper (visible from `lg` breakpoint)
-- `UContentNavigation` — sidebar navigation tree from Nuxt Content
-- `UContentToc` — table of contents from page headings
-- `UContentSurround` — prev/next links
-- `UContentSearch` / `UContentSearchButton` — search command palette
-- `UPageAnchors` — simpler alternative to full TOC
+- `UPage` - multi-column grid with `#left`, `#default`, `#right` slots
+- `UPageAside` - sticky sidebar wrapper (visible from `lg` breakpoint)
+- `UContentNavigation` - sidebar navigation tree from Nuxt Content
+- `UContentToc` - table of contents from page headings
+- `UContentSurround` - prev/next links
+- `UContentSearch` / `UContentSearchButton` - search command palette
+- `UPageAnchors` - simpler alternative to full TOC

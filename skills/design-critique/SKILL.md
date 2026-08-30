@@ -4,6 +4,7 @@ description: "Trigger: design-critique, Get structured design feedback on usabil
 license: Apache-2.0
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/design-critique"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/design/skills/design-critique"

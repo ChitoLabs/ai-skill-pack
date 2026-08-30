@@ -27,7 +27,7 @@ This skill exists to **prevent desktop-thinking, AI-defaults, and unsafe assumpt
 
 Before designing or implementing **any mobile feature or screen**, assess feasibility.
 
-### MFRI Dimensions (1–5)
+### MFRI Dimensions (1-5)
 
 | Dimension                  | Question                                                          |
 | -------------------------- | ----------------------------------------------------------------- |
@@ -50,9 +50,9 @@ MFRI = (Platform Clarity + Accessibility Readiness)
 
 | MFRI     | Meaning   | Required Action                       |
 | -------- | --------- | ------------------------------------- |
-| **6–10** | Safe      | Proceed normally                      |
-| **3–5**  | Moderate  | Add performance + UX validation       |
-| **0–2**  | Risky     | Simplify interactions or architecture |
+| **6-10** | Safe      | Proceed normally                      |
+| **3-5**  | Moderate  | Add performance + UX validation       |
+| **0-2**  | Risky     | Simplify interactions or architecture |
 | **< 0**  | Dangerous | Redesign before implementation        |
 
 ---
@@ -120,7 +120,7 @@ If **any of the following are not explicitly stated**, you MUST ask before proce
 
 | ❌ Never               | Why                  | ✅ Always          |
 | --------------------- | -------------------- | ----------------- |
-| Touch <44–48px        | Miss taps            | Min touch target  |
+| Touch <44-48px        | Miss taps            | Min touch target  |
 | Gesture-only action   | Excludes users       | Button fallback   |
 | No loading state      | Feels broken         | Explicit feedback |
 | No error recovery     | Dead end             | Retry + message   |
@@ -265,7 +265,7 @@ No debate without justification.
 
 ### Before Shipping
 
-* [ ] Touch targets ≥ 44–48px
+* [ ] Touch targets ≥ 44-48px
 * [ ] Offline handled
 * [ ] Secure storage used
 * [ ] Lists optimized
@@ -278,15 +278,15 @@ No debate without justification.
 
 ## 11. Related Skills
 
-* **frontend-design** – Visual systems & components
-* **frontend-dev-guidelines** – RN/TS architecture
-* **backend-dev-guidelines** – Mobile-safe APIs
-* **error-tracking** – Crash & performance telemetry
+* **frontend-design** - Visual systems & components
+* **frontend-dev-guidelines** - RN/TS architecture
+* **backend-dev-guidelines** - Mobile-safe APIs
+* **error-tracking** - Crash & performance telemetry
 
 ---
 
 > **Final Law:**
-> Mobile users are distracted, interrupted, and impatient—often using one hand on a bad network with low battery.
+> Mobile users are distracted, interrupted, and impatient-often using one hand on a bad network with low battery.
 > **Design for that reality, or your app will fail quietly.**
 
 ---

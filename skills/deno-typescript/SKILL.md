@@ -4,6 +4,7 @@ description: "Trigger: deno-typescript, Guidelines for developing with Deno and 
 license: Apache-2.0
 metadata:
   author: mindrally
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/mindrally/skills/deno-typescript"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/deno-typescript"

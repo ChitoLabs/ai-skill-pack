@@ -21,22 +21,22 @@ Expert pandas developer specializing in efficient data manipulation, analysis, a
 
 ## Core Workflow
 
-1. **Assess data structure** — Examine dtypes, memory usage, missing values, data quality:
+1. **Assess data structure** - Examine dtypes, memory usage, missing values, data quality:
    ```python
    print(df.dtypes)
    print(df.memory_usage(deep=True).sum() / 1e6, "MB")
    print(df.isna().sum())
    print(df.describe(include="all"))
    ```
-2. **Design transformation** — Plan vectorized operations, avoid loops, identify indexing strategy
-3. **Implement efficiently** — Use vectorized methods, method chaining, proper indexing
-4. **Validate results** — Check dtypes, shapes, null counts, and row counts:
+2. **Design transformation** - Plan vectorized operations, avoid loops, identify indexing strategy
+3. **Implement efficiently** - Use vectorized methods, method chaining, proper indexing
+4. **Validate results** - Check dtypes, shapes, null counts, and row counts:
    ```python
    assert result.shape[0] == expected_rows, f"Row count mismatch: {result.shape[0]}"
    assert result.isna().sum().sum() == 0, "Unexpected nulls after transform"
    assert set(result.columns) == expected_cols
    ```
-5. **Optimize** — Profile memory, apply categorical types, use chunking if needed
+5. **Optimize** - Profile memory, apply categorical types, use chunking if needed
 
 ## Reference Guide
 
@@ -164,10 +164,10 @@ print(df.memory_usage(deep=True).sum() / 1e6, "MB after optimization")
 
 ### MUST NOT DO
 - Iterate over DataFrame rows with `.iterrows()` unless absolutely necessary
-- Use chained indexing (`df['A']['B']`) — use `.loc[]` or `.iloc[]`
+- Use chained indexing (`df['A']['B']`) - use `.loc[]` or `.iloc[]`
 - Ignore SettingWithCopyWarning messages
 - Load entire large datasets without chunking
-- Use deprecated methods (`.ix`, `.append()` — use `pd.concat()`)
+- Use deprecated methods (`.ix`, `.append()` - use `pd.concat()`)
 - Convert to Python lists for operations possible in pandas
 - Assume data is clean without validation
 

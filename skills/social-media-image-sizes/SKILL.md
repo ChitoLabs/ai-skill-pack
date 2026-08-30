@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `social-media-image-sizes` or the preserved source description: Check and resize images for social media platforms. Run scripts/check.js to validate any image against specs for Instagram, Facebook, X (Twitter), LinkedIn, TikTok, YouTube, Pinterest, Snapchat, and Threads — get a ranked match list with exact resize commands. Run scripts/resize.js to export a correctly-sized copy. Use when a user asks to validate image dimensions, resize an image for a platform, check if an image fits a spec, or prep assets for social media posting or ads.
+Use this skill when the user request matches `social-media-image-sizes` or the preserved source description: Check and resize images for social media platforms. Run scripts/check.js to validate any image against specs for Instagram, Facebook, X (Twitter), LinkedIn, TikTok, YouTube, Pinterest, Snapchat, and Threads - get a ranked match list with exact resize commands. Run scripts/resize.js to export a correctly-sized copy. Use when a user asks to validate image dimensions, resize an image for a platform, check if an image fits a spec, or prep assets for social media posting or ads.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

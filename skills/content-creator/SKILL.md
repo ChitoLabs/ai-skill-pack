@@ -1,6 +1,6 @@
 ---
 name: content-creator
-description: "Creates engaging content for blogs, social media, and marketing materials with audience focus. Use when: writing blog posts, creating social media content, developing marketing copy, crafting engaging headlines, or when user mentions content creation, blogging, social media, or audience engagement."
+description: "Trigger: write a blog post, create audience-focused content, draft marketing or social content. Produce content for a specified audience and channel."
 license: MIT
 metadata:
   author: awesome-llm-apps

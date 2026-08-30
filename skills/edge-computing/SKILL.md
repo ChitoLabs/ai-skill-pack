@@ -4,6 +4,7 @@ description: "Trigger: edge-computing, Edge computing with Cloudflare Workers, D
 license: Apache-2.0
 metadata:
   author: travisjneuman
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/travisjneuman/.claude/edge-computing"
   github_url: "https://github.com/travisjneuman/.claude/tree/HEAD/skills/edge-computing"

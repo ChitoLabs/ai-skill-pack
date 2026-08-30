@@ -79,6 +79,6 @@ export default defineNuxtPlugin(async () => {
 })
 ```
 
-Stores are created per-request on the server — do NOT store sensitive data (tokens) in Pinia.
+Stores are created per-request on the server - do NOT store sensitive data (tokens) in Pinia.
 
 [Docs](https://clerk.com/docs/nuxt/getting-started/quickstart)

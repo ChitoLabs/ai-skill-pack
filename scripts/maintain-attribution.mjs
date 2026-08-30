@@ -111,6 +111,17 @@ function skillsShPublisher(url) {
   }
 }
 
+function githubOwner(url) {
+  if (!url) return null;
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.toLowerCase() !== "github.com") return null;
+    return parsed.pathname.split("/").filter(Boolean)[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
 function addMetadataUrl(content, key, url) {
   const versionLine = /^(\s{2}version:[^\r\n]*)(\r?\n)/m;
   if (!versionLine.test(content)) return content;
@@ -160,7 +171,81 @@ const diskPublication = readJson(publicationPath);
 if (diskCatalog) validateCatalog(diskCatalog);
 if (diskPublication) validatePublication(diskPublication);
 
-if (stats.errors.length === 0) {
+const isV3Publication = diskPublication?.source_manifest === "authorized-v3-source-pack";
+
+if (stats.errors.length === 0 && isV3Publication) {
+  const catalogByName = new Map(diskCatalog.skills.map((record) => [record.name, record]));
+  const publicationByName = new Map(
+    diskPublication.included_records.map((record) => [record.skill, record]),
+  );
+  const skillNames = fs
+    .readdirSync(path.join(root, "skills"), { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
+  stats.skills = skillNames.length;
+
+  for (const name of skillNames) {
+    const skillPath = path.join(root, "skills", name, "SKILL.md");
+    const catalogEntry = catalogByName.get(name);
+    const publicationEntry = publicationByName.get(name);
+    if (!fs.existsSync(skillPath)) {
+      stats.errors.push(`${name}: missing SKILL.md`);
+      continue;
+    }
+    if (!catalogEntry || !publicationEntry) {
+      stats.errors.push(`${name}: missing central catalog or publication record`);
+      continue;
+    }
+    if (!catalogEntry.source_url) stats.errors.push(`${name}: missing publication source link`);
+    if (!catalogEntry.author || catalogEntry.author === "LCubero") {
+      stats.errors.push(`${name}: invalid publication author`);
+    }
+    if (catalogEntry.author !== publicationEntry.author) {
+      stats.errors.push(`${name}: catalog and publication authors differ`);
+    }
+    const skillContent = fs.readFileSync(skillPath, "utf8");
+    const skillAuthor = frontmatterValue(skillContent, "author");
+    if (skillAuthor === "LCubero") stats.errors.push(`${name}: adapter is listed as top-level author`);
+    if (skillAuthor !== catalogEntry.author) {
+      stats.errors.push(`${name}: top-level and catalog authors differ`);
+    }
+
+    const sourcePath = path.join(root, "skills", name, "references", "source-skill.md");
+    if (fs.existsSync(sourcePath)) {
+      const sourceContent = fs.readFileSync(sourcePath, "utf8");
+      if (frontmatterValue(sourceContent, "author") === "LCubero") {
+        planFile(sourcePath, replaceAuthor(sourceContent, catalogEntry.author), `synchronize author to ${catalogEntry.author}`);
+      }
+    }
+    if (catalogEntry.author === "unknown") stats.unresolved.push(`skills/${name}/SKILL.md`);
+  }
+
+  for (const companionPath of nestedSkillFiles(path.join(root, "skills"))) {
+    const content = fs.readFileSync(companionPath, "utf8");
+    if (frontmatterValue(content, "author") !== "LCubero") continue;
+    const nestedName = frontmatterValue(content, "name");
+    const author = catalogByName.get(nestedName)?.author
+      ?? skillsShPublisher(frontmatterValue(content, "skills_sh_url"))
+      ?? githubOwner(frontmatterValue(content, "github_url"))
+      ?? "unknown";
+    planFile(companionPath, replaceAuthor(content, author), `remove unsupported adapter authorship`);
+  }
+
+  if (diskCatalog.total_skills !== skillNames.length) {
+    stats.errors.push(`skills-catalog.json.total_skills: expected ${skillNames.length}`);
+  }
+  if (diskCatalog.skills.length !== skillNames.length) {
+    stats.errors.push(`skills-catalog.json.skills: expected ${skillNames.length} records`);
+  }
+  if (diskPublication.included_records.length !== skillNames.length) {
+    stats.errors.push(`skill-sanitize-upgrade-manifest.json.included_records: expected ${skillNames.length} records`);
+  }
+  if (apply && stats.errors.length === 0) {
+    for (const [filePath, content] of plannedFiles) atomicWrite(filePath, content);
+    stats.appliedCorrections = stats.proposedCorrections.length;
+  }
+} else if (stats.errors.length === 0) {
   const nextCatalog = structuredClone(diskCatalog);
   const nextPublication = structuredClone(diskPublication);
   const diskCatalogByName = new Map(diskCatalog.skills.map((record) => [record.name, record]));

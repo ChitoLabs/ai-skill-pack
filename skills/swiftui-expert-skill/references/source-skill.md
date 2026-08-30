@@ -3,7 +3,7 @@ name: swiftui-expert-skill
 description: Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management, view composition, performance, Liquid Glass adoption, or Instruments `.trace` capture/analysis for hangs, hitches, CPU hotspots, or
 license: Apache-2.0
 metadata:
-  author: avdlee
+  author: midudev
   version: 0.1
   skills_sh_url: "https://www.skills.sh/avdlee/swiftui-agent-skill/swiftui-expert-skill"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swiftui-expert-skill"
@@ -47,11 +47,11 @@ metadata:
 ### Record a new Instruments trace
 Trigger when the user asks to "record a trace", "profile the app", "capture a session", etc. Full reference: `references/trace-recording.md`.
 
-1. **Confirm target** — attach to a running app, launch an app, or record all processes? If the user didn't say, ask. List connected devices when useful:
+1. **Confirm target** - attach to a running app, launch an app, or record all processes? If the user didn't say, ask. List connected devices when useful:
    ```bash
    python3 "${SKILL_DIR}/scripts/record_trace.py" --list-devices
    ```
-2. **Pick a template based on target kind** — the `SwiftUI` template populates the SwiftUI lane on any **real device**: a physical iOS/iPadOS device **or the host Mac**. The only exception is the **iOS Simulator**, where the SwiftUI lane comes back empty — switch to `--template "Time Profiler"` in that case (still gives Time Profiler + Hangs + Animation Hitches). Always check `--list-devices`: `simulators` kind → `Time Profiler`; `devices` kind (real devices and the host Mac) → default `SwiftUI`. Full decision table in `references/trace-recording.md`.
+2. **Pick a template based on target kind** - the `SwiftUI` template populates the SwiftUI lane on any **real device**: a physical iOS/iPadOS device **or the host Mac**. The only exception is the **iOS Simulator**, where the SwiftUI lane comes back empty - switch to `--template "Time Profiler"` in that case (still gives Time Profiler + Hangs + Animation Hitches). Always check `--list-devices`: `simulators` kind → `Time Profiler`; `devices` kind (real devices and the host Mac) → default `SwiftUI`. Full decision table in `references/trace-recording.md`.
 3. **Start the recording**. For agent-driven sessions where the user says "I'll tell you when I'm done", start in the background and use a stop-file:
     ```bash
     STOP_FILE="${TMPDIR:-/tmp}/swiftui-trace-stop-$(date +%s)-$$"
@@ -60,11 +60,11 @@ Trigger when the user asks to "record a trace", "profile the app", "capture a se
         --stop-file "$STOP_FILE" --output ~/Desktop/session.trace
     ```
     For interactive sessions, just tell the user to press Ctrl+C when done.
-4. **Signal stop** — when the user says they've finished exercising the app, `touch "$STOP_FILE"`. Use the same unique stop-file path from the recording command. The script cleanly SIGINTs xctrace and waits up to 60s for finalisation.
+4. **Signal stop** - when the user says they've finished exercising the app, `touch "$STOP_FILE"`. Use the same unique stop-file path from the recording command. The script cleanly SIGINTs xctrace and waits up to 60s for finalisation.
 5. **Analyse** the resulting trace (flow into the "Trace-driven improvement" workflow below).
 
 ### Trace-driven improvement (Instruments `.trace` provided)
-Trigger whenever the user's request references a `.trace` file. A target SwiftUI source file is **optional** — if given, cite specific lines; if not, recommend where to look based on view names and symbols the trace already reveals.
+Trigger whenever the user's request references a `.trace` file. A target SwiftUI source file is **optional** - if given, cite specific lines; if not, recommend where to look based on view names and symbols the trace already reveals.
 
 Full reference: `references/trace-analysis.md`. Summary of the composition pattern:
 
@@ -86,9 +86,9 @@ Full reference: `references/trace-analysis.md`. Summary of the composition patte
    python3 "${SKILL_DIR}/scripts/analyze_trace.py" --trace <path> \
        --json-only --top 10 [--window START_MS:END_MS]
    ```
-4. **Interpret with `references/trace-analysis.md`** — key diagnostics:
+4. **Interpret with `references/trace-analysis.md`** - key diagnostics:
    - `main_running_coverage_pct` inside each correlation (<25% = blocked; ≥75% = CPU-bound).
-   - `swiftui-causes.top_sources` reveals *why* updates keep happening — high-edge-count sources like `UserDefaultObserver.send()` or wide `EnvironmentWriter` entries are structural invalidation bugs. Fixing one often collapses many downstream hot views.
+   - `swiftui-causes.top_sources` reveals *why* updates keep happening - high-edge-count sources like `UserDefaultObserver.send()` or wide `EnvironmentWriter` entries are structural invalidation bugs. Fixing one often collapses many downstream hot views.
 5. **When a specific view shows as expensive, ask who's invalidating it.** Use `--fanin-for "<view name>"` to get the ranked list of source nodes driving the updates.
 6. **Optionally ground in source.** If the user pointed at a file, read it and match view names / user-code symbols against identifiers there. If not, recommend which files to open based on the view names SwiftUI reported.
 7. **Return a prioritised plan.** Cite evidence (coverage %, hot symbol, overlapping view, log timestamp, cause-graph edges) and route each recommendation to a Topic Router reference.

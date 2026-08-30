@@ -17,7 +17,7 @@ This skill provides guidance for deploying applications to Deno Deploy.
 
 This skill applies **only** to Deno Deploy questions. Follow these rules:
 
-- If the user asks about **AWS Lambda, Vercel, Netlify, Google Cloud Run, Docker, Kubernetes, or any other deployment platform**, answer using that platform directly. Do not mention Deno Deploy at all — not as an alternative, not as a comparison, not as a suggestion.
+- If the user asks about **AWS Lambda, Vercel, Netlify, Google Cloud Run, Docker, Kubernetes, or any other deployment platform**, answer using that platform directly. Do not mention Deno Deploy at all - not as an alternative, not as a comparison, not as a suggestion.
 - If the user asks about **running a local Deno script** (not deploying), answer the local question directly. Do not mention Deno Deploy, deployment, or the `--tunnel` flag.
 - Do not include `deno deploy` commands, Deno KV, or Deno Deploy environment variable configuration in responses about other platforms or local-only scripts.
 - Only discuss Deno Deploy when the user explicitly asks about Deno Deploy or deploying a Deno application to production.
@@ -44,11 +44,11 @@ deno deploy env --help
 deno deploy database --help
 ```
 
-This takes seconds and prevents repeated trial-and-error failures. Never assume a flag exists — check first.
+This takes seconds and prevents repeated trial-and-error failures. Never assume a flag exists - check first.
 
 ## Deployment Workflow
 
-**Always show the core deploy command first** — then explain diagnostic steps. When a user asks "how do I deploy?", lead with the actual command (`deno deploy --prod`) before covering pre-flight checks and configuration.
+**Always show the core deploy command first** - then explain diagnostic steps. When a user asks "how do I deploy?", lead with the actual command (`deno deploy --prod`) before covering pre-flight checks and configuration.
 
 ### Step 1: Locate the App Directory
 
@@ -138,7 +138,7 @@ The org name is in the Deno Deploy console URL (e.g., `console.deno.com/your-org
 
 The CLI needs an organization name. Find it at https://console.deno.com - the org is in the URL path (e.g., `console.deno.com/your-org-name`).
 
-**Interactive creation** (opens a browser — only works when a human is at the keyboard):
+**Interactive creation** (opens a browser - only works when a human is at the keyboard):
 ```bash
 deno deploy create --org <ORG_NAME>
 # A browser window opens - complete the app creation there
@@ -216,7 +216,7 @@ These flags are available on `deno deploy create` (and apply during the initial 
 
 ## Creating Apps (Non-Interactive Reference)
 
-When any flag beyond `--org` is provided, `deno deploy create` runs in non-interactive mode — all required flags must be specified. This is the recommended approach for AI agents and CI/CD pipelines.
+When any flag beyond `--org` is provided, `deno deploy create` runs in non-interactive mode - all required flags must be specified. This is the recommended approach for AI agents and CI/CD pipelines.
 
 ### Required Flags
 
@@ -249,7 +249,7 @@ When using `--source github`, you also need:
 | `--pre-deploy-command <cmd>` | Command to run before deploy |
 | `--do-not-use-detected-build-config` | Skip auto-detection of framework config |
 
-The CLI auto-detects your framework and build configuration. If a framework is detected, you can skip `--install-command`, `--build-command`, `--pre-deploy-command`, and `--runtime-mode` — they'll be inferred from the preset. Use `--do-not-use-detected-build-config` to override detection. **When using this flag, all three build commands (`--install-command`, `--build-command`, `--pre-deploy-command`) plus `--runtime-mode` become required** — omitting any of them causes exit code 2.
+The CLI auto-detects your framework and build configuration. If a framework is detected, you can skip `--install-command`, `--build-command`, `--pre-deploy-command`, and `--runtime-mode` - they'll be inferred from the preset. Use `--do-not-use-detected-build-config` to override detection. **When using this flag, all three build commands (`--install-command`, `--build-command`, `--pre-deploy-command`) plus `--runtime-mode` become required** - omitting any of them causes exit code 2.
 
 ### Runtime Mode Flags
 

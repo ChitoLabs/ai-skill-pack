@@ -4,6 +4,7 @@ description: "Trigger: cloudflare-deploy, Deploy applications and infrastructure
 license: Apache-2.0
 metadata:
   author: openai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/cloudflare-deploy"
   github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/cloudflare-deploy"

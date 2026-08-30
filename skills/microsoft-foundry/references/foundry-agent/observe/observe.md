@@ -30,9 +30,9 @@ USE FOR: evaluate my agent, run an eval, test my agent, check agent quality, run
 | "Set up CI/CD evals" | [Step 6: CI/CD & Monitoring](references/cicd-monitoring.md) |
 | "Enable continuous monitoring" / "Set up production monitoring" / "Evaluation results dropping" | [Continuous Eval](references/continuous-eval.md) |
 
-> ⚠️ **Important:** Before running any evaluation (Step 2), always resolve the selected agent root, metadata file, and environment, then inspect that metadata file plus `.foundry/evaluators/` and `.foundry/datasets/` in that root only. If the cache is missing, stale, or the user wants to refresh it, route through [Step 1: Auto-Setup](references/deploy-and-setup.md) first — even if the user only asked to "evaluate." Do **not** merge `.foundry` cache or source context from sibling agent folders or sibling metadata files.
+> ⚠️ **Important:** Before running any evaluation (Step 2), always resolve the selected agent root, metadata file, and environment, then inspect that metadata file plus `.foundry/evaluators/` and `.foundry/datasets/` in that root only. If the cache is missing, stale, or the user wants to refresh it, route through [Step 1: Auto-Setup](references/deploy-and-setup.md) first - even if the user only asked to "evaluate." Do **not** merge `.foundry` cache or source context from sibling agent folders or sibling metadata files.
 
-## Before Starting — Detect Current State
+## Before Starting - Detect Current State
 
 1. Resolve the target agent root, selected metadata file, and environment from `.foundry/agent-metadata*.yaml`.
 2. Use `agent_get` and `agent_container_status_get` to verify the environment's agent exists and is running.

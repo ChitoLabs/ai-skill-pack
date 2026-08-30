@@ -4,6 +4,7 @@ description: "Trigger: chrome-extension-development, Expert guidelines for Chrom
 license: Apache-2.0
 metadata:
   author: mindrally
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/chrome-extension-development"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/chrome-extension-development"

@@ -3,7 +3,8 @@ name: android-di-hilt
 description: "Trigger: android-di-hilt, Wire Android dependency injection with Hilt, scopes, testing overrides, and module ownership boundaries. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: krutikJain
+  author: midudev
+  adapter: LCubero
   version: 0.1.0
   skills_sh_url: "https://skills.sh/krutikJain/android-agent-skills/android-di-hilt"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/android-di-hilt"

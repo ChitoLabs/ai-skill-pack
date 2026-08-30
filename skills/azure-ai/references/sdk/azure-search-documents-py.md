@@ -1,4 +1,4 @@
-# Azure AI Search — Python SDK Quick Reference
+# Azure AI Search - Python SDK Quick Reference
 
 > Condensed from **azure-search-documents-py**. Full patterns (agentic retrieval, integrated vectorization, skillsets)
 > in the **azure-search-documents-py** plugin skill if installed.

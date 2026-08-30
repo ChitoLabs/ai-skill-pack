@@ -4,6 +4,7 @@ description: "Trigger: python-design-patterns, Python design patterns including 
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/python-design-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-design-patterns"

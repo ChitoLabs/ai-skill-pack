@@ -3,7 +3,8 @@ name: clerk-backend-api
 description: "Trigger: clerk-backend-api, Clerk Backend REST API explorer and executor. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: clerk
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/clerk/skills/clerk-backend-api"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/clerk-backend-api"

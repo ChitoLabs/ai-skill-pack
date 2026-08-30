@@ -3,9 +3,9 @@ name: email-and-password
 description: "Trigger: email-and-password. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: better-auth
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/better-auth/skills/emailAndPassword"
 ---
 
 ## Activation Contract

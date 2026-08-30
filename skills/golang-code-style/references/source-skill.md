@@ -16,18 +16,18 @@ allowed-tools: "Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(
 
 # Go Code Style
 
-Style rules that require human judgment — linters handle formatting, this skill handles clarity. For naming see `samber/cc-skills-golang@golang-naming` skill; for design patterns see `samber/cc-skills-golang@golang-design-patterns` skill; for struct/interface design see `samber/cc-skills-golang@golang-structs-interfaces` skill.
+Style rules that require human judgment - linters handle formatting, this skill handles clarity. For naming see `samber/cc-skills-golang@golang-naming` skill; for design patterns see `samber/cc-skills-golang@golang-design-patterns` skill; for struct/interface design see `samber/cc-skills-golang@golang-structs-interfaces` skill.
 
-> "Clear is better than clever." — Go Proverbs
+> "Clear is better than clever." - Go Proverbs
 
 When ignoring a rule, add a comment to the code.
 
 ## Line Length & Breaking
 
-No rigid line limit, but lines beyond ~120 characters MUST be broken. Break at **semantic boundaries**, not arbitrary column counts. Function calls with 4+ arguments MUST use one argument per line — even when the prompt asks for single-line code:
+No rigid line limit, but lines beyond ~120 characters MUST be broken. Break at **semantic boundaries**, not arbitrary column counts. Function calls with 4+ arguments MUST use one argument per line - even when the prompt asks for single-line code:
 
 ```go
-// Good — each argument on its own line, closing paren separate
+// Good - each argument on its own line, closing paren separate
 mux.HandleFunc("/api/users", func(w http.ResponseWriter, r *http.Request) {
     handleUsers(
         w,
@@ -63,11 +63,11 @@ users := make([]User, 0, len(ids))      // preallocate when capacity is known
 m := make(map[string]int, len(items))   // preallocate when size is known
 ```
 
-Do not preallocate speculatively — `make([]T, 0, 1000)` wastes memory when the common case is 10 items.
+Do not preallocate speculatively - `make([]T, 0, 1000)` wastes memory when the common case is 10 items.
 
 ### Composite Literals
 
-Composite literals MUST use field names — positional fields break when the type adds or reorders fields:
+Composite literals MUST use field names - positional fields break when the type adds or reorders fields:
 
 ```go
 srv := &http.Server{
@@ -100,10 +100,10 @@ func process(data []byte) (*Result, error) {
 
 ### Eliminate Unnecessary `else`
 
-When the `if` body ends with `return`/`break`/`continue`, the `else` MUST be dropped. Use default-then-override for simple assignments — assign a default, then override with independent conditions or a `switch`:
+When the `if` body ends with `return`/`break`/`continue`, the `else` MUST be dropped. Use default-then-override for simple assignments - assign a default, then override with independent conditions or a `switch`:
 
 ```go
-// Good — default-then-override with switch (cleanest for mutually exclusive overrides)
+// Good - default-then-override with switch (cleanest for mutually exclusive overrides)
 level := slog.LevelInfo
 switch {
 case debug:
@@ -112,7 +112,7 @@ case verbose:
     level = slog.LevelWarn
 }
 
-// Bad — else-if chain hides that there's a default
+// Bad - else-if chain hides that there's a default
 if debug {
     level = slog.LevelDebug
 } else if verbose {
@@ -124,10 +124,10 @@ if debug {
 
 ### Complex Conditions & Init Scope
 
-When an `if` condition has 3+ operands, MUST extract into named booleans — a wall of `||` is unreadable and hides business logic. Keep expensive checks inline for short-circuit benefit. [Details](./details.md)
+When an `if` condition has 3+ operands, MUST extract into named booleans - a wall of `||` is unreadable and hides business logic. Keep expensive checks inline for short-circuit benefit. [Details](./details.md)
 
 ```go
-// Good — named booleans make intent clear
+// Good - named booleans make intent clear
 isAdmin := user.Role == RoleAdmin
 isOwner := resource.OwnerID == user.ID
 isPublicVerified := resource.IsPublic && user.IsVerified
@@ -161,10 +161,10 @@ default:
 
 ## Function Design
 
-- Functions SHOULD be **short and focused** — one function, one job.
+- Functions SHOULD be **short and focused** - one function, one job.
 - Functions SHOULD have **≤4 parameters**. Beyond that, use an options struct (see `samber/cc-skills-golang@golang-design-patterns` skill).
 - **Parameter order**: `context.Context` first, then inputs, then output destinations.
-- Naked returns help in very short functions (1-3 lines) where return values are obvious, but become confusing when readers must scroll to find what's returned — name returns explicitly in longer functions.
+- Naked returns help in very short functions (1-3 lines) where return values are obvious, but become confusing when readers must scroll to find what's returned - name returns explicitly in longer functions.
 
 ```go
 func FetchUser(ctx context.Context, id string) (*User, error)
@@ -191,8 +191,8 @@ Pass small types (`string`, `int`, `bool`, `time.Time`) by value. Use pointers w
 - **Order**: package doc, imports, constants, types, constructors, methods, helpers
 - **One primary type per file** when it has significant methods
 - **Blank imports** (`_ "pkg"`) register side effects (init functions). Restricting them to `main` and test packages makes side effects visible at the application root, not hidden in library code
-- **Dot imports** pollute the namespace and make it impossible to tell where a name comes from — never use in library code
-- **Unexport aggressively** — you can always export later; unexporting is a breaking change
+- **Dot imports** pollute the namespace and make it impossible to tell where a name comes from - never use in library code
+- **Unexport aggressively** - you can always export later; unexporting is a breaking change
 
 ## String Handling
 
@@ -210,9 +210,9 @@ func Contains[T comparable](slice []T, target T) bool  // not []any
 
 - **"A little copying is better than a little dependency"**
 - **Use `slices` and `maps` standard packages**; for filter/group-by/chunk, use `github.com/samber/lo`
-- **"Reflection is never clear"** — avoid `reflect` unless necessary
-- **Don't abstract prematurely** — extract when the pattern is stable
-- **Minimize public surface** — every exported name is a commitment
+- **"Reflection is never clear"** - avoid `reflect` unless necessary
+- **Don't abstract prematurely** - extract when the pattern is stable
+- **Minimize public surface** - every exported name is a commitment
 
 ## Parallelizing Code Style Reviews
 

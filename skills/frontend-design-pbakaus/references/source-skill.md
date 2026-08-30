@@ -3,7 +3,7 @@ name: impeccable
 description: Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, accessibility, performance, responsive behavior, theming, anti-patterns, typography, fonts, spacing, layout, alignment, color, motion, micro-interactions, UX copy, error states, edge cases, i18n, and reusable design systems or tokens. Also use for bland designs that need to become bolder or more delightful, loud designs that should become quieter, live browser iteration on UI elements, or ambitious visual effects that should feel technically extraordinary. Not for backend-only or non-UI tasks.
 license: Apache 2.0. Based on Anthropic's frontend-design skill. See NOTICE.md for attribution.
 metadata:
-  author: unknown
+  author: pbakaus
   version: 0.1
   github_url: "https://github.com/pbakaus/impeccable/tree/HEAD/.pi/skills/impeccable"
 version: 3.1.1
@@ -63,11 +63,11 @@ Apply to every design, both registers. Match implementation complexity to the ae
 ### Color
 
 - Use OKLCH. Reduce chroma as lightness approaches 0 or 100; high chroma at extremes looks garish.
-- Never use `#000` or `#fff`. Tint every neutral toward the brand hue (chroma 0.005–0.01 is enough).
+- Never use `#000` or `#fff`. Tint every neutral toward the brand hue (chroma 0.005-0.01 is enough).
 - Pick a **color strategy** before picking colors. Four steps on the commitment axis:
   - **Restrained**: tinted neutrals + one accent ≤10%. Product default; brand minimalism.
-  - **Committed**: one saturated color carries 30–60% of the surface. Brand default for identity-driven pages.
-  - **Full palette**: 3–4 named roles, each used deliberately. Brand campaigns; product data viz.
+  - **Committed**: one saturated color carries 30-60% of the surface. Brand default for identity-driven pages.
+  - **Full palette**: 3-4 named roles, each used deliberately. Brand campaigns; product data viz.
   - **Drenched**: the surface IS the color. Brand heroes, campaign pages.
 - The "one accent ≤10%" rule is Restrained only. Committed / Full palette / Drenched exceed it on purpose. Don't collapse every design to Restrained by reflex.
 
@@ -81,7 +81,7 @@ Before choosing, write one sentence of physical scene: who uses this, where, und
 
 ### Typography
 
-- Cap body line length at 65–75ch.
+- Cap body line length at 65-75ch.
 - Hierarchy through scale + weight contrast (≥1.25 ratio between steps). Avoid flat scales.
 
 ### Layout

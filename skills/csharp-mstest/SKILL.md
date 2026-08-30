@@ -1,9 +1,10 @@
 ---
 name: csharp-mstest
-description: Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests
+description: "Trigger: write or review MSTest unit tests, assertions, or data-driven tests. Apply current MSTest practices to a defined test task."
 license: Apache-2.0
 metadata:
-  author: github
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/csharp-mstest"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/csharp-mstest"

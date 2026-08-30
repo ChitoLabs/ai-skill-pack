@@ -12,15 +12,15 @@ metadata:
 
 # Adding Clerk
 
-> **Version**: Check `package.json` for the SDK version — see `clerk` skill for the version table. Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts.
+> **Version**: Check `package.json` for the SDK version - see `clerk` skill for the version table. Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts.
 
-This skill sets up Clerk for authentication by following the official quickstart documentation. For agents, the `clerk` CLI handles most of this end to end — see the next section.
+This skill sets up Clerk for authentication by following the official quickstart documentation. For agents, the `clerk` CLI handles most of this end to end - see the next section.
 
 ## Agent-first: Provision via CLI
 
 The `clerk` CLI replaces most Dashboard clicks. Three scenarios cover almost everything:
 
-### Scenario A — New project, new Clerk app
+### Scenario A - New project, new Clerk app
 
 ```bash
 clerk init --framework <next|react|vue|nuxt|astro|react-router|tanstack-react-start|expressjs|fastify|expo> -y
@@ -28,7 +28,7 @@ clerk init --framework <next|react|vue|nuxt|astro|react-router|tanstack-react-st
 
 `clerk init` creates the Clerk app via PLAPI, links the project, writes the framework-specific publishable + secret keys to the right env file (e.g. `.env.local` for Next.js, `.env` for Vite-based projects), and installs the SDK package.
 
-### Scenario B — Existing project, existing Clerk app
+### Scenario B - Existing project, existing Clerk app
 
 ```bash
 clerk auth login                      # one-time OAuth (skip if already logged in)
@@ -37,7 +37,7 @@ clerk link --app app_xxx              # explicit form, required in agent mode
 clerk env pull                        # writes the framework-detected env vars
 ```
 
-### Scenario C — Existing project, new Clerk app
+### Scenario C - Existing project, new Clerk app
 
 ```bash
 clerk auth login
@@ -91,7 +91,7 @@ Check `package.json` to identify the framework:
 | Dependency | Framework | Quickstart URL |
 |------------|-----------|----------------|
 | `next` | Next.js | `https://clerk.com/docs/nextjs/getting-started/quickstart` |
-| `@remix-run/react` | Remix (deprecated) | Migrate to React Router v7 — use the React Router quickstart below |
+| `@remix-run/react` | Remix (deprecated) | Migrate to React Router v7 - use the React Router quickstart below |
 | `react-router` | React Router (v7+) | `https://clerk.com/docs/react-router/getting-started/quickstart` |
 | `astro` | Astro | `https://clerk.com/docs/astro/getting-started/quickstart` |
 | `nuxt` | Nuxt | `https://clerk.com/docs/nuxt/getting-started/quickstart` |

@@ -3,7 +3,8 @@ name: make-interfaces-feel-better
 description: "Trigger: make-interfaces-feel-better, Design engineering principles for making interfaces feel polished. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: jakubkrehel
+  author: julianromli
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better"
   github_url: "https://github.com/julianromli/ai-skills/tree/HEAD/skills/make-interfaces-feel-better"

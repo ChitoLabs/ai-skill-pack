@@ -4,6 +4,7 @@ description: "Trigger: organization-best-practices. Preserve source workflow wit
 license: Apache-2.0
 metadata:
   author: better-auth
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/better-auth/skills/organization-best-practices"
   github_url: "https://github.com/better-auth/skills/tree/HEAD/better-auth/organization"

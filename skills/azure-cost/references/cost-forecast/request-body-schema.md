@@ -43,18 +43,18 @@
 |---|---|---|---|---|
 | `type` | string | ✅ | `ActualCost`, `AmortizedCost`, `Usage` | Cost type for the forecast |
 | `timeframe` | string | ✅ | `Custom` | Must be `Custom` for forecast requests |
-| `timePeriod` | object | ✅ | — | Start and end dates for the forecast window |
+| `timePeriod` | object | ✅ | - | Start and end dates for the forecast window |
 | `timePeriod.from` | string | ✅ | ISO 8601 datetime | Start date; can be in the past to include actuals |
 | `timePeriod.to` | string | ✅ | ISO 8601 datetime | End date; **must be in the future** for forecast |
-| `dataset` | object | ✅ | — | Dataset configuration for the forecast |
+| `dataset` | object | ✅ | - | Dataset configuration for the forecast |
 | `dataset.granularity` | string | ✅ | `Daily`, `Monthly` | Time granularity of forecast results |
-| `dataset.aggregation` | object | ✅ | — | Aggregation functions to apply |
+| `dataset.aggregation` | object | ✅ | - | Aggregation functions to apply |
 | `dataset.aggregation.totalCost.name` | string | ✅ | `Cost` | Column name to aggregate |
 | `dataset.aggregation.totalCost.function` | string | ✅ | `Sum` | Aggregation function |
-| `dataset.sorting` | array | Optional | — | Sort order for results |
+| `dataset.sorting` | array | Optional | - | Sort order for results |
 | `dataset.sorting[].direction` | string | Optional | `Ascending`, `Descending` | Sort direction |
 | `dataset.sorting[].name` | string | Optional | `UsageDate` | Column to sort by |
-| `dataset.filter` | object | Optional | — | Filter expression (dimensions/tags) |
+| `dataset.filter` | object | Optional | - | Filter expression (dimensions/tags) |
 | `includeActualCost` | boolean | Optional | `true`, `false` | Include historical actual costs alongside forecast. Default: `true` |
 | `includeFreshPartialCost` | boolean | Optional | `true`, `false` | Include partial cost data for recent days. Default: `true`. **Requires `includeActualCost=true`** |
 

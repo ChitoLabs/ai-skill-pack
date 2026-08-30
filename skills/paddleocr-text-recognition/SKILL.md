@@ -3,7 +3,8 @@ name: paddleocr-text-recognition
 description: "Trigger: paddleocr-text-recognition, Use this skill whenever the user wants text extracted from images, photos, scans, screenshots, or scanned PDFs. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: aidenwu0209
+  author: paddlepaddle
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/aidenwu0209/paddleocr-skills/paddleocr-text-recognition"
   github_url: "https://github.com/paddlepaddle/paddleocr/tree/HEAD/skills/paddleocr-text-recognition"

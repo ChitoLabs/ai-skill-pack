@@ -4,6 +4,7 @@ description: "Trigger: github-issues, Create, update, and manage GitHub issues u
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/github-issues"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/github-issues"

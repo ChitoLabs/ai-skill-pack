@@ -3,7 +3,8 @@ name: baoyu-format-markdown
 description: "Trigger: baoyu-format-markdown, Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: jimliu
+  author: yelban
+  adapter: LCubero
   version: 1.57.0
   skills_sh_url: "https://skills.sh/jimliu/baoyu-skills/baoyu-format-markdown"
   github_url: "https://github.com/yelban/baoyu-skills.tw/tree/HEAD/skills/baoyu-format-markdown"

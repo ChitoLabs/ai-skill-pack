@@ -26,7 +26,7 @@ Popular ratios: 1.25 (major third), 1.333 (perfect fourth), 1.5 (perfect fifth).
 
 Use `ch` units for character-based measure (`max-width: 65ch`). Line-height scales inversely with line length: narrow columns need tighter leading, wide columns need more.
 
-**Non-obvious**: Light text on dark backgrounds needs compensation on three axes, not just one. Bump line-height by 0.05–0.1, add a touch of letter-spacing (0.01–0.02em), and optionally step the body weight up one notch (regular → medium). The perceived weight drops across all three; fix all three.
+**Non-obvious**: Light text on dark backgrounds needs compensation on three axes, not just one. Bump line-height by 0.05-0.1, add a touch of letter-spacing (0.01-0.02em), and optionally step the body weight up one notch (regular → medium). The perceived weight drops across all three; fix all three.
 
 **Paragraph rhythm**: Pick either space between paragraphs OR first-line indentation. Never both. Digital usually wants space; editorial/long-form can justify indent-only.
 
@@ -87,7 +87,7 @@ Tools like [Fontaine](https://github.com/unjs/fontaine) calculate these override
 
 **Preload the critical weight only**: typically the regular-weight body font used above the fold. Preloading every weight costs more bandwidth than it saves.
 
-**Variable fonts for 3+ weights or styles**: a single variable font file is usually smaller than three static weight files, gives fractional weight control, and pairs well with `font-optical-sizing: auto`. For 1–2 weights, static is fine.
+**Variable fonts for 3+ weights or styles**: a single variable font file is usually smaller than three static weight files, gives fractional weight control, and pairs well with `font-optical-sizing: auto`. For 1-2 weights, static is fine.
 
 ## Modern Web Typography
 
@@ -101,7 +101,7 @@ Fluid typography via `clamp(min, preferred, max)` scales text smoothly with the 
 
 **Bound your clamp()**: keep `max-size ≤ ~2.5 × min-size`. Wider ratios break the browser's zoom and reflow behaviour and make large viewports feel like the page is shouting.
 
-**Scale container width and font-size together** so effective character measure stays in the 45–75ch band at every viewport. A heading that widens faster than its container drifts out of the comfortable measure at the top end.
+**Scale container width and font-size together** so effective character measure stays in the 45-75ch band at every viewport. A heading that widens faster than its container drifts out of the comfortable measure at the top end.
 
 ### OpenType Features
 
@@ -139,7 +139,7 @@ article p { text-wrap: pretty; }
 body { font-optical-sizing: auto; }
 ```
 
-**ALL-CAPS tracking**: capitals sit too close at default spacing. Add 5–12% letter-spacing (`letter-spacing: 0.05em` to `0.12em`) to short all-caps labels, eyebrows, and small headings. Real small caps (via `font-variant-caps`) need the same treatment, slightly gentler.
+**ALL-CAPS tracking**: capitals sit too close at default spacing. Add 5-12% letter-spacing (`letter-spacing: 0.05em` to `0.12em`) to short all-caps labels, eyebrows, and small headings. Real small caps (via `font-variant-caps`) need the same treatment, slightly gentler.
 
 ## Typography System Architecture
 

@@ -11,12 +11,12 @@ Users change intent mid-interaction. If animations aren't interruptible, the int
 | | CSS Transitions | CSS Keyframe Animations |
 | --- | --- | --- |
 | **Behavior** | Interpolate toward latest state | Run on a fixed timeline |
-| **Interruptible** | Yes — retargets mid-animation | No — restarts from beginning |
+| **Interruptible** | Yes - retargets mid-animation | No - restarts from beginning |
 | **Use for** | Interactive state changes (hover, toggle, open/close) | Staged sequences that run once (enter animations, loading) |
 | **Duration** | Adapts to remaining distance | Fixed regardless of state |
 
 ```css
-/* Good — interruptible transition for a toggle */
+/* Good - interruptible transition for a toggle */
 .drawer {
   transform: translateX(-100%);
   transition: transform 200ms ease-out;
@@ -25,16 +25,16 @@ Users change intent mid-interaction. If animations aren't interruptible, the int
   transform: translateX(0);
 }
 
-/* Clicking again mid-animation smoothly reverses — no jank */
+/* Clicking again mid-animation smoothly reverses - no jank */
 ```
 
 ```css
-/* Bad — keyframe animation for interactive element */
+/* Bad - keyframe animation for interactive element */
 .drawer.open {
   animation: slideIn 200ms ease-out forwards;
 }
 
-/* Closing mid-animation snaps or restarts — feels broken */
+/* Closing mid-animation snaps or restarts - feels broken */
 ```
 
 **Rule:** Always prefer CSS transitions for interactive elements. Reserve keyframes for one-shot sequences.
@@ -53,7 +53,7 @@ Don't animate a single large container. Break content into semantic chunks and a
 ### Code Example
 
 ```tsx
-// Motion (Framer Motion) — staggered enter
+// Motion (Framer Motion) - staggered enter
 function PageHeader() {
   return (
     <motion.div
@@ -119,12 +119,12 @@ function PageHeader() {
 
 ## Exit Animations
 
-Exit animations should be softer and less attention-grabbing than enter animations. The user's focus is moving to the next thing — don't fight for attention.
+Exit animations should be softer and less attention-grabbing than enter animations. The user's focus is moving to the next thing - don't fight for attention.
 
 ### Subtle Exit (Recommended)
 
 ```tsx
-// Small fixed translateY — indicates direction without drama
+// Small fixed translateY - indicates direction without drama
 <motion.div
   exit={{
     opacity: 0,
@@ -140,7 +140,7 @@ Exit animations should be softer and less attention-grabbing than enter animatio
 ### Full Exit (When Context Matters)
 
 ```tsx
-// Slide fully out — use when spatial context is important
+// Slide fully out - use when spatial context is important
 // (e.g., a card returning to a list, a drawer closing)
 <motion.div
   exit={{
@@ -156,21 +156,21 @@ Exit animations should be softer and less attention-grabbing than enter animatio
 ### Good vs. Bad
 
 ```css
-/* Good — subtle exit */
+/* Good - subtle exit */
 .item-exit {
   opacity: 0;
   transform: translateY(-12px);
   transition: opacity 150ms ease-in, transform 150ms ease-in;
 }
 
-/* Bad — dramatic exit that steals focus */
+/* Bad - dramatic exit that steals focus */
 .item-exit {
   opacity: 0;
   transform: translateY(-100%) scale(0.5);
   transition: all 400ms ease-in;
 }
 
-/* Bad — no exit animation at all (element just vanishes) */
+/* Bad - no exit animation at all (element just vanishes) */
 .item-exit {
   display: none;
 }
@@ -180,7 +180,7 @@ Exit animations should be softer and less attention-grabbing than enter animatio
 - Use a small fixed `translateY` (e.g., `-12px`) instead of the full container height
 - Keep some directional movement to indicate where the element went
 - Exit duration should be shorter than enter duration (150ms vs 300ms)
-- Don't remove exit animations entirely — subtle motion preserves context
+- Don't remove exit animations entirely - subtle motion preserves context
 
 ## Contextual Icon Animations
 
@@ -214,7 +214,7 @@ function IconButton({ isActive, icon: Icon }) {
 
 If the project doesn't use Motion (Framer Motion), keep both icons in the DOM and cross-fade them with CSS transitions. Because neither icon unmounts, both enter and exit animate smoothly.
 
-The trick: one icon is absolutely positioned on top of the other. Toggling state cross-fades them — the entering icon scales up from `0.25` while the exiting icon scales down to `0.25`, both with opacity and blur.
+The trick: one icon is absolutely positioned on top of the other. Toggling state cross-fades them - the entering icon scales up from `0.25` while the exiting icon scales down to `0.25`, both with opacity and blur.
 
 ```tsx
 function IconButton({ isActive, ActiveIcon, InactiveIcon }) {
@@ -257,11 +257,11 @@ The non-absolute icon (InactiveIcon) defines the layout size. The absolute icon 
 | | Motion (Framer Motion) | CSS transitions (both icons in DOM) |
 | --- | --- | --- |
 | **Enter animation** | Yes | Yes |
-| **Exit animation** | Yes (via `AnimatePresence`) | Yes (cross-fade — icon never unmounts) |
-| **Spring physics** | Yes | No — use `cubic-bezier(0.2, 0, 0, 1)` as approximation |
+| **Exit animation** | Yes (via `AnimatePresence`) | Yes (cross-fade - icon never unmounts) |
+| **Spring physics** | Yes | No - use `cubic-bezier(0.2, 0, 0, 1)` as approximation |
 | **When to use** | Project already uses `motion/react` | No motion dependency, or keeping bundle small |
 
-**Rule:** Check the project's `package.json` for `motion` or `framer-motion`. If present, use the Motion approach. If not, use the CSS cross-fade pattern — don't add a dependency just for icon transitions.
+**Rule:** Check the project's `package.json` for `motion` or `framer-motion`. If present, use the Motion approach. If not, use the CSS cross-fade pattern - don't add a dependency just for icon transitions.
 
 ### When to Animate Icons
 
@@ -272,15 +272,15 @@ The non-absolute icon (InactiveIcon) defines the layout size. The absolute icon 
 | Icons in contextual toolbars | Icons that are always visible |
 | Loading/success state indicators | Icon labels (text next to icon) |
 
-**Important:** Always use exactly these values for contextual icon animations — do not deviate:
+**Important:** Always use exactly these values for contextual icon animations - do not deviate:
 - `scale`: `0.25` → `1` (never use `0.5` or `0.6`)
 - `opacity`: `0` → `1`
 - `filter`: `"blur(4px)"` → `"blur(0px)"`
-- `transition`: `{ type: "spring", duration: 0.3, bounce: 0 }` — **bounce must always be `0`**, never `0.1` or any other value
+- `transition`: `{ type: "spring", duration: 0.3, bounce: 0 }` - **bounce must always be `0`**, never `0.1` or any other value
 
 ## Scale on Press
 
-A subtle scale-down on click gives buttons tactile feedback. Always use `scale(0.96)`. Never use a value smaller than `0.95` — anything below feels exaggerated. Use CSS transitions for interruptibility — if the user releases mid-press, it should smoothly return.
+A subtle scale-down on click gives buttons tactile feedback. Always use `scale(0.96)`. Never use a value smaller than `0.95` - anything below feels exaggerated. Use CSS transitions for interruptibility - if the user releases mid-press, it should smoothly return.
 
 Not every button needs this. Add a `static` prop to your button component that disables the scale effect when the motion would be distracting.
 
@@ -343,12 +343,12 @@ function Button({ static: isStatic, className, children, ...props }) {
 
 ## Skip Animation on Page Load
 
-Use `initial={false}` on `AnimatePresence` to prevent enter animations from firing on first render. Elements that are already in their default state shouldn't animate in on page load — only on subsequent state changes.
+Use `initial={false}` on `AnimatePresence` to prevent enter animations from firing on first render. Elements that are already in their default state shouldn't animate in on page load - only on subsequent state changes.
 
 ### When It Works
 
 ```tsx
-// Good — icon doesn't animate in on mount, only on state change
+// Good - icon doesn't animate in on mount, only on state change
 <AnimatePresence initial={false} mode="popLayout">
   <motion.span
     key={isActive ? "active" : "inactive"}
@@ -361,14 +361,14 @@ Use `initial={false}` on `AnimatePresence` to prevent enter animations from firi
 </AnimatePresence>
 ```
 
-Works well for: icon swaps, toggles, tabs, segmented controls — anything that has a default state on page load.
+Works well for: icon swaps, toggles, tabs, segmented controls - anything that has a default state on page load.
 
 ### When It Breaks
 
 Don't use `initial={false}` when the component relies on its `initial` prop to set up a first-time enter animation, like a staggered page hero or a loading state. In those cases, removing the initial animation skips the entire entrance.
 
 ```tsx
-// Bad — initial={false} would skip the staggered page enter entirely
+// Bad - initial={false} would skip the staggered page enter entirely
 <AnimatePresence initial={false}>
   <motion.div initial="hidden" animate="visible" variants={...}>
     ...

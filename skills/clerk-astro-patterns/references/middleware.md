@@ -41,7 +41,7 @@ export const onRequest = clerkMiddleware((auth, context, next) => {
 export const onRequest = clerkMiddleware()
 ```
 
-The middleware still populates `Astro.locals.auth` — you just do the redirect check per-page.
+The middleware still populates `Astro.locals.auth` - you just do the redirect check per-page.
 
 ## createRouteMatcher Patterns
 
@@ -68,5 +68,5 @@ clerkMiddleware(handler?, options?)
 ## CRITICAL
 
 - Middleware is skipped for pages with `export const prerender = true`
-- `auth()` is a function — call it to get the auth object: `auth().userId` not `auth.userId`
+- `auth()` is a function - call it to get the auth object: `auth().userId` not `auth.userId`
 - Always return `next()` for non-protected routes

@@ -4,6 +4,7 @@ description: "Trigger: mcp-builder, Guide for creating high-quality MCP (Model C
 license: Complete terms in LICENSE.txt
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/mcp-builder"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder"

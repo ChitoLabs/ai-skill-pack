@@ -44,7 +44,7 @@ az search service show --name <search-service> --resource-group <rg> \
 
 All should return `Disabled`.
 
-> **T10 (Private Basic):** Steps 2-5 below do not apply — T10 has no agents, no capability host, and no BYO resources. Setup is complete after Step 1.
+> **T10 (Private Basic):** Steps 2-5 below do not apply - T10 has no agents, no capability host, and no BYO resources. Setup is complete after Step 1.
 
 ## 2. RBAC Role Assignment (no VNet required)
 
@@ -59,7 +59,7 @@ az role assignment create \
   --scope /subscriptions/<sub>/resourceGroups/<rg>/providers/Microsoft.CognitiveServices/accounts/<ai-account-name>
 ```
 
-Assign `Azure AI User` at the **project** scope (data-plane — required for `agents/read`, `agents/write`):
+Assign `Azure AI User` at the **project** scope (data-plane - required for `agents/read`, `agents/write`):
 
 ```bash
 az role assignment create \
@@ -68,7 +68,7 @@ az role assignment create \
   --scope /subscriptions/<sub>/resourceGroups/<rg>/providers/Microsoft.CognitiveServices/accounts/<ai-account-name>/projects/<project-name>
 ```
 
-> ⚠️ RBAC propagation can take 1–5 minutes.
+> ⚠️ RBAC propagation can take 1-5 minutes.
 
 ## 3. Deploy a Model (no VNet required)
 

@@ -1,9 +1,9 @@
 ---
 name: n8n-node-configuration
-description: Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters — it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.
+description: Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters - it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.
 license: Apache-2.0
 metadata:
-  author: czlonkowski
+  author: wilkomarketing
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-node-configuration"
   github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-node-configuration"
@@ -646,7 +646,7 @@ See the n8n Workflow Patterns skill for detailed loop and nested loop patterns.
 
 **Per-item execution**: Each input item triggers a separate API call. If you have 100 items and use a Google Sheets "Append Row" node, it makes 100 API calls. To write in bulk, aggregate items in a Code node first, then use a single HTTP Request with the Sheets API.
 
-**Formula columns**: Never use `append` on sheets with formula columns — it overwrites formulas. Instead, use HTTP Request with Google Sheets API `values.update` (PUT) method and a `googleApi` credential.
+**Formula columns**: Never use `append` on sheets with formula columns - it overwrites formulas. Instead, use HTTP Request with Google Sheets API `values.update` (PUT) method and a `googleApi` credential.
 
 ---
 
@@ -733,7 +733,7 @@ get_node({
 
 ## Surgical Field Edits with patchNodeField
 
-When you need to edit a specific string inside a node field — rather than replacing the whole field — use `patchNodeField` in `n8n_update_partial_workflow`. This is especially useful for:
+When you need to edit a specific string inside a node field - rather than replacing the whole field - use `patchNodeField` in `n8n_update_partial_workflow`. This is especially useful for:
 
 - Editing code inside Code nodes without re-transmitting the full code block
 - Updating URLs or text in large HTML email templates
@@ -752,7 +752,7 @@ n8n_update_partial_workflow({
 })
 ```
 
-`patchNodeField` is strict — it errors if the find string isn't found or matches multiple times (unless `replaceAll: true`). This prevents accidental silent failures during configuration updates. See the n8n MCP Tools Expert skill for full syntax and examples.
+`patchNodeField` is strict - it errors if the find string isn't found or matches multiple times (unless `replaceAll: true`). This prevents accidental silent failures during configuration updates. See the n8n MCP Tools Expert skill for full syntax and examples.
 
 ---
 

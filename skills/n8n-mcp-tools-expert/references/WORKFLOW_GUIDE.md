@@ -227,11 +227,11 @@ Remove properties by setting them to `null`:
 
 ### patchNodeField (Surgical String Edits)
 
-Use `patchNodeField` for strict find/replace edits on string fields — code, HTML, email templates, JSON bodies. Unlike `updateNode` with `__patch_find_replace` (which silently warns on misses), `patchNodeField` is strict: it errors if the find string is not found, and errors if multiple matches are found (preventing ambiguous replacements).
+Use `patchNodeField` for strict find/replace edits on string fields - code, HTML, email templates, JSON bodies. Unlike `updateNode` with `__patch_find_replace` (which silently warns on misses), `patchNodeField` is strict: it errors if the find string is not found, and errors if multiple matches are found (preventing ambiguous replacements).
 
 **When to use which**:
-- `patchNodeField` — preferred for most string edits. Strict error handling catches mistakes early.
-- `updateNode` with `__patch_find_replace` — legacy approach. Tolerant (warns but continues on miss). Use only when you want lenient behavior.
+- `patchNodeField` - preferred for most string edits. Strict error handling catches mistakes early.
+- `updateNode` with `__patch_find_replace` - legacy approach. Tolerant (warns but continues on miss). Use only when you want lenient behavior.
 
 **Syntax**:
 ```javascript
@@ -307,7 +307,7 @@ n8n_update_partial_workflow({
 **Error behavior** (this is what makes it strict):
 - **Find string not found** → operation fails with error (not a silent warning)
 - **Multiple matches without `replaceAll`** → operation fails (ambiguity detected)
-- Patches are applied sequentially — order matters
+- Patches are applied sequentially - order matters
 
 **Security limits**:
 - Max 50 patches per operation
@@ -438,7 +438,7 @@ const result = n8n_deploy_template({
 
 ## n8n_generate_workflow (NATURAL LANGUAGE → WORKFLOW)
 
-**Speed**: Proposals ~2s, fresh generation 5–15s, deploy ~3s
+**Speed**: Proposals ~2s, fresh generation 5-15s, deploy ~3s
 
 **Use when**: User describes the workflow in plain English and wants the system to draft (and optionally deploy) it.
 
@@ -446,7 +446,7 @@ const result = n8n_deploy_template({
 
 ### How It Works
 
-It's a **multi-step flow with a review checkpoint** — proposals/preview are returned first, deployment requires a second call. This avoids deploying low-quality drafts.
+It's a **multi-step flow with a review checkpoint** - proposals/preview are returned first, deployment requires a second call. This avoids deploying low-quality drafts.
 
 ### Path A: Proposals → Deploy (default, recommended)
 
@@ -502,8 +502,8 @@ n8n_generate_workflow({
 
 The quality of the generated workflow is bound by the clarity of the description. Always include:
 
-- **Trigger type**: `webhook`, `schedule` (with cadence — "every 15 min", "weekdays at 9am"), `manual`, `form`, `chat`
-- **Services involved**: name them explicitly (Slack, Gmail, HubSpot, Postgres, etc.) — generic terms ("a chat tool") yield generic results
+- **Trigger type**: `webhook`, `schedule` (with cadence - "every 15 min", "weekdays at 9am"), `manual`, `form`, `chat`
+- **Services involved**: name them explicitly (Slack, Gmail, HubSpot, Postgres, etc.) - generic terms ("a chat tool") yield generic results
 - **Logic / flow**: branches, transforms, aggregation, deduplication, retry behavior
 
 **Bad**: `"Send a notification when something happens"`
@@ -515,16 +515,16 @@ The quality of the generated workflow is bound by the clarity of the description
 | Parameter | Type | Use |
 |-----------|------|-----|
 | `description` | string (required) | Natural-language description |
-| `deploy_id` | string | ID of a proposal from a prior call — deploys it |
+| `deploy_id` | string | ID of a proposal from a prior call - deploys it |
 | `skip_cache` | boolean | Skip proposals; generate from scratch and return a preview |
 | `confirm_deploy` | boolean | Deploy the most recent preview from this session |
 
 ### Common Pitfalls
 
-- **Hosted-only** — on self-hosted, no workflow is generated; fall back to `n8n_deploy_template` or `n8n_create_workflow`
-- **Proposals are NOT deployed** — until you call again with `deploy_id` or `confirm_deploy`, nothing exists in n8n
-- **Inactive on deploy** — generated workflows are created in **inactive** state; credentials must be configured in the n8n UI before activation
-- **Per-session state** — pending proposals/preview live in MCP-session state; reconnecting loses them, and you'll need to re-issue the description
+- **Hosted-only** - on self-hosted, no workflow is generated; fall back to `n8n_deploy_template` or `n8n_create_workflow`
+- **Proposals are NOT deployed** - until you call again with `deploy_id` or `confirm_deploy`, nothing exists in n8n
+- **Inactive on deploy** - generated workflows are created in **inactive** state; credentials must be configured in the n8n UI before activation
+- **Per-session state** - pending proposals/preview live in MCP-session state; reconnecting loses them, and you'll need to re-issue the description
 
 ### Recommended Follow-Up
 
@@ -697,8 +697,8 @@ n8n_manage_credentials({action: "get", id: "123", includeUsage: true})
 
 **Behavior and limits:**
 - The reverse index is built client-side, deduplicated per workflow, and capped at 5000 workflows (same ceiling as `n8n_audit_instance`)
-- Archived workflows are excluded by n8n's API — a "no usages" result does **not** prove a credential is unused; verify before destructive actions
-- Triggers one full workflow scan per call. On large instances expect slower responses than the base ~50–500ms — budget accordingly when calling repeatedly
+- Archived workflows are excluded by n8n's API - a "no usages" result does **not** prove a credential is unused; verify before destructive actions
+- Triggers one full workflow scan per call. On large instances expect slower responses than the base ~50-500ms - budget accordingly when calling repeatedly
 - If the scan fails, the response degrades to base credentials with a `usageScanError` field rather than failing the whole call
 - Default behavior unchanged: omit the flag and no extra API calls happen
 
@@ -763,7 +763,7 @@ n8n_manage_credentials({action: "list"})
 ```javascript
 // 1. Check what would break
 n8n_manage_credentials({action: "get", id: "123", includeUsage: true})
-// → Inspect usedIn — the {id, name, active} of every workflow that references it
+// → Inspect usedIn - the {id, name, active} of every workflow that references it
 
 // 2a. If nothing depends on it, delete
 n8n_manage_credentials({action: "delete", id: "123"})
@@ -777,7 +777,7 @@ n8n_manage_credentials({
 ```
 
 ### Security Notes
-- **Response stripping**: `get`, `create`, and `update` all strip the `data` field from responses (defense-in-depth — secrets are never returned)
+- **Response stripping**: `get`, `create`, and `update` all strip the `data` field from responses (defense-in-depth - secrets are never returned)
 - **Log redaction**: Credential request bodies are redacted from debug logs
 - **Fallback resilience**: `get` falls back to list+filter when `GET /credentials/:id` returns 403/405 (endpoint not in all n8n versions)
 - **Usage scan resilience**: when `includeUsage: true` triggers a workflow scan that fails, the response includes `usageScanError` and still returns the base credentials rather than erroring out
@@ -797,10 +797,10 @@ n8n_manage_credentials({
 - Wraps n8n's native audit endpoint; gracefully degrades if unavailable
 
 **2. Custom Deep Scan** (workflow analysis):
-- `hardcoded_secrets` — 50+ regex patterns for API keys/tokens/passwords plus PII detection
-- `unauthenticated_webhooks` — Webhook/form triggers without authentication
-- `error_handling` — Workflows with 3+ nodes and no error handling
-- `data_retention` — Workflows saving all execution data
+- `hardcoded_secrets` - 50+ regex patterns for API keys/tokens/passwords plus PII detection
+- `unauthenticated_webhooks` - Webhook/form triggers without authentication
+- `error_handling` - Workflows with 3+ nodes and no error handling
+- `data_retention` - Workflows saving all execution data
 
 ### Examples
 
@@ -814,7 +814,7 @@ n8n_audit_instance({
   includeCustomScan: false
 })
 
-// Custom scan only — specific checks
+// Custom scan only - specific checks
 n8n_audit_instance({
   customChecks: ["hardcoded_secrets", "unauthenticated_webhooks"]
 })
@@ -837,13 +837,13 @@ Returns an actionable markdown report with:
   - Items requiring user action (e.g., key rotation)
 
 ### Secret Masking
-Detected secrets are masked in output — shows first 6 + last 4 characters only. Raw values are never stored or returned.
+Detected secrets are masked in output - shows first 6 + last 4 characters only. Raw values are never stored or returned.
 
 ### Remediation Types
-- `auto_fixable` — Can be fixed with MCP tools (e.g., add webhook auth)
-- `review_recommended` — Needs human judgment (e.g., PII detection)
-- `user_input_needed` — Requires user decision (e.g., choose auth method)
-- `user_action_needed` — Manual action required (e.g., rotate exposed API key)
+- `auto_fixable` - Can be fixed with MCP tools (e.g., add webhook auth)
+- `review_recommended` - Needs human judgment (e.g., PII detection)
+- `user_input_needed` - Requires user decision (e.g., choose auth method)
+- `user_action_needed` - Manual action required (e.g., rotate exposed API key)
 
 ---
 

@@ -4,6 +4,7 @@ description: "Trigger: marketing-psychology, When the user wants to apply psycho
 license: Apache-2.0
 metadata:
   author: coreyhaines31
+  adapter: LCubero
   version: 2.0.0
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/marketing-psychology"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/marketing-psychology"

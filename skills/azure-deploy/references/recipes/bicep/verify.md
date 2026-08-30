@@ -20,7 +20,7 @@ curl -s https://<endpoint>/health | jq .
 
 ## Report Results to User
 
-> ⛔ **MANDATORY** — You **MUST** present the deployed endpoint URLs to the user in your response.
+> ⛔ **MANDATORY** - You **MUST** present the deployed endpoint URLs to the user in your response.
 
 Extract endpoints from deployment outputs:
 

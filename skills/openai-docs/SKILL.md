@@ -4,6 +4,7 @@ description: "Trigger: openai-docs. Preserve source workflow with portable agent
 license: Apache-2.0
 metadata:
   author: openai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/openai-docs"
   github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/openai-docs"

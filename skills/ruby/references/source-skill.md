@@ -1,9 +1,9 @@
 ---
 name: ruby
-description: Use when writing, reviewing, or debugging pure Ruby code — idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
+description: Use when writing, reviewing, or debugging pure Ruby code - idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
 license: Apache-2.0
 metadata:
-  author: lucianghinda
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/ruby"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/ruby"
@@ -13,7 +13,7 @@ metadata:
 
 ## Overview
 
-Opinionated Ruby conventions and idioms for writing idiomatic Ruby 3.x+ code. Focuses on patterns agents miss by default — the Weirich raise/fail distinction, safe nil-aware memoization, result objects over exceptions for expected failures, and performance-conscious enumeration.
+Opinionated Ruby conventions and idioms for writing idiomatic Ruby 3.x+ code. Focuses on patterns agents miss by default - the Weirich raise/fail distinction, safe nil-aware memoization, result objects over exceptions for expected failures, and performance-conscious enumeration.
 
 ## Error Handling Conventions
 
@@ -230,8 +230,8 @@ user&.profile&.avatar_url  # returns nil if any link is nil
 |---------|-----|
 | `raise` for new exceptions | Use `fail`; reserve `raise` for re-raising (Weirich convention) |
 | `@var \|\|= compute` when result can be `nil`/`false` | Use `defined?(@var)` check instead |
-| String concatenation with `+=` in loops | Use `<<` or `.join` — `+=` is O(n²) |
-| `rescue Exception` | Rescue `StandardError` — `Exception` catches `SignalException`, `NoMemoryError` |
+| String concatenation with `+=` in loops | Use `<<` or `.join` - `+=` is O(n²) |
+| `rescue Exception` | Rescue `StandardError` - `Exception` catches `SignalException`, `NoMemoryError` |
 | Deep `&.` chains (3+ links) | Extract to a method or use explicit nil check |
 | Missing `# frozen_string_literal: true` | Add to top of every file |
 

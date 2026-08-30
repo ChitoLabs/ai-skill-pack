@@ -28,7 +28,7 @@ Rails 4.2 is a minor release that introduces async infrastructure and several ex
 **What Changed:**
 `deliver` and `deliver!` are deprecated. The direct, bang-preserving replacements are `deliver_now` and `deliver_now!` (synchronous). `deliver_later` is a new async option that enqueues the mail via ActiveJob.
 
-Calling a mailer method is also now lazy — the instance method runs when you call `deliver_now` / `deliver_later`, not when you call the class method. Code that relied on the old eager behavior for non-mailing work should move to class methods on the mailer.
+Calling a mailer method is also now lazy - the instance method runs when you call `deliver_now` / `deliver_later`, not when you call the class method. Code that relied on the old eager behavior for non-mailing work should move to class methods on the mailer.
 
 **Detection Pattern:**
 ```ruby
@@ -42,11 +42,11 @@ NotificationMailer.daily_summary(user).deliver!
 UserMailer.welcome(user).deliver
 NotificationMailer.daily_summary(user).deliver!
 
-# AFTER — synchronous (direct drop-in replacements)
+# AFTER - synchronous (direct drop-in replacements)
 UserMailer.welcome(user).deliver_now
 NotificationMailer.daily_summary(user).deliver_now!
 
-# AFTER — enqueued via ActiveJob (preferred for non-urgent mail)
+# AFTER - enqueued via ActiveJob (preferred for non-urgent mail)
 UserMailer.welcome(user).deliver_later
 ```
 
@@ -59,12 +59,12 @@ UserMailer.welcome(user).deliver_later
 **What Changed:**
 The `respond_with` helper and class-level `respond_to` declarations were extracted from Rails core into the [`responders`](https://github.com/heartcombo/responders) gem.
 
-Action-level `respond_to do |format| ... end` blocks are NOT affected — they remain in Rails core.
+Action-level `respond_to do |format| ... end` blocks are NOT affected - they remain in Rails core.
 
 **Detection Pattern:**
 ```ruby
 class UsersController < ApplicationController
-  respond_to :html, :json  # class-level — affected
+  respond_to :html, :json  # class-level - affected
 
   def show
     @user = User.find(params[:id])
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    respond_to do |format|  # NOT affected — stays in core
+    respond_to do |format|  # NOT affected - stays in core
       format.html
       format.json { render json: @users }
     end
@@ -94,7 +94,7 @@ No code changes needed after adding the gem.
 #### 3. Passing AR Object to `.find` / `.exists?` Deprecated
 
 **What Changed:**
-Passing an ActiveRecord object where an id is expected is deprecated — you must pass the id explicitly.
+Passing an ActiveRecord object where an id is expected is deprecated - you must pass the id explicitly.
 
 **Detection Pattern:**
 ```ruby
@@ -164,7 +164,7 @@ assert_select "a[href='/foo']"
 #### 6. HTML Sanitizer Rewritten (Loofah/Nokogiri)
 
 **What Changed:**
-`sanitize`, `sanitize_css`, `strip_tags`, and `strip_links` are now backed by [Loofah](https://github.com/flavorjones/loofah) (via Nokogiri). Output may differ for edge-case inputs. `sanitize` also now accepts a `Loofah::Scrubber` — two new scrubbers ship with Rails: `PermitScrubber` and `TargetScrubber`.
+`sanitize`, `sanitize_css`, `strip_tags`, and `strip_links` are now backed by [Loofah](https://github.com/flavorjones/loofah) (via Nokogiri). Output may differ for edge-case inputs. `sanitize` also now accepts a `Loofah::Scrubber` - two new scrubbers ship with Rails: `PermitScrubber` and `TargetScrubber`.
 
 **Detection Pattern:**
 ```ruby
@@ -175,7 +175,7 @@ strip_tags(html_string)
 **Fix:**
 Review tests that assert on sanitized output. If specific outputs diverge in ways you can't accommodate, temporarily restore the old sanitizer:
 ```ruby
-# Gemfile (temporary fallback — Rails 4.2 only)
+# Gemfile (temporary fallback - Rails 4.2 only)
 gem 'rails-deprecated_sanitizer'
 ```
 
@@ -319,7 +319,7 @@ gem 'foreigner'
 3. `bin/rake db:schema:dump`
 4. Verify `db/schema.rb` still matches your database
 
-Rails' FK support is a subset of Foreigner's — keep the gem if you use its advanced features (e.g., `:dependent => :restrict`).
+Rails' FK support is a subset of Foreigner's - keep the gem if you use its advanced features (e.g., `:dependent => :restrict`).
 
 New migration API:
 ```ruby
@@ -374,7 +374,7 @@ Consider [Transpec](http://yujinakayama.me/transpec/) to automate common 2 → 3
 
 ## New Gemfile Defaults
 
-Rails 4.2 generates new applications with these additions — consider adopting them:
+Rails 4.2 generates new applications with these additions - consider adopting them:
 
 ```ruby
 # Gemfile
@@ -453,7 +453,7 @@ ruby -v  # 1.9.3+; 2.0+ recommended
 
 ### Phase 2: Pre-requisites (before the Rails bump)
 1. **Upgrade RSpec to 3.x** if using RSpec 2 (independent of Rails)
-2. **Fix all current 4.1 deprecation warnings** — they become errors or silent failures in 4.2
+2. **Fix all current 4.1 deprecation warnings** - they become errors or silent failures in 4.2
 3. **Add `gem 'responders', '~> 2.0'`** if using `respond_with`
 
 ### Phase 3: Gemfile Updates

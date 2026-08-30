@@ -4,6 +4,7 @@ description: "Trigger: social-media-generator, This skill should be used when th
 license: Apache-2.0
 metadata:
   author: ailabs-393
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/ailabs-393/ai-labs-claude-skills/social-media-generator"
   github_url: "https://github.com/ailabs-393/ai-labs-claude-skills/tree/HEAD/dist/skills/social-media-generator"

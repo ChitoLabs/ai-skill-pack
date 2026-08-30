@@ -4,6 +4,7 @@ description: "Trigger: golang-lint, Provides linting best practices and golangci
 license: MIT
 metadata:
   author: samber
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/samber/cc-skills-golang/golang-lint"
   github_url: "https://github.com/samber/cc-skills-golang/tree/HEAD/skills/golang-lint"

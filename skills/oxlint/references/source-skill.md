@@ -1,17 +1,17 @@
 ---
 name: oxlint
-description: Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
+description: Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
 license: Apache-2.0
 metadata:
-  author: delexw
+  author: midudev
   version: 0.1
   skills_sh_url: "https://www.skills.sh/delexw/claude-code-misc/oxlint"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/oxlint"
 ---
 
-# Oxlint — High-Performance JS/TS Linter
+# Oxlint - High-Performance JS/TS Linter
 
-Oxlint is 50-100x faster than ESLint. It ships with 690+ rules covering ESLint core, TypeScript, React, Jest, Unicorn, jsx-a11y, and more. It prioritizes high-signal correctness checks by default — things that are incorrect, unsafe, or useless — so teams can adopt it without drowning in false positives.
+Oxlint is 50-100x faster than ESLint. It ships with 690+ rules covering ESLint core, TypeScript, React, Jest, Unicorn, jsx-a11y, and more. It prioritizes high-signal correctness checks by default - things that are incorrect, unsafe, or useless - so teams can adopt it without drowning in false positives.
 
 ## Detection
 
@@ -21,7 +21,7 @@ Before linting, confirm the project uses oxlint by checking for any of:
 - An `oxlint.config.ts` file in the project root
 - An `oxlint` or `lint` script in `package.json` that references `oxlint`
 
-If none of these exist, the project doesn't use oxlint — don't run it.
+If none of these exist, the project doesn't use oxlint - don't run it.
 
 ## Running Oxlint
 
@@ -41,7 +41,7 @@ npx oxlint
 npx oxlint --fix
 ```
 
-Use `--fix` for safe automatic fixes. Avoid `--fix-dangerously` unless the user explicitly asks for it — it can apply unsafe transformations.
+Use `--fix` for safe automatic fixes. Avoid `--fix-dangerously` unless the user explicitly asks for it - it can apply unsafe transformations.
 
 ### Linting specific files
 After editing only a few files, you can lint just those:
@@ -51,7 +51,7 @@ npx oxlint src/components/Button.tsx src/utils/helpers.ts
 
 ### Interpreting output
 Oxlint prints diagnostics with rule names in parentheses, e.g. `(no-unused-vars)`. When fixing:
-1. Read the diagnostic message carefully — oxlint gives precise, actionable information
+1. Read the diagnostic message carefully - oxlint gives precise, actionable information
 2. Fix the underlying code issue rather than suppressing the rule
 3. Only add `// oxlint-ignore` comments as a last resort when the diagnostic is a genuine false positive
 
@@ -133,16 +133,16 @@ The config uses JSONC (JSON with comments). Key sections:
 ```
 
 ### Rule severity levels
-- `"off"` / `"allow"` — Disable the rule
-- `"warn"` — Report but don't fail the build
-- `"error"` / `"deny"` — Report and exit non-zero
+- `"off"` / `"allow"` - Disable the rule
+- `"warn"` - Report but don't fail the build
+- `"error"` / `"deny"` - Report and exit non-zero
 
 Unique rule names can omit plugin prefix: `"no-console"` = `"eslint/no-console"`.
 
 ### Categories
 Categories group rules by intent. The recommended starting point:
-- `correctness: "error"` — Always on. Catches real bugs.
-- `suspicious: "warn"` — Good signal, occasionally noisy.
+- `correctness: "error"` - Always on. Catches real bugs.
+- `suspicious: "warn"` - Good signal, occasionally noisy.
 - Everything else: enable incrementally as the team is ready.
 
 ### Available plugins
@@ -211,19 +211,19 @@ console.log(debugInfo);
 const _placeholder = computeValue();
 ```
 
-Use `oxlint-ignore` (not `eslint-disable`) — oxlint recognizes both, but prefer its native syntax.
+Use `oxlint-ignore` (not `eslint-disable`) - oxlint recognizes both, but prefer its native syntax.
 
 ## Migrating from ESLint
 
 If the project is moving from ESLint to oxlint:
 
-1. **Side-by-side approach** — Run both linters, with `eslint-plugin-oxlint` disabling rules that oxlint already covers:
+1. **Side-by-side approach** - Run both linters, with `eslint-plugin-oxlint` disabling rules that oxlint already covers:
    ```bash
    npm install -D eslint-plugin-oxlint
    ```
    Add it as the last plugin in your ESLint config.
 
-2. **Full replacement** — Use `@oxlint/migrate` to convert your ESLint config:
+2. **Full replacement** - Use `@oxlint/migrate` to convert your ESLint config:
    ```bash
    npx @oxlint/migrate
    ```

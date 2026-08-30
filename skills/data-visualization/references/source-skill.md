@@ -87,7 +87,7 @@ Pie charts are almost always the wrong choice:
 | **Sequential** for magnitude | Light → dark for low → high |
 | **Diverging** for positive/negative | Red ← neutral → blue |
 | **Categorical** for groups | Distinct hues, similar brightness |
-| **Colorblind-safe** | Avoid red/green only — add shapes or labels |
+| **Colorblind-safe** | Avoid red/green only - add shapes or labels |
 | **Consistent meaning** | If blue = revenue, keep it blue everywhere |
 
 ### Good Color Palettes
@@ -112,7 +112,7 @@ cb_safe = ["#0077BB", "#33BBEE", "#009988", "#EE7733", "#CC3311"]
 |---------|------|
 | **Title** | States the insight, not the data type. "Revenue doubled in Q2" not "Q2 Revenue Chart" |
 | **Annotations** | Call out key data points directly on the chart |
-| **Legend** | Avoid if possible — label directly on chart lines/bars |
+| **Legend** | Avoid if possible - label directly on chart lines/bars |
 | **Font size** | Minimum 12px, 14px+ for presentations |
 | **Number format** | Use K, M, B for large numbers (42K not 42,000) |
 | **Data labels** | Add to bars/points when exact values matter |

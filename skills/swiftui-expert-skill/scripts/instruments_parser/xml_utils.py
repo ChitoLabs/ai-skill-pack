@@ -67,7 +67,7 @@ class RowStream:
 
             if elem.tag == "row":
                 yield _row_dict(elem, self.columns)
-                # Do not clear elem — children referenced via id may still be needed.
+                # Do not clear elem - children referenced via id may still be needed.
 
 
 def _parse_columns(schema_el: ET.Element) -> list[Column]:

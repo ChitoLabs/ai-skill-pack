@@ -1,7 +1,7 @@
 # Mobile Navigation Reference
 
 > Navigation patterns, deep linking, back handling, and tab/stack/drawer decisions.
-> **Navigation is the skeleton of your app—get it wrong and everything feels broken.**
+> **Navigation is the skeleton of your app-get it wrong and everything feels broken.**
 
 ---
 
@@ -455,4 +455,4 @@ Don't reinvent navigation.
 
 ---
 
-> **Remember:** Navigation is invisible when done right. Users shouldn't think about HOW to get somewhere—they just get there. If they notice navigation, something is wrong.
+> **Remember:** Navigation is invisible when done right. Users shouldn't think about HOW to get somewhere-they just get there. If they notice navigation, something is wrong.

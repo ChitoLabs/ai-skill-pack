@@ -100,7 +100,7 @@ const filteredRows = computed(() => {
 
 ## With row selection
 
-Row selection uses TanStack Table's `rowSelection` state — a `Record<string, boolean>` keyed by row index.
+Row selection uses TanStack Table's `rowSelection` state - a `Record<string, boolean>` keyed by row index.
 
 ```vue
 <script setup lang="ts">
@@ -144,7 +144,7 @@ const columns: TableColumn[] = [{
 
 ## With pagination
 
-Use `v-model:pagination` on `UTable` with TanStack's `getPaginationRowModel`, then wire `UPagination` to the table API. `UPagination`'s `total` is total **items** (not pages) — it calculates page count from `total / items-per-page`.
+Use `v-model:pagination` on `UTable` with TanStack's `getPaginationRowModel`, then wire `UPagination` to the table API. `UPagination`'s `total` is total **items** (not pages) - it calculates page count from `total / items-per-page`.
 
 ```vue
 <script setup lang="ts">
@@ -180,7 +180,7 @@ const pagination = ref({
 
 ## With async data (Nuxt)
 
-Use `status === 'pending' || status === 'idle'` for loading state — `idle` covers the initial render before `useLazyFetch` starts.
+Use `status === 'pending' || status === 'idle'` for loading state - `idle` covers the initial render before `useLazyFetch` starts.
 
 ```vue
 <script setup lang="ts">
@@ -216,7 +216,7 @@ const { data, status } = await useAsyncData(
 
 ## Tips
 
-- Table is built on [TanStack Table](https://tanstack.com/table/latest) — columns use `ColumnDef` format with `accessorKey`, `header`, `cell`
+- Table is built on [TanStack Table](https://tanstack.com/table/latest) - columns use `ColumnDef` format with `accessorKey`, `header`, `cell`
 - Use `#<column>-cell` and `#<column>-header` template slots to customize rendering with Vue templates
 - Alternatively, use the `h` function inside `header` and `cell` column properties for inline rendering
 - Row data in slots is accessed via `row.original` (not `row` directly)

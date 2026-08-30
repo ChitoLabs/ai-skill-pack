@@ -1,9 +1,10 @@
 ---
 name: dart-best-practices
-description: Dart best practices for writing or reviewing idiomatic Dart code, especially multiline strings, line length, analyzer-friendly formatting, and related modern Dart feature guidance.
+description: "Trigger: write or review idiomatic Dart code and analyzer-friendly formatting. Apply focused modern Dart best practices."
 license: Apache-2.0
 metadata:
-  author: kevmoo
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/kevmoo/dash_skills/dart-best-practices"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dart-best-practices"

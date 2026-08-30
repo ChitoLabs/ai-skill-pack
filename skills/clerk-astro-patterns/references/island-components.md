@@ -57,10 +57,10 @@ import {
 } from '@clerk/astro/react'
 ```
 
-Use these in islands (`.tsx` files) — not directly in `.astro` files without a client directive.
+Use these in islands (`.tsx` files) - not directly in `.astro` files without a client directive.
 
 ## CRITICAL
 
-- Always add a `client:*` directive — without it the island is server-rendered only and Clerk hooks return undefined
-- Import from `@clerk/astro/react` — not `@clerk/react`
+- Always add a `client:*` directive - without it the island is server-rendered only and Clerk hooks return undefined
+- Import from `@clerk/astro/react` - not `@clerk/react`
 - Islands that need real-time auth state (e.g. sign-out button) must use `client:load`

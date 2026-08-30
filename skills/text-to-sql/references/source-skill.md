@@ -26,7 +26,7 @@ trust_score: 100
 provenance_sha: cd76bf9a59942cc5
 ---
 
-**Mode: Cognitive/Prompt-Driven** — No standalone utility script; use via agent context.
+**Mode: Cognitive/Prompt-Driven** - No standalone utility script; use via agent context.
 
 # Text-to-SQL Skill
 
@@ -245,7 +245,7 @@ Use RAG to retrieve relevant schema information:
 ## Iron Laws
 
 1. **ALWAYS** validate all table and column names against the provided schema before generating SQL
-2. **NEVER** use string interpolation for query values — parameterized queries are mandatory without exception
+2. **NEVER** use string interpolation for query values - parameterized queries are mandatory without exception
 3. **ALWAYS** apply a `LIMIT` clause (default 100) to SELECT queries unless the user explicitly overrides it
 4. **NEVER** execute DROP, DELETE, TRUNCATE, or UPDATE statements without explicit user confirmation
 5. **ALWAYS** explain the generated query logic in plain language so the user understands what will execute

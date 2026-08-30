@@ -71,6 +71,6 @@ const data = await fetchFromSupabase(token)
 
 ## CRITICAL
 
-- `Astro.locals.auth()` returns an auth object — note the `()` call
+- `Astro.locals.auth()` returns an auth object - note the `()` call
 - Pages must NOT have `export const prerender = true` for server auth to work
 - To opt a single page out of static rendering: `export const prerender = false`

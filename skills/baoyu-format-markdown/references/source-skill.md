@@ -13,7 +13,7 @@ metadata:
 
 # Markdown Formatter
 
-Transforms plain text or markdown into well-structured, reader-friendly markdown. The goal is to help readers quickly grasp key points, highlights, and structure — without changing any original content.
+Transforms plain text or markdown into well-structured, reader-friendly markdown. The goal is to help readers quickly grasp key points, highlights, and structure - without changing any original content.
 
 **Core principle**: Only adjust formatting and fix obvious typos. Never add, delete, or rewrite content.
 
@@ -21,11 +21,11 @@ Transforms plain text or markdown into well-structured, reader-friendly markdown
 
 When this skill prompts the user, follow this tool-selection rule (priority order):
 
-1. **Prefer built-in user-input tools** exposed by the current agent runtime — e.g., `AskUserQuestion`, `request_user_input`, `clarify`, `ask_user`, or any equivalent.
+1. **Prefer built-in user-input tools** exposed by the current agent runtime - e.g., `AskUserQuestion`, `request_user_input`, `clarify`, `ask_user`, or any equivalent.
 2. **Fallback**: if no such tool exists, emit a numbered plain-text message and ask the user to reply with the chosen number/answer for each question.
 3. **Batching**: if the tool supports multiple questions per call, combine all applicable questions into a single call; if only single-question, ask them one at a time in priority order.
 
-Concrete `AskUserQuestion` references below are examples — substitute the local equivalent in other runtimes.
+Concrete `AskUserQuestion` references below are examples - substitute the local equivalent in other runtimes.
 
 ## Script Directory
 
@@ -39,7 +39,7 @@ Scripts in `scripts/` subdirectory. `{baseDir}` = this SKILL.md's directory path
 
 ## Preferences (EXTEND.md)
 
-Check EXTEND.md in priority order — the first one found wins:
+Check EXTEND.md in priority order - the first one found wins:
 
 | Priority | Path | Scope |
 |----------|------|-------|
@@ -47,7 +47,7 @@ Check EXTEND.md in priority order — the first one found wins:
 | 2 | `${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-format-markdown/EXTEND.md` | XDG |
 | 3 | `$HOME/.baoyu-skills/baoyu-format-markdown/EXTEND.md` | User home |
 
-If none found, use defaults — no first-time setup required for this skill.
+If none found, use defaults - no first-time setup required for this skill.
 
 **EXTEND.md supports**:
 
@@ -56,7 +56,7 @@ If none found, use defaults — no first-time setup required for this skill.
 | `auto_select` | `true`/`false` | `false` | Skip both title and summary selection, auto-pick best |
 | `auto_select_title` | `true`/`false` | `false` | Skip title selection only |
 | `auto_select_summary` | `true`/`false` | `false` | Skip summary selection only |
-| Other | — | — | Default formatting options, typography preferences |
+| Other | - | - | Default formatting options, typography preferences |
 
 ## Usage
 
@@ -169,7 +169,7 @@ Check for YAML frontmatter (`---` block). Create if missing.
 
 Whether or not a title already exists, run the title optimization flow unless `auto_select_title` is set.
 
-**Preparation** — read the full text and extract:
+**Preparation** - read the full text and extract:
 - Core argument (one sentence: "what is this article about?")
 - Most impactful opinion or conclusion
 - Reader pain point or curiosity trigger
@@ -178,7 +178,7 @@ Whether or not a title already exists, run the title optimization flow unless `a
 **Generate candidates** using formulas from `references/title-formulas.md`:
 
 1. Select the **2-3 best-matching hook formulas** based on the article's content, tone, and structure (see "When to pick each formula" in the reference)
-2. Generate **1-2 straightforward titles** (descriptive or declarative, no formula — clear and accurate)
+2. Generate **1-2 straightforward titles** (descriptive or declarative, no formula - clear and accurate)
 3. If the user specifies a direction (e.g., "make it suspenseful"), prioritize that direction
 4. Total: **4-5 candidates**
 
@@ -187,18 +187,18 @@ Present via `AskUserQuestion`:
 ```
 Pick a title:
 
-1. [Hook title A] — (recommended) [formula name]
-2. [Hook title B] — [formula name]
-3. [Hook title C] — [formula name]
-4. [Straightforward title D] — straightforward
-5. [Straightforward title E] — straightforward
+1. [Hook title A] - (recommended) [formula name]
+2. [Hook title B] - [formula name]
+3. [Hook title C] - [formula name]
+4. [Straightforward title D] - straightforward
+5. [Straightforward title E] - straightforward
 
 Enter number, or type a custom title:
 ```
 
 Put the strongest hook first and mark it `(recommended)`. See `references/title-formulas.md` for principles and prohibited patterns.
 
-If the first line is an H1, extract it to frontmatter and remove it from the body. If frontmatter already has a `title`, include it as context but still generate fresh candidates — the existing title may be weak.
+If the first line is an H1, extract it to frontmatter and remove it from the body. If frontmatter already has a `title`, include it as context but still generate fresh candidates - the existing title may be weak.
 
 **Skip behavior**: If `auto_select: true` or `auto_select_title: true`, skip the user prompt and use the top candidate directly.
 
@@ -208,8 +208,8 @@ Generate two versions directly (no user selection), both stored in frontmatter:
 
 | Field | Length | Purpose |
 |-------|--------|---------|
-| `summary` | 1 sentence, ~50-80 chars | Concise hook — for feeds, social sharing, SEO meta |
-| `description` | 2-3 sentences, ~100-200 chars | Richer context — for article previews, newsletter blurbs |
+| `summary` | 1 sentence, ~50-80 chars | Concise hook - for feeds, social sharing, SEO meta |
+| `description` | 2-3 sentences, ~100-200 chars | Richer context - for article previews, newsletter blurbs |
 
 **Principles**:
 
@@ -243,18 +243,18 @@ Apply formatting guided by the Step 2 analysis. The goal is making the content s
 | Blockquotes | Notable quotes, important warnings, cited text | `> quote` |
 | Separators | Major topic transitions | `---` |
 
-**Formatting principles — what NOT to do:**
+**Formatting principles - what NOT to do:**
 - Do NOT add sentences, explanations, or commentary
 - Do NOT delete or shorten any content
 - Do NOT rephrase or rewrite the author's words
-- Do NOT add headings that editorialize (e.g., "Amazing Discovery" — use neutral descriptive headings)
+- Do NOT add headings that editorialize (e.g., "Amazing Discovery" - use neutral descriptive headings)
 - Do NOT over-format: not every sentence needs bold, not every paragraph needs a heading
 
-**Formatting principles — what TO do:**
+**Formatting principles - what TO do:**
 - Preserve the author's voice, tone, and every word
-- **Bold key conclusions and core takeaways** — the sentences a reader would highlight
+- **Bold key conclusions and core takeaways** - the sentences a reader would highlight
 - Extract parallel items from prose into lists only when the structure is clearly there
-- Add headings where the topic genuinely shifts — prefer vivid, specific headings over generic ones (e.g., "3 天搞定 vs 传统方案" over "方案对比")
+- Add headings where the topic genuinely shifts - prefer vivid, specific headings over generic ones (e.g., "3 天搞定 vs 传统方案" over "方案对比")
 - Use tables for comparisons or structured data buried in prose
 - Use blockquotes for golden quotes, memorable statements, or important warnings
 - Fix obvious typos (based on Step 2 findings)
@@ -341,14 +341,14 @@ Display a report summarizing all changes made:
 - Quote replacement: [applied/skipped]
 ```
 
-Adjust the report to reflect actual changes — omit categories where no changes were made.
+Adjust the report to reflect actual changes - omit categories where no changes were made.
 
 ## Notes
 
 - Preserve original writing style and tone
 - Specify correct language for code blocks (e.g., `python`, `javascript`)
 - Maintain CJK/English spacing standards
-- The analysis file is a working document — it helps maintain consistency between what was identified and what was formatted
+- The analysis file is a working document - it helps maintain consistency between what was identified and what was formatted
 
 ## Extension Support
 

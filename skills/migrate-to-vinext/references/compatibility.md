@@ -66,7 +66,7 @@ All of these resolve automatically to vinext shims. Do not rewrite imports in ap
 | `instrumentation.ts`                          | Yes                    |
 | `connection()`                                | Yes                    |
 | Pluggable CacheHandler                        | Yes                    |
-| PPR (Partial Prerendering)                    | No — use `"use cache"` |
+| PPR (Partial Prerendering)                    | No - use `"use cache"` |
 
 ## Route Segment Config
 
@@ -107,9 +107,9 @@ These features are intentionally excluded:
 
 - Vercel-specific bindings (@vercel/og edge runtime, Vercel Analytics server bindings)
 - AMP (deprecated since Next.js 13)
-- `next export` (legacy — use `output: 'export'`)
+- `next export` (legacy - use `output: 'export'`)
 - Turbopack/webpack configuration
 - `next/jest` (use Vitest)
 - `create-next-app` scaffolding
 - Bug-for-bug parity with undocumented Next.js behavior
-- Native Node modules in Workers (sharp, resvg, satori — auto-stubbed in production)
+- Native Node modules in Workers (sharp, resvg, satori - auto-stubbed in production)

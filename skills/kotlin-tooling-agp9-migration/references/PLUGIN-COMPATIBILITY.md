@@ -10,13 +10,13 @@ which plugins the project uses and whether they are compatible.**
 | Plugin                              | Minimum Compatible Version | Notes                                                                                                                                |
 |-------------------------------------|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | `com.google.devtools.ksp`           | 2.3.1 (2.3.3+ recommended) | 2.3.1 adds AGP 9.0 support; 2.3.3+ fixes deprecated compilerOptions KGP API usage. May need `android.disallowKotlinSourceSets=false` |
-| `com.google.dagger.hilt.android`    | 2.59                       | —                                                                                                                                    |
-| `com.google.firebase.firebase-perf` | 2.0.2                      | —                                                                                                                                    |
-| `androidx.navigation.safeargs`      | 2.9.5                      | —                                                                                                                                    |
-| `org.jetbrains.compose`             | 1.9.3                      | —                                                                                                                                    |
-| `org.jetbrains.dokka`               | 2.2.0-Beta                 | —                                                                                                                                    |
-| `app.cash.burst`                    | 2.10.0                     | —                                                                                                                                    |
-| `com.google.firebase.testlab`       | 0.0.1-alpha11              | —                                                                                                                                    |
+| `com.google.dagger.hilt.android`    | 2.59                       | -                                                                                                                                    |
+| `com.google.firebase.firebase-perf` | 2.0.2                      | -                                                                                                                                    |
+| `androidx.navigation.safeargs`      | 2.9.5                      | -                                                                                                                                    |
+| `org.jetbrains.compose`             | 1.9.3                      | -                                                                                                                                    |
+| `org.jetbrains.dokka`               | 2.2.0-Beta                 | -                                                                                                                                    |
+| `app.cash.burst`                    | 2.10.0                     | -                                                                                                                                    |
+| `com.google.firebase.testlab`       | 0.0.1-alpha11              | -                                                                                                                                    |
 
 ---
 
@@ -54,6 +54,6 @@ These work but require temporarily setting `android.newDsl=false` (or other flag
 
 1. **Inventory all plugins** used in the project
 2. **Check each against the tables above**
-3. **If any plugin is broken without workaround**, inform the user — they may need to wait for a plugin update or remove it
+3. **If any plugin is broken without workaround**, inform the user - they may need to wait for a plugin update or remove it
 4. **If plugins need opt-out flags**, add them to `gradle.properties` and note them as temporary workarounds
 5. **Update plugin versions** to their AGP 9.0-compatible versions before or during migration

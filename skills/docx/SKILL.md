@@ -4,6 +4,7 @@ description: "Trigger: docx, Use this skill whenever the user wants to create, r
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/docx"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/docx"

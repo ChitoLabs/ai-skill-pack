@@ -12,10 +12,10 @@ Guest OS firewall (Windows Firewall or Linux iptables/firewalld) is blocking inb
 | iptables/nftables blocking SSH (port 22)                    | Linux   | Add allow rule or flush blocking chain               | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)                 |
 | firewalld blocking SSH                                      | Linux   | Open port 22 in the active zone                      | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)                 |
 | UFW blocking SSH (Ubuntu/Debian)                            | Linux   | Run `ufw allow 22/tcp` or disable UFW temporarily    | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)                 |
-| Cannot access firewall settings — no connectivity (Windows) | Windows | Use offline repair VM to modify registry             | [Disable guest OS firewall offline](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/disable-guest-os-firewall-windows)   |
-| Cannot access firewall settings — no connectivity (Linux)   | Linux   | Use Serial Console or repair VM to edit iptables/firewalld config | [Repair Linux VM commands](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/repair-linux-vm-using-azure-virtual-machine-repair-commands) |
+| Cannot access firewall settings - no connectivity (Windows) | Windows | Use offline repair VM to modify registry             | [Disable guest OS firewall offline](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/disable-guest-os-firewall-windows)   |
+| Cannot access firewall settings - no connectivity (Linux)   | Linux   | Use Serial Console or repair VM to edit iptables/firewalld config | [Repair Linux VM commands](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/repair-linux-vm-using-azure-virtual-machine-repair-commands) |
 
-## Quick Commands — Windows
+## Quick Commands - Windows
 
 > ⚠️ **Warning:** Commands marked with ⚡ use the VM agent/extensions. Run [Pre-Flight Safety Checks](cannot-connect-to-vm.md#pre-flight-safety-checks) before using them.
 
@@ -34,7 +34,7 @@ az vm run-command invoke --name <vm-name> -g <resource-group> \
   --scripts "netsh advfirewall firewall set rule group='Remote Desktop' new enable=yes"
 ```
 
-## Quick Commands — Linux
+## Quick Commands - Linux
 
 > ⚠️ **Warning:** Commands below use the VM agent/extensions. Run [Pre-Flight Safety Checks](cannot-connect-to-vm.md#pre-flight-safety-checks) before using them.
 

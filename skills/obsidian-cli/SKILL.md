@@ -3,7 +3,8 @@ name: obsidian-cli
 description: "Trigger: obsidian-cli, Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: kepano
+  author: pedronauck
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/kepano/obsidian-skills/obsidian-cli"
   github_url: "https://github.com/pedronauck/skills/tree/HEAD/skills/community/obsidian-cli"

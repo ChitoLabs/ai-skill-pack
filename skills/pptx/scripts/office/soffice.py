@@ -6,10 +6,10 @@ at runtime and applies an LD_PRELOAD shim if needed.
 Usage:
     from office.soffice import run_soffice, get_soffice_env
 
-    # Option 1 – run soffice directly
+    # Option 1 - run soffice directly
     result = run_soffice(["--headless", "--convert-to", "pdf", "input.docx"])
 
-    # Option 2 – get env dict for your own subprocess calls
+    # Option 2 - get env dict for your own subprocess calls
     env = get_soffice_env()
     subprocess.run(["soffice", ...], env=env)
 """
@@ -110,7 +110,7 @@ int socket(int domain, int type, int protocol) {
     if (domain == AF_UNIX) {
         int fd = real_socket(domain, type, protocol);
         if (fd >= 0) return fd;
-        /* socket(AF_UNIX) blocked – fall back to socketpair(). */
+        /* socket(AF_UNIX) blocked - fall back to socketpair(). */
         int sv[2];
         if (real_socketpair(domain, type, protocol, sv) == 0) {
             if (sv[0] >= 0 && sv[0] < 1024) {
@@ -169,7 +169,7 @@ int close(int fd) {
         if (peer_of[fd] >= 0) { real_close(peer_of[fd]); peer_of[fd] = -1; }
 
         if (was_listener)
-            _exit(0);                        /* conversion done – exit */
+            _exit(0);                        /* conversion done - exit */
     }
     return real_close(fd);
 }

@@ -51,7 +51,7 @@ export function ProtectedPage() {
 }
 ```
 
-> Prefer loader-level protection — it runs on the server before any HTML is sent.
+> Prefer loader-level protection - it runs on the server before any HTML is sent.
 
 ## Org-Gated Routes
 

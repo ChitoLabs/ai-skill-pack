@@ -38,7 +38,7 @@ Use `emit()`/`listen()` when:
 - Multiple windows need to receive the same notification
 - Broadcasting state changes that don't require acknowledgment
 - **Direction: Bidirectional** (but one-way per emit)
-- **Important:** Events are fire-and-forget — there is NO acknowledgment or response channel
+- **Important:** Events are fire-and-forget - there is NO acknowledgment or response channel
 
 ### Channels: Typed Streaming
 Use `Channel<T>` when:

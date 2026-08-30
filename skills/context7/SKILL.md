@@ -1,9 +1,10 @@
 ---
 name: context7
-description: Retrieve up-to-date documentation for software libraries, frameworks, and components via the Context7 API. This skill should be used when looking up documentation for any programming library or framework, finding code examples for specific APIs or features, verifying correct usage of library functions, or obtaining current information about library APIs that may have changed since training.
+description: "Trigger: look up current library documentation, verify an API, find framework examples. Retrieve focused software documentation through Context7."
 license: Apache-2.0
 metadata:
-  author: intellectronica
+  author: oldwinter
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/intellectronica/agent-skills/context7"
   github_url: "https://github.com/oldwinter/skills/tree/HEAD/base-skills/context7"

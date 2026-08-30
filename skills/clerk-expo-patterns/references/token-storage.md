@@ -56,5 +56,5 @@ const cache = Platform.OS === 'web' ? undefined : nativeCache
 ## CRITICAL
 
 - `AFTER_FIRST_UNLOCK` means the token is inaccessible until the user unlocks the device at least once after a restart
-- Always delete the item on `getToken` error — corrupted keychain entries cause silent auth failures
-- Never store tokens in AsyncStorage — it is not encrypted
+- Always delete the item on `getToken` error - corrupted keychain entries cause silent auth failures
+- Never store tokens in AsyncStorage - it is not encrypted

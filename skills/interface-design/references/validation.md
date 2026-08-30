@@ -39,10 +39,10 @@ Memory compounds: each pattern saved makes future work faster and more consisten
 
 If system.md defines specific values, check consistency:
 
-**Spacing** — All values multiples of the defined base?
+**Spacing** - All values multiples of the defined base?
 
-**Depth** — Using the declared strategy throughout? (borders-only means no shadows)
+**Depth** - Using the declared strategy throughout? (borders-only means no shadows)
 
-**Colors** — Using defined palette, not random hex codes?
+**Colors** - Using defined palette, not random hex codes?
 
-**Patterns** — Reusing documented patterns instead of creating new?
+**Patterns** - Reusing documented patterns instead of creating new?

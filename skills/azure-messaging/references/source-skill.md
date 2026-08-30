@@ -42,12 +42,12 @@ metadata:
 
 ## Diagnosis Workflow
 
-1. **Identify the SDK and version** — Check the prompt for SDK and version clues; if not stated, proceed with diagnosis and ask later if needed
-2. **Check resource health** — Use `mcp_azure_mcp_resourcehealth` to verify the namespace is healthy
-3. **Review the error message** — Match against language-specific troubleshooting guide
-4. **Look up documentation** — Use `mcp_azure_mcp_documentation` to search Microsoft Learn for the error or topic
-5. **Check configuration** — Verify connection string, entity name, consumer group
-6. **Recommend fix** — Apply remediation, citing documentation found
+1. **Identify the SDK and version** - Check the prompt for SDK and version clues; if not stated, proceed with diagnosis and ask later if needed
+2. **Check resource health** - Use `mcp_azure_mcp_resourcehealth` to verify the namespace is healthy
+3. **Review the error message** - Match against language-specific troubleshooting guide
+4. **Look up documentation** - Use `mcp_azure_mcp_documentation` to search Microsoft Learn for the error or topic
+5. **Check configuration** - Verify connection string, entity name, consumer group
+6. **Recommend fix** - Apply remediation, citing documentation found
 
 
 ## Troubleshooting Guides

@@ -124,7 +124,7 @@ redirect_back(fallback_location: root_path)
 redirect_back(fallback_location: root_path, notice: 'Done!')
 ```
 
-`redirect_back` accepts a `fallback_location:` used when `HTTP_REFERER` is missing — without it, requests with no referer raise `ActionController::RedirectBackError`.
+`redirect_back` accepts a `fallback_location:` used when `HTTP_REFERER` is missing - without it, requests with no referer raise `ActionController::RedirectBackError`.
 
 ---
 
@@ -288,7 +288,7 @@ render plain: 'content'
 
 **Fix:** Replace every call site with `redirect_back(fallback_location: ...)`:
 ```ruby
-# BEFORE (5.0 — raises on 5.1)
+# BEFORE (5.0 - raises on 5.1)
 redirect_to :back
 
 # AFTER

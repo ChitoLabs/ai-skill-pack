@@ -1,10 +1,11 @@
 ---
 name: copy-editing
-description: When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting.
+description: "Trigger: edit existing marketing copy, proofread messaging, tighten or refresh website text. Improve supplied copy without replacing its purpose."
 license: Apache-2.0
 metadata:
   version: 2.0.0
   author: coreyhaines31
+  adapter: LCubero
   skills_sh_url: "https://www.skills.sh/coreyhaines31/marketingskills/copy-editing"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/copy-editing"
 ---
@@ -18,7 +19,7 @@ You are an expert copy editor specializing in marketing and conversion copy. You
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before editing. Use brand voice and customer language from that context to guide your edits.
 
-Good copy editing isn't about rewriting—it's about enhancing. Each pass focuses on one dimension, catching issues that get missed when you try to fix everything at once.
+Good copy editing isn't about rewriting-it's about enhancing. Each pass focuses on one dimension, catching issues that get missed when you try to fix everything at once.
 
 **Key principles:**
 - Don't change the core message; focus on enhancing it
@@ -51,7 +52,7 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 
 **Process:**
 1. Read through quickly, highlighting unclear parts
-2. Don't correct yet—just note problem areas
+2. Don't correct yet-just note problem areas
 3. After marking issues, recommend specific edits
 4. Verify edits maintain the original intent
 
@@ -100,7 +101,7 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 ❌ "Our platform uses AI-powered analytics"
 *So what?*
-✅ "Our AI-powered analytics surface insights you'd miss manually—so you can make better decisions in half the time"
+✅ "Our AI-powered analytics surface insights you'd miss manually-so you can make better decisions in half the time"
 
 **Common So What failures:**
 - Feature lists without benefit connections
@@ -215,7 +216,7 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 - Ask questions that prompt reflection
 
 **Process:**
-1. Read for emotional impact—does it move you?
+1. Read for emotional impact-does it move you?
 2. Identify flat sections that should resonate
 3. Add emotional texture while staying authentic
 4. Ensure emotion serves the message (not manipulation)
@@ -268,9 +269,9 @@ Use this after completing the Seven Sweeps for an additional quality gate. For h
 
 1. **Assemble 3-5 expert personas** relevant to the copy type
 2. **Each persona scores the copy 1-10** on their area of expertise
-3. **Collect specific critiques** — not just scores, but what to fix
-4. **Revise based on feedback** — address the lowest-scoring areas first
-5. **Re-score after revisions** — iterate until all personas score 7+, with an average of 8+ across the panel
+3. **Collect specific critiques** - not just scores, but what to fix
+4. **Revise based on feedback** - address the lowest-scoring areas first
+5. **Re-score after revisions** - iterate until all personas score 7+, with an average of 8+ across the panel
 
 ### Recommended Expert Panels
 
@@ -362,7 +363,7 @@ Use these for faster reviews when a full seven-sweep process isn't needed.
 
 ## Copy Editing Checklist
 
-For a final QA pass before delivering edits, work through the full checklist in [references/checklist.md](references/checklist.md) — covering all seven sweeps plus pre-start and final-check items.
+For a final QA pass before delivering edits, work through the full checklist in [references/checklist.md](references/checklist.md) - covering all seven sweeps plus pre-start and final-check items.
 
 ---
 
@@ -426,7 +427,7 @@ This iterative process ensures each edit doesn't create new problems while respe
 
 ## Content Refresh Editing
 
-Copy editing isn't just for new content. Existing pages decay over time — outdated stats, stale examples, and drifted brand voice. Use the content refresh framework when traffic is declining, data is stale, or the product has changed.
+Copy editing isn't just for new content. Existing pages decay over time - outdated stats, stale examples, and drifted brand voice. Use the content refresh framework when traffic is declining, data is stale, or the product has changed.
 
 **For the full refresh checklist, refresh vs. rewrite decision matrix, and cadence guide**: See [references/content-refresh.md](references/content-refresh.md)
 

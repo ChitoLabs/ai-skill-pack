@@ -155,7 +155,7 @@ The compiler rules are available in the `recommended-latest` preset. Follow the 
 
 Open React DevTools. Optimized components show a `Memo ✨` badge.
 
-You can also verify by checking build output—compiled code includes automatic memoization:
+You can also verify by checking build output-compiled code includes automatic memoization:
 
 ```javascript
 import { c as _c } from 'react/compiler-runtime';
@@ -357,7 +357,7 @@ Already heavily optimized apps may see marginal gains.
 
 ## Common Pitfalls
 
-- **Not fixing ESLint errors first**: When ESLint reports an error, the compiler skips that component—this is safe but means you miss optimization
+- **Not fixing ESLint errors first**: When ESLint reports an error, the compiler skips that component-this is safe but means you miss optimization
 - **Expecting it to fix bad patterns**: Compiler optimizes good code, doesn't fix bad code
 - **Forgetting shallow comparison**: Like `memo`, compiler uses shallow comparison for objects/arrays
 - **Not running healthcheck**: Always run `npx react-compiler-healthcheck@latest` before enabling

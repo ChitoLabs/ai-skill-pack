@@ -152,7 +152,7 @@ await Sentry.startSpan({
 | `gen_ai.operation.name` | string | No | Human-readable operation label |
 | `gen_ai.agent.name` | string | No | Agent name (for agent spans) |
 
-### Content attributes (PII-gated — only when `sendDefaultPii: true` + `recordInputs/recordOutputs: true`)
+### Content attributes (PII-gated - only when `sendDefaultPii: true` + `recordInputs/recordOutputs: true`)
 
 | Attribute | Type | Description |
 |-----------|------|-------------|

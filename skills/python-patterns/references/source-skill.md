@@ -3,7 +3,7 @@ name: python-patterns
 description: Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.
 license: Apache-2.0
 metadata:
-  author: affaan-m
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/python-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/python-patterns"

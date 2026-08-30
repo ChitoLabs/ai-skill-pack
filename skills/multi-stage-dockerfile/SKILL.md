@@ -1,9 +1,10 @@
 ---
 name: multi-stage-dockerfile
-description: "Trigger: multi-stage-dockerfile, Create optimized multi-stage Dockerfiles for any language or framework. Preserve source workflow with portable agent instructions."
+description: "Trigger: create or optimize a multi-stage Dockerfile for a specified application stack. Produce a scoped build and runtime container design."
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/multi-stage-dockerfile"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/multi-stage-dockerfile"

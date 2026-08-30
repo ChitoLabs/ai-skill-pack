@@ -3,7 +3,8 @@ name: django-patterns
 description: "Trigger: django-patterns, Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: affaan-m
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/django-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/django-patterns"

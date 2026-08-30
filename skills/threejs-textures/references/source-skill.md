@@ -3,7 +3,7 @@ name: threejs-textures
 description: Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.
 license: Apache-2.0
 metadata:
-  author: cloudai-x
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-textures"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-textures"

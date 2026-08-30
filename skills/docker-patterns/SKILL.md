@@ -4,6 +4,7 @@ description: "Trigger: docker-patterns, Docker and Docker Compose patterns for l
 license: Apache-2.0
 metadata:
   author: affaan-m
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/affaan-m/everything-claude-code/docker-patterns"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/docker-patterns"

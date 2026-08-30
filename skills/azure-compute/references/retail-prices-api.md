@@ -1,6 +1,6 @@
 # Azure Retail Prices API Guide
 
-The [Azure Retail Prices API](https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices) is **unauthenticated** — no Azure account or subscription needed.
+The [Azure Retail Prices API](https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices) is **unauthenticated** - no Azure account or subscription needed.
 
 ## Endpoint
 
@@ -121,7 +121,7 @@ API returns max 1,000 records per request. Follow `NextPageLink` in the response
 
 ## Tips for Recommendations
 
-1. **Filter Linux vs Windows**: `productName` contains the OS — e.g., `'Virtual Machines Dv5 Series'` (Linux) vs `'Virtual Machines Dv5 Series Windows'`
+1. **Filter Linux vs Windows**: `productName` contains the OS - e.g., `'Virtual Machines Dv5 Series'` (Linux) vs `'Virtual Machines Dv5 Series Windows'`
 2. **Use `isPrimaryMeterRegion eq true`** to deduplicate
 3. **Compare Consumption + Reservation + Savings Plan** for full cost picture
 4. **Monthly estimate**: `retailPrice × 730` (hours/month)

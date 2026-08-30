@@ -64,5 +64,5 @@ export const useOrgStore = defineStore('org', () => {
 
 ## CRITICAL
 
-- Do NOT copy `userId` into Pinia state manually — it creates a stale copy. Always return refs directly from composables
-- Pinia store `setup()` function runs inside Vue's setup context — composables work correctly here
+- Do NOT copy `userId` into Pinia state manually - it creates a stale copy. Always return refs directly from composables
+- Pinia store `setup()` function runs inside Vue's setup context - composables work correctly here

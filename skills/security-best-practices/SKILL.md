@@ -3,7 +3,8 @@ name: security-best-practices
 description: "Trigger: security-best-practices, Perform language and framework specific security best-practice reviews and suggest improvements. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: openai
+  author: tech-leads-club
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/security-best-practices"
   github_url: "https://github.com/tech-leads-club/agent-skills/tree/HEAD/packages/skills-catalog/skills/(security)/security-best-practices"

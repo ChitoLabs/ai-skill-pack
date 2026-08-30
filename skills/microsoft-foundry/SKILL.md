@@ -1,6 +1,6 @@
 ---
 name: microsoft-foundry
-description: "Deploy, evaluate, optimize, monitor, and troubleshoot Microsoft Foundry agents, models, datasets, traces, prompt optimizers, RBAC, quota, and project setup."
+description: "Trigger: deploy, evaluate, monitor, or troubleshoot Microsoft Foundry resources. Handle selected agents, models, datasets, traces, RBAC, quota, or project setup."
 license: MIT
 metadata:
   author: Microsoft

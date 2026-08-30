@@ -272,7 +272,7 @@ irb> joe.class == alice.class
 => false
 ```
 
-`joe` is an instance of the original `User` class. When there is a reload, the `User` constant then evaluates to a different, reloaded class. `alice` is an instance of the newly loaded `User`, but `joe` is not — his class is stale. You may define `joe` again, start an IRB subsession, or just launch a new console instead of calling `reload!`.
+`joe` is an instance of the original `User` class. When there is a reload, the `User` constant then evaluates to a different, reloaded class. `alice` is an instance of the newly loaded `User`, but `joe` is not - his class is stale. You may define `joe` again, start an IRB subsession, or just launch a new console instead of calling `reload!`.
 
 Another situation in which you may find this gotcha is subclassing reloadable classes in a place that is not reloaded:
 

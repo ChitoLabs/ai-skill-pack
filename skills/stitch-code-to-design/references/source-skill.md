@@ -3,7 +3,7 @@ name: "stitch::code-to-design"
 description: Convert frontend code (Vite, React, etc.) to a Stitch Design by chaining static HTML extraction, design system extraction, and file upload. **ALWAYS** use this skill when the user's intent is to move existing web apps or React components into Stitch (e.g., requests to "save", "migrate", or "upload"). You must use this skill even for simple "save" operations, as it is the only way to ensure the design system is extracted and assets are properly linked.
 license: Apache-2.0
 metadata:
-  author: unknown
+  author: google-labs-code
   version: 0.1
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-design/skills/code-to-design"
 allowed-tools:
@@ -41,10 +41,10 @@ Read [skills/extract-static-html/SKILL.md](source-skill.md) for detailed instruc
 
 Expected output: A single file like `/path/to/extracted/standalone.html`.
 
-#### 2. Verify HTML (Optional — User-Driven)
+#### 2. Verify HTML (Optional - User-Driven)
 
 After extraction, inform the user of the output file path so they can manually
-verify in a browser if desired. **Do not block on verification** — proceed
+verify in a browser if desired. **Do not block on verification** - proceed
 directly to Step 3.
 
 If the user reports issues after reviewing, fix them before continuing.

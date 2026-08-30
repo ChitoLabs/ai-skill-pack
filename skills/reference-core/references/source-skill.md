@@ -3,7 +3,7 @@ name: reference-core
 description: Explains the mental model and architecture of the code under `packages/core`. You MUST use this skill any time you plan to work with code in `packages/core`
 license: Apache-2.0
 metadata:
-  author: angular
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/reference-core"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/reference-core"

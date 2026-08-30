@@ -4,6 +4,7 @@ description: "Trigger: analytics-metrics, Build data visualization and analytics
 license: Apache-2.0
 metadata:
   author: hoodini
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/hoodini/ai-agents-skills/analytics-metrics"
   github_url: "https://github.com/hoodini/ai-agents-skills/tree/HEAD/skills/analytics-metrics"

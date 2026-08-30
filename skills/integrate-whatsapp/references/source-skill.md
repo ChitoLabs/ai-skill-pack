@@ -308,7 +308,7 @@ async function handler(request, env) {
 
 | Script | Purpose | Required ID |
 |--------|---------|-------------|
-| `list-platform-phone-numbers.mjs` | Discover business_account_id + phone_number_id | — |
+| `list-platform-phone-numbers.mjs` | Discover business_account_id + phone_number_id | - |
 | `list-connected-numbers.mjs` | List WABA phone numbers | business_account_id |
 | `list-templates.mjs` | List templates (with filters) | business_account_id |
 | `template-status.mjs` | Check single template status | business_account_id |

@@ -90,7 +90,7 @@ Configure in metro.config.js.
 
 ## Setup: Re.Pack (Only If Already Installed)
 
-> **Important**: Re.Pack (`@callstack/repack`) is a custom bundler using Rspack/Webpack. Only apply these instructions if the project already has Re.Pack configured. Do not suggest migrating a codebase to Re.Pack—it's rarely necessary and requires significant setup.
+> **Important**: Re.Pack (`@callstack/repack`) is a custom bundler using Rspack/Webpack. Only apply these instructions if the project already has Re.Pack configured. Do not suggest migrating a codebase to Re.Pack-it's rarely necessary and requires significant setup.
 
 **If project has `@callstack/repack` in dependencies:**
 

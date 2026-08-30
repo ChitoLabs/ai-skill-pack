@@ -4,6 +4,7 @@ description: "Trigger: java-coding-standards. Preserve source workflow with port
 license: Apache-2.0
 metadata:
   author: affaan-m
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/java-coding-standards"
   github_url: "https://github.com/affaan-m/everything-claude-code/tree/HEAD/skills/java-coding-standards"

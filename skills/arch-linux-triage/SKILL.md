@@ -4,6 +4,7 @@ description: "Trigger: arch-linux-triage, Triage and resolve Arch Linux issues w
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/arch-linux-triage"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/arch-linux-triage"

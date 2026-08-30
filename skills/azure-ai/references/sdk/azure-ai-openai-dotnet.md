@@ -1,4 +1,4 @@
-# Azure OpenAI — .NET SDK Quick Reference
+# Azure OpenAI - .NET SDK Quick Reference
 
 > Condensed from **azure-ai-openai-dotnet**. Full patterns (function calling, structured outputs, RAG with Search)
 > in the **azure-ai-openai-dotnet** plugin skill if installed.
@@ -23,10 +23,10 @@ ChatClient chatClient = azureClient.GetChatClient("gpt-4o-mini");
 - Structured outputs: `ChatResponseFormat.CreateJsonSchemaFormat(...)`
 
 ## Best Practices
-1. Use Entra ID in production — avoid API keys
-2. Reuse client instances — create once, share across requests
-3. Handle rate limits — implement exponential backoff for 429 errors
-4. Stream for long responses — use `CompleteChatStreamingAsync`
+1. Use Entra ID in production - avoid API keys
+2. Reuse client instances - create once, share across requests
+3. Handle rate limits - implement exponential backoff for 429 errors
+4. Stream for long responses - use `CompleteChatStreamingAsync`
 5. Set appropriate timeouts for long completions
 6. Use structured outputs for consistent response format
 7. Monitor token usage via `completion.Usage` for cost management

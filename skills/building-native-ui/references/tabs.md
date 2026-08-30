@@ -47,7 +47,7 @@ export default function TabLayout() {
 - The `NativeTabs.Trigger` 'name' must match the route name, including parentheses (e.g. `<NativeTabs.Trigger name="(search)">`)
 - Prefer search tab to be last in the list so it can combine with the search bar
 - Use the 'role' prop for common tab types
-- Tabs must be static — no dynamic addition/removal at runtime (remounts navigator, loses state)
+- Tabs must be static - no dynamic addition/removal at runtime (remounts navigator, loses state)
 
 ## Platform Features
 
@@ -69,11 +69,11 @@ Native Tabs use platform-specific tab bar implementations:
 // Custom image
 <NativeTabs.Trigger.Icon src={require('./icon.png')} />
 
-// Xcode asset catalog — iOS only (SDK 55+)
+// Xcode asset catalog - iOS only (SDK 55+)
 <NativeTabs.Trigger.Icon xcasset="home-icon" />
 <NativeTabs.Trigger.Icon xcasset={{ default: "home-outline", selected: "home-filled" }} />
 
-// Rendering mode — iOS only (SDK 55+)
+// Rendering mode - iOS only (SDK 55+)
 <NativeTabs.Trigger.Icon src={require('./icon.png')} renderingMode="template" />
 <NativeTabs.Trigger.Icon src={require('./gradient.png')} renderingMode="original" />
 ```
@@ -185,7 +185,7 @@ Use `hidden` prop on `NativeTabs` to hide the entire tab bar dynamically:
 
 `NativeTabs.BottomAccessory` renders content above the tab bar (iOS 26+). Uses `usePlacement()` to adapt between `'regular'` and `'inline'` layouts.
 
-**Important**: Two instances render simultaneously — store state outside the component (props, context, or external store).
+**Important**: Two instances render simultaneously - store state outside the component (props, context, or external store).
 
 ```tsx
 import { NativeTabs } from "expo-router/unstable-native-tabs";

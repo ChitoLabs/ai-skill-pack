@@ -1,6 +1,6 @@
 ---
 name: clerk-astro-patterns
-description: 'Astro patterns with Clerk — middleware, SSR pages, island components,
+description: 'Astro patterns with Clerk - middleware, SSR pages, island components,
   API routes, static vs SSR rendering. Triggers on: astro clerk, clerk astro middleware,
   astro protected page, clerk island component, astro API route auth, clerk astro
   SSR.'
@@ -29,9 +29,9 @@ SDK: `@clerk/astro` v3+. Requires Astro 4.15+.
 
 Astro has two rendering modes per page: **SSR** and **static prerender**. Clerk works differently in each:
 
-- **SSR pages** — use `Astro.locals.auth()` which is populated by the middleware
-- **Static pages** (`export const prerender = true`) — Clerk middleware skips them; use client-side hooks in islands
-- **Islands** — React/Vue/Svelte components; use `useAuth()` and other hooks from `@clerk/astro/react`
+- **SSR pages** - use `Astro.locals.auth()` which is populated by the middleware
+- **Static pages** (`export const prerender = true`) - Clerk middleware skips them; use client-side hooks in islands
+- **Islands** - React/Vue/Svelte components; use `useAuth()` and other hooks from `@clerk/astro/react`
 
 ```
 Request → clerkMiddleware() → SSR page → Astro.locals.auth()

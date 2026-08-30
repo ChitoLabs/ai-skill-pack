@@ -3,7 +3,8 @@ name: dotnet-upgrade
 description: "Trigger: dotnet-upgrade, Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: github
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/dotnet-upgrade"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dotnet-upgrade"

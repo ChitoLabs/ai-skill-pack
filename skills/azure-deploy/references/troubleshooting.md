@@ -122,7 +122,7 @@ azd env set STORAGE_SKU <user-provided-value>
 }
 ```
 
-> ⚠️ **Warning:** `main.parameters.json` uses ARM JSON syntax. Do **not** use `.bicepparam` syntax (`using`, `param`, `readEnvironmentVariable()`) in this file — `azd` will fail with a JSON parse error.
+> ⚠️ **Warning:** `main.parameters.json` uses ARM JSON syntax. Do **not** use `.bicepparam` syntax (`using`, `param`, `readEnvironmentVariable()`) in this file - `azd` will fail with a JSON parse error.
 
 Then ask the user for the desired value and set the environment variable:
 ```bash
@@ -140,9 +140,9 @@ During `azd provision`, azd will substitute `${STORAGE_SKU}` with the value from
 **Cause:** .NET Aspire projects can use azd in "limited mode" where infrastructure is generated in-memory without creating an explicit `infra/` folder on disk. In this mode, `azd provision` creates Azure resources (Container Registry, Managed Identity, Container Apps Environment, etc.) but doesn't automatically populate certain environment variables that `azd deploy` needs.
 
 **Common missing variables:**
-- `AZURE_CONTAINER_REGISTRY_ENDPOINT` — ACR login server URL
-- `AZURE_CONTAINER_REGISTRY_MANAGED_IDENTITY_ID` — Managed identity resource ID
-- `MANAGED_IDENTITY_CLIENT_ID` — Managed identity client ID
+- `AZURE_CONTAINER_REGISTRY_ENDPOINT` - ACR login server URL
+- `AZURE_CONTAINER_REGISTRY_MANAGED_IDENTITY_ID` - Managed identity resource ID
+- `MANAGED_IDENTITY_CLIENT_ID` - Managed identity client ID
 
 **Solution:**
 
@@ -179,17 +179,17 @@ Then retry deployment:
 azd deploy --no-prompt
 ```
 
-## Container Apps — RBAC Propagation Timeout
+## Container Apps - RBAC Propagation Timeout
 
 **Symptom:** During `azd up`, infrastructure provisions successfully but the Container App revision creation times out (~900s). Container App shows `provisioningState: Failed` with no active revision.
 
-**Cause:** The managed identity's `AcrPull` role assignment hasn't propagated before the Container App attempts to pull the image from ACR. Azure RBAC propagation can take 1–5 minutes.
+**Cause:** The managed identity's `AcrPull` role assignment hasn't propagated before the Container App attempts to pull the image from ACR. Azure RBAC propagation can take 1-5 minutes.
 
 **Solution:**
 
-1. Verify the `AcrPull` role exists on the ACR for the Container App's managed identity (see [AZD Errors — Container App Revision Timeout](recipes/azd/errors.md#container-app-revision-timeout))
+1. Verify the `AcrPull` role exists on the ACR for the Container App's managed identity (see [AZD Errors - Container App Revision Timeout](recipes/azd/errors.md#container-app-revision-timeout))
 2. If missing, assign it manually with `--assignee-principal-type ServicePrincipal`
-3. Wait 2–5 minutes for RBAC propagation before retrying
+3. Wait 2-5 minutes for RBAC propagation before retrying
 4. Set `AZURE_CONTAINER_REGISTRY_ENDPOINT` env var
 5. Run `azd deploy --no-prompt`; if it still fails, wait a little longer and retry with backoff until propagation completes
 

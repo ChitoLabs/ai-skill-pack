@@ -3,7 +3,8 @@ name: threejs-interaction
 description: "Trigger: threejs-interaction, Three.js interaction - raycasting, controls, mouse/touch input, object selection. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: cloudai-x
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-interaction"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-interaction"

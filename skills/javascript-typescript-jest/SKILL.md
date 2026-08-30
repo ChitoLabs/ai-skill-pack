@@ -4,6 +4,7 @@ description: "Trigger: javascript-typescript-jest, Best practices for writing Ja
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/javascript-typescript-jest"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/javascript-typescript-jest"

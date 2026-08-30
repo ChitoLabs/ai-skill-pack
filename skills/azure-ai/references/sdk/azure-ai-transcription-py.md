@@ -1,4 +1,4 @@
-# Azure AI Transcription — Python SDK Quick Reference
+# Azure AI Transcription - Python SDK Quick Reference
 
 > Condensed from **azure-ai-transcription-py**. Full patterns (real-time streaming, diarization, timestamps)
 > in the **azure-ai-transcription-py** plugin skill if installed.

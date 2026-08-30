@@ -4,6 +4,7 @@ description: "Trigger: tiktok-research, Research high-performing TikTok videos f
 license: Apache-2.0
 metadata:
   author: bradautomates
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/bradautomates/head-of-content/tiktok-research"
   github_url: "https://github.com/bradautomates/head-of-content/tree/HEAD/.claude/skills/tiktok-research"

@@ -14,9 +14,9 @@ User is trying to SSH into a Linux VM but the connection fails.
 | "Server unexpectedly closed connection"           | Disk full, SSH config error, or PAM issue                                                  | [Detailed SSH troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/detailed-troubleshoot-ssh-connection) |
 | SSH hangs with no response                        | Firewall (iptables/firewalld), routing, or NIC issue                                       | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)           |
 | Cannot SSH into Debian Linux VM                   | Debian-specific network or sshd config issue                                               | [Cannot connect to Debian Linux VM](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/cannot-connect-debian-linux)     |
-| SSH blocked after SELinux policy change           | SELinux misconfigured — blocking sshd                                                      | [SELinux troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/linux-selinux-troubleshooting)             |
+| SSH blocked after SELinux policy change           | SELinux misconfigured - blocking sshd                                                      | [SELinux troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/linux-selinux-troubleshooting)             |
 | "Permission denied" with Entra ID (AAD) SSH login | Missing role assignment: Virtual Machine Administrator Login or Virtual Machine User Login | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)           |
-| Linux VM not booting — UEFI boot failure          | Gen2 VM UEFI boot issue preventing SSH                                                     | [Linux VM UEFI boot failures](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/azure-linux-vm-uefi-boot-failures)     |
+| Linux VM not booting - UEFI boot failure          | Gen2 VM UEFI boot issue preventing SSH                                                     | [Linux VM UEFI boot failures](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/azure-linux-vm-uefi-boot-failures)     |
 
 ## Quick Commands
 
@@ -42,7 +42,7 @@ az vm run-command invoke --name <vm-name> -g <resource-group> \
 az vm run-command invoke --name <vm-name> -g <resource-group> \
   --command-id RunShellScript --scripts "getenforce"
 
-# ⚡ Set SELinux to permissive mode (temporary — survives until reboot)
+# ⚡ Set SELinux to permissive mode (temporary - survives until reboot)
 az vm run-command invoke --name <vm-name> -g <resource-group> \
   --command-id RunShellScript --scripts "setenforce 0"
 ```

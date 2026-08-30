@@ -1,9 +1,10 @@
 ---
 name: refactor-module
-description: "Transform monolithic Terraform configurations into reusable, maintainable modules with clear variables, outputs, encapsulation, versioning, documentation, tests, and state migration."
+description: "Trigger: refactor a monolithic Terraform configuration into reusable modules. Preserve state while defining clear variables, outputs, versioning, documentation, and tests."
 license: Apache-2.0
 metadata:
-  author: hashicorp
+  author: midudev
+  adapter: LCubero
   version: 0.0.1
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/refactor-module"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/refactor-module"

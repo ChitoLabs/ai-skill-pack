@@ -3,7 +3,7 @@ name: backend-fundamentals
 description: Reviews API design, REST conventions, and backend architecture. Use when junior builds API endpoints, Express routes, middleware, controllers, or asks "is this RESTful", "check my endpoint".
 license: Apache-2.0
 metadata:
-  author: unknown
+  author: DanielPodolsky
   version: 0.1
   github_url: "https://github.com/DanielPodolsky/ownyourcode/tree/HEAD/.claude/skills/fundamentals/backend"
 ---

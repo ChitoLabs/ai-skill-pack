@@ -68,7 +68,7 @@ grep -E 'traces_sample_rate|traces_sampler' *.py **/*.py 2>/dev/null
 
 Ask the user:
 
-> "Your current sample rate is {rate}. Agent runs are sampled as complete span trees — if the root span is dropped, all child gen_ai spans are lost. For full AI visibility, gen_ai-related transactions should be sampled at 100%. Would you like me to set up a `tracesSampler` that keeps AI traces at 100% while sampling other traffic at your current rate?"
+> "Your current sample rate is {rate}. Agent runs are sampled as complete span trees - if the root span is dropped, all child gen_ai spans are lost. For full AI visibility, gen_ai-related transactions should be sampled at 100%. Would you like me to set up a `tracesSampler` that keeps AI traces at 100% while sampling other traffic at your current rate?"
 
 If user confirms, read `${SKILL_ROOT}/references/sampling.md` for implementation patterns.
 
@@ -89,7 +89,7 @@ If user confirms, read `${SKILL_ROOT}/references/sampling.md` for implementation
 
 ### Python
 
-Integrations auto-enable when the AI package is installed — no explicit registration needed:
+Integrations auto-enable when the AI package is installed - no explicit registration needed:
 
 | Package | Auto? | Notes |
 |---------|-------|-------|
@@ -104,7 +104,7 @@ Integrations auto-enable when the AI package is installed — no explicit regist
 
 ## JavaScript Configuration
 
-### Node.js — auto-enabled integrations
+### Node.js - auto-enabled integrations
 
 Just ensure tracing is enabled. Integrations auto-enable when the AI package is installed:
 
@@ -117,7 +117,7 @@ Sentry.init({
 });
 ```
 
-To customize (e.g., enable prompt capture after user confirmation — see Data Capture Warning):
+To customize (e.g., enable prompt capture after user confirmation - see Data Capture Warning):
 
 ```javascript
 Sentry.init({
@@ -188,7 +188,7 @@ await generateText({
 
 ## Python Configuration
 
-Integrations auto-enable — just init with tracing. Only add explicit imports to customize options:
+Integrations auto-enable - just init with tracing. Only add explicit imports to customize options:
 
 ```python
 import sentry_sdk
@@ -206,7 +206,7 @@ sentry_sdk.init(
 
 ## Manual Instrumentation
 
-Use when no supported SDK is detected. Follow the canonical [Sentry Conventions for `gen_ai.*` attributes](https://getsentry.github.io/sentry-conventions/attributes/gen_ai/) — the [JS docs](https://docs.sentry.io/platforms/javascript/guides/connect/ai-agent-monitoring/#manual-instrumentation) may lag behind; do not set attributes marked deprecated in the conventions.
+Use when no supported SDK is detected. Follow the canonical [Sentry Conventions for `gen_ai.*` attributes](https://getsentry.github.io/sentry-conventions/attributes/gen_ai/) - the [JS docs](https://docs.sentry.io/platforms/javascript/guides/connect/ai-agent-monitoring/#manual-instrumentation) may lag behind; do not set attributes marked deprecated in the conventions.
 
 ### Span Types
 
@@ -217,7 +217,7 @@ Use when no supported SDK is detected. Follow the canonical [Sentry Conventions 
 | `gen_ai.execute_tool` | `execute_tool {tool_name}` | Tool/function call |
 | `gen_ai.handoff` | `handoff from {source} to {target}` | Agent-to-agent transition |
 
-For LLM-call spans, the `op` follows the pattern `gen_ai.{gen_ai.operation.name}` — use `gen_ai.chat`, `gen_ai.embeddings`, `gen_ai.generate_content`, or `gen_ai.text_completion` where the operation is known. Span attributes only accept primitives; arrays/objects must be JSON-stringified.
+For LLM-call spans, the `op` follows the pattern `gen_ai.{gen_ai.operation.name}` - use `gen_ai.chat`, `gen_ai.embeddings`, `gen_ai.generate_content`, or `gen_ai.text_completion` where the operation is known. Span attributes only accept primitives; arrays/objects must be JSON-stringified.
 
 ### Example (JavaScript)
 
@@ -261,7 +261,7 @@ await Sentry.startSpan({
 | `gen_ai.operation.name` | No | Operation label (`chat`, `embeddings`, `invoke_agent`, `execute_tool`, `handoff`, etc.) |
 | `gen_ai.agent.name` | No | Agent name (set on agent and tool spans) |
 
-**Request / response content (PII — enable only after confirming; see Data Capture Warning above):**
+**Request / response content (PII - enable only after confirming; see Data Capture Warning above):**
 
 | Attribute | Description |
 |-----------|-------------|
@@ -274,10 +274,10 @@ await Sentry.startSpan({
 
 | Attribute | Description |
 |-----------|-------------|
-| `gen_ai.usage.input_tokens` | Total input tokens — **includes** cached tokens |
+| `gen_ai.usage.input_tokens` | Total input tokens - **includes** cached tokens |
 | `gen_ai.usage.input_tokens.cached` | Subset of input tokens served from cache |
 | `gen_ai.usage.input_tokens.cache_write` | Tokens written to cache while processing input |
-| `gen_ai.usage.output_tokens` | Total output tokens — **includes** reasoning tokens |
+| `gen_ai.usage.output_tokens` | Total output tokens - **includes** reasoning tokens |
 | `gen_ai.usage.output_tokens.reasoning` | Subset of output tokens used for reasoning |
 | `gen_ai.usage.total_tokens` | Sum of input + output tokens |
 
@@ -293,11 +293,11 @@ await Sentry.startSpan({
 
 ### Token Usage and Cost Calculation
 
-Sentry uses token attributes to [calculate model costs](https://docs.sentry.io/ai/monitoring/agents/costs/). **Cached and reasoning tokens are subsets, not separate counts** — `gen_ai.usage.input_tokens` already includes `gen_ai.usage.input_tokens.cached`, and `gen_ai.usage.output_tokens` already includes `gen_ai.usage.output_tokens.reasoning`.
+Sentry uses token attributes to [calculate model costs](https://docs.sentry.io/ai/monitoring/agents/costs/). **Cached and reasoning tokens are subsets, not separate counts** - `gen_ai.usage.input_tokens` already includes `gen_ai.usage.input_tokens.cached`, and `gen_ai.usage.output_tokens` already includes `gen_ai.usage.output_tokens.reasoning`.
 
 Sentry subtracts the cached/reasoning counts from the totals to compute the uncached/non-reasoning portion. Reporting a cached or reasoning count greater than its total produces negative costs in the dashboard.
 
-Example — 100 input tokens total, 90 served from cache:
+Example - 100 input tokens total, 90 served from cache:
 
 - Correct: `input_tokens = 100`, `input_tokens.cached = 90`
 - Wrong: `input_tokens = 10`, `input_tokens.cached = 90` (cached larger than total → negative cost)
@@ -314,6 +314,6 @@ After configuring, make an LLM call and check the Sentry Traces dashboard. AI sp
 |-------|----------|
 | AI spans not appearing | Verify `tracesSampleRate > 0`, check SDK version |
 | Token counts missing | Some providers don't return tokens for streaming |
-| Negative or wrong costs in dashboard | Cached/reasoning tokens are subsets of totals — see Token Usage and Cost Calculation |
+| Negative or wrong costs in dashboard | Cached/reasoning tokens are subsets of totals - see Token Usage and Cost Calculation |
 | Prompts not captured | Set `sendDefaultPii: true` (JS) or `send_default_pii=True` (Python); use `recordInputs`/`include_prompts` only for explicit overrides |
 | Vercel AI not working | Add `experimental_telemetry` to each call |

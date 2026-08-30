@@ -1,6 +1,6 @@
-# Scrape — worked examples
+# Scrape - worked examples
 
-## Example 1 — single page to markdown
+## Example 1 - single page to markdown
 
 Fetch a blog post as clean markdown and verify the output.
 
@@ -15,7 +15,7 @@ grep -qiE 'access denied|just a moment|captcha|cloudflare' post.md \
 head -n 1 post.md   # should show the title as an h1
 ```
 
-## Example 2 — batch a list of URLs with parallelism cap
+## Example 2 - batch a list of URLs with parallelism cap
 
 Given `urls.txt` (one URL per line), scrape all to `out/` with max 4 parallel requests:
 
@@ -34,7 +34,7 @@ total=$(wc -l < urls.txt)
 echo "Scraped $ok of $total URLs"
 ```
 
-## Example 3 — paginated listing
+## Example 3 - paginated listing
 
 Scrape every page of a paginated article index until an empty page is hit:
 
@@ -55,7 +55,7 @@ while :; do
 done
 ```
 
-## Example 4 — block-page recovery chain
+## Example 4 - block-page recovery chain
 
 Scrape a URL that's intermittently Cloudflare-gated. Try a set of exit countries; if all return block pages, hand off to `bdata browser`:
 
@@ -72,7 +72,7 @@ for args in "" "--country de" "--country jp" "--country gb"; do
     fi
 done
 
-echo "All country rotations returned block pages — escalating to bdata browser" >&2
+echo "All country rotations returned block pages - escalating to bdata browser" >&2
 # (caller hands off to the bdata browser command, documented in the brightdata-cli skill)
 exit 1
 ```

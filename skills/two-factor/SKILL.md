@@ -3,9 +3,9 @@ name: two-factor
 description: "Trigger: two-factor. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: better-auth
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/better-auth/skills/twoFactor"
 ---
 
 ## Activation Contract

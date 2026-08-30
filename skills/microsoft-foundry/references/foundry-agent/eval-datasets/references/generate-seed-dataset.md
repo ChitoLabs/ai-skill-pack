@@ -20,7 +20,7 @@ Generate a seed evaluation dataset for a Foundry agent by producing realistic, d
 | Field | Required | Purpose |
 |-------|----------|---------|
 | `query` | ✅ | Realistic user message the agent would receive |
-| `expected_behavior` | ✅ | Behavioral rubric: what the agent SHOULD do — actions, tool usage, tone, source expectations. Used by Phase 2 custom evaluators for per-query scoring. |
+| `expected_behavior` | ✅ | Behavioral rubric: what the agent SHOULD do - actions, tool usage, tone, source expectations. Used by Phase 2 custom evaluators for per-query scoring. |
 | `ground_truth` | Optional | Factual reference answer for groundedness evaluators |
 | `context` | Optional | Category or scenario tag for dataset organization and coverage analysis |
 
@@ -30,19 +30,19 @@ Example row:
 {"query": "What are the latest EU AI Act updates?", "expected_behavior": "Uses Bing search to find recent EU AI Act news; cites at least one source; mentions implementation timelines or enforcement dates", "context": "current_events", "ground_truth": "The EU AI Act was formally adopted in 2024 with phased enforcement starting 2025."}
 ```
 
-## Step 1 — Gather Agent Context
+## Step 1 - Gather Agent Context
 
 Collect the agent's full context from `agent_get` or local `agent.yaml` in the selected agent root:
 
-- **Agent name** — from the selected metadata file
-- **Instructions** — the system prompt / instructions field
-- **Tools** — list of tools with names, descriptions, and parameter schemas
-- **Protocols** — supported protocols (responses, a2a, mcp)
-- **Example messages** — from `agent.yaml` metadata if available
+- **Agent name** - from the selected metadata file
+- **Instructions** - the system prompt / instructions field
+- **Tools** - list of tools with names, descriptions, and parameter schemas
+- **Protocols** - supported protocols (responses, a2a, mcp)
+- **Example messages** - from `agent.yaml` metadata if available
 
-## Step 2 — Generate Test Queries
+## Step 2 - Generate Test Queries
 
-> 💡 **Generate directly.** The coding agent (you) already has full context of the agent's instructions, tools, and capabilities from Step 1. Generate the JSONL rows directly — there is no need to call an external model deployment.
+> 💡 **Generate directly.** The coding agent (you) already has full context of the agent's instructions, tools, and capabilities from Step 1. Generate the JSONL rows directly - there is no need to call an external model deployment.
 
 Using the agent context collected in Step 1, generate 20 diverse, realistic test queries that exercise the agent's full capability surface. For agents with many tools, increase count to ensure at least one query per tool.
 
@@ -70,7 +70,7 @@ Distribute queries across these categories:
 - No two rows should have identical `query` values
 - `expected_behavior` must mention concrete actions, not vague phrases like "responds correctly"
 
-> 💡 **No separate validation step is needed.** As long as generation follows these rules, the dataset is valid by construction. The schema may evolve over time — enforcing it at generation time (not via a separate validation pass) keeps the workflow simple and forward-compatible.
+> 💡 **No separate validation step is needed.** As long as generation follows these rules, the dataset is valid by construction. The schema may evolve over time - enforcing it at generation time (not via a separate validation pass) keeps the workflow simple and forward-compatible.
 
 ### Save
 
@@ -82,7 +82,7 @@ Save the generated JSONL to:
 
 The filename must start with `agentName` from the selected metadata file, followed by `-eval-seed-v1`.
 
-## Step 3 — Register in Foundry
+## Step 3 - Register in Foundry
 
 Register the generated dataset in Foundry. Follow these sub-steps:
 
@@ -131,7 +131,7 @@ evaluation_dataset_create(
    - `version`: `v1`
 6. Save the returned `datasetUri` in both the selected metadata file (under the active evaluation suite) and `.foundry/datasets/manifest.json`.
 
-## Step 4 — Update Metadata
+## Step 4 - Update Metadata
 
 Update the selected metadata file for the selected environment's `evaluationSuites[]`:
 

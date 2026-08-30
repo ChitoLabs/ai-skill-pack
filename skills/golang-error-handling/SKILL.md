@@ -4,6 +4,7 @@ description: "Trigger: golang-error-handling. Preserve source workflow with port
 license: MIT
 metadata:
   author: samber
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/samber/cc-skills-golang/golang-error-handling"
   github_url: "https://github.com/samber/cc-skills-golang/tree/HEAD/skills/golang-error-handling"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `golang-error-handling` or the preserved source description: Idiomatic Golang error handling — creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging with slog, HTTP request logging middleware, and samber/oops for production errors. Built to make logs usable at scale with log aggregation 3rd-party tools. Apply when creating, wrapping, inspecting, or logging errors in Go code.
+Use this skill when the user request matches `golang-error-handling` or the preserved source description: Idiomatic Golang error handling - creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging with slog, HTTP request logging middleware, and samber/oops for production errors. Built to make logs usable at scale with log aggregation 3rd-party tools. Apply when creating, wrapping, inspecting, or logging errors in Go code.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

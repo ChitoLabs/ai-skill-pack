@@ -3,7 +3,8 @@ name: rails-guides
 description: "Trigger: rails-guides, Official Rails documentation. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: lucianghinda
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/rails-guides"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/rails-guides"

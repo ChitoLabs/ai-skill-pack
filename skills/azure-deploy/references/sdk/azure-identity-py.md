@@ -1,4 +1,4 @@
-# Authentication — Python SDK Quick Reference
+# Authentication - Python SDK Quick Reference
 
 > Condensed from **azure-identity-py**. Full patterns (async,
 > ChainedTokenCredential, token caching, all credential types)
@@ -19,8 +19,8 @@ credential = DefaultAzureCredential()
 ```
 
 ## Best Practices
-- Use DefaultAzureCredential for **local development only** (CLI, PowerShell, VS Code). In production, use ManagedIdentityCredential — see [auth-best-practices.md](../auth-best-practices.md)
-- Never hardcode credentials — use environment variables or managed identity
+- Use DefaultAzureCredential for **local development only** (CLI, PowerShell, VS Code). In production, use ManagedIdentityCredential - see [auth-best-practices.md](../auth-best-practices.md)
+- Never hardcode credentials - use environment variables or managed identity
 - Prefer managed identity in production Azure deployments
 - Use ChainedTokenCredential when you need a custom credential order
 - Close async credentials explicitly or use context managers

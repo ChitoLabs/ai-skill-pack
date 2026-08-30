@@ -1,8 +1,8 @@
-# Conversation Detail — Reconstruct Full Span Tree
+# Conversation Detail - Reconstruct Full Span Tree
 
 Reconstruct the complete span tree for a single conversation to see exactly what happened: every LLM call, tool execution, and agent invocation with timing, tokens, and errors.
 
-## Step 1 — Fetch All Spans for a Conversation
+## Step 1 - Fetch All Spans for a Conversation
 
 Use `operation_Id` (trace ID) to get all spans in a single request:
 
@@ -33,7 +33,7 @@ requests
 | project timestamp, name, duration, resultCode, success, id, operation_ParentId
 ```
 
-## Step 2 — Build Span Tree
+## Step 2 - Build Span Tree
 
 Use `spanId` and `parentSpanId` to reconstruct the hierarchy:
 
@@ -55,7 +55,7 @@ Present as an indented tree with:
 - **Error type** and result code (if failed, highlight in red)
 - **Finish reason** (stop, length, content_filter, tool_calls)
 
-## Step 3 — Extract Conversation Content from invoke_agent Spans
+## Step 3 - Extract Conversation Content from invoke_agent Spans
 
 The full input/output content lives on `invoke_agent` dependency spans in `gen_ai.input.messages` and `gen_ai.output.messages`. These JSON arrays contain the complete conversation (system prompt, user query, assistant response):
 
@@ -81,7 +81,7 @@ traces
 | order by timestamp asc
 ```
 
-## Step 4 — Check for Exceptions
+## Step 4 - Check for Exceptions
 
 ```kql
 exceptions
@@ -93,6 +93,6 @@ exceptions
 
 Present exceptions inline in the span tree at their position in the timeline.
 
-## Step 5 — Fetch Evaluation Results
+## Step 5 - Fetch Evaluation Results
 
 See [Eval Correlation](eval-correlation.md) for the full workflow to look up evaluation scores by response ID or conversation ID. Use `gen_ai.response.id` values from Step 1 spans to correlate.

@@ -250,7 +250,7 @@ Fix:
 
 Notes:
 
-* Older jQuery versions had additional edge cases even when attempting sanitization; patched in 3.5.0+. Still: never rely on “string sanitization” alone—prefer structured creation or proven sanitizers. ([GitHub][16])
+* Older jQuery versions had additional edge cases even when attempting sanitization; patched in 3.5.0+. Still: never rely on “string sanitization” alone-prefer structured creation or proven sanitizers. ([GitHub][16])
 
 ---
 

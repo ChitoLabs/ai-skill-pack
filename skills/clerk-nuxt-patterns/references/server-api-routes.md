@@ -64,7 +64,7 @@ export default defineEventHandler(async (event) => {
 
 ## Error Codes
 
-- `401` — not authenticated (no valid session)
-- `403` — authenticated but no permission (wrong role, no org)
+- `401` - not authenticated (no valid session)
+- `403` - authenticated but no permission (wrong role, no org)
 
 [Docs](https://clerk.com/docs/nuxt/getting-started/quickstart)

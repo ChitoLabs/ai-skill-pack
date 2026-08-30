@@ -4,6 +4,7 @@ description: "Trigger: sqlalchemy-orm, SQLAlchemy Python SQL toolkit and ORM wit
 license: Apache-2.0
 metadata:
   author: bobmatnyc
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/bobmatnyc/claude-mpm-skills/sqlalchemy"
   github_url: "https://github.com/bobmatnyc/claude-mpm-skills/tree/HEAD/toolchains/python/data/sqlalchemy"

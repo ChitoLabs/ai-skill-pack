@@ -1,6 +1,6 @@
 # Cost Query Workflow
 
-Use this workflow when the user wants to **understand their costs** — breakdowns, trends, totals, top spenders.
+Use this workflow when the user wants to **understand their costs** - breakdowns, trends, totals, top spenders.
 
 ## Step 1: Determine Scope
 
@@ -97,7 +97,7 @@ See [error-handling.md](./error-handling.md) for the full error reference.
 | Monthly/None granularity max range | 12 months |
 | Absolute API max range | 37 months |
 | Max GroupBy dimensions | 2 |
-| ResourceId grouping scope | Subscription and resource group only — not supported at billing account, management group, or higher scopes |
+| ResourceId grouping scope | Subscription and resource group only - not supported at billing account, management group, or higher scopes |
 | Max rows per page | 5,000 |
 | Custom timeframe | Requires `timePeriod` with `from`/`to` |
 | Filter and/or | Must have at least 2 expressions |

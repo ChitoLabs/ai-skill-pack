@@ -4,6 +4,7 @@ description: "Trigger: next-upgrade, Upgrade Next.js to the latest version follo
 license: Apache-2.0
 metadata:
   author: vercel-labs
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel-labs/next-skills/next-upgrade"
   github_url: "https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-upgrade"

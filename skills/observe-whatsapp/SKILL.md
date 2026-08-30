@@ -4,6 +4,7 @@ description: "Trigger: observe-whatsapp, Observe and troubleshoot WhatsApp in Ka
 license: Apache-2.0
 metadata:
   author: gokapso
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/gokapso/agent-skills/observe-whatsapp"
   github_url: "https://github.com/gokapso/kapso-agent-skills/tree/HEAD/skills/observe-whatsapp"

@@ -4,7 +4,7 @@ platform: X (Twitter)
 tags: twitter, x, social-media, image-sizes, header, posts, ads
 ---
 
-# X (Twitter) Image & Video Sizes — 2025
+# X (Twitter) Image & Video Sizes - 2025
 
 ## Profile & Header
 
@@ -30,7 +30,7 @@ tags: twitter, x, social-media, image-sizes, header, posts, ads
 | Name | Size (px) | Aspect | Notes |
 |---|---|---|---|
 | Single Image Ad | 1200 × 675 | 16:9 | |
-| Carousel Ad | 800 × 800 | 1:1 | 2–6 cards |
+| Carousel Ad | 800 × 800 | 1:1 | 2-6 cards |
 | Website Card | 800 × 418 | 1.91:1 | |
 
 ## Format & Technical Requirements

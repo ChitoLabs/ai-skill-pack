@@ -4,6 +4,7 @@ description: "Trigger: hono, Use when building Hono web applications or when the
 license: Apache-2.0
 metadata:
   author: yusukebe
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/yusukebe/hono-skill/hono"
   github_url: "https://github.com/yusukebe/hono-skill/tree/HEAD/skills/hono"

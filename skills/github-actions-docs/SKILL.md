@@ -4,6 +4,7 @@ description: "Trigger: github-actions-docs. Preserve source workflow with portab
 license: Apache-2.0
 metadata:
   author: xixu-me
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/xixu-me/skills/github-actions-docs"
   github_url: "https://github.com/xixu-me/skills/tree/HEAD/skills/github-actions-docs"

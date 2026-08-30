@@ -64,9 +64,9 @@ createRoot(document.getElementById('root')!).render(
 
 ## Mental Model
 
-`@clerk/react` is client-only — there is no server-side `auth()`. All auth state comes from hooks.
+`@clerk/react` is client-only - there is no server-side `auth()`. All auth state comes from hooks.
 
-- `isLoaded` must be `true` before trusting `isSignedIn` — always guard on `isLoaded`
+- `isLoaded` must be `true` before trusting `isSignedIn` - always guard on `isLoaded`
 - `useClerk()` gives access to `signOut`, `openSignIn`, `openUserProfile` and other methods
 - `getToken()` from `useAuth()` fetches the session JWT for API calls
 

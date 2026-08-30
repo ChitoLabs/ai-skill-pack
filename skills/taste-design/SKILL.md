@@ -4,6 +4,7 @@ description: "Trigger: taste-design, Semantic Design System Skill for Google Sti
 license: Apache-2.0
 metadata:
   author: google-labs-code
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/google-labs-code/stitch-skills/taste-design"
   github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `taste-design` or the preserved source description: Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
+Use this skill when the user request matches `taste-design` or the preserved source description: Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards - strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

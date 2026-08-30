@@ -1,31 +1,25 @@
 {
-  "generated_at": "2026-08-21T00:00:00.000Z",
+  "generated_at": "2026-08-29T00:00:00.000Z",
   "repository": "ChitoLabs/ai-skill-pack",
-  "staging_root": "github",
-  "publication_scope": "general skills pack only",
+  "staging_root": "repository root",
+  "publication_scope": "v3 skills and commands",
   "source_roots": {
-    "included_general_root": "0_skill_pack_v2",
-    "excluded_fabric_root": ".ld9/skill-sanitize/skill_upgrade/0_microsoft_for_fabric"
+    "included_skills_root": "authorized-v3-source-pack",
+    "included_commands_root": "v3-command-collection"
   },
   "counts": {
     "skills_published": 466,
     "skills_with_skill_md": 466,
     "missing_skill_md": 0,
-    "fabric_candidate_folders_available_but_excluded": 23,
-    "fabric_candidate_folders_copied": 0,
     "source_entries_represented": 466,
     "published_folders_without_active_source_entry": 0,
-    "commands_published": 4,
-    "source_commands_represented": 4
+    "commands_published": 3,
+    "source_commands_represented": 3
   },
   "exclusions": [
-    ".ld9/skill-sanitize/skill_upgrade/0_microsoft_for_fabric",
-    ".ld9/temp",
-    ".ld9/memory-bk",
-    ".ld9/skill-sanitize/skill_review/judgment-newSkill/duplicates",
-    "legacy found folders",
-    "internal audit scripts",
-    "internal reports not intended for publication"
+    "compiled Python cache file",
+    "empty Python cache directory",
+    "macOS metadata file"
   ],
   "published_skills": [
     "a11y",

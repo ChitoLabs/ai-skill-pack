@@ -26,9 +26,9 @@ Reference these guidelines when:
 
 ## When NOT to Use This Skill
 
-- **React 19 Server Actions / `useActionState`** — use the `react-19` skill instead
-- **Deeply nested, fully type-safe forms** — TanStack Form may be a better fit for forms with complex nested schemas; this skill assumes you've already chosen RHF
-- **Single-input or trivial forms** — uncontrolled `<form>` + `FormData` is often simpler than pulling in any library
+- **React 19 Server Actions / `useActionState`** - use the `react-19` skill instead
+- **Deeply nested, fully type-safe forms** - TanStack Form may be a better fit for forms with complex nested schemas; this skill assumes you've already chosen RHF
+- **Single-input or trivial forms** - uncontrolled `<form>` + `FormData` is often simpler than pulling in any library
 
 ## Rule Categories by Priority
 

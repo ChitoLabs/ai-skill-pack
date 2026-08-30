@@ -1,9 +1,10 @@
 ---
 name: brainstorming
-description: "Trigger: brainstorming, You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Preserve source workflow with portable agent instructions."
+description: "Trigger: brainstorm, explore an idea, clarify a vague feature, compare design alternatives. Use explicitly before implementation or before entering a managed workflow; never auto-activate inside an active managed phase."
 license: Apache-2.0
 metadata:
   author: obra
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/brainstorming"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/brainstorming"
@@ -11,7 +12,9 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `brainstorming` or the preserved source description: You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
+Use this skill only for an explicit brainstorming request before implementation or before entering a managed workflow.
+
+First consult repository policy and detect any active managed workflow. If that workflow owns discovery or design, defer without creating parallel artifacts.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

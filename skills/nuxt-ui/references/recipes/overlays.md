@@ -28,7 +28,7 @@ function confirmDelete() {
 
 ## Programmatic confirmation (useOverlay)
 
-Reusable pattern — no template state needed at the call site.
+Reusable pattern - no template state needed at the call site.
 
 ```vue [components/ConfirmModal.vue]
 <script setup lang="ts">

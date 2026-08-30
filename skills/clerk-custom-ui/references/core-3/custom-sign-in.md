@@ -80,8 +80,8 @@ const { error } = await signIn.phoneCode.verifyCode({ code: '123456' })
 ## MFA (Second Factor)
 
 A second factor is required when `signIn.status` is one of:
-- `'needs_second_factor'` — user has MFA enabled (TOTP, backup codes, etc.)
-- `'needs_client_trust'` — new device sign-in without MFA; requires email or phone code verification
+- `'needs_second_factor'` - user has MFA enabled (TOTP, backup codes, etc.)
+- `'needs_client_trust'` - new device sign-in without MFA; requires email or phone code verification
 
 ```typescript
 // TOTP (Authenticator app)
@@ -147,8 +147,8 @@ await signIn.finalize({
 })
 ```
 
-- `decorateUrl(path)` — decorates the URL with session info (required to support Safari's Intelligent Tracking Prevention). May return an absolute URL.
-- `session.currentTask` — check for pending session tasks before redirecting
+- `decorateUrl(path)` - decorates the URL with session info (required to support Safari's Intelligent Tracking Prevention). May return an absolute URL.
+- `session.currentTask` - check for pending session tasks before redirecting
 
 ### Reset State
 

@@ -4,6 +4,7 @@ description: "Trigger: interview-prep-generator, Generate STAR stories, practice
 license: Apache-2.0
 metadata:
   author: paramchoudhary
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/paramchoudhary/resumeskills/interview-prep-generator"
   github_url: "https://github.com/paramchoudhary/resumeskills/tree/HEAD/skills/interview-prep-generator"

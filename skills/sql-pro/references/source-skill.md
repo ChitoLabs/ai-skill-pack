@@ -58,7 +58,7 @@ WHERE rn = 1;                           -- latest completed order per customer
 
 ### Window Function Pattern
 ```sql
--- Running total and rank within partition — no self-join required
+-- Running total and rank within partition - no self-join required
 SELECT
     department_id,
     employee_id,

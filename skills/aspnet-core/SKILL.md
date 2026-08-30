@@ -4,6 +4,7 @@ description: "Trigger: aspnet-core, Build, review, refactor, or architect ASP.NE
 license: Apache-2.0
 metadata:
   author: openai
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/openai/skills/aspnet-core"
   github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/aspnet-core"

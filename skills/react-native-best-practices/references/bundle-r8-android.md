@@ -70,7 +70,7 @@ android {
 
 ### 3. Configure ProGuard Rules (If Needed)
 
-Edit `android/app/proguard-rules.pro`. React Native defaults are usually sufficient—only add rules when specific libraries break after enabling R8.
+Edit `android/app/proguard-rules.pro`. React Native defaults are usually sufficient-only add rules when specific libraries break after enabling R8.
 
 **Only add if using Firebase (`@react-native-firebase/*`):**
 

@@ -4,6 +4,7 @@ description: "Trigger: turborepo, Turborepo monorepo build system guidance. Pres
 license: Apache-2.0
 metadata:
   author: vercel
+  adapter: LCubero
   version: 2.9.15-canary.3
   skills_sh_url: "https://skills.sh/vercel/turborepo/turborepo"
   github_url: "https://github.com/vercel/turborepo/tree/HEAD/skills/turborepo"

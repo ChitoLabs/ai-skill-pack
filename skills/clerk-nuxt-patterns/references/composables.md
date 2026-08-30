@@ -1,6 +1,6 @@
 # Composables (HIGH)
 
-All composables are auto-imported by `@clerk/nuxt` — no import statements needed in `<script setup>`.
+All composables are auto-imported by `@clerk/nuxt` - no import statements needed in `<script setup>`.
 
 ## useAuth()
 

@@ -20,7 +20,7 @@ Use this skill when the task is to add, configure, or review background jobs in 
 ```
 EVERY job MUST have its test written and validated BEFORE implementation.
   1. Write the job spec (idempotency, retry, error handling)
-  2. Run the spec — verify it fails because the job does not exist yet
+  2. Run the spec - verify it fails because the job does not exist yet
   3. ONLY THEN write the job class
 
 EVERY job that performs a side effect (charge, email, API call) MUST have
@@ -65,10 +65,10 @@ See [BACKENDS.md](BACKENDS.md) for install steps, configuration, and dashboard s
 **Pass IDs, not objects:**
 
 ```ruby
-# Bad — object may be stale or deleted by perform time
+# Bad - object may be stale or deleted by perform time
 SomeJob.perform_later(@order)
 
-# Good — reload fresh inside perform
+# Good - reload fresh inside perform
 SomeJob.perform_later(@order.id)
 ```
 
@@ -120,11 +120,11 @@ production:
 
 | Problem | Correct approach |
 |---------|-----------------|
-| Passing ActiveRecord objects as arguments | Pass IDs — objects may be deleted or stale by perform time |
+| Passing ActiveRecord objects as arguments | Pass IDs - objects may be deleted or stale by perform time |
 | No idempotency check before side effects | Jobs run at-least-once; double-charging and double-emailing result |
 | `retry_on` without `attempts` limit | Infinite retries on persistent errors |
 | Missing `discard_on` for permanent errors | Job retries forever on `RecordNotFound` |
-| Complex business logic in `perform` | Keep `perform` thin — delegate to service objects |
+| Complex business logic in `perform` | Keep `perform` thin - delegate to service objects |
 | Using `:inline` or `:async` in production | No persistence, no retry, no monitoring |
 | Recurring job defined only in code | Use `recurring.yml` or equivalent for visibility and recoverability |
 

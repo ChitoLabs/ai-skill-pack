@@ -3,9 +3,9 @@ name: rspec-service-testing
 description: "Trigger: rspec-service-testing, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: igmarin
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rspec-service-testing"
 ---
 
 ## Activation Contract

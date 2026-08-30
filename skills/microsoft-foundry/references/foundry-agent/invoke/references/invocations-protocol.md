@@ -1,13 +1,13 @@
 # Invocations Protocol Guide
 
-The `invocations` protocol is **bytes in, bytes out**. The platform is pure pass-through — the raw HTTP request body is forwarded to the container and the raw response is returned. The agent developer defines what the container accepts and returns. Unlike `responses` (OpenAI-compatible with platform-managed history), `invocations` gives full control to the container code.
+The `invocations` protocol is **bytes in, bytes out**. The platform is pure pass-through - the raw HTTP request body is forwarded to the container and the raw response is returned. The agent developer defines what the container accepts and returns. Unlike `responses` (OpenAI-compatible with platform-managed history), `invocations` gives full control to the container code.
 
 ## Input/Output Contract
 
 | Aspect | `responses` | `invocations` |
 |--------|------------|---------------|
-| **Input** | `inputText` is a natural language message (e.g., `"What is the weather?"`) | `inputText` is forwarded as the **raw HTTP request body** — bytes in. Format as whatever the container's invoke handler expects (typically JSON) |
-| **Output** | Structured OpenAI response with `output_text` | **Raw response bytes** from the container — JSON, text, or SSE events. Format is defined by the agent developer |
+| **Input** | `inputText` is a natural language message (e.g., `"What is the weather?"`) | `inputText` is forwarded as the **raw HTTP request body** - bytes in. Format as whatever the container's invoke handler expects (typically JSON) |
+| **Output** | Structured OpenAI response with `output_text` | **Raw response bytes** from the container - JSON, text, or SSE events. Format is defined by the agent developer |
 | **Conversation history** | Platform-managed via `conversationId` | Agent-managed via session filesystem; `conversationId` does **not** apply |
 | **Streaming** | Platform-managed via `stream: true` | Agent-controlled; `stream` parameter does **not** apply |
 
@@ -27,7 +27,7 @@ If the developer registered an `openapi_spec` when creating the server, this ret
 
 ### 2. Inspect Agent Source Code
 
-Look at the agent's invoke handler — the function registered with `@app.invoke_handler` (Python) or equivalent. The handler reads the raw request (e.g., `request.json()` for JSON, `request.body()` for raw bytes) and returns a `Response`.
+Look at the agent's invoke handler - the function registered with `@app.invoke_handler` (Python) or equivalent. The handler reads the raw request (e.g., `request.json()` for JSON, `request.body()` for raw bytes) and returns a `Response`.
 
 ### 3. Ask the User
 
@@ -42,7 +42,7 @@ agent_invoke(projectEndpoint, agentName, inputText: "What is the weather in Seat
 → Structured response with output_text
 ```
 
-**Invocations protocol** — agent expects `{"message": "<text>"}`:
+**Invocations protocol** - agent expects `{"message": "<text>"}`:
 
 ```text
 agent_invoke(projectEndpoint, agentName, inputText: "{\"message\":\"hello\"}", protocol: "invocations", sessionId: "<session-id>")

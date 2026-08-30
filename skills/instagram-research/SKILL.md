@@ -4,6 +4,7 @@ description: "Trigger: instagram-research, Research high-performing Instagram co
 license: Apache-2.0
 metadata:
   author: bradautomates
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/bradautomates/head-of-content/instagram-research"
   github_url: "https://github.com/bradautomates/head-of-content/tree/HEAD/.claude/skills/instagram-research"

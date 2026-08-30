@@ -1,6 +1,6 @@
 """Hangs lane parser (schema `potential-hangs`).
 
-The schema lacks inline backtraces — stacks come from Time Profiler samples
+The schema lacks inline backtraces - stacks come from Time Profiler samples
 that overlap each hang's window. Correlation is done later in correlate.py.
 """
 from __future__ import annotations
@@ -64,7 +64,7 @@ def analyze(
     total_ms = sum(h["duration_ms"] for h in hangs)
     worst = hangs[0] if hangs else None
 
-    # Severity buckets per Apple docs (Microhang: 250ms–500ms, Hang: ≥500ms).
+    # Severity buckets per Apple docs (Microhang: 250ms-500ms, Hang: ≥500ms).
     # We bucket by raw duration so the agent can reason about it.
     buckets = {"lt_250ms": 0, "250ms_1s": 0, "gt_1s": 0}
     for h in hangs:

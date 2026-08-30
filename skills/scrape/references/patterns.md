@@ -1,4 +1,4 @@
-# Scrape — patterns
+# Scrape - patterns
 
 ## Verification checklist (shared across all Bright Data CLI skills)
 
@@ -41,7 +41,7 @@ xargs -a urls.txt -n 1 -P 4 -I {} bash -c '
 ' _ {}
 ```
 
-`-P 4` caps concurrency at 4 parallel `bdata scrape` invocations. Raise cautiously — each scrape consumes bandwidth and counts against zone budget.
+`-P 4` caps concurrency at 4 parallel `bdata scrape` invocations. Raise cautiously - each scrape consumes bandwidth and counts against zone budget.
 
 ## Pagination recipe (listing pages)
 

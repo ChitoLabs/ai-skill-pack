@@ -4,6 +4,7 @@ description: "Trigger: wrangler. Preserve source workflow with portable agent in
 license: Apache-2.0
 metadata:
   author: cloudflare
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/wrangler"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/wrangler"

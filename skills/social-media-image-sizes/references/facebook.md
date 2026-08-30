@@ -4,7 +4,7 @@ platform: Facebook
 tags: facebook, social-media, image-sizes, cover, feed, stories, events, ads
 ---
 
-# Facebook Image & Video Sizes — 2025
+# Facebook Image & Video Sizes - 2025
 
 ## Profile & Cover
 
@@ -13,7 +13,7 @@ tags: facebook, social-media, image-sizes, cover, feed, stories, events, ads
 | Profile Photo | 170 × 170 | 1:1 | Displays 176×176 on desktop, 196×196 on smartphone |
 | Cover Photo | 820 × 312 | 2.63:1 | Min 400×150. Mobile: 640×360 crop |
 
-> **Cover tip:** Place key content in the center 640×312 safe zone — that area is visible on both desktop and mobile.
+> **Cover tip:** Place key content in the center 640×312 safe zone - that area is visible on both desktop and mobile.
 
 ## Feed Posts
 
@@ -42,7 +42,7 @@ tags: facebook, social-media, image-sizes, cover, feed, stories, events, ads
 | Name | Size (px) | Aspect | Notes |
 |---|---|---|---|
 | Feed Ad | 1200 × 628 | 1.91:1 | |
-| Carousel Ad | 1080 × 1080 | 1:1 | 2–10 cards |
+| Carousel Ad | 1080 × 1080 | 1:1 | 2-10 cards |
 | Right Column Ad | 1200 × 628 | 1.91:1 | |
 | Marketplace Ad | 1200 × 628 | 1.91:1 | |
 

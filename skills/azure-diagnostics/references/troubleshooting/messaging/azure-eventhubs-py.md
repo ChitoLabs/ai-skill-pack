@@ -1,4 +1,4 @@
-# Azure Event Hubs SDK — Python
+# Azure Event Hubs SDK - Python
 
 Package: `azure-eventhub` | [README](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/eventhub/azure-eventhub) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/eventhub/azure-eventhub/TROUBLESHOOTING.md)
 
@@ -98,6 +98,6 @@ Package: `azure-eventhub-checkpointstoreblob` (sync) / `azure-eventhub-checkpoin
 See the [Consumer Client Retry Configuration](#consumer-client-retry-configuration) section above for a full `EventHubConsumerClient` example with `BlobCheckpointStore`.
 
 **Common issues:**
-- **Soft delete / blob versioning**: Disable both on the storage account — they cause large delays during load balancing.
+- **Soft delete / blob versioning**: Disable both on the storage account - they cause large delays during load balancing.
 - **HTTP 412/409 from storage**: Normal during partition ownership negotiation; not an error.
 - **Checkpoint frequency**: Checkpoint after processing each batch, not each event, to avoid storage throttling.

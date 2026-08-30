@@ -3,7 +3,7 @@ name: generating-sorbet
 description: Generates or updates Sorbet type signatures in separate .rbi files. Triggers when creating, updating, or maintaining type signatures for Ruby source files.
 license: Apache-2.0
 metadata:
-  author: DmitryPogrebnoy
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/DmitryPogrebnoy/ruby-agent-skills/generating-sorbet"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/generating-sorbet"

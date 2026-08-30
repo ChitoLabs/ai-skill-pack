@@ -4,6 +4,7 @@ description: "Trigger: claude-api, Build, debug, and optimize Claude API / Anthr
 license: Complete terms in LICENSE.txt
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/claude-api"
   github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/claude-api"

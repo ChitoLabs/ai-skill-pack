@@ -800,7 +800,7 @@ boot your Rails application. Specifically it loads `config/boot.rb` and
 `config/application.rb` files so that the application environment is ready to
 run.
 
-The `boot` command boots the application and exits — it does nothing else. It
+The `boot` command boots the application and exits - it does nothing else. It
 can be useful for debugging boot problems. If your app fails to start and you
 want to isolate the boot phase (without running migrations, starting the server,
 etc.), `bin/rails boot` can be a simple test.

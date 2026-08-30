@@ -1,4 +1,4 @@
-# Claude API — Ruby
+# Claude API - Ruby
 
 > **Note:** The Ruby SDK supports the Claude API. A tool runner is available in beta via `client.beta.messages.tool_runner()`. Agent SDK is not yet available for Ruby.
 
@@ -33,7 +33,7 @@ message = client.messages.create(
   ]
 )
 # content is an array of polymorphic block objects (TextBlock, ThinkingBlock,
-# ToolUseBlock, ...). .type is a Symbol — compare with :text, not "text".
+# ToolUseBlock, ...). .type is a Symbol - compare with :text, not "text".
 # .text raises NoMethodError on non-TextBlock entries.
 message.content.each do |block|
   puts block.text if block.type == :text
@@ -95,7 +95,7 @@ See the [shared tool use concepts](../shared/tool-use-concepts.md) for the tool 
 
 ## Prompt Caching
 
-`system_:` (trailing underscore — avoids shadowing `Kernel#system`) takes an array of text blocks; set `cache_control` on the last block. Plain hashes work via the `OrHash` type alias. For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
+`system_:` (trailing underscore - avoids shadowing `Kernel#system`) takes an array of text blocks; set `cache_control` on the last block. Plain hashes work via the `OrHash` type alias. For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
 
 ```ruby
 message = client.messages.create(

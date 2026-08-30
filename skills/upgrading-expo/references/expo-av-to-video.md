@@ -142,7 +142,7 @@ For PiP and background playback, add to app.json:
 
 ## Key Differences
 
-- **Separate player and view**: Player logic decoupled from the view—one player can be used across multiple views
+- **Separate player and view**: Player logic decoupled from the view-one player can be used across multiple views
 - **Time in seconds**: Uses seconds, not milliseconds
 - **Event system**: Uses `useEvent`/`useEventListener` from `expo` instead of callback props
 - **Video preloading**: Create a player without mounting a VideoView to preload for faster transitions
@@ -152,7 +152,7 @@ For PiP and background playback, add to app.json:
 
 - **Uninstall expo-av first**: On Android, having both expo-av and expo-video installed can cause VideoView to show a black screen. Uninstall expo-av before installing expo-video
 - **Android: Reusing players**: Mounting the same player in multiple VideoViews simultaneously can cause black screens on Android (works on iOS)
-- **Android: currentTime in setup**: Setting `player.currentTime` in the `useVideoPlayer` setup callback may not work on Android—set it after mount instead
+- **Android: currentTime in setup**: Setting `player.currentTime` in the `useVideoPlayer` setup callback may not work on Android-set it after mount instead
 - **Changing source**: Use `player.replace(newSource)` to change videos without recreating the player
 
 ## API Reference

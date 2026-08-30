@@ -1,9 +1,10 @@
 ---
 name: interface-design
-description: "Trigger: interface-design, This skill is for interface design — dashboards, admin panels, apps, tools, and interactive products. Preserve source workflow with portable agent instructions."
+description: "Trigger: interface-design, This skill is for interface design - dashboards, admin panels, apps, tools, and interactive products. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: dammyjay93
+  author: fellipeutaka
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/dammyjay93/interface-design/interface-design"
   github_url: "https://github.com/fellipeutaka/leon/tree/HEAD/skills/interface-design"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `interface-design` or the preserved source description: This skill is for interface design — dashboards, admin panels, apps, tools, and interactive products. NOT for marketing design (landing pages, marketing sites, campaigns).
+Use this skill when the user request matches `interface-design` or the preserved source description: This skill is for interface design - dashboards, admin panels, apps, tools, and interactive products. NOT for marketing design (landing pages, marketing sites, campaigns).
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

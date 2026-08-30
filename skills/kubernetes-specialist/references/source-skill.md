@@ -29,11 +29,11 @@ metadata:
 
 ## Core Workflow
 
-1. **Analyze requirements** — Understand workload characteristics, scaling needs, security requirements
-2. **Design architecture** — Choose workload types, networking patterns, storage solutions
-3. **Implement manifests** — Create declarative YAML with proper resource limits, health checks
-4. **Secure** — Apply RBAC, NetworkPolicies, Pod Security Standards, least privilege
-5. **Validate** — Run `kubectl rollout status`, `kubectl get pods -w`, and `kubectl describe pod <name>` to confirm health; roll back with `kubectl rollout undo` if needed
+1. **Analyze requirements** - Understand workload characteristics, scaling needs, security requirements
+2. **Design architecture** - Choose workload types, networking patterns, storage solutions
+3. **Implement manifests** - Create declarative YAML with proper resource limits, health checks
+4. **Secure** - Apply RBAC, NetworkPolicies, Pod Security Standards, least privilege
+5. **Validate** - Run `kubectl rollout status`, `kubectl get pods -w`, and `kubectl describe pod <name>` to confirm health; roll back with `kubectl rollout undo` if needed
 
 ## Reference Guide
 

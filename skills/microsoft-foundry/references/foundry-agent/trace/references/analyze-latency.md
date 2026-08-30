@@ -1,8 +1,8 @@
-# Analyze Latency — Find and Diagnose Slow Traces
+# Analyze Latency - Find and Diagnose Slow Traces
 
 Identify slow agent traces, find bottleneck spans, and correlate with token usage.
 
-## Step 1 — Find Slow Conversations
+## Step 1 - Find Slow Conversations
 
 > ⚠️ **Hosted agents:** `gen_ai.agent.name` on `dependencies` holds the **code-level class name** (e.g., `BingSearchAgent`), NOT the Foundry agent name. To scope by Foundry name, use the [Hosted Agent Variant](#hosted-agent-variant--latency) below.
 
@@ -26,7 +26,7 @@ dependencies
 
 > **Default threshold:** 5 seconds. Ask the user for their latency threshold if not specified.
 
-## Step 2 — Latency Distribution (P50/P95/P99)
+## Step 2 - Latency Distribution (P50/P95/P99)
 
 ```kql
 dependencies
@@ -48,7 +48,7 @@ Present as:
 | Operation | Model | P50 (ms) | P95 (ms) | P99 (ms) | Avg (ms) | Count |
 |-----------|-------|---------|---------|---------|---------|-------|
 
-## Step 3 — Bottleneck Breakdown
+## Step 3 - Bottleneck Breakdown
 
 For a specific slow conversation, break down time spent per span type:
 
@@ -69,7 +69,7 @@ Common bottleneck patterns:
 - **`execute_tool` spans dominate** → Tool execution is slow (optimize tool implementation)
 - **`invoke_agent` has long gaps** → Orchestration overhead (check agent framework)
 
-## Step 4 — Token Usage vs Latency Correlation
+## Step 4 - Token Usage vs Latency Correlation
 
 ```kql
 dependencies
@@ -91,7 +91,7 @@ High token counts often correlate with high latency. If confirmed, suggest:
 - Limit conversation history window
 - Use a faster model for simpler queries
 
-## Hosted Agent Variant — Latency
+## Hosted Agent Variant - Latency
 
 For hosted agents, scope by Foundry agent name via `requests` then join to `dependencies`:
 

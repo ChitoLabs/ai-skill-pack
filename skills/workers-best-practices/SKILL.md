@@ -4,6 +4,7 @@ description: "Trigger: workers-best-practices, Reviews and authors Cloudflare Wo
 license: Apache-2.0
 metadata:
   author: cloudflare
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudflare/skills/workers-best-practices"
   github_url: "https://github.com/cloudflare/skills/tree/HEAD/skills/workers-best-practices"

@@ -1,4 +1,4 @@
-# Claude API — PHP
+# Claude API - PHP
 
 > **Note:** The PHP SDK is the official Anthropic SDK for PHP. A beta tool runner is available via `$client->beta->messages->toolRunner()`. Structured output helpers are supported via `StructuredOutputModel` classes. Agent SDK is not available. Bedrock, Vertex AI, and Foundry clients are supported.
 
@@ -22,7 +22,7 @@ $client = new Client(apiKey: getenv("ANTHROPIC_API_KEY"));
 ```php
 use Anthropic\Bedrock;
 
-// Constructor is private — use the static factory. Reads AWS credentials from env.
+// Constructor is private - use the static factory. Reads AWS credentials from env.
 $client = Bedrock\Client::fromEnvironment(region: 'us-east-1');
 ```
 
@@ -116,7 +116,7 @@ foreach ($stream as $event) {
 
 ### Tool Runner (Beta)
 
-**Beta:** The PHP SDK provides a tool runner via `$client->beta->messages->toolRunner()`. Define tools with `BetaRunnableTool` — a definition array plus a `run` closure:
+**Beta:** The PHP SDK provides a tool runner via `$client->beta->messages->toolRunner()`. Define tools with `BetaRunnableTool` - a definition array plus a `run` closure:
 
 ```php
 use Anthropic\Lib\Tools\BetaRunnableTool;
@@ -156,7 +156,7 @@ foreach ($runner as $message) {
 
 ### Manual Loop
 
-Tools are passed as arrays. **The SDK uses camelCase keys** (`inputSchema`, `toolUseID`, `stopReason`) and auto-maps to the API's snake_case on the wire — since v0.5.0. See [shared tool use concepts](../shared/tool-use-concepts.md) for the loop pattern.
+Tools are passed as arrays. **The SDK uses camelCase keys** (`inputSchema`, `toolUseID`, `stopReason`) and auto-maps to the API's snake_case on the wire - since v0.5.0. See [shared tool use concepts](../shared/tool-use-concepts.md) for the loop pattern.
 
 ```php
 use Anthropic\Messages\ToolUseBlock;
@@ -188,9 +188,9 @@ while ($response->stopReason === 'tool_use') {  // camelCase property
     $toolResults = [];
     foreach ($response->content as $block) {
         if ($block instanceof ToolUseBlock) {
-            // $block->name  : string               — tool name to dispatch on
-            // $block->input : array<string,mixed>  — parsed JSON input
-            // $block->id    : string               — pass back as toolUseID
+            // $block->name  : string               - tool name to dispatch on
+            // $block->input : array<string,mixed>  - parsed JSON input
+            // $block->id    : string               - pass back as toolUseID
             $result = executeYourTool($block->name, $block->input);
             $toolResults[] = [
                 'type' => 'tool_result',
@@ -245,7 +245,7 @@ $message = $client->messages->create(
 foreach ($message->content as $block) {
     if ($block instanceof ThinkingBlock) {
         echo "Thinking:\n{$block->thinking}\n\n";
-        // $block->signature is an opaque string — preserve verbatim if
+        // $block->signature is an opaque string - preserve verbatim if
         // passing thinking blocks back in multi-turn conversations
     } elseif ($block->type === 'text') {
         echo "Answer: {$block->text}\n";
@@ -353,7 +353,7 @@ foreach ($message->content as $block) {
 
 ## Beta Features & Server-Side Tools
 
-**`betas:` is NOT a param on `$client->messages->create()`** — it only exists on the beta namespace. Use it for features that need an explicit opt-in header:
+**`betas:` is NOT a param on `$client->messages->create()`** - it only exists on the beta namespace. Use it for features that need an explicit opt-in header:
 
 ```php
 use Anthropic\Beta\Messages\BetaRequestMCPServerURLDefinition;
@@ -372,4 +372,4 @@ $response = $client->beta->messages->create(
 );
 ```
 
-**Server-side tools** (bash, web_search, text_editor, code_execution) are GA and work on both paths — `Anthropic\Messages\ToolBash20250124` / `WebSearchTool20260209` / `ToolTextEditor20250728` / `CodeExecutionTool20260120` for non-beta, `Anthropic\Beta\Messages\BetaToolBash20250124` / `BetaWebSearchTool20260209` / `BetaToolTextEditor20250728` / `BetaCodeExecutionTool20260120` for beta. No `betas:` header needed for these.
+**Server-side tools** (bash, web_search, text_editor, code_execution) are GA and work on both paths - `Anthropic\Messages\ToolBash20250124` / `WebSearchTool20260209` / `ToolTextEditor20250728` / `CodeExecutionTool20260120` for non-beta, `Anthropic\Beta\Messages\BetaToolBash20250124` / `BetaWebSearchTool20260209` / `BetaToolTextEditor20250728` / `BetaCodeExecutionTool20260120` for beta. No `betas:` header needed for these.

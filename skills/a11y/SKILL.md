@@ -45,6 +45,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
-- `references/wcag-checklist.md` — preserved source companion file.
-- `references/widget-patterns.md` — preserved source companion file.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/wcag-checklist.md` - preserved source companion file.
+- `references/widget-patterns.md` - preserved source companion file.

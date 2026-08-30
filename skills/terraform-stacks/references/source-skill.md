@@ -5,7 +5,7 @@ license: Apache-2.0
 metadata:
   copyright: Copyright IBM Corp. 2026
   version: 0.0.1
-  author: hashicorp
+  author: midudev
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/terraform-stacks"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/terraform-stacks"
 ---

@@ -1,6 +1,6 @@
 # Session Management
 
-Manage hosted agent sessions — isolated compute environments that provide persistent state across invocations.
+Manage hosted agent sessions - isolated compute environments that provide persistent state across invocations.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Session IDs must match the pattern `^[A-Za-z0-9_-]{8,128}$`.
 
 - If you provide a `sessionId` to `session_create`, it must conform to this pattern
 - If you omit `sessionId`, the platform auto-generates one
-- Store the returned `sessionId` — it is required for all subsequent operations
+- Store the returned `sessionId` - it is required for all subsequent operations
 
 ## MCP Tool Details
 
@@ -73,7 +73,7 @@ Use `session_list` to enumerate sessions:
 | `after` | ❌ | Cursor for forward pagination |
 | `before` | ❌ | Cursor for backward pagination |
 
-> ⚠️ **Warning:** `after` and `before` are mutually exclusive — do not pass both.
+> ⚠️ **Warning:** `after` and `before` are mutually exclusive - do not pass both.
 
 ## Session vs Conversation
 
@@ -88,9 +88,9 @@ Use `session_list` to enumerate sessions:
 
 ## Best Practices
 
-1. **Create sessions explicitly** — Always use `session_create` before invoking a hosted agent. Do not rely on implicit session creation.
-2. **Reuse sessions** — Keep the same session for related multi-turn interactions to preserve agent state.
-3. **Clean up when done** — Delete sessions after use to release compute resources and avoid quota consumption.
-4. **Handle expiry** — Sessions expire based on platform policies. If `session_get` returns a non-running state, create a new session.
-5. **Version awareness** — The platform auto-resolves the agent version at session creation time. If you need a specific version, ensure it is active before creating the session.
-6. **Debug with logstream** — Use `session_logstream` to stream stdout/stderr from a running session for troubleshooting.
+1. **Create sessions explicitly** - Always use `session_create` before invoking a hosted agent. Do not rely on implicit session creation.
+2. **Reuse sessions** - Keep the same session for related multi-turn interactions to preserve agent state.
+3. **Clean up when done** - Delete sessions after use to release compute resources and avoid quota consumption.
+4. **Handle expiry** - Sessions expire based on platform policies. If `session_get` returns a non-running state, create a new session.
+5. **Version awareness** - The platform auto-resolves the agent version at session creation time. If you need a specific version, ensure it is active before creating the session.
+6. **Debug with logstream** - Use `session_logstream` to stream stdout/stderr from a running session for troubleshooting.

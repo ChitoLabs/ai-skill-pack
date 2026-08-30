@@ -1,6 +1,6 @@
 ---
 name: clerk-vue-patterns
-description: "Trigger: clerk-vue-patterns, 'Vue 3 patterns with Clerk — composables (useAuth, useUser,. Preserve source workflow with portable agent instructions."
+description: "Trigger: clerk-vue-patterns, 'Vue 3 patterns with Clerk - composables (useAuth, useUser,. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
   author: clerk
@@ -11,7 +11,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `clerk-vue-patterns` or the preserved source description: 'Vue 3 patterns with Clerk — composables (useAuth, useUser,
+Use this skill when the user request matches `clerk-vue-patterns` or the preserved source description: 'Vue 3 patterns with Clerk - composables (useAuth, useUser,
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

@@ -1,4 +1,4 @@
-# Preset Deployment Workflow — Step-by-Step
+# Preset Deployment Workflow - Step-by-Step
 
 Condensed implementation reference for preset (optimal region) model deployment. See [SKILL.md](../../../../source-skill.md) for overview.
 
@@ -121,7 +121,7 @@ PROJECTS_IN_REGION=$(az cognitiveservices account list \
   --output json)
 ```
 
-**If no projects exist — create new:**
+**If no projects exist - create new:**
 
 ```bash
 az cognitiveservices account create \
@@ -149,7 +149,7 @@ Generate unique deployment name using `scripts/generate_deployment_name.sh`:
 DEPLOYMENT_NAME=$(bash scripts/generate_deployment_name.sh "$ACCOUNT_NAME" "$RESOURCE_GROUP" "$MODEL_NAME")
 ```
 
-Calculate capacity — 50% of available, minimum 50 TPM:
+Calculate capacity - 50% of available, minimum 50 TPM:
 
 ```bash
 SELECTED_CAPACITY=$(echo "$ALL_REGIONS_JSON" | jq -r ".value[] | select(.location==\"$SELECTED_REGION\" and .properties.skuName==\"GlobalStandard\") | .properties.availableCapacity")

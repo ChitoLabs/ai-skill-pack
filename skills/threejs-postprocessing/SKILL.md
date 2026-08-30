@@ -3,7 +3,8 @@ name: threejs-postprocessing
 description: "Trigger: threejs-postprocessing, Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: cloudai-x
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-postprocessing"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-postprocessing"

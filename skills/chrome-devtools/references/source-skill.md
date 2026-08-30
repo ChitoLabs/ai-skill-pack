@@ -3,7 +3,7 @@ name: chrome-devtools
 description: Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration).
 license: Apache-2.0
 metadata:
-  author: chromedevtools
+  author: wenerme
   version: 0.1
   skills_sh_url: "https://www.skills.sh/chromedevtools/chrome-devtools-mcp/chrome-devtools"
   github_url: "https://github.com/wenerme/ai/tree/HEAD/skills/chrome-devtools"

@@ -103,7 +103,7 @@ slide.addShape(pres.shapes.RECTANGLE, {
 });
 
 // Rounded rectangle (rectRadius only works with ROUNDED_RECTANGLE, not RECTANGLE)
-// ⚠️ Don't pair with rectangular accent overlays — they won't cover rounded corners. Use RECTANGLE instead.
+// ⚠️ Don't pair with rectangular accent overlays - they won't cover rounded corners. Use RECTANGLE instead.
 slide.addShape(pres.shapes.ROUNDED_RECTANGLE, {
   x: 1, y: 1, w: 3, h: 2,
   fill: { color: "FFFFFF" }, rectRadius: 0.1
@@ -122,13 +122,13 @@ Shadow options:
 | Property | Type | Range | Notes |
 |----------|------|-------|-------|
 | `type` | string | `"outer"`, `"inner"` | |
-| `color` | string | 6-char hex (e.g. `"000000"`) | No `#` prefix, no 8-char hex — see Common Pitfalls |
+| `color` | string | 6-char hex (e.g. `"000000"`) | No `#` prefix, no 8-char hex - see Common Pitfalls |
 | `blur` | number | 0-100 pt | |
-| `offset` | number | 0-200 pt | **Must be non-negative** — negative values corrupt the file |
+| `offset` | number | 0-200 pt | **Must be non-negative** - negative values corrupt the file |
 | `angle` | number | 0-359 degrees | Direction the shadow falls (135 = bottom-right, 270 = upward) |
 | `opacity` | number | 0.0-1.0 | Use this for transparency, never encode in color string |
 
-To cast a shadow upward (e.g. on a footer bar), use `angle: 270` with a positive offset — do **not** use a negative offset.
+To cast a shadow upward (e.g. on a footer bar), use `angle: 270` with a positive offset - do **not** use a negative offset.
 
 **Note**: Gradient fills are not natively supported. Use a gradient image as a background instead.
 

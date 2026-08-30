@@ -5,8 +5,8 @@ Skill for working with Power BI items (semantic models, reports, dashboards) usi
 ## When to Load
 
 Load this skill when:
-- Working with semantic models (datasets) — refresh, DAX, TMDL
-- Managing Power BI reports — export, rebind, clone
+- Working with semantic models (datasets) - refresh, DAX, TMDL
+- Managing Power BI reports - export, rebind, clone
 - Querying data via DAX
 - Managing gateways and data sources
 - Troubleshooting refresh failures

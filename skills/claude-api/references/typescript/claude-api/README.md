@@ -1,4 +1,4 @@
-# Claude API — TypeScript
+# Claude API - TypeScript
 
 ## Installation
 
@@ -28,7 +28,7 @@ const response = await client.messages.create({
   max_tokens: 16000,
   messages: [{ role: "user", content: "What is the capital of France?" }],
 });
-// response.content is ContentBlock[] — a discriminated union. Narrow by .type
+// response.content is ContentBlock[] - a discriminated union. Narrow by .type
 // before accessing .text (TypeScript will error on content[0].text without this).
 for (const block of response.content) {
   if (block.type === "text") {
@@ -105,7 +105,7 @@ const response = await client.messages.create({
 
 ## Prompt Caching
 
-**Caching is a prefix match** — any byte change anywhere in the prefix invalidates everything after it. For placement patterns, architectural guidance (frozen system prompt, deterministic tool order, where to put volatile content), and the silent-invalidator audit checklist, read `shared/prompt-caching.md`.
+**Caching is a prefix match** - any byte change anywhere in the prefix invalidates everything after it. For placement patterns, architectural guidance (frozen system prompt, deterministic tool order, where to put volatile content), and the silent-invalidator audit checklist, read `shared/prompt-caching.md`.
 
 ### Automatic Caching (Recommended)
 
@@ -162,7 +162,7 @@ console.log(response.usage.cache_read_input_tokens);     // tokens served from c
 console.log(response.usage.input_tokens);                // uncached tokens (full cost)
 ```
 
-If `cache_read_input_tokens` is zero across repeated identical-prefix requests, a silent invalidator is at work — `Date.now()` or a UUID in the system prompt, non-deterministic key ordering, or a varying tool set. See `shared/prompt-caching.md` for the full audit table.
+If `cache_read_input_tokens` is zero across repeated identical-prefix requests, a silent invalidator is at work - `Date.now()` or a UUID in the system prompt, non-deterministic key ordering, or a varying tool set. See `shared/prompt-caching.md` for the full audit table.
 
 ---
 
@@ -196,7 +196,7 @@ for (const block of response.content) {
 
 ## Error Handling
 
-Use the SDK's typed exception classes — never check error messages with string matching:
+Use the SDK's typed exception classes - never check error messages with string matching:
 
 ```typescript
 import Anthropic from "@anthropic-ai/sdk";
@@ -222,7 +222,7 @@ All classes extend `Anthropic.APIError` with a typed `status` field. Check from 
 
 ## Multi-Turn Conversations
 
-The API is stateless — send the full conversation history each time. Use `Anthropic.MessageParam[]` to type the messages array:
+The API is stateless - send the full conversation history each time. Use `Anthropic.MessageParam[]` to type the messages array:
 
 ```typescript
 const messages: Anthropic.MessageParam[] = [
@@ -240,15 +240,15 @@ const response = await client.messages.create({
 
 **Rules:**
 
-- Consecutive same-role messages are allowed — the API combines them into a single turn
+- Consecutive same-role messages are allowed - the API combines them into a single turn
 - First message must be `user`
-- Use SDK types (`Anthropic.MessageParam`, `Anthropic.Message`, `Anthropic.Tool`, etc.) for all API data structures — don't redefine equivalent interfaces
+- Use SDK types (`Anthropic.MessageParam`, `Anthropic.Message`, `Anthropic.Tool`, etc.) for all API data structures - don't redefine equivalent interfaces
 
 ---
 
 ### Compaction (long conversations)
 
-> **Beta, Opus 4.7, Opus 4.6, and Sonnet 4.6.** When conversations approach the 200K context window, compaction automatically summarizes earlier context server-side. The API returns a `compaction` block; you must pass it back on subsequent requests — append `response.content`, not just the text.
+> **Beta, Opus 4.7, Opus 4.6, and Sonnet 4.6.** When conversations approach the 200K context window, compaction automatically summarizes earlier context server-side. The API returns a `compaction` block; you must pass it back on subsequent requests - append `response.content`, not just the text.
 
 ```typescript
 import Anthropic from "@anthropic-ai/sdk";
@@ -269,7 +269,7 @@ async function chat(userMessage: string): Promise<string> {
     },
   });
 
-  // Append full content — compaction blocks must be preserved
+  // Append full content - compaction blocks must be preserved
   messages.push({ role: "assistant", content: response.content });
 
   const textBlock = response.content.find(
@@ -293,11 +293,11 @@ The `stop_reason` field in the response indicates why the model stopped generati
 | Value           | Meaning                                                         |
 | --------------- | --------------------------------------------------------------- |
 | `end_turn`      | Claude finished its response naturally                          |
-| `max_tokens`    | Hit the `max_tokens` limit — increase it or use streaming       |
+| `max_tokens`    | Hit the `max_tokens` limit - increase it or use streaming       |
 | `stop_sequence` | Hit a custom stop sequence                                      |
-| `tool_use`      | Claude wants to call a tool — execute it and continue           |
+| `tool_use`      | Claude wants to call a tool - execute it and continue           |
 | `pause_turn`    | Model paused and can be resumed (agentic flows)                 |
-| `refusal`       | Claude refused for safety reasons — output may not match schema |
+| `refusal`       | Claude refused for safety reasons - output may not match schema |
 
 ---
 
@@ -306,7 +306,7 @@ The `stop_reason` field in the response indicates why the model stopped generati
 ### 1. Use Prompt Caching for Repeated Context
 
 ```typescript
-// Automatic caching (simplest — caches the last cacheable block)
+// Automatic caching (simplest - caches the last cacheable block)
 const response = await client.messages.create({
   model: "claude-opus-4-7",
   max_tokens: 16000,

@@ -225,9 +225,9 @@ foundry_knowledge_index_schema(endpoint="<project-endpoint>", index="my-index")
 
 ## Best Practices
 
-1. **Never hardcode credentials** — use environment variables and `python-dotenv`
+1. **Never hardcode credentials** - use environment variables and `python-dotenv`
 2. **Check `run.status`** and handle `HttpResponseError` exceptions
-3. **Reuse `AIProjectClient`** instances — don't create new ones per request
+3. **Reuse `AIProjectClient`** instances - don't create new ones per request
 4. **Use type hints** in custom functions for better tool integration
 5. **Use context managers** for agent cleanup
 
@@ -243,9 +243,9 @@ try:
     )
 except HttpResponseError as e:
     if e.status_code == 429:
-        print("Rate limited — wait and retry with exponential backoff.")
+        print("Rate limited - wait and retry with exponential backoff.")
     elif e.status_code == 401:
-        print("Authentication failed — check credentials.")
+        print("Authentication failed - check credentials.")
     else:
         print(f"Error: {e.message}")
 ```

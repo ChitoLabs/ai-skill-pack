@@ -18,21 +18,21 @@ The overall mood is **airy yet grounded**, creating an aspirational aesthetic th
 ## 2. Color Palette & Roles
 
 ### Primary Foundation
-- **Warm Barely-There Cream** (#FCFAFA) – Primary background color. Creates an almost imperceptible warmth that feels more inviting than pure white, serving as the serene canvas for the entire experience.
-- **Crisp Very Light Gray** (#F5F5F5) – Secondary surface color used for card backgrounds and content areas. Provides subtle visual separation while maintaining the airy, ethereal quality.
+- **Warm Barely-There Cream** (#FCFAFA) - Primary background color. Creates an almost imperceptible warmth that feels more inviting than pure white, serving as the serene canvas for the entire experience.
+- **Crisp Very Light Gray** (#F5F5F5) - Secondary surface color used for card backgrounds and content areas. Provides subtle visual separation while maintaining the airy, ethereal quality.
 
 ### Accent & Interactive
-- **Deep Muted Teal-Navy** (#294056) – The sole vibrant accent in the palette. Used exclusively for primary call-to-action buttons (e.g., "Shop Now", "View all products"), active navigation links, selected filter states, and subtle interaction highlights. This sophisticated anchor color creates visual focus points without disrupting the serene neutral foundation.
+- **Deep Muted Teal-Navy** (#294056) - The sole vibrant accent in the palette. Used exclusively for primary call-to-action buttons (e.g., "Shop Now", "View all products"), active navigation links, selected filter states, and subtle interaction highlights. This sophisticated anchor color creates visual focus points without disrupting the serene neutral foundation.
 
 ### Typography & Text Hierarchy
-- **Charcoal Near-Black** (#2C2C2C) – Primary text color for headlines and product names. Provides strong readable contrast while being softer and more refined than pure black.
-- **Soft Warm Gray** (#6B6B6B) – Secondary text used for body copy, product descriptions, and supporting metadata. Creates clear typographic hierarchy without harsh contrast.
-- **Ultra-Soft Silver Gray** (#E0E0E0) – Tertiary color for borders, dividers, and subtle structural elements. Creates separation so gentle it's almost imperceptible.
+- **Charcoal Near-Black** (#2C2C2C) - Primary text color for headlines and product names. Provides strong readable contrast while being softer and more refined than pure black.
+- **Soft Warm Gray** (#6B6B6B) - Secondary text used for body copy, product descriptions, and supporting metadata. Creates clear typographic hierarchy without harsh contrast.
+- **Ultra-Soft Silver Gray** (#E0E0E0) - Tertiary color for borders, dividers, and subtle structural elements. Creates separation so gentle it's almost imperceptible.
 
 ### Functional States (Reserved for system feedback)
-- **Success Moss** (#10B981) – Stock availability, confirmation states, positive indicators
-- **Alert Terracotta** (#EF4444) – Low stock warnings, error states, critical alerts
-- **Informational Slate** (#64748B) – Neutral system messages, informational callouts
+- **Success Moss** (#10B981) - Stock availability, confirmation states, positive indicators
+- **Alert Terracotta** (#EF4444) - Low stock warnings, error states, critical alerts
+- **Informational Slate** (#64748B) - Neutral system messages, informational callouts
 
 ## 3. Typography Rules
 
@@ -56,7 +56,7 @@ The overall mood is **airy yet grounded**, creating an aspirational aesthetic th
 ## 4. Component Stylings
 
 ### Buttons
-- **Shape:** Subtly rounded corners (8px/0.5rem radius) – approachable and modern without appearing playful or childish
+- **Shape:** Subtly rounded corners (8px/0.5rem radius) - approachable and modern without appearing playful or childish
 - **Primary CTA:** Deep Muted Teal-Navy (#294056) background with pure white text, comfortable padding (0.875rem vertical, 2rem horizontal)
 - **Hover State:** Subtle darkening to deeper navy, smooth 250ms ease-in-out transition
 - **Focus State:** Soft outer glow in the primary color for keyboard navigation accessibility

@@ -1,7 +1,7 @@
 # Instruments Trace Analysis
 
 Use this reference whenever the user references an Xcode Instruments `.trace`
-file. A target SwiftUI source file is **optional** — if provided, you can
+file. A target SwiftUI source file is **optional** - if provided, you can
 cite specific lines; without one, the trace still surfaces view names,
 hot symbols, and high-severity events that tell the user where to look.
 
@@ -51,7 +51,7 @@ python3 "${SKILL_DIR}/scripts/analyze_trace.py" \
   Use `--list-runs` to dump per-run metadata (template, duration,
   start/end dates, schemas) before analyzing.
 
-### 2. `--list-logs` — find os_log timestamps
+### 2. `--list-logs` - find os_log timestamps
 
 ```bash
 python3 "${SKILL_DIR}/scripts/analyze_trace.py" --trace <path> --list-logs \
@@ -68,7 +68,7 @@ Returns JSON `{ "logs": [...], "count": N }` where each log entry includes
 `message` (with args substituted) + raw `format_string`. All filters are
 AND-combined; `--log-message-contains` is case-insensitive substring match.
 
-### 3. `--list-signposts` — find signpost intervals
+### 3. `--list-signposts` - find signpost intervals
 
 ```bash
 python3 "${SKILL_DIR}/scripts/analyze_trace.py" --trace <path> --list-signposts \
@@ -85,7 +85,7 @@ events (and any unpaired begins) go into `events`. All filters are
 AND-combined; `--signpost-name-contains` is case-insensitive substring
 match.
 
-### 4. `--fanin-for` — who keeps invalidating this view?
+### 4. `--fanin-for` - who keeps invalidating this view?
 
 ```bash
 python3 "${SKILL_DIR}/scripts/analyze_trace.py" --trace <path> \
@@ -99,19 +99,19 @@ whose fmt string contains the substring (case-insensitive) and lists its
 top incoming source nodes ranked by edge count. Use this after the
 `swiftui` lane names an expensive view and you want to know *why it keeps
 being invalidated*. For the example above, the top source is
-`closure #1 in UserDefaultObserver.Target.GraphAttribute.send()` — the
+`closure #1 in UserDefaultObserver.Target.GraphAttribute.send()` - the
 canonical signature of an `@AppStorage` / `UserDefaults` feedback storm.
 
-## Composition pattern — scoping to a slice
+## Composition pattern - scoping to a slice
 
 When the user says something like "focus on X", "between A and B", or
 "during signpost Y", compose the three modes:
 
-1. **Discover** — call `--list-logs` or `--list-signposts` with filters
+1. **Discover** - call `--list-logs` or `--list-signposts` with filters
    that match the user's description. Pick the right entries.
-2. **Build the window** — take `time_ms` (logs) or `start_ms`/`end_ms`
+2. **Build the window** - take `time_ms` (logs) or `start_ms`/`end_ms`
    (intervals) and form `--window START:END`.
-3. **Analyse** — call the default mode with `--window`.
+3. **Analyse** - call the default mode with `--window`.
 
 Examples:
 
@@ -166,7 +166,7 @@ Examples:
                    "hang_type"|"frame_duration_ms" },
       "time_profiler_main_thread": {
         "samples_in_window": N, "samples_on_main": M,
-        "main_running_coverage_pct": 0–100,
+        "main_running_coverage_pct": 0-100,
         "hot_symbols": [ { "symbol", "samples", "weight_ms", "percent_of_main" } ]
       },
       "swiftui_overlapping_updates": [ { "view", "duration_ms", "start_ms" } ]
@@ -186,14 +186,14 @@ expectation.
 
 - **< 25% coverage** → main thread was **blocked** (I/O, lock, sync XPC,
   `Task.sleep`, waiting on an actor-isolated call). The `hot_symbols` you
-  do see are the moments main *was* executing — look there for the code
+  do see are the moments main *was* executing - look there for the code
   that *initiates* the blocking work, not the work itself. Common fix:
   move to a background executor / `nonisolated` / `Task.detached`.
 - **≥ 75% coverage** → main was **CPU-bound** the whole time. `hot_symbols`
   point directly at the expensive work. Common fixes: hoist computation
   out of view bodies, cache derived values, avoid per-frame allocation,
   debounce `onChange`.
-- **25–75%** → mix. Usually computation plus intermittent I/O; show both
+- **25-75%** → mix. Usually computation plus intermittent I/O; show both
   hot symbols and note that main was partially blocked.
 
 ### High-severity SwiftUI events → reference routing
@@ -222,7 +222,7 @@ If the user gave you a specific file, use it to confirm/cite. If they didn't, th
    symbols starting with the user's module name (or in Swift free-function
    form) as candidates. System frames (`swift_`, `dyld`, `objc_`, `CA*`,
    `CF*`, `NS*`, `__open`, `pthread*`) identify *what* the code was doing
-   but the user-code caller one frame up is typically what to fix — say
+   but the user-code caller one frame up is typically what to fix - say
    so and, if you can, suggest searching the project for callers of the
    equivalent Swift API (e.g. `__open` → `FileHandle` / `Data(contentsOf:)` /
    `JSONDecoder.decode(from: Data)` sites).
@@ -242,7 +242,7 @@ propagated to destination node" in SwiftUI's attribute graph.
 
 Signatures to watch for in `top_sources`:
 
-- **`closure #1 in UserDefaultObserver.Target.GraphAttribute.send()`** —
+- **`closure #1 in UserDefaultObserver.Target.GraphAttribute.send()`** -
   an `@AppStorage` / `UserDefaults` write is fanning out to every reader.
   If the destination list contains multiple `@AppStorage <Type>.<prop>`
   entries with thousands of edges each, you have a feedback storm. Fix
@@ -250,11 +250,11 @@ Signatures to watch for in `top_sources`:
   wrapping settings in a single `@Observable` so only genuine readers
   invalidate. Route to `references/state-management.md` and
   `references/performance-patterns.md`.
-- **`EnvironmentWriter: …`** with thousands of edges — a modifier (often
+- **`EnvironmentWriter: …`** with thousands of edges - a modifier (often
   `.hoverEffect`, custom environment keys) is applied too widely and
   being re-installed during every layout pass. Route to
   `references/view-structure.md`.
-- **`View Creation / Reuse`** as the #1 source — the hierarchy is
+- **`View Creation / Reuse`** as the #1 source - the hierarchy is
   replacing children rather than mutating in place. Look for ID
   instability (missing/unstable `.id(…)` on ForEach, type-erased
   `AnyView` wrappers, conditional structure swaps). Route to
@@ -268,21 +268,21 @@ invalidating it.
 
 Prioritise from most actionable to least:
 
-1. **Any `hangs` with `main_running_coverage_pct < 25%`** — these are
+1. **Any `hangs` with `main_running_coverage_pct < 25%`** - these are
    blocking-I/O smells; nearly always fixable by moving work off-main.
-2. **Any `hangs` with `main_running_coverage_pct ≥ 75%`** — CPU-bound
+2. **Any `hangs` with `main_running_coverage_pct ≥ 75%`** - CPU-bound
    main-thread work; fix the top `hot_symbols`.
-3. **`swiftui-causes.top_sources` with > ~1k edges** — structural
+3. **`swiftui-causes.top_sources` with > ~1k edges** - structural
    invalidation bugs (feedback storms, over-applied modifiers). These
    are often cheaper to fix than per-view optimisations and collapse
    many downstream high-severity updates at once.
 4. **`hitches` with `narrative == "Potentially expensive app update(s)"`**
-   and overlapping `swiftui_overlapping_updates` — specific views to
+   and overlapping `swiftui_overlapping_updates` - specific views to
    restructure.
-5. **`swiftui.high_severity_events`** — `onChange`, `Gesture`, or `Action
+5. **`swiftui.high_severity_events`** - `onChange`, `Gesture`, or `Action
    Callback` with `duration_ms > ~16` are frame-dropping handlers. For
    any that keep firing, run `--fanin-for` to find the source.
-6. **`swiftui.top_offenders`** — heaviest views by total body time, even
+6. **`swiftui.top_offenders`** - heaviest views by total body time, even
    without triggering hitches; candidates for view extraction or
    memoisation (`equatable`, `@ViewBuilder` extraction).
 
@@ -290,6 +290,6 @@ Prioritise from most actionable to least:
 
 After running the parser, structure your response as:
 
-1. **One-line summary** — "Found N hangs, worst Wms; K hitches; J high-severity SwiftUI updates."
-2. **Root-cause findings** — per prioritised target (see above), one paragraph with the trace evidence (coverage %, hot symbol, overlapping view) and a citation from `references/…` for the fix pattern.
-3. **Plan** — numbered, file-specific edits. Cite line numbers in the user's Swift file when you know them. Don't edit the file unless the user asked for edits.
+1. **One-line summary** - "Found N hangs, worst Wms; K hitches; J high-severity SwiftUI updates."
+2. **Root-cause findings** - per prioritised target (see above), one paragraph with the trace evidence (coverage %, hot symbol, overlapping view) and a citation from `references/…` for the fix pattern.
+3. **Plan** - numbered, file-specific edits. Cite line numbers in the user's Swift file when you know them. Don't edit the file unless the user asked for edits.

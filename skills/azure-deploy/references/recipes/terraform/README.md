@@ -19,7 +19,7 @@ Deploy to Azure using Terraform.
 | 3 | Apply | `terraform apply tfplan` |
 | 4 | Get outputs | `terraform output` |
 | 5 | Deploy app | Service-specific commands |
-| 6 | **Report** | Present deployed endpoint URLs to the user — see [Verification](verify.md) |
+| 6 | **Report** | Present deployed endpoint URLs to the user - see [Verification](verify.md) |
 
 ## Deployment Commands
 
@@ -111,7 +111,7 @@ az containerapp update `
   --image "$AcrServer/myapp:latest"
 ```
 
-> ⚠️ **Warning:** Step 2 requires the `AcrPull` role assignment to have propagated (1–5 minutes). If the update fails, wait and retry. See the [RBAC propagation health check](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check).
+> ⚠️ **Warning:** Step 2 requires the `AcrPull` role assignment to have propagated (1-5 minutes). If the update fails, wait and retry. See the [RBAC propagation health check](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check).
 
 ## References
 

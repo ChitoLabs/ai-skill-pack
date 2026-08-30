@@ -4,6 +4,7 @@ description: "Trigger: upgrading-expo, Guidelines for upgrading Expo SDK version
 license: MIT
 metadata:
   author: expo
+  adapter: LCubero
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/upgrading-expo"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/upgrading-expo"

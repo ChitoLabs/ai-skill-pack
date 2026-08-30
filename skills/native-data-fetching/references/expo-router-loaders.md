@@ -60,8 +60,8 @@ You write one function and the framework manages when and how it executes.
 
 Loaders use two packages:
 
-- **`expo-router`** — `useLoaderData` hook
-- **`expo-server`** — `LoaderFunction` type, `StatusError`, `setResponseHeaders`. Always available (dependency of `expo-router`), no install needed.
+- **`expo-router`** - `useLoaderData` hook
+- **`expo-server`** - `LoaderFunction` type, `StatusError`, `setResponseHeaders`. Always available (dependency of `expo-router`), no install needed.
 
 ## Basic Loader
 
@@ -100,7 +100,7 @@ export default function Posts() {
 }
 ```
 
-`useLoaderData` is typed via `typeof loader` — the generic parameter infers the return type.
+`useLoaderData` is typed via `typeof loader` - the generic parameter infers the return type.
 
 ## Dynamic Routes
 
@@ -328,9 +328,9 @@ When a loader throws (including `StatusError`), the nearest `ErrorBoundary` catc
 ## Best Practices
 
 - Loaders are web-only; use client-side fetching (React Query, fetch) for native
-- Loaders cannot be used in `_layout` files — only in route files
+- Loaders cannot be used in `_layout` files - only in route files
 - Use `LoaderFunction<T>` from `expo-server` to type loaders that use params
-- The request object is immutable — use optional chaining (`request?.headers`) as it may be `undefined` in static mode
+- The request object is immutable - use optional chaining (`request?.headers`) as it may be `undefined` in static mode
 - Return only JSON-serializable values (no `Date`, `Map`, `Set`, class instances, functions)
 - Use non-prefixed `process.env` vars for secrets in loaders, not `EXPO_PUBLIC_` (which is embedded in the client bundle)
 - Use `StatusError` from `expo-server` for HTTP error responses

@@ -4,6 +4,7 @@ description: "Trigger: build-dashboard, Build an interactive HTML dashboard with
 license: Apache-2.0
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/build-dashboard"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/build-dashboard"

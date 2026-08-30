@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
 
 ### Formsheet with interactive content below
 
-Use `sheetLargestUndimmedDetentIndex` (zero-indexed) to keep content behind the form sheet interactive — e.g. letting users pan a map beneath it. Setting it to `1` allows interaction at the first two detents but dims on the third.
+Use `sheetLargestUndimmedDetentIndex` (zero-indexed) to keep content behind the form sheet interactive - e.g. letting users pan a map beneath it. Setting it to `1` allows interaction at the first two detents but dims on the third.
 
 ```tsx
 // app/_layout.tsx

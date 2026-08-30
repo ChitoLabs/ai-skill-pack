@@ -4,6 +4,7 @@ description: "Trigger: expo-api-routes, Guidelines for creating API routes in Ex
 license: MIT
 metadata:
   author: expo
+  adapter: LCubero
   version: 1.0.0
   skills_sh_url: "https://skills.sh/expo/skills/expo-api-routes"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-api-routes"

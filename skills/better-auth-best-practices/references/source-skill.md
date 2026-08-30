@@ -22,7 +22,7 @@ metadata:
 3. Create `auth.ts` with database + config
 4. Create route handler for your framework
 5. Run `npx @better-auth/cli@latest migrate`
-6. Verify: call `GET /api/auth/ok` — should return `{ status: "ok" }`
+6. Verify: call `GET /api/auth/ok` - should return `{ status: "ok" }`
 
 ---
 

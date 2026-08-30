@@ -1,6 +1,6 @@
 ---
 name: n8n-mcp-tools-expert
-description: Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT — Always consult this skill before calling any n8n-mcp tool — it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, and inefficient tool usage. If the user mentions n8n, workflows, nodes, or automation and you have n8n MCP tools available, use this skill first.
+description: Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT - Always consult this skill before calling any n8n-mcp tool - it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, and inefficient tool usage. If the user mentions n8n, workflows, nodes, or automation and you have n8n MCP tools available, use this skill first.
 license: Apache-2.0
 metadata:
   author: czlonkowski
@@ -514,11 +514,11 @@ n8n_deploy_template({
 
 ### n8n_generate_workflow
 
-Generates an n8n workflow from a natural-language description via a multi-step flow with a review checkpoint. **Hosted-only** — self-hosted instances receive a redirect message rather than a workflow.
+Generates an n8n workflow from a natural-language description via a multi-step flow with a review checkpoint. **Hosted-only** - self-hosted instances receive a redirect message rather than a workflow.
 
 **Two paths:**
 
-**Path A — pick a proposal** (default; cheapest, recommended):
+**Path A - pick a proposal** (default; cheapest, recommended):
 ```javascript
 // Step 1: Get up to 5 proposals (NOT deployed)
 n8n_generate_workflow({
@@ -534,7 +534,7 @@ n8n_generate_workflow({
 // → { status: "deployed", workflow_id, workflow_name, workflow_url, node_count, node_summary }
 ```
 
-**Path B — fresh generation** (when no proposal fits):
+**Path B - fresh generation** (when no proposal fits):
 ```javascript
 // Step 1: Skip the proposal cache, get a preview (NOT deployed)
 n8n_generate_workflow({
@@ -557,8 +557,8 @@ n8n_generate_workflow({
 - Logic/flow: what transforms, branches, or aggregations are needed
 
 **Caveats:**
-- **Hosted-only** — on self-hosted, the response is `{hosted_only: true, ...}` with a redirect message
-- Generated workflows are deployed in **inactive** state — credentials must be configured in the n8n UI before activation
+- **Hosted-only** - on self-hosted, the response is `{hosted_only: true, ...}` with a redirect message
+- Generated workflows are deployed in **inactive** state - credentials must be configured in the n8n UI before activation
 - Proposals/preview live in per-MCP-session state; switching sessions loses pending state
 - Always run `n8n_validate_workflow({id})` after deployment to catch any issues
 - For self-hosted instances, fall back to `n8n_deploy_template` (curated templates) or `n8n_create_workflow` (full control)
@@ -647,7 +647,7 @@ Unified tool for managing n8n credentials. Supports full CRUD operations, schema
 
 **Actions**: `list`, `get`, `create`, `update`, `delete`, `getSchema`
 
-**Optional flag**: `includeUsage` (boolean, default `false`) — on `list` and `get`, attaches a `usedIn: [{id, name, active}]` array and `usageCount` to every credential by reverse-scanning workflows. Default behavior is unchanged when omitted.
+**Optional flag**: `includeUsage` (boolean, default `false`) - on `list` and `get`, attaches a `usedIn: [{id, name, active}]` array and `usageCount` to every credential by reverse-scanning workflows. Default behavior is unchanged when omitted.
 
 ```javascript
 // List all credentials
@@ -700,9 +700,9 @@ n8n_manage_credentials({action: "get", id: "123", includeUsage: true})
 - Remediating findings from `n8n_audit_instance` (e.g., shared/over-privileged credentials)
 
 **`includeUsage` caveats**:
-- Triggers a full workflow scan client-side (n8n's API has no native lookup) — slower on large instances, especially when scanning hundreds of workflows
+- Triggers a full workflow scan client-side (n8n's API has no native lookup) - slower on large instances, especially when scanning hundreds of workflows
 - Capped at 5000 workflows (same ceiling as `n8n_audit_instance`); archived workflows are excluded by n8n
-- A "no usages" result does **not** guarantee the credential is unused — verify before destructive actions
+- A "no usages" result does **not** guarantee the credential is unused - verify before destructive actions
 - On scan failure the response degrades gracefully: base credentials are returned with a `usageScanError` field rather than failing the whole call
 
 **Security**:
@@ -712,7 +712,7 @@ n8n_manage_credentials({action: "get", id: "123", includeUsage: true})
 
 **Best practices**:
 - Use `getSchema` before `create` to discover required fields for a credential type
-- The `data` field contains the actual secret values — provide it only on create/update
+- The `data` field contains the actual secret values - provide it only on create/update
 - Always verify credential creation by listing afterward
 - Before `delete`, run `get` with `includeUsage: true` to see what breaks
 
@@ -725,7 +725,7 @@ n8n_manage_credentials({action: "get", id: "123", includeUsage: true})
 Security audit tool that combines n8n's built-in audit with custom deep scanning of all workflows.
 
 ```javascript
-// Full audit (default — runs both built-in + custom scan)
+// Full audit (default - runs both built-in + custom scan)
 n8n_audit_instance()
 
 // Built-in audit only (specific categories)
@@ -743,24 +743,24 @@ n8n_audit_instance({
 **Built-in audit categories**: `credentials`, `database`, `nodes`, `instance`, `filesystem`
 
 **Custom deep scan checks**:
-- `hardcoded_secrets` — Detects 50+ patterns for API keys, tokens, passwords (OpenAI, AWS, Stripe, GitHub, Slack, etc.) plus PII (email, phone, credit card). Secrets are masked in output (first 6 + last 4 chars).
-- `unauthenticated_webhooks` — Flags webhook/form triggers without authentication
-- `error_handling` — Flags workflows with 3+ nodes and no error handling
-- `data_retention` — Flags workflows saving all execution data (success + failure)
+- `hardcoded_secrets` - Detects 50+ patterns for API keys, tokens, passwords (OpenAI, AWS, Stripe, GitHub, Slack, etc.) plus PII (email, phone, credit card). Secrets are masked in output (first 6 + last 4 chars).
+- `unauthenticated_webhooks` - Flags webhook/form triggers without authentication
+- `error_handling` - Flags workflows with 3+ nodes and no error handling
+- `data_retention` - Flags workflows saving all execution data (success + failure)
 
 **Parameters** (all optional):
-- `categories` — Array of built-in audit categories
-- `includeCustomScan` — Boolean (default: `true`)
-- `customChecks` — Array subset of the 4 custom checks
-- `daysAbandonedWorkflow` — Days threshold for abandoned workflow detection
+- `categories` - Array of built-in audit categories
+- `includeCustomScan` - Boolean (default: `true`)
+- `customChecks` - Array subset of the 4 custom checks
+- `daysAbandonedWorkflow` - Days threshold for abandoned workflow detection
 
 **Output**: Actionable markdown report with:
 - Summary table (critical/high/medium/low finding counts)
 - Findings grouped by workflow
 - Remediation Playbook with three sections:
-  - **Auto-fixable** — Items you can fix with tool chains (e.g., add auth to webhooks)
-  - **Requires review** — Items needing human judgment (e.g., PII detection)
-  - **Requires user action** — Items needing manual intervention (e.g., rotate exposed keys)
+  - **Auto-fixable** - Items you can fix with tool chains (e.g., add auth to webhooks)
+  - **Requires review** - Items needing human judgment (e.g., PII detection)
+  - **Requires user action** - Items needing manual intervention (e.g., rotate exposed keys)
 
 ---
 
@@ -908,7 +908,7 @@ validate_node({nodeType: "nodes-base.webhook", config: {}, mode: "minimal"})
 ## Best Practices
 
 ### Do
-- For simple workflows (<=5 nodes), use MCP tools directly — don't over-engineer the investigation
+- For simple workflows (<=5 nodes), use MCP tools directly - don't over-engineer the investigation
 - Use `patchNodeField` for surgical edits to Code node content instead of replacing the entire node
 - Use `get_node({detail: "standard"})` for most use cases
 - Specify validation profile explicitly (`profile: "runtime"`)

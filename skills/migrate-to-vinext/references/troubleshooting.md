@@ -53,7 +53,7 @@ imported from \node_modules.pnpm\validator@13.15.26\node_modules\validator\es\li
 
 **vinext Fix:** vinext sets `noExternal: true` in all server environments (RSC and SSR), which forces all dependencies through Vite's transform pipeline. This resolves extensionless import issues automatically.
 
-**No configuration needed** — this is the default behavior.
+**No configuration needed** - this is the default behavior.
 
 ## App Router vs Pages Router Issues
 

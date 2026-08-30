@@ -4,6 +4,7 @@ description: "Trigger: discord-bot-architect, Specialized skill for building pro
 license: Apache-2.0
 metadata:
   author: sickn33
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/discord-bot-architect"
   github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/discord-bot-architect"

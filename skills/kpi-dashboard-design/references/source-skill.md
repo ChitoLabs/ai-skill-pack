@@ -455,7 +455,7 @@ The dashboard likely tracks system uptime (a lagging indicator) but not user-fac
 | Error rate 0.1% | Task completion rate |
 | Queue depth normal | Support ticket volume |
 
-### Retention cohort looks flat — no variation between cohorts
+### Retention cohort looks flat - no variation between cohorts
 
 Check whether the cohort query is partitioning by signup month correctly. A common bug is using `created_at::date` instead of `DATE_TRUNC('month', created_at)`, which groups by day and produces cohorts too small to show trends:
 

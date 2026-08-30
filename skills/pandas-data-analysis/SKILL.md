@@ -4,6 +4,7 @@ description: "Trigger: pandas-data-analysis, Master data manipulation, analysis,
 license: Apache-2.0
 metadata:
   author: pluginagentmarketplace
+  adapter: LCubero
   version: 2.1.0
   skills_sh_url: "https://skills.sh/pluginagentmarketplace/custom-plugin-python/pandas-data-analysis"
   github_url: "https://github.com/pluginagentmarketplace/custom-plugin-python/tree/HEAD/skills/pandas-data-analysis"

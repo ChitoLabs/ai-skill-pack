@@ -4,14 +4,14 @@ platform: Snapchat
 tags: snapchat, social-media, image-sizes, spotlight, stories, ads, filters
 ---
 
-# Snapchat Image & Video Sizes — 2025
+# Snapchat Image & Video Sizes - 2025
 
 ## Content
 
 | Name | Size (px) | Aspect | Notes |
 |---|---|---|---|
 | Snap | 1080 × 1920 | 9:16 | |
-| Spotlight | 1080 × 1920 | 9:16 | 5–60 seconds |
+| Spotlight | 1080 × 1920 | 9:16 | 5-60 seconds |
 | Story | 1080 × 1920 | 9:16 | |
 
 ## Ads
@@ -30,5 +30,5 @@ tags: snapchat, social-media, image-sizes, spotlight, stories, ads, filters
 - **Videos:** MP4 or MOV, H.264
 - **Max image file size:** 5 MB
 - **Max video file size:** 32 MB
-- **Video length:** 3–180 seconds (organic), 3–180 seconds (ads)
-- **Frame rate:** 30–60 fps recommended
+- **Video length:** 3-180 seconds (organic), 3-180 seconds (ads)
+- **Frame rate:** 30-60 fps recommended

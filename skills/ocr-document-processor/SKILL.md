@@ -4,6 +4,7 @@ description: "Trigger: ocr-document-processor, Extract text and structure from s
 license: Apache-2.0
 metadata:
   author: dkyazzentwatwa
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/dkyazzentwatwa/chatgpt-skills/ocr-document-processor"
   github_url: "https://github.com/dkyazzentwatwa/chatgpt-skills/tree/HEAD/ocr-document-processor"
@@ -47,7 +48,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/.DS_Store` - preserved source companion file.
 - `references/agents/openai.yaml` - preserved source companion file.
 - `scripts/business_card_scanner.py` - preserved source companion file.
 - `scripts/ocr_processor.py` - preserved source companion file.

@@ -4,6 +4,7 @@ description: "Trigger: kpi-dashboard-design, Design effective KPI dashboards wit
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/kpi-dashboard-design"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/business-analytics/skills/kpi-dashboard-design"

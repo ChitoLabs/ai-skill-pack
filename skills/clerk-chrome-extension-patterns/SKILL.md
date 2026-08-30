@@ -3,7 +3,8 @@ name: clerk-chrome-extension-patterns
 description: "Trigger: clerk-chrome-extension-patterns, 'Chrome Extension auth with @clerk/chrome-extension -- popup/sidepanel. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: clerk
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/clerk/skills/clerk-chrome-extension-patterns"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/clerk-chrome-extension-patterns"

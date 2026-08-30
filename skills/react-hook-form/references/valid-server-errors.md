@@ -7,7 +7,7 @@ tags: valid, server-errors, setError, async, error-handling
 
 ## Surface Server Errors via setError('root.serverError', ...)
 
-`handleSubmit` does not catch errors thrown inside async submit handlers — it logs them and silently leaves the form unrecoverable (`isSubmitting` stays `true` if you `throw`). The canonical pattern is to `try/catch` inside the submit handler and route API failures into `setError`. Use field-level `setError(name, ...)` when the server tells you which field is wrong; use `setError('root.serverError', ...)` for general failures (network error, 500, "Account is locked").
+`handleSubmit` does not catch errors thrown inside async submit handlers - it logs them and silently leaves the form unrecoverable (`isSubmitting` stays `true` if you `throw`). The canonical pattern is to `try/catch` inside the submit handler and route API failures into `setError`. Use field-level `setError(name, ...)` when the server tells you which field is wrong; use `setError('root.serverError', ...)` for general failures (network error, 500, "Account is locked").
 
 **Incorrect (server error is thrown, swallowed, and form is now stuck):**
 
@@ -58,7 +58,7 @@ function LoginForm() {
       }
       redirect('/dashboard')
     } catch {
-      setError('root.serverError', { type: 'network', message: 'Network error — please retry' })
+      setError('root.serverError', { type: 'network', message: 'Network error - please retry' })
     }
   }
 
@@ -78,8 +78,8 @@ function LoginForm() {
 ```
 
 **Key details:**
-- Root-level errors live under `errors.root.{key}` — pick any key (`serverError`, `network`, `rateLimit`) and read it back the same way
-- Root errors **persist across submissions** until you call `clearErrors('root.serverError')` — clear at the start of each submit, or rely on the next resolver pass to overwrite
-- Always `try/catch` async submit handlers. `handleSubmit` will not surface thrown errors, and `isSubmitting` only resets when the handler returns (resolves), not when it throws — see also `formstate-async-submit-lifecycle`
+- Root-level errors live under `errors.root.{key}` - pick any key (`serverError`, `network`, `rateLimit`) and read it back the same way
+- Root errors **persist across submissions** until you call `clearErrors('root.serverError')` - clear at the start of each submit, or rely on the next resolver pass to overwrite
+- Always `try/catch` async submit handlers. `handleSubmit` will not surface thrown errors, and `isSubmitting` only resets when the handler returns (resolves), not when it throws - see also `formstate-async-submit-lifecycle`
 
-Reference: [setError](https://react-hook-form.com/docs/useform/seterror) · [Discussion #9691 — Handle global/server errors](https://github.com/orgs/react-hook-form/discussions/9691)
+Reference: [setError](https://react-hook-form.com/docs/useform/seterror) · [Discussion #9691 - Handle global/server errors](https://github.com/orgs/react-hook-form/discussions/9691)

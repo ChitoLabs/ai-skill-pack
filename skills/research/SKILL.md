@@ -4,6 +4,7 @@ description: "Trigger: research, primary-source investigation, docs lookup. Inve
 license: MIT
 metadata:
   author: mattpocock
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/mattpocock/skills/research"
   github_url: "https://github.com/mattpocock/skills/tree/main/skills/engineering/research"

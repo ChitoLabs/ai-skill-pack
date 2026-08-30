@@ -3,7 +3,7 @@ name: dotnet-best-practices
 description: "Ensure .NET/C# code meets best practices for the solution/project."
 license: Apache-2.0
 metadata:
-  author: github
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/dotnet-best-practices"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dotnet-best-practices"

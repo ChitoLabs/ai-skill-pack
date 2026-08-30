@@ -4,6 +4,7 @@ description: "Trigger: modern-javascript-patterns. Preserve source workflow with
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/modern-javascript-patterns"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/javascript-typescript/skills/modern-javascript-patterns"

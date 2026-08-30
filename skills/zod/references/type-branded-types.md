@@ -7,7 +7,7 @@ tags: type, brand, domain, nominal
 
 ## Use Branded Types for Domain Safety
 
-Plain strings and numbers are interchangeable in TypeScript's structural type system—a `userId` can be passed where an `orderId` is expected. Zod's `.brand()` creates nominal types that prevent mixing up semantically different values.
+Plain strings and numbers are interchangeable in TypeScript's structural type system-a `userId` can be passed where an `orderId` is expected. Zod's `.brand()` creates nominal types that prevent mixing up semantically different values.
 
 **Incorrect (plain IDs are interchangeable):**
 

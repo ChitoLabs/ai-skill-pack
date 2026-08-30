@@ -148,7 +148,7 @@ public class MarketService {
   }
 }
 
-// PASS: [QUARKUS] Package-private field injection (acceptable in Quarkus — avoids proxy issues)
+// PASS: [QUARKUS] Package-private field injection (acceptable in Quarkus - avoids proxy issues)
 @ApplicationScoped
 public class MarketService {
   @Inject
@@ -160,7 +160,7 @@ public class MarketService {
 private MarketRepository marketRepository; // use constructor injection
 
 // FAIL: [QUARKUS] @Singleton when interception or lazy init is needed
-@Singleton // non-proxyable — use @ApplicationScoped instead
+@Singleton // non-proxyable - use @ApplicationScoped instead
 public class MarketService {}
 ```
 
@@ -185,14 +185,14 @@ public Uni<OrderConfirmation> placeOrder(OrderRequest req) {
 
 // FAIL: Blocking call inside a Uni/Multi pipeline
 public Uni<Market> find(String slug) {
-  Market m = Market.find("slug", slug).firstResult(); // BLOCKING — breaks event loop
+  Market m = Market.find("slug", slug).firstResult(); // BLOCKING - breaks event loop
   return Uni.createFrom().item(m);
 }
 
 // FAIL: Subscribing more than once to a shared Uni
 Uni<Market> shared = fetchMarket(slug);
 shared.subscribe().with(m -> log(m));
-shared.subscribe().with(m -> cache(m)); // double subscribe — use Uni.memoize()
+shared.subscribe().with(m -> cache(m)); // double subscribe - use Uni.memoize()
 ```
 
 ## Exceptions
@@ -292,9 +292,9 @@ src/test/java/... (mirrors main)
 - Magic numbers → named constants
 - Static mutable state → prefer dependency injection
 - Silent catch blocks → log and act or rethrow
-- **[QUARKUS]**: `@Singleton` where `@ApplicationScoped` is intended — breaks proxying and interception
-- **[QUARKUS]**: Mixing `quarkus-resteasy-reactive` and `quarkus-resteasy` (classic) — pick one stack
-- **[QUARKUS]**: Panache active-record + repository pattern in the same bounded context — pick one
+- **[QUARKUS]**: `@Singleton` where `@ApplicationScoped` is intended - breaks proxying and interception
+- **[QUARKUS]**: Mixing `quarkus-resteasy-reactive` and `quarkus-resteasy` (classic) - pick one stack
+- **[QUARKUS]**: Panache active-record + repository pattern in the same bounded context - pick one
 
 ## Logging
 
@@ -355,7 +355,7 @@ int maxPageSize;
 - Plain JUnit 5 + Mockito for unit tests (no `@QuarkusTest`)
 - `@QuarkusTest` reserved for CDI integration tests
 - `@InjectMock` for replacing CDI beans in integration tests
-- Dev Services for database/Kafka/Redis — avoid manual Testcontainers setup when Dev Services suffice
+- Dev Services for database/Kafka/Redis - avoid manual Testcontainers setup when Dev Services suffice
 - `@QuarkusTestResource` for custom external service lifecycle
 
 ```java

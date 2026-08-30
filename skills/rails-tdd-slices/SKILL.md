@@ -3,9 +3,9 @@ name: rails-tdd-slices
 description: "Trigger: rails-tdd-slices, >. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: igmarin
+  author: unknown
+  adapter: LCubero
   version: 0.1
-  skills_sh_url: "https://skills.sh/igmarin/rails-agent-skills/rails-tdd-slices"
 ---
 
 ## Activation Contract

@@ -15,7 +15,7 @@ Vite 6+: Configure as many environments as needed (browser, node server, edge se
 
 ## Basic Configuration
 
-For SPA/MPA, nothing changes—options apply to the implicit `client` environment:
+For SPA/MPA, nothing changes-options apply to the implicit `client` environment:
 
 ```ts
 export default defineConfig({
@@ -82,7 +82,7 @@ Example: Cloudflare's Vite plugin runs code in `workerd` runtime during developm
 
 ## When to Use
 
-- **End users**: Usually don't need to configure—frameworks handle it
+- **End users**: Usually don't need to configure-frameworks handle it
 - **Plugin authors**: Use for environment-aware transformations
 - **Framework authors**: Create custom environments for their runtime needs
 

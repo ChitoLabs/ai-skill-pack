@@ -4,6 +4,7 @@ description: "Trigger: neon-postgres, Guides and best practices for working with
 license: Apache-2.0
 metadata:
   author: neondatabase
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/neondatabase/agent-skills/neon-postgres"
   github_url: "https://github.com/neondatabase/agent-skills/tree/HEAD/skills/neon-postgres"

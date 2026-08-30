@@ -46,4 +46,4 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 ## References
 
-- `references/source-skill.md` — preserved upstream skill body and domain workflow.
+- `references/source-skill.md` - preserved upstream skill body and domain workflow.

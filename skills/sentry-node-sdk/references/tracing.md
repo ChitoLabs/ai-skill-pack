@@ -1,4 +1,4 @@
-# Tracing — Sentry Node.js SDK
+# Tracing - Sentry Node.js SDK
 
 > Minimum SDK: `@sentry/node` ≥8.0.0 (Node.js, Bun)  
 > `@sentry/deno` for Deno runtime  
@@ -11,12 +11,12 @@
 
 `@sentry/node` v8 is **built on OpenTelemetry natively**. When you call `Sentry.init()`, it registers:
 
-- **`SentrySpanProcessor`** — captures OTel spans and sends them to Sentry
-- **`SentryPropagator`** — injects/extracts `sentry-trace` and `baggage` headers
-- **`SentrySampler`** — applies `tracesSampleRate` / `tracesSampler` decisions
-- **`SentryContextManager`** — manages active span context via AsyncLocalStorage
+- **`SentrySpanProcessor`** - captures OTel spans and sends them to Sentry
+- **`SentryPropagator`** - injects/extracts `sentry-trace` and `baggage` headers
+- **`SentrySampler`** - applies `tracesSampleRate` / `tracesSampler` decisions
+- **`SentryContextManager`** - manages active span context via AsyncLocalStorage
 
-This means **any OTel-compatible library** (custom or third-party) automatically produces spans visible in Sentry — no Sentry-specific code needed in those libraries.
+This means **any OTel-compatible library** (custom or third-party) automatically produces spans visible in Sentry - no Sentry-specific code needed in those libraries.
 
 ---
 
@@ -34,11 +34,11 @@ Sentry.init({
 });
 ```
 
-> **To disable tracing entirely:** omit both `tracesSampleRate` and `tracesSampler`. Setting `tracesSampleRate: 0` activates the OTel machinery but drops all traces — not the same as disabled.
+> **To disable tracing entirely:** omit both `tracesSampleRate` and `tracesSampler`. Setting `tracesSampleRate: 0` activates the OTel machinery but drops all traces - not the same as disabled.
 
 ---
 
-## `tracesSampleRate` — Uniform Sampling
+## `tracesSampleRate` - Uniform Sampling
 
 A number between `0.0` and `1.0`:
 
@@ -57,9 +57,9 @@ Sentry.init({
 
 ---
 
-## `tracesSampler` — Dynamic Per-Request Sampling
+## `tracesSampler` - Dynamic Per-Request Sampling
 
-When defined, `tracesSampler` **takes precedence** over `tracesSampleRate`. Receives a `SamplingContext` and returns a number `0`–`1` (or boolean).
+When defined, `tracesSampler` **takes precedence** over `tracesSampleRate`. Receives a `SamplingContext` and returns a number `0`-`1` (or boolean).
 
 ```typescript
 // TypeScript: SamplingContext shape
@@ -91,7 +91,7 @@ Sentry.init({
 
 ### `inheritOrSampleWith()` (≥9.x)
 
-Respects the upstream trace's sampling decision. If no parent decision exists, applies your fallback rate. Always prefer this over checking `parentSampled` directly — it propagates rates accurately through distributed traces and sets the correct `sentry-sampled` value in `baggage`.
+Respects the upstream trace's sampling decision. If no parent decision exists, applies your fallback rate. Always prefer this over checking `parentSampled` directly - it propagates rates accurately through distributed traces and sets the correct `sentry-sampled` value in `baggage`.
 
 ```typescript
 // Without inheritOrSampleWith (manual check)
@@ -106,7 +106,7 @@ tracesSampler: ({ inheritOrSampleWith }) => inheritOrSampleWith(0.1),
 
 ### Sampling Precedence
 
-1. `tracesSampler` function (if defined) — evaluated first
+1. `tracesSampler` function (if defined) - evaluated first
 2. Parent's sampling decision (propagated via `sentry-trace` header)
 3. `tracesSampleRate` (uniform fallback)
 
@@ -114,7 +114,7 @@ tracesSampler: ({ inheritOrSampleWith }) => inheritOrSampleWith(0.1),
 
 ## Auto-Instrumented Libraries
 
-`@sentry/node` v8 ships with **28+ auto-instrumented packages** via bundled OTel instrumentations. No additional configuration needed — they activate automatically on `Sentry.init()`.
+`@sentry/node` v8 ships with **28+ auto-instrumented packages** via bundled OTel instrumentations. No additional configuration needed - they activate automatically on `Sentry.init()`.
 
 ### HTTP & Web
 
@@ -201,7 +201,7 @@ Matched headers appear as span attributes: `http.request.header.<name>` and `htt
 
 ## Custom Spans
 
-### `Sentry.startSpan()` — Active, Auto-Ending (Recommended)
+### `Sentry.startSpan()` - Active, Auto-Ending (Recommended)
 
 Creates an active span (children nest under it automatically) that ends when the callback returns or resolves:
 
@@ -226,7 +226,7 @@ const result = Sentry.startSpan(
 );
 ```
 
-### Nested Spans (Parent–Child Hierarchy)
+### Nested Spans (Parent-Child Hierarchy)
 
 ```typescript
 await Sentry.startSpan({ name: "checkout-flow", op: "function" }, async () => {
@@ -245,7 +245,7 @@ await Sentry.startSpan({ name: "checkout-flow", op: "function" }, async () => {
 });
 ```
 
-### `Sentry.startSpanManual()` — Active, Manual End
+### `Sentry.startSpanManual()` - Active, Manual End
 
 Use when the span lifetime cannot be enclosed in a callback (e.g., middleware with async continuations):
 
@@ -261,7 +261,7 @@ function authMiddleware(req: Request, res: Response, next: NextFunction) {
 }
 ```
 
-### `Sentry.startInactiveSpan()` — Not Active, Manual End
+### `Sentry.startInactiveSpan()` - Not Active, Manual End
 
 Creates a span that is **never** automatically made active. Use for parallel work or spans that don't fit the call stack:
 
@@ -282,7 +282,7 @@ child.end();
 parent.end();
 ```
 
-### `Sentry.withActiveSpan()` — Temporarily Activate a Span
+### `Sentry.withActiveSpan()` - Temporarily Activate a Span
 
 Makes an inactive span active for the duration of a callback. Does **not** end the span:
 
@@ -370,7 +370,7 @@ Sentry.init({
 
 ## Advanced Span APIs
 
-### `continueTrace()` — Continue an Incoming Trace
+### `continueTrace()` - Continue an Incoming Trace
 
 For message queues, cron triggers, and other non-HTTP channels that carry trace headers:
 
@@ -390,9 +390,9 @@ Sentry.continueTrace(
 
 > HTTP servers handled by framework integrations (Express, Fastify, etc.) call `continueTrace()` automatically. You only need it for non-HTTP channels.
 
-### `startNewTrace()` — Force a New Trace
+### `startNewTrace()` - Force a New Trace
 
-Breaks the distributed chain — creates an independent trace with a new `traceId`:
+Breaks the distributed chain - creates an independent trace with a new `traceId`:
 
 ```typescript
 Sentry.startNewTrace(() => {
@@ -400,12 +400,12 @@ Sentry.startNewTrace(() => {
 });
 ```
 
-### `suppressTracing()` — Prevent Span Capture
+### `suppressTracing()` - Prevent Span Capture
 
 Suppresses span creation inside the callback, even for auto-instrumented code:
 
 ```typescript
-// Health check polling — don't create spans
+// Health check polling - don't create spans
 const result = await Sentry.suppressTracing(() => {
   return fetch("/internal/health");
 });
@@ -439,7 +439,7 @@ Sentry.startSpan(
 
 ---
 
-## `ignoreSpans` — Filtering Spans
+## `ignoreSpans` - Filtering Spans
 
 Drop specific spans before they are sent. Accepts strings (substring match), RegExp, functions, or objects with an optional `attributes` field for attribute-based matching:
 
@@ -498,17 +498,18 @@ Sentry.init({
 });
 ```
 
-**Default:** `['localhost', /^\//]` — only localhost and relative paths.  
+**Default:** `['localhost', /^\//]` - only localhost and relative paths.
+
 **Disable entirely:** `tracePropagationTargets: []`
 
-> ⚠️ If your API is at `http://localhost:3001`, use `"localhost:3001"` or a regex matching the port — `"localhost"` alone won't match.
+> ⚠️ If your API is at `http://localhost:3001`, use `"localhost:3001"` or a regex matching the port - `"localhost"` alone won't match.
 
 ### Manual Trace Propagation (Non-HTTP Channels)
 
 For Kafka, AMQP, WebSockets, and other protocols:
 
 ```typescript
-// Publisher — extract current trace context
+// Publisher - extract current trace context
 import * as Sentry from "@sentry/node";
 
 await Sentry.startSpan({ name: "Publish order event", op: "queue.publish" }, async () => {
@@ -527,7 +528,7 @@ await Sentry.startSpan({ name: "Publish order event", op: "queue.publish" }, asy
   });
 });
 
-// Consumer — continue the trace
+// Consumer - continue the trace
 consumer.run({
   eachMessage: async ({ message }) => {
     Sentry.continueTrace(
@@ -545,13 +546,13 @@ consumer.run({
 
 ### Head-Based Sampling
 
-The originating (head) service makes the sampling decision and propagates it via `sentry-trace`. All downstream services either all sample or all drop — ensuring complete traces, never partial ones.
+The originating (head) service makes the sampling decision and propagates it via `sentry-trace`. All downstream services either all sample or all drop - ensuring complete traces, never partial ones.
 
 ---
 
 ## Framework Auto-Instrumentation
 
-Framework integrations are included in `@sentry/node` and activated automatically. You don't add them via `integrations: []` — they are registered when you call `Sentry.init()` and `setupXxxErrorHandler()`.
+Framework integrations are included in `@sentry/node` and activated automatically. You don't add them via `integrations: []` - they are registered when you call `Sentry.init()` and `setupXxxErrorHandler()`.
 
 ### Express
 
@@ -559,7 +560,7 @@ Framework integrations are included in `@sentry/node` and activated automaticall
 import express from "express";
 import * as Sentry from "@sentry/node";
 
-// instrument.ts must load FIRST — before express is required
+// instrument.ts must load FIRST - before express is required
 Sentry.init({ dsn: "...", tracesSampleRate: 1.0 });
 
 const app = express();
@@ -587,7 +588,7 @@ Sentry.init({ dsn: "...", tracesSampleRate: 1.0 });
 
 const fastify = Fastify();
 
-// Error handler BEFORE routes (Fastify-specific — not async, unlike Hapi)
+// Error handler BEFORE routes (Fastify-specific - not async, unlike Hapi)
 Sentry.setupFastifyErrorHandler(fastify);
 
 fastify.get("/api/data", async (request, reply) => {
@@ -659,7 +660,7 @@ Sentry.init({
     return inheritOrSampleWith(0.1);
   },
 
-  // Propagation — which outgoing requests get trace headers
+  // Propagation - which outgoing requests get trace headers
   tracePropagationTargets: [
     "localhost",
     /^https:\/\/api\.yourapp\.com/,
@@ -717,10 +718,10 @@ Sentry.init({
 
 ### Bun
 
-`@sentry/bun` wraps `@sentry/node` — tracing is 99% identical to Node.js. The same auto-instrumentation table applies. Profiling is **not** available (native addon incompatible with Bun).
+`@sentry/bun` wraps `@sentry/node` - tracing is 99% identical to Node.js. The same auto-instrumentation table applies. Profiling is **not** available (native addon incompatible with Bun).
 
 ```typescript
-// bun-instrument.ts — loaded via --preload
+// bun-instrument.ts - loaded via --preload
 import * as Sentry from "@sentry/bun";
 
 Sentry.init({
@@ -733,11 +734,11 @@ Sentry.init({
 bun --preload ./bun-instrument.ts run app.ts
 ```
 
-`Bun.serve()` is automatically instrumented — each request becomes an `http.server` transaction.
+`Bun.serve()` is automatically instrumented - each request becomes an `http.server` transaction.
 
 ### Deno
 
-`@sentry/deno` uses `npm:@sentry/deno`. Auto-instrumented libraries are limited — Deno doesn't load Node.js OTel instrumentations. Custom spans work identically.
+`@sentry/deno` uses `npm:@sentry/deno`. Auto-instrumented libraries are limited - Deno doesn't load Node.js OTel instrumentations. Custom spans work identically.
 
 ```typescript
 import * as Sentry from "npm:@sentry/deno";
@@ -747,7 +748,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-// Deno.serve — wrap handlers manually (not auto-instrumented)
+// Deno.serve - wrap handlers manually (not auto-instrumented)
 Deno.serve(async (req) => {
   return Sentry.startSpan(
     { name: `${req.method} ${new URL(req.url).pathname}`, op: "http.server" },
@@ -776,7 +777,7 @@ Deno.serve(async (req) => {
 ## Complete Example
 
 ```typescript
-// instrument.ts — loaded first via --require or --import
+// instrument.ts - loaded first via --require or --import
 import * as Sentry from "@sentry/node";
 
 Sentry.init({
@@ -819,7 +820,7 @@ export async function createOrder(userId: string, items: Item[]) {
       span.setAttributes({ "order.total": total, "order.item_count": items.length });
     }
 
-    // Outgoing HTTP — automatically traced
+    // Outgoing HTTP - automatically traced
     const payment = await stripe.paymentIntents.create({ amount: total });
 
     return db.orders.create({ data: { userId, items, total, paymentId: payment.id } });
@@ -836,10 +837,10 @@ export async function createOrder(userId: string, items: Item[]) {
 | No transactions in Performance dashboard | Verify `tracesSampleRate` or `tracesSampler` is set; `Sentry.init()` must run before any imports |
 | Spans missing for DB queries | Confirm the driver is in the auto-instrumentation table above; `Sentry.init()` must run first |
 | Distributed trace not linking services | Add the target URL to `tracePropagationTargets`; verify `Access-Control-Allow-Headers: sentry-trace, baggage` |
-| `tracePropagationTargets` port not matching | `"localhost"` won't match `localhost:3001` — use `"localhost:3001"` or a regex |
+| `tracePropagationTargets` port not matching | `"localhost"` won't match `localhost:3001` - use `"localhost:3001"` or a regex |
 | `continueTrace()` not linking to parent | Confirm incoming headers are `"sentry-trace"` and `"baggage"` (not `traceparent`) |
 | High transaction volume | Use `tracesSampler` to return `0` for health checks; lower default rate |
-| `tracesSampler` not working | When both `tracesSampler` and `tracesSampleRate` are set, `tracesSampler` wins — expected |
+| `tracesSampler` not working | When both `tracesSampler` and `tracesSampleRate` are set, `tracesSampler` wins - expected |
 | Spans show generic names (raw URLs) | Use `beforeSendSpan` or framework route parameterization to normalize names |
-| Bun profiling not working | Profiling requires `@sentry/profiling-node` native addon — incompatible with Bun |
+| Bun profiling not working | Profiling requires `@sentry/profiling-node` native addon - incompatible with Bun |
 | Deno DB spans missing | Deno doesn't load Node.js OTel instrumentations; use `startSpan()` manually |

@@ -4,6 +4,7 @@ description: "Trigger: fabric-cli-core, Use Microsoft Fabric CLI (fab) to manage
 license: Apache-2.0
 metadata:
   author: microsoft
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/fabric-cli/fabric-cli-core"
   github_url: "https://github.com/microsoft/fabric-cli/tree/HEAD/.ai-assets/skills/fabric-cli-core"

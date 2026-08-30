@@ -4,6 +4,7 @@ description: "Trigger: drizzle, Type-safe SQL ORM for TypeScript with zero runti
 license: Apache-2.0
 metadata:
   author: bobmatnyc
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/bobmatnyc/claude-mpm-skills/drizzle"
   github_url: "https://github.com/bobmatnyc/claude-mpm-skills/tree/HEAD/toolchains/typescript/data/drizzle"

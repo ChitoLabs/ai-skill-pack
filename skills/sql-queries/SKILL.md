@@ -4,6 +4,7 @@ description: "Trigger: sql-queries, Write correct, performant SQL across all maj
 license: Apache-2.0
 metadata:
   author: anthropics
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/anthropics/knowledge-work-plugins/sql-queries"
   github_url: "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/data/skills/sql-queries"

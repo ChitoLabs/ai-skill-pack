@@ -1,6 +1,6 @@
 # Landing Page Layout
 
-Build public-facing pages — landing, blog, changelog, pricing — using the Header + Main + Footer shell with Page components.
+Build public-facing pages - landing, blog, changelog, pricing - using the Header + Main + Footer shell with Page components.
 
 ## When to use
 
@@ -65,8 +65,8 @@ const items = computed<NavigationMenuItem[]>(() => [{
 
 ### Common mistakes
 
-- Forgetting the `#body` slot on `UHeader` — this is the mobile menu content. Without it, mobile users have no navigation.
-- Using `variant="solid"` for both header and hero buttons — the header button should be lower weight than the hero CTA.
+- Forgetting the `#body` slot on `UHeader` - this is the mobile menu content. Without it, mobile users have no navigation.
+- Using `variant="solid"` for both header and hero buttons - the header button should be lower weight than the hero CTA.
 
 ## Landing page
 
@@ -119,14 +119,14 @@ const items = computed<NavigationMenuItem[]>(() => [{
 
 ## Key components
 
-- `UPageHero` — hero with title, description, links, and optional media. Use `orientation="horizontal"` for side-by-side layout.
-- `UPageSection` — content section with headline, title, description, and `features` grid. Use `id` for anchor links.
-- `UPageCTA` — call to action block.
-- `UPageGrid` / `UPageCard` — card grid for features, testimonials, etc.
-- `UPageFeature` — individual feature item.
-- `UPageLogos` — logo wall for social proof.
-- `UPricingPlans` / `UPricingTable` — pricing cards and comparison tables.
-- `UFooterColumns` — multi-column footer with link groups (used inside `UFooter`).
+- `UPageHero` - hero with title, description, links, and optional media. Use `orientation="horizontal"` for side-by-side layout.
+- `UPageSection` - content section with headline, title, description, and `features` grid. Use `id` for anchor links.
+- `UPageCTA` - call to action block.
+- `UPageGrid` / `UPageCard` - card grid for features, testimonials, etc.
+- `UPageFeature` - individual feature item.
+- `UPageLogos` - logo wall for social proof.
+- `UPricingPlans` / `UPricingTable` - pricing cards and comparison tables.
+- `UFooterColumns` - multi-column footer with link groups (used inside `UFooter`).
 
 ## Variations
 

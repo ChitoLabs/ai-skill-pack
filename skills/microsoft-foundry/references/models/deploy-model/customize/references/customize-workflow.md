@@ -1,4 +1,4 @@
-# Customize Workflow — Detailed Phase Instructions
+# Customize Workflow - Detailed Phase Instructions
 
 > Reference for: `models/deploy-model/customize/SKILL.md`
 
@@ -74,9 +74,9 @@ echo "Model format: $MODEL_FORMAT"
 ```
 
 > 💡 **Model format determines the deployment path:**
-> - `OpenAI` — Standard CLI, TPM-based capacity, RAI policies, version upgrade policies
-> - `Anthropic` — REST API with `modelProviderData`, capacity=1, no RAI, no version upgrade
-> - All other formats (`Meta-Llama`, `Mistral`, `Cohere`, etc.) — Standard CLI, capacity=1 (MaaS), no RAI, no version upgrade
+> - `OpenAI` - Standard CLI, TPM-based capacity, RAI policies, version upgrade policies
+> - `Anthropic` - REST API with `modelProviderData`, capacity=1, no RAI, no version upgrade
+> - All other formats (`Meta-Llama`, `Mistral`, `Cohere`, etc.) - Standard CLI, capacity=1 (MaaS), no RAI, no version upgrade
 
 ---
 
@@ -95,9 +95,9 @@ Recommend latest version (first in list). Default to `"latest"` if no versions f
 
 ## Phase 6: List and Select SKU
 
-> ⚠️ **Warning:** Never hardcode SKU lists — always query live data.
+> ⚠️ **Warning:** Never hardcode SKU lists - always query live data.
 
-**Step A — Query model-supported SKUs:**
+**Step A - Query model-supported SKUs:**
 ```bash
 az cognitiveservices model list \
   --location $PROJECT_REGION \
@@ -106,7 +106,7 @@ az cognitiveservices model list \
 
 Filter: `model.name == $MODEL_NAME && model.version == $MODEL_VERSION`, extract `model.skus[].name`.
 
-**Step B — Check subscription quota per SKU:**
+**Step B - Check subscription quota per SKU:**
 ```bash
 az cognitiveservices usage list \
   --location $PROJECT_REGION \
@@ -115,7 +115,7 @@ az cognitiveservices usage list \
 
 Quota key pattern: `OpenAI.<SKU>.<model-name>`. Calculate `available = limit - currentValue`.
 
-**Step C — Present only deployable SKUs** (available > 0). If no SKUs have quota, direct user to the [quota skill](../../../../quota/quota.md).
+**Step C - Present only deployable SKUs** (available > 0). If no SKUs have quota, direct user to the [quota skill](../../../../quota/quota.md).
 
 ---
 
@@ -123,7 +123,7 @@ Quota key pattern: `OpenAI.<SKU>.<model-name>`. Calculate `available = limit - c
 
 > ⚠️ **Non-OpenAI models (MaaS):** If `MODEL_FORMAT != "OpenAI"`, capacity is always `1` (pay-per-token billing). Skip capacity configuration and set `DEPLOY_CAPACITY=1`. Proceed to Phase 7c (Anthropic) or Phase 8.
 
-**For OpenAI models only — query capacity via REST API:**
+**For OpenAI models only - query capacity via REST API:**
 ```bash
 # Current region capacity
 az rest --method GET --url \
@@ -198,7 +198,7 @@ Present the following list and ask the user to choose one:
 19. Other                   (API value: other)
 ```
 
-> ⚠️ **Do NOT pick a default industry or hardcode a value. Always ask the user.** This is required by Anthropic's terms of service. The industry list is static — there is no REST API that provides it.
+> ⚠️ **Do NOT pick a default industry or hardcode a value. Always ask the user.** This is required by Anthropic's terms of service. The industry list is static - there is no REST API that provides it.
 
 Store selection as `SELECTED_INDUSTRY` (use the API value, e.g., `technology`).
 
@@ -232,9 +232,9 @@ Store `COUNTRY_CODE` and `ORG_NAME` for use in Phase 13.
 > ⚠️ **Note:** RAI policies only apply to OpenAI models. Skip this phase if `MODEL_FORMAT != "OpenAI"` (Anthropic, Meta-Llama, Mistral, Cohere, etc. do not use RAI policies).
 
 Present options:
-1. `Microsoft.DefaultV2` — Balanced filtering (recommended). Filters hate, violence, sexual, self-harm.
-2. `Microsoft.Prompt-Shield` — Enhanced prompt injection/jailbreak protection.
-3. Custom policies — Organization-specific (configured in Azure Portal).
+1. `Microsoft.DefaultV2` - Balanced filtering (recommended). Filters hate, violence, sexual, self-harm.
+2. `Microsoft.Prompt-Shield` - Enhanced prompt injection/jailbreak protection.
+3. Custom policies - Organization-specific (configured in Azure Portal).
 
 Default: `Microsoft.DefaultV2`.
 

@@ -3,7 +3,8 @@ name: obsidian-markdown
 description: "Trigger: obsidian-markdown, Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: kepano
+  author: pedronauck
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/kepano/obsidian-skills/obsidian-markdown"
   github_url: "https://github.com/pedronauck/skills/tree/HEAD/skills/community/obsidian-markdown"

@@ -1,18 +1,14 @@
 # Source List
 
-Derived from the active `.ld9/skill-list-downloadURL.md`, source frontmatter, and filtered to entries represented by the published general `skills/` folder.
-
-The active source list contains historical and mapped names. When a source name maps to a final published folder, the final folder name is shown first.
+This list is derived from the source metadata published in the v3 skill entry points under `skills/`.
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Active source list entries and frontmatter sources | 499 |
-| Entries represented in published skills | 466 |
-| Published skill folders without active exact/mapped source entry | 0 |
-| Separate Fabric candidate folders included | 0 |
-| Added command files represented | 3 |
+| Published skill folders | 466 |
+| Published skills with source URLs | 466 |
+| Published skills with unresolved authors | 13 |
 
 ## Represented Sources
 
@@ -23,7 +19,7 @@ The active source list contains historical and mapped names. When a source name 
 - `adev-writing-guide` - https://skills.sh/angular/angular/adev-writing-guide
 - `admin-dashboard` - https://skills.sh/erichowens/some_claude_skills/admin-dashboard
 - `agent-browser` - https://skills.sh/vercel-labs/agent-browser/agent-browser
-- `agents-sdk` - https://github.com/cloudflare/skills/tree/HEAD/skills/agents-sdk
+- `agents-sdk` - https://skills.sh/cloudflare/skills/agents-sdk
 - `ai-image-generation` - https://www.skills.sh/inference-sh-skills/skills/ai-image-generation
 - `ai-seo` - https://www.skills.sh/coreyhaines31/marketingskills/ai-seo
 - `ai-video-generation` - https://skills.sh/inference-sh-skills/skills/ai-video-generation
@@ -40,19 +36,19 @@ The active source list contains historical and mapped names. When a source name 
 - `android-networking-retrofit-okhttp` - https://skills.sh/krutikJain/android-agent-skills/android-networking-retrofit-okhttp
 - `android-testing-unit` - https://skills.sh/krutikJain/android-agent-skills/android-testing-unit
 - `angular-developer` - https://skills.sh/angular/skills/angular-developer
-- `api-design-principles` - https://github.com/wshobson/agents/tree/HEAD/plugins/backend-development/skills/api-design-principles
+- `api-design-principles` - https://skills.sh/wshobson/agents/api-design-principles
 - `api-designer` - https://www.skills.sh/jeffallan/claude-skills/api-designer
 - `arch-linux-triage` - https://skills.sh/github/awesome-copilot/arch-linux-triage
 - `ask-matt` - https://www.skills.sh/mattpocock/skills/ask-matt
 - `aspnet-core` - https://skills.sh/openai/skills/aspnet-core
 - `aspnet-minimal-api-openapi` - https://skills.sh/github/awesome-copilot/aspnet-minimal-api-openapi
 - `astro` - https://www.skills.sh/astrolicious/agent-skills/astro
-- `azure-ai` - https://github.com/microsoft/azure-skills/tree/HEAD/.github/plugins/azure-skills/skills/azure-ai
+- `azure-ai` - https://skills.sh/microsoft/azure-skills/azure-ai
 - `azure-compute` - https://www.skills.sh/microsoft/azure-skills/azure-compute
 - `azure-cost` - https://skills.sh/microsoft/github-copilot-for-azure/azure-cost
 - `azure-cost-optimization` - https://skills.sh/microsoft/azure-skills/azure-cost-optimization
-- `azure-deploy` - https://github.com/microsoft/azure-skills/tree/HEAD/skills/azure-deploy
-- `azure-diagnostics` - https://github.com/microsoft/azure-skills/tree/HEAD/skills/azure-diagnostics
+- `azure-deploy` - https://skills.sh/microsoft/azure-skills/azure-deploy
+- `azure-diagnostics` - https://skills.sh/microsoft/azure-skills/azure-diagnostics
 - `azure-messaging` - https://skills.sh/microsoft/azure-skills/azure-messaging
 - `backend-fundamentals` - https://github.com/DanielPodolsky/ownyourcode/tree/HEAD/.claude/skills/fundamentals/backend
 - `baoyu-format-markdown` - https://skills.sh/jimliu/baoyu-skills/baoyu-format-markdown
@@ -61,9 +57,9 @@ The active source list contains historical and mapped names. When a source name 
 - `bash-linux` - https://www.skills.sh/sickn33/antigravity-awesome-skills/bash-linux
 - `better-auth-best-practices` - https://skills.sh/better-auth/skills/better-auth-best-practices
 - `boost-prompt` - https://www.skills.sh/github/awesome-copilot/boost-prompt
-- `brainstorming` - https://github.com/obra/superpowers/tree/HEAD/skills/brainstorming
+- `brainstorming` - https://skills.sh/obra/superpowers/brainstorming
 - `build-dashboard` - https://www.skills.sh/anthropics/knowledge-work-plugins/build-dashboard
-- `building-native-ui` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/building-native-ui
+- `building-native-ui` - https://skills.sh/expo/skills/building-native-ui
 - `bun` - https://www.skills.sh/site/bun.sh/bun
 - `bun-development` - https://www.skills.sh/sickn33/antigravity-awesome-skills/bun-development
 - `bun-runtime` - https://www.skills.sh/affaan-m/everything-claude-code/bun-runtime
@@ -75,8 +71,8 @@ The active source list contains historical and mapped names. When a source name 
 - `changelog-generator` - https://www.skills.sh/composiohq/awesome-claude-skills/changelog-generator
 - `chrome-devtools` - https://www.skills.sh/chromedevtools/chrome-devtools-mcp/chrome-devtools
 - `chrome-extension-development` - https://skills.sh/mindrally/skills/chrome-extension-development
-- `claude-api` - https://github.com/anthropics/skills/tree/HEAD/skills/claude-api
-- `clerk` - https://github.com/clerk/skills
+- `claude-api` - https://skills.sh/anthropics/skills/claude-api
+- `clerk` - https://skills.sh/clerk/skills/clerk
 - `clerk-android` - https://skills.sh/clerk/skills/clerk-android
 - `clerk-astro-patterns` - https://skills.sh/clerk/skills/clerk-astro-patterns
 - `clerk-backend-api` - https://skills.sh/clerk/skills/clerk-backend-api
@@ -98,7 +94,7 @@ The active source list contains historical and mapped names. When a source name 
 - `cloudflare-deploy` - https://www.skills.sh/openai/skills/cloudflare-deploy
 - `code-review` - https://www.skills.sh/coderabbitai/skills/code-review
 - `conducting-user-interviews` - https://www.skills.sh/refoundai/lenny-skills/conducting-user-interviews
-- `containerize-aspnetcore` - https://github.com/github/awesome-copilot/tree/HEAD/skills/containerize-aspnetcore
+- `containerize-aspnetcore` - https://skills.sh/github/awesome-copilot/containerize-aspnetcore
 - `content-creator` - https://www.skills.sh/shubhamsaboo/awesome-llm-apps/content-creator
 - `content-strategy` - https://www.skills.sh/coreyhaines31/marketingskills/content-strategy
 - `context7` - https://www.skills.sh/intellectronica/agent-skills/context7
@@ -117,17 +113,17 @@ The active source list contains historical and mapped names. When a source name 
 - `data-analysis` - https://www.skills.sh/supercent-io/skills-template/data-analysis
 - `data-pipelines` - https://www.skills.sh/absolutelyskilled/absolutelyskilled/data-pipelines
 - `data-storytelling` - https://www.skills.sh/wshobson/agents/data-storytelling
-- `data-visualization` - https://github.com/inference-sh-skills/skills/tree/HEAD/guides/design/data-visualization
+- `data-visualization` - https://skills.sh/inference-sh-skills/skills/data-visualization
 - `database-schema-design` - https://www.skills.sh/softaworks/agent-toolkit/database-schema-designer
 - `dataverse-python-advanced-patterns` - https://www.skills.sh/github/awesome-copilot/dataverse-python-advanced-patterns
 - `debian-linux-triage` - https://www.skills.sh/github/awesome-copilot/debian-linux-triage
-- `deno-deploy` - https://github.com/denoland/skills/tree/HEAD/skills/deno-deploy
-- `deno-expert` - https://github.com/denoland/skills/tree/HEAD/skills/deno-expert
-- `deno-frontend` - https://github.com/denoland/skills/tree/HEAD/skills/deno-frontend
-- `deno-guidance` - https://github.com/denoland/skills/tree/HEAD/skills/deno-guidance
-- `deno-sandbox` - https://github.com/denoland/skills/tree/HEAD/skills/deno-sandbox
+- `deno-deploy` - https://skills.sh/denoland/skills/deno-deploy
+- `deno-expert` - https://skills.sh/denoland/skills/deno-expert
+- `deno-frontend` - https://skills.sh/denoland/skills/deno-frontend
+- `deno-guidance` - https://skills.sh/denoland/skills/deno-guidance
+- `deno-sandbox` - https://skills.sh/denoland/skills/deno-sandbox
 - `deno-typescript` - https://www.skills.sh/mindrally/skills/deno-typescript
-- `deploy-to-vercel` - https://github.com/vercel-labs/agent-skills/tree/HEAD/skills/deploy-to-vercel
+- `deploy-to-vercel` - https://skills.sh/vercel-labs/agent-skills/deploy-to-vercel
 - `design-critique` - https://www.skills.sh/anthropics/knowledge-work-plugins/design-critique
 - `design-md` - https://www.skills.sh/google-labs-code/stitch-skills/design-md
 - `design-mobile-apps` - https://skills.sh/sleekdotdesign/agent-skills/design-mobile-apps
@@ -141,31 +137,31 @@ The active source list contains historical and mapped names. When a source name 
 - `docker-compose-orchestration` - https://www.skills.sh/manutej/luxor-claude-marketplace/docker-compose-orchestration
 - `docker-expert` - https://www.skills.sh/sickn33/antigravity-awesome-skills/docker-expert
 - `docker-patterns` - https://www.skills.sh/affaan-m/everything-claude-code/docker-patterns
-- `docx` - https://github.com/anthropics/skills/tree/HEAD/skills/docx
+- `docx` - https://skills.sh/anthropics/skills/docx
 - `dotnet-best-practices` - https://skills.sh/github/awesome-copilot/dotnet-best-practices
 - `dotnet-design-pattern-review` - https://skills.sh/github/awesome-copilot/dotnet-design-pattern-review
 - `dotnet-upgrade` - https://skills.sh/github/awesome-copilot/dotnet-upgrade
 - `drizzle` - https://skills.sh/bobmatnyc/claude-mpm-skills/drizzle
-- `durable-objects` - https://github.com/cloudflare/skills/tree/HEAD/skills/durable-objects
+- `durable-objects` - https://skills.sh/cloudflare/skills/durable-objects
 - `edge-computing` - https://skills.sh/travisjneuman/.claude/edge-computing
 - `elasticsearch` - https://skills.sh/mindrally/skills/elasticsearch-best-practices
-- `elevenlabs-music` - https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-music
-- `elevenlabs-tts` - https://github.com/inference-sh-skills/skills/tree/HEAD/tools/audio/elevenlabs-tts
+- `elevenlabs-music` - https://skills.sh/inference-sh-skills/skills/elevenlabs-music
+- `elevenlabs-tts` - https://skills.sh/inference-sh-skills/skills/elevenlabs-tts
 - `email-and-password` - https://skills.sh/better-auth/skills/emailAndPassword
-- `email-and-password-best-practices` - https://github.com/better-auth/skills/tree/HEAD/better-auth/emailAndPassword
-- `email-design` - https://github.com/inference-sh-skills/skills/tree/HEAD/guides/design/email-design
+- `email-and-password-best-practices` - https://skills.sh/better-auth/skills/email-and-password-best-practices
+- `email-design` - https://skills.sh/inference-sh-skills/skills/email-design
 - `enhance-prompt` - https://www.skills.sh/google-labs-code/stitch-skills/enhance-prompt
-- `error-handling-patterns` - https://github.com/wshobson/agents/tree/main/plugins/developer-essentials/skills/error-handling-patterns
+- `error-handling-patterns` - https://skills.sh/wshobson/agents/error-handling-patterns
 - `excalidraw-diagram-generator` - https://www.skills.sh/github/awesome-copilot/excalidraw-diagram-generator
 - `excel-analysis` - https://www.skills.sh/davila7/claude-code-templates/excel-analysis
 - `excel-automation` - https://www.skills.sh/claude-office-skills/skills/excel-automation
 - `excel-data-analyzer` - https://www.skills.sh/mineru98/skills-store/excel-data-analyzer
 - `executive-dashboard-generator` - https://www.skills.sh/onewave-ai/claude-skills/executive-dashboard-generator
-- `expo-api-routes` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-api-routes
-- `expo-cicd-workflows` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-cicd-workflows
-- `expo-deployment` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-deployment
-- `expo-dev-client` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-dev-client
-- `expo-tailwind-setup` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/expo-tailwind-setup
+- `expo-api-routes` - https://skills.sh/expo/skills/expo-api-routes
+- `expo-cicd-workflows` - https://skills.sh/expo/skills/expo-cicd-workflows
+- `expo-deployment` - https://skills.sh/expo/skills/expo-deployment
+- `expo-dev-client` - https://skills.sh/expo/skills/expo-dev-client
+- `expo-tailwind-setup` - https://skills.sh/expo/skills/expo-tailwind-setup
 - `fabric-cli-core` - https://www.skills.sh/microsoft/fabric-cli/fabric-cli-core
 - `fabric-cli-powerbi` - https://www.skills.sh/microsoft/fabric-cli/fabric-cli-powerbi
 - `fabric-lakehouse` - https://www.skills.sh/github/awesome-copilot/fabric-lakehouse
@@ -180,9 +176,9 @@ The active source list contains historical and mapped names. When a source name 
 - `flutter-animations` - https://skills.sh/madteacher/mad-agents-skills/flutter-animations
 - `flutter-expert` - https://skills.sh/jeffallan/claude-skills/flutter-expert
 - `flutter-testing` - https://skills.sh/madteacher/mad-agents-skills/flutter-testing
-- `frontend-design` - https://github.com/anthropics/skills/tree/HEAD/skills/frontend-design
+- `frontend-design` - https://skills.sh/anthropics/skills/frontend-design
 - `frontend-design-pbakaus` - https://github.com/pbakaus/impeccable/tree/HEAD/.pi/skills/impeccable
-- `gemini-api-dev` - https://github.com/google-gemini/gemini-skills/tree/HEAD/skills/gemini-api-dev
+- `gemini-api-dev` - https://skills.sh/google-gemini/gemini-skills/gemini-api-dev
 - `generating-sorbet` - https://skills.sh/DmitryPogrebnoy/ruby-agent-skills/generating-sorbet
 - `generating-sorbet-inline` - https://skills.sh/DmitryPogrebnoy/ruby-agent-skills/generating-sorbet-inline
 - `git-commit` - https://www.skills.sh/github/awesome-copilot/git-commit
@@ -200,15 +196,15 @@ The active source list contains historical and mapped names. When a source name 
 - `google-ads` - https://www.skills.sh/kostja94/marketing-skills/google-ads
 - `google-merchant-center` - https://www.skills.sh/membranedev/application-skills/google-merchant-center
 - `graphql` - https://skills.sh/pluginagentmarketplace/custom-plugin-nodejs/graphql
-- `grill-me` - https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me
-- `gsap-core` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-core
-- `gsap-frameworks` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-frameworks
-- `gsap-performance` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-performance
-- `gsap-plugins` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-plugins
+- `grill-me` - https://www.skills.sh/mattpocock/skills/grill-me
+- `gsap-core` - https://skills.sh/greensock/gsap-skills/gsap-core
+- `gsap-frameworks` - https://skills.sh/greensock/gsap-skills/gsap-frameworks
+- `gsap-performance` - https://skills.sh/greensock/gsap-skills/gsap-performance
+- `gsap-plugins` - https://skills.sh/greensock/gsap-skills/gsap-plugins
 - `gsap-react` - https://skills.sh/greensock/gsap-skills/gsap-react
-- `gsap-scrolltrigger` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-scrolltrigger
-- `gsap-timeline` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-timeline
-- `gsap-utils` - https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-utils
+- `gsap-scrolltrigger` - https://skills.sh/greensock/gsap-skills/gsap-scrolltrigger
+- `gsap-timeline` - https://skills.sh/greensock/gsap-skills/gsap-timeline
+- `gsap-utils` - https://skills.sh/greensock/gsap-skills/gsap-utils
 - `hallmark` - https://github.com/Nutlope/hallmark
 - `handoff` - https://www.skills.sh/mattpocock/skills/handoff
 - `hono` - https://skills.sh/yusukebe/hono-skill/hono
@@ -241,21 +237,21 @@ The active source list contains historical and mapped names. When a source name 
 - `kubernetes-specialist` - https://www.skills.sh/jeffallan/claude-skills/kubernetes-specialist
 - `laravel-patterns` - https://skills.sh/affaan-m/everything-claude-code/laravel-patterns
 - `laravel-specialist` - https://skills.sh/jeffallan/claude-skills/laravel-specialist
-- `llm-evaluation` - https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/llm-evaluation
-- `llm-models` - https://github.com/inference-sh-skills/skills/tree/HEAD/tools/llm/llm-models
+- `llm-evaluation` - https://skills.sh/wshobson/agents/llm-evaluation
+- `llm-models` - https://skills.sh/inference-sh-skills/skills/llm-models
 - `machine-learning` - https://skills.sh/pluginagentmarketplace/custom-plugin-python/machine-learning
 - `make-interfaces-feel-better` - https://www.skills.sh/jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better
 - `markdown-to-html` - https://skills.sh/github/awesome-copilot/markdown-to-html
 - `marketing-ideas` - https://www.skills.sh/coreyhaines31/marketingskills/marketing-ideas
 - `marketing-psychology` - https://www.skills.sh/coreyhaines31/marketingskills/marketing-psychology
-- `mcp-builder` - https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder
+- `mcp-builder` - https://skills.sh/anthropics/skills/mcp-builder
 - `medallion-architecture` - https://www.skills.sh/vivekgana/databricks-platform-marketplace/medallion-architecture
 - `microsoft-foundry` - https://www.skills.sh/microsoft/azure-skills/microsoft-foundry
 - `migrate-to-vinext` - https://skills.sh/cloudflare/vinext/migrate-to-vinext
 - `minimal-api-file-upload` - https://skills.sh/dotnet/skills/minimal-api-file-upload
-- `mobile-android-design` - https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/mobile-android-design
+- `mobile-android-design` - https://skills.sh/wshobson/agents/mobile-android-design
 - `mobile-design` - https://www.skills.sh/sickn33/antigravity-awesome-skills/mobile-design
-- `mobile-ios-design` - https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/mobile-ios-design
+- `mobile-ios-design` - https://skills.sh/wshobson/agents/mobile-ios-design
 - `modern-javascript-patterns` - https://www.skills.sh/wshobson/agents/modern-javascript-patterns
 - `multi-stage-dockerfile` - https://www.skills.sh/github/awesome-copilot/multi-stage-dockerfile
 - `n8n-code-javascript` - https://www.skills.sh/czlonkowski/n8n-skills/n8n-code-javascript
@@ -266,13 +262,13 @@ The active source list contains historical and mapped names. When a source name 
 - `n8n-node-configuration` - https://www.skills.sh/czlonkowski/n8n-skills/n8n-node-configuration
 - `n8n-validation-expert` - https://www.skills.sh/czlonkowski/n8n-skills/n8n-validation-expert
 - `n8n-workflow-patterns` - https://www.skills.sh/czlonkowski/n8n-skills/n8n-workflow-patterns
-- `nano-banana-2` - https://github.com/inference-sh-skills/skills/tree/HEAD/tools/image/nano-banana-2
-- `native-data-fetching` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/native-data-fetching
-- `neon-postgres` - https://github.com/neondatabase/agent-skills/tree/HEAD/skills/neon-postgres
+- `nano-banana-2` - https://skills.sh/inference-sh-skills/skills/nano-banana-2
+- `native-data-fetching` - https://skills.sh/expo/skills/native-data-fetching
+- `neon-postgres` - https://skills.sh/neondatabase/agent-skills/neon-postgres
 - `nestjs-best-practices` - https://skills.sh/kadajett/agent-nestjs-skills/nestjs-best-practices
-- `next-best-practices` - https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-best-practices
-- `next-cache-components` - https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-cache-components
-- `next-upgrade` - https://github.com/vercel-labs/next-skills/tree/HEAD/skills/next-upgrade
+- `next-best-practices` - https://skills.sh/vercel-labs/next-skills/next-best-practices
+- `next-cache-components` - https://skills.sh/vercel-labs/next-skills/next-cache-components
+- `next-upgrade` - https://skills.sh/vercel-labs/next-skills/next-upgrade
 - `nginx-configuration` - https://www.skills.sh/aj-geddes/useful-ai-prompts/nginx-configuration
 - `nginx-expert` - https://www.skills.sh/personamanagmentlayer/pcl/nginx-expert
 - `nodejs-backend-patterns` - https://www.skills.sh/wshobson/agents/nodejs-backend-patterns
@@ -285,11 +281,11 @@ The active source list contains historical and mapped names. When a source name 
 - `obsidian-bases` - https://www.skills.sh/kepano/obsidian-skills/obsidian-bases
 - `obsidian-cli` - https://www.skills.sh/kepano/obsidian-skills/obsidian-cli
 - `obsidian-markdown` - https://www.skills.sh/kepano/obsidian-skills/obsidian-markdown
-- `obsidian-vault` - https://github.com/mattpocock/skills/tree/HEAD/skills/personal/obsidian-vault
+- `obsidian-vault` - https://skills.sh/mattpocock/skills/obsidian-vault
 - `ocr-document-processor` - https://www.skills.sh/dkyazzentwatwa/chatgpt-skills/ocr-document-processor
 - `openai-docs` - https://www.skills.sh/openai/skills/openai-docs
 - `openclaw-secure-linux-cloud` - https://www.skills.sh/xixu-me/skills/openclaw-secure-linux-cloud
-- `organization-best-practices` - https://github.com/better-auth/skills/tree/HEAD/better-auth/organization
+- `organization-best-practices` - https://skills.sh/better-auth/skills/organization-best-practices
 - `oxlint` - https://www.skills.sh/delexw/claude-code-misc/oxlint
 - `paddleocr-text-recognition` - https://www.skills.sh/aidenwu0209/paddleocr-skills/paddleocr-text-recognition
 - `pandas-data-analysis` - https://skills.sh/pluginagentmarketplace/custom-plugin-python/pandas-data-analysis
@@ -309,15 +305,15 @@ The active source list contains historical and mapped names. When a source name 
 - `power-bi-report-design-consultation` - https://www.skills.sh/github/awesome-copilot/power-bi-report-design-consultation
 - `powerbi-modeling` - https://www.skills.sh/github/awesome-copilot/powerbi-modeling
 - `powershell-windows` - https://www.skills.sh/sickn33/antigravity-awesome-skills/powershell-windows
-- `pptx` - https://github.com/anthropics/skills/tree/HEAD/skills/pptx
+- `pptx` - https://skills.sh/anthropics/skills/pptx
 - `pr-review` - https://skills.sh/angular/angular/pr_review
-- `prisma-cli` - https://github.com/prisma/skills/tree/HEAD/prisma-cli
-- `prisma-client-api` - https://github.com/prisma/skills/tree/HEAD/prisma-client-api
-- `prisma-database-setup` - https://github.com/prisma/skills/tree/HEAD/prisma-database-setup
+- `prisma-cli` - https://skills.sh/prisma/skills/prisma-cli
+- `prisma-client-api` - https://skills.sh/prisma/skills/prisma-client-api
+- `prisma-database-setup` - https://skills.sh/prisma/skills/prisma-database-setup
 - `prisma-postgres` - https://skills.sh/prisma/skills/prisma-postgres
 - `programmatic-seo` - https://www.skills.sh/coreyhaines31/marketingskills/programmatic-seo
 - `prompt-builder` - https://www.skills.sh/github/awesome-copilot/prompt-builder
-- `prompt-engineering-patterns` - https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/prompt-engineering-patterns
+- `prompt-engineering-patterns` - https://skills.sh/wshobson/agents/prompt-engineering-patterns
 - `pwa-development` - https://skills.sh/mindrally/skills/pwa-development
 - `pydantic` - https://skills.sh/bobmatnyc/claude-mpm-skills/pydantic
 - `python-background-jobs` - https://skills.sh/wshobson/agents/python-background-jobs
@@ -325,10 +321,10 @@ The active source list contains historical and mapped names. When a source name 
 - `python-executor` - https://skills.sh/inferen-sh/skills/python-executor
 - `python-mcp-server-generator` - https://www.skills.sh/github/awesome-copilot/python-mcp-server-generator
 - `python-patterns` - https://skills.sh/affaan-m/everything-claude-code/python-patterns
-- `python-performance-optimization` - https://github.com/wshobson/agents/tree/HEAD/plugins/python-development/skills/python-performance-optimization
-- `python-sdk` - https://github.com/inference-sh-skills/skills/tree/HEAD/sdk/python-sdk
+- `python-performance-optimization` - https://skills.sh/wshobson/agents/python-performance-optimization
+- `python-sdk` - https://skills.sh/inference-sh-skills/skills/python-sdk
 - `python-testing-patterns` - https://www.skills.sh/wshobson/agents/python-testing-patterns
-- `rag-implementation` - https://github.com/wshobson/agents/tree/HEAD/plugins/llm-application-dev/skills/rag-implementation
+- `rag-implementation` - https://skills.sh/wshobson/agents/rag-implementation
 - `rails-background-jobs` - https://skills.sh/igmarin/rails-agent-skills/rails-background-jobs
 - `rails-bug-triage` - https://skills.sh/igmarin/rails-agent-skills/rails-bug-triage
 - `rails-code-review` - https://skills.sh/igmarin/rails-agent-skills/rails-code-review
@@ -349,40 +345,40 @@ The active source list contains historical and mapped names. When a source name 
 - `reference-core` - https://skills.sh/angular/angular/reference-core
 - `reference-signal-forms` - https://skills.sh/angular/angular/reference-signal-forms
 - `remotion-best-practices` - https://www.skills.sh/remotion-dev/skills/remotion-best-practices
-- `requesting-code-review` - https://github.com/obra/superpowers/tree/HEAD/skills/requesting-code-review
+- `requesting-code-review` - https://skills.sh/obra/superpowers/requesting-code-review
 - `research` - https://www.skills.sh/mattpocock/skills/research
-- `responsive-design` - https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/responsive-design
+- `responsive-design` - https://skills.sh/wshobson/agents/responsive-design
 - `rspec-best-practices` - https://skills.sh/igmarin/rails-agent-skills/rspec-best-practices
 - `rspec-service-testing` - https://skills.sh/igmarin/rails-agent-skills/rspec-service-testing
 - `ruby` - https://skills.sh/lucianghinda/superpowers-ruby/ruby
 - `ruby-on-rails-best-practices` - https://skills.sh/sergiodxa/agent-skills/ruby-on-rails-best-practices
-- `rust-async-patterns` - https://github.com/wshobson/agents/tree/HEAD/plugins/systems-programming/skills/rust-async-patterns
+- `rust-async-patterns` - https://skills.sh/wshobson/agents/rust-async-patterns
 - `rust-best-practices` - https://www.skills.sh/apollographql/skills/rust-best-practices
 - `rust-engineer` - https://www.skills.sh/jeffallan/claude-skills/rust-engineer
 - `rust-mcp-server-generator` - https://www.skills.sh/github/awesome-copilot/rust-mcp-server-generator
-- `sandbox-sdk` - https://github.com/cloudflare/skills/tree/HEAD/skills/sandbox-sdk
+- `sandbox-sdk` - https://skills.sh/cloudflare/skills/sandbox-sdk
 - `scikit-learn` - https://skills.sh/davila7/claude-code-templates/scikit-learn
 - `scrape` - https://www.skills.sh/brightdata/skills/scrape
 - `security-best-practices` - https://www.skills.sh/openai/skills/security-best-practices
 - `senior-architect` - https://www.skills.sh/sickn33/antigravity-awesome-skills/senior-architect
 - `senior-data-scientist` - https://www.skills.sh/alirezarezvani/claude-skills/senior-data-engineer
 - `senior-fullstack` - https://www.skills.sh/sickn33/antigravity-awesome-skills/senior-fullstack
-- `sentry-code-review` - https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-code-review
+- `sentry-code-review` - https://skills.sh/getsentry/sentry-for-ai/sentry-code-review
 - `sentry-feature-setup` - https://skills.sh/getsentry/sentry-for-ai/sentry-feature-setup
-- `sentry-fix-issues` - https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-fix-issues
+- `sentry-fix-issues` - https://skills.sh/getsentry/sentry-for-ai/sentry-fix-issues
 - `sentry-node-sdk` - https://skills.sh/getsentry/sentry-for-ai/sentry-node-sdk
-- `sentry-react-sdk` - https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-react-sdk
+- `sentry-react-sdk` - https://skills.sh/getsentry/sentry-for-ai/sentry-react-sdk
 - `sentry-sdk-setup` - https://skills.sh/getsentry/sentry-for-ai/sentry-sdk-setup
-- `sentry-setup-ai-monitoring` - https://github.com/getsentry/sentry-for-ai/tree/HEAD/skills/sentry-setup-ai-monitoring
+- `sentry-setup-ai-monitoring` - https://skills.sh/getsentry/sentry-for-ai/sentry-setup-ai-monitoring
 - `sentry-workflow` - https://skills.sh/getsentry/sentry-for-ai/sentry-workflow
 - `seo` - https://skills.sh/addyosmani/web-quality-skills/seo
 - `seo-audit` - https://www.skills.sh/coreyhaines31/marketingskills/seo-audit
-- `shadcn` - https://github.com/shadcn/ui/tree/HEAD/skills/shadcn
+- `shadcn` - https://skills.sh/shadcn/ui/shadcn
 - `shellcheck-configuration` - https://www.skills.sh/wshobson/agents/shellcheck-configuration
 - `shopify-admin` - https://www.skills.sh/shopify/shopify-ai-toolkit/shopify-admin
 - `shopify-dev` - https://www.skills.sh/shopify/shopify-ai-toolkit/shopify-dev
 - `skill-judge` - https://skills.sh/softaworks/agent-toolkit/skill-judge
-- `sleek-design-mobile-apps` - https://github.com/sleekdotdesign/agent-skills/tree/HEAD/skills/design-mobile-apps
+- `sleek-design-mobile-apps` - https://skills.sh/sleekdotdesign/agent-skills/sleek-design-mobile-apps
 - `social` - https://www.skills.sh/coreyhaines31/marketingskills/social
 - `social-graph-ranker` - https://www.skills.sh/affaan-m/everything-claude-code/social-graph-ranker
 - `social-media` - https://www.skills.sh/langchain-ai/deepagents/social-media
@@ -398,10 +394,10 @@ The active source list contains historical and mapped names. When a source name 
 - `sqlalchemy-alembic-expert-best-practices-code-review` - https://skills.sh/wispbit-ai/skills/sqlalchemy-alembic-expert-best-practices-code-review
 - `sqlalchemy-orm` - https://skills.sh/bobmatnyc/claude-mpm-skills/sqlalchemy
 - `stitch-code-to-design` - https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-design/skills/code-to-design
-- `stitch-loop` - https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/stitch-loop
+- `stitch-loop` - https://skills.sh/google-labs-code/stitch-skills/stitch-loop
 - `stripe-best-practices` - https://skills.sh/stripe/ai/stripe-best-practices
-- `subagent-driven-development` - https://github.com/obra/superpowers/tree/HEAD/skills/subagent-driven-development
-- `supabase-postgres-best-practices` - https://github.com/supabase/agent-skills/tree/HEAD/skills/supabase-postgres-best-practices
+- `subagent-driven-development` - https://skills.sh/obra/superpowers/subagent-driven-development
+- `supabase-postgres-best-practices` - https://skills.sh/supabase/agent-skills/supabase-postgres-best-practices
 - `svelte-code-writer` - https://skills.sh/sveltejs/ai-tools/svelte-code-writer
 - `svelte5-best-practices` - https://skills.sh/ejirocodes/agent-skills/svelte5-best-practices
 - `swift-concurrency` - https://skills.sh/avdlee/swift-concurrency-agent-skill/swift-concurrency
@@ -409,13 +405,13 @@ The active source list contains historical and mapped names. When a source name 
 - `swiftui-expert-skill` - https://www.skills.sh/avdlee/swiftui-agent-skill/swiftui-expert-skill
 - `swiftui-pro` - https://www.skills.sh/twostraws/swiftui-agent-skill/swiftui-pro
 - `system-design` - https://www.skills.sh/wondelai/skills/system-design
-- `systematic-debugging` - https://github.com/obra/superpowers/tree/HEAD/skills/systematic-debugging
+- `systematic-debugging` - https://skills.sh/obra/superpowers/systematic-debugging
 - `tailwind` - https://www.skills.sh/heygen-com/hyperframes/tailwind
 - `tailwind-css-patterns` - https://www.skills.sh/giuseppe-trisciuoglio/developer-kit/tailwind-css-patterns
 - `tailwind-design-system` - https://www.skills.sh/wshobson/agents/tailwind-design-system
 - `tailwind-v4-shadcn` - https://skills.sh/secondsky/claude-skills/tailwind-v4-shadcn
 - `tanstack-start` - https://skills.sh/tanstack-skills/tanstack-skills/tanstack-start
-- `taste-design` - https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/taste-design
+- `taste-design` - https://skills.sh/google-labs-code/stitch-skills/taste-design
 - `tauri-v2` - https://skills.sh/nodnarbnitram/claude-code-extensions/tauri-v2
 - `teach` - https://www.skills.sh/mattpocock/skills/teach
 - `telegram-bot` - https://www.skills.sh/claude-office-skills/skills/telegram-bot
@@ -424,7 +420,7 @@ The active source list contains historical and mapped names. When a source name 
 - `terraform-module-library` - https://skills.sh/wshobson/agents/terraform-module-library
 - `terraform-stacks` - https://skills.sh/hashicorp/agent-skills/terraform-stacks
 - `terraform-style-guide` - https://skills.sh/hashicorp/agent-skills/terraform-style-guide
-- `test-driven-development` - https://github.com/obra/superpowers/tree/HEAD/skills/test-driven-development
+- `test-driven-development` - https://skills.sh/obra/superpowers/test-driven-development
 - `text-to-sql` - https://www.skills.sh/oimiragieo/agent-studio/text-to-sql
 - `threejs-animation` - https://skills.sh/cloudai-x/threejs-skills/threejs-animation
 - `threejs-fundamentals` - https://skills.sh/cloudai-x/threejs-skills/threejs-fundamentals
@@ -439,20 +435,20 @@ The active source list contains historical and mapped names. When a source name 
 - `tiktok-ads` - https://www.skills.sh/kostja94/marketing-skills/tiktok-ads
 - `tiktok-marketing` - https://www.skills.sh/claude-office-skills/skills/tiktok-marketing
 - `tiktok-research` - https://www.skills.sh/bradautomates/head-of-content/tiktok-research
-- `turborepo` - https://github.com/vercel/turborepo/tree/HEAD/skills/turborepo
+- `turborepo` - https://skills.sh/vercel/turborepo/turborepo
 - `two-factor` - https://skills.sh/better-auth/skills/twoFactor
-- `two-factor-authentication-best-practices` - https://github.com/better-auth/skills/tree/HEAD/better-auth/twoFactor
-- `typescript-advanced-types` - https://github.com/wshobson/agents/tree/HEAD/plugins/javascript-typescript/skills/typescript-advanced-types
+- `two-factor-authentication-best-practices` - https://skills.sh/better-auth/skills/two-factor-authentication-best-practices
+- `typescript-advanced-types` - https://skills.sh/wshobson/agents/typescript-advanced-types
 - `ui-ux-pro-max` - https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max
 - `upgrade-stripe` - https://skills.sh/stripe/ai/upgrade-stripe
-- `upgrading-expo` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/upgrading-expo
+- `upgrading-expo` - https://skills.sh/expo/skills/upgrading-expo
 - `us-business-english` - https://www.skills.sh/jezweb/claude-skills/us-business-english
 - `use-ai-sdk` - https://skills.sh/vercel/ai/use-ai-sdk
-- `use-dom` - https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/use-dom
-- `using-git-worktrees` - https://github.com/obra/superpowers/tree/HEAD/skills/using-git-worktrees
+- `use-dom` - https://skills.sh/expo/skills/use-dom
+- `using-git-worktrees` - https://skills.sh/obra/superpowers/using-git-worktrees
 - `vercel-composition-patterns` - https://github.com/vercel-labs/agent-skills/tree/HEAD/skills/composition-patterns
-- `vercel-react-best-practices` - https://github.com/vercel-labs/agent-skills/tree/HEAD/skills/react-best-practices
-- `verification-before-completion` - https://github.com/obra/superpowers/tree/HEAD/skills/verification-before-completion
+- `vercel-react-best-practices` - https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices
+- `verification-before-completion` - https://skills.sh/obra/superpowers/verification-before-completion
 - `vite` - https://www.skills.sh/antfu/skills/vite
 - `vitepress` - https://www.skills.sh/antfu/skills/vitepress
 - `vitest` - https://www.skills.sh/antfu/skills/vitest
@@ -462,12 +458,12 @@ The active source list contains historical and mapped names. When a source name 
 - `vue-pinia-best-practices` - https://skills.sh/hyf0/vue-skills/vue-pinia-best-practices
 - `web-accessibility` - https://www.skills.sh/supercent-io/skills-template/web-accessibility
 - `web-design-guidelines` - https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines
-- `web-perf` - https://github.com/cloudflare/skills/tree/HEAD/skills/web-perf
-- `webapp-testing` - https://github.com/anthropics/skills/tree/HEAD/skills/webapp-testing
+- `web-perf` - https://skills.sh/cloudflare/skills/web-perf
+- `webapp-testing` - https://skills.sh/anthropics/skills/webapp-testing
 - `webassembly` - https://github.com/ffsshhttiikk/opencode-agents-skills/tree/HEAD/webassembly
 - `whatsapp-automation` - https://www.skills.sh/claude-office-skills/skills/whatsapp-automation
 - `wordpress-router` - https://skills.sh/wordpress/agent-skills/wordpress-router
-- `workers-best-practices` - https://github.com/cloudflare/skills/tree/HEAD/skills/workers-best-practices
+- `workers-best-practices` - https://skills.sh/cloudflare/skills/workers-best-practices
 - `wp-block-development` - https://skills.sh/wordpress/agent-skills/wp-block-development
 - `wp-block-themes` - https://skills.sh/wordpress/agent-skills/wp-block-themes
 - `wp-performance` - https://skills.sh/wordpress/agent-skills/wp-performance
@@ -475,7 +471,7 @@ The active source list contains historical and mapped names. When a source name 
 - `wp-project-triage` - https://skills.sh/wordpress/agent-skills/wp-project-triage
 - `wp-rest-api` - https://skills.sh/wordpress/agent-skills/wp-rest-api
 - `wp-wpcli-and-ops` - https://skills.sh/wordpress/agent-skills/wp-wpcli-and-ops
-- `wrangler` - https://github.com/cloudflare/skills/tree/HEAD/skills/wrangler
+- `wrangler` - https://skills.sh/cloudflare/skills/wrangler
 - `writing-plans` - https://skills.sh/obra/superpowers/writing-plans
 - `xcode-build-orchestrator` - https://skills.sh/avdlee/xcode-build-optimization-agent-skill/xcode-build-orchestrator
 - `xlsx` - https://skills.sh/anthropics/skills/xlsx

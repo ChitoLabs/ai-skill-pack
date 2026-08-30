@@ -4,6 +4,7 @@ description: "Trigger: playwright-generate-test, Generate a Playwright test base
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/playwright-generate-test"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/playwright-generate-test"

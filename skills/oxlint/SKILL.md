@@ -1,9 +1,10 @@
 ---
 name: oxlint
-description: "Trigger: oxlint, Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Preserve source workflow with portable agent instructions."
+description: "Trigger: oxlint, Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: delexw
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/delexw/claude-code-misc/oxlint"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/oxlint"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `oxlint` or the preserved source description: Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
+Use this skill when the user request matches `oxlint` or the preserved source description: Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

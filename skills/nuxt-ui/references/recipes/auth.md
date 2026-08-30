@@ -2,7 +2,7 @@
 
 ## UAuthForm (recommended)
 
-`UAuthForm` provides a complete auth form with fields, providers, validation, and submit — no manual `UForm` + `UFormField` wiring needed. Wrap it in `UPageCard` for a polished look.
+`UAuthForm` provides a complete auth form with fields, providers, validation, and submit - no manual `UForm` + `UFormField` wiring needed. Wrap it in `UPageCard` for a polished look.
 
 ```vue [pages/login.vue]
 <script setup lang="ts">
@@ -78,8 +78,8 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 | Prop | Purpose |
 |---|---|
 | `title`, `description`, `icon` | Header content |
-| `fields` | `AuthFormField[]` — each has `name`, `type`, `label`, `placeholder`, `required` |
-| `providers` | `ButtonProps[]` — social login buttons shown above/below the form |
+| `fields` | `AuthFormField[]` - each has `name`, `type`, `label`, `placeholder`, `required` |
+| `providers` | `ButtonProps[]` - social login buttons shown above/below the form |
 | `schema` | Zod/Valibot schema for validation |
 | `submit` | Customize submit button: `{ label: 'Sign in', block: true }` |
 | `separator` | Text between providers and fields (default: `'or'`) |
@@ -154,9 +154,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 ## Tips
 
-- Prefer `UAuthForm` with `UPageCard` for standard auth pages — handles layout, providers, validation, and submit
+- Prefer `UAuthForm` with `UPageCard` for standard auth pages - handles layout, providers, validation, and submit
 - Use `import * as z from 'zod'` and `z.email()` (Zod 4 syntax)
-- Type the submit handler: `function onSubmit(event: FormSubmitEvent<Schema>)` — access validated data via `event.data`
+- Type the submit handler: `function onSubmit(event: FormSubmitEvent<Schema>)` - access validated data via `event.data`
 - Center auth forms with `flex min-h-dvh items-center justify-center`
 - Place "Forgot password?" link as `#password-hint` slot on `UAuthForm`, or `#hint` slot on `UFormField`
 - Social login buttons: use `providers` prop on `UAuthForm`, or add manually with `<USeparator label="or" />`

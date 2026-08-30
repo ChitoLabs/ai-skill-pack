@@ -94,15 +94,15 @@ Example structure:
 
 ```
 app/
-  _layout.tsx — <Tabs />
+  _layout.tsx - <Tabs />
   (home)/
-    _layout.tsx — <Stack />
-    index.tsx — <ScrollView />
+    _layout.tsx - <Stack />
+    index.tsx - <ScrollView />
   (settings)/
-    _layout.tsx — <Stack />
-    index.tsx — <ScrollView />
+    _layout.tsx - <Stack />
+    index.tsx - <ScrollView />
   (home,settings)/
-    info.tsx — <ScrollView /> (shared across tabs)
+    info.tsx - <ScrollView /> (shared across tabs)
 ```
 
 ## Array Routes for Multiple Stacks
@@ -111,11 +111,11 @@ Use array routes '(index,settings)' to create multiple stacks. This is useful fo
 
 ```
 app/
-  _layout.tsx — <Tabs />
+  _layout.tsx - <Tabs />
   (index,settings)/
-    _layout.tsx — <Stack />
-    index.tsx — <ScrollView />
-    settings.tsx — <ScrollView />
+    _layout.tsx - <Stack />
+    index.tsx - <ScrollView />
+    settings.tsx - <ScrollView />
 ```
 
 This requires a specialized layout with explicit anchor routes:
@@ -154,12 +154,12 @@ export default function Layout({ segment }: { segment: string }) {
 
 ```
 app/
-  _layout.tsx — <NativeTabs />
+  _layout.tsx - <NativeTabs />
   (index,search)/
-    _layout.tsx — <Stack />
-    index.tsx — Main list
-    search.tsx — Search view
-    i/[id].tsx — Detail page
+    _layout.tsx - <Stack />
+    index.tsx - Main list
+    search.tsx - Search view
+    i/[id].tsx - Detail page
 components/
   theme.tsx
   list.tsx

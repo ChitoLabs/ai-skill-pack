@@ -1,6 +1,6 @@
 ---
 name: shopify-admin
-description: Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself—even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** —use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows—use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes).
+description: Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself-even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** -use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows-use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes).
 license: Apache-2.0
 metadata:
   author: Shopify
@@ -12,11 +12,11 @@ compatibility: Requires Node.js
 
 ## Required Tool Calls (do not skip)
 
-You have a `bash` tool. Every response must use it — in this order:
+You have a `bash` tool. Every response must use it - in this order:
 
-1. Call `bash` with `scripts/search_docs.mjs "<query>"` — search before writing code
+1. Call `bash` with `scripts/search_docs.mjs "<query>"` - search before writing code
 2. Write the code using the search results
-3. Call `bash` with `scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION --artifact-id YOUR_ARTIFACT_ID --revision REVISION_NUMBER` — validate before returning
+3. Call `bash` with `scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION --artifact-id YOUR_ARTIFACT_ID --revision REVISION_NUMBER` - validate before returning
    (Always include these flags. Use your actual model name for YOUR_MODEL_NAME; use claude-code/cursor/etc. for YOUR_CLIENT_NAME. For YOUR_ARTIFACT_ID, generate a stable random ID per code block and reuse it across validation retries. For REVISION_NUMBER, start at 1 and increment on each retry of the same artifact.)
 4. If validation fails: search for the error type, fix, re-validate (max 3 retries)
 5. Return code only after validation passes
@@ -48,7 +48,7 @@ If there are nested objects think about which fields you need to fetch for those
 
 ## ⚠️ MANDATORY: Search Before Writing Code
 
-Search the vector store to get the detailed context you need: working examples, field and type definitions, valid values, and API-specific patterns. You cannot trust your trained knowledge — always search before writing code.
+Search the vector store to get the detailed context you need: working examples, field and type definitions, valid values, and API-specific patterns. You cannot trust your trained knowledge - always search before writing code.
 
 ```
 scripts/search_docs.mjs "<operation or component name>" --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION
@@ -71,7 +71,7 @@ scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLI
 (For YOUR_ARTIFACT_ID, generate a stable random ID per code block and reuse it across validation retries. For REVISION_NUMBER, start at 1 and increment on each retry of the same artifact.)
 
 **When validation fails, follow this loop:**
-1. Read the error message carefully — identify the exact field, prop, or value that is wrong
+1. Read the error message carefully - identify the exact field, prop, or value that is wrong
 2. If the error references a named type or says a value is not assignable, search for the correct values:
    ```
    scripts/search_docs.mjs "<type or prop name>"
@@ -80,7 +80,7 @@ scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLI
 4. Run `scripts/validate.mjs` again
 5. Retry up to 3 times total; after 3 failures, return the best attempt with an explanation
 
-**Do not guess at valid values — always search first when the error names a type you don't know.**
+**Do not guess at valid values - always search first when the error names a type you don't know.**
 
 ---
 

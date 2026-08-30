@@ -13,7 +13,7 @@ When using an existing presentation as a template:
 
 2. **Plan slide mapping**: For each content section, choose a template slide.
 
-   ⚠️ **USE VARIED LAYOUTS** — monotonous presentations are a common failure mode. Don't default to basic title + bullet slides. Actively seek out:
+   ⚠️ **USE VARIED LAYOUTS** - monotonous presentations are a common failure mode. Don't default to basic title + bullet slides. Actively seek out:
    - Multi-column layouts (2-column, 3-column)
    - Image + text combinations
    - Full-bleed images with text overlay
@@ -35,7 +35,7 @@ When using an existing presentation as a template:
    - **Complete all structural changes before step 5**
 
 5. **Edit content**: Update text in each `slide{N}.xml`.
-   **Use subagents here if available** — slides are separate XML files, so subagents can edit in parallel.
+   **Use subagents here if available** - slides are separate XML files, so subagents can edit in parallel.
 
 6. **Clean**: `python scripts/clean.py unpacked/`
 
@@ -94,7 +94,7 @@ python scripts/thumbnail.py input.pptx [output_prefix] [--cols N]
 
 Creates `thumbnails.jpg` with slide filenames as labels. Default 3 columns, max 12 per grid.
 
-**Use for template analysis only** (choosing layouts). For visual QA, use `soffice` + `pdftoppm` to create full-resolution individual slide images—see SKILL.md.
+**Use for template analysis only** (choosing layouts). For visual QA, use `soffice` + `pdftoppm` to create full-resolution individual slide images-see SKILL.md.
 
 ---
 
@@ -106,7 +106,7 @@ Slide order is in `ppt/presentation.xml` → `<p:sldIdLst>`.
 
 **Delete**: Remove `<p:sldId>`, then run `clean.py`.
 
-**Add**: Use `add_slide.py`. Never manually copy slide files—the script handles notes references, Content_Types.xml, and relationship IDs that manual copying misses.
+**Add**: Use `add_slide.py`. Never manually copy slide files-the script handles notes references, Content_Types.xml, and relationship IDs that manual copying misses.
 
 ---
 
@@ -119,7 +119,7 @@ Slide order is in `ppt/presentation.xml` → `<p:sldIdLst>`.
 
 For each slide:
 1. Read the slide's XML
-2. Identify ALL placeholder content—text, images, charts, icons, captions
+2. Identify ALL placeholder content-text, images, charts, icons, captions
 3. Replace each placeholder with final content
 
 **Use the Edit tool, not sed or Python scripts.** The Edit tool forces specificity about what to replace and where, yielding better reliability.
@@ -154,16 +154,16 @@ When replacing text with different length content:
 
 ### Multi-Item Content
 
-If source has multiple items (numbered lists, multiple sections), create separate `<a:p>` elements for each — **never concatenate into one string**.
+If source has multiple items (numbered lists, multiple sections), create separate `<a:p>` elements for each - **never concatenate into one string**.
 
-**❌ WRONG** — all items in one paragraph:
+**❌ WRONG** - all items in one paragraph:
 ```xml
 <a:p>
   <a:r><a:rPr .../><a:t>Step 1: Do the first thing. Step 2: Do the second thing.</a:t></a:r>
 </a:p>
 ```
 
-**✅ CORRECT** — separate paragraphs with bold headers:
+**✅ CORRECT** - separate paragraphs with bold headers:
 ```xml
 <a:p>
   <a:pPr algn="l"><a:lnSpc><a:spcPts val="3919"/></a:lnSpc></a:pPr>

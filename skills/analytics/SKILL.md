@@ -4,6 +4,7 @@ description: "Trigger: analytics, When the user wants to set up, improve, or aud
 license: Apache-2.0
 metadata:
   author: coreyhaines31
+  adapter: LCubero
   version: 2.0.0
   skills_sh_url: "https://skills.sh/coreyhaines31/marketingskills/analytics"
   github_url: "https://github.com/coreyhaines31/marketingskills/tree/HEAD/skills/analytics"

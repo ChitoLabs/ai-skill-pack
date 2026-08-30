@@ -41,10 +41,10 @@ Detailed guardrails derived from CCM-LUX getForecastData and CCM-UX-MIDDLEWARE F
 |---|---|
 | Maximum rows | 40 rows per forecast response |
 | Daily example | 30 actual days + 30 forecast days = 60 rows → **exceeds limit** |
-| Recommendation | For daily granularity, keep forecast period to ~2–3 weeks |
+| Recommendation | For daily granularity, keep forecast period to ~2-3 weeks |
 | Longer periods | Use monthly granularity to stay within the row limit |
 
-> 💡 **Tip:** If the user needs a daily forecast for more than 2–3 weeks, consider splitting the request into smaller time windows or switching to monthly granularity.
+> 💡 **Tip:** If the user needs a daily forecast for more than 2-3 weeks, consider splitting the request into smaller time windows or switching to monthly granularity.
 
 ## includeActualCost / includeFreshPartialCost
 
@@ -65,7 +65,7 @@ The API returns "Forecast is unavailable for the specified time period" when:
 | Insufficient training data | Scope has fewer than 28 days of cost history |
 | No cost history | Scope has never had any cost data |
 
-> ⚠️ **Warning:** This is **not an error** — it is a valid response indicating the forecast model cannot generate predictions. Do not retry. Instead, suggest using **the Cost Query workflow (Part 1)** to retrieve whatever historical data is available.
+> ⚠️ **Warning:** This is **not an error** - it is a valid response indicating the forecast model cannot generate predictions. Do not retry. Instead, suggest using **the Cost Query workflow (Part 1)** to retrieve whatever historical data is available.
 
 ## Rate Limiting
 

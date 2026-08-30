@@ -1,6 +1,6 @@
 ---
 name: deno-guidance
-description: "Trigger: deno-guidance, Use when starting any Deno project, choosing packages, configuring deno.json, or running CLI commands. Preserve source workflow with portable agent instructions."
+description: "Trigger: start a Deno project, choose Deno packages, configure deno.json, run Deno CLI commands. Provide scoped Deno project guidance."
 license: MIT
 metadata:
   author: denoland

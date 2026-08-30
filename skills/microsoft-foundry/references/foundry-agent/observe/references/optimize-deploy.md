@@ -1,8 +1,8 @@
-# Steps 6–7 — Optimize Prompt & Deploy New Version
+# Steps 6-7 - Optimize Prompt & Deploy New Version
 
-## Step 6 — Optimize Prompt
+## Step 6 - Optimize Prompt
 
-> ⛔ **Guardrail:** When optimizing after a dataset update, do NOT remove dataset rows or weaken evaluators to recover scores. Score drops on a harder dataset are expected — they mean test coverage improved, not that the agent regressed. Optimize for NEW failure patterns only.
+> ⛔ **Guardrail:** When optimizing after a dataset update, do NOT remove dataset rows or weaken evaluators to recover scores. Score drops on a harder dataset are expected - they mean test coverage improved, not that the agent regressed. Optimize for NEW failure patterns only.
 
 Use **`prompt_optimize`** with:
 
@@ -17,7 +17,7 @@ Use **`prompt_optimize`** with:
 
 > Use the optimized prompt returned by the tool. Do NOT manually rewrite.
 
-## Step 7 — Deploy New Version
+## Step 7 - Deploy New Version
 
 > **Always confirm before deploying.** Show the user a diff or summary of prompt changes and wait for explicit sign-off.
 

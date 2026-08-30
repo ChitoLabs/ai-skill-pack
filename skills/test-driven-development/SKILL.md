@@ -1,9 +1,10 @@
 ---
 name: test-driven-development
-description: "Trigger: test-driven-development, Use when implementing any feature or bugfix, before writing implementation code. Preserve source workflow with portable agent instructions."
+description: "Trigger: explicitly use test-driven development outside an active managed SDD workflow, or when repository policy requires TDD. Preserve red-green-refactor and expected-failure proof; inside managed SDD defer fully to the managed TDD policy."
 license: Apache-2.0
 metadata:
   author: obra
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/test-driven-development"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/test-driven-development"
@@ -11,7 +12,9 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `test-driven-development` or the preserved source description: Use when implementing any feature or bugfix, before writing implementation code
+Use this skill only when the user or repository policy explicitly selects TDD outside an active managed SDD workflow.
+
+First consult repository policy and detect any active managed workflow. Inside managed SDD, defer fully to its TDD owner without adding gates or artifacts.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

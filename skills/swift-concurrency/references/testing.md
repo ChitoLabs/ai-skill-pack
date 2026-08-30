@@ -564,9 +564,9 @@ struct SetupTrait: TestTrait, TestScoping {
 
 ## Common Mistakes Agents Make
 
-- **Flaky intermediate-state assertions**: Asserting `isLoading == true` immediately after creating a `Task` is a race condition — the task may not have started yet. Use `withMainSerialExecutor` + `Task.yield()` to control scheduling before asserting intermediate state.
+- **Flaky intermediate-state assertions**: Asserting `isLoading == true` immediately after creating a `Task` is a race condition - the task may not have started yet. Use `withMainSerialExecutor` + `Task.yield()` to control scheduling before asserting intermediate state.
 - **Using `Task.sleep` as a synchronization primitive** in tests instead of deterministic scheduling.
-- **Asserting intermediate state without controlling scheduling**: Always use `withMainSerialExecutor` when you need to observe state between task creation and completion. Note: `withMainSerialExecutor` does not work with parallel test execution — mark the suite `@Suite(.serialized)`.
+- **Asserting intermediate state without controlling scheduling**: Always use `withMainSerialExecutor` when you need to observe state between task creation and completion. Note: `withMainSerialExecutor` does not work with parallel test execution - mark the suite `@Suite(.serialized)`.
 - **Reaching into isolated internals** instead of testing public behavior.
 - **Keeping both Swift Testing and XCTest versions** of the same example unless they teach different migration paths.
 

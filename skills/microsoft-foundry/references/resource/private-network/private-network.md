@@ -38,9 +38,9 @@ allowed-tools: Read, Write, Bash, AskUserQuestion, microsoft_docs_search, micros
 
 ---
 
-## Step 0 — Ground in Microsoft Learn
+## Step 0 - Ground in Microsoft Learn
 Use `microsoft_docs_fetch` to get docs from Key Documentation sources.
-Use `microsoft_docs_search` to verify any technical fact before presenting it to the user. If Learn contradicts a reference file, **Learn wins**. Cite the URL. If Learn doesn't cover it, say so — do not invent facts, limits, flags, or compatibility claims.
+Use `microsoft_docs_search` to verify any technical fact before presenting it to the user. If Learn contradicts a reference file, **Learn wins**. Cite the URL. If Learn doesn't cover it, say so - do not invent facts, limits, flags, or compatibility claims.
 
 ---
 
@@ -48,18 +48,18 @@ Use `microsoft_docs_search` to verify any technical fact before presenting it to
 
 > **Important:** All following steps are mandatory. Communicate the plan with the user before acting.
 
-## Step 1 — Gather Requirements
+## Step 1 - Gather Requirements
 
 Read [references/intake.md](references/intake.md). One pass, three tiers:
-- **Tier 1 (Core):** Subscription, VNet model, agents, region, RG, VNet — determine approach at the end
+- **Tier 1 (Core):** Subscription, VNet model, agents, region, RG, VNet - determine approach at the end
 - **Tier 2 (Architecture):** DNS, topology, NSG, on-prem, identity, BYO resources
 - **Tier 3 (Enterprise):** Model, client access, auth, policies, monitoring
 
-Determine the approach (official template / adapt closest / extend user’s IaC) at the end of Tier 1. Continue through Tiers 2–3.
+Determine the approach (official template / adapt closest / extend user’s IaC) at the end of Tier 1. Continue through Tiers 2-3.
 
 ---
 
-## Step 2 — Plan Generation
+## Step 2 - Plan Generation
 
 Use the confirmed requirements from [references/intake.md](references/intake.md).
 
@@ -73,13 +73,13 @@ Get confirmation before proceeding.
 
 ---
 
-## Step 3 — Scaffold & Parameterize
+## Step 3 - Scaffold & Parameterize
 
 Read [references/scaffold.md](references/scaffold.md).
 
 ---
 
-## Step 4 — Pre-Deployment Validation
+## Step 4 - Pre-Deployment Validation
 
 Catch blockers **before** deploying. These checks apply to all paths.
 
@@ -97,13 +97,13 @@ az cognitiveservices account list-skus --location <region> --kind AIServices -o 
 
 **Provider Registrations:** `Microsoft.CognitiveServices`, `Microsoft.DocumentDB`, `Microsoft.Search`, `Microsoft.Network`.
 
-**Feature Flags:** For Managed VNet — verify `AI.ManagedVnetPreview` is registered.
+**Feature Flags:** For Managed VNet - verify `AI.ManagedVnetPreview` is registered.
 
 > Do NOT deploy until all pre-flight checks pass.
 
 ---
 
-## Step 5 — Deploy & Track
+## Step 5 - Deploy & Track
 
 **OFFICIAL / ADAPT path:** Read [references/deploy.md](references/deploy.md) for deployment command, monitoring, and error recovery.
 
@@ -111,9 +111,9 @@ az cognitiveservices account list-skus --location <region> --kind AIServices -o 
 
 ---
 
-## Step 6 — Test & Validate
+## Step 6 - Test & Validate
 
-Read [references/post-deployment-validation.md](references/post-deployment-validation.md). These checks apply to all paths — PE verification, RBAC audit, `publicNetworkAccess` audit, and end-to-end agent test work regardless of how the infrastructure was deployed.
+Read [references/post-deployment-validation.md](references/post-deployment-validation.md). These checks apply to all paths - PE verification, RBAC audit, `publicNetworkAccess` audit, and end-to-end agent test work regardless of how the infrastructure was deployed.
 
 If any test fails, run `microsoft_docs_search` for the error before attempting remediation.
 
@@ -121,6 +121,6 @@ If any test fails, run `microsoft_docs_search` for the error before attempting r
 
 ## Error Handling
 
-> ⚠️ **Critical retry rule:** If a deployment fails after the capability host step starts, the agent subnet gets a `legionservicelink` that cannot be removed. On retry, always use a **new VNet name** — never reuse the same agent subnet. See [references/deploy.md](references/deploy.md).
+> ⚠️ **Critical retry rule:** If a deployment fails after the capability host step starts, the agent subnet gets a `legionservicelink` that cannot be removed. On retry, always use a **new VNet name** - never reuse the same agent subnet. See [references/deploy.md](references/deploy.md).
 
 For all other errors, check `microsoft_docs_search` for current remediation before acting.

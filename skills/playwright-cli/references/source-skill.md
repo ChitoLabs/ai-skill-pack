@@ -3,7 +3,7 @@ name: playwright-cli
 description: Automate browser interactions, test web pages and work with Playwright tests.
 license: Apache-2.0
 metadata:
-  author: microsoft
+  author: sonofmagic
   version: 0.1
   skills_sh_url: "https://www.skills.sh/microsoft/playwright-cli/playwright-cli"
   github_url: "https://github.com/sonofmagic/skills/tree/HEAD/skills/playwright-cli/playwright-cli"
@@ -169,7 +169,7 @@ playwright-cli video-start video.webm
 playwright-cli video-chapter "Chapter Title" --description="Details" --duration=2000
 playwright-cli video-stop
 
-# launch the dashboard for UI review / design feedback — user annotates the page, you receive the annotated screenshot, snapshot, and notes
+# launch the dashboard for UI review / design feedback - user annotates the page, you receive the annotated screenshot, snapshot, and notes
 playwright-cli show --annotate
 
 # generate a Playwright locator for an element from its ref or selector

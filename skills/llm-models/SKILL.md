@@ -4,6 +4,7 @@ description: "Trigger: llm-models, Access Claude, Gemini, Kimi, GLM and 100+ LLM
 license: Apache-2.0
 metadata:
   author: inference-sh-skills
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/inference-sh-skills/skills/llm-models"
   github_url: "https://github.com/inference-sh-skills/skills/tree/HEAD/tools/llm/llm-models"

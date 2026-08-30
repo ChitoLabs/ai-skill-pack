@@ -68,7 +68,7 @@ gem 'activerecord-deprecated_finders'
 **What Changed:**
 Using `return` inside an **inline callback block** now raises `LocalJumpError` at callback-execution time. This was never officially supported; a rewrite of `ActiveSupport::Callbacks` in 4.1 closed the accidental support.
 
-**Scope:** this affects *inline blocks only* (`before_save { return false }`). Method-form callbacks (`before_save :guard` where `guard` contains `return false`) are unaffected — `return` there behaves normally and `false` still halts the chain on 4.1.
+**Scope:** this affects *inline blocks only* (`before_save { return false }`). Method-form callbacks (`before_save :guard` where `guard` contains `return false`) are unaffected - `return` there behaves normally and `false` still halts the chain on 4.1.
 
 **Detection Pattern:**
 ```ruby
@@ -80,10 +80,10 @@ before_save { return false if invalid_state? }
 # BEFORE
 before_save { return false if invalid_state? }
 
-# AFTER — evaluate to the value
+# AFTER - evaluate to the value
 before_save { false if invalid_state? }
 
-# OR — extract to a method where `return` is fine
+# OR - extract to a method where `return` is fine
 before_save :halt_if_invalid
 
 def halt_if_invalid
@@ -91,7 +91,7 @@ def halt_if_invalid
 end
 ```
 
-Note: in Rails 5+ the halt mechanism changes again — `false` no longer halts, use `throw :abort`.
+Note: in Rails 5+ the halt mechanism changes again - `false` no longer halts, use `throw :abort`.
 
 See [rails/rails#13271](https://github.com/rails/rails/pull/13271).
 
@@ -112,13 +112,13 @@ Post.includes(:comments).where("comments.title = ?", "foo")
 # BEFORE
 Post.includes(:comments).where("comments.title = ?", "foo")
 
-# AFTER — explicit join (no eager load)
+# AFTER - explicit join (no eager load)
 Post.joins(:comments).where("comments.title = ?", "foo")
 
-# AFTER — eager load
+# AFTER - eager load
 Post.eager_load(:comments).where("comments.title = ?", "foo")
 
-# AFTER — equivalent with includes + references
+# AFTER - equivalent with includes + references
 Post.includes(:comments).where("comments.title = ?", "foo").references(:comments)
 ```
 
@@ -135,7 +135,7 @@ See [rails/rails#9712](https://github.com/rails/rails/issues/9712) for backgroun
 #### 4. PostgreSQL `json` / `hstore` / `array` Columns Return String-Keyed Data
 
 **What Changed:**
-In 4.0, PostgreSQL `json`, `hstore`, and `array` columns (and any `store_accessor` built on top of them) returned a `HashWithIndifferentAccess` or `ArrayWithIndifferentAccess` — symbol and string access both worked. In 4.1 they return plain `Hash` or `Array` with **string keys only**. Symbol access silently returns `nil`.
+In 4.0, PostgreSQL `json`, `hstore`, and `array` columns (and any `store_accessor` built on top of them) returned a `HashWithIndifferentAccess` or `ArrayWithIndifferentAccess` - symbol and string access both worked. In 4.1 they return plain `Hash` or `Array` with **string keys only**. Symbol access silently returns `nil`.
 
 **Detection Pattern:**
 ```ruby
@@ -158,7 +158,7 @@ profile.preferences[:theme]
 profile.preferences["theme"]
 ```
 
-`store_accessor`-generated methods (`profile.theme`) still work — the change only bites direct hash lookups. Audit serializers, presenters, and `as_json` overrides that index into these attributes.
+`store_accessor`-generated methods (`profile.theme`) still work - the change only bites direct hash lookups. Audit serializers, presenters, and `as_json` overrides that index into these attributes.
 
 ---
 
@@ -178,11 +178,11 @@ MultiJSON.load(str)
 
 **Fix:**
 ```ruby
-# Option A — keep MultiJSON explicitly
+# Option A - keep MultiJSON explicitly
 # Gemfile
 gem 'multi_json'
 
-# Option B — migrate to core JSON
+# Option B - migrate to core JSON
 # BEFORE
 MultiJSON.dump(obj)
 MultiJSON.load(str)
@@ -192,14 +192,14 @@ obj.to_json
 JSON.parse(str)
 ```
 
-**Do not** blindly substitute `JSON.dump` / `JSON.load` — those are the `JSON` gem's arbitrary-object (de)serializers and are unsafe on untrusted input.
+**Do not** blindly substitute `JSON.dump` / `JSON.load` - those are the `JSON` gem's arbitrary-object (de)serializers and are unsafe on untrusted input.
 
 ---
 
 #### 6. Cookies Serializer Opt-In (Marshal → JSON / Hybrid)
 
 **What Changed:**
-Apps created before 4.1 keep `Marshal` as the signed/encrypted cookie serializer. Rails 4.1 introduces a JSON serializer and a `:hybrid` mode that reads legacy Marshal cookies and writes new JSON ones — but the default is still `Marshal` unless you opt in.
+Apps created before 4.1 keep `Marshal` as the signed/encrypted cookie serializer. Rails 4.1 introduces a JSON serializer and a `:hybrid` mode that reads legacy Marshal cookies and writes new JSON ones - but the default is still `Marshal` unless you opt in.
 
 **Detection Pattern:**
 Missing initializer. No `cookies_serializer` set in `config/initializers/` or `config/application.rb`.
@@ -211,7 +211,7 @@ Add an initializer to migrate transparently:
 Rails.application.config.action_dispatch.cookies_serializer = :hybrid
 ```
 
-Once all live cookies have rotated, switch to `:json` for the leaner path. Note that JSON cannot round-trip arbitrary Ruby objects — `Date`/`Time` become strings, symbol keys become strings. Store primitives only in cookie-backed sessions/flash.
+Once all live cookies have rotated, switch to `:json` for the leaner path. Note that JSON cannot round-trip arbitrary Ruby objects - `Date`/`Time` become strings, symbol keys become strings. Store primitives only in cookie-backed sessions/flash.
 
 ---
 
@@ -316,7 +316,7 @@ flash.to_hash.except(:notify)
 flash.to_hash.except("notify")
 ```
 
-Direct access with either symbol or string still works — the break is specifically in `to_hash`-derived iteration/filtering.
+Direct access with either symbol or string still works - the break is specifically in `to_hash`-derived iteration/filtering.
 
 ---
 
@@ -331,13 +331,13 @@ I18n.locale = params[:locale]  # previously accepted anything
 ```
 
 **Fix:**
-Preferred — fix data and keep enforcement on. Make sure every locale the app actually uses is declared:
+Preferred - fix data and keep enforcement on. Make sure every locale the app actually uses is declared:
 ```ruby
 # config/application.rb
 config.i18n.available_locales = [:en, :es, :fr]
 ```
 
-Escape hatch — disable enforcement (not recommended; the default exists for a security reason):
+Escape hatch - disable enforcement (not recommended; the default exists for a security reason):
 ```ruby
 # config/application.rb
 config.i18n.enforce_available_locales = false
@@ -404,7 +404,7 @@ Migrate reads from `Rails.application.config.secret_key_base` or custom initiali
 #### 15. `render :text` Soft-Deprecated
 
 **What Changed:**
-`render :text` was a security-adjacent footgun — it sent `text/html`, so any string with markup would be interpreted by the browser. 4.1 introduces `render :plain`, `render :html`, and `render :body` as precise replacements, and signals that `:text` will be deprecated in a future release.
+`render :text` was a security-adjacent footgun - it sent `text/html`, so any string with markup would be interpreted by the browser. 4.1 introduces `render :plain`, `render :html`, and `render :body` as precise replacements, and signals that `:text` will be deprecated in a future release.
 
 **Detection Pattern:**
 ```ruby
@@ -416,7 +416,7 @@ render text: "ok"
 # BEFORE
 render text: "ok"
 
-# AFTER — choose based on intent
+# AFTER - choose based on intent
 render plain: "ok"           # Content-Type: text/plain
 render html: "<b>ok</b>".html_safe  # Content-Type: text/html (explicit)
 render body: "raw"           # no Content-Type header
@@ -455,7 +455,7 @@ Or migrate `encode_json` implementations into `as_json`, and update clients to p
 #### 17. JSON Gem Isolated from Rails Encoder
 
 **What Changed:**
-`JSON.generate` / `JSON.dump` no longer consult Rails' `as_json`. They serialize arbitrary Ruby objects the way the stdlib `json` gem wants — which differs significantly. Use `obj.to_json` when you want Rails semantics.
+`JSON.generate` / `JSON.dump` no longer consult Rails' `as_json`. They serialize arbitrary Ruby objects the way the stdlib `json` gem wants - which differs significantly. Use `obj.to_json` when you want Rails semantics.
 
 **Detection Pattern:**
 ```ruby
@@ -467,10 +467,10 @@ JSON.generate(active_record_instance)  # now returns something unexpected
 # BEFORE (ambiguous intent)
 JSON.generate(obj)
 
-# AFTER — Rails semantics (honors as_json)
+# AFTER - Rails semantics (honors as_json)
 obj.to_json
 
-# AFTER — stdlib semantics (if you truly wanted that)
+# AFTER - stdlib semantics (if you truly wanted that)
 JSON.generate(obj.as_json)
 ```
 
@@ -518,7 +518,7 @@ set_callback :save, :around, ->(r, &block) { stuff; block.call; stuff }
 set_callback :save, :around, ->(r, block) { stuff; block.call; stuff }
 ```
 
-Rare — only affects apps that build callbacks dynamically with `set_callback`.
+Rare - only affects apps that build callbacks dynamically with `set_callback`.
 
 ---
 
@@ -530,7 +530,7 @@ Rare — only affects apps that build callbacks dynamically with `set_callback`.
 **Fix (optional):**
 Remove the now-redundant line:
 ```ruby
-# test/test_helper.rb — can be removed
+# test/test_helper.rb - can be removed
 ActiveRecord::Migration.check_pending!
 ```
 
@@ -538,10 +538,10 @@ ActiveRecord::Migration.check_pending!
 
 ## New Features Worth Adopting
 
-- **Action Mailer previews** — subclass `ActionMailer::Preview` in `test/mailers/previews/` and browse at `/rails/mailers`.
-- **ActiveRecord enums** — `enum status: [:active, :archived]` generates scopes and predicate methods.
-- **Variants** — `request.variant = :tablet` lets views render `show.html+tablet.erb`.
-- **`Module#concerning`** — inline concerns inside a class.
+- **Action Mailer previews** - subclass `ActionMailer::Preview` in `test/mailers/previews/` and browse at `/rails/mailers`.
+- **ActiveRecord enums** - `enum status: [:active, :archived]` generates scopes and predicate methods.
+- **Variants** - `request.variant = :tablet` lets views render `show.html+tablet.erb`.
+- **`Module#concerning`** - inline concerns inside a class.
 
 ---
 

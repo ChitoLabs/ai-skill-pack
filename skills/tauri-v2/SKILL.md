@@ -4,6 +4,7 @@ description: "Trigger: tauri-v2, Tauri v2+ cross-platform app development with R
 license: Apache-2.0
 metadata:
   author: nodnarbnitram
+  adapter: LCubero
   version: 1.0.1
   skills_sh_url: "https://skills.sh/nodnarbnitram/claude-code-extensions/tauri-v2"
   github_url: "https://github.com/nodnarbnitram/claude-code-extensions/tree/HEAD/.claude/skills/tauri-v2"

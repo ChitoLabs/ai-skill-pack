@@ -1,9 +1,10 @@
 ---
 name: requesting-code-review
-description: "Trigger: requesting-code-review, Use when completing tasks, implementing major features, or before merging to verify work meets requirements. Preserve source workflow with portable agent instructions."
+description: "Trigger: explicitly request an independent code review or prepare a review handoff. In a managed review or receipt workflow, operate only when delegated and never replace receipt, correction, recovery, approval, or delivery decisions."
 license: Apache-2.0
 metadata:
   author: obra
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/obra/superpowers/requesting-code-review"
   github_url: "https://github.com/obra/superpowers/tree/HEAD/skills/requesting-code-review"
@@ -11,7 +12,9 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `requesting-code-review` or the preserved source description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+Use this skill only when an independent review or review handoff is explicitly requested.
+
+First consult repository policy and detect any active managed review or receipt workflow. If that workflow owns review, operate only when delegated and return advisory evidence without issuing its verdict.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

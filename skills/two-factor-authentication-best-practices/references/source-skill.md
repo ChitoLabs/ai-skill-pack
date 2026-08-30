@@ -58,8 +58,8 @@ const enable2FA = async (password: string) => {
   });
 
   if (data) {
-    // data.totpURI — generate a QR code from this
-    // data.backupCodes — display to user
+    // data.totpURI - generate a QR code from this
+    // data.backupCodes - display to user
   }
 };
 ```

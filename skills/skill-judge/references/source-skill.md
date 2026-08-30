@@ -35,18 +35,18 @@ Cost: $0
 Timeline: Instant
 ```
 
-This is the paradigm shift from "training AI" to "educating AI" — like a hot-swappable LoRA adapter that requires no training. You edit a Markdown file in natural language, and the model's behavior changes.
+This is the paradigm shift from "training AI" to "educating AI" - like a hot-swappable LoRA adapter that requires no training. You edit a Markdown file in natural language, and the model's behavior changes.
 
 ### The Core Formula
 
 > **Good Skill = Expert-only Knowledge − What Claude Already Knows**
 
-A Skill's value is measured by its **knowledge delta** — the gap between what it provides and what the model already knows.
+A Skill's value is measured by its **knowledge delta** - the gap between what it provides and what the model already knows.
 
-- **Expert-only knowledge**: Decision trees, trade-offs, edge cases, anti-patterns, domain-specific thinking frameworks — things that take years of experience to accumulate
+- **Expert-only knowledge**: Decision trees, trade-offs, edge cases, anti-patterns, domain-specific thinking frameworks - things that take years of experience to accumulate
 - **What Claude already knows**: Basic concepts, standard library usage, common programming patterns, general best practices
 
-When a Skill explains "what is PDF" or "how to write a for-loop", it's compressing knowledge Claude already has. This is **token waste** — context window is a public resource shared with system prompts, conversation history, other Skills, and user requests.
+When a Skill explains "what is PDF" or "how to write a for-loop", it's compressing knowledge Claude already has. This is **token waste** - context window is a public resource shared with system prompts, conversation history, other Skills, and user requests.
 
 ### Tool vs Skill
 
@@ -55,8 +55,8 @@ When a Skill explains "what is PDF" or "how to write a for-loop", it's compressi
 | **Tool** | What model CAN do | Execute actions | bash, read_file, write_file, WebSearch |
 | **Skill** | What model KNOWS how to do | Guide decisions | PDF processing, MCP building, frontend design |
 
-Tools define capability boundaries — without bash tool, model can't execute commands.
-Skills inject knowledge — without frontend-design Skill, model produces generic UI.
+Tools define capability boundaries - without bash tool, model can't execute commands.
+Skills inject knowledge - without frontend-design Skill, model produces generic UI.
 
 **The equation**:
 ```
@@ -71,9 +71,9 @@ When evaluating, categorize each section:
 
 | Type | Definition | Treatment |
 |------|------------|-----------|
-| **Expert** | Claude genuinely doesn't know this | Must keep — this is the Skill's value |
-| **Activation** | Claude knows but may not think of | Keep if brief — serves as reminder |
-| **Redundant** | Claude definitely knows this | Should delete — wastes tokens |
+| **Expert** | Claude genuinely doesn't know this | Must keep - this is the Skill's value |
+| **Activation** | Claude knows but may not think of | Keep if brief - serves as reminder |
+| **Redundant** | Claude definitely knows this | Should delete - wastes tokens |
 
 The art of Skill design is maximizing Expert content, using Activation sparingly, and eliminating Redundant ruthlessly.
 
@@ -81,7 +81,7 @@ The art of Skill design is maximizing Expert content, using Activation sparingly
 
 ## Evaluation Dimensions (120 points total)
 
-### D1: Knowledge Delta (20 points) — THE CORE DIMENSION
+### D1: Knowledge Delta (20 points) - THE CORE DIMENSION
 
 The most important dimension. Does the Skill add genuine expert knowledge?
 
@@ -90,7 +90,7 @@ The most important dimension. Does the Skill add genuine expert knowledge?
 | 0-5 | Explains basics Claude knows (what is X, how to write code, standard library tutorials) |
 | 6-10 | Mixed: some expert knowledge diluted by obvious content |
 | 11-15 | Mostly expert knowledge with minimal redundancy |
-| 16-20 | Pure knowledge delta — every paragraph earns its tokens |
+| 16-20 | Pure knowledge delta - every paragraph earns its tokens |
 
 **Red flags** (instant score ≤5):
 - "What is [basic concept]" sections
@@ -117,14 +117,14 @@ The most important dimension. Does the Skill add genuine expert knowledge?
 
 Does the Skill transfer expert **thinking patterns** along with **necessary domain-specific procedures**?
 
-The difference between experts and novices isn't "knowing how to operate" — it's "how to think about the problem." But thinking patterns alone aren't enough when Claude lacks domain-specific procedural knowledge.
+The difference between experts and novices isn't "knowing how to operate" - it's "how to think about the problem." But thinking patterns alone aren't enough when Claude lacks domain-specific procedural knowledge.
 
 **Key distinction**:
 | Type | Example | Value |
 |------|---------|-------|
-| **Thinking patterns** | "Before designing, ask: What makes this memorable?" | High — shapes decision-making |
-| **Domain-specific procedures** | "OOXML workflow: unpack → edit XML → validate → pack" | High — Claude may not know this |
-| **Generic procedures** | "Step 1: Open file, Step 2: Edit, Step 3: Save" | Low — Claude already knows |
+| **Thinking patterns** | "Before designing, ask: What makes this memorable?" | High - shapes decision-making |
+| **Domain-specific procedures** | "OOXML workflow: unpack → edit XML → validate → pack" | High - Claude may not know this |
+| **Generic procedures** | "Step 1: Open file, Step 2: Edit, Step 3: Save" | Low - Claude already knows |
 
 | Score | Criteria |
 |-------|----------|
@@ -181,7 +181,7 @@ A good Skill provides both when needed.
 
 Does the Skill have effective NEVER lists?
 
-**Why this matters**: Half of expert knowledge is knowing what NOT to do. A senior designer sees purple gradient on white background and instinctively cringes — "too AI-generated." This intuition for "what absolutely not to do" comes from stepping on countless landmines.
+**Why this matters**: Half of expert knowledge is knowing what NOT to do. A senior designer sees purple gradient on white background and instinctively cringes - "too AI-generated." This intuition for "what absolutely not to do" comes from stepping on countless landmines.
 
 Claude hasn't stepped on these landmines. It doesn't know Inter font is overused, doesn't know purple gradients are the signature of AI-generated content. Good Skills must explicitly state these "absolute don'ts."
 
@@ -190,7 +190,7 @@ Claude hasn't stepped on these landmines. It doesn't know Inter font is overused
 | 0-3 | No anti-patterns mentioned |
 | 4-7 | Generic warnings ("avoid errors", "be careful", "consider edge cases") |
 | 8-11 | Specific NEVER list with some reasoning |
-| 12-15 | Expert-grade anti-patterns with WHY — things only experience teaches |
+| 12-15 | Expert-grade anti-patterns with WHY - things only experience teaches |
 
 **Expert anti-patterns** (specific + reason):
 ```markdown
@@ -212,7 +212,7 @@ Don't write bad code.
 
 ---
 
-### D4: Specification Compliance — Especially Description (15 points)
+### D4: Specification Compliance - Especially Description (15 points)
 
 Does the Skill follow official format requirements? **Special focus on description quality.**
 
@@ -225,7 +225,7 @@ Does the Skill follow official format requirements? **Special focus on descripti
 
 **Frontmatter requirements**:
 - `name`: lowercase, alphanumeric + hyphens only, ≤64 characters
-- `description`: **THE MOST CRITICAL FIELD** — determines if skill gets used at all
+- `description`: **THE MOST CRITICAL FIELD** - determines if skill gets used at all
 
 ---
 
@@ -244,7 +244,7 @@ Does the Skill follow official format requirements? **Special focus on descripti
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-**The brutal truth**: A Skill with perfect content but poor description is **useless** — it will never be activated. The description is the **only chance** to tell the Agent "use me in these situations."
+**The brutal truth**: A Skill with perfect content but poor description is **useless** - it will never be activated. The description is the **only chance** to tell the Agent "use me in these situations."
 
 ---
 
@@ -274,7 +274,7 @@ description: "处理文档相关功能"
 ```
 
 Problems:
-- WHAT: vague ("文档相关功能" — what specifically?)
+- WHAT: vague ("文档相关功能" - what specifically?)
 - WHEN: missing (when should Agent use this?)
 - KEYWORDS: missing (no ".docx", no specific scenarios)
 
@@ -283,7 +283,7 @@ Problems:
 description: "A helpful skill for various tasks"
 ```
 
-This is useless — Agent has no idea when to activate it.
+This is useless - Agent has no idea when to activate it.
 
 ---
 
@@ -486,28 +486,28 @@ Consider edge cases.
 ## NEVER Do When Evaluating
 
 - **NEVER** give high scores just because it "looks professional" or is well-formatted
-- **NEVER** ignore token waste — every redundant paragraph should result in deduction
-- **NEVER** let length impress you — a 43-line Skill can outperform a 500-line Skill
-- **NEVER** skip mentally testing the decision trees — do they actually lead to correct choices?
+- **NEVER** ignore token waste - every redundant paragraph should result in deduction
+- **NEVER** let length impress you - a 43-line Skill can outperform a 500-line Skill
+- **NEVER** skip mentally testing the decision trees - do they actually lead to correct choices?
 - **NEVER** forgive explaining basics with "but it provides helpful context"
-- **NEVER** overlook missing anti-patterns — if there's no NEVER list, that's a significant gap
-- **NEVER** assume all procedures are valuable — distinguish domain-specific from generic
-- **NEVER** undervalue the description field — poor description = skill never gets used
-- **NEVER** put "when to use" info only in the body — Agent only sees description before loading
+- **NEVER** overlook missing anti-patterns - if there's no NEVER list, that's a significant gap
+- **NEVER** assume all procedures are valuable - distinguish domain-specific from generic
+- **NEVER** undervalue the description field - poor description = skill never gets used
+- **NEVER** put "when to use" info only in the body - Agent only sees description before loading
 
 ---
 
 ## Evaluation Protocol
 
-### Step 1: First Pass — Knowledge Delta Scan
+### Step 1: First Pass - Knowledge Delta Scan
 
 Read SKILL.md completely and for each section ask:
 > "Does Claude already know this?"
 
 Mark each section as:
-- **[E] Expert**: Claude genuinely doesn't know this — value-add
-- **[A] Activation**: Claude knows but brief reminder is useful — acceptable
-- **[R] Redundant**: Claude definitely knows this — should be deleted
+- **[E] Expert**: Claude genuinely doesn't know this - value-add
+- **[A] Activation**: Claude knows but brief reminder is useful - acceptable
+- **[R] Redundant**: Claude definitely knows this - should be deleted
 
 Calculate rough ratio: E:A:R
 - Good Skill: >70% Expert, <20% Activation, <10% Redundant
@@ -541,11 +541,11 @@ Max = 120 points
 **Grade Scale** (percentage-based):
 | Grade | Percentage | Meaning |
 |-------|------------|---------|
-| A | 90%+ (108+) | Excellent — production-ready expert Skill |
-| B | 80-89% (96-107) | Good — minor improvements needed |
-| C | 70-79% (84-95) | Adequate — clear improvement path |
-| D | 60-69% (72-83) | Below Average — significant issues |
-| F | <60% (<72) | Poor — needs fundamental redesign |
+| A | 90%+ (108+) | Excellent - production-ready expert Skill |
+| B | 80-89% (96-107) | Good - minor improvements needed |
+| C | 70-79% (84-95) | Adequate - clear improvement path |
+| D | 60-69% (72-83) | Below Average - significant issues |
+| F | <60% (<72) | Poor - needs fundamental redesign |
 
 ### Step 5: Generate Report
 
@@ -734,7 +734,7 @@ When evaluating any Skill, always return to this fundamental question:
 If the answer is yes → the Skill has genuine value.
 If the answer is no → it's compressing what Claude already knows.
 
-The best Skills are **compressed expert brains** — they take a designer's 10 years of aesthetic accumulation and compress it into 43 lines, or a document expert's operational experience into a 200-line decision tree.
+The best Skills are **compressed expert brains** - they take a designer's 10 years of aesthetic accumulation and compress it into 43 lines, or a document expert's operational experience into a 200-line decision tree.
 
 What gets compressed must be things Claude doesn't have. Otherwise, it's garbage compression.
 

@@ -4,6 +4,7 @@ description: "Trigger: discovery-interview, Deep interview process to transform 
 license: Apache-2.0
 metadata:
   author: parcadei
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/parcadei/continuous-claude-v3/discovery-interview"
   github_url: "https://github.com/parcadei/continuous-claude-v3/tree/HEAD/.claude/skills/discovery-interview"

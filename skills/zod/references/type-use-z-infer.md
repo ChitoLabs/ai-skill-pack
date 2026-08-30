@@ -7,7 +7,7 @@ tags: type, infer, typescript, dry
 
 ## Use z.infer Instead of Manual Types
 
-Defining TypeScript types separately from Zod schemas creates duplication that inevitably drifts. When you update a schema, you must remember to update the type—and you will forget. Use `z.infer<typeof schema>` to derive types from schemas automatically.
+Defining TypeScript types separately from Zod schemas creates duplication that inevitably drifts. When you update a schema, you must remember to update the type-and you will forget. Use `z.infer<typeof schema>` to derive types from schemas automatically.
 
 **Incorrect (manual type definitions):**
 

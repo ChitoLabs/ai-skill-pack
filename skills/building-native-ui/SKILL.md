@@ -4,6 +4,7 @@ description: "Trigger: building-native-ui, Complete guide for building beautiful
 license: MIT
 metadata:
   author: expo
+  adapter: LCubero
   version: 1.0.1
   skills_sh_url: "https://skills.sh/expo/skills/building-native-ui"
   github_url: "https://github.com/expo/skills/tree/HEAD/plugins/expo/skills/building-native-ui"

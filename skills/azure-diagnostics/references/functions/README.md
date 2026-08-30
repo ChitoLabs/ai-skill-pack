@@ -57,7 +57,7 @@ az monitor log-analytics query -w <workspace-guid> \
   --analytics-query "FunctionAppLogs | where _ResourceId contains '<func-app-name>' | take 5 | project TimeGenerated, FunctionName, Message, Level"
 ```
 
-> ⚠️ **Classic App Insights:** Some function apps use classic App Insights without a linked Log Analytics workspace (`workspaceId` is null). In this case, `FunctionAppLogs` is **not available** — use the `traces`, `requests`, and `exceptions` tables via `az monitor app-insights query` instead. As a last resort, `az webapp log tail --name <func-app-name> -g <rg-name>` can stream live logs directly.
+> ⚠️ **Classic App Insights:** Some function apps use classic App Insights without a linked Log Analytics workspace (`workspaceId` is null). In this case, `FunctionAppLogs` is **not available** - use the `traces`, `requests`, and `exceptions` tables via `az monitor app-insights query` instead. As a last resort, `az webapp log tail --name <func-app-name> -g <rg-name>` can stream live logs directly.
 
 If results are returned, logs are flowing. If empty, verify the `APPLICATIONINSIGHTS_CONNECTION_STRING` app setting matches this App Insights instance.
 

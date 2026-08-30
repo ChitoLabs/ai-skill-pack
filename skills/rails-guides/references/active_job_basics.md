@@ -696,7 +696,7 @@ class ProcessImportJob < ApplicationJob
       @import.initialize
     end
 
-    # Step with a cursor — progress is saved and resumed if the job is interrupted
+    # Step with a cursor - progress is saved and resumed if the job is interrupted
     step :process do |step|
       @import.records.find_each(start: step.cursor) do |record|
         record.process

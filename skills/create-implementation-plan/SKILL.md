@@ -1,9 +1,10 @@
 ---
 name: create-implementation-plan
-description: Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.
+description: "Trigger: create an implementation plan for a defined feature, refactor, upgrade, architecture, or infrastructure change. Plan only within repository policy."
 license: Apache-2.0
 metadata:
   author: github
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/github/awesome-copilot/create-implementation-plan"
   github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/create-implementation-plan"

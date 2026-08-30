@@ -1,9 +1,10 @@
 ---
 name: ruby
-description: "Write, review, and debug pure Ruby 3.x code using idiomatic patterns, modern language features, error handling conventions, memoization, result objects, and performance idioms."
+description: "Trigger: write, review, or debug pure Ruby 3.x code. Apply idiomatic patterns, modern features, error handling, memoization, result objects, and performance guidance."
 license: Apache-2.0
 metadata:
-  author: lucianghinda
+  author: midudev
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/ruby"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/ruby"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `ruby` or the preserved source description: Use when writing, reviewing, or debugging pure Ruby code — idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
+Use this skill when the user request matches `ruby` or the preserved source description: Use when writing, reviewing, or debugging pure Ruby code - idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

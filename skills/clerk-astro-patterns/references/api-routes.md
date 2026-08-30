@@ -73,6 +73,6 @@ export const GET: APIRoute = async (context) => {
 
 ## CRITICAL
 
-- API routes are always SSR — `prerender` does not apply
+- API routes are always SSR - `prerender` does not apply
 - Use `context.locals.auth()` (not `Astro.locals.auth()`) in API routes
 - Return proper HTTP status codes: 401 = not authenticated, 403 = not authorized

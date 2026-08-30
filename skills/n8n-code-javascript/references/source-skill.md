@@ -1,6 +1,6 @@
 ---
 name: n8n-code-javascript
-description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node — whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns.
+description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node - whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns.
 license: Apache-2.0
 metadata:
   author: czlonkowski
@@ -625,9 +625,9 @@ Hard-won lessons from real-world n8n workflow deployments:
 
 ### SplitInBatches Loop Semantics
 
-The SplitInBatches node has two outputs — and the naming is counterintuitive:
-- `main[0]` = **done** — fires ONCE after all batches are processed
-- `main[1]` = **each batch** — fires for every batch (this is the loop body)
+The SplitInBatches node has two outputs - and the naming is counterintuitive:
+- `main[0]` = **done** - fires ONCE after all batches are processed
+- `main[1]` = **each batch** - fires for every batch (this is the loop body)
 
 Always add a **Limit 1** node after the done output before downstream processing, as a safety against edge cases where done fires with extra items.
 
@@ -661,7 +661,7 @@ const allResults = staticData.results || [];
 
 ### pairedItem for New Output Items
 
-When creating new items that don't map 1:1 to input items, include `pairedItem` — otherwise downstream Set nodes fail with `paired_item_no_info`:
+When creating new items that don't map 1:1 to input items, include `pairedItem` - otherwise downstream Set nodes fail with `paired_item_no_info`:
 
 ```javascript
 const results = [];

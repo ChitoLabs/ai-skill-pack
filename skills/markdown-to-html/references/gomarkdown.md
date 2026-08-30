@@ -117,7 +117,7 @@ html := markdown.ToHTML(md, p, renderer)
 | `html.FootnoteNoHRTag` | No `<hr>` before footnotes |
 | `html.Smartypants` | Smart punctuation |
 | `html.SmartypantsFractions` | Smart fractions (1/2 → ½) |
-| `html.SmartypantsDashes` | Smart dashes (-- → –) |
+| `html.SmartypantsDashes` | Smart dashes (-- → -) |
 | `html.SmartypantsLatexDashes` | LaTeX-style dashes |
 
 ### Renderer Options

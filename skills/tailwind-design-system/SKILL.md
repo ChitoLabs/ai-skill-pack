@@ -4,6 +4,7 @@ description: "Trigger: tailwind-design-system, Build scalable design systems wit
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/tailwind-design-system"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/frontend-mobile-development/skills/tailwind-design-system"

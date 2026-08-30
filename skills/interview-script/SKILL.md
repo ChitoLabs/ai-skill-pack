@@ -4,6 +4,7 @@ description: "Trigger: interview-script, Create a structured customer interview 
 license: Apache-2.0
 metadata:
   author: phuryn
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/phuryn/pm-skills/interview-script"
   github_url: "https://github.com/phuryn/pm-skills/tree/HEAD/pm-product-discovery/skills/interview-script"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `interview-script` or the preserved source description: Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.
+Use this skill when the user request matches `interview-script` or the preserved source description: Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles - no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

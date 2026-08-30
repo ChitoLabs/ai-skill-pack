@@ -1,4 +1,4 @@
-# Crons / Job Monitoring — Sentry Node.js SDK
+# Crons / Job Monitoring - Sentry Node.js SDK
 
 > Minimum SDK: `@sentry/node` ≥7.51.1 (`captureCheckIn`, `withMonitor`)  
 > `instrumentNodeCron` / `instrumentCron`: ≥7.92.0  
@@ -25,17 +25,17 @@ Sentry Crons (job monitoring) tracks whether scheduled tasks run on time, succee
 ```typescript
 // Three check-in shapes:
 
-// 1. Heartbeat — single-shot, no duration tracking
+// 1. Heartbeat - single-shot, no duration tracking
 Sentry.captureCheckIn({ monitorSlug: "my-job", status: "ok" });
 Sentry.captureCheckIn({ monitorSlug: "my-job", status: "error" });
 
-// 2. In-progress — signals job started, returns ID for completion
+// 2. In-progress - signals job started, returns ID for completion
 const checkInId = Sentry.captureCheckIn({
   monitorSlug: "my-job",
   status: "in_progress",
 });
 
-// 3. Finished — completes an in-progress check-in
+// 3. Finished - completes an in-progress check-in
 Sentry.captureCheckIn({
   checkInId,
   monitorSlug: "my-job",
@@ -79,7 +79,7 @@ await Sentry.withMonitor("my-job", async () => {
 
 ## Usage Patterns
 
-### Heartbeat (simplest — detect missed runs only)
+### Heartbeat (simplest - detect missed runs only)
 
 ```typescript
 try {
@@ -120,7 +120,7 @@ try {
 }
 ```
 
-### `withMonitor` (recommended — handles all status logic)
+### `withMonitor` (recommended - handles all status logic)
 
 ```typescript
 await Sentry.withMonitor("my-cron-job", async () => {
@@ -132,7 +132,7 @@ await Sentry.withMonitor("my-cron-job", async () => {
 
 ## Monitor Configuration (Upsert)
 
-Pass a `MonitorConfig` to create or update the monitor from code — no manual setup in Sentry UI needed. On first check-in the monitor is created; subsequent calls update it.
+Pass a `MonitorConfig` to create or update the monitor from code - no manual setup in Sentry UI needed. On first check-in the monitor is created; subsequent calls update it.
 
 ```typescript
 interface MonitorConfig {
@@ -206,7 +206,7 @@ import * as Sentry from "@sentry/node";
 
 const cronWithCheckIn = Sentry.cron.instrumentNodeCron(cron);
 
-// `name` option is REQUIRED — becomes the monitor slug
+// `name` option is REQUIRED - becomes the monitor slug
 cronWithCheckIn.schedule(
   "* * * * *",
   () => { /* task */ },
@@ -214,7 +214,7 @@ cronWithCheckIn.schedule(
 );
 ```
 
-### `cron` package — `CronJob` (SDK ≥7.92.0)
+### `cron` package - `CronJob` (SDK ≥7.92.0)
 
 ```typescript
 import { CronJob } from "cron";
@@ -243,13 +243,13 @@ const scheduleWithCheckIn = Sentry.cron.instrumentNodeSchedule(schedule);
 
 // First argument must be the job name (monitor slug)
 scheduleWithCheckIn.scheduleJob(
-  "my-cron-job",      // monitor slug — REQUIRED as first arg
+  "my-cron-job",      // monitor slug - REQUIRED as first arg
   "* * * * *",        // cron expression
   () => { /* task */ },
 );
 ```
 
-### Agenda (no official helper — use `withMonitor`)
+### Agenda (no official helper - use `withMonitor`)
 
 ```typescript
 import Agenda from "agenda";
@@ -270,7 +270,7 @@ agenda.define("send-newsletter", async (job) => {
 });
 ```
 
-### Bull / BullMQ (no official helper — use `withMonitor`)
+### Bull / BullMQ (no official helper - use `withMonitor`)
 
 ```typescript
 import { Worker } from "bullmq";
@@ -303,7 +303,7 @@ function instrumentNodeCron<T>(
 // cron package
 function instrumentCron<T>(
   lib: T & CronJobConstructor,
-  monitorSlug: string,    // REQUIRED — single slug for all jobs from this constructor
+  monitorSlug: string,    // REQUIRED - single slug for all jobs from this constructor
 ): T;
 
 // node-schedule
@@ -340,13 +340,13 @@ export const handler = async (event: any) => {
     });
     throw err;
   } finally {
-    // CRITICAL — flush before Lambda container freezes
+    // CRITICAL - flush before Lambda container freezes
     await Sentry.flush(2000);
   }
 };
 ```
 
-For AWS Lambda, prefer `@sentry/aws-serverless` — it handles flushing automatically.
+For AWS Lambda, prefer `@sentry/aws-serverless` - it handles flushing automatically.
 
 ---
 
@@ -364,7 +364,7 @@ Sentry.init({
   ],
 });
 
-// Automatically monitored — no manual check-ins needed
+// Automatically monitored - no manual check-ins needed
 Deno.cron("daily-cleanup", "0 0 * * *", async () => {
   await cleanupOldRecords();
 });

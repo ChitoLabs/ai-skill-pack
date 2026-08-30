@@ -293,9 +293,9 @@ Task { @concurrent in
     await MainActor.run { updateUI() }
 }
 
-// ✅ Synchronous prefix DOES contain main-actor work — keep inheritance
+// ✅ Synchronous prefix DOES contain main-actor work - keep inheritance
 Task {
-    print("debug")              // trivial, non-main — rides along
+    print("debug")              // trivial, non-main - rides along
     self.isLoading = true       // needs @MainActor, before any await
     await fetchData()
 }

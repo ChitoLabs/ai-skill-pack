@@ -1,4 +1,4 @@
-# Azure Service Bus SDK — Python
+# Azure Service Bus SDK - Python
 
 Package: `azure-servicebus` | [README](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/servicebus/azure-servicebus/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/servicebus/azure-servicebus/TROUBLESHOOTING.md)
 

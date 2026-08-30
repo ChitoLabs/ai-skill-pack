@@ -4,6 +4,7 @@ description: "Trigger: gsap-plugins. Preserve source workflow with portable agen
 license: MIT
 metadata:
   author: greensock
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/greensock/gsap-skills/gsap-plugins"
   github_url: "https://github.com/greensock/gsap-skills/tree/HEAD/skills/gsap-plugins"
@@ -11,7 +12,7 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `gsap-plugins` or the preserved source description: Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.
+Use this skill when the user request matches `gsap-plugins` or the preserved source description: Official GSAP skill for GSAP plugins - registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 

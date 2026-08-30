@@ -4,6 +4,7 @@ description: "Trigger: use-ai-sdk, Answer questions about the AI SDK and help bu
 license: Apache-2.0
 metadata:
   author: vercel
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/vercel/ai/use-ai-sdk"
   github_url: "https://github.com/vercel/ai/tree/HEAD/skills/use-ai-sdk"

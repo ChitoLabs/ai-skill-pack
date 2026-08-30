@@ -89,12 +89,12 @@ Collect ACR details from project context.
 
 Let the user choose the build method:
 
-**Cloud Build (ACR Tasks) (Recommended)** — no local Docker required:
+**Cloud Build (ACR Tasks) (Recommended)** - no local Docker required:
 ```bash
 az acr build --registry <acr-name> --image <repository>:<tag> --platform linux/amd64 --source-acr-auth-id "[caller]" --file Dockerfile .
 ```
 
-> ⚠️ **Mandatory:** The `--source-acr-auth-id "[caller]"` parameter is required. Do NOT omit it — without this flag the build will fail due to missing authentication context.
+> ⚠️ **Mandatory:** The `--source-acr-auth-id "[caller]"` parameter is required. Do NOT omit it - without this flag the build will fail due to missing authentication context.
 
 **Local Docker Build:**
 ```bash
@@ -109,8 +109,8 @@ docker push <acr-name>.azurecr.io/<repository>:<tag>
 ### Step 4: Collect Agent Configuration
 
 Use the project endpoint and ACR name from the project context. Ask the user only for values not already resolved:
-- **Agent name** — Unique name for the agent
-- **Model deployment** — Model deployment name (e.g., `gpt-4o`)
+- **Agent name** - Unique name for the agent
+- **Model deployment** - Model deployment name (e.g., `gpt-4o`)
 
 ### Step 5: Get Agent Definition Schema
 
@@ -158,7 +158,7 @@ Check existing assignments before creating any new assignment. If the required r
 
 If the current user account does not have permission to create a missing role assignment, stop the deployment workflow here. Explain to the user that hosted-agent invocation requires `Azure AI User` on the per-agent identity and project-level agent identity at the Cognitive Services account scope, and the deployment cannot be treated as complete until someone with RBAC assignment permission grants the missing role.
 
-After this RBAC check is complete, read and follow the [invoke skill](../invoke/invoke.md) to send a test message and verify the agent responds correctly. DO NOT SKIP reading the invoke skill — it contains important information about required hosted-agent session handling.
+After this RBAC check is complete, read and follow the [invoke skill](../invoke/invoke.md) to send a test message and verify the agent responds correctly. DO NOT SKIP reading the invoke skill - it contains important information about required hosted-agent session handling.
 
 If invocation testing still fails after this RBAC check, immediately read and follow the [troubleshoot skill](../troubleshoot/troubleshoot.md). Do not treat the deployment as fully successful until invocation succeeds.
 
@@ -166,18 +166,18 @@ If invocation testing still fails after this RBAC check, immediately read and fo
 
 ### Step 8: Auto-Create Evaluators & Dataset
 
-Follow [After Deployment — Auto-Create Evaluators & Dataset](#after-deployment--auto-create-evaluators--dataset) below.
+Follow [After Deployment - Auto-Create Evaluators & Dataset](#after-deployment--auto-create-evaluators--dataset) below.
 
 ## Workflow: Prompt Agent Deployment
 
 ### Step 1: Collect Agent Configuration
 
 Use the project endpoint from the project context (see Common: Project Context Resolution). Ask the user only for values not already resolved:
-- **Agent name** — Unique name for the agent
-- **Model deployment** — Model deployment name (e.g., `gpt-4o`)
-- **Instructions** — System prompt (optional)
-- **Temperature** — Response randomness 0-2 (optional, default varies by model)
-- **Tools** — Tool configurations (optional)
+- **Agent name** - Unique name for the agent
+- **Model deployment** - Model deployment name (e.g., `gpt-4o`)
+- **Instructions** - System prompt (optional)
+- **Temperature** - Response randomness 0-2 (optional, default varies by model)
+- **Tools** - Tool configurations (optional)
 
 ### Step 2: Get Agent Definition Schema
 
@@ -204,7 +204,7 @@ Read and follow the [invoke skill](../invoke/invoke.md) to send a test message a
 
 ### Step 5: Auto-Create Evaluators & Dataset
 
-Follow [After Deployment — Auto-Create Evaluators & Dataset](#after-deployment--auto-create-evaluators--dataset) below.
+Follow [After Deployment - Auto-Create Evaluators & Dataset](#after-deployment--auto-create-evaluators--dataset) below.
 
 ## Display Agent Information
 Once deployment is done for either hosted or prompt agent, display the agent's details in a nicely formatted table.
@@ -233,7 +233,7 @@ After a successful deployment, persist the deployment context to the selected me
 
 If the selected metadata file is a preferred single-environment file, update only that one environment block and leave sibling metadata files untouched. If the selected metadata file is a legacy multi-environment file, merge the selected environment instead of overwriting other environments or cached evaluation suites without confirmation. If the selected environment still uses older `testSuites[]` or legacy `testCases[]`, rewrite that environment to `evaluationSuites[]` when you persist deployment metadata.
 
-## After Deployment — Auto-Create Evaluators & Dataset
+## After Deployment - Auto-Create Evaluators & Dataset
 
 > ⚠️ **This step is automatic.** After a successful deployment, immediately prepare the selected `.foundry` environment for evaluation without waiting for the user to request it. This matches the eval-driven optimization loop.
 
@@ -311,7 +311,7 @@ Each evaluation suite should bundle one dataset with the evaluator list, thresho
 
 *"Your agent is deployed and running in the selected environment. The `.foundry` cache now contains evaluators, a local seed dataset, the Foundry dataset registration metadata, and evaluation-suite metadata. Would you like to run an evaluation to identify optimization opportunities?"*
 
-- **Yes** → follow the [observe skill](../observe/observe.md) starting at **Step 2 (Evaluate)** — cache and metadata are already prepared.
+- **Yes** → follow the [observe skill](../observe/observe.md) starting at **Step 2 (Evaluate)** - cache and metadata are already prepared.
 - **No** → stop. The user can return later.
 - **Production trace analysis** → follow the [trace skill](../trace/trace.md) to search conversations, diagnose failures, and analyze latency using App Insights.
 
@@ -360,7 +360,7 @@ Use `agent_update` with `isCloneRequest: true` and `cloneTargetAgentName` to cre
 
 ### Delete an Agent
 
-Use `agent_delete` — automatically cleans up hosted-agent runtime resources.
+Use `agent_delete` - automatically cleans up hosted-agent runtime resources.
 
 ### List Agents
 
@@ -374,7 +374,7 @@ Use `agent_get` without `agentName` to list all agents, or with `agentName` to g
 | Docker not running | Docker Desktop not started or not installed | Start Docker Desktop, or use Cloud Build (ACR Tasks) instead |
 | ACR login failed | Not authenticated to Azure | Run `az login` first, then `az acr login --name <acr-name>` |
 | Build/push failed | Dockerfile errors or insufficient ACR permissions | Check Dockerfile syntax, verify Contributor or AcrPush role on registry |
-| ACR build log crash | `UnicodeEncodeError` when `az acr build` streams remote logs | The remote build continues independently — do not assume failure. Get the `<run-id>` from the earlier `az acr build` output and check status with `az acr task show-run -r <acr-name> --run-id <run-id> --query status`. |
+| ACR build log crash | `UnicodeEncodeError` when `az acr build` streams remote logs | The remote build continues independently - do not assume failure. Get the `<run-id>` from the earlier `az acr build` output and check status with `az acr task show-run -r <acr-name> --run-id <run-id> --query status`. |
 | Agent creation failed | Invalid definition or missing required fields | Use `agent_definition_schema_get` to verify schema, check all required fields |
 | Hosted agent not running after creation | Provisioning failed or the image is not usable | Verify ACR image path, check cpu/memory values, confirm ACR permissions, then inspect hosted-agent logs with the troubleshoot skill |
 | Role assignment failed | The required invocation RBAC was not granted | Stop the deployment workflow and explain that hosted-agent invocation requires `Azure AI User` on the per-agent identity and project-level agent identity at the Cognitive Services account scope |
@@ -386,9 +386,9 @@ Use `agent_get` without `agentName` to list all agents, or with `agentName` to g
 
 When running in non-interactive mode (e.g., `nonInteractive: true` or YOLO mode), the skill skips user confirmation prompts and uses sensible defaults:
 
-- **Environment variables** — Uses values resolved from `azd env get-values` and project defaults without prompting for confirmation
-- **Agent name** — Must be provided in the initial user message or derived sensibly from the project context; if missing, the skill fails with an error instead of prompting
-- **Hosted agent verification** — Automatically continues into RBAC and invocation verification without additional prompts once deployment succeeds
+- **Environment variables** - Uses values resolved from `azd env get-values` and project defaults without prompting for confirmation
+- **Agent name** - Must be provided in the initial user message or derived sensibly from the project context; if missing, the skill fails with an error instead of prompting
+- **Hosted agent verification** - Automatically continues into RBAC and invocation verification without additional prompts once deployment succeeds
 
 > ⚠️ **Warning:** In non-interactive mode, ensure all required values (project endpoint, agent name, ACR image) are provided upfront in the user message or available via `azd env get-values`. Missing values will cause the deployment to fail rather than prompt.
 

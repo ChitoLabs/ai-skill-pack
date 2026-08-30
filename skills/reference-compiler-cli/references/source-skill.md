@@ -3,7 +3,7 @@ name: reference-compiler-cli
 description: Explains the mental model and architecture of the code under `packages/compiler-cli`. You MUST use this skill any time you plan to work with code in `packages/compiler-cli`
 license: Apache-2.0
 metadata:
-  author: angular
+  author: midudev
   version: 0.1
   skills_sh_url: "https://skills.sh/angular/angular/reference-compiler-cli"
   github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/reference-compiler-cli"

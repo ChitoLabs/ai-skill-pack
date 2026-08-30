@@ -29,7 +29,7 @@ Use the same scope patterns from the Scope Reference table in the main [SKILL.md
 > ⚠️ **Warning:** The `to` date **MUST** be in the future.
 
 - Set `timeframe` to `Custom` and provide `timePeriod` with `from` and `to` dates
-- `from` can be in the past — shows actual costs up to today, then forecast to `to`
+- `from` can be in the past - shows actual costs up to today, then forecast to `to`
 - Minimum 28 days of historical cost data required
 - Maximum forecast period: 10 years
 
@@ -90,7 +90,7 @@ az rest --method post `
 | `Actual` | Historical actual cost (when `includeActualCost: true`) |
 | `Forecast` | Projected future cost |
 
-> 💡 **Tip:** "Forecast is unavailable for the specified time period" is not an error — it means the scope has insufficient historical data. Suggest using the [Cost Query Workflow](../cost-query/workflow.md) for available data.
+> 💡 **Tip:** "Forecast is unavailable for the specified time period" is not an error - it means the scope has insufficient historical data. Suggest using the [Cost Query Workflow](../cost-query/workflow.md) for available data.
 
 ## Key Guardrails
 

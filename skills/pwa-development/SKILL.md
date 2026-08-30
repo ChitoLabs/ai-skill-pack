@@ -4,6 +4,7 @@ description: "Trigger: pwa-development, Progressive Web App development guidelin
 license: Apache-2.0
 metadata:
   author: mindrally
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/mindrally/skills/pwa-development"
   github_url: "https://github.com/mindrally/skills/tree/HEAD/pwa-development"

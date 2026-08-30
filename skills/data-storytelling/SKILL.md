@@ -4,6 +4,7 @@ description: "Trigger: data-storytelling, Transform data into compelling narrati
 license: Apache-2.0
 metadata:
   author: wshobson
+  adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/wshobson/agents/data-storytelling"
   github_url: "https://github.com/wshobson/agents/tree/HEAD/plugins/business-analytics/skills/data-storytelling"

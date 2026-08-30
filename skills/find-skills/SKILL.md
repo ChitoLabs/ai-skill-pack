@@ -4,6 +4,7 @@ description: "Trigger: find skills, skill discovery, installable agent capabilit
 license: MIT
 metadata:
   author: vercel-labs
+  adapter: LCubero
   version: "1.0.0"
   skills_sh_url: "https://www.skills.sh/vercel-labs/skills/find-skills"
   github_url: "https://github.com/vercel-labs/skills/tree/main/skills/find-skills"

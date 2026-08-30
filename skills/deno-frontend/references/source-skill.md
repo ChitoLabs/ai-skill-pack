@@ -38,8 +38,8 @@ This skill applies **only** to Fresh/Deno frontend questions. Follow these rules
 
 When helping users migrate from Fresh 1.x, describe old patterns generically and ONLY show correct Fresh 2.x code. Never write out old dollar-sign import paths or deprecated syntax, even in "before/after" comparisons.
 
-- Say "Replace the old dollar-sign import paths with stable Fresh 2.x imports" — then show only the correct `from "fresh"` approach
-- Do NOT write `❌ Old: import { App } from "$fresh/server.ts"` — this is never acceptable, even as a negative example
+- Say "Replace the old dollar-sign import paths with stable Fresh 2.x imports" - then show only the correct `from "fresh"` approach
+- Do NOT write `❌ Old: import { App } from "$fresh/server.ts"` - this is never acceptable, even as a negative example
 - The strings `_404.tsx` and `_500.tsx` must never appear in your response, even when comparing Fresh 2.x to 1.x. Say "the old separate error pages" instead.
 
 Only demonstrate Fresh 2.x patterns.
@@ -48,12 +48,12 @@ Only demonstrate Fresh 2.x patterns.
 
 **Always use Fresh 2.x patterns.** Fresh 1.x is deprecated. Key differences:
 
-- Fresh 2.x uses `import { App } from "fresh"` — the old dollar-sign import paths are deprecated
-- Fresh 2.x has no manifest file — the old auto-generated manifest is no longer needed
-- Fresh 2.x uses `vite.config.ts` for dev — the old `dev.ts` entry point is gone
-- Fresh 2.x configures via `new App()` — the old config file is no longer used
-- Fresh 2.x handlers take a single `(ctx)` parameter — the old two-parameter signature is deprecated
-- Fresh 2.x uses a unified `_error.tsx` — the old separate error pages are replaced
+- Fresh 2.x uses `import { App } from "fresh"` - the old dollar-sign import paths are deprecated
+- Fresh 2.x has no manifest file - the old auto-generated manifest is no longer needed
+- Fresh 2.x uses `vite.config.ts` for dev - the old `dev.ts` entry point is gone
+- Fresh 2.x configures via `new App()` - the old config file is no longer used
+- Fresh 2.x handlers take a single `(ctx)` parameter - the old two-parameter signature is deprecated
+- Fresh 2.x uses a unified `_error.tsx` - the old separate error pages are replaced
 
 **Always use Fresh 2.x stable imports:**
 ```typescript
@@ -567,7 +567,7 @@ Benefits of signals:
 
 ## Tailwind CSS in Fresh (Optional)
 
-Tailwind CSS is optional—you don't need it to build a great Fresh app. However, many developers prefer it for rapid styling. Fresh 2.x uses Vite for builds, so Tailwind integrates via the Vite plugin.
+Tailwind CSS is optional-you don't need it to build a great Fresh app. However, many developers prefer it for rapid styling. Fresh 2.x uses Vite for builds, so Tailwind integrates via the Vite plugin.
 
 ### Setup
 
