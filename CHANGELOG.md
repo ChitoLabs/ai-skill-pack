@@ -8,19 +8,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
-- Added deterministic publication validation and generation from the 492 top-level skill entry points.
+- Added complete static catalog and source-list artifacts for the 492 top-level skill entry points.
 - Added a versioned semantic taxonomy that assigns every published skill to one human-oriented discovery category.
+- Added a complete Spanish README alongside the English README.
 
 ### Changed
 
 - Replaced the published skill inventory with the authorized 466-skill v3 source pack.
 - Replaced the command inventory with the 3-command v3 collection.
-- Regenerated publication documentation and manifests from the final v3 state.
+- Refreshed publication documentation from the final v3 state.
 - Expanded the published inventory to 492 top-level skills.
 - Redesigned the 492-skill catalog around 15 semantic categories with concise capability summaries, evidence-backed aliases, and licenses.
 - Added concise global and project installation tables for OpenCode, Pi, Codex CLI, Gemini CLI, Claude Code, and AGY CLI.
-- Rebuilt current catalogs and manifests from three publication inputs: `skills/*/SKILL.md` metadata and content, `skill-categories.json` assignments, and `catalog-overrides.json` reviewed summary and trigger corrections.
+- Rebuilt the current static catalogs from skill metadata, reviewed taxonomy assignments, and reviewed summary and trigger corrections.
 - Preserved supplied `metadata.author` values without inferring authorship from publishers, distributors, curators, adapters, source URLs, or repository owners.
+- Removed the misleading cloned-repository copy example from the README installation guidance.
 
 ### Removed
 
@@ -28,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Removed temporary replacement handoff documentation and stale process-specific manifests.
 - Removed the `grill-me` command while retaining the `grill-me` skill.
 - Excluded identified compiled cache and operating-system metadata junk from publication.
+- Removed internal generation scripts and machine manifests from the published repository while retaining their history in Git.
 
 ## [2026-08-21]
 

@@ -7,8 +7,9 @@
 - Taxonomy categories: 15
 - Entry points with valid source URLs: 482
 - Entries with `author: unknown`: 10
-- Publication inputs: `skills/*/SKILL.md` metadata and content, `skill-categories.json` categories, and `catalog-overrides.json` reviewed summary and trigger corrections
+- Maintained public data: `skill-categories.json` categories and `catalog-overrides.json` reviewed summary and trigger corrections
+- Complete static artifacts: `docs/skills-catalog.md` and `docs/source-list.md`
 
-## Validation
+## Audit Scope
 
-Run `node scripts/maintain-attribution.mjs` for a deterministic, read-only consistency and freshness check. URL syntax is validated offline; network reachability is not checked. Use `--generate` only to rebuild root publication artifacts, never skill content.
+This summary records the published repository state. Maintenance checks cover JSON parsing, exact taxonomy coverage, unique category assignments, local Markdown links, private path disclosure, and text hygiene. The repository does not ship publication generation or validation tooling.

@@ -1,10 +1,11 @@
 # What Was Done
 
-The publication layer was rebuilt from three versioned inputs: 492 top-level `skills/*/SKILL.md` entry points, `skill-categories.json`, and `catalog-overrides.json`.
+The public repository contains 492 top-level `skills/*/SKILL.md` entry points with maintained discovery and attribution documentation.
 
-- Added a category-based human discovery catalog with concise capability summaries, separate triggers, and licenses.
-- Added deterministic taxonomy, override, and freshness validation.
+- Published a complete static category-based catalog with concise capability summaries, separate triggers, and licenses.
+- Published a complete static source list for attribution review.
+- Retained `skill-categories.json` for reviewed taxonomy assignments and `catalog-overrides.json` for reviewed summary and trigger corrections.
 - Preserved supplied source, author, adapter, version, and license data.
-- Kept generation read-only by default and limited writes to derived publication artifacts.
+- Removed internal publication tooling and machine-oriented artifacts from the published working tree while retaining their history in Git.
 
 Skill contents were not rewritten.

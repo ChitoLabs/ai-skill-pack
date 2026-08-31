@@ -12,3 +12,7 @@ Thumbs.db
 /.codegraph/
 /.engram/*
 !/.engram/config.json
+
+# Internal publication tooling and machine artifacts
+/scripts/
+/manifests/
