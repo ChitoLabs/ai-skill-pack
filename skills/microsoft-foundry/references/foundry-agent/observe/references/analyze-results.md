@@ -1,6 +1,6 @@
-# Steps 3-5 - Download Results, Cluster Failures, Dive Into Category
+# Steps 3–5 — Download Results, Cluster Failures, Dive Into Category
 
-## Step 3 - Download Results
+## Step 3 — Download Results
 
 `evaluation_get` returns run metadata but **not** full per-row output. Write a Python script (save to `scripts/`) to download detailed results using the **Azure AI Projects Python SDK**.
 
@@ -24,7 +24,7 @@ project_client = AIProjectClient(
 client = project_client.get_openai_client()
 ```
 
-> ⚠️ **Common mistake:** Calling `project_client.evals` directly - the `evals` namespace is on the OpenAI client returned by `get_openai_client()`, not on `AIProjectClient` itself.
+> ⚠️ **Common mistake:** Calling `project_client.evals` directly — the `evals` namespace is on the OpenAI client returned by `get_openai_client()`, not on `AIProjectClient` itself.
 
 ### Retrieve Run Status
 
@@ -35,7 +35,7 @@ print(f"Status: {run.status}  Report: {run.report_url}")
 
 ### Download Per-Row Output Items
 
-The SDK handles pagination automatically - no manual `has_more` / `after` loop required.
+The SDK handles pagination automatically — no manual `has_more` / `after` loop required.
 
 ```python
 output_items = list(client.evals.runs.output_items.list(run_id=run_id, eval_id=eval_id))
@@ -101,7 +101,7 @@ Save results to `.foundry/results/<environment>/<eval-id>/<run-id>.json` (use `j
 
 > ⚠️ **Show Data Viewer deeplinks (for VS Code runtime only):** Append a Data Viewer deeplink immediately after reference to an evaluation result file in your response. Format: "[Open in Data Viewer](vscode://ms-windows-ai-studio.windows-ai-studio/open_data_viewer?file=<file_path>&source=microsoft-foundry-skill) for details and perform analysis".
 
-## Step 4 - Cluster Failures by Root Cause
+## Step 4 — Cluster Failures by Root Cause
 
 Analyze every row in the results. Group failures into clusters:
 
@@ -126,7 +126,7 @@ Produce a prioritized action table:
 
 **Rule:** Prioritize runtime errors first, then suites tagged `tier=smoke`, then suites tagged `purpose=regression`, then broader coverage suites by count × severity.
 
-## Step 5 - Dive Into Category
+## Step 5 — Dive Into Category
 
 When the user wants to inspect a specific cluster, display the individual rows: evaluation-suite ID, input query, the agent's original response, evaluator scores, and failure reason. Let the user confirm which category or evaluation suite to optimize.
 

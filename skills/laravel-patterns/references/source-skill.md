@@ -3,10 +3,10 @@ name: laravel-patterns
 description: Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/laravel-patterns"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/laravel-patterns"
+  github_url: "https://github.com/affaan-m/everything-claude-code"
 origin: ECC
 ---
 

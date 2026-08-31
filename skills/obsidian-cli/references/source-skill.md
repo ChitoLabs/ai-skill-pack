@@ -3,10 +3,10 @@ name: obsidian-cli
 description: Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.
 license: Apache-2.0
 metadata:
-  author: pedronauck
+  author: kepano
   version: 0.1
   skills_sh_url: "https://www.skills.sh/kepano/obsidian-skills/obsidian-cli"
-  github_url: "https://github.com/pedronauck/skills/tree/HEAD/skills/community/obsidian-cli"
+  github_url: "https://github.com/kepano/obsidian-skills/tree/HEAD/skills/obsidian-cli"
 ---
 
 # Obsidian CLI
@@ -37,8 +37,8 @@ For multiline content use `\n` for newline and `\t` for tab.
 
 Many commands accept `file` or `path` to target a file. Without either, the active file is used.
 
-- `file=<name>` - resolves like a wikilink (name only, no path or extension needed)
-- `path=<path>` - exact path from vault root, e.g. `folder/note.md`
+- `file=<name>` — resolves like a wikilink (name only, no path or extension needed)
+- `path=<path>` — exact path from vault root, e.g. `folder/note.md`
 
 ## Vault targeting
 
@@ -75,7 +75,7 @@ After making code changes to a plugin or theme, follow this workflow:
    ```bash
    obsidian plugin:reload id=my-plugin
    ```
-2. **Check for errors** - if errors appear, fix and repeat from step 1:
+2. **Check for errors** — if errors appear, fix and repeat from step 1:
    ```bash
    obsidian dev:errors
    ```

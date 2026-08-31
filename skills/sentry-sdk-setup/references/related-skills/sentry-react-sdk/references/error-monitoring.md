@@ -1,4 +1,4 @@
-# Error Monitoring - Sentry React SDK
+# Error Monitoring — Sentry React SDK
 
 > Minimum SDK: `@sentry/react` ≥8.0.0+  
 > `captureReactException()` requires `@sentry/react` ≥9.8.0  
@@ -61,7 +61,7 @@ window.addEventListener("unhandledrejection", (event) => {
 
 ---
 
-### React 19+ - `Sentry.reactErrorHandler()` with `createRoot`
+### React 19+ — `Sentry.reactErrorHandler()` with `createRoot`
 
 React 19 exposes three hooks on `createRoot` and `hydrateRoot`. Pass `Sentry.reactErrorHandler()` to each one. Requires `@sentry/react` ≥8.6.0.
 
@@ -76,7 +76,7 @@ const container = document.getElementById("app")!;
 
 createRoot(container, {
   // Fires for errors that bubble up WITHOUT any ErrorBoundary catching them.
-  // These are fatal - the entire React tree unmounts.
+  // These are fatal — the entire React tree unmounts.
   onUncaughtError: Sentry.reactErrorHandler((error, errorInfo) => {
     // Optional: runs AFTER Sentry has already captured the error
     console.warn("Uncaught React error:", error.message);
@@ -84,7 +84,7 @@ createRoot(container, {
   }),
 
   // Fires for errors caught BY an ErrorBoundary (React 19 re-routes caught errors here).
-  // The boundary still renders its fallback UI - this is just the reporting hook.
+  // The boundary still renders its fallback UI — this is just the reporting hook.
   onCaughtError: Sentry.reactErrorHandler(),
 
   // Fires when React recovers from an error automatically (e.g. hydration mismatch).
@@ -118,14 +118,14 @@ hydrateRoot(document.getElementById("app")!, <App />, {
 `reactErrorHandler()` is the global net. `<Sentry.ErrorBoundary>` provides scoped fallback UIs. Use both:
 
 ```jsx
-// src/main.tsx - global net via reactErrorHandler
+// src/main.tsx — global net via reactErrorHandler
 createRoot(document.getElementById("root")!, {
   onUncaughtError: Sentry.reactErrorHandler(),
   onCaughtError: Sentry.reactErrorHandler(),
   onRecoverableError: Sentry.reactErrorHandler(),
 }).render(<App />);
 
-// src/App.tsx - scoped fallback UIs via ErrorBoundary
+// src/App.tsx — scoped fallback UIs via ErrorBoundary
 function App() {
   return (
     <Layout>
@@ -142,21 +142,21 @@ function App() {
 
 ---
 
-### `<Sentry.ErrorBoundary>` - Full Props Reference
+### `<Sentry.ErrorBoundary>` — Full Props Reference
 
 Works with React 16+. Catches errors in its subtree, reports them to Sentry, and renders a fallback UI.
 
 ```typescript
 // Full TypeScript signature
 interface ErrorBoundaryProps {
-  // Fallback UI - static element or render function
+  // Fallback UI — static element or render function
   fallback?: React.ReactNode | FallbackRender;
   // FallbackRender receives: { error: Error; componentStack: string; resetError: () => void }
 
   // Called immediately when a child throws
   onError?: (error: Error, componentStack: string, eventId: string) => void;
 
-  // Called with the Sentry Scope before the error is captured - enrich here
+  // Called with the Sentry Scope before the error is captured — enrich here
   beforeCapture?: (scope: Scope, error: Error, componentStack: string) => void;
 
   // Called when resetError() is invoked from the fallback
@@ -166,7 +166,7 @@ interface ErrorBoundaryProps {
   onMount?: () => void;
   onUnmount?: (error: Error | null) => void;
 
-  // User feedback dialog - shown automatically on error
+  // User feedback dialog — shown automatically on error
   showDialog?: boolean;
   dialogOptions?: ReportDialogOptions;
 }
@@ -174,7 +174,7 @@ interface ErrorBoundaryProps {
 
 ---
 
-#### `fallback` - Render Fallback UI on Error
+#### `fallback` — Render Fallback UI on Error
 
 ```jsx
 // 1. Static element
@@ -182,7 +182,7 @@ interface ErrorBoundaryProps {
   <Dashboard />
 </Sentry.ErrorBoundary>
 
-// 2. Render function - access error details and reset handler
+// 2. Render function — access error details and reset handler
 <Sentry.ErrorBoundary
   fallback={({ error, componentStack, resetError }) => (
     <div className="error-state">
@@ -204,7 +204,7 @@ interface ErrorBoundaryProps {
 
 ---
 
-#### `onError` - React to a Captured Error
+#### `onError` — React to a Captured Error
 
 Called immediately when a child throws. Receives the error, component stack, and the Sentry event ID (useful for linking user feedback to the event).
 
@@ -229,7 +229,7 @@ Called immediately when a child throws. Receives the error, component stack, and
 
 ---
 
-#### `beforeCapture` - Enrich the Event Before Sending
+#### `beforeCapture` — Enrich the Event Before Sending
 
 Called with the Sentry `Scope` before the error is captured. Use it to add tags, context, or level enrichment specific to this boundary's location in the tree.
 
@@ -250,7 +250,7 @@ Called with the Sentry `Scope` before the error is captured. Use it to add tags,
 
 ---
 
-#### `onReset` - Cleanup When the Boundary Resets
+#### `onReset` — Cleanup When the Boundary Resets
 
 Called when `resetError()` is invoked. Clear stale state in stores or invalidate caches here.
 
@@ -273,7 +273,7 @@ Called when `resetError()` is invoked. Clear stale state in stores or invalidate
 
 ---
 
-#### `showDialog` + `dialogOptions` - Crash-Report Modal on Error
+#### `showDialog` + `dialogOptions` — Crash-Report Modal on Error
 
 ```jsx
 <Sentry.ErrorBoundary
@@ -297,7 +297,7 @@ Called when `resetError()` is invoked. Clear stale state in stores or invalidate
 
 ---
 
-#### `onMount` / `onUnmount` - Lifecycle Hooks
+#### `onMount` / `onUnmount` — Lifecycle Hooks
 
 ```jsx
 <Sentry.ErrorBoundary
@@ -313,7 +313,7 @@ Called when `resetError()` is invoked. Clear stale state in stores or invalidate
 
 ---
 
-### `Sentry.withErrorBoundary(Component, options)` - HOC Pattern
+### `Sentry.withErrorBoundary(Component, options)` — HOC Pattern
 
 Equivalent to wrapping with `<Sentry.ErrorBoundary>`. Useful when you want to wrap at the import or module level instead of in JSX.
 
@@ -325,7 +325,7 @@ const SafeDashboard = Sentry.withErrorBoundary(Dashboard, {
   fallback: <p>Dashboard failed to load.</p>,
 });
 
-// Full options - identical to ErrorBoundary props
+// Full options — identical to ErrorBoundary props
 const SafeCheckout = Sentry.withErrorBoundary(CheckoutFlow, {
   fallback: ({ error, resetError }) => (
     <div>
@@ -351,14 +351,14 @@ function App() {
 
 ---
 
-### Nested Error Boundaries - Isolation Pattern
+### Nested Error Boundaries — Isolation Pattern
 
 Each boundary only catches errors from **its own subtree**. Nesting lets one broken feature fail in isolation without crashing the whole page.
 
 ```jsx
 function App() {
   return (
-    // Outermost - catches anything that escapes inner boundaries
+    // Outermost — catches anything that escapes inner boundaries
     <Sentry.ErrorBoundary
       fallback={<FullPageError />}
       beforeCapture={(scope) => scope.setTag("level", "app")}
@@ -396,14 +396,14 @@ function App() {
 
 | Boundary location | Purpose |
 |------------------|---------|
-| Outermost (around `<App>`) | Last resort - prevents total blank page |
+| Outermost (around `<App>`) | Last resort — prevents total blank page |
 | Route level | Isolate route failures; different fallback per route |
 | Widget / panel level | Let other panels stay functional when one fails |
 | Data-fetching components | Catch errors from async rendering |
 
 ---
 
-### Custom Class-Based Error Boundaries - `captureReactException`
+### Custom Class-Based Error Boundaries — `captureReactException`
 
 > Requires `@sentry/react` ≥9.8.0
 
@@ -508,7 +508,7 @@ Captures a plain-text message as a Sentry issue. Useful for non-exception events
 
 ```javascript
 // With level as second argument
-Sentry.captureMessage("Payment gateway timeout - fallback triggered", "warning");
+Sentry.captureMessage("Payment gateway timeout — fallback triggered", "warning");
 
 // All valid levels: "fatal" | "error" | "warning" | "log" | "info" | "debug"
 // Default when omitted: "info"
@@ -542,7 +542,7 @@ Sentry.captureEvent({
 
 ### Try/Catch Patterns in React
 
-**Event handlers** - errors here are NOT caught by error boundaries (boundaries only catch render errors):
+**Event handlers** — errors here are NOT caught by error boundaries (boundaries only catch render errors):
 
 ```jsx
 function PaymentForm() {
@@ -612,7 +612,7 @@ fetchUserData(userId)
 
 ## Context Enrichment
 
-### `Sentry.setUser(user)` - Identify the Current User
+### `Sentry.setUser(user)` — Identify the Current User
 
 Associates a user identity with all subsequent events. Call after login; call `Sentry.setUser(null)` on logout.
 
@@ -641,7 +641,7 @@ Sentry.setUser({
   account_age_days: 365,
 });
 
-// On logout - clears user from all subsequent events:
+// On logout — clears user from all subsequent events:
 Sentry.setUser(null);
 
 // Auto-infer IP address (requires sendDefaultPii: true):
@@ -655,9 +655,9 @@ Sentry.setUser({
 
 ---
 
-### `Sentry.setContext(name, data)` - Attach Structured Custom Data
+### `Sentry.setContext(name, data)` — Attach Structured Custom Data
 
-Attaches arbitrary structured data to all subsequent events. Context is **not indexed or searchable** - use tags for filterable data. Context appears in the issue detail view.
+Attaches arbitrary structured data to all subsequent events. Context is **not indexed or searchable** — use tags for filterable data. Context appears in the issue detail view.
 
 ```javascript
 // E-commerce checkout context
@@ -680,11 +680,11 @@ Sentry.setContext("feature_flags", {
 Sentry.setContext("checkout", null);
 ```
 
-> **Depth:** Sentry normalizes context to **3 levels deep** by default. Adjust via `normalizeDepth` in `Sentry.init`. The key `type` is reserved - don't use it in context objects.
+> **Depth:** Sentry normalizes context to **3 levels deep** by default. Adjust via `normalizeDepth` in `Sentry.init`. The key `type` is reserved — don't use it in context objects.
 
 ---
 
-### `Sentry.setTag(key, value)` / `Sentry.setTags(tags)` - Searchable Key-Value Pairs
+### `Sentry.setTag(key, value)` / `Sentry.setTags(tags)` — Searchable Key-Value Pairs
 
 Tags are **indexed and searchable**. They power Sentry's filter sidebar, tag distribution charts, and issue similarity detection. Use tags for any data you want to filter or aggregate on.
 
@@ -708,7 +708,7 @@ Sentry.captureException(err, {
   tags: { component: "PaymentForm", retry_attempt: "2" },
 });
 
-// Scoped - only applies within the callback
+// Scoped — only applies within the callback
 Sentry.withScope((scope) => {
   scope.setTag("operation", "bulk-delete");
   Sentry.captureException(deleteError);
@@ -720,7 +720,7 @@ Sentry.withScope((scope) => {
 
 ---
 
-### `Sentry.setExtra(key, value)` / `Sentry.setExtras(extras)` - Arbitrary Data
+### `Sentry.setExtra(key, value)` / `Sentry.setExtras(extras)` — Arbitrary Data
 
 For loosely-typed supplementary data. Prefer `setContext` for structured data with a meaningful group name.
 
@@ -773,7 +773,7 @@ Breadcrumbs are a structured trail of events leading up to an error. They're buf
 
 ---
 
-### `Sentry.addBreadcrumb(breadcrumb)` - Manual Breadcrumbs
+### `Sentry.addBreadcrumb(breadcrumb)` — Manual Breadcrumbs
 
 ```typescript
 interface Breadcrumb {
@@ -845,7 +845,7 @@ Sentry.addBreadcrumb({
 
 ---
 
-### Filtering Breadcrumbs - `beforeBreadcrumb`
+### Filtering Breadcrumbs — `beforeBreadcrumb`
 
 Configured in `Sentry.init`. Return `null` to discard a breadcrumb entirely.
 
@@ -876,7 +876,7 @@ Sentry.init({
 });
 ```
 
-**`maxBreadcrumbs`** - Controls how many breadcrumbs are stored. Default: 100. Set in `Sentry.init`:
+**`maxBreadcrumbs`** — Controls how many breadcrumbs are stored. Default: 100. Set in `Sentry.init`:
 
 ```javascript
 Sentry.init({ maxBreadcrumbs: 50 });
@@ -904,7 +904,7 @@ Global → Isolation → Current → Event Sent
 
 ---
 
-### Global Scope - `Sentry.getGlobalScope()`
+### Global Scope — `Sentry.getGlobalScope()`
 
 Applied to **every event** from anywhere in the app. Use for universal data: app version, build ID, deployment region.
 
@@ -919,31 +919,31 @@ globalScope.setContext("deployment", {
 });
 ```
 
-> **Cannot capture events** - only stores data.
+> **Cannot capture events** — only stores data.
 
 ---
 
-### Isolation Scope - `Sentry.getIsolationScope()`
+### Isolation Scope — `Sentry.getIsolationScope()`
 
-In the **browser**, the isolation scope is effectively global - only one ever exists per page load (unlike Node where it's forked per request). All top-level `Sentry.setXxx()` methods write here.
+In the **browser**, the isolation scope is effectively global — only one ever exists per page load (unlike Node where it's forked per request). All top-level `Sentry.setXxx()` methods write here.
 
 ```javascript
 // These two are identical in the browser:
 Sentry.setTag("user_plan", "pro");
 Sentry.getIsolationScope().setTag("user_plan", "pro");
 
-// On login - persists for all subsequent events on this page:
+// On login — persists for all subsequent events on this page:
 Sentry.setUser({ id: "u_42", email: "user@example.com" });
 
-// On logout - clears user from isolation scope:
+// On logout — clears user from isolation scope:
 Sentry.setUser(null);
 ```
 
-> **Cannot capture events** - only stores data.
+> **Cannot capture events** — only stores data.
 
 ---
 
-### `Sentry.withScope(callback)` - Scoped Modifications
+### `Sentry.withScope(callback)` — Scoped Modifications
 
 Creates a **fork** of the current scope, active only within the callback. Modifications do not leak to subsequent events. The most important tool for per-event enrichment without polluting global state.
 
@@ -985,7 +985,7 @@ async function processPayment(order) {
   }
 }
 
-// addEventProcessor inside a scope - transform the event before it's sent
+// addEventProcessor inside a scope — transform the event before it's sent
 Sentry.withScope((scope) => {
   scope.addEventProcessor((event) => {
     event.tags = { ...event.tags, processed_by: "payment_handler" };
@@ -1006,13 +1006,13 @@ Sentry.withScope((scope) => {
 | Data on ONE specific capture | `Sentry.withScope((scope) => { ... })` |
 | Data inline on a single event | Second arg to `captureException(err, { tags: {...} })` |
 
-> **Do NOT use `Sentry.configureScope()`** - deprecated since SDK v8. Use `getIsolationScope()` or `getGlobalScope()` instead.
+> **Do NOT use `Sentry.configureScope()`** — deprecated since SDK v8. Use `getIsolationScope()` or `getGlobalScope()` instead.
 
 ---
 
 ## Event Filtering
 
-### `beforeSend(event, hint)` - Modify or Drop Events
+### `beforeSend(event, hint)` — Modify or Drop Events
 
 Called before every error event is sent. Return `null` to drop the event. Mutate `event` to scrub or enrich it.
 
@@ -1070,7 +1070,7 @@ beforeSend(event, hint) {
 
 ---
 
-### `ignoreErrors` - Pattern-Based Filtering
+### `ignoreErrors` — Pattern-Based Filtering
 
 Array of string or RegExp patterns. Events whose error message matches any pattern are silently dropped before `beforeSend`.
 
@@ -1097,7 +1097,7 @@ Sentry.init({
 
 ---
 
-### `allowUrls` / `denyUrls` - URL-Based Filtering
+### `allowUrls` / `denyUrls` — URL-Based Filtering
 
 Only capture errors (or skip errors) from scripts at specific URLs.
 
@@ -1122,7 +1122,7 @@ Sentry.init({
 
 ---
 
-### `sampleRate` - Capture Only a Fraction of Errors
+### `sampleRate` — Capture Only a Fraction of Errors
 
 ```javascript
 Sentry.init({
@@ -1155,7 +1155,7 @@ Sentry.captureException(err, {
   fingerprint: ["{{ default }}", "payment-module"],
 });
 
-// Dynamic component - group by component name + error type:
+// Dynamic component — group by component name + error type:
 Sentry.captureException(err, {
   fingerprint: ["DataGrid", err.constructor.name],
 });
@@ -1191,7 +1191,7 @@ Sentry.init({
 
 | | `feedbackIntegration()` Widget | `Sentry.showReportDialog()` |
 |---|---|---|
-| **Trigger** | Anytime - user-initiated | On error - automatic |
+| **Trigger** | Anytime — user-initiated | On error — automatic |
 | **UI** | Floating button (bottom-right) | Modal overlay |
 | **Requires error?** | No | Yes (`eventId` required) |
 | **Screenshots** | Yes (SDK ≥8.0.0) | No |
@@ -1199,9 +1199,9 @@ Sentry.init({
 
 ---
 
-### `feedbackIntegration()` - Persistent Feedback Widget
+### `feedbackIntegration()` — Persistent Feedback Widget
 
-Adds a floating feedback button to the page. Users submit feedback at any time - no error required.
+Adds a floating feedback button to the page. Users submit feedback at any time — no error required.
 
 ```javascript
 import * as Sentry from "@sentry/react";
@@ -1301,7 +1301,7 @@ Sentry.feedbackIntegration({
 const feedbackIntegration = Sentry.feedbackIntegration({ autoInject: false });
 Sentry.init({ integrations: [feedbackIntegration] });
 
-// Elsewhere - open the widget from a button:
+// Elsewhere — open the widget from a button:
 document.getElementById("feedback-btn").addEventListener("click", () => {
   feedbackIntegration.openDialog();
 });
@@ -1312,7 +1312,7 @@ feedbackIntegration.attachTo(document.getElementById("help-menu-item"));
 
 ---
 
-### `Sentry.captureFeedback(feedback, hints?)` - Programmatic Feedback API
+### `Sentry.captureFeedback(feedback, hints?)` — Programmatic Feedback API
 
 Submit feedback without any UI. Ideal for custom feedback forms you build yourself.
 
@@ -1349,7 +1349,7 @@ Sentry.captureFeedback(
 
 ---
 
-### `Sentry.showReportDialog(options)` - Crash-Report Modal
+### `Sentry.showReportDialog(options)` — Crash-Report Modal
 
 Shows a user-facing modal after an error. **Requires** an `eventId` to link the feedback to a Sentry event.
 
@@ -1423,7 +1423,7 @@ function handleCriticalError(err) {
 
 ---
 
-## React Router - Critical Error Boundary Note
+## React Router — Critical Error Boundary Note
 
 React Router's **default error boundary silently discards errors in production**. Always provide a custom `errorElement` that captures to Sentry:
 
@@ -1472,7 +1472,7 @@ Sentry.captureException(error, { level, tags, extra, contexts, fingerprint, user
 Sentry.captureMessage("text", "warning")
 Sentry.captureMessage("text", { level, tags, extra })
 Sentry.captureEvent({ message, level, tags, extra, timestamp })
-Sentry.captureReactException(error, reactErrorInfo)   // ≥9.8.0 - custom class boundaries
+Sentry.captureReactException(error, reactErrorInfo)   // ≥9.8.0 — custom class boundaries
 
 // ── React 19+ Error Hooks ─────────────────────────────────────────────
 createRoot(el, {
@@ -1510,7 +1510,7 @@ Sentry.addBreadcrumb({ type, category, message, level, data, timestamp })
 Sentry.withScope((scope) => { scope.setTag(...); Sentry.captureException(...) })
 Sentry.getGlobalScope()          // all events, process lifetime
 Sentry.getIsolationScope()       // current page/session (= Sentry.setTag etc.)
-// DON'T: Sentry.configureScope() - deprecated since SDK v8
+// DON'T: Sentry.configureScope() — deprecated since SDK v8
 
 // ── Filtering ─────────────────────────────────────────────────────────
 // Sentry.init({ beforeSend, ignoreErrors, allowUrls, denyUrls, sampleRate })
@@ -1527,7 +1527,7 @@ Sentry.showReportDialog({ eventId, user, title, subtitle, ... })
 
 | Issue | Solution |
 |-------|----------|
-| Errors appearing twice in development | Expected behavior - React Strict Mode re-throws caught errors to the global handler. Validate in production builds only. |
+| Errors appearing twice in development | Expected behavior — React Strict Mode re-throws caught errors to the global handler. Validate in production builds only. |
 | Missing component stack in issues | Requires React 17+. Ensure `LinkedErrors` integration is enabled (it is by default). |
 | React Router errors not captured | React Router's default boundary swallows errors. Add a custom `errorElement` that calls `captureException`. |
 | `CaptureConsole` causing duplicates | React logs caught errors via `console.error`. Remove `CaptureConsole` or exclude `console.error` from its config. |
@@ -1538,6 +1538,6 @@ Sentry.showReportDialog({ eventId, user, title, subtitle, ... })
 | Tags not appearing on events | Tags set via `Sentry.setTag()` go to the isolation scope; verify you're not clearing it unexpectedly. |
 | `showReportDialog` shows but has no event | Pass `eventId` from `Sentry.captureException(err)` return value or from `onError` prop. |
 | `feedbackIntegration` button not appearing | Confirm `feedbackIntegration()` is in the `integrations` array in `Sentry.init`. Check for z-index conflicts. |
-| `beforeSend` returning `null` but events still sent | Check `beforeSendTransaction` - a separate hook for performance events. Also verify no other SDK instance is active. |
+| `beforeSend` returning `null` but events still sent | Check `beforeSendTransaction` — a separate hook for performance events. Also verify no other SDK instance is active. |
 | High event volume from known errors | Add patterns to `ignoreErrors`, or use `sampleRate` to reduce volume. Use `beforeSend` for type-specific filtering. |
 | Errors from browser extensions captured | Add `/extensions\//i` and `/^chrome:\/\//i` to `denyUrls`. |

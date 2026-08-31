@@ -2,7 +2,7 @@
 
 **Purpose:** Run breaking change detection directly using Claude's tools (Grep, Glob, Read)
 
-**When to use:** Step 4 of the upgrade workflow - after tests pass and the upgrade path is validated. (load_defaults alignment is Step 7, *after* detection, not before.)
+**When to use:** Step 4 of the upgrade workflow — after tests pass and the upgrade path is validated. (load_defaults alignment is Step 7, *after* detection, not before.)
 
 ---
 
@@ -37,14 +37,14 @@ The pattern file contains:
 - `upgrade_findings.medium_priority` - Important patterns to search
 - `upgrade_findings.low_priority` - Lower-urgency patterns to search
 - Each pattern has: `name`, `kind`, `pattern`, `search_paths`, `explanation`, `fix`, `variable_name`
-- Each pattern may optionally declare `prereqs:` - a list of gem-version floors that must be in place for the suggested `fix:` to actually work. See "The `prereqs:` field" below.
-- `kind` is one of `breaking` / `deprecation` / `migration` / `optional` - see `CLAUDE.md` → "Assigning `kind:`" for the rubric. The bucket each finding lands in (see Step 4 / Output Format) is driven by `kind`, not by priority.
+- Each pattern may optionally declare `prereqs:` — a list of gem-version floors that must be in place for the suggested `fix:` to actually work. See "The `prereqs:` field" below.
+- `kind` is one of `breaking` / `deprecation` / `migration` / `optional` — see `CLAUDE.md` → "Assigning `kind:`" for the rubric. The bucket each finding lands in (see Step 4 / Output Format) is driven by `kind`, not by priority.
 
 #### The `prereqs:` field (optional)
 
 Some patterns describe a Rails-API change whose `fix:` only works on a *recent enough* version of a wrapper gem. The Rails API exists at the target version, but the gem that exposes it to the app may need a bump first.
 
-Example: at Rails 7.2 the `fixture_path=` setter on `ActiveSupport::TestCase` is deprecated in favor of `fixture_paths=` (plural array). `fixture_paths=` exists from Rails 7.1+ - but in an rspec project the setter goes through `RSpec::Core::Configuration`, which only forwards `fixture_paths=` from `rspec-rails 6.1.0+`. On `rspec-rails 6.0.x` the suggested fix raises `NoMethodError`.
+Example: at Rails 7.2 the `fixture_path=` setter on `ActiveSupport::TestCase` is deprecated in favor of `fixture_paths=` (plural array). `fixture_paths=` exists from Rails 7.1+ — but in an rspec project the setter goes through `RSpec::Core::Configuration`, which only forwards `fixture_paths=` from `rspec-rails 6.1.0+`. On `rspec-rails 6.0.x` the suggested fix raises `NoMethodError`.
 
 Declaring this in the pattern:
 
@@ -74,7 +74,7 @@ When compiling findings:
    - If the gem is at or above `min_version`, ignore the prereq.
    - If the gem is below `min_version`, add a fix-before-bump entry **for the prereq gem bump**, in addition to (and ordered before) the original finding.
 
-This makes the cascade explicit in the report - readers see "bump rspec-rails first, *then* rename fixture_path" instead of discovering the second step mid-implementation.
+This makes the cascade explicit in the report — readers see "bump rspec-rails first, *then* rename fixture_path" instead of discovering the second step mid-implementation.
 
 `prereqs:` is optional. Most patterns describe Rails-only API changes and need none.
 
@@ -130,10 +130,10 @@ Same process for `upgrade_findings.medium_priority` and `upgrade_findings.low_pr
 
 Group findings into **two buckets** based on each pattern's `kind`:
 
-- **Fix before bump** - `kind: breaking` and `kind: deprecation`. These either raise / remove APIs / prevent boot at the target version, or emit a deprecation warning at the target version. Both should be addressed during the same upgrade campaign:
+- **Fix before bump** — `kind: breaking` and `kind: deprecation`. These either raise / remove APIs / prevent boot at the target version, or emit a deprecation warning at the target version. Both should be addressed during the same upgrade campaign:
   - `breaking` blocks the upgrade outright.
   - `deprecation` works at this hop but warns at runtime (log noise in production) and typically becomes `breaking` at the next hop. Addressing it now is the same work either way and de-risks the next upgrade.
-- **Fix when ready** - `kind: migration` and `kind: optional`. These are silent and fully working at this hop:
+- **Fix when ready** — `kind: migration` and `kind: optional`. These are silent and fully working at this hop:
   - `migration` is a recommended path forward (e.g., `secrets.yml` → `credentials.yml.enc`) with no warning today.
   - `optional` is an opt-in feature or improvement that can be safely ignored.
 
@@ -182,7 +182,7 @@ Each entry retains its individual fields plus `kind` and `priority`:
 }
 ```
 
-A HIGH `deprecation` (silently wrong, like `DIRTY_TRACKING_AFTER_SAVE`) lands in `fix_before_bump.high_priority` - both because it warns at runtime today and because skipping it now means it becomes a `breaking` hard-break at the next hop. Priority HIGH within the bucket means address before MEDIUM/LOW deprecations or breakings.
+A HIGH `deprecation` (silently wrong, like `DIRTY_TRACKING_AFTER_SAVE`) lands in `fix_before_bump.high_priority` — both because it warns at runtime today and because skipping it now means it becomes a `breaking` hard-break at the next hop. Priority HIGH within the bucket means address before MEDIUM/LOW deprecations or breakings.
 
 ---
 
@@ -311,13 +311,13 @@ Present findings grouped by `kind` (fix-before-bump vs fix-when-ready), with `pr
 
 ### 🛑 Fix Before Bump (4 found)
 
-These are `kind: breaking` and `kind: deprecation` - they either block the upgrade outright or warn at runtime today (and typically become `breaking` at the next hop). Address them in the same upgrade campaign.
+These are `kind: breaking` and `kind: deprecation` — they either block the upgrade outright or warn at runtime today (and typically become `breaking` at the next hop). Address them in the same upgrade campaign.
 
 #### HIGH
 
 ##### 1. update_attributes removed
 **Kind:** `breaking` · **Priority:** HIGH
-**Explanation:** Rails 6.1 removes `update_attributes` - calls raise `NoMethodError`
+**Explanation:** Rails 6.1 removes `update_attributes` — calls raise `NoMethodError`
 **Fix:** Replace `record.update_attributes(...)` with `record.update(...)`
 
 **Found in:**
@@ -337,7 +337,7 @@ These are `kind: breaking` and `kind: deprecation` - they either block the upgra
 
 ### 📅 Fix When Ready (1 found)
 
-These are `kind: migration` and `kind: optional` - silent and fully working at this hop. Addressing them is recommended but not tied to the upgrade boundary.
+These are `kind: migration` and `kind: optional` — silent and fully working at this hop. Addressing them is recommended but not tied to the upgrade boundary.
 
 #### MEDIUM
 
@@ -356,7 +356,7 @@ These are `kind: migration` and `kind: optional` - silent and fully working at t
 - Affected files: 4
 ```
 
-**Why two buckets?** The user reads detection output to decide what to fix when. Putting `breaking` and `deprecation` together as "fix before bump" reflects the practical truth: deprecations warn in production logs at this hop and become hard breaks at the next, so addressing them in the same campaign is cheaper than splitting the work across two upgrades. `migration` and `optional` are silent at this hop - they don't compete for the user's attention during the upgrade itself.
+**Why two buckets?** The user reads detection output to decide what to fix when. Putting `breaking` and `deprecation` together as "fix before bump" reflects the practical truth: deprecations warn in production logs at this hop and become hard breaks at the next, so addressing them in the same campaign is cheaper than splitting the work across two upgrades. `migration` and `optional` are silent at this hop — they don't compete for the user's attention during the upgrade itself.
 
 ---
 

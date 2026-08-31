@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,46 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/CHANGELOG.md` - preserved source companion file.
-- `references/breaking-changes-by-version.md` - preserved source companion file.
-- `references/deprecation-warnings.md` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-40-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-41-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-42-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-50-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-51-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-52-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-60-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-70-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-71-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-72-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-80-patterns.yml` - preserved source companion file.
-- `references/detection-scripts/patterns/rails-81-patterns.yml` - preserved source companion file.
-- `references/examples/multi-hop-upgrade.md` - preserved source companion file.
-- `references/examples/simple-upgrade.md` - preserved source companion file.
-- `references/gem-compatibility.md` - preserved source companion file.
-- `references/multi-hop-strategy.md` - preserved source companion file.
-- `references/staying-current.md` - preserved source companion file.
-- `references/templates/app-update-preview-template.md` - preserved source companion file.
-- `references/templates/upgrade-report-template.md` - preserved source companion file.
-- `references/testing-checklist.md` - preserved source companion file.
-- `references/version-guides/upgrade-3.2-to-4.0.md` - preserved source companion file.
-- `references/version-guides/upgrade-4.0-to-4.1.md` - preserved source companion file.
-- `references/version-guides/upgrade-4.1-to-4.2.md` - preserved source companion file.
-- `references/version-guides/upgrade-4.2-to-5.0.md` - preserved source companion file.
-- `references/version-guides/upgrade-5.0-to-5.1.md` - preserved source companion file.
-- `references/version-guides/upgrade-5.1-to-5.2.md` - preserved source companion file.
-- `references/version-guides/upgrade-5.2-to-6.0.md` - preserved source companion file.
-- `references/version-guides/upgrade-6.0-to-6.1.md` - preserved source companion file.
-- `references/version-guides/upgrade-6.1-to-7.0.md` - preserved source companion file.
-- `references/version-guides/upgrade-7.0-to-7.1.md` - preserved source companion file.
-- `references/version-guides/upgrade-7.1-to-7.2.md` - preserved source companion file.
-- `references/version-guides/upgrade-7.2-to-8.0.md` - preserved source companion file.
-- `references/version-guides/upgrade-8.0-to-8.1.md` - preserved source companion file.
-- `references/workflows/app-update-preview-workflow.md` - preserved source companion file.
-- `references/workflows/boot-smoke-test-workflow.md` - preserved source companion file.
-- `references/workflows/ci-sync-workflow.md` - preserved source companion file.
-- `references/workflows/direct-detection-workflow.md` - preserved source companion file.
-- `references/workflows/gem-compatibility-workflow.md` - preserved source companion file.
-- `references/workflows/test-suite-verification-workflow.md` - preserved source companion file.
-- `references/workflows/upgrade-report-workflow.md` - preserved source companion file.
+- `references/` - 43 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

@@ -2,13 +2,13 @@
   {
     "id": 1,
     "name": "nolint-directive-specificity",
-    "description": "Tests that nolint directives specify the linter name and include a justification - never bare //nolint",
+    "description": "Tests that nolint directives specify the linter name and include a justification — never bare //nolint",
     "prompt": "I have a Go function that triggers several lint warnings. I want to suppress them. Write the nolint directives for these cases:\n\n1. A logger.Sync() call where the error is intentionally ignored\n2. A type assertion that is guaranteed safe by a preceding type switch\n3. A function with cyclomatic complexity of 15 that orchestrates 6 subsystems\n4. A table-driven test function that is 200 lines long\n5. A deprecated API call that we can't migrate yet\n\nShow the code with proper suppression directives.",
     "trap": "Model uses bare //nolint without specifying the linter name, or omits the justification comment. May also use //nolint at the file level instead of per-line.",
     "assertions": [
       {
         "id": "1.1",
-        "text": "Every //nolint directive specifies the linter name (e.g., //nolint:errcheck, //nolint:gocyclo) - NO bare //nolint without a linter name"
+        "text": "Every //nolint directive specifies the linter name (e.g., //nolint:errcheck, //nolint:gocyclo) — NO bare //nolint without a linter name"
       },
       {
         "id": "1.2",
@@ -31,33 +31,33 @@
   {
     "id": 2,
     "name": "nolint-fix-vs-suppress-judgment",
-    "description": "Tests judgment about when to fix vs when to suppress - security and correctness linters should almost never be suppressed",
+    "description": "Tests judgment about when to fix vs when to suppress — security and correctness linters should almost never be suppressed",
     "prompt": "My Go codebase has these lint warnings. For each one, should I fix the code or suppress the warning? Explain.\n\n1. `bodyclose: response body not closed` on an HTTP client call\n2. `funlen: function too long (150 lines)` on a table-driven test\n3. `errcheck: error return not checked` on a database query in a request handler\n4. `dupl: duplicate code block` on two similar but intentionally parallel handler functions\n5. `sqlclosecheck: rows not closed` on a database query\n6. `goconst: string 'application/json' repeated 4 times` in test assertions",
-    "trap": "Model suppresses bodyclose, errcheck on production DB code, or sqlclosecheck - these are real bugs, not style issues. Should only suppress funlen, dupl, and goconst with justifications.",
+    "trap": "Model suppresses bodyclose, errcheck on production DB code, or sqlclosecheck — these are real bugs, not style issues. Should only suppress funlen, dupl, and goconst with justifications.",
     "assertions": [
       {
         "id": "2.1",
-        "text": "Recommends FIXING bodyclose - unclosed HTTP response bodies leak connections, this is a real resource leak"
+        "text": "Recommends FIXING bodyclose — unclosed HTTP response bodies leak connections, this is a real resource leak"
       },
       {
         "id": "2.2",
-        "text": "Recommends SUPPRESSING funlen on the table-driven test - length is proportional to test case count, splitting would be worse"
+        "text": "Recommends SUPPRESSING funlen on the table-driven test — length is proportional to test case count, splitting would be worse"
       },
       {
         "id": "2.3",
-        "text": "Recommends FIXING errcheck on the database query - unchecked errors in production request handlers cause silent failures"
+        "text": "Recommends FIXING errcheck on the database query — unchecked errors in production request handlers cause silent failures"
       },
       {
         "id": "2.4",
-        "text": "Recommends SUPPRESSING dupl on intentional parallel structure - with a justification that the parallel pattern is clearer than abstracting"
+        "text": "Recommends SUPPRESSING dupl on intentional parallel structure — with a justification that the parallel pattern is clearer than abstracting"
       },
       {
         "id": "2.5",
-        "text": "Recommends FIXING sqlclosecheck - unclosed sql.Rows leak database connections"
+        "text": "Recommends FIXING sqlclosecheck — unclosed sql.Rows leak database connections"
       },
       {
         "id": "2.6",
-        "text": "Recommends SUPPRESSING goconst in tests - extracting 'application/json' to a constant in tests would reduce clarity"
+        "text": "Recommends SUPPRESSING goconst in tests — extracting 'application/json' to a constant in tests would reduce clarity"
       }
     ]
   },
@@ -70,15 +70,15 @@
     "assertions": [
       {
         "id": "3.1",
-        "text": "Config file has version: \"2\" at the top - golangci-lint v2 requires this field"
+        "text": "Config file has version: \"2\" at the top — golangci-lint v2 requires this field"
       },
       {
         "id": "3.2",
-        "text": "Linters are listed under linters.enable (not enable-all with exclusions) - explicit listing is the recommended approach"
+        "text": "Linters are listed under linters.enable (not enable-all with exclusions) — explicit listing is the recommended approach"
       },
       {
         "id": "3.3",
-        "text": "gofumpt is configured under formatters.enable, NOT under linters.enable - formatters are a separate section in v2"
+        "text": "gofumpt is configured under formatters.enable, NOT under linters.enable — formatters are a separate section in v2"
       },
       {
         "id": "3.4",
@@ -93,21 +93,21 @@
   {
     "id": 4,
     "name": "linter-categories-correctness-vs-style",
-    "description": "Tests understanding of linter domains - which linters catch bugs vs which catch style issues",
+    "description": "Tests understanding of linter domains — which linters catch bugs vs which catch style issues",
     "prompt": "I'm setting up golangci-lint for a new Go project and can only enable 10 linters due to team constraints. Which 10 should I prioritize and why? Categorize them.",
     "trap": "Model prioritizes style linters (revive, godot, misspell) over correctness linters (govet, staticcheck, errcheck, nilerr). May also include deprecated or redundant linters.",
     "assertions": [
       {
         "id": "4.1",
-        "text": "Includes govet and staticcheck - these are the highest-value correctness linters that catch real bugs"
+        "text": "Includes govet and staticcheck — these are the highest-value correctness linters that catch real bugs"
       },
       {
         "id": "4.2",
-        "text": "Includes errcheck - unchecked errors are the most common source of silent failures in Go"
+        "text": "Includes errcheck — unchecked errors are the most common source of silent failures in Go"
       },
       {
         "id": "4.3",
-        "text": "Prioritizes correctness/safety linters over style linters - bug-finding tools provide more value than formatting preferences"
+        "text": "Prioritizes correctness/safety linters over style linters — bug-finding tools provide more value than formatting preferences"
       },
       {
         "id": "4.4",
@@ -132,7 +132,7 @@
       },
       {
         "id": "5.2",
-        "text": "Does NOT suggest adding //nolint directives to all 2000+ existing warnings - that's unmaintainable"
+        "text": "Does NOT suggest adding //nolint directives to all 2000+ existing warnings — that's unmaintainable"
       },
       {
         "id": "5.3",
@@ -157,15 +157,15 @@
     "assertions": [
       {
         "id": "6.1",
-        "text": "Identifies errcheck on DB.Close as a real issue to fix - unchecked database close errors can mask connection problems"
+        "text": "Identifies errcheck on DB.Close as a real issue to fix — unchecked database close errors can mask connection problems"
       },
       {
         "id": "6.2",
-        "text": "Identifies bodyclose as a critical resource leak to fix - not suppress"
+        "text": "Identifies bodyclose as a critical resource leak to fix — not suppress"
       },
       {
         "id": "6.3",
-        "text": "Identifies unused validateToken as dead code to either remove or fix - not suppress"
+        "text": "Identifies unused validateToken as dead code to either remove or fix — not suppress"
       },
       {
         "id": "6.4",
@@ -180,29 +180,29 @@
   {
     "id": 7,
     "name": "disabled-linters-with-rationale",
-    "description": "Tests understanding of which linters should be disabled and why - the recommended config explicitly disables several with reasons",
+    "description": "Tests understanding of which linters should be disabled and why — the recommended config explicitly disables several with reasons",
     "prompt": "A colleague wants to enable these linters in our .golangci.yml: exhaustruct, gochecknoglobals, wrapcheck, mnd (magic number detector), and varnamelen. Should we? Explain your reasoning for each.",
     "trap": "Model enables all of them without considering that they are intentionally excluded from the recommended config due to being too noisy, too opinionated, or breaking idiomatic Go patterns.",
     "assertions": [
       {
         "id": "7.1",
-        "text": "Recommends AGAINST exhaustruct - it requires all struct fields to be set, which breaks Go's zero-value idiom and is extremely noisy"
+        "text": "Recommends AGAINST exhaustruct — it requires all struct fields to be set, which breaks Go's zero-value idiom and is extremely noisy"
       },
       {
         "id": "7.2",
-        "text": "Recommends AGAINST gochecknoglobals - there are many valid uses for global variables in Go (loggers, registries, etc.) and a blanket ban is too strict"
+        "text": "Recommends AGAINST gochecknoglobals — there are many valid uses for global variables in Go (loggers, registries, etc.) and a blanket ban is too strict"
       },
       {
         "id": "7.3",
-        "text": "Recommends AGAINST wrapcheck as a default - it forces wrapping all external errors, which is too noisy and not always appropriate"
+        "text": "Recommends AGAINST wrapcheck as a default — it forces wrapping all external errors, which is too noisy and not always appropriate"
       },
       {
         "id": "7.4",
-        "text": "Recommends AGAINST mnd - magic number detection is extremely noisy, flagging obvious constants like HTTP status codes"
+        "text": "Recommends AGAINST mnd — magic number detection is extremely noisy, flagging obvious constants like HTTP status codes"
       },
       {
         "id": "7.5",
-        "text": "Recommends AGAINST varnamelen - Go idiomatically favors short variable names, and this linter conflicts with that philosophy"
+        "text": "Recommends AGAINST varnamelen — Go idiomatically favors short variable names, and this linter conflicts with that philosophy"
       }
     ]
   },
@@ -215,7 +215,7 @@
     "assertions": [
       {
         "id": "8.1",
-        "text": "Recommends enabling the nolintlint linter - it automatically enforces nolint directive quality"
+        "text": "Recommends enabling the nolintlint linter — it automatically enforces nolint directive quality"
       },
       {
         "id": "8.2",
@@ -240,7 +240,7 @@
     "assertions": [
       {
         "id": "9.1",
-        "text": "Uses comma-separated linter names in a single directive: //nolint:errcheck,gosec - not two separate //nolint directives"
+        "text": "Uses comma-separated linter names in a single directive: //nolint:errcheck,gosec — not two separate //nolint directives"
       },
       {
         "id": "9.2",
@@ -269,7 +269,7 @@
       },
       {
         "id": "10.3",
-        "text": "For linter not found: recommends checking the golangci-lint version - modernize requires v2.6.0+ or similar newer version"
+        "text": "For linter not found: recommends checking the golangci-lint version — modernize requires v2.6.0+ or similar newer version"
       },
       {
         "id": "10.4",
@@ -286,7 +286,7 @@
     "assertions": [
       {
         "id": "11.1",
-        "text": "Configures gofumpt under formatters.enable, NOT linters.enable - formatters are a separate section in golangci-lint v2"
+        "text": "Configures gofumpt under formatters.enable, NOT linters.enable — formatters are a separate section in golangci-lint v2"
       },
       {
         "id": "11.2",
@@ -294,7 +294,7 @@
       },
       {
         "id": "11.3",
-        "text": "Mentions the golangci-lint fmt ./... command for running formatters - separate from golangci-lint run"
+        "text": "Mentions the golangci-lint fmt ./... command for running formatters — separate from golangci-lint run"
       },
       {
         "id": "11.4",

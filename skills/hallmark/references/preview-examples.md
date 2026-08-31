@@ -47,3 +47,4 @@ Four sample preview blocks varied across macrostructure types. Load this file on
 > - **Motion** * breathing-loop on bean (with reduced-motion fallback)
 > - **Slop test** * 58 / 58 OK
 > - **Diversification** * custom axes: light / italic-serif / chromatic-terracotta  -  differs from previous catalog Newsprint on accent hue + display style
+

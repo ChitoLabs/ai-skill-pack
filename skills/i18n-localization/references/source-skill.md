@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/i18n-localization"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/i18n-localization"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/i18n-localization"
 risk: safe
 source: community
 date_added: 2026-02-27
@@ -159,7 +159,7 @@ Before shipping:
 
 | Script | Purpose | Command |
 |--------|---------|---------|
-| `scripts/i18n_checker.py` | Detect hardcoded strings & missing translations | `python scripts/i18n_checker.py <project_path>` |
+| `../scripts/i18n_checker.py` | Detect hardcoded strings & missing translations | `python scripts/i18n_checker.py <project_path>` |
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.

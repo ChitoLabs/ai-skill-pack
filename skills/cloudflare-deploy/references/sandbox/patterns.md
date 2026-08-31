@@ -37,6 +37,7 @@ export default {
     const sandbox = getSandbox(env.Sandbox, 'ide', { normalizeId: true });
     
     if (request.url.endsWith('/start')) {
+      // Remote installer example: the parent skill's remote-installer consent gate applies before this code is added or run. The official code-server script detects the platform and package manager, downloads a release or package, may invoke sudo and a package manager, writes a cache and installation files, and can install on another host over SSH. Prefer a separately downloaded and inspected script.
       await sandbox.exec('curl -fsSL https://code-server.dev/install.sh | sh');
       await sandbox.startProcess('code-server --bind-addr 0.0.0.0:8080', {
         processId: 'vscode'

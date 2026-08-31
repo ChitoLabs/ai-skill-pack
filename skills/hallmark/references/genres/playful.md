@@ -68,3 +68,4 @@ See [`component-cookbook.md`](../component-cookbook.md) § Navigation and § Foo
 ## Reference register
 
 The aesthetic to match: soft surfaces, low-chroma colour, friendly-but-restrained type, hover-responsive motion. The post-Linear soft school. Never childish, never quirk-for-quirk.
+

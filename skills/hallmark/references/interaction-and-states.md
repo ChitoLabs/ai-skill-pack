@@ -206,3 +206,4 @@ The rule: **any rule that overrides `background-color` must also state the appro
 ```
 
 Same applies to per-theme overrides like `[data-theme="manifesto"] .vs__col:first-child { background: var(--color-ink); }`  -  set `color: var(--color-paper)` at the same time, OR declare the rule on a parent and let descendants inherit explicitly.
+

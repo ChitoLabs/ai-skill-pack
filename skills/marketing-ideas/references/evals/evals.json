@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "I need marketing ideas for my SaaS product. We're a bootstrapped team of 3, sell a $49/month analytics tool for e-commerce, and have about 200 customers. Budget is tight - maybe $500/month for marketing.",
+      "prompt": "I need marketing ideas for my SaaS product. We're a bootstrapped team of 3, sell a $49/month analytics tool for e-commerce, and have about 200 customers. Budget is tight — maybe $500/month for marketing.",
       "expected_output": "Should check for product-marketing.md first. Should filter ideas by low budget and early-stage constraints. Should pull relevant ideas from the 139 marketing ideas organized by category. Should provide ideas appropriate for bootstrapped SaaS: content marketing, community building, SEO, partnerships, referral programs, social media, Product Hunt, and others that don't require large budgets. Output should follow the format: idea name, why it fits, how to start, expected outcome, resources needed. Should prioritize by likely impact given their stage.",
       "assertions": [
         "Checks for product-marketing.md",
@@ -20,7 +20,7 @@
     {
       "id": 2,
       "prompt": "What's the fastest way to get more leads? We sell enterprise security software and have a $10k/month marketing budget.",
-      "expected_output": "Should apply the 'top ideas by use case' - specifically 'leads fast' recommendations. Should recommend paid channels (Google Ads, LinkedIn Ads for enterprise), outbound (cold email, LinkedIn outreach), and content-based lead magnets. Should filter for enterprise-appropriate tactics. Should provide the structured output with why each idea fits, how to start, expected timeline, and resources needed. Should note that 'fast leads' typically means paid or outbound channels.",
+      "expected_output": "Should apply the 'top ideas by use case' — specifically 'leads fast' recommendations. Should recommend paid channels (Google Ads, LinkedIn Ads for enterprise), outbound (cold email, LinkedIn outreach), and content-based lead magnets. Should filter for enterprise-appropriate tactics. Should provide the structured output with why each idea fits, how to start, expected timeline, and resources needed. Should note that 'fast leads' typically means paid or outbound channels.",
       "assertions": [
         "Applies 'leads fast' use case filter",
         "Recommends paid channels appropriate for enterprise",

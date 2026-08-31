@@ -1,6 +1,6 @@
 ---
 name: gsap-utils
-description: Official GSAP skill for gsap.utils - clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
+description: Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
 license: MIT
 metadata:
   author: greensock
@@ -21,7 +21,7 @@ Apply when writing or reviewing code that uses **gsap.utils** for math, array/co
 
 **gsap.utils** provides pure helpers; no need to register. Use in tween vars (e.g. function-based values), in ScrollTrigger or Observer callbacks, or in any JS that drives GSAP. All are on **gsap.utils** (e.g. `gsap.utils.clamp()`).
 
-**Omitting the value: function form.** Many utils accept the value to transform as the **last** argument. If you omit that argument, the util returns a **function** that accepts the value later. Use the function form when you need to clamp, map, normalize, or snap many values with the same config (e.g. in a mousemove handler or tween callback). **Exception: random()** - pass **true** as the last argument to get a reusable function (do not omit the value); see [random()](https://gsap.com/docs/v3/GSAP/UtilityMethods/random()).
+**Omitting the value: function form.** Many utils accept the value to transform as the **last** argument. If you omit that argument, the util returns a **function** that accepts the value later. Use the function form when you need to clamp, map, normalize, or snap many values with the same config (e.g. in a mousemove handler or tween callback). **Exception: random()** — pass **true** as the last argument to get a reusable function (do not omit the value); see [random()](https://gsap.com/docs/v3/GSAP/UtilityMethods/random()).
 
 ```javascript
 // With value: returns the result
@@ -49,7 +49,7 @@ clampFn(150); // 100
 
 ### mapRange(inMin, inMax, outMin, outMax, value?)
 
-Maps a value from one range to another. Use when converting scroll position, progress (0-1), or input range to an animation range. Omit **value** to get a function: `mapRange(inMin, inMax, outMin, outMax)(value)`.
+Maps a value from one range to another. Use when converting scroll position, progress (0–1), or input range to an animation range. Omit **value** to get a function: `mapRange(inMin, inMax, outMin, outMax)(value)`.
 
 ```javascript
 gsap.utils.mapRange(0, 100, 0, 500, 50);  // 250
@@ -61,7 +61,7 @@ mapFn(50);  // 250
 
 ### normalize(min, max, value?)
 
-Returns a value normalized to 0-1 for the given range. Inverse of mapping when the target range is 0-1. Omit **value** to get a function: `normalize(min, max)(value)`.
+Returns a value normalized to 0–1 for the given range. Inverse of mapping when the target range is 0–1. Omit **value** to get a function: `normalize(min, max)(value)`.
 
 ```javascript
 gsap.utils.normalize(0, 100, 50);   // 0.5
@@ -73,7 +73,7 @@ normFn(50); // 0.5
 
 ### interpolate(start, end, progress?)
 
-Interpolates between two values at a given progress (0-1). Handles numbers, colors, and objects with matching keys. Omit **progress** to get a function: `interpolate(start, end)(progress)`.
+Interpolates between two values at a given progress (0–1). Handles numbers, colors, and objects with matching keys. Omit **progress** to get a function: `interpolate(start, end)(progress)`.
 
 ```javascript
 gsap.utils.interpolate(0, 100, 0.5);       // 50
@@ -88,12 +88,12 @@ lerp(0.5); // 50
 
 ### random(minimum, maximum[, snapIncrement, returnFunction]) / random(array[, returnFunction])
 
-Returns a random number in the range **minimum**-**maximum**, or a random element from an **array**. Optional **snapIncrement** snaps the result to the nearest multiple (e.g. `5` → multiples of 5). **To get a reusable function**, pass **true** as the last argument (**returnFunction**); the returned function takes no args and returns a new random value each time. This is the only util that uses `true` for the function form instead of omitting the value.
+Returns a random number in the range **minimum**–**maximum**, or a random element from an **array**. Optional **snapIncrement** snaps the result to the nearest multiple (e.g. `5` → multiples of 5). **To get a reusable function**, pass **true** as the last argument (**returnFunction**); the returned function takes no args and returns a new random value each time. This is the only util that uses `true` for the function form instead of omitting the value.
 
 ```javascript
 // immediate value: number in range
 gsap.utils.random(-100, 100);        // e.g. 42.7
-gsap.utils.random(0, 500, 5);        // 0-500, snapped to nearest 5
+gsap.utils.random(0, 500, 5);        // 0–500, snapped to nearest 5
 
 // reusable function: pass true as last argument
 let randomFn = gsap.utils.random(-200, 500, 10, true);
@@ -142,7 +142,7 @@ gsap.utils.shuffle([1, 2, 3, 4]); // e.g. [3, 1, 4, 2]
 
 ### distribute(config)
 
-**Returns a function** that assigns a value to each target based on its position in the array (or in a grid). Used internally for advanced staggers; use it whenever you need values spread across many elements (e.g. scale, opacity, x, delay). The returned function receives `(index, target, targets)` - either call it manually or pass the result directly into a tween; GSAP will call it per target with index, element, and array.
+**Returns a function** that assigns a value to each target based on its position in the array (or in a grid). Used internally for advanced staggers; use it whenever you need values spread across many elements (e.g. scale, opacity, x, delay). The returned function receives `(index, target, targets)` — either call it manually or pass the result directly into a tween; GSAP will call it per target with index, element, and array.
 
 **Config (all optional):**
 
@@ -207,7 +207,7 @@ gsap.utils.unitize("2rem", "px"); // "2rem" (unchanged)
 
 ### splitColor(color, returnHSL?)
 
-Converts a color string into an array: **[red, green, blue]** (0-255), or **[red, green, blue, alpha]** (4 elements for RGBA when alpha is present or required). Pass **true** as the second argument (**returnHSL**) to get **[hue, saturation, lightness]** or **[hue, saturation, lightness, alpha]** (HSL/HSLA) instead. Works with `"rgb()"`, `"rgba()"`, `"hsl()"`, `"hsla()"`, hex, and named colors (e.g. `"red"`). Use when animating color components or building gradients. See [splitColor()](https://gsap.com/docs/v3/GSAP/UtilityMethods/splitColor/).
+Converts a color string into an array: **[red, green, blue]** (0–255), or **[red, green, blue, alpha]** (4 elements for RGBA when alpha is present or required). Pass **true** as the second argument (**returnHSL**) to get **[hue, saturation, lightness]** or **[hue, saturation, lightness, alpha]** (HSL/HSLA) instead. Works with `"rgb()"`, `"rgba()"`, `"hsl()"`, `"hsla()"`, hex, and named colors (e.g. `"red"`). Use when animating color components or building gradients. See [splitColor()](https://gsap.com/docs/v3/GSAP/UtilityMethods/splitColor/).
 
 ```javascript
 gsap.utils.splitColor("red");                    // [255, 0, 0]
@@ -252,7 +252,7 @@ fn(50); // normalized then snapped
 
 ### wrap(min, max, value?)
 
-Wraps a value into the range min-max (inclusive min, exclusive max). Use for infinite scroll or cyclic values. Omit **value** to get a function: `wrap(min, max)(value)`.
+Wraps a value into the range min–max (inclusive min, exclusive max). Use for infinite scroll or cyclic values. Omit **value** to get a function: `wrap(min, max)(value)`.
 
 ```javascript
 gsap.utils.wrap(0, 360, 370);  // 10

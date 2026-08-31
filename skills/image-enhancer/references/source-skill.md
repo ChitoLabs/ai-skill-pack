@@ -3,15 +3,15 @@ name: image-enhancer
 description: Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.
 license: Apache-2.0
 metadata:
-  author: skillcreatorai
+  author: composiohq
   version: 0.1
   skills_sh_url: "https://www.skills.sh/composiohq/awesome-claude-skills/image-enhancer"
-  github_url: "https://github.com/skillcreatorai/awesome-agent-skills/tree/HEAD/image-enhancer"
+  github_url: "https://github.com/composiohq/awesome-claude-skills/tree/HEAD/image-enhancer"
 ---
 
 # Image Enhancer
 
-This skill takes your images and screenshots and makes them look better-sharper, clearer, and more professional.
+This skill takes your images and screenshots and makes them look better—sharper, clearer, and more professional.
 
 ## When to Use This Skill
 

@@ -35,7 +35,7 @@ vercel teams list --format json 2>/dev/null
 
 ### Team selection
 
-If the user belongs to multiple teams, present all available team slugs as a bulleted list and ask which one to deploy to. Once the user picks a team, proceed immediately to the next step - do not ask for additional confirmation.
+If the user belongs to multiple teams, present all available team slugs as a bulleted list and ask which one to deploy to. Once the user picks a team, proceed immediately to the next step — do not ask for additional confirmation.
 
 Pass the team slug via `--scope` on all subsequent CLI commands (`vercel deploy`, `vercel link`, `vercel inspect`, etc.):
 
@@ -43,15 +43,15 @@ Pass the team slug via `--scope` on all subsequent CLI commands (`vercel deploy`
 vercel deploy [path] -y --no-wait --scope <team-slug>
 ```
 
-If the project is already linked (`.vercel/project.json` or `.vercel/repo.json` exists), the `orgId` in those files determines the team - no need to ask again. If there is only one team (or just a personal account), skip the prompt and use it directly.
+If the project is already linked (`.vercel/project.json` or `.vercel/repo.json` exists), the `orgId` in those files determines the team — no need to ask again. If there is only one team (or just a personal account), skip the prompt and use it directly.
 
 **About the `.vercel/` directory:** A linked project has either:
-- `.vercel/project.json` - created by `vercel link` (single project linking). Contains `projectId` and `orgId`.
-- `.vercel/repo.json` - created by `vercel link --repo` (repo-based linking). Contains `orgId`, `remoteName`, and a `projects` array mapping directories to Vercel project IDs.
+- `.vercel/project.json` — created by `vercel link` (single project linking). Contains `projectId` and `orgId`.
+- `.vercel/repo.json` — created by `vercel link --repo` (repo-based linking). Contains `orgId`, `remoteName`, and a `projects` array mapping directories to Vercel project IDs.
 
 Either file means the project is linked. Check for both.
 
-**Do NOT** use `vercel project inspect`, `vercel ls`, or `vercel link` to detect state in an unlinked directory - without a `.vercel/` config, they will interactively prompt (or with `--yes`, silently link as a side-effect). Only `vercel whoami` is safe to run anywhere.
+**Do NOT** use `vercel project inspect`, `vercel ls`, or `vercel link` to detect state in an unlinked directory — without a `.vercel/` config, they will interactively prompt (or with `--yes`, silently link as a side-effect). Only `vercel whoami` is safe to run anywhere.
 
 ## Step 2: Choose a Deploy Method
 
@@ -78,7 +78,7 @@ This is the ideal state. The project is linked and has git integration.
    sleep 5
    vercel ls --format json
    ```
-   The JSON output has a `deployments` array. Find the latest entry - its `url` field is the preview URL.
+   The JSON output has a `deployments` array. Find the latest entry — its `url` field is the preview URL.
 
    If the CLI is not authenticated, tell the user to check the Vercel dashboard or the commit status checks on their git provider for the preview URL.
 
@@ -150,7 +150,7 @@ The Vercel CLI isn't set up at all.
    ```
    The user completes auth in their browser. If running in a non-interactive environment where login is not possible, skip to the **no-auth fallback** below.
 
-3. **Ask which team to deploy to** - present team slugs from `vercel teams list --format json` as a bulleted list. If only one team / personal account, skip. Once selected, proceed immediately.
+3. **Ask which team to deploy to** — present team slugs from `vercel teams list --format json` as a bulleted list. If only one team / personal account, skip. Once selected, proceed immediately.
 
 4. **Link the project** with the selected team scope (use `--repo` if a git remote exists, plain `vercel link` otherwise):
    ```bash
@@ -162,12 +162,12 @@ The Vercel CLI isn't set up at all.
 
 ---
 
-### No-Auth Fallback - claude.ai sandbox
+### No-Auth Fallback — claude.ai sandbox
 
-**When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication - it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
+**When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
 
 ```bash
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
+bash resources/deploy.sh [path]
 ```
 
 **Arguments:**
@@ -176,13 +176,13 @@ bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
 **Examples:**
 ```bash
 # Deploy current directory
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh
+bash resources/deploy.sh
 
 # Deploy specific project
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project
+bash resources/deploy.sh /path/to/project
 
 # Deploy existing tarball
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project.tgz
+bash resources/deploy.sh /path/to/project.tgz
 ```
 
 The script auto-detects the framework from `package.json`, packages the project (excluding `node_modules`, `.git`, `.env`), uploads it, and waits for the build to complete.
@@ -191,9 +191,9 @@ The script auto-detects the framework from `package.json`, packages the project 
 
 ---
 
-### No-Auth Fallback - Codex sandbox
+### No-Auth Fallback — Codex sandbox
 
-**When to use:** In the Codex sandbox where the CLI may not be authenticated. Codex runs in a sandboxed environment by default - try the CLI first, and fall back to the deploy script if auth fails.
+**When to use:** In the Codex sandbox where the CLI may not be authenticated. Codex runs in a sandboxed environment by default — try the CLI first, and fall back to the deploy script if auth fails.
 
 1. **Check whether the Vercel CLI is installed** (no escalation needed for this check):
    ```bash
@@ -231,7 +231,7 @@ The script handles framework detection, packaging, and deployment. It waits for 
 
 ### Claude Code / terminal-based agents
 
-You have full shell access. Do NOT use the `/mnt/skills/` path. Follow the decision flow above using the CLI directly.
+You have full shell access. Do not assume a sandbox mount path for the bundled script; it ships beside this file under `resources/`. Follow the decision flow above using the CLI directly.
 
 For the no-auth fallback, run the deploy script from the skill's installed location:
 ```bash
@@ -242,11 +242,11 @@ The path may vary depending on where the user installed the skill.
 
 ### Sandboxed environments (claude.ai)
 
-You likely cannot run `vercel login` or `git push`. Go directly to the **no-auth fallback - claude.ai sandbox**.
+You likely cannot run `vercel login` or `git push`. Go directly to the **no-auth fallback — claude.ai sandbox**.
 
 ### Codex
 
-Codex runs in a sandbox. Check if the CLI is available first, then fall back to the deploy script. Go to the **no-auth fallback - Codex sandbox**.
+Codex runs in a sandbox. Check if the CLI is available first, then fall back to the deploy script. Go to the **no-auth fallback — Codex sandbox**.
 
 ---
 
@@ -287,12 +287,12 @@ Deployment failed due to network restrictions. To fix this:
 
 ### Escalated Network Access (Codex / sandboxed environments)
 
-If deployment fails due to network issues (timeouts, DNS errors, connection resets) in a sandboxed environment, rerun with escalated permissions (`sandbox_permissions=require_escalated`). Do not escalate the initial CLI availability check - only escalate the actual deploy command.
+If deployment fails due to network issues (timeouts, DNS errors, connection resets) in a sandboxed environment, rerun with escalated permissions (`sandbox_permissions=require_escalated`). Do not escalate the initial CLI availability check — only escalate the actual deploy command.
 
 Example guidance to the user:
 ```
 The deploy needs escalated network access to deploy to Vercel. I can rerun
-the command with escalated permissions - want me to proceed?
+the command with escalated permissions — want me to proceed?
 ```
 
 ### CLI Auth Failure

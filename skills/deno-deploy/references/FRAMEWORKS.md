@@ -19,7 +19,7 @@ Deno Deploy supports multiple frameworks. The CLI auto-detects your framework an
 
 When creating an app with `deno deploy create` in non-interactive mode, you can specify `--framework-preset` to auto-configure build commands and runtime settings. The available presets are: `Fresh`, `Next`, `Remix`, `Astro`, `SvelteKit`, `Nuxt`, `Lume`, `SolidStart`.
 
-When a preset is specified, you can omit `--install-command`, `--build-command`, `--pre-deploy-command`, and `--runtime-mode` - they are inferred from the preset.
+When a preset is specified, you can omit `--install-command`, `--build-command`, `--pre-deploy-command`, and `--runtime-mode` — they are inferred from the preset.
 
 If you don't specify a preset, the CLI still auto-detects your framework from the project files. Use `--do-not-use-detected-build-config` to skip auto-detection and specify everything manually.
 
@@ -50,7 +50,7 @@ When a Fresh app uses PostgreSQL (e.g., `await initDb()` at startup), you must p
 **Complete deployment sequence:**
 
 ```bash
-# 1. Create the app with --no-wait (warmup will fail without a database - that's expected)
+# 1. Create the app with --no-wait (warmup will fail without a database — that's expected)
 deno deploy create \
   --org <ORG_NAME> --app <APP_NAME> \
   --source local \
@@ -68,7 +68,7 @@ deno deploy database provision my-db --kind prisma --region us-east-1
 # 3. Assign it to the app (this injects DATABASE_URL, PGHOST, etc.)
 deno deploy database assign my-db --app <APP_NAME>
 
-# 4. Redeploy - now the database exists, so warmup succeeds
+# 4. Redeploy — now the database exists, so warmup succeeds
 deno deploy --prod
 ```
 
@@ -79,7 +79,7 @@ deno deploy --prod
 
 **Why `--do-not-use-detected-build-config`:**
 - The Fresh auto-detection and `--framework-preset fresh` can fail with an API error
-- Manual build config is more reliable - see [Troubleshooting](TROUBLESHOOTING.md#fresh-auto-detection--preset-fails)
+- Manual build config is more reliable — see [Troubleshooting](TROUBLESHOOTING.md#fresh-auto-detection--preset-fails)
 
 ## Astro
 

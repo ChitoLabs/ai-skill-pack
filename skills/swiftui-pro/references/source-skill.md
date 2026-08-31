@@ -13,15 +13,15 @@ Review Swift and SwiftUI code for correctness, modern API usage, and adherence t
 
 Review process:
 
-1. Check for deprecated API using `references/api.md`.
-1. Check that views, modifiers, and animations have been written optimally using `references/views.md`.
-1. Validate that data flow is configured correctly using `references/data.md`.
-1. Ensure navigation is updated and performant using `references/navigation.md`.
-1. Ensure the code uses designs that are accessible and compliant with Apple’s Human Interface Guidelines using `references/design.md`.
-1. Validate accessibility compliance including Dynamic Type, VoiceOver, and Reduce Motion using `references/accessibility.md`.
-1. Ensure the code is able to run efficiently using `references/performance.md`.
-1. Quick validation of Swift code using `references/swift.md`.
-1. Final code hygiene check using `references/hygiene.md`.
+1. Check for deprecated API using `api.md`.
+1. Check that views, modifiers, and animations have been written optimally using `views.md`.
+1. Validate that data flow is configured correctly using `data.md`.
+1. Ensure navigation is updated and performant using `navigation.md`.
+1. Ensure the code uses designs that are accessible and compliant with Apple’s Human Interface Guidelines using `design.md`.
+1. Validate accessibility compliance including Dynamic Type, VoiceOver, and Reduce Motion using `accessibility.md`.
+1. Ensure the code is able to run efficiently using `performance.md`.
+1. Quick validation of Swift code using `swift.md`.
+1. Final code hygiene check using `hygiene.md`.
 
 If doing a partial review, load only the relevant reference files.
 
@@ -99,12 +99,12 @@ End of example.
 
 ## References
 
-- `references/accessibility.md` - Dynamic Type, VoiceOver, Reduce Motion, and other accessibility requirements.
-- `references/api.md` - updating code for modern API, and the deprecated code it replaces.
-- `references/design.md` - guidance for building accessible apps that meet Apple’s Human Interface Guidelines.
-- `references/hygiene.md` - making code compile cleanly and be maintainable in the long term.
-- `references/navigation.md` - navigation using `NavigationStack`/`NavigationSplitView`, plus alerts, confirmation dialogs, and sheets.
-- `references/performance.md` - optimizing SwiftUI code for maximum performance.
-- `references/data.md` - data flow, shared state, and property wrappers.
-- `references/swift.md` - tips on writing modern Swift code, including using Swift Concurrency effectively.
-- `references/views.md` - view structure, composition, and animation.
+- `accessibility.md` - Dynamic Type, VoiceOver, Reduce Motion, and other accessibility requirements.
+- `api.md` - updating code for modern API, and the deprecated code it replaces.
+- `design.md` - guidance for building accessible apps that meet Apple’s Human Interface Guidelines.
+- `hygiene.md` - making code compile cleanly and be maintainable in the long term.
+- `navigation.md` - navigation using `NavigationStack`/`NavigationSplitView`, plus alerts, confirmation dialogs, and sheets.
+- `performance.md` - optimizing SwiftUI code for maximum performance.
+- `data.md` - data flow, shared state, and property wrappers.
+- `swift.md` - tips on writing modern Swift code, including using Swift Concurrency effectively.
+- `views.md` - view structure, composition, and animation.

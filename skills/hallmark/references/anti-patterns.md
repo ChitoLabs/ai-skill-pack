@@ -416,3 +416,4 @@ Then:
 Summary  -  N critical * M major * K minor
 Verdict  -  [ships as slop | reads as AI-generated | close, fix the minors]
 ```
+

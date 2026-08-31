@@ -160,7 +160,7 @@ function generateTableOfContents(rulesByCategory: Map<string, Rule[]>): string {
 
     // Section anchor format: #1-architecture
     const sectionAnchor = `${cat.section}-${cat.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-    toc += `${cat.section}. [${cat.name}](#${sectionAnchor}) - **${cat.impact}**\n`;
+    toc += `${cat.section}. [${cat.name}](#${sectionAnchor}) — **${cat.impact}**\n`;
 
     for (let i = 0; i < rules.length; i++) {
       const rule = rules[i];
@@ -231,7 +231,7 @@ ${metadata.abstract}
 
       // Add rule header with number (anchor will be auto-generated as #11-title)
       doc += `### ${ruleNumber} ${rule.frontmatter.title}\n\n`;
-      doc += `**Impact: ${rule.frontmatter.impact}** - ${rule.frontmatter.impactDescription}\n\n`;
+      doc += `**Impact: ${rule.frontmatter.impact}** — ${rule.frontmatter.impactDescription}\n\n`;
 
       // Add rule content (skip the first header since we already added it)
       let ruleContent = rule.content;

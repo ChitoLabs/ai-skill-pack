@@ -176,6 +176,6 @@ On a 429 response, check **all** retry-after headers present in the response. Mu
 | Parameter | Default | Maximum |
 |-----------|---------|---------|
 | Page size | 1,000 rows | 5,000 rows |
-| Pagination | Use `nextLink` from response to fetch subsequent pages. | - |
+| Pagination | Use `nextLink` from response to fetch subsequent pages. | — |
 
 > 💡 **Tip:** For large result sets, always check the `nextLink` field in the response. If present, make additional requests to retrieve all pages.

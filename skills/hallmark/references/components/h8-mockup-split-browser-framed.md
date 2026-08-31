@@ -22,3 +22,4 @@ Headline left, real product screenshot right, the capture tilted 1-3° for life.
 ```
 
 Do not draw URL pills, traffic-light dots, toolbars, or window controls in HTML, CSS, or SVG.
+

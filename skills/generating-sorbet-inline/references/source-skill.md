@@ -3,10 +3,10 @@ name: generating-sorbet-inline
 description: Generates or updates Sorbet inline type signatures directly in Ruby source files using sig blocks. Triggers when creating, updating, or maintaining inline type signatures for Ruby source files.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: DmitryPogrebnoy
   version: 0.1
   skills_sh_url: "https://skills.sh/DmitryPogrebnoy/ruby-agent-skills/generating-sorbet-inline"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/generating-sorbet-inline"
+  github_url: "https://github.com/DmitryPogrebnoy/ruby-agent-skills/tree/HEAD/plugins/ruby-type-signature-skills/skills/generating-sorbet-inline"
 ---
 
 # Sorbet Inline Generation Skill

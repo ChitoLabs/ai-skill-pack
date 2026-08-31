@@ -4,7 +4,7 @@ Reference material for Azure Capacity Reservation Groups and Capacity Reservatio
 
 ## What Is a Capacity Reservation Group?
 
-A Capacity Reservation Group (CRG) is a logical container for one or more capacity reservations. It acts as the association point for VMs and VMSS - you associate a VM or scale set with the **group**, and Azure matches the VM to a suitable reservation within that group.
+A Capacity Reservation Group (CRG) is a logical container for one or more capacity reservations. It acts as the association point for VMs and VMSS — you associate a VM or scale set with the **group**, and Azure matches the VM to a suitable reservation within that group.
 
 ## Constraints
 
@@ -61,7 +61,7 @@ az graph query -q "
 " --query "data[]" -o table
 ```
 
-The `crgId` in the output is the parent Capacity Reservation Group resource ID - this is the value to use when associating a VM or VMSS.
+The `crgId` in the output is the parent Capacity Reservation Group resource ID — this is the value to use when associating a VM or VMSS.
 
 To further narrow results for zonal VMs, add a zone filter:
 

@@ -150,4 +150,4 @@ custom_styles: []
 
 ## Modifying Preferences Later
 
-See the `## Changing Preferences` section in `SKILL.md` for the canonical list of common edits (pin backend, change layout/style defaults, retrigger setup). Full schema: `references/config/preferences-schema.md`.
+See the `## Changing Preferences` section in `SKILL.md` for the canonical list of common edits (pin backend, change layout/style defaults, retrigger setup). Full schema: `preferences-schema.md`.

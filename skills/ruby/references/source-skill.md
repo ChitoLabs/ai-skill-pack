@@ -1,19 +1,19 @@
 ---
 name: ruby
-description: Use when writing, reviewing, or debugging pure Ruby code - idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
+description: Use when writing, reviewing, or debugging pure Ruby code — idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects), memoization, and performance idioms. For Rails use rails-guides. For testing use minitest. For code style use sandi-metz-rules.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: lucianghinda
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/ruby"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/ruby"
+  github_url: "https://github.com/lucianghinda/superpowers-ruby/tree/HEAD/skills/ruby"
 ---
 
 # Ruby Language Skill
 
 ## Overview
 
-Opinionated Ruby conventions and idioms for writing idiomatic Ruby 3.x+ code. Focuses on patterns agents miss by default - the Weirich raise/fail distinction, safe nil-aware memoization, result objects over exceptions for expected failures, and performance-conscious enumeration.
+Opinionated Ruby conventions and idioms for writing idiomatic Ruby 3.x+ code. Focuses on patterns agents miss by default — the Weirich raise/fail distinction, safe nil-aware memoization, result objects over exceptions for expected failures, and performance-conscious enumeration.
 
 ## Error Handling Conventions
 
@@ -80,7 +80,7 @@ end
 user = fetch_user(999) { |_| User.new(name: "Guest") }
 ```
 
-See `references/error_handling.md` for full patterns and retry strategies.
+See `error_handling.md` for full patterns and retry strategies.
 
 ## Modern Ruby (3.x+)
 
@@ -133,7 +133,7 @@ users.filter_map { |u| u.email if u.active? }
 %w[a b a c b a].tally  # => {"a"=>3, "b"=>2, "c"=>1}
 ```
 
-See `references/modern_ruby.md` for ractors, fiber scheduler, RBS types, and advanced pattern matching.
+See `modern_ruby.md` for ractors, fiber scheduler, RBS types, and advanced pattern matching.
 
 ## Performance Quick Wins
 
@@ -183,7 +183,7 @@ result = String.new; items.each { |i| result << i.to_s }
 items.map(&:to_s).join
 ```
 
-See `references/performance.md` for YJIT, GC tuning, benchmarking, and profiling tools.
+See `performance.md` for YJIT, GC tuning, benchmarking, and profiling tools.
 
 ## Ruby Idioms to Prefer
 
@@ -230,14 +230,14 @@ user&.profile&.avatar_url  # returns nil if any link is nil
 |---------|-----|
 | `raise` for new exceptions | Use `fail`; reserve `raise` for re-raising (Weirich convention) |
 | `@var \|\|= compute` when result can be `nil`/`false` | Use `defined?(@var)` check instead |
-| String concatenation with `+=` in loops | Use `<<` or `.join` - `+=` is O(n²) |
-| `rescue Exception` | Rescue `StandardError` - `Exception` catches `SignalException`, `NoMemoryError` |
+| String concatenation with `+=` in loops | Use `<<` or `.join` — `+=` is O(n²) |
+| `rescue Exception` | Rescue `StandardError` — `Exception` catches `SignalException`, `NoMemoryError` |
 | Deep `&.` chains (3+ links) | Extract to a method or use explicit nil check |
 | Missing `# frozen_string_literal: true` | Add to top of every file |
 
 ## References
 
-- `references/modern_ruby.md` - Pattern matching, ractors, fiber scheduler, RBS types
-- `references/error_handling.md` - Exception hierarchies, result objects, retry patterns
-- `references/performance.md` - YJIT, GC tuning, benchmarking, profiling
-- `references/ood-philosophy.md` - OOD principles, naming, SOLID, TRUE heuristic, Law of Demeter
+- `modern_ruby.md` - Pattern matching, ractors, fiber scheduler, RBS types
+- `error_handling.md` - Exception hierarchies, result objects, retry patterns
+- `performance.md` - YJIT, GC tuning, benchmarking, profiling
+- `ood-philosophy.md` - OOD principles, naming, SOLID, TRUE heuristic, Law of Demeter

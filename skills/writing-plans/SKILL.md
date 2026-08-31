@@ -20,6 +20,10 @@ Read `references/source-skill.md` before drafting. Use `references/plan-document
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Never create a second source of truth beside canonical proposal, specification, design, or task artifacts.
 - Repository policy owns the output path, format, approval, implementation phases, and delivery workflow.
 - Do not impose task duration, commit strategy, delegation, or automatic handoffs.
@@ -29,6 +33,7 @@ Read `references/source-skill.md` before drafting. Use `references/plan-document
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Managed task plan owns the work | Do not create another plan; provide the requested summary or gap analysis. |
 | Canonical inputs conflict | Report the conflict and stop. |
 | Output location is not approved | Return a preview only. |

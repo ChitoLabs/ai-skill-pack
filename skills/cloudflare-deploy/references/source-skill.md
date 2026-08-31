@@ -20,7 +20,7 @@ Verify auth before `wrangler deploy`, `wrangler pages deploy`, or `npm run deplo
 npx wrangler whoami    # Shows account if authenticated
 ```
 
-Not authenticated? → `references/wrangler/auth.md`
+Not authenticated? → `wrangler/auth.md`
 - Interactive/local: `wrangler login` (one-time OAuth)
 - CI/CD: Set `CLOUDFLARE_API_TOKEN` env var
 
@@ -220,5 +220,5 @@ If deployment fails due to network issues (timeouts, DNS errors, connection rese
 Example guidance to the user:
 
 ```
-The deploy needs escalated network access to deploy to Cloudflare. I can rerun the command with escalated permissions-want me to proceed?
+The deploy needs escalated network access to deploy to Cloudflare. I can rerun the command with escalated permissions—want me to proceed?
 ```

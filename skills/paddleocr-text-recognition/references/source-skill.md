@@ -3,10 +3,10 @@ name: paddleocr-text-recognition
 description: "Use this skill whenever the user wants text extracted from images, photos, scans, screenshots, or scanned PDFs. Returns exact machine-readable strings with line-level text and optional bbox coordinates. Strong accuracy for CJK, small print, and handwritten text. Trigger terms: OCR, \u6587\u5b57\u8bc6\u522b, \u56fe\u7247\u8f6c\u6587\u5b57, \u622a\u56fe\u8bc6\u5b57, \u63d0\u53d6\u56fe\u4e2d\u6587\u5b57, \u626b\u63cf\u8bc6\u5b57, \u8bc6\u5b57, \u7eaf\u6587\u5b57, plain text extraction, \u5750\u6807, \u68c0\u6d4b\u6846, bbox, bounding box, image to text, screenshot, photo scan, recognize text."
 license: Apache-2.0
 metadata:
-  author: paddlepaddle
+  author: aidenwu0209
   version: 0.1
   skills_sh_url: "https://www.skills.sh/aidenwu0209/paddleocr-skills/paddleocr-text-recognition"
-  github_url: "https://github.com/paddlepaddle/paddleocr/tree/HEAD/skills/paddleocr-text-recognition"
+  github_url: "https://github.com/aidenwu0209/paddleocr-skills/tree/HEAD/skills/paddleocr-text-recognition"
 compatibility: Requires Python 3.9+, uv, and internet access.
 ---
 
@@ -14,7 +14,7 @@ compatibility: Requires Python 3.9+, uv, and internet access.
 
 ## When to Use This Skill
 
-**Trigger keywords (routing)**: Bilingual trigger terms (Chinese and English) are listed in the YAML `description` above-use that field for discovery and routing.
+**Trigger keywords (routing)**: Bilingual trigger terms (Chinese and English) are listed in the YAML `description` above—use that field for discovery and routing.
 
 **Use this skill for**:
 
@@ -25,12 +25,12 @@ compatibility: Requires Python 3.9+, uv, and internet access.
 **Do not use for**:
 
 - Plain text files, code files, or markdown documents that can be read directly as text
-- Documents with tables, formulas, charts, or complex layouts - use Document Parsing instead
+- Documents with tables, formulas, charts, or complex layouts — use Document Parsing instead
 - Tasks that do not involve image-to-text conversion
 
 ## Installation
 
-Scripts declare their dependencies inline ([PEP 723](https://peps.python.org/pep-0723/)). No separate install step is needed - [uv](https://docs.astral.sh/uv/) resolves dependencies automatically:
+Scripts declare their dependencies inline ([PEP 723](https://peps.python.org/pep-0723/)). No separate install step is needed — [uv](https://docs.astral.sh/uv/) resolves dependencies automatically:
 
 ```bash
 uv run scripts/ocr_caller.py --help
@@ -92,7 +92,7 @@ Common next steps once you have the recognized text:
 
 ### Complete Output Display
 
-Always display the COMPLETE recognized text to the user. The user typically needs the full content for downstream use - truncation silently loses data they may not notice is missing.
+Always display the COMPLETE recognized text to the user. The user typically needs the full content for downstream use — truncation silently loses data they may not notice is missing.
 
 - Display the entire `text` field, no matter how long
 - Do not use phrases like "Here's a summary" or "The text begins with..."
@@ -119,7 +119,7 @@ Agent: I found some text in the image. Here's a preview:
 
 The script returns a JSON envelope with `ok`, `text`, `result`, and `error` fields. Use `text` for the recognized content; `result` contains the raw API response for debugging.
 
-For the full schema and field-level details, see `references/output_schema.md`.
+For the full schema and field-level details, see `output_schema.md`.
 
 > Raw result location (default): the temp-file path printed by the script on stderr
 
@@ -174,28 +174,28 @@ uv run scripts/ocr_caller.py --file-url "https://example.com/input" --stdout --p
 1. **Show the exact error message** to the user.
 
 2. **Guide the user to obtain credentials**: Visit the [PaddleOCR website](https://www.paddleocr.com), click **API**, select the `PP-OCRv5` model, select the language, then copy the `API_URL` and `Token`. They map to these environment variables:
-   - `PADDLEOCR_OCR_API_URL` - full endpoint URL ending with `/ocr`
-   - `PADDLEOCR_ACCESS_TOKEN` - 40-character alphanumeric string
+   - `PADDLEOCR_OCR_API_URL` — full endpoint URL ending with `/ocr`
+   - `PADDLEOCR_ACCESS_TOKEN` — 40-character alphanumeric string
 
    Optionally configure `PADDLEOCR_OCR_TIMEOUT` for request timeout. Recommend using the host application's standard configuration method rather than pasting credentials in chat.
 
-3. **Apply credentials** - one of:
+3. **Apply credentials** — one of:
    - **User configured via the host UI**: ask the user to confirm, then retry.
    - **User pastes credentials in chat**: warn that they may be stored in conversation history, help the user persist them using the host's standard configuration method, then retry.
 
 ### Error Handling
 
-All errors return JSON with `ok: false`. Show the error message and stop - do not fall back to your own vision capabilities. Identify the issue from `error.code` and `error.message`:
+All errors return JSON with `ok: false`. Show the error message and stop — do not fall back to your own vision capabilities. Identify the issue from `error.code` and `error.message`:
 
-**Authentication failed (403)** - `error.message` contains "Authentication failed"
+**Authentication failed (403)** — `error.message` contains "Authentication failed"
 
 - Token is invalid, reconfigure with correct credentials
 
-**Quota exceeded (429)** - `error.message` contains "API rate limit exceeded"
+**Quota exceeded (429)** — `error.message` contains "API rate limit exceeded"
 
 - Daily API quota exhausted, inform user to wait or upgrade
 
-**Unsupported format** - `error.message` contains "Unsupported file format"
+**Unsupported format** — `error.message` contains "Unsupported file format"
 
 - File format not supported, convert to PDF/PNG/JPG
 
@@ -210,11 +210,11 @@ If recognition quality is poor:
 
 - **Low resolution**: Provide a higher resolution image (≥300 DPI works well for most printed text)
 - **Noisy background**: A cleaner scan or screenshot typically yields better results than a phone photo
-- **Check confidence**: The raw JSON (`result.result.ocrResults[n].prunedResult.rec_scores`) shows per-line confidence scores - low values identify uncertain regions worth reviewing
+- **Check confidence**: The raw JSON (`result.result.ocrResults[n].prunedResult.rec_scores`) shows per-line confidence scores — low values identify uncertain regions worth reviewing
 
 ## Reference Documentation
 
-- `references/output_schema.md` - Full output schema, field descriptions, and command examples
+- `output_schema.md` — Full output schema, field descriptions, and command examples
 
 > **Note**: Model version, capabilities, and supported file formats are determined by your API endpoint (`PADDLEOCR_OCR_API_URL`) and its official API documentation.
 

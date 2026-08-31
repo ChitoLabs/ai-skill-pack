@@ -1,6 +1,6 @@
 ---
 name: fabric-cli-powerbi
-description: Use Fabric CLI for Power BI operations - semantic models, reports, DAX queries, refresh, gateways. Activate when users work with Power BI items, need to refresh datasets, execute DAX, manage reports, or troubleshoot refresh failures.
+description: Use Fabric CLI for Power BI operations — semantic models, reports, DAX queries, refresh, gateways. Activate when users work with Power BI items, need to refresh datasets, execute DAX, manage reports, or troubleshoot refresh failures.
 license: Apache-2.0
 metadata:
   author: microsoft
@@ -17,8 +17,8 @@ Expert guidance for working with Power BI items (semantic models, reports, dashb
 
 Activate automatically when tasks involve:
 
-- Semantic model (dataset) operations - get, export, refresh, update
-- Report management - export, clone, rebind to different model
+- Semantic model (dataset) operations — get, export, refresh, update
+- Report management — export, clone, rebind to different model
 - Executing DAX queries against semantic models
 - Managing refresh schedules and troubleshooting failures
 - Gateway and data source configuration
@@ -369,17 +369,17 @@ fab api -A powerbi "groups/$WS_ID/datasets/$MODEL_ID/refreshes?\$top=5"
 ## 9 - Safety Guidelines
 
 - **Always verify workspace context** before refresh operations
-- **Test in dev first** - never refresh production without testing
-- **Monitor refresh duration** - set appropriate timeouts
-- **Backup before major changes** - export definition before updates
+- **Test in dev first** — never refresh production without testing
+- **Monitor refresh duration** — set appropriate timeouts
+- **Backup before major changes** — export definition before updates
 - **Use enhanced refresh** for large models to avoid timeouts
 
 ## 10 - References
 
 For detailed patterns, see:
 
-- [references/semantic-models.md](./semantic-models.md) - Full TMDL operations
-- [references/reports.md](./reports.md) - Report management
-- [references/refresh.md](./refresh.md) - Refresh troubleshooting
-- [references/dax-queries.md](./dax-queries.md) - Advanced DAX patterns
-- [references/gateways.md](./gateways.md) - Gateway configuration
+- [references/semantic-models.md](./semantic-models.md) — Full TMDL operations
+- [references/reports.md](./reports.md) — Report management
+- [references/refresh.md](./refresh.md) — Refresh troubleshooting
+- [references/dax-queries.md](./dax-queries.md) — Advanced DAX patterns
+- [references/gateways.md](./gateways.md) — Gateway configuration

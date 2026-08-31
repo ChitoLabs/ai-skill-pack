@@ -87,3 +87,4 @@ Three discipline points:
 8. Forgetting the boolean-flip guard  -  toggling the class on every scroll event causes layout thrash.
 
 The pattern works because it's restrained  -  one orchestrated morph, no embellishment. Pour the polish into the timing curve, the shadow stack, and the height-constant math; not into "more."
+

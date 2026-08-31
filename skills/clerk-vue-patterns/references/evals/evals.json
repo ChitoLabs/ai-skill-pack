@@ -37,7 +37,7 @@
         "Calls useAuth inside the store setup function",
         "Exposes isSignedIn (or renamed isAuthenticated) from useAuth",
         "Exposes userId from useAuth",
-        "Does NOT duplicate auth state - wraps useAuth reactivity rather than copying it"
+        "Does NOT duplicate auth state — wraps useAuth reactivity rather than copying it"
       ]
     }
   ]

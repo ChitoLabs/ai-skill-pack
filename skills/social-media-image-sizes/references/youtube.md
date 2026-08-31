@@ -4,7 +4,7 @@ platform: YouTube
 tags: youtube, social-media, video-sizes, thumbnail, banner, shorts, ads
 ---
 
-# YouTube Image & Video Sizes - 2025
+# YouTube Image & Video Sizes — 2025
 
 ## Channel Art
 
@@ -24,7 +24,7 @@ tags: youtube, social-media, video-sizes, thumbnail, banner, shorts, ads
 | Custom Thumbnail | 1280 × 720 | 16:9 | Min 640×360. Max 2 MB |
 | Shorts | 1080 × 1920 | 9:16 | Up to 60 seconds |
 
-> **Thumbnail:** Use **1280×720** JPG or PNG. Thumbnails are one of the biggest factors in click-through rate - use high contrast and readable text at small sizes.
+> **Thumbnail:** Use **1280×720** JPG or PNG. Thumbnails are one of the biggest factors in click-through rate — use high contrast and readable text at small sizes.
 
 ## Community & Ads
 
@@ -39,5 +39,5 @@ tags: youtube, social-media, video-sizes, thumbnail, banner, shorts, ads
 - **Video formats:** MP4 (recommended), MOV, AVI, WMV, FLV, WebM
 - **Codec:** H.264
 - **Max file size:** 256 GB or 12 hours
-- **Thumbnail formats:** JPG, PNG, GIF, BMP - max 2 MB
+- **Thumbnail formats:** JPG, PNG, GIF, BMP — max 2 MB
 - **Frame rate:** 24, 25, 30, 48, 50, or 60 fps

@@ -65,10 +65,10 @@ function Input({ ref, ...props }: Props & { ref?: React.Ref<TextInput> }) {
 
 ## Other React 19 Features
 
-- **Actions** - Functions that handle async transitions
-- **useOptimistic** - Optimistic UI updates
-- **useFormStatus** - Form submission state (web)
-- **Document Metadata** - Native `<title>` and `<meta>` support (web)
+- **Actions** — Functions that handle async transitions
+- **useOptimistic** — Optimistic UI updates
+- **useFormStatus** — Form submission state (web)
+- **Document Metadata** — Native `<title>` and `<meta>` support (web)
 
 ## Cleanup Checklist
 

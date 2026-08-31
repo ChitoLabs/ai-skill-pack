@@ -1,6 +1,6 @@
 # AKS Troubleshooting Guide
 
-Primary AKS troubleshooting guide for incidents routed from [../../SKILL.md](../../../SKILL.md).
+Primary AKS troubleshooting guide for incidents routed from [the skill body](../../../SKILL.md).
 
 ## When to Use This Guide
 
@@ -49,7 +49,7 @@ If cluster identity is missing, stop and ask for it.
 1. Azure-side state first: cluster state, resource health, recent operations, node pool state, detector or monitoring output.
 2. Kubernetes-side state second: cluster reachability, nodes, `kube-system`, events, affected namespace, pod detail, logs.
 3. Use detector, warning-event, or metrics modes when the incoming data already matches them.
-4. Deep diagnostics; when steps 1-3 do not reveal root cause, use [inspektor-gadget.md](references/inspektor-gadget.md) for real-time tracing and snapshots on the affected node.
+4. Deep diagnostics; when steps 1–3 do not reveal root cause, use [inspektor-gadget.md](references/inspektor-gadget.md) for real-time tracing and snapshots on the affected node.
 
 ## Workflow
 

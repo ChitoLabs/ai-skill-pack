@@ -13,7 +13,7 @@ Before starting it:
 
 ## Start
 
-Use the available shell capability to run `scripts/start-server.sh` in its default foreground mode. With an approved project directory, session data may persist there; otherwise the script creates an isolated temporary session.
+Use the available shell capability to run `../scripts/start-server.sh` in its default foreground mode. With an approved project directory, session data may persist there; otherwise the script creates an isolated temporary session.
 
 Background mode is exceptional and requires both `--background` and `--consent-background` in the invocation. Use it only when the user explicitly consents and the runtime can retain the returned run identity for safe shutdown. Do not modify ignore files or create persistent project data without approval.
 

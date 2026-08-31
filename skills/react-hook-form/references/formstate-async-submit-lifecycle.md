@@ -50,11 +50,11 @@ function CreatePostForm() {
         setError('root.serverError', { type: 'server', message: 'Save failed' })
       }
     } catch {
-      setError('root.serverError', { type: 'network', message: 'Network error - please retry' })
+      setError('root.serverError', { type: 'network', message: 'Network error — please retry' })
     }
   }
 
-  // Reset after a successful submit completes - runs once per success transition
+  // Reset after a successful submit completes — runs once per success transition
   useEffect(() => {
     if (isSubmitSuccessful) reset()
   }, [isSubmitSuccessful, reset])
@@ -76,4 +76,4 @@ function CreatePostForm() {
 - Calling `reset()` inside the submit handler races with React's commit of `isSubmitSuccessful`; the `useEffect` form is the documented pattern
 - If you want to preserve specific fields across reset, pass them: `reset(undefined, { keepDirtyValues: true })` or `reset({ defaultValue: lastSaved })`
 
-Reference: [formState](https://react-hook-form.com/docs/useform/formstate) · [reset](https://react-hook-form.com/docs/useform/reset) · [Discussion #10103 - isSubmitting does not recover when submit handler throws](https://github.com/orgs/react-hook-form/discussions/10103)
+Reference: [formState](https://react-hook-form.com/docs/useform/formstate) · [reset](https://react-hook-form.com/docs/useform/reset) · [Discussion #10103 — isSubmitting does not recover when submit handler throws](https://github.com/orgs/react-hook-form/discussions/10103)

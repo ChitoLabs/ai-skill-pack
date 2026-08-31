@@ -1,6 +1,6 @@
 # Continuous Evaluation
 
-Enable, configure, disable, or remove continuous evaluation for a Foundry agent. Continuous evaluation automatically assesses agent responses on an ongoing basis using configured evaluators (e.g., groundedness, coherence, violence detection). This is typically the final step in the [observe loop](../observe.md) after deploying and batch-evaluating an agent - it keeps production quality visible without manual intervention.
+Enable, configure, disable, or remove continuous evaluation for a Foundry agent. Continuous evaluation automatically assesses agent responses on an ongoing basis using configured evaluators (e.g., groundedness, coherence, violence detection). This is typically the final step in the [observe loop](../observe.md) after deploying and batch-evaluating an agent — it keeps production quality visible without manual intervention.
 
 ## When to Use This Skill
 
@@ -30,7 +30,7 @@ DO NOT USE FOR: running a one-off batch evaluation (use [observe](../observe.md)
 
 > ⚠️ **Important:** Always run [Before Starting](#before-starting--detect-current-state) to resolve the project endpoint and agent name before calling any MCP tools.
 
-## Before Starting - Detect Current State
+## Before Starting — Detect Current State
 
 1. Resolve the target agent root and environment from `.foundry/agent-metadata.yaml` using the [Project Context Resolution](../../../source-skill.md#agent-project-context-resolution) workflow.
 2. Extract `projectEndpoint` and `agentName` from the selected environment. If not available in metadata, use `ask_user` to collect them.
@@ -42,10 +42,10 @@ DO NOT USE FOR: running a one-off batch evaluation (use [observe](../observe.md)
 
 The tool auto-detects the agent's kind and uses the appropriate backend:
 
-- **Prompt agents** - evaluation runs are triggered automatically each time the agent produces a response. Parameters: `samplingRate` (percentage of responses to evaluate), `maxHourlyRuns`.
-- **Hosted agents** - evaluation runs are triggered on an hourly schedule, pulling recent traces from App Insights. Parameters: `intervalHours` (hours between runs), `maxTraces` (max data points per run).
+- **Prompt agents** — evaluation runs are triggered automatically each time the agent produces a response. Parameters: `samplingRate` (percentage of responses to evaluate), `maxHourlyRuns`.
+- **Hosted agents** — evaluation runs are triggered on an hourly schedule, pulling recent traces from App Insights. Parameters: `intervalHours` (hours between runs), `maxTraces` (max data points per run).
 
-The user does not need to choose between these - the tool handles it based on agent kind.
+The user does not need to choose between these — the tool handles it based on agent kind.
 
 ## Behavioral Rules
 
@@ -54,10 +54,10 @@ The user does not need to choose between these - the tool handles it based on ag
 3. **Confirm evaluator selection.** Present the evaluator list to the user before enabling. Distinguish quality evaluators (require `deploymentName`) from safety evaluators (do not).
 4. **Prompt for next steps.** After each operation, present options. Never assume the path forward (e.g., after enabling, offer to check status or adjust parameters).
 5. **Keep context visible.** Include the project endpoint, agent name, and environment in operation summaries.
-6. **Use `continuous_eval_get` for IDs.** The `delete` tool requires a `configId` - always retrieve it from the `get` response rather than asking the user to provide it.
+6. **Use `continuous_eval_get` for IDs.** The `delete` tool requires a `configId` — always retrieve it from the `get` response rather than asking the user to provide it.
 7. **Surface the remediation path.** When presenting continuous eval results that show score degradation, always offer to route into the [observe skill](../observe.md) for diagnosis and optimization. Monitoring without action is incomplete.
 8. **Handle agent-not-found.** If `agent_get` returns a not-found error, stop the continuous eval flow. Offer to route to the [deploy skill](../../deploy/deploy.md) to create the agent first, or ask the user to verify the agent name and environment.
-9. **Handle auth and endpoint errors.** If `agent_get` or `continuous_eval_create` returns a permission or authentication error, verify the project endpoint, environment, and user access. Do not suggest creating the agent - the issue is access, not existence.
+9. **Handle auth and endpoint errors.** If `agent_get` or `continuous_eval_create` returns a permission or authentication error, verify the project endpoint, environment, and user access. Do not suggest creating the agent — the issue is access, not existence.
 10. **Validate `deploymentName` before enabling.** Do not assume `gpt-4o` exists. If quality evaluators are selected, verify a chat-capable deployment is available in the project. If none exists, stop and explain that quality evaluators cannot be enabled until a compatible deployment is provisioned.
 11. **Handle invalid evaluator names.** If `continuous_eval_create` returns an invalid evaluator name error, call `evaluator_catalog_get` to list available evaluators and present valid options. Do not retry with the same arguments.
 12. **Handle unexpected empty config.** If `continuous_eval_get` returns an empty list for an agent the user believes has continuous eval configured, verify the agent name and project endpoint match the intended environment in `.foundry/agent-metadata.yaml`. The configuration may exist under a different environment or resolved `agentName`.
@@ -82,16 +82,16 @@ Arguments:
 
 ### Enable or Update
 
-**Replace Semantics**: `continuous_eval_create` always creates a new evaluation group with the provided evaluators and points the evaluation rule at it. Always pass the complete desired configuration on every call - omitted evaluators are dropped, not preserved.
+**Replace Semantics**: `continuous_eval_create` always creates a new evaluation group with the provided evaluators and points the evaluation rule at it. Always pass the complete desired configuration on every call — omitted evaluators are dropped, not preserved.
 
-> ⚠️ **Do not assume `gpt-4o` exists.** Before setting `deploymentName`, verify a chat-capable deployment is available in the project. If none exists, quality evaluators cannot be enabled - only safety evaluators (which do not require a deployment) will work.
+> ⚠️ **Do not assume `gpt-4o` exists.** Before setting `deploymentName`, verify a chat-capable deployment is available in the project. If none exists, quality evaluators cannot be enabled — only safety evaluators (which do not require a deployment) will work.
 
 ```yaml
 Tool: continuous_eval_create
 Arguments:
   projectEndpoint: <project endpoint>
   agentName: <agent name>
-  evaluatorNames: ["groundedness", "coherence", "fluency"]  # Illustrative - align with your batch eval evaluators
+  evaluatorNames: ["groundedness", "coherence", "fluency"]  # Illustrative — align with your batch eval evaluators
   deploymentName: "gpt-4o"          # Required for quality evaluators
   enabled: true                      # Set false to disable without deleting
 ```
@@ -113,7 +113,7 @@ Arguments:
 
 ### Disable
 
-To temporarily disable without changing configuration, pass the configuration currently in use along with `enabled: false`. Because `continuous_eval_create` has replace semantics, omitting parameters will change the configuration when re-enabled. The `continuous_eval_get` response does not include evaluator names directly - they are stored in the linked evaluation group - so retrieve them via `evaluation_get` first. If multiple configurations are returned in the `continuous_eval_get` response, present the list to the user and ask which to target.
+To temporarily disable without changing configuration, pass the configuration currently in use along with `enabled: false`. Because `continuous_eval_create` has replace semantics, omitting parameters will change the configuration when re-enabled. The `continuous_eval_get` response does not include evaluator names directly — they are stored in the linked evaluation group — so retrieve them via `evaluation_get` first. If multiple configurations are returned in the `continuous_eval_get` response, present the list to the user and ask which to target.
 
 ```yaml
 # Step 1: Get the evalId, then retrieve current evaluators from the eval group
@@ -159,7 +159,7 @@ Always call `continuous_eval_get` first to retrieve the `id` field of the config
 
 ## Acting on Results
 
-Continuous evaluation generates ongoing scores - but monitoring is only useful when you **act** on what it reveals. This section covers how to consume evaluation results and the remediation loop when scores degrade.
+Continuous evaluation generates ongoing scores — but monitoring is only useful when you **act** on what it reveals. This section covers how to consume evaluation results and the remediation loop when scores degrade.
 
 ### Step 1: Read Evaluation Scores
 
@@ -183,9 +183,9 @@ Arguments:
 ```
 
 Review the run results for score trends. Each run contains scores for every configured evaluator. Look for:
-- **Scores below threshold** - any evaluator consistently scoring below your acceptable baseline
-- **Score degradation over time** - scores that were previously healthy but are trending downward
-- **Safety flags** - any non-zero safety evaluator scores that indicate harmful content
+- **Scores below threshold** — any evaluator consistently scoring below your acceptable baseline
+- **Score degradation over time** — scores that were previously healthy but are trending downward
+- **Safety flags** — any non-zero safety evaluator scores that indicate harmful content
 
 ### Step 2: Triage the Regression
 
@@ -209,7 +209,7 @@ Once you understand the failure pattern, use the [observe skill](../observe.md) 
 After deploying a fix through the observe loop:
 
 1. **Re-run a batch eval** via [observe](../observe.md) Step 2 against the same test cases to confirm the fix.
-2. **Read continuous eval scores** from the next evaluation cycle using `evaluation_get` with the `evalId` - verify scores have recovered.
+2. **Read continuous eval scores** from the next evaluation cycle using `evaluation_get` with the `evalId` — verify scores have recovered.
 3. **Adjust evaluators if needed.** If the regression exposed a gap in evaluator coverage, use `continuous_eval_create` to update the configuration with additional or refined evaluators.
 
 > 💡 **Tip:** The continuous eval → observe → deploy → continuous eval cycle is the core production quality loop. Continuous eval detects; observe diagnoses and fixes; continuous eval verifies.
@@ -239,6 +239,6 @@ All tools return a unified `ContinuousEvalConfig` shape. The `get` tool returns 
 | User Intent | Skill |
 |-------------|-------|
 | "Evaluate my agent" / "Run a batch eval" | [observe skill](../observe.md) |
-| "Scores are dropping" / "Diagnose and fix quality regression" | [observe skill](../observe.md) (Steps 3-5) |
+| "Scores are dropping" / "Diagnose and fix quality regression" | [observe skill](../observe.md) (Steps 3–5) |
 | "Analyze production traces" / "Find flagged conversations" | [trace skill](../../trace/trace.md) |
 | "Deploy my agent" / "Redeploy after fix" | [deploy skill](../../deploy/deploy.md) |

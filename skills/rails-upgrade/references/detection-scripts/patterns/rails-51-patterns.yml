@@ -41,7 +41,7 @@ upgrade_findings:
         - "app/controllers/"
         - "lib/"
       explanation: "Rails 5.1 removes all `*_filter` controller callbacks (deprecated in 4.x, still warning in 5.0). Use `*_action` variants"
-      fix: "Rename: before_filter → before_action, skip_before_filter → skip_before_action, etc. Mechanical rename - behavior is identical"
+      fix: "Rename: before_filter → before_action, skip_before_filter → skip_before_action, etc. Mechanical rename — behavior is identical"
       variable_name: "FILTER_METHODS"
 
     - name: "String conditions in controller filters"
@@ -61,8 +61,8 @@ upgrade_findings:
       search_paths:
         - "app/models/"
         - "app/controllers/"
-      explanation: "Rails 5.1 removes ActiveRecord::Relation#uniq (was deprecated in 5.0). Use #distinct. NOTE: pattern will false-positive on Array#uniq - the exclude filters common array cases but verify receivers are Relations"
-      fix: "Replace .uniq / .uniq! on ActiveRecord relations with .distinct. Plain Array#uniq is unaffected - keep those as-is"
+      explanation: "Rails 5.1 removes ActiveRecord::Relation#uniq (was deprecated in 5.0). Use #distinct. NOTE: pattern will false-positive on Array#uniq — the exclude filters common array cases but verify receivers are Relations"
+      fix: "Replace .uniq / .uniq! on ActiveRecord relations with .distinct. Plain Array#uniq is unaffected — keep those as-is"
       variable_name: "RELATION_UNIQ"
 
     - name: "use_transactional_fixtures removed"
@@ -148,7 +148,7 @@ dependencies:
   webpacker:
     check: false
     gem_name: "webpacker"
-    message: "New Rails 5.1 default for JavaScript bundling via Webpack + Yarn. Optional - adopt only if moving off Sprockets for JS"
+    message: "New Rails 5.1 default for JavaScript bundling via Webpack + Yarn. Optional — adopt only if moving off Sprockets for JS"
     url: "https://github.com/rails/webpacker"
 
   rails-controller-testing:

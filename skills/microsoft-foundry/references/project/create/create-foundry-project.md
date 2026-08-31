@@ -17,7 +17,7 @@ Create a new Azure AI Foundry project using azd. Provisions: Foundry account, pr
 
 Run checks in order. STOP on any failure and resolve before proceeding.
 
-**1. Azure CLI** - `az version` → expects version output. If missing: https://aka.ms/installazurecli
+**1. Azure CLI** — `az version` → expects version output. If missing: https://aka.ms/installazurecli
 
 **2. Azure login & subscription:**
 
@@ -25,7 +25,7 @@ Run checks in order. STOP on any failure and resolve before proceeding.
 az account show --query "{Name:name, SubscriptionId:id, State:state}" -o table
 ```
 
-If not logged in, run `az login`. If no active subscription: https://azure.microsoft.com/free/ - STOP.
+If not logged in, run `az login`. If no active subscription: https://azure.microsoft.com/free/ — STOP.
 
 If multiple subscriptions, ask which to use, then `az account set --subscription "<id>"`.
 
@@ -35,9 +35,9 @@ If multiple subscriptions, ask which to use, then `az account set --subscription
 az role assignment list --assignee "$(az ad signed-in-user show --query id -o tsv)" --query "[?contains(roleDefinitionName, 'Owner') || contains(roleDefinitionName, 'Contributor') || contains(roleDefinitionName, 'Azure AI')].{Role:roleDefinitionName, Scope:scope}" -o table
 ```
 
-Requires Owner, Contributor, or Azure AI Owner. If insufficient - STOP, request elevated access from admin.
+Requires Owner, Contributor, or Azure AI Owner. If insufficient — STOP, request elevated access from admin.
 
-**4. Azure Developer CLI** - `azd version`. If missing: https://aka.ms/azure-dev/install
+**4. Azure Developer CLI** — `azd version`. If missing: https://aka.ms/azure-dev/install
 
 ## Workflow
 
@@ -53,9 +53,9 @@ If not logged in, run `azd auth login` and complete browser auth.
 
 Use AskUserQuestion for:
 
-1. **Project name** - used as azd environment name and resource group (`rg-<name>`). Must contain only alphanumeric characters and hyphens. Examples: `my-ai-project`, `dev-agents`
-2. **Azure location** (optional) - defaults to North Central US (required for hosted agents preview)
-3. **Enable hosted agents?** (yes/no) - provisions a capability host and Container Registry for deploying hosted agents. Defaults to no.
+1. **Project name** — used as azd environment name and resource group (`rg-<name>`). Must contain only alphanumeric characters and hyphens. Examples: `my-ai-project`, `dev-agents`
+2. **Azure location** (optional) — defaults to North Central US (required for hosted agents preview)
+3. **Enable hosted agents?** (yes/no) — provisions a capability host and Container Registry for deploying hosted agents. Defaults to no.
 
 ### Step 3: Create Directory and Initialize
 
@@ -64,9 +64,9 @@ mkdir "<project-name>" && cd "<project-name>"
 azd init -t https://github.com/Azure-Samples/azd-ai-starter-basic -e <project-name> --no-prompt
 ```
 
-- `-t` - Azure AI starter template (Foundry infrastructure)
-- `-e` - environment name
-- `--no-prompt` - non-interactive, use defaults
+- `-t` — Azure AI starter template (Foundry infrastructure)
+- `-e` — environment name
+- `--no-prompt` — non-interactive, use defaults
 - **IMPORTANT:** `azd init` requires an empty directory
 
 If user specified a non-default location:
@@ -89,7 +89,7 @@ This provisions a capability host (`capabilityHosts/agents`) on the Foundry acco
 azd provision --no-prompt
 ```
 
-Takes 5-10 minutes. Creates resource group, Foundry account/project, Application Insights, managed identity, and RBAC roles. If hosted agents enabled, also creates Container Registry and capability host.
+Takes 5–10 minutes. Creates resource group, Foundry account/project, Application Insights, managed identity, and RBAC roles. If hosted agents enabled, also creates Container Registry and capability host.
 
 ### Step 5: Retrieve Project Details
 
@@ -108,9 +108,9 @@ Capture `AZURE_AI_PROJECT_ID`, `AZURE_AI_PROJECT_ENDPOINT`, and `AZURE_RESOURCE_
 ## Best Practices
 
 - Use North Central US for hosted agents (preview requirement)
-- Name must be alphanumeric + hyphens only - no spaces, underscores, or special characters
+- Name must be alphanumeric + hyphens only — no spaces, underscores, or special characters
 - Delete unused projects with `azd down` to avoid ongoing costs
-- `azd down` deletes ALL resources - Foundry account, agents, models, Container Registry, and Application Insights data
+- `azd down` deletes ALL resources — Foundry account, agents, models, Container Registry, and Application Insights data
 - `azd provision` is safe to re-run on failure
 
 ## Troubleshooting
@@ -126,8 +126,8 @@ Capture `AZURE_AI_PROJECT_ID`, `AZURE_AI_PROJECT_ENDPOINT`, and `AZURE_RESOURCE_
 
 ## Related Skills
 
-- **agent/deploy** - Deploy agents to the created project
-- **agent/create** - Create a new agent for deployment
+- **agent/deploy** — Deploy agents to the created project
+- **agent/create** — Create a new agent for deployment
 
 ## Resources
 

@@ -1,4 +1,4 @@
-# Cost Management Query API - Request Body Schema
+# Cost Management Query API — Request Body Schema
 
 Schema for the [Cost Management Query API](https://learn.microsoft.com/en-us/rest/api/cost-management/query/usage).
 

@@ -1,24 +1,20 @@
-# Audit Summary
+# Publication Audit Summary
 
-The repository publishes the authorized v3 skill and command collections.
+## Result
 
-## Current Verified State
+- Published entry points: 492
+- Entry points with valid source URLs: 482
+- Entry points without a supplied source URL: 10
+- Entry points with an author value: 492
+- Entries with `author: unknown`: 10
+- Publication source of truth: `skills/*/SKILL.md`
 
-| Check | Result |
-| --- | --- |
-| Skill source | Authorized v3 source pack |
-| Published skill folders | 466 |
-| Every published skill has `SKILL.md` | Yes |
-| Duplicate top-level skill names | 0 |
-| Command source | V3 command collection |
-| Published command files | 3 |
-| Commands targeting published skills | 3 |
-| Published skills with source links | 466 |
-| Unresolved upstream authors | 13 |
-| Unsafe publication junk copied | No |
+## Attribution Boundary
 
-## Publication Notes
+The audit preserves `metadata.author` exactly as supplied. It does not infer authorship from skills.sh publishers, distributors, curators, adapters, GitHub repository owners, or URLs. `metadata.adapter` is represented separately. Missing source URLs remain explicitly unsupplied rather than being invented.
 
-The published folders are a direct replacement from the v3 source roots. The publication excludes the compiled Python cache file, its empty cache directory, and the macOS metadata file identified in the source pack. Other functional dotfiles and metadata are preserved.
+Unknown authors: `bun`, `rails-background-jobs`, `rails-bug-triage`, `rails-code-review`, `rails-migration-safety`, `rails-security-review`, `rails-stack-conventions`, `rails-tdd-slices`, `rspec-best-practices`, `rspec-service-testing`.
 
-Attribution comes from each v3 skill's published metadata. LCubero is treated as the adapter, not as a default original author. When authorship is not established, the catalog records `unknown`.
+## Validation
+
+Run `node scripts/maintain-attribution.mjs` for a read-only consistency check. Use `--generate` only to rebuild derived publication artifacts from the current skill entry points.

@@ -1,4 +1,4 @@
-# Claude API - C#
+# Claude API — C#
 
 > **Note:** The C# SDK is the official Anthropic SDK for C#. Tool use is supported via the Messages API. A class-annotation-based tool runner is not available; use raw tool definitions with JSON schema. The SDK also supports Microsoft.Extensions.AI IChatClient integration with function invocation.
 
@@ -16,7 +16,7 @@ using Anthropic;
 // Default (uses ANTHROPIC_API_KEY env var)
 AnthropicClient client = new();
 
-// Explicit API key (use environment variables - never hardcode keys)
+// Explicit API key (use environment variables — never hardcode keys)
 AnthropicClient client = new() {
     ApiKey = Environment.GetEnvironmentVariable("ANTHROPIC_API_KEY")
 };
@@ -70,7 +70,7 @@ await foreach (RawMessageStreamEvent streamEvent in client.Messages.CreateStream
 }
 ```
 
-**`RawMessageStreamEvent` TryPick methods** (naming drops the `Message`/`Raw` prefix): `TryPickStart`, `TryPickDelta`, `TryPickStop`, `TryPickContentBlockStart`, `TryPickContentBlockDelta`, `TryPickContentBlockStop`. There is no `TryPickMessageStop` - use `TryPickStop`.
+**`RawMessageStreamEvent` TryPick methods** (naming drops the `Message`/`Raw` prefix): `TryPickStart`, `TryPickDelta`, `TryPickStop`, `TryPickContentBlockStart`, `TryPickContentBlockDelta`, `TryPickContentBlockStop`. There is no `TryPickMessageStop` — use `TryPickStop`.
 
 ---
 
@@ -85,7 +85,7 @@ var response = await client.Messages.Create(new MessageCreateParams
 {
     Model = Model.ClaudeOpus4_6,
     MaxTokens = 16000,
-    // ThinkingConfigParam? implicitly converts from the concrete variant classes -
+    // ThinkingConfigParam? implicitly converts from the concrete variant classes —
     // no wrapper needed.
     Thinking = new ThinkingConfigAdaptive(),
     Messages =
@@ -118,7 +118,7 @@ Alternative to `TryPick*`: `.Select(b => b.Value).OfType<ThinkingBlock>()` (same
 
 ### Defining a tool
 
-`Tool` (NOT `ToolParam`) with an `InputSchema` record. `InputSchema.Type` is auto-set to `"object"` by the constructor - don't set it. `ToolUnion` has an implicit conversion from `Tool`, triggered by the collection expression `[...]`.
+`Tool` (NOT `ToolParam`) with an `InputSchema` record. `InputSchema.Type` is auto-set to `"object"` by the constructor — don't set it. `ToolUnion` has an implicit conversion from `Tool`, triggered by the collection expression `[...]`.
 
 ```csharp
 using System.Text.Json;
@@ -150,14 +150,14 @@ Derived from `anthropic-sdk-csharp/src/Anthropic/Models/Messages/Tool.cs` and `T
 See [shared tool use concepts](../shared/tool-use-concepts.md) for the loop pattern.
 ### Converting response content to the follow-up assistant message
 
-When echoing Claude's response back in the assistant turn, **there is no `.ToParam()` helper** - manually reconstruct each `ContentBlock` variant as its `*Param` counterpart. Do NOT use `new ContentBlockParam(block.Json)`: it compiles and serializes, but `.Value` stays `null` so `TryPick*`/`Validate()` fail (degraded JSON pass-through, not the typed path).
+When echoing Claude's response back in the assistant turn, **there is no `.ToParam()` helper** — manually reconstruct each `ContentBlock` variant as its `*Param` counterpart. Do NOT use `new ContentBlockParam(block.Json)`: it compiles and serializes, but `.Value` stays `null` so `TryPick*`/`Validate()` fail (degraded JSON pass-through, not the typed path).
 
 ```csharp
 using Anthropic.Models.Messages;
 
 Message response = await client.Messages.Create(parameters);
 
-// No .ToParam() - reconstruct per variant. Implicit conversions from each
+// No .ToParam() — reconstruct per variant. Implicit conversions from each
 // *Param type to ContentBlockParam mean no explicit wrapper.
 List<ContentBlockParam> assistantContent = [];
 List<ContentBlockParam> toolResults = [];
@@ -169,7 +169,7 @@ foreach (ContentBlock block in response.Content)
     }
     else if (block.TryPickThinking(out ThinkingBlock? thinking))
     {
-        // Signature MUST be preserved - the API rejects tampering
+        // Signature MUST be preserved — the API rejects tampering
         assistantContent.Add(new ThinkingBlockParam
         {
             Thinking = thinking.Thinking,
@@ -182,14 +182,14 @@ foreach (ContentBlock block in response.Content)
     }
     else if (block.TryPickToolUse(out ToolUseBlock? toolUse))
     {
-        // ToolUseBlock has required Caller; ToolUseBlockParam.Caller is optional - don't copy it
+        // ToolUseBlock has required Caller; ToolUseBlockParam.Caller is optional — don't copy it
         assistantContent.Add(new ToolUseBlockParam
         {
             ID = toolUse.ID,
             Name = toolUse.Name,
             Input = toolUse.Input,
         });
-        // Execute the tool; collect ONE result per tool_use block - the API
+        // Execute the tool; collect ONE result per tool_use block — the API
         // rejects the follow-up if any tool_use ID lacks a matching tool_result.
         string result = ExecuteYourTool(toolUse.Name, toolUse.Input);
         toolResults.Add(new ToolResultBlockParam
@@ -209,7 +209,7 @@ List<MessageParam> followUpMessages =
 ];
 ```
 
-`ToolResultBlockParam` has no tuple constructor - use the object initializer. `Content` is a string-or-list union; a plain `string` implicitly converts.
+`ToolResultBlockParam` has no tuple constructor — use the object initializer. `Content` is a string-or-list union; a plain `string` implicitly converts.
 
 ---
 
@@ -224,12 +224,12 @@ using NonBeta = Anthropic.Models.Messages;  // only if you also need non-beta ty
 ```
 
 
-`BetaMessage.Content` is `IReadOnlyList<BetaContentBlock>` - a 15-variant discriminated union. Narrow with `TryPick*`. **Response `BetaContentBlock` is NOT assignable to param `BetaContentBlockParam`** - there's no `.ToParam()` in C#. Round-trip by converting each block:
+`BetaMessage.Content` is `IReadOnlyList<BetaContentBlock>` — a 15-variant discriminated union. Narrow with `TryPick*`. **Response `BetaContentBlock` is NOT assignable to param `BetaContentBlockParam`** — there's no `.ToParam()` in C#. Round-trip by converting each block:
 
 ```csharp
 using Anthropic.Models.Beta.Messages;
 
-var betaParams = new MessageCreateParams   // no Beta prefix - one of only 2 unprefixed
+var betaParams = new MessageCreateParams   // no Beta prefix — one of only 2 unprefixed
 {
     Model = Model.ClaudeOpus4_6,
     MaxTokens = 16000,
@@ -246,7 +246,7 @@ foreach (BetaContentBlock block in resp.Content)
 {
     if (block.TryPickCompaction(out BetaCompactionBlock? compaction))
     {
-        // Content is nullable - compaction can fail server-side
+        // Content is nullable — compaction can fail server-side
         Console.WriteLine($"compaction summary: {compaction.Content}");
     }
 }
@@ -273,7 +273,7 @@ messages.Add(new BetaMessageParam { Role = Role.Assistant, Content = paramBlocks
 
 All 15 `BetaContentBlock.TryPick*` variants: `Text`, `Thinking`, `RedactedThinking`, `ToolUse`, `ServerToolUse`, `WebSearchToolResult`, `WebFetchToolResult`, `CodeExecutionToolResult`, `BashCodeExecutionToolResult`, `TextEditorCodeExecutionToolResult`, `ToolSearchToolResult`, `McpToolUse`, `McpToolResult`, `ContainerUpload`, `Compaction`.
 
-**`BetaToolUseBlock.Input` is `IReadOnlyDictionary<string, JsonElement>`** - index by key then call the `JsonElement` extractor:
+**`BetaToolUseBlock.Input` is `IReadOnlyDictionary<string, JsonElement>`** — index by key then call the `JsonElement` extractor:
 
 ```csharp
 if (block.TryPickToolUse(out BetaToolUseBlock? tu))
@@ -299,7 +299,7 @@ Values: `Effort.Low`, `Effort.Medium`, `Effort.High`, `Effort.Max`. Combine with
 
 ## Prompt Caching
 
-`System` takes `MessageCreateParamsSystem?` - a union of `string` or `List<TextBlockParam>`. There is no `SystemTextBlockParam`; use plain `TextBlockParam`. The implicit conversion needs the concrete `List<TextBlockParam>` type (array literals won't convert). For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
+`System` takes `MessageCreateParamsSystem?` — a union of `string` or `List<TextBlockParam>`. There is no `SystemTextBlockParam`; use plain `TextBlockParam`. The implicit conversion needs the concrete `List<TextBlockParam>` type (array literals won't convert). For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
 
 ```csharp
 System = new List<TextBlockParam> {
@@ -326,7 +326,7 @@ MessageTokensCount result = await client.Messages.CountTokens(new MessageCountTo
 long tokens = result.InputTokens;
 ```
 
-`MessageCountTokensParams.Tools` uses a different union type (`MessageCountTokensTool`) than `MessageCreateParams.Tools` (`ToolUnion`) - if you're passing tools, the compiler will tell you when it matters.
+`MessageCountTokensParams.Tools` uses a different union type (`MessageCountTokensTool`) than `MessageCreateParams.Tools` (`ToolUnion`) — if you're passing tools, the compiler will tell you when it matters.
 
 ---
 
@@ -399,4 +399,4 @@ new BetaRequestDocumentBlock {
 }
 ```
 
-The non-beta `DocumentBlockParamSource` union has no file-ID variant - file references need `client.Beta.Messages.Create()`.
+The non-beta `DocumentBlockParamSource` union has no file-ID variant — file references need `client.Beta.Messages.Create()`.

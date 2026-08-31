@@ -3,11 +3,11 @@ name: ui-ux-pro-max
 description: "Trigger: ui-ux-pro-max, UI/UX design intelligence for web and mobile. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: ninehills
+  author: nextlevelbuilder
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max"
-  github_url: "https://github.com/ninehills/skills/tree/HEAD/ui-ux-pro-max"
+  github_url: "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/HEAD/.claude/skills/ui-ux-pro-max"
 ---
 
 ## Activation Contract
@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,3 +51,11 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
+- `references/pro-rules.md` - preserved source companion file.
+- `references/quick-reference.md` - preserved source companion file.
+- `scripts/core.py` - preserved source companion file.
+- `scripts/design_system.py` - preserved source companion file.
+- `scripts/reasoning_contract.py` - preserved source companion file.
+- `scripts/search.py` - preserved source companion file.
+- `scripts/validate_data.py` - preserved source companion file.
+- `data/` - 39 preserved source data files read by `scripts/search.py`.

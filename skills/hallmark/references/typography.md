@@ -241,3 +241,4 @@ Use no more than five sizes on a single page. If you need more hierarchy, use we
 - No hard-synthesised bold or italic.
 - **No more than three font families on a single page.** Display + body + one outlier is the ceiling. Four families = slop. Audit gate.
 - No outlier face used in more than two slots. Wordmark + hero stat is the canonical pair; if you reach for a third slot, drop it back to the body face.
+

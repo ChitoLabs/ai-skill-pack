@@ -25,12 +25,12 @@ Since n8n v2.0, Code nodes execute inside a **task runner sandbox** (`JsTaskRunn
 ### Blocked helpers
 
 ```javascript
-// ❌ BLOCKED - throws UnsupportedFunctionError
+// ❌ BLOCKED — throws UnsupportedFunctionError
 await $helpers.httpRequestWithAuthentication.call(this, 'credType', { ... });
 await $helpers.requestWithAuthenticationPaginated.call(this, { ... }, 'credType');
 ```
 
-n8n's source comment explains why: *"these rely on checking the credentials from the current node type (Code Node), and Code Node doesn't have credentials."* There is **no env var to re-enable them** in the task runner - the deny-list is compiled-in (`packages/@n8n/task-runner/src/runner-types.ts`).
+n8n's source comment explains why: *"these rely on checking the credentials from the current node type (Code Node), and Code Node doesn't have credentials."* There is **no env var to re-enable them** in the task runner — the deny-list is compiled-in (`packages/@n8n/task-runner/src/runner-types.ts`).
 
 **Workaround**: don't try to authenticate from inside a Code node. Instead, either:
 - Replace the Code node with an HTTP Request node that has the credential attached (the canonical pattern), or
@@ -38,16 +38,16 @@ n8n's source comment explains why: *"these rely on checking the credentials from
 
 ### `$env` may be blocked
 
-`$env` is gated by **`N8N_BLOCK_ENV_ACCESS_IN_NODE`**. When set to `true` (a common production hardening), any reference to `$env.SOMETHING` throws. Since you can't tell from inside the Code node whether it's enabled, **don't rely on `$env` for portable skills** - treat secrets as a credential concern (HTTP Request node) rather than a Code-node concern.
+`$env` is gated by **`N8N_BLOCK_ENV_ACCESS_IN_NODE`**. When set to `true` (a common production hardening), any reference to `$env.SOMETHING` throws. Since you can't tell from inside the Code node whether it's enabled, **don't rely on `$env` for portable skills** — treat secrets as a credential concern (HTTP Request node) rather than a Code-node concern.
 
 ### `require()` is gated by allowlists
 
 ```javascript
-// May throw "Cannot find module 'crypto'" - depends on env vars
+// May throw "Cannot find module 'crypto'" — depends on env vars
 const crypto = require('crypto');
 ```
 
-Built-in modules need `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` (or legacy `NODE_FUNCTION_ALLOW_BUILTIN`) set to `*` or a comma-list including `crypto`. External npm packages need `N8N_RUNNERS_ALLOWED_EXTERNAL_MODULES` plus the package being installed in the runner image. On default installs neither is set - `require()` throws.
+Built-in modules need `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` (or legacy `NODE_FUNCTION_ALLOW_BUILTIN`) set to `*` or a comma-list including `crypto`. External npm packages need `N8N_RUNNERS_ALLOWED_EXTERNAL_MODULES` plus the package being installed in the runner image. On default installs neither is set — `require()` throws.
 
 `Buffer` and `URL` are globals (not `require`'d), so they always work.
 
@@ -719,7 +719,7 @@ return [{
 
 ### crypto Module
 
-> **Gated**: `require('crypto')` only works if `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` (or legacy `NODE_FUNCTION_ALLOW_BUILTIN`) includes `crypto` (or is `*`). On default installs it throws "Cannot find module 'crypto'". For hashing you control, prefer doing it before reaching the Code node, or - if you must - verify your instance's config first.
+> **Gated**: `require('crypto')` only works if `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` (or legacy `NODE_FUNCTION_ALLOW_BUILTIN`) includes `crypto` (or is `*`). On default installs it throws "Cannot find module 'crypto'". For hashing you control, prefer doing it before reaching the Code node, or — if you must — verify your instance's config first.
 
 ```javascript
 const crypto = require('crypto');
@@ -782,7 +782,7 @@ return [{
 
 ## What's NOT Available
 
-**External npm packages are NOT available** (unless explicitly allowlisted via `N8N_RUNNERS_ALLOWED_EXTERNAL_MODULES` *and* installed in the runner image - rare):
+**External npm packages are NOT available** (unless explicitly allowlisted via `N8N_RUNNERS_ALLOWED_EXTERNAL_MODULES` *and* installed in the runner image — rare):
 - ❌ axios
 - ❌ lodash
 - ❌ moment (use DateTime/Luxon instead)
@@ -794,8 +794,8 @@ return [{
 - ❌ `$helpers.requestWithAuthenticationPaginated`
 
 **Conditionally blocked** (depends on instance config):
-- ⚠️ `$env.*` - blocked when `N8N_BLOCK_ENV_ACCESS_IN_NODE=true`
-- ⚠️ `require('crypto')` / `require('fs')` / etc. - blocked unless `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` includes them
+- ⚠️ `$env.*` — blocked when `N8N_BLOCK_ENV_ACCESS_IN_NODE=true`
+- ⚠️ `require('crypto')` / `require('fs')` / etc. — blocked unless `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` includes them
 
 **Workarounds**:
 - HTTP with auth → HTTP Request node with credential attached, or sub-workflow pattern

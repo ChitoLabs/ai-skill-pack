@@ -57,14 +57,14 @@ Before starting, you'll need to upgrade Ruby:
 
 ---
 
-Hop 1: Rails 5.2 → 6.0 (Hard - ~1-2 weeks)
+Hop 1: Rails 5.2 → 6.0 (Hard — ~1–2 weeks)
 
 Breaking Changes Found in Your Code
 
 ┌──────────┬───────────────────────────────────┬──────┬───────────────────────────────────────────────────────┬─────────────────────────┐
 │ Priority │               File                │ Line │                         Issue                         │           Fix           │
 ├──────────┼───────────────────────────────────┼──────┼───────────────────────────────────────────────────────┼─────────────────────────┤
-│ 🔴 HIGH  │ config/environments/production.rb │ 20   │ config.read_encrypted_secrets = true - removed in 6.0 │ Delete this line        │
+│ 🔴 HIGH  │ config/environments/production.rb │ 20   │ config.read_encrypted_secrets = true — removed in 6.0 │ Delete this line        │
 ├──────────┼───────────────────────────────────┼──────┼───────────────────────────────────────────────────────┼─────────────────────────┤
 │ 🟡 MED   │ config/application.rb             │ 22   │ config.load_defaults 5.1                              │ Update to 5.2, then 6.0 │
 └──────────┴───────────────────────────────────┴──────┴───────────────────────────────────────────────────────┴─────────────────────────┘
@@ -102,14 +102,14 @@ bundle exec rspec
 
 ---
 
-Hop 2: Rails 6.0 → 6.1 (Medium - ~3-5 days)
+Hop 2: Rails 6.0 → 6.1 (Medium — ~3–5 days)
 
 Breaking Changes Found in Your Code
 
 ┌──────────┬───────────────────────────────────┬──────┬─────────────────────────────────────────────────────────────────┬────────────────────┐
 │ Priority │               File                │ Line │                              Issue                              │        Fix         │
 ├──────────┼───────────────────────────────────┼──────┼─────────────────────────────────────────────────────────────────┼────────────────────┤
-│ 🟡 MED   │ app/views/contacts/_form.html.erb │ 1    │ form_with(model: contact, local: true) - local: true deprecated │ Remove local: true │
+│ 🟡 MED   │ app/views/contacts/_form.html.erb │ 1    │ form_with(model: contact, local: true) — local: true deprecated │ Remove local: true │
 └──────────┴───────────────────────────────────┴──────┴─────────────────────────────────────────────────────────────────┴────────────────────┘
 
 No other issues detected. Minor steps:
@@ -123,7 +123,7 @@ bundle exec rspec
 
 ---
 
-Hop 3: Rails 6.1 → 7.0 (Hard - ~1-2 weeks)
+Hop 3: Rails 6.1 → 7.0 (Hard — ~1–2 weeks)
 
 ⚠️  This is the most impactful hop for your frontend
 Breaking Changes Found in Your Code
@@ -133,7 +133,7 @@ Breaking Changes Found in Your Code
 ├──────────┼────────────────────────────────────────┼──────┼────────────────────────────────────────┼───────────────────────────────────────────┤
 │ 🔴 HIGH  │ Gemfile                                │ 31   │ gem 'turbolinks', '~> 5'               │ Replace with gem 'turbo-rails'            │
 ├──────────┼────────────────────────────────────────┼──────┼────────────────────────────────────────┼───────────────────────────────────────────┤
-│ 🔴 HIGH  │ app/views/layouts/application.html.erb │ 7, 9 │ 'data-turbolinks-track': 'reload'      │ Keep as-is - still valid with turbo-rails │
+│ 🔴 HIGH  │ app/views/layouts/application.html.erb │ 7, 9 │ 'data-turbolinks-track': 'reload'      │ Keep as-is — still valid with turbo-rails │
 ├──────────┼────────────────────────────────────────┼──────┼────────────────────────────────────────┼───────────────────────────────────────────┤
 │ 🔴 HIGH  │ app/assets/javascripts/application.js  │ 14   │ //= require turbolinks                 │ Remove this line                          │
 └──────────┴────────────────────────────────────────┴──────┴────────────────────────────────────────┴───────────────────────────────────────────┘
@@ -161,16 +161,16 @@ bundle exec rspec
 
 ---
 
-Hop 4: Rails 7.0 → 7.1 (Medium - ~3-5 days)
+Hop 4: Rails 7.0 → 7.1 (Medium — ~3–5 days)
 
 Breaking Changes Found in Your Code
 
 ┌──────────┬───────────────────────────────────┬──────┬───────────────────────────────────────────────┬───────────────────────────────────────────┐
 │ Priority │               File                │ Line │                     Issue                     │                    Fix                    │
 ├──────────┼───────────────────────────────────┼──────┼───────────────────────────────────────────────┼───────────────────────────────────────────┤
-│ 🔴 HIGH  │ config/environments/production.rb │ 5    │ config.cache_classes = true - replaced in 7.1 │ Change to config.enable_reloading = false │
+│ 🔴 HIGH  │ config/environments/production.rb │ 5    │ config.cache_classes = true — replaced in 7.1 │ Change to config.enable_reloading = false │
 ├──────────┼───────────────────────────────────┼──────┼───────────────────────────────────────────────┼───────────────────────────────────────────┤
-│ 🔴 HIGH  │ config/environments/test.rb       │ 8    │ config.cache_classes = true - replaced in 7.1 │ Change to config.enable_reloading = false │
+│ 🔴 HIGH  │ config/environments/test.rb       │ 8    │ config.cache_classes = true — replaced in 7.1 │ Change to config.enable_reloading = false │
 └──────────┴───────────────────────────────────┴──────┴───────────────────────────────────────────────┴───────────────────────────────────────────┘
 
 ▎ Note: enable_reloading is the inverse of cache_classes. cache_classes = true → enable_reloading = false.
@@ -188,7 +188,7 @@ bundle exec rspec
 
 ---
 
-Hop 5: Rails 7.1 → 7.2 (Medium - ~3-5 days)
+Hop 5: Rails 7.1 → 7.2 (Medium — ~3–5 days)
 
 Breaking Changes Found in Your Code
 
@@ -217,20 +217,20 @@ bundle exec rspec
 
 ---
 
-Hop 6: Rails 7.2 → 8.0 (Very Hard - ~1-2 weeks)
+Hop 6: Rails 7.2 → 8.0 (Very Hard — ~1–2 weeks)
 
 Asset Pipeline Decision Required
 
 Your app uses Sprockets (sprockets/railtie in config/application.rb:12). Rails 8.0 defaults to Propshaft, but Sprockets still works. You have two options:
 
-Option A - Keep Sprockets (recommended for this app):
+Option A — Keep Sprockets (recommended for this app):
 
-# Gemfile - explicitly keep it
+# Gemfile — explicitly keep it
 gem 'sprockets-rails'
 
 No other asset changes needed. Your config.assets.js_compressor, config.assets.compile, etc. all stay.
 
-Option B - Migrate to Propshaft (more work, cleaner long-term):
+Option B — Migrate to Propshaft (more work, cleaner long-term):
 
 - Remove sprockets/railtie from application.rb
 - Remove sprockets-rails, sassc-rails from Gemfile
@@ -266,7 +266,7 @@ Gem Updates Required
 
 New Configuration
 
-# config/environments/production.rb - add:
+# config/environments/production.rb — add:
 config.assume_ssl = true  # needed if behind load balancer (Heroku, etc.)
 
 Migration Steps

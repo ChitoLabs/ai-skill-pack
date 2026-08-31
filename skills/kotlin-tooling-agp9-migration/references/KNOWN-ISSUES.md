@@ -38,7 +38,7 @@ actual class AppConfiguration {
 
 Inject `AppConfiguration` via your DI framework (Koin, kotlin-inject, manual DI).
 
-**Alternative A - BuildKonfig plugin** ([github.com/yshrsmz/BuildKonfig](https://github.com/yshrsmz/BuildKonfig)):
+**Alternative A — BuildKonfig plugin** ([github.com/yshrsmz/BuildKonfig](https://github.com/yshrsmz/BuildKonfig)):
 
 Generates `expect`/`actual` BuildConfig objects across all KMP targets. Supports typed fields
 (String, Int, Long, Float, Boolean), target-specific overrides, and a flavor system via Gradle properties.
@@ -84,7 +84,7 @@ defaultConfigs("release") {
 }
 ```
 
-**Alternative B - gradle-buildconfig-plugin** ([github.com/gmazzo/gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin)):
+**Alternative B — gradle-buildconfig-plugin** ([github.com/gmazzo/gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin)):
 
 More general-purpose; supports Java, Kotlin, Groovy, and KMP. Richer type support (arrays, maps,
 Files, URIs). Uses `expect`/`actual` for KMP via explicit `expect()` calls.
@@ -370,7 +370,7 @@ android.builtInKotlin=false
 ### Recommended IDE Setup
 
 - **Use Android Studio Otter 3 or later.** This is currently the only IDE with full AGP 9.0 + KMP library plugin support.
-- **IntelliJ IDEA does not support AGP 9.0** - even with the Android plugin installed, project sync and build integration will not work correctly. If the project uses IntelliJ IDEA, recommend switching to Android Studio for Android/KMP development.
+- **IntelliJ IDEA does not support AGP 9.0** — even with the Android plugin installed, project sync and build integration will not work correctly. If the project uses IntelliJ IDEA, recommend switching to Android Studio for Android/KMP development.
 - Ensure the Kotlin plugin in your IDE matches the KGP version in your project.
 
 ---
@@ -463,9 +463,9 @@ Replace `variantFilter` with `androidComponents.beforeVariants()`.
 
 **Problem:** AGP 9.0 changes several R8 defaults:
 
-- `android.r8.strictFullModeForKeepRules=true` - keep rules no longer implicitly keep default constructors
-- `android.r8.proguardAndroidTxt.disallowed=true` - only `proguard-android-optimize.txt` is supported
-- `android.r8.globalOptionsInConsumerRules.disallowed=true` - library consumer rules cannot contain global options (like `-dontobfuscate`)
+- `android.r8.strictFullModeForKeepRules=true` — keep rules no longer implicitly keep default constructors
+- `android.r8.proguardAndroidTxt.disallowed=true` — only `proguard-android-optimize.txt` is supported
+- `android.r8.globalOptionsInConsumerRules.disallowed=true` — library consumer rules cannot contain global options (like `-dontobfuscate`)
 - Keep rules no longer propagate to synthesized companion methods
 
 **Impact:** Medium. Release builds may crash or behave differently without rule updates.
@@ -482,12 +482,12 @@ Replace `variantFilter` with `androidComponents.beforeVariants()`.
 
 **Problem:** Several features are removed in AGP 9.0 with no replacement:
 
-- **Embedded Wear OS app support** - `wearApp` configurations removed
-- **Density split APK** - use app bundles instead
-- **`androidDependencies` and `sourceSets` report tasks** - removed
-- **`dexOptions` DSL** - removed (d8 handles this automatically)
-- **RenderScript** - disabled by default, enable per-module if needed: `buildFeatures { renderScript = true }`
-- **AIDL** - disabled by default, enable per-module if needed: `buildFeatures { aidl = true }`
+- **Embedded Wear OS app support** — `wearApp` configurations removed
+- **Density split APK** — use app bundles instead
+- **`androidDependencies` and `sourceSets` report tasks** — removed
+- **`dexOptions` DSL** — removed (d8 handles this automatically)
+- **RenderScript** — disabled by default, enable per-module if needed: `buildFeatures { renderScript = true }`
+- **AIDL** — disabled by default, enable per-module if needed: `buildFeatures { aidl = true }`
 
 **Impact:** Low-Medium. Only affects projects using these specific features.
 
@@ -541,6 +541,6 @@ android {
 **Impact:** High. Can completely block migration.
 
 **Key plugins requiring opt-out flags:**
-- detekt < 2.0.0, ktlint, SQLDelight, Paparazzi, protobuf - see SKILL.md for specific flags
+- detekt < 2.0.0, ktlint, SQLDelight, Paparazzi, protobuf — see SKILL.md for specific flags
 
 ---

@@ -3,11 +3,11 @@ name: swiftui-expert-skill
 description: "Trigger: swiftui-expert-skill. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: avdlee
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/avdlee/swiftui-agent-skill/swiftui-expert-skill"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swiftui-expert-skill"
+  github_url: "https://github.com/avdlee/swiftui-agent-skill/tree/HEAD/skills/swiftui-expert-skill"
 ---
 
 ## Activation Contract
@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,39 +51,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/accessibility-patterns.md` - preserved source companion file.
-- `references/animation-advanced.md` - preserved source companion file.
-- `references/animation-basics.md` - preserved source companion file.
-- `references/animation-transitions.md` - preserved source companion file.
-- `references/charts-accessibility.md` - preserved source companion file.
-- `references/charts.md` - preserved source companion file.
-- `references/focus-patterns.md` - preserved source companion file.
-- `references/image-optimization.md` - preserved source companion file.
-- `references/latest-apis.md` - preserved source companion file.
-- `references/layout-best-practices.md` - preserved source companion file.
-- `references/liquid-glass.md` - preserved source companion file.
-- `references/list-patterns.md` - preserved source companion file.
-- `references/macos-scenes.md` - preserved source companion file.
-- `references/macos-views.md` - preserved source companion file.
-- `references/macos-window-styling.md` - preserved source companion file.
-- `references/performance-patterns.md` - preserved source companion file.
-- `references/scroll-patterns.md` - preserved source companion file.
-- `references/sheet-navigation-patterns.md` - preserved source companion file.
-- `references/state-management.md` - preserved source companion file.
-- `references/text-patterns.md` - preserved source companion file.
-- `references/trace-analysis.md` - preserved source companion file.
-- `references/trace-recording.md` - preserved source companion file.
-- `references/view-structure.md` - preserved source companion file.
-- `scripts/analyze_trace.py` - preserved source companion file.
-- `scripts/instruments_parser/__init__.py` - preserved source companion file.
-- `scripts/instruments_parser/causes.py` - preserved source companion file.
-- `scripts/instruments_parser/correlate.py` - preserved source companion file.
-- `scripts/instruments_parser/events.py` - preserved source companion file.
-- `scripts/instruments_parser/hangs.py` - preserved source companion file.
-- `scripts/instruments_parser/hitches.py` - preserved source companion file.
-- `scripts/instruments_parser/summary.py` - preserved source companion file.
-- `scripts/instruments_parser/swiftui.py` - preserved source companion file.
-- `scripts/instruments_parser/time_profiler.py` - preserved source companion file.
-- `scripts/instruments_parser/xctrace.py` - preserved source companion file.
-- `scripts/instruments_parser/xml_utils.py` - preserved source companion file.
-- `scripts/record_trace.py` - preserved source companion file.
+- `references/` - 23 preserved source companion files.
+- `scripts/` - 13 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

@@ -371,7 +371,7 @@ Required:
 
 * MUST protect all state-changing endpoints (POST/PUT/PATCH/DELETE) that rely on cookies for authentication.
 * SHOULD use a well-understood CSRF mitigation (token-based is the typical baseline).
-* MAY add defense-in-depth: Origin/Referer validation, Fetch Metadata enforcement, SameSite cookies, custom header requirements for XHR/fetch-**but do not treat these as a full replacement** unless explicitly designed and justified.
+* MAY add defense-in-depth: Origin/Referer validation, Fetch Metadata enforcement, SameSite cookies, custom header requirements for XHR/fetch—**but do not treat these as a full replacement** unless explicitly designed and justified.
 * MUST use at a minimum require a custom HTTP header if form based CRSF tokens are not practical, as this is the second strongest method.
 
 IMPORTANT NOTE:
@@ -1106,7 +1106,7 @@ Always try to confirm:
 
 Primary Express documentation:
 
-* Express: Production Best Practices - Security: `https://expressjs.com/en/advanced/best-practice-security.html` ([Express][1])
+* Express: Production Best Practices — Security: `https://expressjs.com/en/advanced/best-practice-security.html` ([Express][1])
 * Express: Behind Proxies (`trust proxy`): `https://expressjs.com/en/guide/behind-proxies.html` ([Express][2])
 * Express 5.x API Reference (parsers, static, sendFile, redirect, cookies): `https://expressjs.com/en/5x/api.html` ([Express][5])
 * Express: Error Handling: `https://expressjs.com/en/guide/error-handling.html` ([Express][11])
@@ -1117,8 +1117,8 @@ Session middleware documentation:
 
 Node.js and npm official references:
 
-* Node.js - Security Best Practices (DoS, proxy guidance, inspector risks, request smuggling notes): `https://nodejs.org/en/learn/getting-started/security-best-practices` ([Node.js][15])
-* npm Docs - `npm audit`: `https://docs.npmjs.com/cli/v9/commands/npm-audit/` ([npm Docs][16])
+* Node.js — Security Best Practices (DoS, proxy guidance, inspector risks, request smuggling notes): `https://nodejs.org/en/learn/getting-started/security-best-practices` ([Node.js][15])
+* npm Docs — `npm audit`: `https://docs.npmjs.com/cli/v9/commands/npm-audit/` ([npm Docs][16])
 
 OWASP Cheat Sheet Series:
 
@@ -1152,7 +1152,7 @@ Versioning / advisories:
 [12]: https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html "Session Management - OWASP Cheat Sheet Series"
 [13]: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html "File Upload - OWASP Cheat Sheet Series"
 [14]: https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html "OS Command Injection Defense - OWASP Cheat Sheet Series"
-[15]: https://nodejs.org/en/learn/getting-started/security-best-practices "Node.js - Security Best Practices"
+[15]: https://nodejs.org/en/learn/getting-started/security-best-practices "Node.js — Security Best Practices"
 [16]: https://docs.npmjs.com/cli/v9/commands/npm-audit/ "npm-audit | npm Docs"
 [17]: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html "Input Validation - OWASP Cheat Sheet Series"
 [18]: https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html "Unvalidated Redirects and Forwards - OWASP Cheat Sheet Series"

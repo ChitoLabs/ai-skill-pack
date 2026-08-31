@@ -17,10 +17,10 @@ Before beginning any minor or major version hop, ensure you are on the **latest 
 
 ### Why This Matters
 
-- **Security fixes** - Patch releases contain critical security patches that may also exist in the next minor version. Starting from the latest patch ensures you're not carrying known vulnerabilities.
-- **Bug fixes** - Later patches fix bugs that could cause confusing failures during an upgrade, making it harder to distinguish pre-existing issues from upgrade-related ones.
-- **Deprecation warnings** - Later patch releases may include additional deprecation warnings that prepare you for the next version.
-- **Smaller delta** - The jump to the next minor/major is smaller and better tested from the latest patch than from an arbitrary earlier patch.
+- **Security fixes** — Patch releases contain critical security patches that may also exist in the next minor version. Starting from the latest patch ensures you're not carrying known vulnerabilities.
+- **Bug fixes** — Later patches fix bugs that could cause confusing failures during an upgrade, making it harder to distinguish pre-existing issues from upgrade-related ones.
+- **Deprecation warnings** — Later patch releases may include additional deprecation warnings that prepare you for the next version.
+- **Smaller delta** — The jump to the next minor/major is smaller and better tested from the latest patch than from an arbitrary earlier patch.
 
 ### How to Find the Latest Patch
 
@@ -30,7 +30,7 @@ Before beginning any minor or major version hop, ensure you are on the **latest 
 
 ### Latest Patch Versions Reference
 
-#### End-of-Life Series (static - these versions are frozen)
+#### End-of-Life Series (static — these versions are frozen)
 
 | Series | Latest Patch |
 |--------|-------------|
@@ -49,11 +49,11 @@ Before beginning any minor or major version hop, ensure you are on the **latest 
 | 7.0.x | 7.0.10 |
 | 7.1.x | 7.1.6 |
 
-#### Active Series (look up dynamically - these receive new patches)
+#### Active Series (look up dynamically — these receive new patches)
 
 For series that are still maintained or receiving security updates, **always resolve the latest patch at runtime** using one of these methods:
 
-**Option A - RubyGems API (preferred, structured JSON):**
+**Option A — RubyGems API (preferred, structured JSON):**
 ```bash
 curl -s https://rubygems.org/api/v1/versions/rails.json | \
   ruby -rjson -e '
@@ -67,7 +67,7 @@ curl -s https://rubygems.org/api/v1/versions/rails.json | \
 ```
 Replace `"7.2."` with the target series prefix (e.g., `"8.0."`, `"8.1."`).
 
-**Option B - gem search (works offline if gem sources are cached):**
+**Option B — gem search (works offline if gem sources are cached):**
 ```bash
 gem search '^rails$' --versions | grep "^rails " | \
   ruby -e '
@@ -88,7 +88,7 @@ gem search '^rails$' --versions | grep "^rails " | \
 3. If current version < latest patch:
    a. Update Gemfile: gem 'rails', '3.2.22.5'
    b. Run: bundle update rails
-   c. Run test suite - all tests must pass
+   c. Run test suite — all tests must pass
    d. Review CHANGELOG for security fixes and behavioral changes
    e. Deploy patch upgrade to production
    f. Monitor for issues

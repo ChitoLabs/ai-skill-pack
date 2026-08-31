@@ -256,3 +256,4 @@ Every recipe in this file must pass these checks before shipping.
 Most pages have too much motion, not too little. Before shipping, walk through every animation in your output and ask: *what would happen if this animation were instant?* If the answer is "nothing  -  the user wouldn't notice", remove the animation. If the answer is "the user would lose information about what changed", keep it.
 
 Reaching for a static answer is a sign of taste. Reaching for more motion is the AI default.
+

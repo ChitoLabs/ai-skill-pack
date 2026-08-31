@@ -508,3 +508,4 @@ The study is a diagnosis operation. It is not for fresh builds and not for refin
 - If the user only wanted the diagnosis and is satisfied: stop. The diagnosis report is a complete deliverable on its own.
 
 Do not start another operation or emit files without the user's explicit go-ahead. The diagnosis is the contract; the build and the file are separate decisions.
+

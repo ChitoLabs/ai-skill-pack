@@ -7,9 +7,9 @@ tags: sub, subscribe, side-effects, analytics, autosave, useForm
 
 ## Use subscribe() to React to Form Changes Outside the React Lifecycle
 
-Introduced in v7.55.0, `useForm().subscribe(...)` registers a callback that fires on form state or value changes **without causing any re-renders**. Use it when the consumer of the change is not a UI element - analytics, autosave to localStorage, debounced telemetry, sending drafts to a server. `useWatch` and `watch` are still right for things that paint to screen; `subscribe` is right for everything else.
+Introduced in v7.55.0, `useForm().subscribe(...)` registers a callback that fires on form state or value changes **without causing any re-renders**. Use it when the consumer of the change is not a UI element — analytics, autosave to localStorage, debounced telemetry, sending drafts to a server. `useWatch` and `watch` are still right for things that paint to screen; `subscribe` is right for everything else.
 
-**Incorrect (using useWatch to drive a non-UI side-effect - re-renders the form on every keystroke):**
+**Incorrect (using useWatch to drive a non-UI side-effect — re-renders the form on every keystroke):**
 
 ```typescript
 function ProfileForm() {
@@ -83,10 +83,10 @@ function DraftEditor() {
 ```
 
 **When to use which:**
-- `useWatch` / `Controller` - the value drives a rendered element
-- `subscribe` - the value drives a non-UI side-effect (analytics, autosave, localStorage sync, telemetry)
-- `watch(callback)` - legacy callback form; prefer `subscribe` in new code (subscribe replaces the watch-callback pattern with explicit formState slicing and no implicit re-renders)
+- `useWatch` / `Controller` — the value drives a rendered element
+- `subscribe` — the value drives a non-UI side-effect (analytics, autosave, localStorage sync, telemetry)
+- `watch(callback)` — legacy callback form; prefer `subscribe` in new code (subscribe replaces the watch-callback pattern with explicit formState slicing and no implicit re-renders)
 
-`subscribe` returns an unsubscribe function - always return it from the `useEffect` cleanup to avoid leaks across remounts.
+`subscribe` returns an unsubscribe function — always return it from the `useEffect` cleanup to avoid leaks across remounts.
 
 Reference: [subscribe](https://react-hook-form.com/docs/useform/subscribe) · [Release notes v7.55.0](https://github.com/react-hook-form/react-hook-form/releases/tag/v7.55.0)

@@ -46,9 +46,9 @@ const [index, setIndex] = useState(0);
 
 ### Rules
 
-- Maximum 4 options - use a picker for more
+- Maximum 4 options — use a picker for more
 - Keep labels short (1-2 words)
-- Avoid custom colors - native styling adapts to dark mode
+- Avoid custom colors — native styling adapts to dark mode
 
 ### With Icons (iOS 14+)
 
@@ -129,9 +129,9 @@ const [date, setDate] = useState(new Date());
 
 ### Modes
 
-- `date` - Date only
-- `time` - Time only
-- `datetime` - Date and time
+- `date` — Date only
+- `time` — Time only
+- `datetime` — Date and time
 
 ### Display Styles
 
@@ -262,9 +262,9 @@ const [selected, setSelected] = useState("js");
 
 ## Best Practices
 
-- **Haptics**: Switch and DateTimePicker have built-in haptics - don't add extra
+- **Haptics**: Switch and DateTimePicker have built-in haptics — don't add extra
 - **Accessibility**: Native controls have proper accessibility labels by default
-- **Dark Mode**: Avoid custom colors - native styling adapts automatically
+- **Dark Mode**: Avoid custom colors — native styling adapts automatically
 - **Spacing**: Use consistent padding around controls (12-16pt)
 - **Labels**: Place labels above or to the left of controls
 - **Grouping**: Group related controls in sections with headers

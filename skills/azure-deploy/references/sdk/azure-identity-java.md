@@ -1,4 +1,4 @@
-# Authentication - Java SDK Quick Reference
+# Authentication — Java SDK Quick Reference
 
 > Condensed from **azure-identity-java**. Full patterns (workload identity,
 > certificate auth, device code, sovereign clouds)
@@ -23,9 +23,9 @@ var credential = new DefaultAzureCredentialBuilder().build();
 ```
 
 ## Best Practices
-- Use DefaultAzureCredential for **local development only** (CLI, PowerShell, VS Code). In production, use ManagedIdentityCredential - see [auth-best-practices.md](../auth-best-practices.md)
-- Managed identity in production - no secrets to manage, automatic rotation
-- Azure CLI for local dev - run `az login` before running your app
-- Least privilege - grant only required permissions to service principals
-- Token caching - enabled by default, reduces auth round-trips
-- Environment variables - use for CI/CD, not hardcoded secrets
+- Use DefaultAzureCredential for **local development only** (CLI, PowerShell, VS Code). In production, use ManagedIdentityCredential — see [auth-best-practices.md](../auth-best-practices.md)
+- Managed identity in production — no secrets to manage, automatic rotation
+- Azure CLI for local dev — run `az login` before running your app
+- Least privilege — grant only required permissions to service principals
+- Token caching — enabled by default, reduces auth round-trips
+- Environment variables — use for CI/CD, not hardcoded secrets

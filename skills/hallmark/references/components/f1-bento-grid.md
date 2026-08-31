@@ -18,3 +18,4 @@ Asymmetric grid of 8-15 tiles in mixed spans (1x1, 2x1, 1x2, 2x2). Visual rhythm
 .span-1x2 { grid-row: span 2; }
 @media (max-width: 56rem) { .bento { grid-template-columns: repeat(2, 1fr); } }
 ```
+

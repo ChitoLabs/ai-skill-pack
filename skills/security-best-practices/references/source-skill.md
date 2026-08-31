@@ -3,10 +3,10 @@ name: security-best-practices
 description: Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.
 license: Apache-2.0
 metadata:
-  author: tech-leads-club
+  author: openai
   version: 0.1
   skills_sh_url: "https://www.skills.sh/openai/skills/security-best-practices"
-  github_url: "https://github.com/tech-leads-club/agent-skills/tree/HEAD/packages/skills-catalog/skills/(security)/security-best-practices"
+  github_url: "https://github.com/openai/skills/tree/HEAD/skills/.curated/security-best-practices"
 ---
 
 # Security Best Practices

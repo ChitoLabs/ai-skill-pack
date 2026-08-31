@@ -66,15 +66,15 @@ Scripts are located in the `scripts/` folder of this skill.
 ## 5 - Hidden entities and discovery
 - Hidden entities are special resources not normally visible, following a **dot-prefixed naming convention** (similar to UNIX hidden files).
 - **Tenant-level hidden entities** (accessed from root):
-  - `.capacities` - `fab ls .capacities` / `fab get .capacities/<name>.Capacity`
-  - `.gateways` - `fab ls .gateways` / `fab get .gateways/<name>.Gateway`
-  - `.connections` - `fab ls .connections` / `fab get .connections/<name>.Connection`
-  - `.domains` - `fab ls .domains` / `fab get .domains/<name>.Domain`
+  - `.capacities` — `fab ls .capacities` / `fab get .capacities/<name>.Capacity`
+  - `.gateways` — `fab ls .gateways` / `fab get .gateways/<name>.Gateway`
+  - `.connections` — `fab ls .connections` / `fab get .connections/<name>.Connection`
+  - `.domains` — `fab ls .domains` / `fab get .domains/<name>.Domain`
 - **Workspace-level hidden entities** (accessed within a workspace):
-  - `.managedidentities` - `fab ls ws1.Workspace/.managedidentities`
-  - `.managedprivateendpoints` - `fab ls ws1.Workspace/.managedprivateendpoints`
-  - `.externaldatashares` - `fab ls ws1.Workspace/.externaldatashares`
-  - `.sparkpools` - `fab ls ws1.Workspace/.sparkpools`
+  - `.managedidentities` — `fab ls ws1.Workspace/.managedidentities`
+  - `.managedprivateendpoints` — `fab ls ws1.Workspace/.managedprivateendpoints`
+  - `.externaldatashares` — `fab ls ws1.Workspace/.externaldatashares`
+  - `.sparkpools` — `fab ls ws1.Workspace/.sparkpools`
 - To show hidden resources, recommend `ls -a` / `ls --all`.
 
 ## 6 - Errors and troubleshooting guidance
@@ -102,10 +102,10 @@ Scripts are located in the `scripts/` folder of this skill.
 - **Python versions**: 3.10, 3.11, 3.12, 3.13.
 - **CLI file storage** (useful for troubleshooting):
   - Config files are stored in `~/.config/fab/`:
-    - `cache.bin` - encrypted auth token cache
-    - `config.json` - non-sensitive CLI settings
-    - `auth.json` - non-sensitive auth info
-    - `context-<session_id>` - path context for command-line mode sessions
+    - `cache.bin` — encrypted auth token cache
+    - `config.json` — non-sensitive CLI settings
+    - `auth.json` — non-sensitive auth info
+    - `context-<session_id>` — path context for command-line mode sessions
   - Debug logs are written to:
     - Windows: `%AppData%/fabcli_debug.log`
     - macOS: `~/Library/Logs/fabcli_debug.log`
@@ -148,12 +148,12 @@ Use `fab desc .<ItemType>` to explore any item type.
 
 For detailed command syntax and working examples, see:
 
-- [Quick Start Guide](./quickstart.md) - Copy-paste examples for common tasks
-- [Full Command Reference](./reference.md) - All commands with flags and patterns
-- [Semantic Models](./semantic-models.md) - TMDL, DAX queries, refresh, storage modes
-- [Notebooks](./notebooks.md) - Job execution, parameters, scheduling
-- [Reports](./reports.md) - Export, import, rebind to models
-- [Workspaces](./workspaces.md) - Create, manage, permissions
-- [Querying Data](./querying-data.md) - DAX and lakehouse table queries
-- [API Reference](./fab-api.md) - Direct REST API access patterns
-- [Create Workspaces](./create-workspaces.md) - Workspace creation workflows
+- [Quick Start Guide](./quickstart.md) — Copy-paste examples for common tasks
+- [Full Command Reference](./reference.md) — All commands with flags and patterns
+- [Semantic Models](./semantic-models.md) — TMDL, DAX queries, refresh, storage modes
+- [Notebooks](./notebooks.md) — Job execution, parameters, scheduling
+- [Reports](./reports.md) — Export, import, rebind to models
+- [Workspaces](./workspaces.md) — Create, manage, permissions
+- [Querying Data](./querying-data.md) — DAX and lakehouse table queries
+- [API Reference](./fab-api.md) — Direct REST API access patterns
+- [Create Workspaces](./create-workspaces.md) — Workspace creation workflows

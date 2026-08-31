@@ -201,3 +201,4 @@ The Phase 10 stamp records mobile status alongside contrast: `* mobile: pass (34
 ---
 
 If any answer is **yes**, fix it. Do not ship slop.
+

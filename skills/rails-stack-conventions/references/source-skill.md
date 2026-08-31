@@ -6,7 +6,7 @@ description: >
   Tailwind CSS stack. Covers stack-specific patterns only: MVC structure,
   ActiveRecord query conventions, Turbo Frames/Streams wiring, Stimulus
   controllers, and Tailwind component patterns. Not for general Rails design
-  principles - this skill is scoped to what changes based on this specific
+  principles — this skill is scoped to what changes based on this specific
   technology stack.
 ---
 
@@ -21,9 +21,9 @@ When **writing or generating** code for this project, follow these conventions. 
 ```
 ALL new code MUST have its test written and validated BEFORE implementation.
   1. Write the spec: bundle exec rspec spec/[path]_spec.rb
-  2. Verify it FAILS - output must show the feature does not exist yet
+  2. Verify it FAILS — output must show the feature does not exist yet
   3. Write the implementation code
-  4. Verify it PASSES - run the same spec and confirm green
+  4. Verify it PASSES — run the same spec and confirm green
   5. Refactor if needed, keeping tests green
 See rspec-best-practices for the full gate cycle.
 ```
@@ -32,12 +32,12 @@ See rspec-best-practices for the full gate cycle.
 
 For a typical feature, compose stack patterns in this order:
 
-1. **Model** - add validations, associations, scopes; eager-load with `includes` for any association used in loops
-2. **Service object** - extract non-trivial business logic from the controller (see **ruby-service-objects**)
-3. **Controller** - keep actions thin; delegate to services; respond with `turbo_stream` and `html` formats
-4. **View / Turbo wiring** - wrap dynamic sections in `<turbo-frame>` tags; broadcast `turbo_stream` responses from the controller
-5. **Stimulus** - add a controller only when client-side interactivity cannot be handled by Turbo alone
-6. **Tailwind** - apply utility classes to the view; extract repeated patterns into partials or Stimulus targets
+1. **Model** — add validations, associations, scopes; eager-load with `includes` for any association used in loops
+2. **Service object** — extract non-trivial business logic from the controller (see **ruby-service-objects**)
+3. **Controller** — keep actions thin; delegate to services; respond with `turbo_stream` and `html` formats
+4. **View / Turbo wiring** — wrap dynamic sections in `<turbo-frame>` tags; broadcast `turbo_stream` responses from the controller
+5. **Stimulus** — add a controller only when client-side interactivity cannot be handled by Turbo alone
+6. **Tailwind** — apply utility classes to the view; extract repeated patterns into partials or Stimulus targets
 
 Each step should remain testable in isolation before wiring to the next layer.
 
@@ -70,21 +70,21 @@ respond_to do |format|
 end
 ```
 
-### Avoiding N+1 - Eager Loading
+### Avoiding N+1 — Eager Loading
 
 ```ruby
-# BAD - triggers one query per order
+# BAD — triggers one query per order
 @orders = Order.where(user: current_user)
 @orders.each { |o| o.line_items.count }
 
-# GOOD - single JOIN via includes
+# GOOD — single JOIN via includes
 @orders = Order.includes(:line_items).where(user: current_user)
 ```
 
 ### Service Object (complex business logic out of the controller)
 
 ```ruby
-# Controller stays thin - delegate to service
+# Controller stays thin — delegate to service
 result = Orders::CreateOrder.call(user: current_user, params: order_params)
 if result[:success]
   redirect_to result[:order], notice: "Order created"
@@ -106,7 +106,7 @@ This project uses **Devise** for authentication and **Pundit** for authorization
 |-------|------------------|
 | Business logic in views | Use helpers, presenters, or Stimulus controllers |
 | N+1 queries in loops | Eager load with `includes` before the loop |
-| Skipping FactoryBot for "quick" tests | Fixtures are brittle - always use factories |
+| Skipping FactoryBot for "quick" tests | Fixtures are brittle — always use factories |
 | Controller action with 15+ lines of business logic | Extract to a service object |
 | Model with no validations on required fields | Add presence/format validations |
 | View with 10+ lines of embedded Ruby conditionals | Move logic to a presenter or partial |

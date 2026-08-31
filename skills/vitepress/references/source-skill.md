@@ -7,7 +7,7 @@ metadata:
   version: 2026.1.28
   source: "Generated from https://github.com/vuejs/vitepress, scripts located at https://github.com/antfu/skills"
   skills_sh_url: "https://www.skills.sh/antfu/skills/vitepress"
-  github_url: "https://github.com/hairyf/skills/tree/HEAD/skills/vitepress"
+  github_url: "https://github.com/antfu/skills/tree/HEAD/skills/vitepress"
 ---
 
 VitePress is a Static Site Generator (SSG) built on Vite and Vue 3. It takes Markdown content, applies a theme, and generates static HTML that becomes an SPA for fast navigation. Perfect for documentation, blogs, and marketing sites.

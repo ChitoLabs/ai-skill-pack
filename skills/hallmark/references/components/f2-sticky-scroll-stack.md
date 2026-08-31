@@ -18,3 +18,4 @@ Sticky left pane, scrolling right pane that cycles through related screenshots.
    nav is on the page (slop-test gate 56). */
 .pane-sticky { position: sticky; top: calc(var(--banner-height, 0px) + var(--space-xl)); align-self: start; z-index: var(--z-sticky); }
 ```
+

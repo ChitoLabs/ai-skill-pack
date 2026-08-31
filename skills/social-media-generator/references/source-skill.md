@@ -41,14 +41,14 @@ Collect the following details from the user (ask if not provided):
 
 Create content for each platform using the templates in `assets/`:
 
-**Twitter** (`assets/twitter_template.md`)
+**Twitter** (`../assets/twitter_template.md`)
 - Keep under 280 characters
 - Concise and punchy
 - 1-3 relevant hashtags
 - Clear call-to-action
 - Consider emojis for engagement
 
-**Instagram** (`assets/instagram_template.md`)
+**Instagram** (`../assets/instagram_template.md`)
 - Engaging caption with hook in first line
 - More detailed description
 - 5-15 relevant hashtags
@@ -56,7 +56,7 @@ Create content for each platform using the templates in `assets/`:
 - Line breaks for readability
 - Encourage engagement
 
-**LinkedIn** (`assets/linkedin_template.md`)
+**LinkedIn** (`../assets/linkedin_template.md`)
 - Professional and informative tone
 - Value-driven content
 - Industry insights or takeaways
@@ -64,7 +64,7 @@ Create content for each platform using the templates in `assets/`:
 - Bullet points for key information
 - Discussion-prompting questions
 
-**Facebook** (`assets/facebook_template.md`)
+**Facebook** (`../assets/facebook_template.md`)
 - Conversational and engaging
 - Keep concise (under 250 chars for best engagement)
 - 2-3 relevant hashtags

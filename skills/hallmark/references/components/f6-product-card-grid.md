@@ -39,3 +39,4 @@ Each card is a product, not a feature. Image * name * price * one micro-action. 
 - Don't use cards with shadow + radius + border + tile + ribbon. Pick one container signal.
 
 ---
+

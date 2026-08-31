@@ -96,6 +96,6 @@ export function useAuthFetch() {
 }
 ```
 
-`getToken()` returns `null` when unauthenticated - always null-check.
+`getToken()` returns `null` when unauthenticated — always null-check.
 
 [Docs](https://clerk.com/docs/react/getting-started/quickstart)

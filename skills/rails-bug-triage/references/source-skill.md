@@ -39,7 +39,7 @@ Return findings in this shape:
 ```
 1. Observed:  POST /orders returns 500 when product is out of stock
 2. Expected:  Returns 422 with { error: "Out of stock" }
-3. Boundary:  Request layer - visible in HTTP contract
+3. Boundary:  Request layer — visible in HTTP contract
 4. First spec: spec/requests/orders/create_spec.rb
 5. Fix path:  Orders::CreateOrder should return { success: false, error: "Out of stock" }
               when inventory check fails; controller renders 422

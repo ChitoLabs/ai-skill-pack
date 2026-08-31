@@ -6,7 +6,7 @@ metadata:
   author: github.com/vuejs-ai
   version: 18.0.0
   skills_sh_url: "https://www.skills.sh/hyf0/vue-skills/vue-best-practices"
-  github_url: "https://github.com/xingyu4j/skills/tree/HEAD/skills/vue-best-practices"
+  github_url: "https://github.com/hyf0/vue-skills/tree/HEAD/skills/vue-best-practices"
 ---
 
 # Vue Best Practices Workflow
@@ -29,10 +29,10 @@ Use this skill as an instruction set. Follow the workflow in order unless the us
 ### 1.1 Must-read core references (required)
 
 - Before implementing any Vue task, make sure to read and apply these core references:
-  - `references/reactivity.md`
-  - `references/sfc.md`
-  - `references/component-data-flow.md`
-  - `references/composables.md`
+  - `reactivity.md`
+  - `sfc.md`
+  - `component-data-flow.md`
+  - `composables.md`
 - Keep these references in active working context for the entire task, not only when a specific issue appears.
 
 ### 1.2 Plan component boundaries before coding (required)

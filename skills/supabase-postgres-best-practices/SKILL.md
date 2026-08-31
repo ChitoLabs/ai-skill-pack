@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -47,37 +50,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/_contributing.md` - preserved source companion file.
-- `references/_sections.md` - preserved source companion file.
-- `references/_template.md` - preserved source companion file.
-- `references/advanced-full-text-search.md` - preserved source companion file.
-- `references/advanced-jsonb-indexing.md` - preserved source companion file.
-- `references/conn-idle-timeout.md` - preserved source companion file.
-- `references/conn-limits.md` - preserved source companion file.
-- `references/conn-pooling.md` - preserved source companion file.
-- `references/conn-prepared-statements.md` - preserved source companion file.
-- `references/data-batch-inserts.md` - preserved source companion file.
-- `references/data-n-plus-one.md` - preserved source companion file.
-- `references/data-pagination.md` - preserved source companion file.
-- `references/data-upsert.md` - preserved source companion file.
-- `references/lock-advisory.md` - preserved source companion file.
-- `references/lock-deadlock-prevention.md` - preserved source companion file.
-- `references/lock-short-transactions.md` - preserved source companion file.
-- `references/lock-skip-locked.md` - preserved source companion file.
-- `references/monitor-explain-analyze.md` - preserved source companion file.
-- `references/monitor-pg-stat-statements.md` - preserved source companion file.
-- `references/monitor-vacuum-analyze.md` - preserved source companion file.
-- `references/query-composite-indexes.md` - preserved source companion file.
-- `references/query-covering-indexes.md` - preserved source companion file.
-- `references/query-index-types.md` - preserved source companion file.
-- `references/query-missing-indexes.md` - preserved source companion file.
-- `references/query-partial-indexes.md` - preserved source companion file.
-- `references/schema-constraints.md` - preserved source companion file.
-- `references/schema-data-types.md` - preserved source companion file.
-- `references/schema-foreign-key-indexes.md` - preserved source companion file.
-- `references/schema-lowercase-identifiers.md` - preserved source companion file.
-- `references/schema-partitioning.md` - preserved source companion file.
-- `references/schema-primary-keys.md` - preserved source companion file.
-- `references/security-privileges.md` - preserved source companion file.
-- `references/security-rls-basics.md` - preserved source companion file.
-- `references/security-rls-performance.md` - preserved source companion file.
+- `references/` - 34 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

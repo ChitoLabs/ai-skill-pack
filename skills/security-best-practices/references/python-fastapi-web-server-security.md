@@ -965,45 +965,45 @@ Always try to confirm:
 
 Primary framework documentation:
 
-* FastAPI (PyPI metadata, versioning) - `https://pypi.org/project/fastapi/` ([PyPI][1])
-* FastAPI docs: Security “First Steps” (Authorization Bearer header conventions) - `https://fastapi.tiangolo.com/tutorial/security/first-steps/` ([FastAPI][11])
-* FastAPI reference: Dependencies (`Depends`, `Security`) - `https://fastapi.tiangolo.com/reference/dependencies/` ([FastAPI][7])
-* FastAPI reference: APIRouter (router-level dependencies) - `https://fastapi.tiangolo.com/reference/apirouter/` ([FastAPI][28])
-* FastAPI docs: WebSockets - `https://fastapi.tiangolo.com/advanced/websockets/` ([FastAPI][27])
+* FastAPI (PyPI metadata, versioning) — `https://pypi.org/project/fastapi/` ([PyPI][1])
+* FastAPI docs: Security “First Steps” (Authorization Bearer header conventions) — `https://fastapi.tiangolo.com/tutorial/security/first-steps/` ([FastAPI][11])
+* FastAPI reference: Dependencies (`Depends`, `Security`) — `https://fastapi.tiangolo.com/reference/dependencies/` ([FastAPI][7])
+* FastAPI reference: APIRouter (router-level dependencies) — `https://fastapi.tiangolo.com/reference/apirouter/` ([FastAPI][28])
+* FastAPI docs: WebSockets — `https://fastapi.tiangolo.com/advanced/websockets/` ([FastAPI][27])
 
 ASGI/server stack documentation:
 
-* Starlette (PyPI, general capabilities) - `https://pypi.org/project/starlette/` ([PyPI][5])
-* Starlette docs: WebSockets - `https://starlette.dev/websockets/` ([Starlette][3])
-* Uvicorn (PyPI metadata) - `https://pypi.org/project/uvicorn/` ([PyPI][4])
-* Pydantic docs (v2.12.x) - `https://docs.pydantic.dev/latest/` ([Pydantic][29])
+* Starlette (PyPI, general capabilities) — `https://pypi.org/project/starlette/` ([PyPI][5])
+* Starlette docs: WebSockets — `https://starlette.dev/websockets/` ([Starlette][3])
+* Uvicorn (PyPI metadata) — `https://pypi.org/project/uvicorn/` ([PyPI][4])
+* Pydantic docs (v2.12.x) — `https://docs.pydantic.dev/latest/` ([Pydantic][29])
 
 Security standards and cheat sheets:
 
-* OWASP Cheat Sheet Series: Session Management - `https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][8])
-* OWASP Cheat Sheet Series: CSRF Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][2])
-* OWASP Cheat Sheet Series: XSS Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][16])
-* OWASP Cheat Sheet Series: Mass Assignment - `https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][14])
-* OWASP API Security Top 10 (2023) - `https://owasp.org/API-Security/editions/2023/en/0x11-t10/` ([OWASP Foundation][13])
-* OWASP Cheat Sheet Series: SQL Injection Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][21])
-* OWASP Cheat Sheet Series: OS Command Injection Defense - `https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][22])
-* OWASP Cheat Sheet Series: SSRF Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][23])
-* OWASP Cheat Sheet Series: File Upload - `https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][20])
-* OWASP Cheat Sheet Series: Unvalidated Redirects and Forwards - `https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][24])
-* OWASP Cheat Sheet Series: HTTP Security Response Headers - `https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][6])
-* OWASP Cheat Sheet Series: WebSocket Security - `https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][25])
-* OWASP WSTG: Testing for Server-Side Template Injection - `https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server_Side_Template_Injection` ([OWASP Foundation][17])
-* OWASP WSTG: Testing WebSockets - `https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/10-Testing_WebSockets` ([OWASP Foundation][26])
+* OWASP Cheat Sheet Series: Session Management — `https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][8])
+* OWASP Cheat Sheet Series: CSRF Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][2])
+* OWASP Cheat Sheet Series: XSS Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][16])
+* OWASP Cheat Sheet Series: Mass Assignment — `https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][14])
+* OWASP API Security Top 10 (2023) — `https://owasp.org/API-Security/editions/2023/en/0x11-t10/` ([OWASP Foundation][13])
+* OWASP Cheat Sheet Series: SQL Injection Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][21])
+* OWASP Cheat Sheet Series: OS Command Injection Defense — `https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][22])
+* OWASP Cheat Sheet Series: SSRF Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][23])
+* OWASP Cheat Sheet Series: File Upload — `https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][20])
+* OWASP Cheat Sheet Series: Unvalidated Redirects and Forwards — `https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][24])
+* OWASP Cheat Sheet Series: HTTP Security Response Headers — `https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][6])
+* OWASP Cheat Sheet Series: WebSocket Security — `https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][25])
+* OWASP WSTG: Testing for Server-Side Template Injection — `https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server_Side_Template_Injection` ([OWASP Foundation][17])
+* OWASP WSTG: Testing WebSockets — `https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/10-Testing_WebSockets` ([OWASP Foundation][26])
 
 Template safety references:
 
-* Jinja: Sandbox - `https://jinja.palletsprojects.com/en/stable/sandbox/` ([jinja.palletsprojects.com][18])
+* Jinja: Sandbox — `https://jinja.palletsprojects.com/en/stable/sandbox/` ([jinja.palletsprojects.com][18])
 
 Selected supply-chain/advisory references (Starlette examples):
 
-* CVE-2023-29159 (StaticFiles path traversal; fixed 0.27.0) - `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2023-29159/` ([advisories.gitlab.com][10])
-* CVE-2024-47874 (multipart/form-data DoS; fixed 0.40.0) - `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2024-47874/` ([advisories.gitlab.com][9])
-* CVE-2025-62727 (FileResponse Range header DoS; fixed 0.49.1) - `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2025-62727/` ([advisories.gitlab.com][19])
+* CVE-2023-29159 (StaticFiles path traversal; fixed 0.27.0) — `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2023-29159/` ([advisories.gitlab.com][10])
+* CVE-2024-47874 (multipart/form-data DoS; fixed 0.40.0) — `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2024-47874/` ([advisories.gitlab.com][9])
+* CVE-2025-62727 (FileResponse Range header DoS; fixed 0.49.1) — `https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2025-62727/` ([advisories.gitlab.com][19])
 
 [1]: https://pypi.org/project/fastapi/ "https://pypi.org/project/fastapi/"
 [2]: https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html"
@@ -1022,7 +1022,7 @@ Selected supply-chain/advisory references (Starlette examples):
 [15]: https://fastapi.tiangolo.com/tutorial/extra-models/ "https://fastapi.tiangolo.com/tutorial/extra-models/"
 [16]: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
 [17]: https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server_Side_Template_Injection?utm_source=chatgpt.com "Testing for Server Side Template Injection"
-[18]: https://jinja.palletsprojects.com/en/stable/sandbox/?utm_source=chatgpt.com "Sandbox - Jinja Documentation (3.1.x)"
+[18]: https://jinja.palletsprojects.com/en/stable/sandbox/?utm_source=chatgpt.com "Sandbox — Jinja Documentation (3.1.x)"
 [19]: https://advisories.gitlab.com/pkg/pypi/starlette/CVE-2025-62727/ "Starlette vulnerable to O(n^2) DoS via Range header merging in ``starlette.responses.FileResponse`` | GitLab Advisory Database"
 [20]: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html"
 [21]: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"

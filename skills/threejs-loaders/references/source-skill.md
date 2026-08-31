@@ -3,10 +3,10 @@ name: threejs-loaders
 description: Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-loaders"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-loaders"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-loaders"
 ---
 
 # Three.js Loaders

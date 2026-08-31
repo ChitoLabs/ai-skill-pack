@@ -3,11 +3,11 @@ name: zod
 description: "Trigger: zod, Zod schema validation best practices for type safety, parsing, and error handling. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: thongdn-it
+  author: pproenca
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/pproenca/dot-skills/zod"
-  github_url: "https://github.com/thongdn-it/react-agent-skills/tree/HEAD/skills/zod"
+  github_url: "https://github.com/pproenca/dot-skills/tree/HEAD/skills/.curated/zod"
 ---
 
 ## Activation Contract
@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,51 +51,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `assets/templates/_template.md` - preserved source companion file.
-- `references/AGENTS.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/_sections.md` - preserved source companion file.
-- `references/compose-intersection.md` - preserved source companion file.
-- `references/compose-lazy-recursive.md` - preserved source companion file.
-- `references/compose-pipe.md` - preserved source companion file.
-- `references/compose-preprocess.md` - preserved source companion file.
-- `references/compose-shared-schemas.md` - preserved source companion file.
-- `references/error-avoid-throwing-in-refine.md` - preserved source companion file.
-- `references/error-custom-messages.md` - preserved source companion file.
-- `references/error-i18n.md` - preserved source companion file.
-- `references/error-path-for-nested.md` - preserved source companion file.
-- `references/error-use-flatten.md` - preserved source companion file.
-- `references/metadata.json` - preserved source companion file.
-- `references/object-discriminated-unions.md` - preserved source companion file.
-- `references/object-extend-for-composition.md` - preserved source companion file.
-- `references/object-optional-vs-nullable.md` - preserved source companion file.
-- `references/object-partial-for-updates.md` - preserved source companion file.
-- `references/object-pick-omit.md` - preserved source companion file.
-- `references/object-strict-vs-strip.md` - preserved source companion file.
-- `references/parse-async-for-async-refinements.md` - preserved source companion file.
-- `references/parse-avoid-double-validation.md` - preserved source companion file.
-- `references/parse-handle-all-issues.md` - preserved source companion file.
-- `references/parse-never-trust-json.md` - preserved source companion file.
-- `references/parse-use-safeparse.md` - preserved source companion file.
-- `references/parse-validate-early.md` - preserved source companion file.
-- `references/perf-arrays.md` - preserved source companion file.
-- `references/perf-avoid-dynamic-creation.md` - preserved source companion file.
-- `references/perf-cache-schemas.md` - preserved source companion file.
-- `references/perf-lazy-loading.md` - preserved source companion file.
-- `references/perf-zod-mini.md` - preserved source companion file.
-- `references/refine-add-path.md` - preserved source companion file.
-- `references/refine-catch.md` - preserved source companion file.
-- `references/refine-defaults.md` - preserved source companion file.
-- `references/refine-transform-coerce.md` - preserved source companion file.
-- `references/refine-vs-superrefine.md` - preserved source companion file.
-- `references/schema-avoid-optional-abuse.md` - preserved source companion file.
-- `references/schema-coercion-for-form-data.md` - preserved source companion file.
-- `references/schema-string-validations.md` - preserved source companion file.
-- `references/schema-use-enums.md` - preserved source companion file.
-- `references/schema-use-primitives-correctly.md` - preserved source companion file.
-- `references/schema-use-unknown-not-any.md` - preserved source companion file.
-- `references/type-branded-types.md` - preserved source companion file.
-- `references/type-enable-strict-mode.md` - preserved source companion file.
-- `references/type-export-schemas-and-types.md` - preserved source companion file.
-- `references/type-input-vs-output.md` - preserved source companion file.
-- `references/type-use-z-infer.md` - preserved source companion file.
+- `assets/` - 1 preserved source companion files.
+- `references/` - 47 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

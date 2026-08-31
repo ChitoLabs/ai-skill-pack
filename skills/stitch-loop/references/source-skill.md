@@ -36,7 +36,7 @@ The Build Loop pattern enables continuous, autonomous website development throug
 - A `.stitch/SITE.md` file documenting the site vision and roadmap
 
 **Optional:**
-- Chrome DevTools MCP Server - enables visual verification of generated pages
+- Chrome DevTools MCP Server — enables visual verification of generated pages
 
 ## The Baton System
 
@@ -80,9 +80,9 @@ Before generating, read these files:
 | `.stitch/DESIGN.md` | Required visual style for Stitch prompts |
 
 **Important checks:**
-- Section 4 (Sitemap) - Do NOT recreate pages that already exist
-- Section 5 (Roadmap) - Pick tasks from here if backlog exists
-- Section 6 (Creative Freedom) - Ideas for new pages if roadmap is empty
+- Section 4 (Sitemap) — Do NOT recreate pages that already exist
+- Section 5 (Roadmap) — Pick tasks from here if backlog exists
+- Section 6 (Creative Freedom) — Ideas for new pages if roadmap is empty
 
 ### Step 3: Generate with Stitch
 
@@ -100,8 +100,8 @@ Use the Stitch MCP tools to generate the page:
 4. **Retrieve assets**: Before downloading, check if `.stitch/designs/{page}.html` and `.stitch/designs/{page}.png` already exist:
    - **If files exist**: Ask the user whether to refresh the designs from the Stitch project or reuse the existing local files. Only re-download if the user confirms.
    - **If files do not exist**: Proceed with download:
-     - `htmlCode.downloadUrl` - Download and save as `.stitch/designs/{page}.html`
-      - `screenshot.downloadUrl` - Append `=w{width}` to the URL before downloading, where `{width}` is the `width` value from the screen metadata (Google CDN serves low-res thumbnails by default). Save as `.stitch/designs/{page}.png`
+     - `htmlCode.downloadUrl` — Download and save as `.stitch/designs/{page}.html`
+      - `screenshot.downloadUrl` — Append `=w{width}` to the URL before downloading, where `{width}` is the `width` value from the screen metadata (Google CDN serves low-res thumbnails by default). Save as `.stitch/designs/{page}.png`
 
 ### Step 4: Integrate into Site
 
@@ -165,7 +165,7 @@ project/
 │   ├── metadata.json   # Stitch project & screen IDs (persist this!)
 │   ├── DESIGN.md       # Visual design system (from design-md skill)
 │   ├── SITE.md         # Site vision, sitemap, roadmap
-│   ├── next-prompt.md  # The baton - current task
+│   ├── next-prompt.md  # The baton — current task
 │   └── designs/        # Staging area for Stitch output
 │       ├── {page}.html
 │       └── {page}.png
@@ -241,7 +241,7 @@ The loop can be driven by different orchestration layers:
 | **Agent chains** | One agent dispatches to another (e.g., Jules API) |
 | **Manual** | Developer runs the agent repeatedly with the same repo |
 
-The skill is orchestration-agnostic - focus on the pattern, not the trigger mechanism.
+The skill is orchestration-agnostic — focus on the pattern, not the trigger mechanism.
 
 ## Design System Integration
 

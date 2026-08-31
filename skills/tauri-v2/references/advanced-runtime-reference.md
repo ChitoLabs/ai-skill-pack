@@ -11,8 +11,8 @@
 > *Last verified: 2026-04-02. Check official Tauri v2+ docs for updates.*
 
 **See also:**
-- [plugin-reference.md](plugin-reference.md) - plugin installation and permissions
-- [capabilities-reference.md](capabilities-reference.md) - capability/permission model
+- [plugin-reference.md](plugin-reference.md) — plugin installation and permissions
+- [capabilities-reference.md](capabilities-reference.md) — capability/permission model
 
 ## Section 1: System Tray (`TrayIconBuilder`)
 

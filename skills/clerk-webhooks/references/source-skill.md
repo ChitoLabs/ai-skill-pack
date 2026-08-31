@@ -229,7 +229,7 @@ export async function POST(req: NextRequest) {
 
 For Express, Astro, Fastify, Nuxt, React Router, and TanStack Start, use the framework-specific `verifyWebhook` adapter. Each Clerk SDK package ships its own (`@clerk/express/webhooks`, `@clerk/astro/webhooks`, `@clerk/fastify/webhooks`, etc.).
 
-See `references/frameworks.md` for full handler examples per framework.
+See `frameworks.md` for full handler examples per framework.
 
 ## Type Narrowing for `evt.data`
 
@@ -335,7 +335,7 @@ const {
 
 | Reference | Description |
 |-----------|-------------|
-| `references/frameworks.md` | Webhook handler examples for Express, Astro, Fastify, Nuxt, React Router, TanStack Start |
+| `frameworks.md` | Webhook handler examples for Express, Astro, Fastify, Nuxt, React Router, TanStack Start |
 
 ## See Also
 

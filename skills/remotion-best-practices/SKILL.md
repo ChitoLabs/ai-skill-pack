@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,41 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/rules/3d.md` - preserved source companion file.
-- `references/rules/assets/charts-bar-chart.tsx` - preserved source companion file.
-- `references/rules/assets/text-animations-typewriter.tsx` - preserved source companion file.
-- `references/rules/assets/text-animations-word-highlight.tsx` - preserved source companion file.
-- `references/rules/audio-visualization.md` - preserved source companion file.
-- `references/rules/audio.md` - preserved source companion file.
-- `references/rules/calculate-metadata.md` - preserved source companion file.
-- `references/rules/compositions.md` - preserved source companion file.
-- `references/rules/display-captions.md` - preserved source companion file.
-- `references/rules/ffmpeg.md` - preserved source companion file.
-- `references/rules/get-audio-duration.md` - preserved source companion file.
-- `references/rules/get-video-dimensions.md` - preserved source companion file.
-- `references/rules/get-video-duration.md` - preserved source companion file.
-- `references/rules/gifs.md` - preserved source companion file.
-- `references/rules/google-fonts.md` - preserved source companion file.
-- `references/rules/html-in-canvas.md` - preserved source companion file.
-- `references/rules/images.md` - preserved source companion file.
-- `references/rules/import-srt-captions.md` - preserved source companion file.
-- `references/rules/light-leaks.md` - preserved source companion file.
-- `references/rules/local-fonts.md` - preserved source companion file.
-- `references/rules/lottie.md` - preserved source companion file.
-- `references/rules/maplibre.md` - preserved source companion file.
-- `references/rules/measuring-dom-nodes.md` - preserved source companion file.
-- `references/rules/measuring-text.md` - preserved source companion file.
-- `references/rules/parameters.md` - preserved source companion file.
-- `references/rules/sequencing.md` - preserved source companion file.
-- `references/rules/sfx.md` - preserved source companion file.
-- `references/rules/silence-detection.md` - preserved source companion file.
-- `references/rules/subtitles.md` - preserved source companion file.
-- `references/rules/tailwind.md` - preserved source companion file.
-- `references/rules/text-animations.md` - preserved source companion file.
-- `references/rules/timing.md` - preserved source companion file.
-- `references/rules/transcribe-captions.md` - preserved source companion file.
-- `references/rules/transitions.md` - preserved source companion file.
-- `references/rules/transparent-videos.md` - preserved source companion file.
-- `references/rules/trimming.md` - preserved source companion file.
-- `references/rules/videos.md` - preserved source companion file.
-- `references/rules/voiceover.md` - preserved source companion file.
+- `references/` - 38 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

@@ -17,3 +17,4 @@ The full recipe  -  the four laws (height-constant, transform-for-offset, cross-
 *Anti-pattern (one of eight in floating-nav.md):* swapping two `<header>` elements via opacity instead of cross-fading one DOM. Doubles markup, fights focus order, desyncs content.
 
 ---
+

@@ -16,3 +16,4 @@ Use only when the label carries real sequence or document meaning and the build 
 ```css
 .head-margin { display: grid; grid-template-columns: 10rem 1fr; gap: var(--space-xl); align-items: baseline; }
 ```
+

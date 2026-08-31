@@ -32,3 +32,4 @@ A coloured promo **banner** stacked above one real nav. On scroll-down the banne
 **Knobs**  -  *Banner fill:* solid accent * gradient (default) * tint+ink * *Dismiss:* yes (default) * none * *Bar scroll:* sticky (default) * also-frosts * *Banner content:* promo * status * countdown.
 *Anti-pattern:* never make the top tier a second set of nav links  -  that's the "two nav bars" smell the banner exists to avoid. Keep the banner one line, one link, one dismiss. Don't animate banner height directly (janky); translate the whole `.nav` and zero the height only on dismiss.
 *Mobile:* banner text truncates / drops the leading glyph; nav links collapse; the Buy/primary CTA stays.
+

@@ -3,10 +3,10 @@ name: pydantic
 description: Python data validation using type hints and runtime type checking with Pydantic v2's Rust-powered core for high-performance validation in FastAPI, Django, and configuration management.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: bobmatnyc
   version: 0.1
   skills_sh_url: "https://skills.sh/bobmatnyc/claude-mpm-skills/pydantic"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/pydantic"
+  github_url: "https://github.com/bobmatnyc/claude-mpm-skills/tree/HEAD/toolchains/python/validation/pydantic"
 user-invocable: false
 disable-model-invocation: true
 progressive_disclosure:

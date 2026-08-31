@@ -4,7 +4,7 @@ Use Inspektor Gadget for real-time, low-level node/pod diagnostics when `kubectl
 
 ## IG Version
 
-`<ig-version>` = `v0.51.0` - substitute this exact tag (with `v` prefix) wherever `<ig-version>` appears. Bump this line only.
+`<ig-version>` = `v0.51.0` — substitute this exact tag (with `v` prefix) wherever `<ig-version>` appears. Bump this line only.
 
 ## Base Command Pattern
 
@@ -75,7 +75,7 @@ Use `--filter "<expr>"` for tcpdump filters (e.g., `port 80`, `host 10.0.0.1`). 
 |---|---|---|---|
 | `snapshot_process` | snapshot | List running processes in pod/node | PID pressure, unknown processes, verifying entrypoint, CrashLoopBackOff |
 | `trace_exec` | trace | Trace process execution (execve calls) | CrashLoopBackOff (what actually runs), unexpected child processes, security audit |
-| `trace_oomkill` | trace | Trace OOM kill events with victim details | OOMKilled pods - see which process was killed, memory usage at kill time |
+| `trace_oomkill` | trace | Trace OOM kill events with victim details | OOMKilled pods — see which process was killed, memory usage at kill time |
 | `trace_signal` | trace | Trace signals delivered to processes | Unexpected SIGKILL/SIGTERM, liveness probe kills, graceful shutdown issues |
 | `top_process` | top | Rank processes by CPU/memory usage | Identifying resource-hungry processes inside a pod or across a node |
 | `profile_cpu` | profile | CPU profiling via stack sampling | High CPU usage investigation, finding hot code paths |
@@ -129,7 +129,7 @@ Use `--filter "<expr>"` for tcpdump filters (e.g., `port 80`, `host 10.0.0.1`). 
 
 ## Guardrails
 
-- IG gadgets are **read-only** - they do not modify cluster or application state.
+- IG gadgets are **read-only** — they do not modify cluster or application state.
 - Resolve the correct node name before running any IG command.
 - Always set `--timeout` to cap runtime. Prefer snapshot/top for quick checks; trace/profile for behavior over time.
 - For reproduction: launch a trace gadget first, then reproduce the problem. The debug pod persists after the gadget exits, so run `kubectl logs <debug-pod>` to retrieve the captured output afterward.

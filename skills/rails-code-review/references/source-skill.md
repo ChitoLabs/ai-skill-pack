@@ -67,38 +67,38 @@ Configuration → Routing → Controllers → Views → Models → Associations 
 **Critical checks to spot immediately:**
 
 ```ruby
-# N+1 - one query per record in a collection
+# N+1 — one query per record in a collection
 posts.each { |post| post.author.name }       # Bad
 posts.includes(:author).each { |post| post.author.name }  # Good
 
 # Privilege escalation via permit!
-params.require(:user).permit!                # Bad - never in production
+params.require(:user).permit!                # Bad — never in production
 params.require(:user).permit(:name, :email)  # Good
 ```
 
 **Always Critical (flag every occurrence as `Critical`):**
 
-- `params.require(...).permit!` - mass-assignment / privilege escalation
-- `html_safe` or `raw` applied to user-supplied content - XSS
+- `params.require(...).permit!` — mass-assignment / privilege escalation
+- `html_safe` or `raw` applied to user-supplied content — XSS
 - Missing authorization check on a sensitive action
-- **Business logic inside a controller action** - pricing, tax, discount, multi-step workflow, or any domain calculation inline. A controller action that does more than coordinate (call one service, render response) is `Critical`, not a Suggestion.
-- Unparameterized / string-interpolated SQL - injection
+- **Business logic inside a controller action** — pricing, tax, discount, multi-step workflow, or any domain calculation inline. A controller action that does more than coordinate (call one service, render response) is `Critical`, not a Suggestion.
+- Unparameterized / string-interpolated SQL — injection
 - Destructive migration without a safe path on large tables
 
 ## Severity levels
 
-Use **only** these labels (no High/Low, P0-P2, etc.): **`Critical`** | **`Suggestion`** | **`Nice to have`**.
+Use **only** these labels (no High/Low, P0–P2, etc.): **`Critical`** | **`Suggestion`** | **`Nice to have`**.
 
-- **Critical** - security, data loss, crash, or any **Always Critical** rule → block merge; re-diff after fix.
-- **Suggestion** - conventions / performance → fix in PR, or ticket if redesign is large.
-- **Nice to have** - small style or micro-optimization → optional for the author.
+- **Critical** — security, data loss, crash, or any **Always Critical** rule → block merge; re-diff after fix.
+- **Suggestion** — conventions / performance → fix in PR, or ticket if redesign is large.
+- **Nice to have** — small style or micro-optimization → optional for the author.
 
 ## Output style
 
 Group findings under `### Critical` / `### Suggestion` / `### Nice to have` (omit empty sections). Do not use a single flat list mixed by severity.
 
 ```text
-## Review - <PR title or area>
+## Review — <PR title or area>
 
 ### Critical
 - [path/to/file.rb:LINE] (Area) One-line risk. **Mitigation:** concrete next step.
@@ -109,10 +109,10 @@ Group findings under `### Critical` / `### Suggestion` / `### Nice to have` (omi
 ### Nice to have
 - …
 
-**Actions required:** <one line per severity level that appeared - e.g. Critical → block merge + re-review; Suggestion → …>
+**Actions required:** <one line per severity level that appeared — e.g. Critical → block merge + re-review; Suggestion → …>
 ```
 
-**Template rules:** each bullet is `[file:line] (Area)` + risk + **`Mitigation:`** (required). Tag **(Area)** from: Controllers, Routing, Views, Models, Queries, Migrations, Validations, Security, Caching, Jobs, Tests - across the whole review, cover **≥4** distinct areas when the diff touches that many surfaces.
+**Template rules:** each bullet is `[file:line] (Area)` + risk + **`Mitigation:`** (required). Tag **(Area)** from: Controllers, Routing, Views, Models, Queries, Migrations, Validations, Security, Caching, Jobs, Tests — across the whole review, cover **≥4** distinct areas when the diff touches that many surfaces.
 
 **Output validation:**
 - Verify all file paths in `[file:line]` references exist in the repository
@@ -122,7 +122,7 @@ Group findings under `### Critical` / `### Suggestion` / `### Nice to have` (omi
 - Validate that `Actions required:` section summarizes all findings accurately
 
 **If file references are invalid:**
-- Skip the finding and note: `[path/to/file.rb:LINE] - File not found in repository, skipping`
+- Skip the finding and note: `[path/to/file.rb:LINE] — File not found in repository, skipping`
 - Request clarification from the user before including in final review
 
 ## Re-review before merge
@@ -132,7 +132,7 @@ Re-diff the branch after **any** Critical fix (mandatory), after **>3** Suggesti
 ## Review anti-patterns (adds to checklist, does not replace it)
 
 - **Thin controller → fat model:** extract orchestration to **services** (PORO / `*.call`), not giant model methods.
-- **N+1 in dev:** small seeds hide N+1 - if associations run inside a loop, count queries (request spec, rack-mini-profiler, logs) instead of assuming “it’s fast here.”
+- **N+1 in dev:** small seeds hide N+1 — if associations run inside a loop, count queries (request spec, rack-mini-profiler, logs) instead of assuming “it’s fast here.”
 - **Hot-table migrations:** add concurrent indexes and heavy backfills in **separate** deploy steps from reversible schema changes (chain **rails-migration-safety** when unsure).
 - **Callbacks vs jobs:** persistence hooks only; external I/O and multi-step workflows belong in services/jobs with clear idempotency.
 

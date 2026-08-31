@@ -130,7 +130,7 @@ export const auth = betterAuth({
 });
 ```
 
-Tokens are single-use - deleted immediately after successful reset.
+Tokens are single-use — deleted immediately after successful reset.
 
 #### Session Revocation
 

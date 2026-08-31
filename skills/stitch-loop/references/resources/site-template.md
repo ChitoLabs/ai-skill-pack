@@ -76,8 +76,8 @@ Generate this using the `design-md` skill from an existing Stitch screen, or cre
 [Describe mood, density, aesthetic philosophy]
 
 ## 2. Color Palette & Roles
-- **[Descriptive Name]** (#hexcode) - [Functional role]
-- **[Descriptive Name]** (#hexcode) - [Functional role]
+- **[Descriptive Name]** (#hexcode) – [Functional role]
+- **[Descriptive Name]** (#hexcode) – [Functional role]
 
 ## 3. Typography Rules
 [Font family, weights, sizes, spacing]

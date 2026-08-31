@@ -5,9 +5,9 @@ license: Apache-2.0
 metadata:
   copyright: Copyright IBM Corp. 2026
   version: 0.0.1
-  author: midudev
+  author: hashicorp
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/refactor-module"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/refactor-module"
+  github_url: "https://github.com/hashicorp/agent-skills/tree/HEAD/plugins/terraform/skills/refactor-module"
 ---
 
 # Skill: Refactor Module
@@ -375,7 +375,7 @@ module "vpc" {
 
 ## Examples
 
-See [examples/](./examples/) directory for complete usage examples.
+The upstream skill points at an `examples/` directory for complete usage examples; that directory is not published in its repository, so the examples inline above are the available reference.
 ```
 
 ### 6. Testing

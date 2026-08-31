@@ -14,11 +14,11 @@ metadata:
 
 > **Prerequisite**: Ensure `ClerkProvider` wraps your app. See `clerk-setup` skill.
 >
-> **Version**: Check `package.json` for the SDK version - see `clerk` skill for the version table. This determines which custom flow references to use below.
+> **Version**: Check `package.json` for the SDK version — see `clerk` skill for the version table. This determines which custom flow references to use below.
 
 This skill covers two areas:
-1. **Custom authentication flows** - build your own sign-in/sign-up UI with hooks
-2. **Appearance customization** - theme, style, and brand Clerk's pre-built components
+1. **Custom authentication flows** — build your own sign-in/sign-up UI with hooks
+2. **Appearance customization** — theme, style, and brand Clerk's pre-built components
 
 ## What Do You Need?
 
@@ -113,7 +113,7 @@ import { dark } from '@clerk/ui/themes'
 
 > **Core 2 ONLY (skip if current SDK):** Themes are imported from `@clerk/themes` (install `@clerk/themes` instead of `@clerk/ui`). Example: `import { dark } from '@clerk/themes'`.
 
-**Theme stacking** - pass an array where the last theme takes precedence:
+**Theme stacking** — pass an array where the last theme takes precedence:
 
 ```typescript
 import { dark, neobrutalism } from '@clerk/ui/themes'
@@ -121,7 +121,7 @@ import { dark, neobrutalism } from '@clerk/ui/themes'
 <ClerkProvider appearance={{ theme: [dark, neobrutalism] }} />
 ```
 
-**CSS `color-scheme` support** - the default theme respects the CSS `color-scheme` property for automatic light/dark mode toggling.
+**CSS `color-scheme` support** — the default theme respects the CSS `color-scheme` property for automatic light/dark mode toggling.
 
 **Available themes:** `dark`, `neobrutalism`, `shadcn`, `simple`
 
@@ -166,7 +166,7 @@ Also import shadcn CSS in your global styles:
 | Logo not showing | Put `logoImageUrl` inside `options: {}` (or `layout: {}` in Core 2) |
 | Social buttons wrong | Add `socialButtonsVariant: 'iconButton'` in `options` (or `layout` in Core 2) |
 | Styling not working | Use appearance prop, not direct CSS (unless with bring-your-own-css) |
-| Hook returns different shape | Check SDK version - Core 2 and current have completely different `useSignIn`/`useSignUp` APIs |
+| Hook returns different shape | Check SDK version — Core 2 and current have completely different `useSignIn`/`useSignUp` APIs |
 
 ## See Also
 

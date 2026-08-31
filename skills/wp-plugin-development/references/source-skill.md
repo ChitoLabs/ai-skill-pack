@@ -50,7 +50,7 @@ Guidelines:
 - Keep admin-only code behind `is_admin()` (or admin hooks) to reduce frontend overhead.
 
 See:
-- `references/structure.md`
+- `structure.md`
 
 ### 2) Hooks and lifecycle (activation/deactivation/uninstall)
 
@@ -61,7 +61,7 @@ Activation hooks are fragile; follow guardrails:
 - uninstall should be explicit and safe (`uninstall.php` or `register_uninstall_hook`)
 
 See:
-- `references/lifecycle.md`
+- `lifecycle.md`
 
 ### 3) Settings and admin UI (Settings API)
 
@@ -71,7 +71,7 @@ Prefer Settings API for options:
 - sanitize via `sanitize_callback`
 
 See:
-- `references/settings-api.md`
+- `settings-api.md`
 
 ### 4) Security baseline (always)
 
@@ -83,7 +83,7 @@ Before shipping:
 - Use `$wpdb->prepare()` for SQL; avoid building SQL with string concatenation.
 
 See:
-- `references/security.md`
+- `security.md`
 
 ### 5) Data storage, cron, migrations (if needed)
 
@@ -92,7 +92,7 @@ See:
 - For schema changes, write upgrade routines and store schema version.
 
 See:
-- `references/data-and-cron.md`
+- `data-and-cron.md`
 
 ## Verification
 
@@ -111,7 +111,7 @@ See:
   - nonce present but missing capability checks; or sanitized input not escaped on output
 
 See:
-- `references/debugging.md`
+- `debugging.md`
 
 ## Escalation
 

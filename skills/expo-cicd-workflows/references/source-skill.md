@@ -24,19 +24,19 @@ Fetch these resources before generating or validating workflow files. Use the fe
 node {baseDir}/scripts/fetch.js <url>
 ```
 
-1. **JSON Schema** - https://api.expo.dev/v2/workflows/schema
+1. **JSON Schema** — https://api.expo.dev/v2/workflows/schema
    - It is NECESSARY to fetch this schema
    - Source of truth for validation
    - All job types and their required/optional parameters
    - Trigger types and configurations
    - Runner types, VM images, and all enums
 
-2. **Syntax Documentation** - https://raw.githubusercontent.com/expo/expo/refs/heads/main/docs/pages/eas/workflows/syntax.mdx
+2. **Syntax Documentation** — https://raw.githubusercontent.com/expo/expo/refs/heads/main/docs/pages/eas/workflows/syntax.mdx
    - Overview of workflow YAML syntax
    - Examples and English explanations
    - Expression syntax and contexts
 
-3. **Pre-packaged Jobs** - https://raw.githubusercontent.com/expo/expo/refs/heads/main/docs/pages/eas/workflows/pre-packaged-jobs.mdx
+3. **Pre-packaged Jobs** — https://raw.githubusercontent.com/expo/expo/refs/heads/main/docs/pages/eas/workflows/pre-packaged-jobs.mdx
    - Documentation for supported pre-packaged job types
    - Job-specific parameters and outputs
 
@@ -50,11 +50,11 @@ Workflows live in `.eas/workflows/*.yml` (or `.yaml`).
 
 A workflow file has these top-level keys:
 
-- `name` - Display name for the workflow
-- `on` - Triggers that start the workflow (at least one required)
-- `jobs` - Job definitions (required)
-- `defaults` - Shared defaults for all jobs
-- `concurrency` - Control parallel workflow runs
+- `name` — Display name for the workflow
+- `on` — Triggers that start the workflow (at least one required)
+- `jobs` — Job definitions (required)
+- `defaults` — Shared defaults for all jobs
+- `concurrency` — Control parallel workflow runs
 
 Consult the schema for the full specification of each section.
 
@@ -62,12 +62,12 @@ Consult the schema for the full specification of each section.
 
 Use `${{ }}` syntax for dynamic values. The schema defines available contexts:
 
-- `github.*` - GitHub repository and event information
-- `inputs.*` - Values from `workflow_dispatch` inputs
-- `needs.*` - Outputs and status from dependent jobs
-- `jobs.*` - Job outputs (alternative syntax)
-- `steps.*` - Step outputs within custom jobs
-- `workflow.*` - Workflow metadata
+- `github.*` — GitHub repository and event information
+- `inputs.*` — Values from `workflow_dispatch` inputs
+- `needs.*` — Outputs and status from dependent jobs
+- `jobs.*` — Job outputs (alternative syntax)
+- `steps.*` — Step outputs within custom jobs
+- `workflow.*` — Workflow metadata
 
 ## Generating Workflows
 

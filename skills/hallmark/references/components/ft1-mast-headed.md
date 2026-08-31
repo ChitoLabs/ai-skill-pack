@@ -11,3 +11,4 @@ A wordmark and tagline anchor a single horizontal band. Two or three small links
   <p class="links muted">Imprint * Privacy * Contact</p>
 </footer>
 ```
+

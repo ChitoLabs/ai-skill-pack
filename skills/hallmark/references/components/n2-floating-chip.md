@@ -12,3 +12,4 @@ A small fixed chip in a corner  -  wordmark + a single action ("Try it"). Doesn'
 ```css
 .nav-chip { position: fixed; top: var(--space-md); right: var(--space-md); display: inline-flex; gap: var(--space-md); padding: 0.5rem 0.75rem; background: var(--color-paper); border: 1px solid var(--color-rule); }
 ```
+

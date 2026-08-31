@@ -4,7 +4,7 @@ platform: Threads
 tags: threads, social-media, image-sizes, posts
 ---
 
-# Threads Image & Video Sizes - 2025
+# Threads Image & Video Sizes — 2025
 
 ## Profile
 

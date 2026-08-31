@@ -3,10 +3,10 @@ name: scikit-learn
 description: Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.
 license: Apache-2.0
 metadata:
-  author: wu-yc
+  author: davila7
   version: 0.1
   skills_sh_url: "https://skills.sh/davila7/claude-code-templates/scikit-learn"
-  github_url: "https://github.com/wu-yc/labclaw/tree/HEAD/skills/general/scikit-learn"
+  github_url: "https://github.com/davila7/claude-code-templates/tree/HEAD/cli-tool/components/skills/scientific/scikit-learn"
 ---
 
 # Scikit-learn
@@ -130,7 +130,7 @@ Comprehensive algorithms for classification and regression tasks.
 - Classification: Predicting discrete categories (spam detection, image classification, fraud detection)
 - Regression: Predicting continuous values (price prediction, demand forecasting)
 
-**See:** `references/supervised_learning.md` for detailed algorithm documentation, parameters, and usage examples.
+**See:** `supervised_learning.md` for detailed algorithm documentation, parameters, and usage examples.
 
 ### 2. Unsupervised Learning
 
@@ -153,7 +153,7 @@ Discover patterns in unlabeled data through clustering and dimensionality reduct
 - Reducing feature dimensions, exploratory data analysis
 - Topic modeling, image compression
 
-**See:** `references/unsupervised_learning.md` for detailed documentation.
+**See:** `unsupervised_learning.md` for detailed documentation.
 
 ### 3. Model Evaluation and Selection
 
@@ -180,7 +180,7 @@ Tools for robust model evaluation, cross-validation, and hyperparameter tuning.
 - Preventing overfitting through cross-validation
 - Understanding model behavior with learning curves
 
-**See:** `references/model_evaluation.md` for comprehensive metrics and tuning strategies.
+**See:** `model_evaluation.md` for comprehensive metrics and tuning strategies.
 
 ### 4. Data Preprocessing
 
@@ -213,7 +213,7 @@ Transform raw data into formats suitable for machine learning.
 - Handling missing data systematically
 - Creating non-linear features for linear models
 
-**See:** `references/preprocessing.md` for detailed preprocessing techniques.
+**See:** `preprocessing.md` for detailed preprocessing techniques.
 
 ### 5. Pipelines and Composition
 
@@ -237,7 +237,7 @@ Build reproducible, production-ready ML workflows.
 - When performing cross-validation with preprocessing steps
 - When hyperparameter tuning includes preprocessing parameters
 
-**See:** `references/pipelines_and_composition.md` for comprehensive pipeline patterns.
+**See:** `pipelines_and_composition.md` for comprehensive pipeline patterns.
 
 ## Example Scripts
 
@@ -275,7 +275,7 @@ This script demonstrates:
 This skill includes comprehensive reference files for deep dives into specific topics:
 
 ### Quick Reference
-**File:** `references/quick_reference.md`
+**File:** `quick_reference.md`
 - Common import patterns and installation instructions
 - Quick workflow templates for common tasks
 - Algorithm selection cheat sheets
@@ -283,7 +283,7 @@ This skill includes comprehensive reference files for deep dives into specific t
 - Performance optimization tips
 
 ### Supervised Learning
-**File:** `references/supervised_learning.md`
+**File:** `supervised_learning.md`
 - Linear models (regression and classification)
 - Support Vector Machines
 - Decision Trees and ensemble methods
@@ -291,7 +291,7 @@ This skill includes comprehensive reference files for deep dives into specific t
 - Algorithm selection guide
 
 ### Unsupervised Learning
-**File:** `references/unsupervised_learning.md`
+**File:** `unsupervised_learning.md`
 - All clustering algorithms with parameters and use cases
 - Dimensionality reduction techniques
 - Outlier and novelty detection
@@ -299,7 +299,7 @@ This skill includes comprehensive reference files for deep dives into specific t
 - Method selection guide
 
 ### Model Evaluation
-**File:** `references/model_evaluation.md`
+**File:** `model_evaluation.md`
 - Cross-validation strategies
 - Hyperparameter tuning methods
 - Classification, regression, and clustering metrics
@@ -307,7 +307,7 @@ This skill includes comprehensive reference files for deep dives into specific t
 - Best practices for model selection
 
 ### Preprocessing
-**File:** `references/preprocessing.md`
+**File:** `preprocessing.md`
 - Feature scaling and normalization
 - Encoding categorical variables
 - Missing value imputation
@@ -315,7 +315,7 @@ This skill includes comprehensive reference files for deep dives into specific t
 - Custom transformers
 
 ### Pipelines and Composition
-**File:** `references/pipelines_and_composition.md`
+**File:** `pipelines_and_composition.md`
 - Pipeline construction and usage
 - ColumnTransformer for mixed data types
 - FeatureUnion for parallel transformations

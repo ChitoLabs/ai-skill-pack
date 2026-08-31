@@ -9,3 +9,4 @@ The heading is a small caps phrase that emerges *inside* the body flow; no spati
 ```css
 .head-inline { font-variant-caps: all-small-caps; letter-spacing: 0.06em; font-weight: 500; }
 ```
+

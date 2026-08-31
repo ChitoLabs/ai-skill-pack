@@ -1,4 +1,4 @@
-// Social media platform specs - matches branding5.com/tools/social-media-cheat-sheet
+// Social media platform specs — matches branding5.com/tools/social-media-cheat-sheet
 // Updated 2025
 
 const platforms = [
@@ -51,7 +51,7 @@ const platforms = [
       ]},
       { name: 'Ads', sizes: [
         { name: 'Feed Ad', width: 1200, height: 628, aspect: '1.91:1' },
-        { name: 'Carousel Ad', width: 1080, height: 1080, aspect: '1:1', notes: '2-10 cards' },
+        { name: 'Carousel Ad', width: 1080, height: 1080, aspect: '1:1', notes: '2–10 cards' },
         { name: 'Right Column Ad', width: 1200, height: 628, aspect: '1.91:1' },
         { name: 'Marketplace Ad', width: 1200, height: 628, aspect: '1.91:1' }
       ]}
@@ -71,7 +71,7 @@ const platforms = [
       ]},
       { name: 'Ads', sizes: [
         { name: 'Single Image Ad', width: 1200, height: 675, aspect: '16:9' },
-        { name: 'Carousel Ad', width: 800, height: 800, aspect: '1:1', notes: '2-6 cards' },
+        { name: 'Carousel Ad', width: 800, height: 800, aspect: '1:1', notes: '2–6 cards' },
         { name: 'Website Card', width: 800, height: 418, aspect: '1.91:1' }
       ]}
     ]
@@ -96,7 +96,7 @@ const platforms = [
       ]},
       { name: 'Ads', sizes: [
         { name: 'Sponsored Content', width: 1200, height: 627, aspect: '1.91:1' },
-        { name: 'Carousel Ad', width: 1080, height: 1080, aspect: '1:1', notes: '2-10 cards' },
+        { name: 'Carousel Ad', width: 1080, height: 1080, aspect: '1:1', notes: '2–10 cards' },
         { name: 'Spotlight Ad Logo', width: 100, height: 100, aspect: '1:1' }
       ]}
     ]
@@ -112,7 +112,7 @@ const platforms = [
         { name: 'Video Thumbnail', width: 1080, height: 1920, aspect: '9:16', notes: 'Custom thumbnail from video' }
       ]},
       { name: 'Ads', sizes: [
-        { name: 'In-Feed Ad', width: 1080, height: 1920, aspect: '9:16', notes: '5-60 seconds' },
+        { name: 'In-Feed Ad', width: 1080, height: 1920, aspect: '9:16', notes: '5–60 seconds' },
         { name: 'TopView Ad', width: 1080, height: 1920, aspect: '9:16', notes: 'Up to 60 seconds' },
         { name: 'Spark Ad', width: 1080, height: 1920, aspect: '9:16', notes: 'Boosted organic content' }
       ]}
@@ -153,7 +153,7 @@ const platforms = [
       ]},
       { name: 'Ads', sizes: [
         { name: 'Promoted Pin', width: 1000, height: 1500, aspect: '2:3' },
-        { name: 'Carousel Ad', width: 1000, height: 1500, aspect: '2:3', notes: '2-5 cards' },
+        { name: 'Carousel Ad', width: 1000, height: 1500, aspect: '2:3', notes: '2–5 cards' },
         { name: 'Shopping Ad', width: 1000, height: 1500, aspect: '2:3' }
       ]}
     ]
@@ -163,7 +163,7 @@ const platforms = [
     categories: [
       { name: 'Content', sizes: [
         { name: 'Snap', width: 1080, height: 1920, aspect: '9:16' },
-        { name: 'Spotlight', width: 1080, height: 1920, aspect: '9:16', notes: '5-60 seconds' },
+        { name: 'Spotlight', width: 1080, height: 1920, aspect: '9:16', notes: '5–60 seconds' },
         { name: 'Story', width: 1080, height: 1920, aspect: '9:16' }
       ]},
       { name: 'Ads', sizes: [

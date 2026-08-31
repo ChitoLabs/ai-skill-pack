@@ -11,13 +11,13 @@ metadata:
 
 # Paid Ads: TikTok Ads
 
-Guides TikTok Ads setup, creative strategy, and optimization. TikTok excels at younger demographics (18-34) and viral-style video; use when your audience skews young and you have video creative capacity.
+Guides TikTok Ads setup, creative strategy, and optimization. TikTok excels at younger demographics (18–34) and viral-style video; use when your audience skews young and you have video creative capacity.
 
-**When invoking**: On **first use**, if helpful, open with 1-2 sentences on what this skill covers and why it matters, then provide the main output. On **subsequent use** or when the user asks to skip, go directly to the main output.
+**When invoking**: On **first use**, if helpful, open with 1–2 sentences on what this skill covers and why it matters, then provide the main output. On **subsequent use** or when the user asks to skip, go directly to the main output.
 
 ## Why TikTok
 
-- **Demographics**: 18-34; Gen Z and younger millennials
+- **Demographics**: 18–34; Gen Z and younger millennials
 - **Creative velocity**: Short-form; native feel; UGC-style performs well
 - **Cost**: Often lower CPM than Meta for reach
 - **Engagement**: High watch time; sound-on culture
@@ -26,14 +26,14 @@ Guides TikTok Ads setup, creative strategy, and optimization. TikTok excels at y
 
 | Format | Use |
 |--------|-----|
-| **In-Feed** | Native video; 9-15s or longer; primary format |
+| **In-Feed** | Native video; 9–15s or longer; primary format |
 | **TopView** | First impression; premium; awareness |
 | **Spark Ads** | Boost organic posts; native; creator partnership |
 | **Collection** | Product catalog; e-commerce |
 
 ## Creative Best Practices
 
-- **Hook (0-3s)**: Pattern interrupt; question; bold statement
+- **Hook (0–3s)**: Pattern interrupt; question; bold statement
 - **Vertical**: 9:16 for feed; native to platform
 - **Sound**: Music and captions matter; many watch with sound
 - **UGC-style**: Authentic; less polished often outperforms

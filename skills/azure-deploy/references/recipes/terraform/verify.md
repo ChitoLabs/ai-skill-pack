@@ -19,7 +19,7 @@ az resource list --resource-group $(terraform output -raw resource_group_name) -
 
 ## Report Results to User
 
-> ⛔ **MANDATORY** - You **MUST** present the deployed endpoint URLs to the user in your response.
+> ⛔ **MANDATORY** — You **MUST** present the deployed endpoint URLs to the user in your response.
 
 Extract endpoints from Terraform outputs:
 

@@ -10,7 +10,7 @@ Detailed specifications for each Excalidraw element type with visual examples an
 | `ellipse` | ○ | Emphasis, terminals, states | ✅ Yes |
 | `diamond` | ◇ | Decision points, choices | ✅ Yes |
 | `arrow` | → | Directional flow, relationships | ❌ No (use separate text) |
-| `line` | - | Connections, dividers | ❌ No |
+| `line` | — | Connections, dividers | ❌ No |
 | `text` | A | Labels, annotations, titles | ✅ (Its purpose) |
 
 ---

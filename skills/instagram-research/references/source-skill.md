@@ -47,7 +47,7 @@ RUN_FOLDER="instagram-research/$(date +%Y-%m-%d_%H%M%S)" && mkdir -p "$RUN_FOLDE
 ### 2. Fetch Content
 
 ```bash
-python3 .claude/skills/instagram-research/scripts/fetch_instagram.py \
+python3 scripts/fetch_instagram.py \
   --type reels \
   --days 30 \
   --limit 50 \
@@ -62,7 +62,7 @@ Parameters:
 ### 3. Identify Outliers
 
 ```bash
-python3 .claude/skills/instagram-research/scripts/analyze_posts.py \
+python3 scripts/analyze_posts.py \
   --input {RUN_FOLDER}/raw.json \
   --output {RUN_FOLDER}/outliers.json \
   --threshold 2.0
@@ -77,8 +77,10 @@ Output JSON contains:
 
 ### 4. Analyze Top Videos with AI
 
+`analyze_videos.py` belongs to the `video-content-analyzer` skill and is not bundled here. Run it from that skill when it is installed; otherwise skip this step or review the outliers manually.
+
 ```bash
-python3 .claude/skills/video-content-analyzer/scripts/analyze_videos.py \
+python3 scripts/analyze_videos.py \
   --input {RUN_FOLDER}/outliers.json \
   --output {RUN_FOLDER}/video-analysis.json \
   --platform instagram \
@@ -158,9 +160,9 @@ Focus on actionable insights. The "Top Performing Hooks" section with replicable
 Full pipeline:
 ```bash
 RUN_FOLDER="instagram-research/$(date +%Y-%m-%d_%H%M%S)" && mkdir -p "$RUN_FOLDER" && \
-python3 .claude/skills/instagram-research/scripts/fetch_instagram.py --type reels -o "$RUN_FOLDER/raw.json" && \
-python3 .claude/skills/instagram-research/scripts/analyze_posts.py -i "$RUN_FOLDER/raw.json" -o "$RUN_FOLDER/outliers.json" && \
-python3 .claude/skills/video-content-analyzer/scripts/analyze_videos.py -i "$RUN_FOLDER/outliers.json" -o "$RUN_FOLDER/video-analysis.json" -p instagram
+python3 scripts/fetch_instagram.py --type reels -o "$RUN_FOLDER/raw.json" && \
+python3 scripts/analyze_posts.py -i "$RUN_FOLDER/raw.json" -o "$RUN_FOLDER/outliers.json" && \
+python3 scripts/analyze_videos.py -i "$RUN_FOLDER/outliers.json" -o "$RUN_FOLDER/video-analysis.json" -p instagram
 ```
 
 Then read both JSON files and generate the report.

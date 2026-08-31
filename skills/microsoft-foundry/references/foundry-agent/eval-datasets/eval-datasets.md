@@ -1,4 +1,4 @@
-# Evaluation Datasets - Trace-to-Dataset Pipeline & Lifecycle Management
+# Evaluation Datasets — Trace-to-Dataset Pipeline & Lifecycle Management
 
 Manage the full lifecycle of evaluation datasets for a Foundry agent: harvesting production traces into the selected agent root's local `.foundry` cache, curating versioned test datasets, tracking evaluation quality over time, and syncing approved updates back to Foundry when needed.
 
@@ -36,7 +36,7 @@ USE FOR: create dataset from traces, harvest traces into dataset, build test dat
 | "Trace my evaluation lineage" / "Audit eval history" | [Eval Lineage](references/eval-lineage.md) |
 | "Generate eval dataset" / "Create seed dataset" / "Generate test cases for my agent" | [Generate Seed Dataset](references/generate-seed-dataset.md) |
 
-## Before Starting - Detect Current State
+## Before Starting — Detect Current State
 
 1. Resolve the target agent root, selected metadata file, and environment from `.foundry/agent-metadata*.yaml`.
 2. Confirm the selected environment's `projectEndpoint`, `agentName`, and observability settings.

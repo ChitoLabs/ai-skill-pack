@@ -1,0 +1,46 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `../assets/logo.png` - preserved source companion file.
+- `.cursor-plugin/plugin.json` - preserved source companion file.
+- `AGENTS.md` - preserved source companion file.
+- `README.md` - preserved source companion file.
+- `metadata.json` - preserved source companion file.
+- `rules/_contributing.md` - preserved source companion file.
+- `rules/_sections.md` - preserved source companion file.
+- `rules/_template.md` - preserved source companion file.
+- `rules/cluster-hash-tags.md` - preserved source companion file.
+- `rules/cluster-read-replicas.md` - preserved source companion file.
+- `rules/conn-blocking.md` - preserved source companion file.
+- `rules/conn-client-cache.md` - preserved source companion file.
+- `rules/conn-pipelining.md` - preserved source companion file.
+- `rules/conn-pooling.md` - preserved source companion file.
+- `rules/conn-timeouts.md` - preserved source companion file.
+- `rules/data-choose-structure.md` - preserved source companion file.
+- `rules/data-hash-field-expiry.md` - preserved source companion file.
+- `rules/data-incr.md` - preserved source companion file.
+- `rules/data-key-naming.md` - preserved source companion file.
+- `rules/data-transactions.md` - preserved source companion file.
+- `rules/json-partial-updates.md` - preserved source companion file.
+- `rules/json-vs-hash.md` - preserved source companion file.
+- `rules/observe-commands.md` - preserved source companion file.
+- `rules/observe-metrics.md` - preserved source companion file.
+- `rules/ram-limits.md` - preserved source companion file.
+- `rules/ram-ttl.md` - preserved source companion file.
+- `rules/rqe-dialect.md` - preserved source companion file.
+- `rules/rqe-field-types.md` - preserved source companion file.
+- `rules/rqe-index-creation.md` - preserved source companion file.
+- `rules/rqe-index-management.md` - preserved source companion file.
+- `rules/rqe-query-optimization.md` - preserved source companion file.
+- `rules/rqe-skip-initial-scan.md` - preserved source companion file.
+- `rules/security-acls.md` - preserved source companion file.
+- `rules/security-auth.md` - preserved source companion file.
+- `rules/security-network.md` - preserved source companion file.
+- `rules/semantic-cache-best-practices.md` - preserved source companion file.
+- `rules/semantic-cache-langcache-usage.md` - preserved source companion file.
+- `rules/stream-choosing-pattern.md` - preserved source companion file.
+- `rules/vector-algorithm-choice.md` - preserved source companion file.
+- `rules/vector-hybrid-search.md` - preserved source companion file.
+- `rules/vector-index-creation.md` - preserved source companion file.
+- `rules/vector-rag-pattern.md` - preserved source companion file.

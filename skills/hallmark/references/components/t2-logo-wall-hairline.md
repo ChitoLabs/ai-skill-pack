@@ -17,3 +17,4 @@ A row of customer logos, monochromatic, separated by hairline rules. No card box
 .logo-wall li { padding: var(--space-md); border-right: 1px solid var(--color-rule); display: grid; place-items: center; }
 .logo-wall img { filter: grayscale(1); opacity: 0.7; }
 ```
+

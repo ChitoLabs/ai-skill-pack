@@ -3,10 +3,10 @@ name: terraform-style-guide
 description: Generate Terraform HCL code following HashiCorp's official style conventions and best practices. Use when writing, reviewing, or generating Terraform configurations.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: hashicorp
   version: 0.1
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/terraform-style-guide"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/terraform-style-guide"
+  github_url: "https://github.com/hashicorp/agent-skills/tree/HEAD/plugins/terraform/skills/terraform-style-guide"
 ---
 
 # Terraform Style Guide

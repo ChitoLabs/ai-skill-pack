@@ -1,4 +1,4 @@
-# Claude API - cURL / Raw HTTP
+# Claude API — cURL / Raw HTTP
 
 Use these examples when the user needs raw HTTP requests or is working in a language without an official SDK.
 
@@ -28,7 +28,7 @@ curl https://api.anthropic.com/v1/messages \
 
 ### Parsing the response
 
-Use `jq` to extract fields from the JSON response. Do not use `grep`/`sed` -
+Use `jq` to extract fields from the JSON response. Do not use `grep`/`sed` —
 JSON strings can contain any character and regex parsing will break on quotes,
 escapes, or multi-line content.
 

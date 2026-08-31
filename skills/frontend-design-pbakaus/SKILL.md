@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,80 +51,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/reference/adapt.md` - preserved source companion file.
-- `references/reference/animate.md` - preserved source companion file.
-- `references/reference/audit.md` - preserved source companion file.
-- `references/reference/bolder.md` - preserved source companion file.
-- `references/reference/brand.md` - preserved source companion file.
-- `references/reference/clarify.md` - preserved source companion file.
-- `references/reference/codex.md` - preserved source companion file.
-- `references/reference/cognitive-load.md` - preserved source companion file.
-- `references/reference/color-and-contrast.md` - preserved source companion file.
-- `references/reference/colorize.md` - preserved source companion file.
-- `references/reference/craft.md` - preserved source companion file.
-- `references/reference/critique.md` - preserved source companion file.
-- `references/reference/delight.md` - preserved source companion file.
-- `references/reference/distill.md` - preserved source companion file.
-- `references/reference/document.md` - preserved source companion file.
-- `references/reference/extract.md` - preserved source companion file.
-- `references/reference/harden.md` - preserved source companion file.
-- `references/reference/heuristics-scoring.md` - preserved source companion file.
-- `references/reference/interaction-design.md` - preserved source companion file.
-- `references/reference/layout.md` - preserved source companion file.
-- `references/reference/live.md` - preserved source companion file.
-- `references/reference/motion-design.md` - preserved source companion file.
-- `references/reference/onboard.md` - preserved source companion file.
-- `references/reference/optimize.md` - preserved source companion file.
-- `references/reference/overdrive.md` - preserved source companion file.
-- `references/reference/personas.md` - preserved source companion file.
-- `references/reference/polish.md` - preserved source companion file.
-- `references/reference/product.md` - preserved source companion file.
-- `references/reference/quieter.md` - preserved source companion file.
-- `references/reference/responsive-design.md` - preserved source companion file.
-- `references/reference/shape.md` - preserved source companion file.
-- `references/reference/spatial-design.md` - preserved source companion file.
-- `references/reference/teach.md` - preserved source companion file.
-- `references/reference/typeset.md` - preserved source companion file.
-- `references/reference/typography.md` - preserved source companion file.
-- `references/reference/ux-writing.md` - preserved source companion file.
-- `scripts/cleanup-deprecated.mjs` - preserved source companion file.
-- `scripts/command-metadata.json` - preserved source companion file.
-- `scripts/critique-storage.mjs` - preserved source companion file.
-- `scripts/design-parser.mjs` - preserved source companion file.
-- `scripts/detect-csp.mjs` - preserved source companion file.
-- `scripts/detect.mjs` - preserved source companion file.
-- `scripts/detector/browser/injected/index.mjs` - preserved source companion file.
-- `scripts/detector/cli/main.mjs` - preserved source companion file.
-- `scripts/detector/detect-antipatterns-browser.js` - preserved source companion file.
-- `scripts/detector/detect-antipatterns.mjs` - preserved source companion file.
-- `scripts/detector/engines/browser/detect-url.mjs` - preserved source companion file.
-- `scripts/detector/engines/regex/detect-text.mjs` - preserved source companion file.
-- `scripts/detector/engines/static-html/css-cascade.mjs` - preserved source companion file.
-- `scripts/detector/engines/static-html/detect-html.mjs` - preserved source companion file.
-- `scripts/detector/engines/visual/screenshot-contrast.mjs` - preserved source companion file.
-- `scripts/detector/findings.mjs` - preserved source companion file.
-- `scripts/detector/node/file-system.mjs` - preserved source companion file.
-- `scripts/detector/profile/profiler.mjs` - preserved source companion file.
-- `scripts/detector/registry/antipatterns.mjs` - preserved source companion file.
-- `scripts/detector/rules/checks.mjs` - preserved source companion file.
-- `scripts/detector/shared/color.mjs` - preserved source companion file.
-- `scripts/detector/shared/constants.mjs` - preserved source companion file.
-- `scripts/detector/shared/page.mjs` - preserved source companion file.
-- `scripts/impeccable-paths.mjs` - preserved source companion file.
-- `scripts/is-generated.mjs` - preserved source companion file.
-- `scripts/live-accept.mjs` - preserved source companion file.
-- `scripts/live-browser-session.js` - preserved source companion file.
-- `scripts/live-browser.js` - preserved source companion file.
-- `scripts/live-complete.mjs` - preserved source companion file.
-- `scripts/live-completion.mjs` - preserved source companion file.
-- `scripts/live-inject.mjs` - preserved source companion file.
-- `scripts/live-poll.mjs` - preserved source companion file.
-- `scripts/live-resume.mjs` - preserved source companion file.
-- `scripts/live-server.mjs` - preserved source companion file.
-- `scripts/live-session-store.mjs` - preserved source companion file.
-- `scripts/live-status.mjs` - preserved source companion file.
-- `scripts/live-wrap.mjs` - preserved source companion file.
-- `scripts/live.mjs` - preserved source companion file.
-- `scripts/load-context.mjs` - preserved source companion file.
-- `scripts/modern-screenshot.umd.js` - preserved source companion file.
-- `scripts/pin.mjs` - preserved source companion file.
+- `references/` - 36 preserved source companion files.
+- `scripts/` - 41 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

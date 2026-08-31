@@ -1,4 +1,4 @@
-# Session Replay - Sentry React SDK
+# Session Replay — Sentry React SDK
 
 > Minimum SDK: `@sentry/react` ≥7.27.0+  
 > `replayCanvasIntegration()`: requires `@sentry/react` ≥7.98.0+
@@ -9,7 +9,7 @@
 
 ## Setup
 
-Session Replay is bundled in `@sentry/react` - no separate package needed.
+Session Replay is bundled in `@sentry/react` — no separate package needed.
 
 ```typescript
 // src/instrument.ts
@@ -35,14 +35,14 @@ Sentry.init({
 
 | Context | Reason |
 |---------|--------|
-| Node.js / Express / Next.js server | No DOM - DOM recording APIs don't exist |
+| Node.js / Express / Next.js server | No DOM — DOM recording APIs don't exist |
 | Web Workers / Service Workers | No DOM access |
-| Next.js `_document.tsx` or `instrumentation.ts` (server) | Server-side code - use client-only init |
+| Next.js `_document.tsx` or `instrumentation.ts` (server) | Server-side code — use client-only init |
 | Electron main process | Only the renderer process is appropriate |
 | Browser extensions | Not a supported use case |
 | CI/build pipelines | No user sessions to record |
 
-For **Next.js App Router**, add replay only in `instrumentation-client.ts` or `sentry.client.config.ts` - never in server instrumentation.
+For **Next.js App Router**, add replay only in `instrumentation-client.ts` or `sentry.client.config.ts` — never in server instrumentation.
 
 ---
 
@@ -52,8 +52,8 @@ For **Next.js App Router**, add replay only in `instrumentation-client.ts` or `s
 
 | Option | Type | Default | Behavior |
 |--------|------|---------|----------|
-| `replaysSessionSampleRate` | `number` (0-1) | `0` | Fraction of all sessions recorded continuously from start |
-| `replaysOnErrorSampleRate` | `number` (0-1) | `0` | Fraction of sessions captured when an error occurs - flushes ~60s of buffer, then continues recording |
+| `replaysSessionSampleRate` | `number` (0–1) | `0` | Fraction of all sessions recorded continuously from start |
+| `replaysOnErrorSampleRate` | `number` (0–1) | `0` | Fraction of sessions captured when an error occurs — flushes ~60s of buffer, then continues recording |
 
 ### How Session and Error Sampling Interact
 
@@ -64,7 +64,7 @@ Session starts
 replaysSessionSampleRate > 0?
       │
       ├─ YES → Roll dice against replaysSessionSampleRate
-      │           ├─ WIN  → Record continuously (session mode) - streamed in real-time chunks
+      │           ├─ WIN  → Record continuously (session mode) — streamed in real-time chunks
       │           └─ LOSE → Buffer last 60s in memory
       │
       └─ NO  → Always buffer last 60s in memory
@@ -102,7 +102,7 @@ Sentry.init({
 
 ---
 
-## `replayIntegration()` - All Constructor Options
+## `replayIntegration()` — All Constructor Options
 
 ```typescript
 Sentry.replayIntegration({
@@ -123,8 +123,8 @@ Sentry.replayIntegration({
   maskFn: (text) => '*'.repeat(text.length),
 
   // ── NETWORK CAPTURE ────────────────────────────────────────────
-  networkDetailAllowUrls: [],       // (string|RegExp)[] - enable body/header capture
-  networkDetailDenyUrls: [],        // (string|RegExp)[] - override allowlist
+  networkDetailAllowUrls: [],       // (string|RegExp)[] — enable body/header capture
+  networkDetailDenyUrls: [],        // (string|RegExp)[] — override allowlist
   networkCaptureBodies: true,       // capture req/res bodies for allowed URLs
   networkRequestHeaders: [],        // extra request headers to capture
   networkResponseHeaders: [],       // extra response headers to capture
@@ -162,11 +162,11 @@ With zero configuration, Replay ships in **maximum privacy mode**:
 
 | Data type | Default behavior |
 |-----------|-----------------|
-| All text content | ✅ Masked - replaced with `*` characters (length-preserving) |
+| All text content | ✅ Masked — replaced with `*` characters (length-preserving) |
 | All `<input>` values | ✅ Masked |
-| `<img>`, `<video>`, `<audio>`, `<svg>`, `<picture>`, `<embed>`, `<map>`, `<object>` | ✅ Blocked - replaced with same-size placeholder rectangle |
-| Network request/response bodies | ❌ Not captured - opt-in required |
-| Network headers beyond Content-Type/Length/Accept | ❌ Not captured - opt-in required |
+| `<img>`, `<video>`, `<audio>`, `<svg>`, `<picture>`, `<embed>`, `<map>`, `<object>` | ✅ Blocked — replaced with same-size placeholder rectangle |
+| Network request/response bodies | ❌ Not captured — opt-in required |
+| Network headers beyond Content-Type/Length/Accept | ❌ Not captured — opt-in required |
 
 ### The Three Privacy Primitives
 
@@ -176,7 +176,7 @@ With zero configuration, Replay ships in **maximum privacy mode**:
 | **Block** | Replaces entire element with opaque placeholder box | Solid grey/black rectangle same size as element |
 | **Ignore** | Suppresses interaction events (clicks, keystrokes) on the element | Element visible; no input captured |
 
-**Mask vs Block distinction:** Masked elements show their layout (you see the form structure, field labels, button positions) but no readable text. Blocked elements are completely opaque - you can't see anything inside. Use mask for forms where structure matters; use block for images, payment widgets, or entire sensitive sections.
+**Mask vs Block distinction:** Masked elements show their layout (you see the form structure, field labels, button positions) but no readable text. Blocked elements are completely opaque — you can't see anything inside. Use mask for forms where structure matters; use block for images, payment widgets, or entire sensitive sections.
 
 ### `maskAllText` and `maskAllInputs`
 
@@ -195,7 +195,7 @@ Sentry.replayIntegration({
 });
 ```
 
-### `mask` and `unmask` - Selector-Based Text Masking
+### `mask` and `unmask` — Selector-Based Text Masking
 
 `mask`: Additional CSS selectors whose text is masked **in addition to** `maskAllText`.
 
@@ -218,7 +218,7 @@ Sentry.replayIntegration({
 > });
 > ```
 
-### `block` and `unblock` - Selector-Based Element Blocking
+### `block` and `unblock` — Selector-Based Element Blocking
 
 `block`: Additional CSS selectors to replace with a placeholder, on top of `blockAllMedia`.
 
@@ -234,14 +234,14 @@ Sentry.replayIntegration({
 });
 ```
 
-> **v7 → v8 migration:** Same as unmask - in v8, `unblock` defaults to `[]`. To restore:
+> **v7 → v8 migration:** Same as unmask — in v8, `unblock` defaults to `[]`. To restore:
 > ```typescript
 > Sentry.replayIntegration({
 >   unblock: ['.sentry-unblock', '[data-sentry-unblock]'],
 > });
 > ```
 
-### `ignore` - Input Event Suppression
+### `ignore` — Input Event Suppression
 
 Suppresses keypress and input value events on specific fields. The element remains visible in the replay; the SDK just doesn't record what the user types.
 
@@ -251,7 +251,7 @@ Sentry.replayIntegration({
 });
 ```
 
-### HTML Attribute API - Inline Privacy Control in JSX
+### HTML Attribute API — Inline Privacy Control in JSX
 
 Apply privacy controls directly in your React components without touching SDK config:
 
@@ -270,7 +270,7 @@ Apply privacy controls directly in your React components without touching SDK co
 // Safe to display even with maskAllText: true:
 <h1 data-sentry-unmask>Welcome to Our App</h1>
 
-// Block entire subtree - shows as grey box in replay:
+// Block entire subtree — shows as grey box in replay:
 <div data-sentry-block>
   <CreditCardForm />
 </div>
@@ -284,14 +284,14 @@ Apply privacy controls directly in your React components without touching SDK co
 
 > **SDK v8 note:** For the `data-sentry-*` attributes to be recognized automatically, they are built into the SDK's default selector lists. The class-based equivalents (`.sentry-mask`, etc.) require explicit listing in `mask`/`unmask`/`block`/`unblock` options in v8.
 
-### `maskFn` - Custom Text Replacement Function
+### `maskFn` — Custom Text Replacement Function
 
 Controls how masked text is transformed. Receives the original string, returns the replacement:
 
 ```typescript
 Sentry.replayIntegration({
   maskFn: (text) => {
-    // Default behavior - asterisks preserving length:
+    // Default behavior — asterisks preserving length:
     return '*'.repeat(text.length);
 
     // Fixed placeholder:
@@ -308,7 +308,7 @@ Sentry.replayIntegration({
 
 ### Three Privacy Configuration Modes
 
-**Mode 1 - Maximum Privacy (default):** Mask everything, reveal nothing
+**Mode 1 — Maximum Privacy (default):** Mask everything, reveal nothing
 
 ```typescript
 Sentry.replayIntegration({
@@ -318,7 +318,7 @@ Sentry.replayIntegration({
 });
 ```
 
-**Mode 2 - Selective Masking (balanced):** Show most UI, hide sensitive fields
+**Mode 2 — Selective Masking (balanced):** Show most UI, hide sensitive fields
 
 ```typescript
 Sentry.replayIntegration({
@@ -330,7 +330,7 @@ Sentry.replayIntegration({
 });
 ```
 
-**Mode 3 - Whitelist (mask-all, unmask-approved):** Start fully masked, allow-list safe UI
+**Mode 3 — Whitelist (mask-all, unmask-approved):** Start fully masked, allow-list safe UI
 
 ```typescript
 Sentry.replayIntegration({
@@ -345,10 +345,10 @@ Sentry.replayIntegration({
 
 Masking operates on the **rendered DOM**, not React component hierarchy. Key behaviors:
 
-- Masking **cascades** through the DOM tree - a `data-sentry-mask` on a parent masks all child text nodes
-- Blocking a parent **hides everything inside** - the entire subtree is replaced with a placeholder box
+- Masking **cascades** through the DOM tree — a `data-sentry-mask` on a parent masks all child text nodes
+- Blocking a parent **hides everything inside** — the entire subtree is replaced with a placeholder box
 - `unmask`/`unblock` on a child **overrides** the parent's mask/block for that specific subtree
-- React's virtual DOM is invisible to Replay - it observes via `MutationObserver` on the real DOM
+- React's virtual DOM is invisible to Replay — it observes via `MutationObserver` on the real DOM
 - Conditionally rendered elements (e.g., toggled modals) are captured when they appear in the DOM
 
 ```tsx
@@ -371,7 +371,7 @@ Masking operates on the **rendered DOM**, not React component hierarchy. Key beh
 </div>
 ```
 
-### `beforeAddRecordingEvent` - Custom Event Scrubbing
+### `beforeAddRecordingEvent` — Custom Event Scrubbing
 
 Available since v7.53.0. Intercepts every recording event before it is buffered. Return `null` to drop, return the event (mutated or not) to keep:
 
@@ -442,7 +442,7 @@ For every `fetch` and `XHR` request, without any configuration:
 | Request/response body content | ❌ No |
 | Custom headers | ❌ No |
 
-### `networkDetailAllowUrls` - Enable Body and Header Capture
+### `networkDetailAllowUrls` — Enable Body and Header Capture
 
 Body and header capture is **opt-in** and only activates for URLs that match this list:
 
@@ -460,7 +460,7 @@ Sentry.replayIntegration({
 
 > **Security:** Only allowlist your own APIs. Never include third-party payment processors, auth providers, or analytics endpoints.
 
-### `networkDetailDenyUrls` - Exclude Sensitive Endpoints
+### `networkDetailDenyUrls` — Exclude Sensitive Endpoints
 
 Takes precedence over `networkDetailAllowUrls`. Matching URLs never have bodies/headers captured:
 
@@ -514,7 +514,7 @@ Sentry.replayIntegration({
     'Cache-Control',
     'X-Request-ID',
     'X-Correlation-ID',
-    // ⚠️ Avoid: 'Authorization', 'Cookie' - contain credentials
+    // ⚠️ Avoid: 'Authorization', 'Cookie' — contain credentials
   ],
   networkResponseHeaders: [
     'Referrer-Policy',
@@ -570,7 +570,7 @@ const httpLink = new HttpLink({
 
 ## Canvas Recording
 
-### Setup - `replayCanvasIntegration()`
+### Setup — `replayCanvasIntegration()`
 
 Canvas elements are **not** recorded by default. Add a second integration:
 
@@ -592,14 +592,14 @@ Sentry.init({
 
 ### Standard 2D Canvas
 
-For standard 2D canvas, the default configuration records automatically - no extra code needed. The integration periodically snapshots the canvas content.
+For standard 2D canvas, the default configuration records automatically — no extra code needed. The integration periodically snapshots the canvas content.
 
-### 3D / WebGL Canvas - Manual Snapshotting
+### 3D / WebGL Canvas — Manual Snapshotting
 
 WebGL requires `enableManualSnapshot: true` because:
 
 1. The integration must enable `preserveDrawingBuffer` on the WebGL context to read pixel data
-2. `preserveDrawingBuffer` prevents the GPU from discarding draw buffers after compositing - this can degrade performance on complex scenes
+2. `preserveDrawingBuffer` prevents the GPU from discarding draw buffers after compositing — this can degrade performance on complex scenes
 3. Manual mode lets you control exactly when snapshots are taken
 
 ```typescript
@@ -669,7 +669,7 @@ Your CDN must respond with `Access-Control-Allow-Origin: *` (or your specific or
 Replay adds ~50 KB (gzipped) to your initial bundle. If initial page load performance is critical, defer loading until after the first render:
 
 ```typescript
-// src/instrument.ts - initialize without replay
+// src/instrument.ts — initialize without replay
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_DSN,
   integrations: [],   // no replay at startup
@@ -705,7 +705,7 @@ async function enableReplay() {
 
 ## Advanced Configuration
 
-### `beforeErrorSampling` - Control Which Errors Trigger Replay
+### `beforeErrorSampling` — Control Which Errors Trigger Replay
 
 Only relevant in buffer mode (`replaysOnErrorSampleRate > 0`). Called before the dice roll for error-based sampling. Return `false` to prevent the error from triggering a replay capture:
 
@@ -774,7 +774,7 @@ Sentry.replayIntegration({
 });
 ```
 
-### `workerUrl` - Self-Host the Compression Worker
+### `workerUrl` — Self-Host the Compression Worker
 
 By default, Sentry creates the compression worker via a `blob:` URL. If your CSP blocks `blob:`, self-host the worker:
 
@@ -922,7 +922,7 @@ function ReplayController() {
 
 ### What Is a Session vs a Segment
 
-- **Replay Session:** The full recording from start to end - one replay visible in the Sentry UI. Has a unique `replayId`.
+- **Replay Session:** The full recording from start to end — one replay visible in the Sentry UI. Has a unique `replayId`.
 - **Segment:** A chunk of recording data transmitted to the server. Large recordings are split into segments sent in sequence and reassembled server-side.
 
 One session = multiple segments streamed over time.
@@ -945,7 +945,7 @@ An "interaction" that resets the idle timer = mouse click OR browser navigation 
 |--------|-------------|-------------|
 | Activated when | `replaysSessionSampleRate > 0` AND session is sampled | Only `replaysOnErrorSampleRate > 0` |
 | Data transmission | Continuous real-time chunks to Sentry | Held in memory; sent only on error |
-| Memory usage | Low (continuously streamed out) | ~2-5 MB in RAM (last ~60 seconds) |
+| Memory usage | Low (continuously streamed out) | ~2–5 MB in RAM (last ~60 seconds) |
 | What appears in Sentry | Full session from start | 60s before error + rest of session |
 | Idle timeout | 15 minutes | 15 minutes |
 | Max duration | `maxReplayDuration` | `maxReplayDuration` |
@@ -954,8 +954,8 @@ An "interaction" that resets the idle timer = mouse click OR browser navigation 
 
 1. Error occurs in the browser
 2. Sentry SDK captures the error event
-3. `beforeErrorSampling(event)` is called - `return false` to abort
-4. Dice roll against `replaysOnErrorSampleRate` - fail → buffer discarded
+3. `beforeErrorSampling(event)` is called — `return false` to abort
+4. Dice roll against `replaysOnErrorSampleRate` — fail → buffer discarded
 5. Pass → buffered ~60 seconds of DOM events sent to Sentry
 6. Recording continues in session mode for the remainder of the session
 7. Error event is linked to the replay via `replayId` tag
@@ -980,20 +980,20 @@ An "interaction" that resets the idle timer = mouse click OR browser navigation 
 
 | Operation | Performance impact |
 |-----------|------------------|
-| DOM observation (MutationObserver) | Low - reads, doesn't write |
+| DOM observation (MutationObserver) | Low — reads, doesn't write |
 | Compression | Off main thread via Web Worker |
-| Network interception (fetch/XHR) | Low - thin wrappers |
-| Canvas recording (2D) | Moderate - pixel buffer reads |
-| Canvas recording (WebGL with `preserveDrawingBuffer`) | High - prevents GPU buffer discard |
-| High DOM mutation rate | High - can trigger `mutationLimit` stop |
+| Network interception (fetch/XHR) | Low — thin wrappers |
+| Canvas recording (2D) | Moderate — pixel buffer reads |
+| Canvas recording (WebGL with `preserveDrawingBuffer`) | High — prevents GPU buffer discard |
+| High DOM mutation rate | High — can trigger `mutationLimit` stop |
 
-**Errors-only mode has near-zero overhead** when no error occurs - the in-memory buffer (~2-5 MB) is the only cost.
+**Errors-only mode has near-zero overhead** when no error occurs — the in-memory buffer (~2–5 MB) is the only cost.
 
 ---
 
 ## CSP Requirements
 
-Without correct CSP headers, Replay **fails silently** - no error in the console, no replay recorded.
+Without correct CSP headers, Replay **fails silently** — no error in the console, no replay recorded.
 
 ### Required Directives
 
@@ -1048,7 +1048,7 @@ connect-src 'self';    ← all requests go to your own origin
 | Images missing in replay | External images blocked by CORS | Add `sentry.io` to CDN CORS policy for image assets |
 | Network bodies always empty | URL not in `networkDetailAllowUrls` | Add your API domain to the allowlist |
 | Network bodies empty (Apollo) | AbortController cancels before Replay reads | Don't abort on component unmount; use route-level cancellation |
-| Network body truncated | > 150,000 characters | Expected behavior - limit is not configurable |
+| Network body truncated | > 150,000 characters | Expected behavior — limit is not configurable |
 | Canvas not recording | Not added by default | Add `replayCanvasIntegration()` to `integrations` array |
 | Canvas SecurityError | Cross-origin media taints canvas | Add `crossOrigin="anonymous"` to `<img>`/`<video>` and enable CORS on CDN |
 | WebGL canvas blank in replay | `preserveDrawingBuffer` not enabled | Use `enableManualSnapshot: true` on `replayCanvasIntegration()` |

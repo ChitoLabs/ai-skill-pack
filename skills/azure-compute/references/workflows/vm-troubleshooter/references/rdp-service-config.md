@@ -26,9 +26,9 @@ az vm user reset-remote-desktop --name <vm-name> -g <resource-group>
 az vm run-command invoke --name <vm-name> -g <resource-group> \
   --command-id RunPowerShellScript --scripts "Get-Service TermService | Select-Object Status, StartType"
 
-# Restart VM (if RDP service is unrecoverable - requires user approval)
+# Restart VM (if RDP service is unrecoverable — requires user approval)
 az vm restart --name <vm-name> -g <resource-group>
 
-# Redeploy VM (moves to new host - last resort, requires user approval)
+# Redeploy VM (moves to new host — last resort, requires user approval)
 az vm redeploy --name <vm-name> -g <resource-group>
 ```

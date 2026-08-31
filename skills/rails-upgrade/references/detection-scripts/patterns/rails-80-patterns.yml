@@ -20,7 +20,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "app/models/"
-      explanation: "Rails 8.0 removes the keyword-arguments form of enum (`enum status: { ... }, _prefix: true`). The 7.0 / 7.1 hash form (`enum :status, { ... }, prefix: true`) is now the only supported syntax. activerecord/CHANGELOG.md: 'Remove deprecated support for defining `enum` with keyword arguments.' Models still using the old form raise ArgumentError on class load - the app fails to boot"
+      explanation: "Rails 8.0 removes the keyword-arguments form of enum (`enum status: { ... }, _prefix: true`). The 7.0 / 7.1 hash form (`enum :status, { ... }, prefix: true`) is now the only supported syntax. activerecord/CHANGELOG.md: 'Remove deprecated support for defining `enum` with keyword arguments.' Models still using the old form raise ArgumentError on class load — the app fails to boot"
       fix: "Convert to the explicit form: `enum :status, { active: 0, archived: 1 }, prefix: true`. Mechanical migration; no runtime behavior change once converted"
       variable_name: "ENUM_KWARGS"
 
@@ -139,7 +139,7 @@ upgrade_findings:
         - "Gemfile"
         - "config/"
         - "app/assets/"
-      explanation: "Rails 8.0 makes Propshaft the default asset pipeline for new apps, but Sprockets stays a first-class citizen. Existing apps can keep Sprockets at 8.0 with no changes - sprockets-rails continues to ship and work. Migrating from Sprockets to Propshaft is a separate, opt-in modernization, not a fix-before-bump"
+      explanation: "Rails 8.0 makes Propshaft the default asset pipeline for new apps, but Sprockets stays a first-class citizen. Existing apps can keep Sprockets at 8.0 with no changes — sprockets-rails continues to ship and work. Migrating from Sprockets to Propshaft is a separate, opt-in modernization, not a fix-before-bump"
       fix: "No action required for the version bump. Optionally migrate to Propshaft as a separate effort if you want the new defaults (faster, no preprocessing pipeline). See https://github.com/rails/propshaft"
       variable_name: "SPROCKETS"
 
@@ -151,7 +151,7 @@ upgrade_findings:
         - "config/environments/"
         - "config/initializers/"
       explanation: "config.assets.* keys (compile, css_compressor, js_compressor, paths, version, debug, quiet, precompile) are Sprockets-era. They keep working at 8.0 if you stay on Sprockets. They become irrelevant only if you migrate to Propshaft, which is optional"
-      fix: "No action required for the version bump if you keep Sprockets. If migrating to Propshaft later, audit each key - Propshaft removes most of these knobs (no compilation step, no compressor configuration; minification is handled at the asset-source layer)"
+      fix: "No action required for the version bump if you keep Sprockets. If migrating to Propshaft later, audit each key — Propshaft removes most of these knobs (no compilation step, no compressor configuration; minification is handled at the asset-source layer)"
       variable_name: "ASSET_CONFIG"
 
     - name: "javascript_include_tag (sprockets-style)"

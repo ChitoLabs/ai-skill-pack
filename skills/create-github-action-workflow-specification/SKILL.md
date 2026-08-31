@@ -16,6 +16,19 @@ Create a comprehensive specification for the GitHub Actions workflow: `${input:W
 
 This specification serves as a specification for the workflow's behavior, requirements, and constraints. It must be implementation-agnostic, focusing on **what** the workflow accomplishes rather than **how** it's implemented.
 
+## Activation Contract
+
+Use this skill when the user request matches `create-github-action-workflow-specification` or one of its declared triggers: specify an existing GitHub Actions workflow for maintenance or AI consumption. Produce a formal workflow specification from repository evidence.
+
+Read the sections below before acting. This file is the portable runtime contract; the sections that follow carry the source-specific workflow.
+
+## Hard Rules
+
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+
 ## AI-Optimized Requirements
 
 - **Token Efficiency**: Use concise language without sacrificing clarity

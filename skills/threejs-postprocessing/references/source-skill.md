@@ -3,10 +3,10 @@ name: threejs-postprocessing
 description: Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-postprocessing"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-postprocessing"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-postprocessing"
 ---
 
 # Three.js Post-Processing

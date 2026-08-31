@@ -85,8 +85,8 @@ User asks for Clerk in Swift/iOS
 ## Flow References
 
 After flow type is known, load exactly one:
-- Prebuilt flow: [references/prebuilt.md](references/prebuilt.md)
-- Custom flow: [references/custom.md](references/custom.md)
+- Prebuilt flow: [references/prebuilt.md](prebuilt.md)
+- Custom flow: [references/custom.md](custom.md)
 
 Do not blend the two references in a single implementation unless the developer explicitly asks for a hybrid approach.
 

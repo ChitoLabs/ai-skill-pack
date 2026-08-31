@@ -1,4 +1,4 @@
-# Claude API - Python
+# Claude API — Python
 
 ## Installation
 
@@ -111,11 +111,11 @@ response = client.messages.create(
 
 ## Prompt Caching
 
-Cache large context to reduce costs (up to 90% savings). **Caching is a prefix match** - any byte change anywhere in the prefix invalidates everything after it. For placement patterns, architectural guidance (frozen system prompt, deterministic tool order, where to put volatile content), and the silent-invalidator audit checklist, read `shared/prompt-caching.md`.
+Cache large context to reduce costs (up to 90% savings). **Caching is a prefix match** — any byte change anywhere in the prefix invalidates everything after it. For placement patterns, architectural guidance (frozen system prompt, deterministic tool order, where to put volatile content), and the silent-invalidator audit checklist, read `shared/prompt-caching.md`.
 
 ### Automatic Caching (Recommended)
 
-Use top-level `cache_control` to automatically cache the last cacheable block in the request - no need to annotate individual content blocks:
+Use top-level `cache_control` to automatically cache the last cacheable block in the request — no need to annotate individual content blocks:
 
 ```python
 response = client.messages.create(
@@ -164,7 +164,7 @@ print(response.usage.cache_read_input_tokens)      # tokens served from cache (~
 print(response.usage.input_tokens)                 # uncached tokens (full cost)
 ```
 
-If `cache_read_input_tokens` is zero across repeated identical-prefix requests, a silent invalidator is at work - `datetime.now()` or a UUID in the system prompt, unsorted `json.dumps()`, or a varying tool set. See `shared/prompt-caching.md` for the full audit table.
+If `cache_read_input_tokens` is zero across repeated identical-prefix requests, a silent invalidator is at work — `datetime.now()` or a UUID in the system prompt, unsorted `json.dumps()`, or a varying tool set. See `shared/prompt-caching.md` for the full audit table.
 
 ---
 
@@ -224,7 +224,7 @@ except anthropic.APIConnectionError:
 
 ## Multi-Turn Conversations
 
-The API is stateless - send the full conversation history each time.
+The API is stateless — send the full conversation history each time.
 
 ```python
 class ConversationManager:
@@ -275,7 +275,7 @@ response2 = conversation.send("What's my name?")  # Claude remembers "Alice"
 
 ### Compaction (long conversations)
 
-> **Beta, Opus 4.7, Opus 4.6, and Sonnet 4.6.** When conversations approach the 200K context window, compaction automatically summarizes earlier context server-side. The API returns a `compaction` block; you must pass it back on subsequent requests - append `response.content`, not just the text.
+> **Beta, Opus 4.7, Opus 4.6, and Sonnet 4.6.** When conversations approach the 200K context window, compaction automatically summarizes earlier context server-side. The API returns a `compaction` block; you must pass it back on subsequent requests — append `response.content`, not just the text.
 
 ```python
 import anthropic
@@ -296,7 +296,7 @@ def chat(user_message: str) -> str:
         }
     )
 
-    # Append full content - compaction blocks must be preserved
+    # Append full content — compaction blocks must be preserved
     messages.append({"role": "assistant", "content": response.content})
 
     return next(block.text for block in response.content if block.type == "text")
@@ -316,11 +316,11 @@ The `stop_reason` field in the response indicates why the model stopped generati
 | Value | Meaning |
 |-------|---------|
 | `end_turn` | Claude finished its response naturally |
-| `max_tokens` | Hit the `max_tokens` limit - increase it or use streaming |
+| `max_tokens` | Hit the `max_tokens` limit — increase it or use streaming |
 | `stop_sequence` | Hit a custom stop sequence |
-| `tool_use` | Claude wants to call a tool - execute it and continue |
+| `tool_use` | Claude wants to call a tool — execute it and continue |
 | `pause_turn` | Model paused and can be resumed (agentic flows) |
-| `refusal` | Claude refused for safety reasons - output may not match your schema |
+| `refusal` | Claude refused for safety reasons — output may not match your schema |
 
 ---
 
@@ -329,7 +329,7 @@ The `stop_reason` field in the response indicates why the model stopped generati
 ### 1. Use Prompt Caching for Repeated Context
 
 ```python
-# Automatic caching (simplest - caches the last cacheable block)
+# Automatic caching (simplest — caches the last cacheable block)
 response = client.messages.create(
     model="claude-opus-4-7",
     max_tokens=16000,

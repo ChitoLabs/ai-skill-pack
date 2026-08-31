@@ -87,3 +87,4 @@ For non-SaaS work (Editorial, Manifesto, Letter, Long Document, Quote-Led), this
 5. If genuinely torn, offer the user three choices from *different categories* (e.g. Bento + Long Document + Manifesto) and let them pick.
 
 The goal is not novelty for its own sake. The goal is that two pages Hallmark builds for two different briefs *look like different sites, not different colour-swaps of the same template*.
+

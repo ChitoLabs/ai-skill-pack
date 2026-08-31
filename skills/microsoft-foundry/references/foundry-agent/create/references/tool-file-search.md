@@ -7,7 +7,7 @@ Enables agents to search through uploaded files using semantic and keyword searc
 ## Prerequisites
 
 - A [basic or standard agent environment](https://learn.microsoft.com/azure/ai-foundry/agents/environment-setup)
-- A **vector store** must be created before the agent - the `file_search` tool requires `vector_store_ids`
+- A **vector store** must be created before the agent — the `file_search` tool requires `vector_store_ids`
 - Files must be uploaded to the vector store before the agent can search them
 
 ## Key Concepts
@@ -15,7 +15,7 @@ Enables agents to search through uploaded files using semantic and keyword searc
 | Concept | Description |
 |---------|-------------|
 | **Vector Store** | A container that indexes uploaded files for semantic search. Must be created first. |
-| **vector_store_ids** | Required parameter on the `file_search` tool - references the vector store(s) to search. |
+| **vector_store_ids** | Required parameter on the `file_search` tool — references the vector store(s) to search. |
 | **File upload** | Files are uploaded to the project, then attached to a vector store for indexing. |
 
 ## Setup Workflow

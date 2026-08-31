@@ -3,10 +3,10 @@ name: dotnet-design-pattern-review
 description: "Review the C#/.NET code for design pattern implementation and suggest improvements."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/dotnet-design-pattern-review"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dotnet-design-pattern-review"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/dotnet-design-pattern-review"
 ---
 
 # .NET/C# Design Pattern Review

@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -49,8 +52,7 @@ Return the completed action, files or commands used, verification evidence, bloc
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
 - `references/SKILL_TREE.md` - preserved Sentry companion-skill routing tree.
-- `references/related-skills/sentry-sdk-setup/SKILL.md` - preserved upstream setup router companion.
-- `references/related-skills/sentry-node-sdk/SKILL.md` - preserved Node.js/Bun/Deno Sentry SDK companion.
+- `references/related-skills/sentry-node-sdk.md` - preserved Node.js/Bun/Deno Sentry SDK companion.
 - `references/related-skills/sentry-node-sdk/references/ai-monitoring.md` - preserved Node SDK AI monitoring reference.
 - `references/related-skills/sentry-node-sdk/references/crons.md` - preserved Node SDK crons reference.
 - `references/related-skills/sentry-node-sdk/references/error-monitoring.md` - preserved Node SDK error monitoring reference.
@@ -59,7 +61,7 @@ Return the completed action, files or commands used, verification evidence, bloc
 - `references/related-skills/sentry-node-sdk/references/profiling.md` - preserved Node SDK profiling reference.
 - `references/related-skills/sentry-node-sdk/references/sampling.md` - preserved Node SDK sampling reference.
 - `references/related-skills/sentry-node-sdk/references/tracing.md` - preserved Node SDK tracing reference.
-- `references/related-skills/sentry-react-sdk/SKILL.md` - preserved React Sentry SDK companion.
+- `references/related-skills/sentry-react-sdk.md` - preserved React Sentry SDK companion.
 - `references/related-skills/sentry-react-sdk/references/error-monitoring.md` - preserved React SDK error monitoring reference.
 - `references/related-skills/sentry-react-sdk/references/logging.md` - preserved React SDK logging reference.
 - `references/related-skills/sentry-react-sdk/references/profiling.md` - preserved React SDK profiling reference.

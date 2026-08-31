@@ -3,10 +3,10 @@ name: vue-debug-guides
 description: Vue 3 debugging and error handling for runtime errors, warnings, async failures, and SSR/hydration issues. Use when diagnosing or fixing Vue issues.
 license: Apache-2.0
 metadata:
-  author: vuejs-ai
+  author: hyf0
   version: 0.1
   skills_sh_url: "https://www.skills.sh/hyf0/vue-skills/vue-debug-guides"
-  github_url: "https://github.com/vuejs-ai/skills/tree/HEAD/skills/vue-debug-guides"
+  github_url: "https://github.com/hyf0/vue-skills/tree/HEAD/skills/vue-debug-guides"
 ---
 
 Vue 3 debugging and error handling for runtime issues, warnings, async failures, and hydration bugs.

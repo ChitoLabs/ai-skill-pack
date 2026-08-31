@@ -1,6 +1,6 @@
 ---
 name: pptx
-description: "Use this skill any time a .pptx file is involved in any way - as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill."
+description: "Use this skill any time a .pptx file is involved in any way \u2014 as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
   author: anthropics
@@ -62,11 +62,11 @@ Use when no template or reference presentation is available.
 - **Pick a bold, content-informed color palette**: The palette should feel designed for THIS topic. If swapping your colors into a completely different presentation would still "work," you haven't made specific enough choices.
 - **Dominance over equality**: One color should dominate (60-70% visual weight), with 1-2 supporting tones and one sharp accent. Never give all colors equal weight.
 - **Dark/light contrast**: Dark backgrounds for title + conclusion slides, light for content ("sandwich" structure). Or commit to dark throughout for a premium feel.
-- **Commit to a visual motif**: Pick ONE distinctive element and repeat it - rounded image frames, icons in colored circles, thick single-side borders. Carry it across every slide.
+- **Commit to a visual motif**: Pick ONE distinctive element and repeat it — rounded image frames, icons in colored circles, thick single-side borders. Carry it across every slide.
 
 ### Color Palettes
 
-Choose colors that match your topic - don't default to generic blue. Use these palettes as inspiration:
+Choose colors that match your topic — don't default to generic blue. Use these palettes as inspiration:
 
 | Theme | Primary | Secondary | Accent |
 |-------|---------|-----------|--------|
@@ -83,7 +83,7 @@ Choose colors that match your topic - don't default to generic blue. Use these p
 
 ### For Each Slide
 
-**Every slide needs a visual element** - image, chart, icon, or shape. Text-only slides are forgettable.
+**Every slide needs a visual element** — image, chart, icon, or shape. Text-only slides are forgettable.
 
 **Layout options:**
 - Two-column (text left, illustration on right)
@@ -102,7 +102,7 @@ Choose colors that match your topic - don't default to generic blue. Use these p
 
 ### Typography
 
-**Choose an interesting font pairing** - don't default to Arial. Pick a header font with personality and pair it with a clean body font.
+**Choose an interesting font pairing** — don't default to Arial. Pick a header font with personality and pair it with a clean body font.
 
 | Header Font | Body Font |
 |-------------|-----------|
@@ -126,20 +126,20 @@ Choose colors that match your topic - don't default to generic blue. Use these p
 
 - 0.5" minimum margins
 - 0.3-0.5" between content blocks
-- Leave breathing room-don't fill every inch
+- Leave breathing room—don't fill every inch
 
 ### Avoid (Common Mistakes)
 
-- **Don't repeat the same layout** - vary columns, cards, and callouts across slides
-- **Don't center body text** - left-align paragraphs and lists; center only titles
-- **Don't skimp on size contrast** - titles need 36pt+ to stand out from 14-16pt body
-- **Don't default to blue** - pick colors that reflect the specific topic
-- **Don't mix spacing randomly** - choose 0.3" or 0.5" gaps and use consistently
-- **Don't style one slide and leave the rest plain** - commit fully or keep it simple throughout
-- **Don't create text-only slides** - add images, icons, charts, or visual elements; avoid plain title + bullets
-- **Don't forget text box padding** - when aligning lines or shapes with text edges, set `margin: 0` on the text box or offset the shape to account for padding
-- **Don't use low-contrast elements** - icons AND text need strong contrast against the background; avoid light text on light backgrounds or dark text on dark backgrounds
-- **NEVER use accent lines under titles** - these are a hallmark of AI-generated slides; use whitespace or background color instead
+- **Don't repeat the same layout** — vary columns, cards, and callouts across slides
+- **Don't center body text** — left-align paragraphs and lists; center only titles
+- **Don't skimp on size contrast** — titles need 36pt+ to stand out from 14-16pt body
+- **Don't default to blue** — pick colors that reflect the specific topic
+- **Don't mix spacing randomly** — choose 0.3" or 0.5" gaps and use consistently
+- **Don't style one slide and leave the rest plain** — commit fully or keep it simple throughout
+- **Don't create text-only slides** — add images, icons, charts, or visual elements; avoid plain title + bullets
+- **Don't forget text box padding** — when aligning lines or shapes with text edges, set `margin: 0` on the text box or offset the shape to account for padding
+- **Don't use low-contrast elements** — icons AND text need strong contrast against the background; avoid light text on light backgrounds or dark text on dark backgrounds
+- **NEVER use accent lines under titles** — these are a hallmark of AI-generated slides; use whitespace or background color instead
 
 ---
 
@@ -167,12 +167,12 @@ If grep returns results, fix them before declaring success.
 
 ### Visual QA
 
-**⚠️ USE SUBAGENTS** - even for 2-3 slides. You've been staring at the code and will see what you expect, not what's there. Subagents have fresh eyes.
+**⚠️ USE SUBAGENTS** — even for 2-3 slides. You've been staring at the code and will see what you expect, not what's there. Subagents have fresh eyes.
 
 Convert slides to images (see [Converting to Images](#converting-to-images)), then use this prompt:
 
 ```
-Visually inspect these slides. Assume there are issues - find them.
+Visually inspect these slides. Assume there are issues — find them.
 
 Look for:
 - Overlapping elements (text through shapes, lines through words, stacked elements)
@@ -202,7 +202,7 @@ Report ALL issues found, including minor ones.
 1. Generate slides → Convert to images → Inspect
 2. **List issues found** (if none found, look again more critically)
 3. Fix issues
-4. **Re-verify affected slides** - one fix often creates another problem
+4. **Re-verify affected slides** — one fix often creates another problem
 5. Repeat until a full pass reveals no new issues
 
 **Do not declare success until you've completed at least one fix-and-verify cycle.**
@@ -233,5 +233,5 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 - `pip install "markitdown[pptx]"` - text extraction
 - `pip install Pillow` - thumbnail grids
 - `npm install -g pptxgenjs` - creating from scratch
-- LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
+- LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `../scripts/office/soffice.py`)
 - Poppler (`pdftoppm`) - PDF to images

@@ -19,12 +19,12 @@ Senior API architect specializing in REST and GraphQL APIs with comprehensive Op
 
 ## Core Workflow
 
-1. **Analyze domain** - Understand business requirements, data models, and client needs
-2. **Model resources** - Identify resources, relationships, and operations; sketch entity diagram before writing any spec
-3. **Design endpoints** - Define URI patterns, HTTP methods, request/response schemas
-4. **Specify contract** - Create OpenAPI 3.1 spec; validate before proceeding: `npx @redocly/cli lint openapi.yaml`
-5. **Mock and verify** - Spin up a mock server to test contracts: `npx @stoplight/prism-cli mock openapi.yaml`
-6. **Plan evolution** - Design versioning, deprecation, and backward-compatibility strategy
+1. **Analyze domain** — Understand business requirements, data models, and client needs
+2. **Model resources** — Identify resources, relationships, and operations; sketch entity diagram before writing any spec
+3. **Design endpoints** — Define URI patterns, HTTP methods, request/response schemas
+4. **Specify contract** — Create OpenAPI 3.1 spec; validate before proceeding: `npx @redocly/cli lint openapi.yaml`
+5. **Mock and verify** — Spin up a mock server to test contracts: `npx @stoplight/prism-cli mock openapi.yaml`
+6. **Plan evolution** — Design versioning, deprecation, and backward-compatibility strategy
 
 ## Reference Guide
 
@@ -32,17 +32,17 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| REST Patterns | `references/rest-patterns.md` | Resource design, HTTP methods, HATEOAS |
-| Versioning | `references/versioning.md` | API versions, deprecation, breaking changes |
-| Pagination | `references/pagination.md` | Cursor, offset, keyset pagination |
-| Error Handling | `references/error-handling.md` | Error responses, RFC 7807, status codes |
-| OpenAPI | `references/openapi.md` | OpenAPI 3.1, documentation, code generation |
+| REST Patterns | `rest-patterns.md` | Resource design, HTTP methods, HATEOAS |
+| Versioning | `versioning.md` | API versions, deprecation, breaking changes |
+| Pagination | `pagination.md` | Cursor, offset, keyset pagination |
+| Error Handling | `error-handling.md` | Error responses, RFC 7807, status codes |
+| OpenAPI | `openapi.md` | OpenAPI 3.1, documentation, code generation |
 
 ## Constraints
 
 ### MUST DO
 - Follow REST principles (resource-oriented, proper HTTP methods)
-- Use consistent naming conventions (snake_case or camelCase - pick one, apply everywhere)
+- Use consistent naming conventions (snake_case or camelCase — pick one, apply everywhere)
 - Include comprehensive OpenAPI 3.1 specification
 - Design proper error responses with actionable messages (RFC 7807)
 - Implement pagination for all collection endpoints
@@ -196,7 +196,7 @@ security:
 ```
 
 - Always use `Content-Type: application/problem+json` for error responses.
-- `type` must be a stable, documented URI - never a generic string.
+- `type` must be a stable, documented URI — never a generic string.
 - `detail` must be human-readable and actionable.
 - Extend with `errors[]` for field-level validation failures.
 

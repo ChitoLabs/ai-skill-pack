@@ -571,7 +571,7 @@ python scripts/add-arrow.py my-aws-diagram.excalidraw 565 330 650 350 --label "S
 - Complex coordinate math
 - Risk of ID conflicts
 
-### Supported Icon Libraries (Examples - verify availability)
+### Supported Icon Libraries (Examples — verify availability)
 
 - This workflow works with any valid `.excalidrawlib` file you provide.
 - Examples of library categories you may find on https://libraries.excalidraw.com/:
@@ -593,13 +593,13 @@ python scripts/add-arrow.py my-aws-diagram.excalidraw 565 330 650 350 --label "S
 ## References
 
 See bundled references for:
-- `references/excalidraw-schema.md` - Complete Excalidraw JSON schema
-- `references/element-types.md` - Detailed element type specifications
+- `excalidraw-schema.md` - Complete Excalidraw JSON schema
+- `element-types.md` - Detailed element type specifications
 - `templates/flowchart-template.json` - Basic flowchart starter
 - `templates/relationship-template.json` - Relationship diagram starter
 - `templates/mindmap-template.json` - Mind map starter
-- `scripts/split-excalidraw-library.py` - Tool to split `.excalidrawlib` files
-- `scripts/README.md` - Documentation for library tools
+- `../scripts/split-excalidraw-library.py` - Tool to split `.excalidrawlib` files
+- `../scripts/README.md` - Documentation for library tools
 - `scripts/.gitignore` - Prevents local Python artifacts from being committed
 
 ## Limitations

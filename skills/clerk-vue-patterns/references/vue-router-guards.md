@@ -63,6 +63,6 @@ router.beforeEach(async (to) => {
 
 ## CRITICAL
 
-- Call composables outside of the guard function body if possible - `useAuth()` is reactive and works outside components in Vue 3 (when called in setup context or at module level after plugin install)
-- `isLoaded` must be true before trusting `isSignedIn` - guard may fire before Clerk initializes
+- Call composables outside of the guard function body if possible — `useAuth()` is reactive and works outside components in Vue 3 (when called in setup context or at module level after plugin install)
+- `isLoaded` must be true before trusting `isSignedIn` — guard may fire before Clerk initializes
 - For Nuxt, prefer `middleware/` instead of manual router guards

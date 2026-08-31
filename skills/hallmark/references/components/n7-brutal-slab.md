@@ -20,3 +20,4 @@ A heavy, full-width nav with a 2 px solid border-bottom, all-caps wordmark and t
 ```
 
 *Anti-pattern:* combining N7 with rounded corners, soft shadows, or backdrop-blur  -  those vocabularies fight. If you reach for blur, drop to N5; if you reach for round, drop to N1.
+

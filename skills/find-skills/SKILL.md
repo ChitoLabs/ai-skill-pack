@@ -16,6 +16,10 @@ Use when the user asks how to do a specialized task, whether a skill exists, or 
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Do not install skills, change global skill folders, or run package-manager install commands without explicit user approval.
 - Verify quality before recommending a skill. Do not trust search results alone.
 - Prefer primary sources: skills.sh listing, upstream repository, install count, source reputation, and current skill content.

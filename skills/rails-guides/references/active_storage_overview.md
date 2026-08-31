@@ -846,7 +846,7 @@ to prevent files being accessed with the publicly accessible URLs.
 Downloading Files
 -----------------
 
-Sometimes you need to process a blob after it’s uploaded-for example, to convert
+Sometimes you need to process a blob after it’s uploaded—for example, to convert
 it to a different format. Use the attachment's [`download`][Blob#download] method to read a blob’s
 binary data into memory:
 

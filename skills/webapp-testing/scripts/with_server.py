@@ -18,7 +18,48 @@ import subprocess
 import socket
 import time
 import sys
+import shlex
 import argparse
+
+UNSUPPORTED = ("||", ";", "|", ">", "<", "`", "$(", "&")
+
+
+def parse_server_command(raw):
+    """Split a --server string into (argv, cwd) without invoking a shell.
+
+    Supports the two documented forms:
+        "npm run dev"
+        "cd backend && python server.py"
+
+    Any other shell construct is rejected rather than handed to a shell, so the
+    server command is always executed as an argument list.
+    """
+    text = raw.strip()
+    cwd = None
+    if text.startswith("cd "):
+        head, sep, tail = text.partition("&&")
+        if not sep:
+            raise ValueError(
+                "a 'cd' server command must be written as: cd <dir> && <command>"
+            )
+        parts = shlex.split(head.strip())
+        if len(parts) != 2:
+            raise ValueError("expected exactly one directory after 'cd'")
+        cwd = parts[1]
+        text = tail.strip()
+
+    for token in UNSUPPORTED:
+        if token in text:
+            raise ValueError(
+                "unsupported shell syntax {!r}; write the server command as a plain "
+                "command, optionally prefixed with 'cd <dir> &&'".format(token)
+            )
+
+    argv = shlex.split(text)
+    if not argv:
+        raise ValueError("empty server command")
+    return argv, cwd
+
 
 def is_server_ready(port, timeout=30):
     """Wait for server to be ready by polling the port."""
@@ -65,10 +106,18 @@ def main():
         for i, server in enumerate(servers):
             print(f"Starting server {i+1}/{len(servers)}: {server['cmd']}")
 
-            # Use shell=True to support commands with cd and &&
+            # Run as an argument list: no shell, so terminate() reaches the
+            # server itself instead of an intermediate shell that would leave it
+            # running.
+            try:
+                argv, cwd = parse_server_command(server['cmd'])
+            except ValueError as exc:
+                raise RuntimeError(
+                    "Invalid --server value {!r}: {}".format(server['cmd'], exc)
+                )
             process = subprocess.Popen(
-                server['cmd'],
-                shell=True,
+                argv,
+                cwd=cwd,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE
             )

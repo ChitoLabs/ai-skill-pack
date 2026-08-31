@@ -11,14 +11,17 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `azure-deploy` or the preserved source description: Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application - use azure-prepare instead. This skill runs azd up, azd deploy, terraform apply, and az deployment commands with built-in error recovery. Requires .azure/deployment-plan.md from azure-prepare and validated status from azure-validate. WHEN: \\\"run azd up\\\", \\\"run azd deploy\\\", \\\"execute deployment\\\", \\\"push to production\\\", \\\"push to cloud\\\", \\\"go live\\\", \\\"ship it\\\", \\\"bicep deploy\\\", \\\"terraform apply\\\", \\\"publish to Azure\\\", \\\"launch on Azure\\\". DO NOT USE WHEN: \\\"create and deploy\\\", \\\"build and deploy\\\", \\\"create a new app\\\", \\\"set up infrastructure\\\", \\\"create and deploy to Azure using Terraform\\\" - use azure-prepare for these.
+Use this skill when the user request matches `azure-deploy` or the preserved source description: Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application \u2014 use azure-prepare instead. This skill runs azd up, azd deploy, terraform apply, and az deployment commands with built-in error recovery. Requires .azure/deployment-plan.md from azure-prepare and validated status from azure-validate. WHEN: \\\"run azd up\\\", \\\"run azd deploy\\\", \\\"execute deployment\\\", \\\"push to production\\\", \\\"push to cloud\\\", \\\"go live\\\", \\\"ship it\\\", \\\"bicep deploy\\\", \\\"terraform apply\\\", \\\"publish to Azure\\\", \\\"launch on Azure\\\". DO NOT USE WHEN: \\\"create and deploy\\\", \\\"build and deploy\\\", \\\"create a new app\\\", \\\"set up infrastructure\\\", \\\"create and deploy to Azure using Terraform\\\" \u2014 use azure-prepare for these.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Before any remote installer is executed, explain what will be downloaded and run, identify relevant sensitive effects, show or summarize the exact command, ask for explicit permission for that installer, and wait. Without that permission, stop. Prefer separate download, inspection, and verification before execution when practical.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
 - Prefer current official documentation or source retrieval when the preserved workflow says knowledge may be outdated.
 - Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
@@ -27,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -47,43 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/auth-best-practices.md` - preserved source companion file.
-- `references/global-rules.md` - preserved source companion file.
-- `references/live-role-verification.md` - preserved source companion file.
-- `references/pre-deploy-checklist.md` - preserved source companion file.
-- `references/recipes/README.md` - preserved source companion file.
-- `references/recipes/azcli/README.md` - preserved source companion file.
-- `references/recipes/azcli/errors.md` - preserved source companion file.
-- `references/recipes/azcli/verify.md` - preserved source companion file.
-- `references/recipes/azd/README.md` - preserved source companion file.
-- `references/recipes/azd/ef-migrations.md` - preserved source companion file.
-- `references/recipes/azd/errors.md` - preserved source companion file.
-- `references/recipes/azd/functions-deploy.md` - preserved source companion file.
-- `references/recipes/azd/post-deployment.md` - preserved source companion file.
-- `references/recipes/azd/scripts/apply-migrations.ps1` - preserved source companion file.
-- `references/recipes/azd/scripts/apply-migrations.sh` - preserved source companion file.
-- `references/recipes/azd/scripts/grant-and-migrate.ps1` - preserved source companion file.
-- `references/recipes/azd/scripts/grant-and-migrate.sh` - preserved source companion file.
-- `references/recipes/azd/sql-entra-auth.md` - preserved source companion file.
-- `references/recipes/azd/sql-managed-identity.md` - preserved source companion file.
-- `references/recipes/azd/verify.md` - preserved source companion file.
-- `references/recipes/bicep/README.md` - preserved source companion file.
-- `references/recipes/bicep/errors.md` - preserved source companion file.
-- `references/recipes/bicep/verify.md` - preserved source companion file.
-- `references/recipes/cicd/README.md` - preserved source companion file.
-- `references/recipes/cicd/errors.md` - preserved source companion file.
-- `references/recipes/cicd/examples/azdo-azd.yml` - preserved source companion file.
-- `references/recipes/cicd/examples/azdo-multistage.yml` - preserved source companion file.
-- `references/recipes/cicd/examples/github-azd.yml` - preserved source companion file.
-- `references/recipes/cicd/examples/github-bicep.yml` - preserved source companion file.
-- `references/recipes/cicd/verify.md` - preserved source companion file.
-- `references/recipes/terraform/README.md` - preserved source companion file.
-- `references/recipes/terraform/errors.md` - preserved source companion file.
-- `references/recipes/terraform/verify.md` - preserved source companion file.
-- `references/region-availability.md` - preserved source companion file.
-- `references/sdk/azd-deployment.md` - preserved source companion file.
-- `references/sdk/azure-identity-dotnet.md` - preserved source companion file.
-- `references/sdk/azure-identity-java.md` - preserved source companion file.
-- `references/sdk/azure-identity-py.md` - preserved source companion file.
-- `references/sdk/azure-identity-ts.md` - preserved source companion file.
-- `references/troubleshooting.md` - preserved source companion file.
+- `references/` - 40 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

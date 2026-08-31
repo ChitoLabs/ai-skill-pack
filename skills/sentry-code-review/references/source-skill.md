@@ -13,7 +13,7 @@ parent: sentry-workflow
 disable-model-invocation: true
 ---
 
-> [All Skills](SKILL_TREE.md) > [Workflow](related-skills/sentry-workflow/SKILL.md) > Code Review
+> [All Skills](SKILL_TREE.md) > [Workflow](related-skills/sentry-workflow.md) > Code Review
 
 # Sentry Code Review
 

@@ -26,7 +26,7 @@ Jump to:
 
 ## Why Migrate to Swift 6?
 
-Swift 6 doesn't fundamentally change how Swift Concurrency works-it **enforces existing rules more strictly**:
+Swift 6 doesn't fundamentally change how Swift Concurrency works—it **enforces existing rules more strictly**:
 
 - **Compile-time safety**: Catches data races and threading issues at compile time instead of runtime
 - **Warnings become errors**: Many Swift 5 warnings become hard errors in Swift 6 language mode
@@ -70,7 +70,7 @@ A common migration experience:
 
 ## Six Migration Habits for Success
 
-### 1. Don't Panic-It's All About Iterations
+### 1. Don't Panic—It's All About Iterations
 
 Break migration into small, manageable chunks:
 

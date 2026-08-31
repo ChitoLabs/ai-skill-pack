@@ -19,7 +19,7 @@ Provide authoritative, current guidance from OpenAI developer docs using the dev
 - Use `mcp__openaiDeveloperDocs__search_openai_docs` to find the most relevant doc pages.
 - Use `mcp__openaiDeveloperDocs__fetch_openai_doc` to pull exact sections and quote/paraphrase accurately.
 - Use `mcp__openaiDeveloperDocs__list_openai_docs` only when you need to browse or discover pages without a clear query.
-- For model-selection, "latest model", or default-model questions, fetch `https://developers.openai.com/api/docs/guides/latest-model.md` first. If that is unavailable, load `references/latest-model.md`.
+- For model-selection, "latest model", or default-model questions, fetch `https://developers.openai.com/api/docs/guides/latest-model.md` first. If that is unavailable, load `latest-model.md`.
 - For model upgrades or prompt upgrades, run `node scripts/resolve-latest-model-info.js` only when the target is latest/current/default or otherwise unspecified; otherwise preserve the explicitly requested target.
 - Preserve explicit target requests: if the user names a target model like "migrate to GPT-5.4", keep that requested target even if `latest-model.md` names a newer model. Mention newer guidance only as optional.
 - If current remote guidance is needed, fetch both the returned migration and prompting guide URLs directly. If direct fetch fails, use MCP/search fallback; if that also fails, use bundled fallback references and disclose the fallback.
@@ -66,9 +66,9 @@ If MCP tools fail or no OpenAI docs resources are available:
 Read only what you need:
 
 - `https://developers.openai.com/api/docs/guides/latest-model.md` -> current model-selection and "best/latest/current model" questions.
-- `references/latest-model.md` -> bundled fallback for model-selection and "best/latest/current model" questions.
-- `references/upgrade-guide.md` -> bundled fallback for model upgrade and upgrade-planning requests.
-- `references/prompting-guide.md` -> bundled fallback for prompt rewrites and prompt-behavior upgrades.
+- `latest-model.md` -> bundled fallback for model-selection and "best/latest/current model" questions.
+- `upgrade-guide.md` -> bundled fallback for model upgrade and upgrade-planning requests.
+- `prompting-guide.md` -> bundled fallback for prompt rewrites and prompt-behavior upgrades.
 
 ## Quality rules
 

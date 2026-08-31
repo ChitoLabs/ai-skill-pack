@@ -38,3 +38,4 @@ A standard top bar whose triggers open a **full-width multi-column panel**  -  i
 **Knobs**  -  *Columns:* 2 * 3 * 4 * *Feature cell:* none * promo card * code sample * *Scrim:* dim+blur (default) * dim only * none * *Open on:* hover+click (default) * click only.
 *Anti-pattern:* never more than ~4 columns; never a panel taller than ~60vh; never open on hover with no close-grace timer (the menu flickers when the pointer crosses the gap). Items must carry a one-line description  -  a bare link grid is just N1b in disguise.
 *Mobile:* collapse the whole thing to a drawer; the columns stack as accordion groups.
+

@@ -6,7 +6,7 @@ Use this checklist after migration to verify everything is configured correctly.
 - [ ] `com.android.kotlin.multiplatform.library` plugin declared for KMP library modules
 - [ ] No `com.android.library` or `com.android.application` in KMP modules' build.gradle.kts
 - [ ] `org.jetbrains.kotlin.android` removed from all build files and version catalog (built-in Kotlin replaces it)
-- [ ] No `org.jetbrains.kotlin.kapt` plugin - migrated to KSP or `com.android.legacy-kapt`
+- [ ] No `org.jetbrains.kotlin.kapt` plugin — migrated to KSP or `com.android.legacy-kapt`
 - [ ] `android.kotlinOptions {}` migrated to `kotlin { compilerOptions {} }` (non-KMP modules)
 - [ ] `kotlin.sourceSets` migrated to `android.sourceSets` with `.kotlin` accessor (non-KMP modules)
 - [ ] No `android.builtInKotlin=false` unless required by incompatible plugin (documented as temporary)
@@ -14,7 +14,7 @@ Use this checklist after migration to verify everything is configured correctly.
 
 ## KMP Library Modules
 - [ ] Source sets renamed: `androidMain`, `androidHostTest`, `androidDeviceTest`
-- [ ] No `android {}` top-level block - use `androidLibrary {}` inside `kotlin {}` instead
+- [ ] No `android {}` top-level block — use `androidLibrary {}` inside `kotlin {}` instead
 - [ ] `androidResources { enable = true }` present if module uses Android or Compose Multiplatform resources
 - [ ] `withJava()` present if module has .java source files
 - [ ] Tests configured: `withHostTest {}`, `withDeviceTest {}`

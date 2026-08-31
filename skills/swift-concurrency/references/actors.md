@@ -66,7 +66,7 @@ await account.deposit(100)
 print(await account.balance) // Must await reads too
 ```
 
-Always use `await` when accessing actor properties/methods-you don't know if another task is inside.
+Always use `await` when accessing actor properties/methods—you don't know if another task is inside.
 
 ## Actors vs Classes
 

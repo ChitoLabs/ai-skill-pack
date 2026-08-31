@@ -1,4 +1,4 @@
-# KQL Templates - GenAI Trace Query Reference
+# KQL Templates — GenAI Trace Query Reference
 
 Ready-to-use KQL templates for querying GenAI OpenTelemetry traces in Application Insights.
 
@@ -9,8 +9,8 @@ Ready-to-use KQL templates for querying GenAI OpenTelemetry traces in Applicatio
 | App Insights Table | GenAI Data |
 |-------------------|------------|
 | `dependencies` | GenAI spans: LLM inference (`chat`), tool execution (`execute_tool`), agent invocation (`invoke_agent`) |
-| `requests` | Incoming HTTP requests to the agent endpoint. For hosted agents, also carries `gen_ai.agent.name` (Foundry name) and `azure.ai.agentserver.*` attributes - **preferred entry point** for agent-name filtering |
-| `customEvents` | GenAI evaluation results (`gen_ai.evaluation.result`) - scores, labels, explanations |
+| `requests` | Incoming HTTP requests to the agent endpoint. For hosted agents, also carries `gen_ai.agent.name` (Foundry name) and `azure.ai.agentserver.*` attributes — **preferred entry point** for agent-name filtering |
+| `customEvents` | GenAI evaluation results (`gen_ai.evaluation.result`) — scores, labels, explanations |
 | `traces` | Log events, including GenAI events (input/output messages) |
 | `exceptions` | Error details with stack traces |
 
@@ -32,8 +32,8 @@ Stored in `customDimensions` on `dependencies` spans:
 | `gen_ai.response.finish_reasons` | Stop reasons | `["stop"]`, `["tool_calls"]` |
 | `error.type` | Error classification | `timeout`, `rate_limited`, `content_filter` |
 | `gen_ai.provider.name` | Provider | `azure.ai.openai`, `openai` |
-| `gen_ai.input.messages` | Full input messages (JSON array) - on `invoke_agent` spans | `[{"role":"user","parts":[{"type":"text","content":"..."}]}]` |
-| `gen_ai.output.messages` | Full output messages (JSON array) - on `invoke_agent` spans | `[{"role":"assistant","parts":[{"type":"text","content":"..."}]}]` |
+| `gen_ai.input.messages` | Full input messages (JSON array) — on `invoke_agent` spans | `[{"role":"user","parts":[{"type":"text","content":"..."}]}]` |
+| `gen_ai.output.messages` | Full output messages (JSON array) — on `invoke_agent` spans | `[{"role":"assistant","parts":[{"type":"text","content":"..."}]}]` |
 
 Stored in `customDimensions` on `customEvents` (name == `gen_ai.evaluation.result`):
 
@@ -52,9 +52,9 @@ Stored in `customDimensions` on `customEvents` (name == `gen_ai.evaluation.resul
 
 | Field | Purpose |
 |-------|---------|
-| `operation_Id` | Trace ID - groups all spans in one request |
-| `id` | Span ID - unique identifier for this span |
-| `operation_ParentId` | Parent span ID - use with `id` to build span trees |
+| `operation_Id` | Trace ID — groups all spans in one request |
+| `id` | Span ID — unique identifier for this span |
+| `operation_ParentId` | Parent span ID — use with `id` to build span trees |
 
 ### Operation_Id Join (requests → dependencies)
 
@@ -103,7 +103,7 @@ Stored in `customDimensions` on **both `requests` and `traces`** tables (NOT on 
 | `azure.ai.agentserver.conversation_id` | Conversation ID | `conv_d7ab624de92d...` |
 | `azure.ai.agentserver.response_id` | Response ID (caresp format) | `caresp_d7ab624de92d...` |
 
-> **Important:** Use `requests` as the preferred entry point for agent-name filtering - it has both `azure.ai.agentserver.agent_name` and `gen_ai.agent.name` with the Foundry-level name. To reach downstream spans and related telemetry, carry `operation_Id` forward from the filtered request set and join other tables on that trace key.
+> **Important:** Use `requests` as the preferred entry point for agent-name filtering — it has both `azure.ai.agentserver.agent_name` and `gen_ai.agent.name` with the Foundry-level name. To reach downstream spans and related telemetry, carry `operation_Id` forward from the filtered request set and join other tables on that trace key.
 
 > 💡 **Version enrichment:** Some hosted-agent `requests` telemetry emits `gen_ai.agent.id` in `<foundry-agent-name>:<version>` format. When that delimiter is present, split on `:` to recover `agentVersion`; if it is absent, keep filtering on the requests-scoped name fields and leave version blank.
 
@@ -125,7 +125,7 @@ When searching by response ID, use the appropriate prefix to narrow results. The
 
 ## Common Query Templates
 
-### Overview - Conversations in last 24h
+### Overview — Conversations in last 24h
 ```kql
 dependencies
 | where timestamp > ago(24h)

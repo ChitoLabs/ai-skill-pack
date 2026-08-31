@@ -1,4 +1,4 @@
-# Azure Service Bus SDK - Java
+# Azure Service Bus SDK — Java
 
 Package: `azure-messaging-servicebus` | [README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/servicebus/azure-messaging-servicebus/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/servicebus/azure-messaging-servicebus/TROUBLESHOOTING.md)
 
@@ -14,7 +14,7 @@ Package: `azure-messaging-servicebus` | [README](https://github.com/Azure/azure-
 
 ### Processor hangs with high prefetch + maxConcurrentCalls
 
-`Update disposition request timed out.` - Client stops processing new messages.
+`Update disposition request timed out.` — Client stops processing new messages.
 
 **Cause**: Thread starvation when thread pool size ≤ `maxConcurrentCalls`.
 

@@ -1529,7 +1529,7 @@ module Stripe
       params(_mobilepay: T.nilable(PaymentMethodConfigurationCreateParams::Mobilepay)).returns(T.nilable(PaymentMethodConfigurationCreateParams::Mobilepay))
      }
     def mobilepay=(_mobilepay); end
-    # Stripe users in Europe and the United States can accept Multibanco payments from customers in Portugal using [Sources](https://stripe.com/docs/sources)-a single integration path for creating payments using any supported method.
+    # Stripe users in Europe and the United States can accept Multibanco payments from customers in Portugal using [Sources](https://stripe.com/docs/sources)—a single integration path for creating payments using any supported method.
     sig { returns(T.nilable(PaymentMethodConfigurationCreateParams::Multibanco)) }
     def multibanco; end
     sig {
@@ -1651,7 +1651,7 @@ module Stripe
       params(_sepa_debit: T.nilable(PaymentMethodConfigurationCreateParams::SepaDebit)).returns(T.nilable(PaymentMethodConfigurationCreateParams::SepaDebit))
      }
     def sepa_debit=(_sepa_debit); end
-    # Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)-a single integration path for creating payments using any supported method-to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://docs.stripe.com/payments/sofort) for more details.
+    # Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)—a single integration path for creating payments using any supported method—to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://docs.stripe.com/payments/sofort) for more details.
     sig { returns(T.nilable(PaymentMethodConfigurationCreateParams::Sofort)) }
     def sofort; end
     sig {

@@ -124,7 +124,7 @@ def _time_profile_hot_symbols(
 
     Hang/hitch/SwiftUI correlations are all main-thread responsiveness
     problems, so worker-thread symbols are noise. We also return a coverage
-    metric - when main was blocked on I/O or a lock, the window will have
+    metric — when main was blocked on I/O or a lock, the window will have
     far fewer samples than its duration would predict, and that signal is
     what tells the agent "this was blocked, not CPU-bound".
     """

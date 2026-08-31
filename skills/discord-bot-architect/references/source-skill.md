@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/discord-bot-architect"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/discord-bot-architect"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/discord-bot-architect"
 risk: unknown
 source: vibeship-spawner-skills (Apache 2.0)
 date_added: 2026-02-27

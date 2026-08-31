@@ -58,7 +58,7 @@ Vary across projects. If the last brief was a serif-display landing page, this o
 
 Modular scale, fluid `clamp()` for headings, ≥1.25 ratio between steps. Flat scales (1.1× apart) read as uncommitted.
 
-Light text on dark backgrounds: add 0.05-0.1 to line-height. Light type reads as lighter weight and needs more breathing room.
+Light text on dark backgrounds: add 0.05–0.1 to line-height. Light type reads as lighter weight and needs more breathing room.
 
 ## Color
 

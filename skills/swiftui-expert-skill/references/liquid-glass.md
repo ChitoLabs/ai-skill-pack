@@ -72,7 +72,7 @@ Text("Capsule")
 
 #### Available Styles
 
-The `Glass` type exposes three static values - there is no `.prominent`:
+The `Glass` type exposes three static values — there is no `.prominent`:
 
 ```swift
 .glassEffect(.regular)   // Standard glass appearance (most common)

@@ -148,6 +148,7 @@ spec:
 
 ```bash
 # Install subctl
+# Remote installer example: the parent skill's remote-installer consent gate applies. This official Submariner script detects the OS and architecture, resolves a release through GitHub, downloads and extracts `subctl`, replaces ~/.local/bin/subctl, marks it executable, and runs `subctl version`. Prefer downloading and inspecting it first.
 curl -Ls https://get.submariner.io | bash
 
 # Join clusters to broker

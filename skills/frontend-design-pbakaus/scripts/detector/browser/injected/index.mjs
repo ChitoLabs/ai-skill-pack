@@ -540,7 +540,7 @@ if (IS_BROWSER) {
         if (matches.length === 1 && matches[0] === el) {
           return trySelector;
         }
-      } catch { /* invalid selector - keep walking */ }
+      } catch { /* invalid selector — keep walking */ }
 
       current = current.parentElement;
       depth++;

@@ -6,7 +6,7 @@ metadata:
   author: "Stanislav [MADTeacher] Chernyshev"
   version: 2.0
   skills_sh_url: "https://skills.sh/madteacher/mad-agents-skills/flutter-animations"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/flutter-animations"
+  github_url: "https://github.com/madteacher/mad-agents-skills/tree/HEAD/flutter-animations"
 ---
 
 # Flutter Animations
@@ -72,12 +72,12 @@ Read only the resources needed for the current task:
 
 | Task | Read/use | Purpose |
 |---|---|---|
-| Simple state-driven animation or AnimatedSwitcher/TweenAnimationBuilder choice | `references/implicit.md`; optionally `assets/templates/implicit_animation.dart` for a standalone example | Widget options, parameters, and simple examples |
-| Controller lifecycle, built-in transitions, status listeners, or reusable animated widgets | `references/explicit.md`; optionally `assets/templates/explicit_animation.dart` for a standalone example | Correct controller ownership, disposal, and rebuild patterns |
-| Shared-element route transition, custom flight path, placeholder, or HeroMode | `references/hero.md`; optionally `assets/templates/hero_transition.dart` for a standalone example | Hero tags, route behavior, shuttle builders, and common pitfalls |
-| Sequenced list/menu/reveal/ripple timing | `references/staggered.md`; optionally `assets/templates/staggered_animation.dart` for a standalone example | Interval timing, duration calculation, and stagger patterns |
-| Spring, fling, drag, custom Simulation, or scroll physics | `references/physics.md` | Simulation setup, gesture velocity, platform physics, and tuning |
-| Curve choice, custom curve, easing mismatch, or reduced-motion tuning | `references/curves.md` | Curve selection, custom curves, and accessibility notes |
+| Simple state-driven animation or AnimatedSwitcher/TweenAnimationBuilder choice | `implicit.md`; optionally `../assets/templates/implicit_animation.dart` for a standalone example | Widget options, parameters, and simple examples |
+| Controller lifecycle, built-in transitions, status listeners, or reusable animated widgets | `explicit.md`; optionally `../assets/templates/explicit_animation.dart` for a standalone example | Correct controller ownership, disposal, and rebuild patterns |
+| Shared-element route transition, custom flight path, placeholder, or HeroMode | `hero.md`; optionally `../assets/templates/hero_transition.dart` for a standalone example | Hero tags, route behavior, shuttle builders, and common pitfalls |
+| Sequenced list/menu/reveal/ripple timing | `staggered.md`; optionally `../assets/templates/staggered_animation.dart` for a standalone example | Interval timing, duration calculation, and stagger patterns |
+| Spring, fling, drag, custom Simulation, or scroll physics | `physics.md` | Simulation setup, gesture velocity, platform physics, and tuning |
+| Curve choice, custom curve, easing mismatch, or reduced-motion tuning | `curves.md` | Curve selection, custom curves, and accessibility notes |
 
 Templates are complete demo files, not drop-in production modules. When using a
 template inside an app, rename demo classes, remove `main()` and `MaterialApp`

@@ -1,4 +1,4 @@
-# Dataset Curation - Human-in-the-Loop Review
+# Dataset Curation — Human-in-the-Loop Review
 
 Review, annotate, and approve harvested trace candidates before including them in evaluation datasets. This ensures dataset quality by adding a human review gate between raw trace extraction and finalized test cases.
 
@@ -17,7 +17,7 @@ Raw Traces (from KQL harvest)
 [3] Approved Dataset (versioned, ready for eval)
 ```
 
-## Step 1 - Generate Candidate File
+## Step 1 — Generate Candidate File
 
 After running a [trace harvest](trace-to-dataset.md), save candidates with a `status` field:
 
@@ -32,15 +32,15 @@ Each line includes a review status:
 {"query": "What's the refund policy?", "response": "...", "status": "pending", "metadata": {"source": "trace", "conversationId": "conv-def-456", "harvestRule": "latency", "duration": 8700}}
 ```
 
-## Step 2 - Present for Review
+## Step 2 — Present for Review
 
 Show candidates in a review table:
 
 | # | Status | Query (preview) | Source | Error | Duration | Eval Score |
 |---|--------|----------------|--------|-------|----------|------------|
-| 1 | ⏳ pending | "How do I reset my..." | error harvest | TimeoutError | 12.3s | - |
-| 2 | ⏳ pending | "What's the refund..." | latency harvest | - | 8.7s | - |
-| 3 | ⏳ pending | "Can you help me..." | low-eval harvest | - | 0.4s | 2.0 |
+| 1 | ⏳ pending | "How do I reset my..." | error harvest | TimeoutError | 12.3s | — |
+| 2 | ⏳ pending | "What's the refund..." | latency harvest | — | 8.7s | — |
+| 3 | ⏳ pending | "Can you help me..." | low-eval harvest | — | 0.4s | 2.0 |
 
 ### Review Actions
 
@@ -56,12 +56,12 @@ For each candidate, the user can:
 
 ### Batch Operations
 
-- *"Approve all"* - include all pending candidates
-- *"Approve all errors"* - include all candidates from error harvest
-- *"Reject duplicates"* - exclude candidates with similar queries to existing dataset entries
-- *"Approve #1, #3, #5; reject #2, #4"* - selective approval by number
+- *"Approve all"* — include all pending candidates
+- *"Approve all errors"* — include all candidates from error harvest
+- *"Reject duplicates"* — exclude candidates with similar queries to existing dataset entries
+- *"Approve #1, #3, #5; reject #2, #4"* — selective approval by number
 
-## Step 3 - Finalize Dataset
+## Step 3 — Finalize Dataset
 
 After review, filter approved candidates and save to a versioned dataset:
 

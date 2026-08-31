@@ -12,6 +12,19 @@ metadata:
 
 # Create Implementation Plan
 
+## Activation Contract
+
+Use this skill when the user request matches `create-implementation-plan` or one of its declared triggers: create an implementation plan for a defined feature, refactor, upgrade, architecture, or infrastructure change. Plan only within repository policy.
+
+Read the sections below before acting. This file is the portable runtime contract; the sections that follow carry the source-specific workflow.
+
+## Hard Rules
+
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
+
 ## Primary Directive
 
 Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems or humans.

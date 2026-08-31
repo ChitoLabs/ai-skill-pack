@@ -13,3 +13,4 @@ Headline + lede on one side, image or product capture on the other. 6/6 or 7/5 c
 .hero-split { display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-2xl); align-items: center; }
 @media (max-width: 56rem) { .hero-split { grid-template-columns: 1fr; } }
 ```
+

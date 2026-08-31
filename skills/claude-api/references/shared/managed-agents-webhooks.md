@@ -1,8 +1,8 @@
-# Managed Agents - Webhooks
+# Managed Agents — Webhooks
 
-Anthropic can POST to your HTTPS endpoint when a Managed Agents resource changes state - an alternative to holding an SSE stream or polling. Payloads are **thin** (event type + resource IDs only); on receipt, fetch the resource for current state. Every delivery is HMAC-signed.
+Anthropic can POST to your HTTPS endpoint when a Managed Agents resource changes state — an alternative to holding an SSE stream or polling. Payloads are **thin** (event type + resource IDs only); on receipt, fetch the resource for current state. Every delivery is HMAC-signed.
 
-> **Direction matters.** This page covers *Anthropic → you* notifications about session/vault state. It does **not** cover *third-party → you* webhooks that *trigger* a session (e.g. a GitHub push handler that calls `sessions.create()`) - that's ordinary application code on your side with no Anthropic-specific wire format.
+> **Direction matters.** This page covers *Anthropic → you* notifications about session/vault state. It does **not** cover *third-party → you* webhooks that *trigger* a session (e.g. a GitHub push handler that calls `sessions.create()`) — that's ordinary application code on your side with no Anthropic-specific wire format.
 
 ---
 
@@ -13,14 +13,14 @@ Console → **Manage → Webhooks**. There is no programmatic endpoint-managemen
 | Field | Constraint |
 |---|---|
 | URL | HTTPS on port 443, publicly resolvable hostname |
-| Event types | Subscribe per `data.type` - you only receive subscribed types (plus test events) |
-| Signing secret | `whsec_`-prefixed, 32 bytes, **shown once at creation** - store it |
+| Event types | Subscribe per `data.type` — you only receive subscribed types (plus test events) |
+| Signing secret | `whsec_`-prefixed, 32 bytes, **shown once at creation** — store it |
 
 ---
 
 ## Verify the signature
 
-Every delivery is HMAC-signed. **Use the SDK's `client.beta.webhooks.unwrap()`** - it verifies the signature, rejects payloads more than ~5 minutes old, and returns the parsed event. It reads the `whsec_` secret from `ANTHROPIC_WEBHOOK_SIGNING_KEY`.
+Every delivery is HMAC-signed. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than ~5 minutes old, and returns the parsed event. It reads the `whsec_` secret from `ANTHROPIC_WEBHOOK_SIGNING_KEY`.
 
 ```python
 import anthropic
@@ -40,7 +40,7 @@ def webhook():
     except Exception:
         return "invalid signature", 400
 
-    if event.id in seen_event_ids:  # dedupe retries - id is per-event, not per-delivery
+    if event.id in seen_event_ids:  # dedupe retries — id is per-event, not per-delivery
         return "", 204
     seen_event_ids.add(event.id)
 
@@ -54,7 +54,7 @@ def webhook():
     return "", 204
 ```
 
-Pass the **raw request body** to `unwrap()` - frameworks that re-serialize JSON (Express `.json()`, Flask `.get_json()`) change the bytes and break the MAC. For other languages, look up the `beta.webhooks.unwrap` binding in the SDK repo (`shared/live-sources.md`); don't hand-roll verification.
+Pass the **raw request body** to `unwrap()` — frameworks that re-serialize JSON (Express `.json()`, Flask `.get_json()`) change the bytes and break the MAC. For other languages, look up the `beta.webhooks.unwrap` binding in the SDK repo (`shared/live-sources.md`); don't hand-roll verification.
 
 ---
 
@@ -97,7 +97,7 @@ Switch on `data.type`, fetch the resource by `data.id`, return any **2xx** to ac
 | `vault_credential.deleted` | Vault credential was deleted |
 | `vault_credential.refresh_failed` | MCP OAuth vault credential failed to refresh |
 
-> These are **webhook** `data.type` values - a separate namespace from SSE event types (`session.status_idle`, `span.outcome_evaluation_end`, etc. in `shared/managed-agents-events.md`). Don't reuse SSE constants in webhook handlers.
+> These are **webhook** `data.type` values — a separate namespace from SSE event types (`session.status_idle`, `span.outcome_evaluation_end`, etc. in `shared/managed-agents-events.md`). Don't reuse SSE constants in webhook handlers.
 
 ---
 
@@ -105,6 +105,6 @@ Switch on `data.type`, fetch the resource by `data.id`, return any **2xx** to ac
 
 - **No ordering guarantee.** `session.status_idled` may arrive before `session.outcome_evaluation_ended` even if the evaluation finished first. Sort by envelope `created_at` if order matters.
 - **Retries carry the same `event.id`.** At least one retry on non-2xx. Dedupe on `event.id`.
-- **3xx is failure.** Redirects are not followed - update the URL in Console if your endpoint moves.
+- **3xx is failure.** Redirects are not followed — update the URL in Console if your endpoint moves.
 - **Auto-disable** after ~20 consecutive failed deliveries, or immediately if the hostname resolves to a private IP or returns a redirect. Re-enable manually in Console.
-- **Thin payload is intentional.** Don't expect `stop_reason`, `outcome_evaluations`, credential secrets, etc. on the webhook body - fetch the resource.
+- **Thin payload is intentional.** Don't expect `stop_reason`, `outcome_evaluations`, credential secrets, etc. on the webhook body — fetch the resource.

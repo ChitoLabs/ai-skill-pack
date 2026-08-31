@@ -1,4 +1,4 @@
-# Azure AI Content Safety - Java SDK Quick Reference
+# Azure AI Content Safety — Java SDK Quick Reference
 
 > Condensed from **azure-ai-contentsafety-java**. Full patterns (blocklist management, image moderation, 8-severity)
 > in the **azure-ai-contentsafety-java** plugin skill if installed.

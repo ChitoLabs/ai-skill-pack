@@ -7,7 +7,7 @@ tags: parse, boundaries, architecture, defense-in-depth
 
 ## Validate at System Boundaries
 
-Validate external data immediately when it enters your system-at API endpoints, form handlers, message queue consumers, and configuration loaders. Validating deep in business logic allows corrupt data to propagate and makes debugging harder.
+Validate external data immediately when it enters your system—at API endpoints, form handlers, message queue consumers, and configuration loaders. Validating deep in business logic allows corrupt data to propagate and makes debugging harder.
 
 **Incorrect (validating deep in business logic):**
 

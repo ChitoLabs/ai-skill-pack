@@ -2053,7 +2053,7 @@ In this example, the `customer_id: 1` condition is applied automatically because
 #### Applying Scope To All Queries In The Block
 
 By default, scoping applies only to finder methods (such as `first`, `last`, `where`, etc.).
-If you want the scope to affect all queries-including `update` and `delete` on individual records, you can pass the option `all_queries: true`.
+If you want the scope to affect all queries—including `update` and `delete` on individual records, you can pass the option `all_queries: true`.
 
 ```ruby
 Order.where(customer_id: 1).scoping(all_queries: true) do

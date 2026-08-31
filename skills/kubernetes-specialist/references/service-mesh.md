@@ -6,6 +6,7 @@
 
 ```bash
 # Install Istio CLI
+# Remote installer example: the parent skill's remote-installer consent gate applies. This official Istio script detects the OS and architecture, resolves a release from GitHub, downloads and extracts an Istio archive into the current directory, and removes the archive. Prefer downloading and inspecting it first.
 curl -L https://istio.io/downloadIstio | sh -
 export PATH=$PWD/istio-*/bin:$PATH
 
@@ -319,6 +320,7 @@ spec:
 
 ```bash
 # Install Linkerd CLI
+# Remote installer example: the parent skill's remote-installer consent gate applies. This official but deprecated endpoint installs the latest edge Linkerd CLI, downloads a GitHub release into ~/.linkerd2/bin, replaces the `linkerd` symlink, and does not install stable releases. Prefer the current official release instructions and inspect any installer first.
 curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | sh
 export PATH=$HOME/.linkerd2/bin:$PATH
 

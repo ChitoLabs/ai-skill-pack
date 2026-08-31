@@ -328,7 +328,7 @@ these strings, which includes instantiating the somewhat heavy `String` object
 and interpolating the variables.
 
 Therefore, it's recommended to pass blocks to the logger methods, as these are
-only evaluated if the output level is the same as - or included in - the allowed level
+only evaluated if the output level is the same as — or included in — the allowed level
 (i.e. lazy loading). The same code rewritten would be:
 
 ```ruby
@@ -866,7 +866,7 @@ to use it in production.
 Debugging Memory Leaks
 ----------------------
 
-A Ruby application (on Rails or not), can leak memory - either in the Ruby code
+A Ruby application (on Rails or not), can leak memory — either in the Ruby code
 or at the C code level.
 
 In this section, you will learn how to find and fix such leaks by using tools
@@ -907,7 +907,7 @@ application. Here is a list of useful plugins for debugging:
   like source code and variable inspection.
 * [RailsPanel](https://github.com/dejan/rails_panel) Chrome extension for Rails
   development that will end your tailing of development.log. Have all information
-  about your Rails app requests in the browser - in the Developer Tools panel.
+  about your Rails app requests in the browser — in the Developer Tools panel.
   Provides insight to db/rendering/total times, parameter list, rendered views and
   more.
 * [Pry](https://github.com/pry/pry) An IRB alternative and runtime developer console.

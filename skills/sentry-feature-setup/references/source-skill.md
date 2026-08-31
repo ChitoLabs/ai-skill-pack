@@ -14,17 +14,17 @@ role: router
 
 # Sentry Feature Setup
 
-Configure specific Sentry capabilities beyond basic SDK setup - AI monitoring, OpenTelemetry pipelines, and alerts. This page helps you find the right feature skill for your task.
+Configure specific Sentry capabilities beyond basic SDK setup — AI monitoring, OpenTelemetry pipelines, and alerts. This page helps you find the right feature skill for your task.
 
 ## How to Fetch Skills
 
-Use `curl` to download skills - they are 10-20 KB files that fetch tools often summarize, losing critical details.
+Use `curl` to download skills — they are 10–20 KB files that fetch tools often summarize, losing critical details.
 
     curl -sL https://skills.sentry.dev/sentry-setup-ai-monitoring/SKILL.md
 
 Append the path from the `Path` column in the table below to `https://skills.sentry.dev/`. Do not guess or shorten URLs.
 
-## Start Here - Read This Before Doing Anything
+## Start Here — Read This Before Doing Anything
 
 **Do not skip this section.** Do not assume which feature the user needs. Ask first.
 
@@ -40,11 +40,11 @@ When unclear, **ask the user** which feature they want to configure. Do not gues
 
 | Feature | Skill | Path |
 |---|---|---|
-| AI/LLM monitoring - instrument OpenAI, Anthropic, LangChain, Vercel AI, Google GenAI, Pydantic AI | [`sentry-setup-ai-monitoring`](related-skills/sentry-setup-ai-monitoring/SKILL.md) | `sentry-setup-ai-monitoring/SKILL.md` |
-| OpenTelemetry Collector with Sentry Exporter - multi-project routing, automatic project creation | [`sentry-otel-exporter-setup`](SKILL_TREE.md) | `sentry-otel-exporter-setup/SKILL.md` |
-| Alerts via workflow engine API - email, Slack, PagerDuty, Discord | [`sentry-create-alert`](SKILL_TREE.md) | `sentry-create-alert/SKILL.md` |
+| AI/LLM monitoring — instrument OpenAI, Anthropic, LangChain, Vercel AI, Google GenAI, Pydantic AI | [`sentry-setup-ai-monitoring`](related-skills/sentry-setup-ai-monitoring.md) | `sentry-setup-ai-monitoring/SKILL.md` |
+| OpenTelemetry Collector with Sentry Exporter — multi-project routing, automatic project creation | [`sentry-otel-exporter-setup`](SKILL_TREE.md) | `sentry-otel-exporter-setup/SKILL.md` |
+| Alerts via workflow engine API — email, Slack, PagerDuty, Discord | [`sentry-create-alert`](SKILL_TREE.md) | `sentry-create-alert/SKILL.md` |
 
-Each skill contains its own detection logic, prerequisites, and step-by-step instructions. Trust the skill - read it carefully and follow it. Do not improvise or take shortcuts.
+Each skill contains its own detection logic, prerequisites, and step-by-step instructions. Trust the skill — read it carefully and follow it. Do not improvise or take shortcuts.
 
 ---
 

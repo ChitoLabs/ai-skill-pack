@@ -92,7 +92,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 - Too many tokens in input
 - Image data too large
 
-**Fix:** Reduce input size - truncate conversation history, compress/resize images, or split large documents into chunks.
+**Fix:** Reduce input size — truncate conversation history, compress/resize images, or split large documents into chunks.
 
 ---
 
@@ -107,8 +107,8 @@ Some 400 errors are specifically related to parameter validation:
 
 **Model-specific 400s on Opus 4.7:**
 
-- `temperature`, `top_p`, `top_k` are removed - sending any of them returns 400. Delete the parameter; see `shared/model-migration.md` → Per-SDK Syntax Reference.
-- `thinking: {type: "enabled", budget_tokens: N}` is removed - sending it returns 400. Use `thinking: {type: "adaptive"}` instead.
+- `temperature`, `top_p`, `top_k` are removed — sending any of them returns 400. Delete the parameter; see `shared/model-migration.md` → Per-SDK Syntax Reference.
+- `thinking: {type: "enabled", budget_tokens: N}` is removed — sending it returns 400. Use `thinking: {type: "adaptive"}` instead.
 
 **Common mistake with extended thinking on older models (Opus 4.6 and earlier):**
 

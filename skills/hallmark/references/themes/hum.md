@@ -401,3 +401,4 @@ Disqualifiers  -  if any appears in a Hum build, it is not Hum:
 - No bento with > 8 tiles.
 - No system-font fallback for the display.
 - No motion-less interactive elements (every interactive element has SOME state response).
+

@@ -3,10 +3,10 @@ name: nodejs-express-server
 description: Build production-ready Express.js servers with middleware, authentication, routing, and database integration. Use when creating REST APIs, managing requests/responses, implementing middleware chains, and handling server logic.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: aj-geddes
   version: 0.1
   skills_sh_url: "https://skills.sh/aj-geddes/useful-ai-prompts/nodejs-express-server"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/nodejs-express-server"
+  github_url: "https://github.com/aj-geddes/useful-ai-prompts/tree/HEAD/skills/nodejs-express-server"
 ---
 
 # Node.js Express Server

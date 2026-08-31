@@ -37,3 +37,4 @@ A **visible** search pill sits inline in the bar  -  placeholder text plus a `�
 **Knobs**  -  *Pill placement:* centred (default) * right-of-brand * *Result groups:* flat * grouped (default) * *Footer hints:* shown (default) * hidden * *Open trigger:* pill+⌘K (default) * ⌘K only (-> that's N4, not N13).
 *Anti-pattern:* don't fake the modal with a `<div>` that traps no focus and ignores Esc  -  if you ship the pill you ship the keyboard model. The pill must look like search (icon + placeholder), not a generic button.
 *Mobile:* the pill collapses to a search icon; the modal goes full-height sheet.
+

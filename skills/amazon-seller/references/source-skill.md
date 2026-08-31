@@ -3,7 +3,7 @@ name: Amazon Seller
 description: Automate Amazon seller operations including inventory, orders, pricing, and advertising management
 license: Apache-2.0
 metadata:
-  author: Claude Office Skills
+  author: claude-office-skills
   version: 0.1
   skills_sh_url: "https://www.skills.sh/claude-office-skills/skills/amazon-seller"
   github_url: "https://github.com/claude-office-skills/skills/tree/HEAD/amazon-seller"

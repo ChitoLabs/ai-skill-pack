@@ -64,7 +64,7 @@ Existing VMSS can be associated using `az vmss update` similarly to VMs. Regiona
 
 Both the VM/VMSS and the underlying capacity reservation logically occupy capacity. Azure imposes constraints to avoid ambiguous allocation states, so you cannot simply remove the association while resources are running against it.
 
-There are three ways to disassociate. The commands below use `az vm` - for VMSS, substitute `az vmss` and add `az vmss update-instances --instance-ids "*"` as a final step when using a **Manual** upgrade policy.
+There are three ways to disassociate. The commands below use `az vm` — for VMSS, substitute `az vmss` and add `az vmss update-instances --instance-ids "*"` as a final step when using a **Manual** upgrade policy.
 
 ### Option 1: Deallocate, then remove association
 
@@ -95,7 +95,7 @@ Deleting the resource automatically removes the association. Some latency may oc
 
 | Policy        | Behavior                                                               |
 |---------------|------------------------------------------------------------------------|
-| **Automatic** | Instances update automatically - no further action needed              |
+| **Automatic** | Instances update automatically — no further action needed              |
 | **Rolling**   | Instances update in batches with an optional pause between them        |
 | **Manual**    | You must run `az vmss update-instances --instance-ids "*"` per update  |
 

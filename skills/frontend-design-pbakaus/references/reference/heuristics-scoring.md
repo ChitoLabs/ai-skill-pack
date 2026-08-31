@@ -1,6 +1,6 @@
 # Heuristics Scoring Guide
 
-Score each of Nielsen's 10 Usability Heuristics on a 0-4 scale. Be honest: a 4 means genuinely excellent, not "good enough."
+Score each of Nielsen's 10 Usability Heuristics on a 0–4 scale. Be honest: a 4 means genuinely excellent, not "good enough."
 
 ## Nielsen's 10 Heuristics
 
@@ -212,15 +212,15 @@ Even if the system is usable without docs, help should be easy to find, task-foc
 
 | Score Range | Rating | What It Means |
 |-------------|--------|---------------|
-| 36-40 | Excellent | Minor polish only; ship it |
-| 28-35 | Good | Address weak areas, solid foundation |
-| 20-27 | Acceptable | Significant improvements needed before users are happy |
-| 12-19 | Poor | Major UX overhaul required; core experience broken |
-| 0-11 | Critical | Redesign needed; unusable in current state |
+| 36–40 | Excellent | Minor polish only; ship it |
+| 28–35 | Good | Address weak areas, solid foundation |
+| 20–27 | Acceptable | Significant improvements needed before users are happy |
+| 12–19 | Poor | Major UX overhaul required; core experience broken |
+| 0–11 | Critical | Redesign needed; unusable in current state |
 
 ---
 
-## Issue Severity (P0-P3)
+## Issue Severity (P0–P3)
 
 Tag each individual issue found during scoring with a priority level:
 

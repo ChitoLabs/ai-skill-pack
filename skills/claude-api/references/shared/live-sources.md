@@ -110,7 +110,7 @@ The `ant` CLI provides terminal access to the Claude API. Every API resource is 
 
 ## Claude API SDK Repositories
 
-WebFetch these when a binding (class, method, namespace, field) isn't covered in the cached `{lang}/` skill files or in the managed-agents docs above. The SDKs include beta managed-agents support for `/v1/agents`, `/v1/sessions`, `/v1/environments`, and related resources - search the repo for `BetaManagedAgents`, `beta.agents`, `beta.sessions`, or the equivalent namespace for that language.
+WebFetch these when a binding (class, method, namespace, field) isn't covered in the cached `{lang}/` skill files or in the managed-agents docs above. The SDKs include beta managed-agents support for `/v1/agents`, `/v1/sessions`, `/v1/environments`, and related resources — search the repo for `BetaManagedAgents`, `beta.agents`, `beta.sessions`, or the equivalent namespace for that language.
 
 | SDK        | URL                                                      | Extraction Prompt                                                                                                       |
 | ---------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |

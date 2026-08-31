@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * resize.js - resize an image to a named social media spec
+ * resize.js — resize an image to a named social media spec
  *
  * Usage:
  *   node resize.js <image-path> "<Platform> <Size Name>" [options]
@@ -8,7 +8,7 @@
  *
  * Options:
  *   --fit cover    Center-crop to fill exact dimensions (default)
- *   --fit contain  Letterbox - scale to fit, pad with background color
+ *   --fit contain  Letterbox — scale to fit, pad with background color
  *   --bg <hex>     Background color for contain mode (default: ffffff)
  *   --out <path>   Output file path (default: auto-named alongside input)
  */
@@ -151,7 +151,7 @@ async function run() {
   const outSize = fs.statSync(outPath).size;
   console.log(`\n✅  ${path.basename(outPath)}`);
   console.log(`    ${W} × ${H} px  (${spec.aspect})  •  ${formatSize(outSize)}`);
-  console.log(`    ${spec.platform} - ${spec.category} - ${spec.name}`);
+  console.log(`    ${spec.platform} — ${spec.category} — ${spec.name}`);
   if (spec.notes) console.log(`    💡 ${spec.notes}`);
   console.log(`    Saved to: ${outPath}\n`);
 }

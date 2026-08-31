@@ -6,7 +6,7 @@ metadata:
   author: clerk
   version: 1.2.0
   skills_sh_url: "https://skills.sh/clerk/skills/clerk-testing"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/clerk-testing"
+  github_url: "https://github.com/clerk/skills/tree/HEAD/skills/features/clerk-testing"
 allowed-tools: WebFetch
 compatibility: Requires CLERK_TESTING_TOKEN from Clerk dashboard
 ---

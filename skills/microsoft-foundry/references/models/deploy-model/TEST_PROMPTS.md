@@ -1,4 +1,4 @@
-# Deploy Model - Test Prompts
+# Deploy Model — Test Prompts
 
 Test prompts for the unified `deploy-model` skill with router, preset, customize, and capacity sub-skills.
 
@@ -6,27 +6,27 @@ Test prompts for the unified `deploy-model` skill with router, preset, customize
 
 | # | Prompt | Expected |
 |---|--------|----------|
-| 1 | Deploy gpt-4o | Preset - confirm project, deploy with defaults |
-| 2 | Set up o3-mini for me | Preset - pick latest version automatically |
-| 3 | I need a text-embedding-ada-002 deployment | Preset - non-chat model |
-| 4 | Deploy gpt-4o to the best region | Preset - region scan, no capacity target |
+| 1 | Deploy gpt-4o | Preset — confirm project, deploy with defaults |
+| 2 | Set up o3-mini for me | Preset — pick latest version automatically |
+| 3 | I need a text-embedding-ada-002 deployment | Preset — non-chat model |
+| 4 | Deploy gpt-4o to the best region | Preset — region scan, no capacity target |
 
 ## Customize Mode (Guided Flow)
 
 | # | Prompt | Expected |
 |---|--------|----------|
-| 5 | Deploy gpt-4o with custom settings | Customize - walk through version → SKU → capacity → RAI |
-| 6 | I want to choose the version and SKU for my o3-mini deployment | Customize - explicit keywords |
-| 7 | Set up a PTU deployment for gpt-4o | Customize - PTU requires SKU selection |
-| 8 | Deploy gpt-4o with a specific content filter | Customize - RAI policy flow |
+| 5 | Deploy gpt-4o with custom settings | Customize — walk through version → SKU → capacity → RAI |
+| 6 | I want to choose the version and SKU for my o3-mini deployment | Customize — explicit keywords |
+| 7 | Set up a PTU deployment for gpt-4o | Customize — PTU requires SKU selection |
+| 8 | Deploy gpt-4o with a specific content filter | Customize — RAI policy flow |
 
 ## Capacity Discovery
 
 | # | Prompt | Expected |
 |---|--------|----------|
-| 9 | Where can I deploy gpt-4o? | Capacity - show regions, no deploy |
-| 10 | Which regions have o3-mini available? | Capacity - run script, show table |
-| 11 | Check if I have enough quota for gpt-4o with 500K TPM | Capacity - high target, some regions may not qualify |
+| 9 | Where can I deploy gpt-4o? | Capacity — show regions, no deploy |
+| 10 | Which regions have o3-mini available? | Capacity — run script, show table |
+| 11 | Check if I have enough quota for gpt-4o with 500K TPM | Capacity — high target, some regions may not qualify |
 
 ## Chained (Capacity → Deploy)
 
@@ -40,12 +40,12 @@ Test prompts for the unified `deploy-model` skill with router, preset, customize
 
 | # | Prompt | Expected |
 |---|--------|----------|
-| 15 | Deploy unicorn-model-9000 | Fail gracefully - model doesn't exist |
+| 15 | Deploy unicorn-model-9000 | Fail gracefully — model doesn't exist |
 | 16 | Deploy gpt-4o with 999999K TPM | Capacity shows no region qualifies |
 | 17 | Deploy gpt-4o (with az login expired) | Auth error caught early |
 | 18 | Delete my gpt-4o deployment | Should NOT trigger deploy-model |
 | 19 | List my current deployments | Should NOT trigger deploy-model |
-| 20 | Deploy gpt-4o to mars-region-1 | Fail gracefully - invalid region |
+| 20 | Deploy gpt-4o to mars-region-1 | Fail gracefully — invalid region |
 
 ## Project Selection
 
@@ -59,9 +59,9 @@ Test prompts for the unified `deploy-model` skill with router, preset, customize
 
 | # | Prompt | Expected |
 |---|--------|----------|
-| 24 | Help me with model deployment | Preset (default) - vague, no keywords |
-| 25 | I need gpt-4o deployed fast with good capacity | Preset - "fast" + vague capacity |
-| 26 | Can you configure a deployment? | Customize - "configure" keyword, should ask which model |
+| 24 | Help me with model deployment | Preset (default) — vague, no keywords |
+| 25 | I need gpt-4o deployed fast with good capacity | Preset — "fast" + vague capacity |
+| 26 | Can you configure a deployment? | Customize — "configure" keyword, should ask which model |
 | 27 | What's the best way to deploy gpt-4o with 100K? | Capacity → Preset |
 
 ## Automated Test Results (2026-02-09)

@@ -6,7 +6,7 @@ metadata:
   author: ejirocodes
   version: 1.0.0
   skills_sh_url: "https://skills.sh/ejirocodes/agent-skills/svelte5-best-practices"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/svelte5-best-practices"
+  github_url: "https://github.com/ejirocodes/agent-skills/tree/HEAD/svelte/skills/svelte5-best-practices"
 ---
 
 # Svelte 5 Best Practices

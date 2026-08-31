@@ -110,7 +110,7 @@ az role assignment create --role "<role-name>" --assignee "$PRINCIPAL_ID" --scop
 ```bash
 # Create SP with minimal role
 az ad sp create-for-rbac --name "foundry-cicd-sp" --role "Azure AI User" --scopes "<foundry-scope>" --output json
-# Output contains: appId, password, tenant - store securely
+# Output contains: appId, password, tenant — store securely
 
 # For project management permissions
 az ad sp create-for-rbac --name "foundry-cicd-admin-sp" --role "Azure AI Project Manager" --scopes "<foundry-scope>" --output json
@@ -120,7 +120,7 @@ SP_APP_ID=$(az ad sp list --display-name "foundry-cicd-sp" --query "[0].appId" -
 az role assignment create --role "Contributor" --assignee "$SP_APP_ID" --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>"
 ```
 
-> 💡 **Tip:** Use least privilege - start with `Azure AI User` and add roles as needed.
+> 💡 **Tip:** Use least privilege — start with `Azure AI User` and add roles as needed.
 
 | CI/CD Scenario | Recommended Role | Additional Roles |
 |----------------|------------------|------------------|

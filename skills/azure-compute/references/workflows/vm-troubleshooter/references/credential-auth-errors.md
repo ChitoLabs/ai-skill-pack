@@ -2,7 +2,7 @@
 
 User can reach the VM but authentication fails.
 
-## Windows (RDP) - Symptoms → Solutions
+## Windows (RDP) — Symptoms → Solutions
 
 | Symptom                                                    | Solution                                                                      | Documentation                                                                                                                                 |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,17 +14,17 @@ User can reach the VM but authentication fails.
 | Wrong username format                                      | Use `VMNAME\user` for local, `DOMAIN\user` for domain accounts                | [Specific RDP errors](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/troubleshoot-specific-rdp-errors#wincred) |
 | CredSSP "encryption oracle" error                          | Temporary: set AllowEncryptionOracle=2 on client; permanent: patch both sides | [CredSSP remediation](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/credssp-encryption-oracle-remediation)    |
 
-## Linux (SSH) - Symptoms → Solutions
+## Linux (SSH) — Symptoms → Solutions
 
 | Symptom                                                     | Solution                                                                      | Documentation                                                                                                                                    |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| "Permission denied (publickey)"                             | Wrong key, wrong user, or key not in authorized_keys - reset key via CLI      | [Detailed SSH troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/detailed-troubleshoot-ssh-connection) |
+| "Permission denied (publickey)"                             | Wrong key, wrong user, or key not in authorized_keys — reset key via CLI      | [Detailed SSH troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/detailed-troubleshoot-ssh-connection) |
 | "Permission denied (password)"                              | Wrong password or password auth disabled in sshd_config                        | [Detailed SSH troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/detailed-troubleshoot-ssh-connection) |
 | Account locked after failed attempts                        | Unlock via Run Command: `passwd -u <user>` or `pam_tally2 --reset --user <user>` | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)           |
 | "Permission denied" with Entra ID (AAD) SSH login           | Missing role: Virtual Machine Administrator Login or Virtual Machine User Login | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)           |
 | sudo password prompt fails / user not in sudoers            | Fix via Run Command or Serial Console                                          | [Troubleshoot SSH connection](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)           |
 
-## Quick Commands - Windows
+## Quick Commands — Windows
 
 > ⚠️ **Warning:** Commands below use the VM agent/extensions. Run [Pre-Flight Safety Checks](cannot-connect-to-vm.md#pre-flight-safety-checks) before using them.
 
@@ -36,7 +36,7 @@ az vm user update --name <vm-name> -g <resource-group> -u <username> -p '<new-pa
 az vm user reset-remote-desktop --name <vm-name> -g <resource-group>
 ```
 
-## Quick Commands - Linux
+## Quick Commands — Linux
 
 > ⚠️ **Warning:** Commands below use the VM agent/extensions. Run [Pre-Flight Safety Checks](cannot-connect-to-vm.md#pre-flight-safety-checks) before using them.
 

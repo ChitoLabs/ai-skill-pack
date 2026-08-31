@@ -19,7 +19,7 @@ Deploy to Azure using Terraform.
 | 3 | Apply | `terraform apply tfplan` |
 | 4 | Get outputs | `terraform output` |
 | 5 | Deploy app | Service-specific commands |
-| 6 | **Report** | Present deployed endpoint URLs to the user - see [Verification](verify.md) |
+| 6 | **Report** | Present deployed endpoint URLs to the user — see [Verification](verify.md) |
 
 ## Deployment Commands
 
@@ -65,7 +65,7 @@ After infrastructure is deployed:
 
 ### Container Apps (Two-Phase Deployment)
 
-Container Apps with ACR require a two-phase flow because the app image doesn't exist in ACR during initial `terraform apply`. See the **azure-prepare** skill's `references/services/container-apps/terraform.md` for the full pattern.
+Container Apps with ACR require a two-phase flow because the app image doesn't exist in ACR during initial `terraform apply`. See the **azure-prepare** skill for the full pattern; that skill is not part of this pack.
 
 ```bash
 ACR_NAME=$(terraform output -raw acr_name)
@@ -111,7 +111,7 @@ az containerapp update `
   --image "$AcrServer/myapp:latest"
 ```
 
-> ⚠️ **Warning:** Step 2 requires the `AcrPull` role assignment to have propagated (1-5 minutes). If the update fails, wait and retry. See the [RBAC propagation health check](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check).
+> ⚠️ **Warning:** Step 2 requires the `AcrPull` role assignment to have propagated (1–5 minutes). If the update fails, wait and retry. See the [RBAC propagation health check](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check).
 
 ## References
 

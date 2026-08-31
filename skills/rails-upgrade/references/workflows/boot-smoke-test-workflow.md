@@ -13,7 +13,7 @@ A booted Rails process is the only signal that catches that class of failure.
 | 7.1 → 7.2 | `database_cleaner-active_record 2.1.x` | `NoMethodError: undefined method 'schema_migration' for #<...PostgreSQLAdapter>` at first cleaner call | Resolver: ✓ compatible (no upper bound on activerecord). Patterns: ✗ no app-code reference. |
 | 7.2 → 8.0 | `jbuilder 2.11.x` | `LoadError: cannot load such file -- active_support/proxy_object` at `Bundler.require` | Resolver: ✓ compatible (no upper bound on activesupport). Patterns: ✗ no app-code reference. |
 
-In both cases the gem ships in default Rails-generated apps and the user did nothing wrong - the gem itself needed a newer minor version with target-Rails support.
+In both cases the gem ships in default Rails-generated apps and the user did nothing wrong — the gem itself needed a newer minor version with target-Rails support.
 
 ## Procedure
 
@@ -34,15 +34,15 @@ BUNDLE_GEMFILE=Gemfile.next bundle exec rspec
 BUNDLE_GEMFILE=Gemfile.next bundle exec rails test
 ```
 
-Use `rails runner` first. If it boots cleanly, escalate to the full test suite - that catches gems whose problematic code only loads under a specific environment (e.g. test-only gems, eager-load-only paths).
+Use `rails runner` first. If it boots cleanly, escalate to the full test suite — that catches gems whose problematic code only loads under a specific environment (e.g. test-only gems, eager-load-only paths).
 
 ### 2. Diagnose a failure
 
 Boot failures usually show up as one of:
 
-- `LoadError: cannot load such file -- <path>` - a gem `require`s a file Rails removed.
-- `NoMethodError: undefined method '<x>' for <Rails internal>` - a gem calls a Rails API that was removed or renamed.
-- `ArgumentError` / `TypeError` from a Rails class load - a gem passes args in a now-unsupported shape.
+- `LoadError: cannot load such file -- <path>` — a gem `require`s a file Rails removed.
+- `NoMethodError: undefined method '<x>' for <Rails internal>` — a gem calls a Rails API that was removed or renamed.
+- `ArgumentError` / `TypeError` from a Rails class load — a gem passes args in a now-unsupported shape.
 
 To find the offending gem:
 
@@ -72,7 +72,7 @@ For each offending gem:
 
 ### 4. Re-run boot
 
-Repeat steps 1-3 until boot succeeds under `Gemfile.next`. Then proceed to Step 5.
+Repeat steps 1–3 until boot succeeds under `Gemfile.next`. Then proceed to Step 5.
 
 ## Output
 
@@ -89,7 +89,7 @@ If FAIL → bumps required (added to fix-before-bump):
   - ...
 ```
 
-If the smoke test passes on the first run, record that explicitly - it is a positive signal that the resolver-level compat check covered everything for this hop.
+If the smoke test passes on the first run, record that explicitly — it is a positive signal that the resolver-level compat check covered everything for this hop.
 
 ## Notes
 

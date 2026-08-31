@@ -1,12 +1,12 @@
 ---
 name: n8n-code-python
-description: Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes. Use this skill when the user specifically requests Python for an n8n Code node. Note - JavaScript is recommended for 95% of use cases - only use Python when the user explicitly prefers it or the task requires Python-specific standard library capabilities (regex, hashlib, statistics).
+description: Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes. Use this skill when the user specifically requests Python for an n8n Code node. Note — JavaScript is recommended for 95% of use cases — only use Python when the user explicitly prefers it or the task requires Python-specific standard library capabilities (regex, hashlib, statistics).
 license: Apache-2.0
 metadata:
-  author: wilkomarketing
+  author: czlonkowski
   version: 0.1
   skills_sh_url: "https://www.skills.sh/czlonkowski/n8n-skills/n8n-code-python"
-  github_url: "https://github.com/wilkomarketing/antigravity-n8n-skills/tree/HEAD/n8n-code-python"
+  github_url: "https://github.com/czlonkowski/n8n-skills/tree/HEAD/skills/n8n-code-python"
 ---
 
 # Python Code Node (Beta)
@@ -668,8 +668,8 @@ print(f"First item: {items[0] if items else 'None'}")
 ### SplitInBatches Loop Semantics
 
 The SplitInBatches node has two outputs:
-- `main[0]` = **done** - fires ONCE after all batches complete
-- `main[1]` = **each batch** - fires for every batch (the loop body)
+- `main[0]` = **done** — fires ONCE after all batches complete
+- `main[1]` = **each batch** — fires for every batch (the loop body)
 
 Always add a **Limit 1** node after the done output.
 

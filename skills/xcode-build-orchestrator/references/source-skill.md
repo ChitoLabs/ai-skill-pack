@@ -3,10 +3,10 @@ name: xcode-build-orchestrator
 description: Orchestrate Xcode build optimization by benchmarking first, running the specialist analysis skills, prioritizing findings, requesting explicit approval, delegating approved fixes to xcode-build-fixer, and re-benchmarking after changes. Use when a developer wants an end-to-end build optimization workflow, asks to speed up Xcode builds, wants a full build audit, or needs a recommend-first optimization pass covering compilation, project settings, and packages.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/xcode-build-optimization-agent-skill/xcode-build-orchestrator"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/xcode-build-orchestrator"
+  github_url: "https://github.com/avdlee/xcode-build-optimization-agent-skill/tree/HEAD/skills/xcode-build-orchestrator"
 ---
 
 # Xcode Build Orchestrator
@@ -37,9 +37,9 @@ Run this phase in agent mode because the agent needs to execute builds, run benc
 4. If incremental builds are the primary pain point and Xcode 16.4+ is available, recommend the developer enable **Task Backtraces** (Scheme Editor > Build tab > Build Debugging > "Task Backtraces"). This reveals why each task re-ran, which is critical for diagnosing unexpected replanning or input invalidation. Include any Task Backtrace evidence in the analysis.
 5. Determine whether compile tasks are likely blocking wall-clock progress or just consuming parallel CPU time. Compare the sum of all timing-summary category seconds against the wall-clock median: if the sum is 2x+ the median, most work is parallelized and compile hotspot fixes are unlikely to reduce wait time. If `SwiftCompile`, `CompileC`, `SwiftEmitModule`, or `Planning Swift module` dominate the timing summary **and** appear likely to be on the critical path, run `diagnose_compilation.py` to capture type-checking hotspots. If they are parallelized, still run diagnostics but label findings as "parallel efficiency improvements" rather than "build time improvements."
 6. Run the specialist analyses that fit the evidence by reading each skill's SKILL.md and applying its workflow:
-   - [`xcode-compilation-analyzer`](../xcode-compilation-analyzer/SKILL.md)
-   - [`xcode-project-analyzer`](../xcode-project-analyzer/SKILL.md)
-   - [`spm-build-analysis`](../spm-build-analysis/SKILL.md)
+   - `xcode-compilation-analyzer`
+   - `xcode-project-analyzer`
+   - `spm-build-analysis`
 7. Merge findings into a single prioritized improvement plan.
 8. Generate the markdown optimization report using `generate_optimization_report.py` and save it to `.build-benchmark/optimization-plan.md`. This report includes the build settings audit, timing analysis, prioritized recommendations, and an approval checklist.
 9. Stop and present the plan to the developer for review.
@@ -48,7 +48,7 @@ The developer reviews `.build-benchmark/optimization-plan.md`, checks the approv
 
 ### Phase 2 -- Execute and verify (agent mode)
 
-Run this phase in agent mode after the developer has reviewed and approved recommendations from the plan. Delegate all implementation work to [`xcode-build-fixer`](../xcode-build-fixer/SKILL.md) by reading its SKILL.md and applying its workflow.
+Run this phase in agent mode after the developer has reviewed and approved recommendations from the plan. Delegate all implementation work to `xcode-build-fixer` by reading its SKILL.md and applying its workflow.
 
 10. Read `.build-benchmark/optimization-plan.md` and identify the approved items from the approval checklist.
 11. Hand off to `xcode-build-fixer` with the approved plan. The fixer applies each approved change, verifies compilation, and re-benchmarks.

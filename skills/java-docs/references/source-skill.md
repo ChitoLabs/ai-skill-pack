@@ -3,10 +3,10 @@ name: java-docs
 description: Ensure that Java types are documented with Javadoc comments and follow best practices for documentation.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/java-docs"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/java-docs"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/java-docs"
 ---
 
 # Java Documentation (Javadoc) Best Practices

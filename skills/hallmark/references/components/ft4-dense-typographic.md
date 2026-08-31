@@ -8,3 +8,4 @@ One large block of text  -  credits, references, licence, address  -  in a small
   <p>Hallmark v0.2.0. Built with The Future, Fraunces, IBM Plex Mono. MIT licensed. Powered by Together AI. 137 Marlow Street, 2026.</p>
 </footer>
 ```
+

@@ -11,7 +11,7 @@ After migration (whether successful or not), write a comprehensive `MIGRATION_RE
 **Module migrated:** <module name>
 **Date:** <YYYY-MM-DD>
 **Kotlin version:** <old version> → <new version>
-**Status:** <Completed successfully | Completed with workarounds | Failed - see Errors>
+**Status:** <Completed successfully | Completed with workarounds | Failed — see Errors>
 
 ---
 
@@ -99,7 +99,7 @@ build command or note that verification was deferred to the user.>
 **Symptom:** <exact error message or behavior>
 **Root cause:** <why it happened>
 **Fix:** <what was done to resolve it>
-**Generalizable:** <Yes/No - is this likely to affect other projects?>
+**Generalizable:** <Yes/No — is this likely to affect other projects?>
 
 ---
 
@@ -120,19 +120,19 @@ build command or note that verification was deferred to the user.>
 Group by type: Gradle files, Kotlin sources, Xcode project files, other.>
 
 ### Gradle Files
-- <path> - <brief description of change>
+- <path> — <brief description of change>
 
 ### Kotlin Sources
-- <path> - <brief description of change>
+- <path> — <brief description of change>
 
 ### Xcode Project Files
-- <path> - <brief description of change>
+- <path> — <brief description of change>
 
 ### Created
-- <path> - <what it is>
+- <path> — <what it is>
 
 ### Deleted
-- <path> - <what it was>
+- <path> — <what it was>
 ```
 
 ## Writing Guidelines
@@ -140,6 +140,6 @@ Group by type: Gradle files, Kotlin sources, Xcode project files, other.>
 - **Be specific.** Include actual file paths, class names, error messages. Avoid vague statements like "updated the config."
 - **Show before/after.** For non-trivial changes, include code snippets of what was changed and why.
 - **Explain the "why."** Every error and non-trivial decision should include root cause analysis, not just the fix.
-- **Mark preserved `cocoapods.*` imports clearly.** These are the most confusing aspect of the migration for future readers - explain exactly why each one was kept and which library provides the bundled klib.
+- **Mark preserved `cocoapods.*` imports clearly.** These are the most confusing aspect of the migration for future readers — explain exactly why each one was kept and which library provides the bundled klib.
 - **Flag generalizable issues.** Mark errors that are likely to affect other projects so this report can improve the migration tooling.
 - **Keep it machine-parseable.** Use consistent markdown headings, tables, and the `Error #N` format so AI agents can extract structured data.

@@ -174,7 +174,7 @@ colors:
 - **Display** ([weight], [size/clamp], [line-height]): [Purpose; where it appears.]
 - **Headline** ([weight], [size], [line-height]): [Purpose.]
 - **Title** ([weight], [size], [line-height]): [Purpose.]
-- **Body** ([weight], [size], [line-height]): [Purpose. Include max line length like 65-75ch if relevant.]
+- **Body** ([weight], [size], [line-height]): [Purpose. Include max line length like 65–75ch if relevant.]
 - **Label** ([weight], [size], [letter-spacing], [case if uppercase]): [Purpose.]
 
 ### Named Rules (optional)
@@ -333,7 +333,7 @@ Do not reword. The panel shows these as secondary collapsible context; the same 
 1. Show the user the full DESIGN.md you wrote. Briefly highlight the non-obvious creative choices (descriptive color names, atmosphere language, named rules).
 2. Mention that `.impeccable/design.json` was also written alongside; the live panel will now render this project's actual button/input/nav primitives instead of generic approximations.
 3. Offer to refine any section: "Want me to revise a section, add component patterns I missed, or adjust the atmosphere language?"
-4. **Refresh the session cache.** Run `node .pi/skills/impeccable/scripts/load-context.mjs` one final time so the newly-written DESIGN.md lands in conversation. Subsequent commands in this session will use the fresh version automatically without re-reading.
+4. **Refresh the session cache.** Run `node ../../scripts/load-context.mjs` one final time so the newly-written DESIGN.md lands in conversation. Subsequent commands in this session will use the fresh version automatically without re-reading.
 
 ## Seed mode
 
@@ -351,8 +351,8 @@ Group into one `AskUserQuestion` interaction. Options must be concrete.
 
 1. **Color strategy.** Pick one:
    - Restrained: tinted neutrals + one accent ≤10%
-   - Committed: one saturated color carries 30-60% of the surface
-   - Full palette: 3-4 named color roles, each deliberate
+   - Committed: one saturated color carries 30–60% of the surface
+   - Full palette: 3–4 named color roles, each deliberate
    - Drenched: the surface IS the color
    
    Then: one hue family or anchor reference ("deep teal", "mustard", "Klim #ff4500 orange").
@@ -398,7 +398,7 @@ Seed mode writes a minimal frontmatter with `name` and `description` only; no co
 
 1. Show the seed DESIGN.md. Call out that it is a seed (the marker is the literal commitment).
 2. Tell the user: "Re-run `/impeccable document` once you have some code. That pass will extract real tokens and generate the sidecar."
-3. Run `node .pi/skills/impeccable/scripts/load-context.mjs` once so the seed lands in conversation for the rest of the session.
+3. Run `node ../../scripts/load-context.mjs` once so the seed lands in conversation for the rest of the session.
 
 ## Style guidelines
 

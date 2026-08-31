@@ -191,4 +191,4 @@ references/prisma-client-setup.md
 
 ## How to Use
 
-Choose the provider reference file for your database, then apply `references/prisma-client-setup.md` to complete client generation and adapter setup. For MongoDB, use `references/mongodb.md` instead of copying the SQL adapter examples or Prisma 7 config pattern.
+Choose the provider reference file for your database, then apply `prisma-client-setup.md` to complete client generation and adapter setup. For MongoDB, use `mongodb.md` instead of copying the SQL adapter examples or Prisma 7 config pattern.

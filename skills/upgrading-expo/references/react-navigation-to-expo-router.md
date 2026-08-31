@@ -1,6 +1,6 @@
 # Migrating from react-navigation to expo-router
 
-In SDK 56+, application code must not import from `@react-navigation/*` directly. Repoint those imports to the matching `expo-router` entry points. Runtime API is unchanged - only the module specifiers move.
+In SDK 56+, application code must not import from `@react-navigation/*` directly. Repoint those imports to the matching `expo-router` entry points. Runtime API is unchanged — only the module specifiers move.
 
 ## Steps
 

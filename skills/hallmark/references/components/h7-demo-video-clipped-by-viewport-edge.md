@@ -25,3 +25,4 @@ See [`hero-enrichment.md`](../hero-enrichment.md) for the full E1 recipe (codec 
 .hero__media   { width: calc(100% + 12vw); aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; }
 @media (max-width: 60rem) { .hero--clipped { grid-template-columns: 1fr; } .hero__media { width: 100%; } }
 ```
+

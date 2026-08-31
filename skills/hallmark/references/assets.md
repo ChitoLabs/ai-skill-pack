@@ -404,3 +404,4 @@ When budget and timeline force a shortcut and even Tier C is overkill.
 | A checkmark draw on confirm | SVG `stroke-dasharray` | (don't reach for Lottie) |
 
 When in doubt: build it. The path of least resistance and the path of least-AI-tell are the same path in 2026.
+

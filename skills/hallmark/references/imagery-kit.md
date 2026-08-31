@@ -168,3 +168,4 @@ site/public/imagery/
 **Total target weight.** <= 5 MB across all categories. Each individual file <= 200 KB. Lossy WebP at q=80 unless the image needs lossless (ornaments -> SVG; transparents -> PNG with `pngquant`).
 
 **Re-generation.** Treat the kit as a refreshable batch, not a one-off. When the palette catalogue changes (new theme, new accent hue), re-generate the relevant palette family. Manifest above is the spec; assets are the deliverable.
+

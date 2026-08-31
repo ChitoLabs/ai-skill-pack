@@ -98,7 +98,7 @@ Stack multiple gradients by comma-separating them:
 
 ## Important Notes
 
-- Do NOT use `expo-linear-gradient` - use CSS gradients instead
+- Do NOT use `expo-linear-gradient` — use CSS gradients instead
 - Gradients are strings, not objects
 - Use `rgba()` for transparency, or `transparent` keyword
 - Color stops use percentages (0%, 50%, 100%)

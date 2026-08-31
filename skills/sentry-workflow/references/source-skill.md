@@ -18,13 +18,13 @@ Debug production issues and maintain code quality with Sentry context. This page
 
 ## How to Fetch Skills
 
-Use `curl` to download skills - they are 10-20 KB files that fetch tools often summarize, losing critical details.
+Use `curl` to download skills — they are 10–20 KB files that fetch tools often summarize, losing critical details.
 
     curl -sL https://skills.sentry.dev/sentry-fix-issues/SKILL.md
 
 Append the path from the `Path` column in the table below to `https://skills.sentry.dev/`. Do not guess or shorten URLs.
 
-## Start Here - Read This Before Doing Anything
+## Start Here — Read This Before Doing Anything
 
 **Do not skip this section.** Do not assume which workflow the user needs. Ask first.
 
@@ -41,12 +41,12 @@ When unclear, **ask the user** whether the task involves live production issues,
 
 | Use when | Skill | Path |
 |---|---|---|
-| Finding and fixing production issues - stack traces, breadcrumbs, event data | [`sentry-fix-issues`](related-skills/sentry-fix-issues/SKILL.md) | `sentry-fix-issues/SKILL.md` |
-| Resolving comments from `sentry[bot]` on GitHub PRs | [`sentry-code-review`](related-skills/sentry-code-review/SKILL.md) | `sentry-code-review/SKILL.md` |
+| Finding and fixing production issues — stack traces, breadcrumbs, event data | [`sentry-fix-issues`](related-skills/sentry-fix-issues.md) | `sentry-fix-issues/SKILL.md` |
+| Resolving comments from `sentry[bot]` on GitHub PRs | [`sentry-code-review`](related-skills/sentry-code-review.md) | `sentry-code-review/SKILL.md` |
 | Fixing issues detected by Seer Bug Prediction in PR reviews | [`sentry-pr-code-review`](SKILL_TREE.md) | `sentry-pr-code-review/SKILL.md` |
-| Upgrading the Sentry JavaScript SDK - migration guides, breaking changes, deprecated APIs | [`sentry-sdk-upgrade`](SKILL_TREE.md) | `sentry-sdk-upgrade/SKILL.md` |
+| Upgrading the Sentry JavaScript SDK — migration guides, breaking changes, deprecated APIs | [`sentry-sdk-upgrade`](SKILL_TREE.md) | `sentry-sdk-upgrade/SKILL.md` |
 
-Each skill contains its own detection logic, prerequisites, and step-by-step instructions. Trust the skill - read it carefully and follow it. Do not improvise or take shortcuts.
+Each skill contains its own detection logic, prerequisites, and step-by-step instructions. Trust the skill — read it carefully and follow it. Do not improvise or take shortcuts.
 
 ---
 

@@ -1,4 +1,4 @@
-# Azure Service Bus SDK - .NET (C#)
+# Azure Service Bus SDK — .NET (C#)
 
 Package: `Azure.Messaging.ServiceBus` | [README](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/TROUBLESHOOTING.md)
 
@@ -6,7 +6,7 @@ Package: `Azure.Messaging.ServiceBus` | [README](https://github.com/Azure/azure-
 
 | Exception | Reason | Fix |
 |-----------|--------|-----|
-| `ServiceBusException` (ServiceTimeout) | Service didn't respond | Transient - auto-retried. For session accept, means no unlocked sessions |
+| `ServiceBusException` (ServiceTimeout) | Service didn't respond | Transient — auto-retried. For session accept, means no unlocked sessions |
 | `ServiceBusException` (MessageLockLost) | Lock expired or link detached | Renew lock, reduce processing time, check network |
 | `ServiceBusException` (SessionLockLost) | Session lock expired | Re-accept session, renew lock before expiry |
 | `ServiceBusException` (QuotaExceeded) | Too many concurrent receives | Reduce receivers or use batch receives |

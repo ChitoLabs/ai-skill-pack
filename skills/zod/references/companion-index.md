@@ -1,0 +1,52 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `../assets/templates/_template.md` - preserved source companion file.
+- `AGENTS.md` - preserved source companion file.
+- `README.md` - preserved source companion file.
+- `_sections.md` - preserved source companion file.
+- `compose-intersection.md` - preserved source companion file.
+- `compose-lazy-recursive.md` - preserved source companion file.
+- `compose-pipe.md` - preserved source companion file.
+- `compose-preprocess.md` - preserved source companion file.
+- `compose-shared-schemas.md` - preserved source companion file.
+- `error-avoid-throwing-in-refine.md` - preserved source companion file.
+- `error-custom-messages.md` - preserved source companion file.
+- `error-i18n.md` - preserved source companion file.
+- `error-path-for-nested.md` - preserved source companion file.
+- `error-use-flatten.md` - preserved source companion file.
+- `metadata.json` - preserved source companion file.
+- `object-discriminated-unions.md` - preserved source companion file.
+- `object-extend-for-composition.md` - preserved source companion file.
+- `object-optional-vs-nullable.md` - preserved source companion file.
+- `object-partial-for-updates.md` - preserved source companion file.
+- `object-pick-omit.md` - preserved source companion file.
+- `object-strict-vs-strip.md` - preserved source companion file.
+- `parse-async-for-async-refinements.md` - preserved source companion file.
+- `parse-avoid-double-validation.md` - preserved source companion file.
+- `parse-handle-all-issues.md` - preserved source companion file.
+- `parse-never-trust-json.md` - preserved source companion file.
+- `parse-use-safeparse.md` - preserved source companion file.
+- `parse-validate-early.md` - preserved source companion file.
+- `perf-arrays.md` - preserved source companion file.
+- `perf-avoid-dynamic-creation.md` - preserved source companion file.
+- `perf-cache-schemas.md` - preserved source companion file.
+- `perf-lazy-loading.md` - preserved source companion file.
+- `perf-zod-mini.md` - preserved source companion file.
+- `refine-add-path.md` - preserved source companion file.
+- `refine-catch.md` - preserved source companion file.
+- `refine-defaults.md` - preserved source companion file.
+- `refine-transform-coerce.md` - preserved source companion file.
+- `refine-vs-superrefine.md` - preserved source companion file.
+- `schema-avoid-optional-abuse.md` - preserved source companion file.
+- `schema-coercion-for-form-data.md` - preserved source companion file.
+- `schema-string-validations.md` - preserved source companion file.
+- `schema-use-enums.md` - preserved source companion file.
+- `schema-use-primitives-correctly.md` - preserved source companion file.
+- `schema-use-unknown-not-any.md` - preserved source companion file.
+- `type-branded-types.md` - preserved source companion file.
+- `type-enable-strict-mode.md` - preserved source companion file.
+- `type-export-schemas-and-types.md` - preserved source companion file.
+- `type-input-vs-output.md` - preserved source companion file.
+- `type-use-z-infer.md` - preserved source companion file.

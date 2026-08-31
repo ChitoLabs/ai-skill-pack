@@ -1,0 +1,47 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `POWER.md` - preserved source companion file.
+- `agents/openai.yaml` - preserved source companion file.
+- `bundle-analyze-app.md` - preserved source companion file.
+- `bundle-analyze-js.md` - preserved source companion file.
+- `bundle-barrel-exports.md` - preserved source companion file.
+- `bundle-code-splitting.md` - preserved source companion file.
+- `bundle-hermes-mmap.md` - preserved source companion file.
+- `bundle-library-size.md` - preserved source companion file.
+- `bundle-native-assets.md` - preserved source companion file.
+- `bundle-r8-android.md` - preserved source companion file.
+- `bundle-tree-shaking.md` - preserved source companion file.
+- `images/bundle-treemap-source-map-explorer.png` - preserved source companion file.
+- `images/controlled-textinput-pingpong.png` - preserved source companion file.
+- `images/devtools-flamegraph.png` - preserved source companion file.
+- `images/emerge-xray-ios.png` - preserved source companion file.
+- `images/expo-atlas-treemap.png` - preserved source companion file.
+- `images/flashlight-flatlist-vs-flashlist.png` - preserved source companion file.
+- `images/fps-drop-graph.png` - preserved source companion file.
+- `images/memory-heap-snapshot.png` - preserved source companion file.
+- `images/tti-warm-start-diagram.png` - preserved source companion file.
+- `images/view-hierarchy-flattening.png` - preserved source companion file.
+- `images/xcode-instruments-templates.png` - preserved source companion file.
+- `images/xcode-thread-view.png` - preserved source companion file.
+- `js-animations-reanimated.md` - preserved source companion file.
+- `js-atomic-state.md` - preserved source companion file.
+- `js-bottomsheet.md` - preserved source companion file.
+- `js-concurrent-react.md` - preserved source companion file.
+- `js-lists-flatlist-flashlist.md` - preserved source companion file.
+- `js-measure-fps.md` - preserved source companion file.
+- `js-memory-leaks.md` - preserved source companion file.
+- `js-profile-react.md` - preserved source companion file.
+- `js-react-compiler.md` - preserved source companion file.
+- `js-uncontrolled-components.md` - preserved source companion file.
+- `native-android-16kb-alignment.md` - preserved source companion file.
+- `native-measure-tti.md` - preserved source companion file.
+- `native-memory-leaks.md` - preserved source companion file.
+- `native-memory-patterns.md` - preserved source companion file.
+- `native-platform-setup.md` - preserved source companion file.
+- `native-profiling.md` - preserved source companion file.
+- `native-sdks-over-polyfills.md` - preserved source companion file.
+- `native-threading-model.md` - preserved source companion file.
+- `native-turbo-modules.md` - preserved source companion file.
+- `native-view-flattening.md` - preserved source companion file.

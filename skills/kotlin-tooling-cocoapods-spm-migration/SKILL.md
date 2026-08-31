@@ -3,20 +3,22 @@ name: kotlin-tooling-cocoapods-spm-migration
 description: "Trigger: kotlin-tooling-cocoapods-spm-migration. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: JetBrains
+  author: Kotlin
   version: 1.0.0
   skills_sh_url: "https://skills.sh/Kotlin/kotlin-agent-skills/kotlin-tooling-cocoapods-spm-migration"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/kotlin-tooling-cocoapods-spm-migration"
+  github_url: "https://github.com/Kotlin/kotlin-agent-skills/tree/HEAD/skills/kotlin-tooling-cocoapods-spm-migration"
 ---
 
 ## Activation Contract
 
-Use this skill when the user request matches `kotlin-tooling-cocoapods-spm-migration` or the preserved source description: Migrate KMP projects from CocoaPods (kotlin("native.cocoapods")) to Swift Package Manager (swiftPMDependencies DSL) - replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and reconfigures the Xcode project.
+Use this skill when the user request matches `kotlin-tooling-cocoapods-spm-migration` or the preserved source description: Migrate KMP projects from CocoaPods (kotlin("native.cocoapods")) to Swift Package Manager (swiftPMDependencies DSL) — replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and reconfigures the Xcode project.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |

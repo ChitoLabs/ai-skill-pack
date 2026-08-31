@@ -1,6 +1,6 @@
-# Managed Agents - Multiagent Sessions
+# Managed Agents — Multiagent Sessions
 
-A coordinator agent can delegate to other agents within one session. All agents **share the container and filesystem**; each runs in its own **thread** - a context-isolated event stream with its own conversation history, model, system prompt, tools, MCP servers, and skills (from that agent's own config). Threads are persistent: the coordinator can send a follow-up to a subagent it called earlier and that subagent retains its prior turns.
+A coordinator agent can delegate to other agents within one session. All agents **share the container and filesystem**; each runs in its own **thread** — a context-isolated event stream with its own conversation history, model, system prompt, tools, MCP servers, and skills (from that agent's own config). Threads are persistent: the coordinator can send a follow-up to a subagent it called earlier and that subagent retains its prior turns.
 
 The SDK sets the `managed-agents-2026-04-01` beta header automatically on all `client.beta.{agents,sessions}.*` calls; no additional header is required for multiagent.
 
@@ -8,7 +8,7 @@ The SDK sets the `managed-agents-2026-04-01` beta header automatically on all `c
 
 ## Declare the roster on the coordinator
 
-`multiagent` is a **top-level field** on `agents.create()` / `agents.update()` - **not** a `tools[]` entry. `agents` lists 1-20 roster entries. Nothing changes on `sessions.create()` - the roster is resolved from the coordinator's config.
+`multiagent` is a **top-level field** on `agents.create()` / `agents.update()` — **not** a `tools[]` entry. `agents` lists 1–20 roster entries. Nothing changes on `sessions.create()` — the roster is resolved from the coordinator's config.
 
 ```python
 orchestrator = client.beta.agents.create(
@@ -19,7 +19,7 @@ orchestrator = client.beta.agents.create(
     multiagent={
         "type": "coordinator",
         "agents": [
-            reviewer.id,                                            # bare string - latest version
+            reviewer.id,                                            # bare string — latest version
             {"type": "agent", "id": test_writer.id, "version": 4},  # pinned version
             {"type": "self"},                                       # the coordinator itself
         ],
@@ -35,13 +35,13 @@ session = client.beta.sessions.create(agent=orchestrator.id, environment_id=env.
 | Agent reference | `{type: "agent", id, version?}` | Omit `version` to pin the latest at coordinator save time. |
 | Self | `{type: "self"}` | The coordinator can spawn copies of itself. |
 
-Up to **20 unique agents** in the roster; the coordinator may spawn **multiple copies** of each. **One level of delegation only** - depth > 1 is ignored.
+Up to **20 unique agents** in the roster; the coordinator may spawn **multiple copies** of each. **One level of delegation only** — depth > 1 is ignored.
 
 ---
 
 ## Threads
 
-The session-level event stream is the **primary thread** - it shows the coordinator's trace plus a condensed view of subagent activity (thread status transitions and cross-thread messages, not every subagent tool call). Drill into a specific subagent via the per-thread endpoints:
+The session-level event stream is the **primary thread** — it shows the coordinator's trace plus a condensed view of subagent activity (thread status transitions and cross-thread messages, not every subagent tool call). Drill into a specific subagent via the per-thread endpoints:
 
 | Operation | HTTP | SDK (`client.beta.sessions.threads.*`) |
 |---|---|---|
@@ -51,7 +51,7 @@ The session-level event stream is the **primary thread** - it shows the coordina
 | List thread events | `GET /v1/sessions/{sid}/threads/{tid}/events` | `.events.list(thread_id, session_id=...)` |
 | Stream thread events | `GET /v1/sessions/{sid}/threads/{tid}/stream` | `.events.stream(thread_id, session_id=...)` |
 
-Each `SessionThread` carries `id`, `status` (`running` | `idle` | `rescheduling` | `terminated`), `agent` (a resolved snapshot of the agent config - `id`, `name`, `model`, `system`, `tools`, `skills`, `mcp_servers`, `version`), `parent_thread_id` (null for the primary thread, which is included in the list), `archived_at`, and optional `stats`/`usage`. **Session status aggregates thread statuses** - if any thread is `running`, `session.status` is `running`. Max **25 concurrent threads**. When draining a per-thread stream, break on `session.thread_status_idle` (and check its `stop_reason` as you would for the session-level idle).
+Each `SessionThread` carries `id`, `status` (`running` | `idle` | `rescheduling` | `terminated`), `agent` (a resolved snapshot of the agent config — `id`, `name`, `model`, `system`, `tools`, `skills`, `mcp_servers`, `version`), `parent_thread_id` (null for the primary thread, which is included in the list), `archived_at`, and optional `stats`/`usage`. **Session status aggregates thread statuses** — if any thread is `running`, `session.status` is `running`. Max **25 concurrent threads**. When draining a per-thread stream, break on `session.thread_status_idle` (and check its `stop_reason` as you would for the session-level idle).
 
 ---
 
@@ -71,7 +71,7 @@ Each `SessionThread` carries `id`, `status` (`running` | `idle` | `rescheduling`
 
 ## Tool permissions and custom tools from subagent threads
 
-When a subagent needs your client (an `always_ask` confirmation, or a custom tool result), the request is **cross-posted to the primary thread** with `session_thread_id` identifying the originating thread - so you only need to watch the session stream. Reply with `user.tool_confirmation` (carrying `tool_use_id`) or `user.custom_tool_result` (carrying `custom_tool_use_id`), and **echo the `session_thread_id` from the originating event** (the SDK param type and docstring expect it). The server also routes by the tool-use ID, so the echo is belt-and-suspenders rather than load-bearing - but include it.
+When a subagent needs your client (an `always_ask` confirmation, or a custom tool result), the request is **cross-posted to the primary thread** with `session_thread_id` identifying the originating thread — so you only need to watch the session stream. Reply with `user.tool_confirmation` (carrying `tool_use_id`) or `user.custom_tool_result` (carrying `custom_tool_use_id`), and **echo the `session_thread_id` from the originating event** (the SDK param type and docstring expect it). The server also routes by the tool-use ID, so the echo is belt-and-suspenders rather than load-bearing — but include it.
 
 ```python
 for event_id in stop.event_ids:
@@ -94,6 +94,6 @@ The same pattern applies to `user.custom_tool_result`.
 
 - **Don't put the roster on `sessions.create()` or in `tools[]`.** `multiagent` is a top-level agent field; update the coordinator, then start a session that references it.
 - **Don't assume shared context.** Threads share the filesystem but not conversation history or tools. If the coordinator needs a subagent to act on something, it must say so in the delegated message (or write it to disk).
-- **Depth > 1 is ignored.** A subagent's own `multiagent` roster (if any) doesn't cascade - only the session's coordinator delegates.
+- **Depth > 1 is ignored.** A subagent's own `multiagent` roster (if any) doesn't cascade — only the session's coordinator delegates.
 
 For per-language bindings beyond Python, WebFetch `https://platform.claude.com/docs/en/managed-agents/multi-agent.md` (see `shared/live-sources.md`).

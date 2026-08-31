@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/bun-development"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/bun-development"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/bun-development"
 risk: critical
 source: community
 date_added: 2026-02-27
@@ -36,6 +36,7 @@ Use this skill when:
 
 ```bash
 # macOS / Linux
+# Remote installer example: the parent skill's remote-installer consent gate applies. This official Bun script downloads a platform-specific release into $BUN_INSTALL or ~/.bun, makes it executable, installs shell completions, and may append PATH settings to a writable shell profile. Prefer downloading and inspecting it first.
 curl -fsSL https://bun.sh/install | bash
 
 # Windows
@@ -594,6 +595,7 @@ console.log(__filename);
 
 ```bash
 # 1. Install Bun
+# Remote installer example: the parent skill's remote-installer consent gate applies. Explain the same download, executable, completion, and shell-profile effects described in the installation section before asking for permission.
 curl -fsSL https://bun.sh/install | bash
 
 # 2. Replace package manager

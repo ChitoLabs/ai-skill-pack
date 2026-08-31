@@ -83,7 +83,7 @@ end
 
 ## External Service Mocking (class method)
 
-Use `allow(ServiceClass).to receive(:method)` - NOT `instance_double` - when the service calls an external class method. Always include a failure context for the external call.
+Use `allow(ServiceClass).to receive(:method)` — NOT `instance_double` — when the service calls an external class method. Always include a failure context for the external call.
 
 ```ruby
 # spec/services/campaigns/delivery_service_spec.rb
@@ -125,13 +125,13 @@ end
 
 ## Time-Dependent Spec (travel_to)
 
-Always use `travel_to` for time-dependent assertions - do not set dates in the past as a shortcut.
+Always use `travel_to` for time-dependent assertions — do not set dates in the past as a shortcut.
 
 ```ruby
 # spec/models/subscription_spec.rb
 RSpec.describe Subscription, type: :model do
   describe '#expired?' do
-    # Create with current time - then travel forward to test boundaries
+    # Create with current time — then travel forward to test boundaries
     let(:subscription) { create(:subscription, activated_at: Time.current) }
 
     context 'before expiration (29 days)' do

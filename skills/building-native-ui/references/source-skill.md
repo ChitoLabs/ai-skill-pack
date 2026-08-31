@@ -70,7 +70,7 @@ Expo Go supports a huge range of features out of the box:
 
 ## Routes
 
-See `./references/route-structure.md` for detailed route conventions.
+See `route-structure.md` for detailed route conventions.
 
 - Routes belong in the `app` directory.
 - Never co-locate components, types, or utilities in the app directory. This is an anti-pattern.
@@ -262,11 +262,11 @@ A standard app layout with tabs and stacks inside each tab:
 
 ```
 app/
-  _layout.tsx - <NativeTabs />
+  _layout.tsx — <NativeTabs />
   (index,search)/
-    _layout.tsx - <Stack />
-    index.tsx - Main list
-    search.tsx - Search view
+    _layout.tsx — <Stack />
+    index.tsx — Main list
+    search.tsx — Search view
 ```
 
 ```tsx

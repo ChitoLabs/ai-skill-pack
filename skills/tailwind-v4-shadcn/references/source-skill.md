@@ -389,10 +389,10 @@ Copy these files to your project and customize as needed.
 
 ## Advanced Topics
 
-Load `references/advanced-usage.md` for advanced patterns including:
+Load `advanced-usage.md` for advanced patterns including:
 
 - **Custom Colors**: Add semantic colors beyond default palette
-- **v3 Migration**: See `references/migration-guide.md` for complete guide
+- **v3 Migration**: See `migration-guide.md` for complete guide
 - **Component Best Practices**: Semantic tokens, cn() utility, composition patterns
 
 **Quick Example:**
@@ -402,7 +402,7 @@ Load `references/advanced-usage.md` for advanced patterns including:
 ```
 Usage: `<div className="bg-brand">Branded</div>`
 
-For detailed patterns and component composition examples, load `references/advanced-usage.md`.
+For detailed patterns and component composition examples, load `advanced-usage.md`.
 
 ---
 
@@ -462,7 +462,7 @@ Tailwind v4 supports official plugins using the `@plugin` directive in CSS.
 
 **Built-in Features:** Container queries are now core (no `@tailwindcss/container-queries` plugin needed).
 
-Load `references/plugins-reference.md` for complete documentation including Typography plugin (prose classes), Forms plugin, installation steps, and common plugin errors.
+Load `plugins-reference.md` for complete documentation including Typography plugin (prose classes), Forms plugin, installation steps, and common plugin errors.
 
 ---
 
@@ -482,32 +482,32 @@ For deeper understanding, see:
 
 Load reference files based on user's specific needs:
 
-### Load `references/common-gotchas.md` when:
+### Load `common-gotchas.md` when:
 - User reports "colors not working" or "bg-primary doesn't exist"
 - Dark mode not switching properly
 - Build fails with Tailwind errors
 - User encounters any CSS/configuration issue
 - Debugging theme problems
 
-### Load `references/dark-mode.md` when:
+### Load `dark-mode.md` when:
 - User asks to implement dark mode
 - Theme switching not working
 - Need ThemeProvider component code
 - Questions about system theme detection
 
-### Load `references/migration-guide.md` when:
+### Load `migration-guide.md` when:
 - Migrating from Tailwind v3 to v4
 - User has hardcoded colors to migrate
 - Questions about v3 → v4 changes
 - Need migration checklist
 
-### Load `references/plugins-reference.md` when:
+### Load `plugins-reference.md` when:
 - User needs Typography plugin (prose class)
 - User needs Forms plugin
 - Questions about @plugin directive
 - Plugin installation errors
 
-### Load `references/advanced-usage.md` when:
+### Load `advanced-usage.md` when:
 - User asks about custom colors beyond defaults
 - Need advanced component patterns
 - Questions about component best practices
@@ -529,9 +529,9 @@ Load reference files based on user's specific needs:
 
 When installing Tailwind and shadcn/ui packages, follow supply chain security best practices:
 
-- **Block post-install scripts** - `npm config set ignore-scripts true` (or Bun: disabled by default)
-- **Cooldown period** - Wait 7 days for new package versions to be vetted by the community
-- **Audit before installing** - Run `socket package score npm <pkg>` or use `socket npm install <pkg>` to check packages
+- **Block post-install scripts** — `npm config set ignore-scripts true` (or Bun: disabled by default)
+- **Cooldown period** — Wait 7 days for new package versions to be vetted by the community
+- **Audit before installing** — Run `socket package score npm <pkg>` or use `socket npm install <pkg>` to check packages
 
 Load the `dependency-upgrade` skill for full security configuration including Socket CLI integration, cooldown setup, lockfile validation, and CI enforcement.
 

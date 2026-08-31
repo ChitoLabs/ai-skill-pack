@@ -5,9 +5,9 @@ license: Apache-2.0
 metadata:
   copyright: Copyright IBM Corp. 2026
   version: 0.0.1
-  author: midudev
+  author: hashicorp
   skills_sh_url: "https://skills.sh/hashicorp/agent-skills/terraform-stacks"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/terraform-stacks"
+  github_url: "https://github.com/hashicorp/agent-skills/tree/HEAD/plugins/terraform/skills/terraform-stacks"
 ---
 
 # Terraform Stacks
@@ -177,7 +177,7 @@ component "vpc" {
 }
 ```
 
-See `references/component-blocks.md` for examples of dependencies, for_each, public registry modules, Git sources, and more.
+See `component-blocks.md` for examples of dependencies, for_each, public registry modules, Git sources, and more.
 
 **Key Points:**
 - Reference outputs: `component.<name>.<output>` or `component.<name>[key].<output>` for for_each
@@ -277,7 +277,7 @@ deployment "production" {
 }
 ```
 
-Use to centralize credentials and share variables across Stacks. See `references/deployment-blocks.md` for details.
+Use to centralize credentials and share variables across Stacks. See `deployment-blocks.md` for details.
 
 ### Deployment Block
 
@@ -305,7 +305,7 @@ deployment "development" {
 }
 ```
 
-**To destroy a deployment**: Set `destroy = true`, upload configuration, approve destroy run, then remove the deployment block. See `references/deployment-blocks.md` for details.
+**To destroy a deployment**: Set `destroy = true`, upload configuration, approve destroy run, then remove the deployment block. See `deployment-blocks.md` for details.
 
 ### Deployment Group Block
 
@@ -322,7 +322,7 @@ deployment "dev" {
 }
 ```
 
-Multiple deployments can reference the same group. See `references/deployment-blocks.md` for details.
+Multiple deployments can reference the same group. See `deployment-blocks.md` for details.
 
 ### Deployment Auto-Approve Block
 
@@ -343,7 +343,7 @@ deployment_auto_approve "safe_changes" {
 
 **Note:** `orchestrate` blocks are deprecated. Use `deployment_group` and `deployment_auto_approve` instead.
 
-See `references/deployment-blocks.md` for all context variables and patterns.
+See `deployment-blocks.md` for all context variables and patterns.
 
 ### Publish Output and Upstream Input Blocks
 
@@ -369,7 +369,7 @@ deployment "app" {
 }
 ```
 
-See `references/linked-stacks.md` for complete documentation and examples.
+See `linked-stacks.md` for complete documentation and examples.
 
 ## Terraform Stacks CLI
 
@@ -436,7 +436,7 @@ For programmatic monitoring in automation, CI/CD, or non-interactive environment
 - Diagnostics endpoint requires `stack_deployment_step_id` query parameter
 - Artifacts endpoint returns HTTP 307 redirect (use `curl -L`)
 
-For complete API workflow, authentication, polling best practices, and example scripts, see `references/api-monitoring.md`.
+For complete API workflow, authentication, polling best practices, and example scripts, see `api-monitoring.md`.
 
 ## Common Patterns
 
@@ -446,7 +446,7 @@ For complete API workflow, authentication, polling best practices, and example s
 
 **Deferred Changes**: Stacks support deferred changes to handle dependencies where values are only known after apply. This enables complex multi-component deployments where some resources depend on runtime values from other components (cluster endpoints, generated passwords, etc.).
 
-For complete examples including multi-region deployments, component dependencies, deferred changes patterns, and linked Stacks, see `references/examples.md`.
+For complete examples including multi-region deployments, component dependencies, deferred changes patterns, and linked Stacks, see `examples.md`.
 
 ## Best Practices
 
@@ -476,9 +476,9 @@ For complete examples including multi-region deployments, component dependencies
 ## References
 
 For detailed documentation, see:
-- `references/component-blocks.md` - Complete component block reference with all arguments and syntax
-- `references/deployment-blocks.md` - Complete deployment block reference with all configuration options
-- `references/linked-stacks.md` - Publish outputs and upstream inputs for linking Stacks together
-- `references/examples.md` - Complete working examples for multi-region and component dependencies
-- `references/api-monitoring.md` - Full API workflow for programmatic monitoring and automation
-- `references/troubleshooting.md` - Detailed troubleshooting guide for common issues and solutions
+- `component-blocks.md` - Complete component block reference with all arguments and syntax
+- `deployment-blocks.md` - Complete deployment block reference with all configuration options
+- `linked-stacks.md` - Publish outputs and upstream inputs for linking Stacks together
+- `examples.md` - Complete working examples for multi-region and component dependencies
+- `api-monitoring.md` - Full API workflow for programmatic monitoring and automation
+- `troubleshooting.md` - Detailed troubleshooting guide for common issues and solutions

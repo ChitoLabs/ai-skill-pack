@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/senior-fullstack"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/senior-fullstack"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/senior-fullstack"
 risk: critical
 source: community
 date_added: 2026-02-27
@@ -84,7 +84,7 @@ python scripts/code_quality_analyzer.py [arguments] [options]
 
 ### Tech Stack Guide
 
-Comprehensive guide available in `references/tech_stack_guide.md`:
+Comprehensive guide available in `tech_stack_guide.md`:
 
 - Detailed patterns and practices
 - Code examples
@@ -94,7 +94,7 @@ Comprehensive guide available in `references/tech_stack_guide.md`:
 
 ### Architecture Patterns
 
-Complete workflow documentation in `references/architecture_patterns.md`:
+Complete workflow documentation in `architecture_patterns.md`:
 
 - Step-by-step processes
 - Optimization strategies
@@ -104,7 +104,7 @@ Complete workflow documentation in `references/architecture_patterns.md`:
 
 ### Development Workflows
 
-Technical reference guide in `references/development_workflows.md`:
+Technical reference guide in `development_workflows.md`:
 
 - Technology stack details
 - Configuration examples
@@ -148,9 +148,9 @@ python scripts/project_scaffolder.py .
 ### 3. Implement Best Practices
 
 Follow the patterns and practices documented in:
-- `references/tech_stack_guide.md`
-- `references/architecture_patterns.md`
-- `references/development_workflows.md`
+- `tech_stack_guide.md`
+- `architecture_patterns.md`
+- `development_workflows.md`
 
 ## Best Practices Summary
 
@@ -201,7 +201,7 @@ kubectl apply -f k8s/
 
 ### Common Issues
 
-Check the comprehensive troubleshooting section in `references/development_workflows.md`.
+Check the comprehensive troubleshooting section in `development_workflows.md`.
 
 ### Getting Help
 
@@ -212,9 +212,9 @@ Check the comprehensive troubleshooting section in `references/development_workf
 
 ## Resources
 
-- Pattern Reference: `references/tech_stack_guide.md`
-- Workflow Guide: `references/architecture_patterns.md`
-- Technical Guide: `references/development_workflows.md`
+- Pattern Reference: `tech_stack_guide.md`
+- Workflow Guide: `architecture_patterns.md`
+- Technical Guide: `development_workflows.md`
 - Tool Scripts: `scripts/` directory
 
 ## When to Use

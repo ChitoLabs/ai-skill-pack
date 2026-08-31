@@ -1,10 +1,10 @@
 # Intake
 
-Collect all inputs in one pass, tiered by priority. Extract implicit answers from the user’s message before asking. Use `AskUserQuestion` for unanswered items - batch related questions.
+Collect all inputs in one pass, tiered by priority. Extract implicit answers from the user’s message before asking. Use `AskUserQuestion` for unanswered items — batch related questions.
 
 ---
 
-## Tier 1 - Core
+## Tier 1 — Core
 
 ### 1.0 Verify Subscription
 
@@ -71,13 +71,13 @@ User has existing IaC they want to extend?
 
 **ADAPT:** Fetch the closest template's README. Explain what doesn't fit, present the delta, offer to adapt.
 
-**EXTEND:** The user has existing Bicep/Terraform - no template selection needed yet. Continue to Tier 2.
+**EXTEND:** The user has existing Bicep/Terraform — no template selection needed yet. Continue to Tier 2.
 
 Confirm the approach with the user before continuing to Tier 2.
 
 ---
 
-## Tier 2 - Architecture
+## Tier 2 — Architecture
 
 *Skip questions already answered or not applicable.*
 
@@ -101,7 +101,7 @@ Confirm the approach with the user before continuing to Tier 2.
 
 ### Managed VNet only
 
-**Feature flag:** Run `az feature show` to verify `AI.ManagedVnetPreview` is registered. If not, register and wait 15-30 min.
+**Feature flag:** Run `az feature show` to verify `AI.ManagedVnetPreview` is registered. If not, register and wait 15–30 min.
 
 **Outbound mode:** Internet outbound (default) or approved outbound only?
 
@@ -125,7 +125,7 @@ Confirm the approach with the user before continuing to Tier 2.
 
 ---
 
-## Tier 3 - Enterprise
+## Tier 3 — Enterprise
 
 **Agent tools:** Which tools? (AI Search, Cosmos DB, Storage, MCP, external APIs, Bing grounding, Code Interpreter)
 
@@ -164,7 +164,7 @@ After collecting all requirements, validate the user's configuration against cur
 | Network isolation overview | https://learn.microsoft.com/azure/ai-foundry/how-to/configure-private-link |
 | Agent Service private networking | https://learn.microsoft.com/azure/ai-services/agents/how-to/virtual-networks |
 | Managed VNet configuration | https://learn.microsoft.com/azure/ai-foundry/how-to/configure-managed-network |
-| Agent Service FAQ - VNet | https://learn.microsoft.com/azure/foundry/agents/faq#virtual-networking |
+| Agent Service FAQ — VNet | https://learn.microsoft.com/azure/foundry/agents/faq#virtual-networking |
 | Supported regions & availability | https://learn.microsoft.com/azure/ai-foundry/reference/region-support |
 | NSP | https://learn.microsoft.com/en-us/azure/networking/network-security-perimeter |
 | Feature Limitations | https://learn.microsoft.com/en-us/azure/foundry/how-to/configure-private-link#foundry-feature-limitations |

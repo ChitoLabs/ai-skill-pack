@@ -39,7 +39,7 @@ const ssoAccount = user?.enterpriseAccounts?.[0]
 if (ssoAccount) {
   // Directly on EnterpriseAccount:
   ssoAccount.emailAddress           // the email used for SSO
-  ssoAccount.active                 // boolean - is the account active
+  ssoAccount.active                 // boolean — is the account active
   ssoAccount.firstName, ssoAccount.lastName
   ssoAccount.lastAuthenticatedAt    // Date | null
 
@@ -56,16 +56,16 @@ if (ssoAccount) {
 ### Common Mistakes
 
 ```typescript
-// ❌ Wrong - `provider` is not a field on EnterpriseAccount
+// ❌ Wrong — `provider` is not a field on EnterpriseAccount
 ssoAccount.provider
 
-// ✓ Right - `provider` lives on the nested connection
+// ✓ Right — `provider` lives on the nested connection
 ssoAccount.enterpriseConnection?.provider
 ```
 
 `enterpriseConnection` is `null` if the connection was deleted after the account was provisioned. Always guard with `?.`.
 
-## Verified Domains (separate feature - short reference)
+## Verified Domains (separate feature — short reference)
 
 Verified Domains are a different feature from Enterprise SSO and **cannot coexist on the same domain for the same Organization**. Short reference:
 
@@ -102,7 +102,7 @@ The `identifier` is the user's email. Clerk uses the domain to route to the corr
 
 ## Key Rules
 
-- **`provider` is nested.** Always `enterpriseAccounts[i].enterpriseConnection?.provider` - not directly on the account.
+- **`provider` is nested.** Always `enterpriseAccounts[i].enterpriseConnection?.provider` — not directly on the account.
 - **SSO connection owns the domain.** The domain the SSO connection enforces on is set on the connection itself; it does NOT require a separate Verified Domain (and in fact the two features are mutually exclusive per-domain).
 - **Strategy name matters.** Core 3 uses `'enterprise_sso'`; Core 2 used `'saml'`. They are NOT interchangeable.
 - **Multiple connections per org is fine.** Typical enterprise: one SAML connection to Okta + one OIDC to Azure AD for different user segments / domains.

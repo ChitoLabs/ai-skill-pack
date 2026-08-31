@@ -9,3 +9,4 @@ A product capture sits centre-stage with arrows or short labels pointing to UI d
   <span class="callout" style="--x:60%; --y:30%;">-> assigns automatically.</span>
 </figure>
 ```
+

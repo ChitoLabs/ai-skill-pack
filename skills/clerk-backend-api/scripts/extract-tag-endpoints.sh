@@ -125,7 +125,7 @@ function flushBlock() {
       }
 
       if (inDesc) {
-        // Continuation lines of description - grab first non-empty line
+        // Continuation lines of description — grab first non-empty line
         if (!description && trimmed.length > 0) {
           description = trimmed;
         }

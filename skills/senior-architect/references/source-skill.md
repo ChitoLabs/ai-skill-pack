@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/senior-architect"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/senior-architect"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/senior-architect"
 risk: critical
 source: community
 date_added: 2026-02-27
@@ -84,7 +84,7 @@ python scripts/dependency_analyzer.py [arguments] [options]
 
 ### Architecture Patterns
 
-Comprehensive guide available in `references/architecture_patterns.md`:
+Comprehensive guide available in `architecture_patterns.md`:
 
 - Detailed patterns and practices
 - Code examples
@@ -94,7 +94,7 @@ Comprehensive guide available in `references/architecture_patterns.md`:
 
 ### System Design Workflows
 
-Complete workflow documentation in `references/system_design_workflows.md`:
+Complete workflow documentation in `system_design_workflows.md`:
 
 - Step-by-step processes
 - Optimization strategies
@@ -104,7 +104,7 @@ Complete workflow documentation in `references/system_design_workflows.md`:
 
 ### Tech Decision Guide
 
-Technical reference guide in `references/tech_decision_guide.md`:
+Technical reference guide in `tech_decision_guide.md`:
 
 - Technology stack details
 - Configuration examples
@@ -148,9 +148,9 @@ python scripts/project_architect.py .
 ### 3. Implement Best Practices
 
 Follow the patterns and practices documented in:
-- `references/architecture_patterns.md`
-- `references/system_design_workflows.md`
-- `references/tech_decision_guide.md`
+- `architecture_patterns.md`
+- `system_design_workflows.md`
+- `tech_decision_guide.md`
 
 ## Best Practices Summary
 
@@ -201,7 +201,7 @@ kubectl apply -f k8s/
 
 ### Common Issues
 
-Check the comprehensive troubleshooting section in `references/tech_decision_guide.md`.
+Check the comprehensive troubleshooting section in `tech_decision_guide.md`.
 
 ### Getting Help
 
@@ -212,9 +212,9 @@ Check the comprehensive troubleshooting section in `references/tech_decision_gui
 
 ## Resources
 
-- Pattern Reference: `references/architecture_patterns.md`
-- Workflow Guide: `references/system_design_workflows.md`
-- Technical Guide: `references/tech_decision_guide.md`
+- Pattern Reference: `architecture_patterns.md`
+- Workflow Guide: `system_design_workflows.md`
+- Technical Guide: `tech_decision_guide.md`
 - Tool Scripts: `scripts/` directory
 
 ## When to Use

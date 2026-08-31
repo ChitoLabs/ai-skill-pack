@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,53 +51,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `assets/templates/_template.md` - preserved source companion file.
-- `references/AGENTS.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/_sections.md` - preserved source companion file.
-- `references/adv-devtools-performance.md` - preserved source companion file.
-- `references/adv-formprovider-memo.md` - preserved source companion file.
-- `references/adv-testing-wrapper.md` - preserved source companion file.
-- `references/array-complete-default-objects.md` - preserved source companion file.
-- `references/array-separate-crud-operations.md` - preserved source companion file.
-- `references/array-unique-fieldarray-per-name.md` - preserved source companion file.
-- `references/array-use-field-id-as-key.md` - preserved source companion file.
-- `references/array-virtualization-formprovider.md` - preserved source companion file.
-- `references/ctrl-avoid-double-registration.md` - preserved source companion file.
-- `references/ctrl-controller-field-props.md` - preserved source companion file.
-- `references/ctrl-local-state-combination.md` - preserved source companion file.
-- `references/ctrl-single-usecontroller-per-component.md` - preserved source companion file.
-- `references/ctrl-usecontroller-isolation.md` - preserved source companion file.
-- `references/formcfg-async-default-values.md` - preserved source companion file.
-- `references/formcfg-default-values.md` - preserved source companion file.
-- `references/formcfg-disabled-prop.md` - preserved source companion file.
-- `references/formcfg-revalidate-mode.md` - preserved source companion file.
-- `references/formcfg-should-unregister.md` - preserved source companion file.
-- `references/formcfg-useeffect-dependency.md` - preserved source companion file.
-- `references/formcfg-validation-mode.md` - preserved source companion file.
-- `references/formstate-async-submit-lifecycle.md` - preserved source companion file.
-- `references/formstate-avoid-isvalid-with-onsubmit.md` - preserved source companion file.
-- `references/formstate-destructure-formstate.md` - preserved source companion file.
-- `references/formstate-getfieldstate-for-single-field.md` - preserved source companion file.
-- `references/formstate-subscribe-to-specific-fields.md` - preserved source companion file.
-- `references/formstate-useformstate-isolation.md` - preserved source companion file.
-- `references/integ-mui-controller-pattern.md` - preserved source companion file.
-- `references/integ-shadcn-form-import.md` - preserved source companion file.
-- `references/integ-shadcn-select-wiring.md` - preserved source companion file.
-- `references/integ-value-transform.md` - preserved source companion file.
-- `references/metadata.json` - preserved source companion file.
-- `references/sub-avoid-watch-in-render.md` - preserved source companion file.
-- `references/sub-deep-subscription.md` - preserved source companion file.
-- `references/sub-subscribe-outside-react.md` - preserved source companion file.
-- `references/sub-useformcontext-sparingly.md` - preserved source companion file.
-- `references/sub-usewatch-default-value.md` - preserved source companion file.
-- `references/sub-usewatch-over-watch.md` - preserved source companion file.
-- `references/sub-usewatch-with-getvalues.md` - preserved source companion file.
-- `references/sub-watch-specific-fields.md` - preserved source companion file.
-- `references/valid-delay-error.md` - preserved source companion file.
-- `references/valid-dynamic-schema-factory.md` - preserved source companion file.
-- `references/valid-error-message-strategy.md` - preserved source companion file.
-- `references/valid-inline-vs-resolver.md` - preserved source companion file.
-- `references/valid-native-validation.md` - preserved source companion file.
-- `references/valid-resolver-caching.md` - preserved source companion file.
-- `references/valid-server-errors.md` - preserved source companion file.
+- `assets/` - 1 preserved source companion files.
+- `references/` - 49 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

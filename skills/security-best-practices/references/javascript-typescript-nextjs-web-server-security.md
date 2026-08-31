@@ -1107,28 +1107,28 @@ Always try to confirm:
 
 Primary framework documentation (Next.js):
 
-* Next.js Docs: Installation (system requirements / Node version) - `https://nextjs.org/docs/app/getting-started/installation`
-* Next.js Docs: Route Handlers - `https://nextjs.org/docs/app/getting-started/route-handlers`
-* Next.js Docs: API Routes (Pages Router) - `https://nextjs.org/docs/pages/building-your-application/routing/api-routes`
-* Next.js Docs: Environment Variables - `https://nextjs.org/docs/pages/guides/environment-variables`
-* Next.js Docs: Data Security - `https://nextjs.org/docs/app/guides/data-security`
-* Next.js Docs: Content Security Policy - `https://nextjs.org/docs/app/guides/content-security-policy`
-* Next.js Docs: Proxy - `https://nextjs.org/docs/app/getting-started/proxy`
-* Next.js Docs: `serverActions.allowedOrigins` and `serverActions.bodySizeLimit` - `https://nextjs.org/docs/app/api-reference/config/next-config-js/serverActions`
-* Next.js Docs: `cookies()` - `https://nextjs.org/docs/app/api-reference/functions/cookies`
-* Next.js Docs: `headers()` - `https://nextjs.org/docs/app/api-reference/functions/headers`
-* Next.js Docs: Self-hosting (reverse proxy guidance) - `https://nextjs.org/docs/pages/guides/self-hosting`
-* Next.js Docs: Support policy (supported versions/LTS) - `https://nextjs.org/docs/support-policy`
+* Next.js Docs: Installation (system requirements / Node version) — `https://nextjs.org/docs/app/getting-started/installation`
+* Next.js Docs: Route Handlers — `https://nextjs.org/docs/app/getting-started/route-handlers`
+* Next.js Docs: API Routes (Pages Router) — `https://nextjs.org/docs/pages/building-your-application/routing/api-routes`
+* Next.js Docs: Environment Variables — `https://nextjs.org/docs/pages/guides/environment-variables`
+* Next.js Docs: Data Security — `https://nextjs.org/docs/app/guides/data-security`
+* Next.js Docs: Content Security Policy — `https://nextjs.org/docs/app/guides/content-security-policy`
+* Next.js Docs: Proxy — `https://nextjs.org/docs/app/getting-started/proxy`
+* Next.js Docs: `serverActions.allowedOrigins` and `serverActions.bodySizeLimit` — `https://nextjs.org/docs/app/api-reference/config/next-config-js/serverActions`
+* Next.js Docs: `cookies()` — `https://nextjs.org/docs/app/api-reference/functions/cookies`
+* Next.js Docs: `headers()` — `https://nextjs.org/docs/app/api-reference/functions/headers`
+* Next.js Docs: Self-hosting (reverse proxy guidance) — `https://nextjs.org/docs/pages/guides/self-hosting`
+* Next.js Docs: Support policy (supported versions/LTS) — `https://nextjs.org/docs/support-policy`
 
 Next.js security guidance & advisories:
 
-* Next.js Blog: How to think about security in Next.js - `https://nextjs.org/blog/security-nextjs-server-components-actions`
-* GitHub Security Advisory: Next.js DoS via Server Components / Server Actions (CVE-2026-23864) - `https://github.com/advisories/GHSA-fq29-rrrv-cq2m`
-* Next.js Blog: Security update (example security advisory context) - `https://nextjs.org/blog/security-update`
+* Next.js Blog: How to think about security in Next.js — `https://nextjs.org/blog/security-nextjs-server-components-actions`
+* GitHub Security Advisory: Next.js DoS via Server Components / Server Actions (CVE-2026-23864) — `https://github.com/advisories/GHSA-fq29-rrrv-cq2m`
+* Next.js Blog: Security update (example security advisory context) — `https://nextjs.org/blog/security-update`
 
 General web security references (recommended baseline):
 
-* OWASP Cheat Sheet Series (CSRF, Session Management, XSS Prevention, SSRF Prevention, File Upload, HTTP Headers) - `https://cheatsheetseries.owasp.org/`
+* OWASP Cheat Sheet Series (CSRF, Session Management, XSS Prevention, SSRF Prevention, File Upload, HTTP Headers) — `https://cheatsheetseries.owasp.org/`
 
 [1]: https://nextjs.org/docs/app/getting-started/route-handlers "Getting Started: Route Handlers | Next.js"
 [2]: https://nextjs.org/docs/app/getting-started/deploying?utm_source=chatgpt.com "Getting Started: Deploying"

@@ -1,6 +1,6 @@
 ---
 name: webassembly
-description: TODO - fill from upstream context
+description: Binary instruction format for near-native execution in browsers and beyond, covering key concepts, use cases, and best practices for C, C++, and Rust builds
 license: Apache-2.0
 metadata:
   author: ffsshhttiikk

@@ -56,5 +56,5 @@ export async function loader(args: Route.LoaderArgs) {
 ## CRITICAL
 
 - `getAuth` throws if `clerkMiddleware` is not installed
-- `rootAuthLoader` must be called in `root.tsx` loader - not just any loader
+- `rootAuthLoader` must be called in `root.tsx` loader — not just any loader
 - Import `redirect` from `react-router`, not from `@remix-run/react-router`

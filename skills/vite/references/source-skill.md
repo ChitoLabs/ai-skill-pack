@@ -7,7 +7,7 @@ metadata:
   version: 2026.1.31
   source: "Generated from https://github.com/vitejs/vite, scripts at https://github.com/antfu/skills"
   skills_sh_url: "https://www.skills.sh/antfu/skills/vite"
-  github_url: "https://github.com/hairyf/skills/tree/HEAD/skills/vite"
+  github_url: "https://github.com/antfu/skills/tree/HEAD/skills/vite"
 ---
 
 # Vite

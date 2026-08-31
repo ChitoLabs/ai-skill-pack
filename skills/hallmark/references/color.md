@@ -93,3 +93,4 @@ The accent is a highlighter, not a colour block. Reach for it to:
 - Place a small square beside a heading as a visual anchor.
 
 Do not fill giant buttons with it. Do not set whole sections on it. Do not use it for decorative gradients. If you feel the urge to use more, that's the slop defaulting. Use less.
+

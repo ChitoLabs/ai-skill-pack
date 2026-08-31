@@ -70,8 +70,8 @@ def implement_machine_learning(input_data):
 
 For advanced scenarios, consider:
 
-- Configuration customization via `assets/config.yaml`
-- Validation using `scripts/validate.py`
+- Configuration customization via `../assets/config.yaml`
+- Validation using `../scripts/validate.py`
 - Integration with other skills
 
 ## Troubleshooting

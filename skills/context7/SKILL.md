@@ -3,14 +3,27 @@ name: context7
 description: "Trigger: look up current library documentation, verify an API, find framework examples. Retrieve focused software documentation through Context7."
 license: Apache-2.0
 metadata:
-  author: oldwinter
+  author: intellectronica
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/intellectronica/agent-skills/context7"
-  github_url: "https://github.com/oldwinter/skills/tree/HEAD/base-skills/context7"
+  github_url: "https://github.com/intellectronica/agent-skills/tree/HEAD/skills/context7"
 ---
 
 # Context7
+
+## Activation Contract
+
+Use this skill when the user request matches `context7` or one of its declared triggers: look up current library documentation, verify an API, find framework examples. Retrieve focused software documentation through Context7.
+
+Read the sections below before acting. This file is the portable runtime contract; the sections that follow carry the source-specific workflow.
+
+## Hard Rules
+
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 
 ## Overview
 

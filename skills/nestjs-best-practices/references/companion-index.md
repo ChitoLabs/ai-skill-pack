@@ -1,0 +1,56 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `.github/workflows/branch-protection.yml` - preserved source companion file.
+- `.github/workflows/deploy.yml` - preserved source companion file.
+- `.gitignore` - preserved source companion file.
+- `AGENTS.md` - preserved source companion file.
+- `README.md` - preserved source companion file.
+- `metadata.json` - preserved source companion file.
+- `rules/_sections.md` - preserved source companion file.
+- `rules/_template.md` - preserved source companion file.
+- `rules/api-use-dto-serialization.md` - preserved source companion file.
+- `rules/api-use-interceptors.md` - preserved source companion file.
+- `rules/api-use-pipes.md` - preserved source companion file.
+- `rules/api-versioning.md` - preserved source companion file.
+- `rules/arch-avoid-circular-deps.md` - preserved source companion file.
+- `rules/arch-feature-modules.md` - preserved source companion file.
+- `rules/arch-module-sharing.md` - preserved source companion file.
+- `rules/arch-single-responsibility.md` - preserved source companion file.
+- `rules/arch-use-events.md` - preserved source companion file.
+- `rules/arch-use-repository-pattern.md` - preserved source companion file.
+- `rules/db-avoid-n-plus-one.md` - preserved source companion file.
+- `rules/db-use-migrations.md` - preserved source companion file.
+- `rules/db-use-transactions.md` - preserved source companion file.
+- `rules/devops-graceful-shutdown.md` - preserved source companion file.
+- `rules/devops-use-config-module.md` - preserved source companion file.
+- `rules/devops-use-logging.md` - preserved source companion file.
+- `rules/di-avoid-service-locator.md` - preserved source companion file.
+- `rules/di-interface-segregation.md` - preserved source companion file.
+- `rules/di-liskov-substitution.md` - preserved source companion file.
+- `rules/di-prefer-constructor-injection.md` - preserved source companion file.
+- `rules/di-scope-awareness.md` - preserved source companion file.
+- `rules/di-use-interfaces-tokens.md` - preserved source companion file.
+- `rules/error-handle-async-errors.md` - preserved source companion file.
+- `rules/error-throw-http-exceptions.md` - preserved source companion file.
+- `rules/error-use-exception-filters.md` - preserved source companion file.
+- `rules/micro-use-health-checks.md` - preserved source companion file.
+- `rules/micro-use-patterns.md` - preserved source companion file.
+- `rules/micro-use-queues.md` - preserved source companion file.
+- `rules/perf-async-hooks.md` - preserved source companion file.
+- `rules/perf-lazy-loading.md` - preserved source companion file.
+- `rules/perf-optimize-database.md` - preserved source companion file.
+- `rules/perf-use-caching.md` - preserved source companion file.
+- `rules/security-auth-jwt.md` - preserved source companion file.
+- `rules/security-rate-limiting.md` - preserved source companion file.
+- `rules/security-sanitize-output.md` - preserved source companion file.
+- `rules/security-use-guards.md` - preserved source companion file.
+- `rules/security-validate-all-input.md` - preserved source companion file.
+- `rules/test-e2e-supertest.md` - preserved source companion file.
+- `rules/test-mock-external-services.md` - preserved source companion file.
+- `rules/test-use-testing-module.md` - preserved source companion file.
+- `../scripts/build-agents.ts` - preserved source companion file.
+- `../scripts/build.sh` - preserved source companion file.
+- `../scripts/package-lock.json` - preserved source companion file.
+- `../scripts/package.json` - preserved source companion file.

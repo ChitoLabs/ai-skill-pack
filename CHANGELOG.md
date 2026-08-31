@@ -6,14 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Added deterministic publication validation and generation from the 492 top-level skill entry points.
+
 ### Changed
 
+- Rebuilt current catalogs and manifests from `skills/*/SKILL.md` as the sole publication source of truth.
+- Preserved supplied `metadata.author` values without inferring authorship from publishers, distributors, curators, adapters, source URLs, or repository owners.
 - Replaced the published skill inventory with the authorized 466-skill v3 source pack.
 - Replaced the command inventory with the 3-command v3 collection.
 - Regenerated publication documentation and manifests from the final v3 state.
 
 ### Removed
 
+- Removed the command publication layer and obsolete command-only artifacts.
+- Removed temporary replacement handoff documentation and stale process-specific manifests.
 - Removed the `grill-me` command while retaining the `grill-me` skill.
 - Excluded identified compiled cache and operating-system metadata junk from publication.
 

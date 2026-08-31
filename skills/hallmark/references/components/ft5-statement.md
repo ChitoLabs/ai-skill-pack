@@ -19,3 +19,4 @@ One large display sentence dominates the footer  -  a closing line, not a sitema
 ```
 
 *Anti-pattern:* using a Statement footer on a docs root or hub. The sentence reads as marketing fluff there; default Ft3 instead.
+

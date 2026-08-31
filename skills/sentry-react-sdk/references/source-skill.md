@@ -12,7 +12,7 @@ parent: sentry-sdk-setup
 disable-model-invocation: true
 ---
 
-> [All Skills](SKILL_TREE.md) > [SDK Setup](related-skills/sentry-sdk-setup/SKILL.md) > React SDK
+> [All Skills](SKILL_TREE.md) > [SDK Setup](related-skills/sentry-sdk-setup.md) > React SDK
 
 # Sentry React SDK
 
@@ -80,23 +80,23 @@ cat ../go.mod ../requirements.txt ../Gemfile ../pom.xml 2>/dev/null | head -3
 
 ## Phase 2: Recommend
 
-Present a concrete recommendation based on what you found. Don't ask open-ended questions - lead with a proposal:
+Present a concrete recommendation based on what you found. Don't ask open-ended questions — lead with a proposal:
 
 **Recommended (core coverage):**
-- ✅ **Error Monitoring** - always; captures unhandled errors, React error boundaries, React 19 hooks
-- ✅ **Tracing** - React SPAs benefit from page load, navigation, and API call tracing
-- ✅ **Session Replay** - recommended for user-facing apps; records sessions around errors
+- ✅ **Error Monitoring** — always; captures unhandled errors, React error boundaries, React 19 hooks
+- ✅ **Tracing** — React SPAs benefit from page load, navigation, and API call tracing
+- ✅ **Session Replay** — recommended for user-facing apps; records sessions around errors
 
 **Optional (enhanced observability):**
-- ⚡ **Logging** - structured logs via `Sentry.logger.*`; recommend when structured log search is needed
-- ⚡ **Profiling** - JS Self-Profiling API (⚠️ experimental; requires cross-origin isolation headers)
+- ⚡ **Logging** — structured logs via `Sentry.logger.*`; recommend when structured log search is needed
+- ⚡ **Profiling** — JS Self-Profiling API (⚠️ experimental; requires cross-origin isolation headers)
 
 **Recommendation logic:**
 
 | Feature | Recommend when... |
 |---------|------------------|
-| Error Monitoring | **Always** - non-negotiable baseline |
-| Tracing | **Always for React SPAs** - page load + navigation spans are high-value |
+| Error Monitoring | **Always** — non-negotiable baseline |
+| Tracing | **Always for React SPAs** — page load + navigation spans are high-value |
 | Session Replay | User-facing app, login flows, or checkout pages |
 | Logging | App needs structured log search or log-to-trace correlation |
 | Profiling | Performance-critical app; server sends `Document-Policy: js-profiling` header |
@@ -143,7 +143,7 @@ Sentry.init({
   ],
 
   // Tracing
-  tracesSampleRate: 1.0, // lower to 0.1-0.2 in production
+  tracesSampleRate: 1.0, // lower to 0.1–0.2 in production
   tracePropagationTargets: ["localhost", /^https:\/\/yourapi\.io/],
 
   // Session Replay
@@ -183,7 +183,7 @@ createRoot(document.getElementById("root")!).render(
 
 ### React Version-Specific Error Handling
 
-**React 19+** - use `reactErrorHandler()` on `createRoot`:
+**React 19+** — use `reactErrorHandler()` on `createRoot`:
 
 ```tsx
 import { reactErrorHandler } from "@sentry/react";
@@ -195,7 +195,7 @@ createRoot(document.getElementById("root")!, {
 }).render(<App />);
 ```
 
-**React <19** - wrap your app in `Sentry.ErrorBoundary`:
+**React <19** — wrap your app in `Sentry.ErrorBoundary`:
 
 ```tsx
 import * as Sentry from "@sentry/react";
@@ -218,7 +218,7 @@ Configure the matching integration for your router (non-framework mode):
 | React Router v7 | `reactRouterV7BrowserTracingIntegration` | `useEffect`, `useLocation`, `useNavigationType`, `createRoutesFromChildren`, `matchRoutes` from `react-router` |
 | React Router v6 | `reactRouterV6BrowserTracingIntegration` | `useEffect`, `useLocation`, `useNavigationType`, `createRoutesFromChildren`, `matchRoutes` from `react-router-dom` |
 | React Router v5 | `reactRouterV5BrowserTracingIntegration` | Wrap routes in `withSentryRouting(Route)` |
-| TanStack Router | `tanstackRouterBrowserTracingIntegration(router)` | Pass router instance - no hooks required |
+| TanStack Router | `tanstackRouterBrowserTracingIntegration(router)` | Pass router instance — no hooks required |
 | No router / custom | `browserTracingIntegration()` | Names transactions by URL path |
 
 **React Router v6/v7 setup:**
@@ -234,14 +234,14 @@ import * as Sentry from "@sentry/react";
 import { reactRouterV6BrowserTracingIntegration } from "@sentry/react";
 import { createBrowserRouter } from "react-router-dom";
 
-// Option A - createBrowserRouter (recommended for v6.4+):
+// Option A — createBrowserRouter (recommended for v6.4+):
 const sentryCreateBrowserRouter = Sentry.wrapCreateBrowserRouterV6(createBrowserRouter);
 const router = sentryCreateBrowserRouter([...routes]);
 
-// Option B - createBrowserRouter for React Router v7:
+// Option B — createBrowserRouter for React Router v7:
 // const sentryCreateBrowserRouter = Sentry.wrapCreateBrowserRouterV7(createBrowserRouter);
 
-// Option C - integration with hooks (v6 without data APIs):
+// Option C — integration with hooks (v6 without data APIs):
 Sentry.init({
   integrations: [
     reactRouterV6BrowserTracingIntegration({
@@ -358,27 +358,27 @@ For each feature: `Read ${SKILL_ROOT}/references/<feature>.md`, follow steps exa
 
 | Option | Type | Default | Notes |
 |--------|------|---------|-------|
-| `dsn` | `string` | - | **Required.** SDK disabled when empty |
+| `dsn` | `string` | — | **Required.** SDK disabled when empty |
 | `environment` | `string` | `"production"` | e.g., `"staging"`, `"development"` |
-| `release` | `string` | - | e.g., `"my-app@1.0.0"` or git SHA - links errors to releases |
+| `release` | `string` | — | e.g., `"my-app@1.0.0"` or git SHA — links errors to releases |
 | `sendDefaultPii` | `boolean` | `false` | Includes IP addresses and request headers |
-| `tracesSampleRate` | `number` | - | 0-1; `1.0` in dev, `0.1-0.2` in prod |
-| `tracesSampler` | `function` | - | Per-transaction sampling; overrides rate |
-| `tracePropagationTargets` | `(string\|RegExp)[]` | - | Outgoing URLs that receive distributed tracing headers |
-| `replaysSessionSampleRate` | `number` | - | Fraction of all sessions recorded |
-| `replaysOnErrorSampleRate` | `number` | - | Fraction of error sessions recorded |
+| `tracesSampleRate` | `number` | — | 0–1; `1.0` in dev, `0.1–0.2` in prod |
+| `tracesSampler` | `function` | — | Per-transaction sampling; overrides rate |
+| `tracePropagationTargets` | `(string\|RegExp)[]` | — | Outgoing URLs that receive distributed tracing headers |
+| `replaysSessionSampleRate` | `number` | — | Fraction of all sessions recorded |
+| `replaysOnErrorSampleRate` | `number` | — | Fraction of error sessions recorded |
 | `enableLogs` | `boolean` | `false` | Enable `Sentry.logger.*` API |
 | `attachStacktrace` | `boolean` | `false` | Stack traces on `captureMessage()` calls |
 | `maxBreadcrumbs` | `number` | `100` | Breadcrumbs stored per event |
 | `debug` | `boolean` | `false` | Verbose SDK output to console |
-| `tunnel` | `string` | - | Proxy URL to bypass ad blockers |
+| `tunnel` | `string` | — | Proxy URL to bypass ad blockers |
 
 ### React Compatibility Matrix
 
 | React Version | Error handling approach | SDK minimum |
 |---------------|------------------------|-------------|
 | React 19+ | `reactErrorHandler()` on `createRoot` | `@sentry/react` ≥8.0.0 |
-| React 16-18 | `Sentry.ErrorBoundary` component | `@sentry/react` ≥7.0.0 |
+| React 16–18 | `Sentry.ErrorBoundary` component | `@sentry/react` ≥7.0.0 |
 | React 16 | `componentDidCatch` class boundaries | `@sentry/react` ≥6.0.0 |
 
 ---
@@ -434,8 +434,8 @@ If a backend exists without Sentry configured, suggest the matching skill:
 | Go (`go.mod`) | `sentry-go-sdk` |
 | Python (`requirements.txt`, `pyproject.toml`) | `sentry-python-sdk` |
 | Ruby (`Gemfile`) | `sentry-ruby-sdk` |
-| Java (`pom.xml`, `build.gradle`) | Use `@sentry/java` - see [docs.sentry.io/platforms/java/](https://docs.sentry.io/platforms/java/) |
-| Node.js (Express, Fastify) | Use `@sentry/node` - see [docs.sentry.io/platforms/javascript/guides/express/](https://docs.sentry.io/platforms/javascript/guides/express/) |
+| Java (`pom.xml`, `build.gradle`) | Use `@sentry/java` — see [docs.sentry.io/platforms/java/](https://docs.sentry.io/platforms/java/) |
+| Node.js (Express, Fastify) | Use `@sentry/node` — see [docs.sentry.io/platforms/javascript/guides/express/](https://docs.sentry.io/platforms/javascript/guides/express/) |
 
 ---
 
@@ -445,7 +445,7 @@ If a backend exists without Sentry configured, suggest the matching skill:
 |-------|----------|
 | Events not appearing | Set `debug: true`, check DSN, open browser console for SDK errors |
 | Source maps not working | Build in production mode (`npm run build`); verify `SENTRY_AUTH_TOKEN` is set |
-| Minified stack traces | Source maps not uploading - check plugin config and auth token |
+| Minified stack traces | Source maps not uploading — check plugin config and auth token |
 | `instrument.ts` not running first | Verify it's the first import in entry file before React/app imports |
 | React 19 errors not captured | Confirm `reactErrorHandler()` is passed to all three `createRoot` options |
 | React <19 errors not captured | Ensure `<Sentry.ErrorBoundary>` wraps the component tree |

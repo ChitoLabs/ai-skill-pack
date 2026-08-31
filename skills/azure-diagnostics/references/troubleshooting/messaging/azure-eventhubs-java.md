@@ -1,4 +1,4 @@
-# Azure Event Hubs SDK - Java
+# Azure Event Hubs SDK — Java
 
 Package: `azure-messaging-eventhubs` | [README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs/TROUBLESHOOTING.md)
 
@@ -30,7 +30,7 @@ See [Java SDK logging docs](https://learn.microsoft.com/azure/developer/java/sdk
 
 ## Key Issues
 
-- **High CPU / partition imbalance**: Limit to 1.5-3 partitions per CPU core.
+- **High CPU / partition imbalance**: Limit to 1.5–3 partitions per CPU core.
 - **Consumer disconnected**: Higher priority consumer took ownership. Expected during load balancing. Persistent issues without scaling indicate a problem.
 - **Connection sharing**: Reuse `EventHubClientBuilder` connections; avoid creating new clients per operation.
 
@@ -60,7 +60,7 @@ EventProcessorClient processor = new EventProcessorClientBuilder()
 ```
 
 **Common issues:**
-- **Soft delete / blob versioning**: Disable both on the storage account - they cause delays during load balancing.
+- **Soft delete / blob versioning**: Disable both on the storage account — they cause delays during load balancing.
 - **HTTP 412/409 from storage**: Normal during partition ownership negotiation; not an error.
 - **Checkpoint frequency**: Call `updateCheckpoint()` per batch, not per event, to reduce storage calls.
 

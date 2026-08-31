@@ -1,8 +1,8 @@
-# Managed Agents - Java
+# Managed Agents — Java
 
 > **Bindings not shown here:** This README covers the most common managed-agents flows for Java. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Java SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.
 
-> **Agents are persistent - create once, reference by ID.** Store the agent ID returned by `client.beta().agents().create` and pass it to every subsequent `client.beta().sessions().create`; do not call `agents().create` in the request path. The Anthropic CLI is one convenient way to create agents and environments from version-controlled YAML - its URL is in `shared/live-sources.md`. The examples below show in-code creation for completeness; in production the create call belongs in setup, not in the request path.
+> **Agents are persistent — create once, reference by ID.** Store the agent ID returned by `client.beta().agents().create` and pass it to every subsequent `client.beta().sessions().create`; do not call `agents().create` in the request path. The Anthropic CLI is one convenient way to create agents and environments from version-controlled YAML — its URL is in `shared/live-sources.md`. The examples below show in-code creation for completeness; in production the create call belongs in setup, not in the request path.
 
 ## Installation
 
@@ -44,7 +44,7 @@ System.out.println("Environment ID: " + environment.id()); // env_...
 
 ## Create an Agent (required first step)
 
-> ⚠️ **There is no inline agent config.** Model, system, and tools live on the agent object, not the session. Always start with `client.beta().agents().create()` - the session takes either `.agent(agent.id())` or the typed `BetaManagedAgentsAgentParams.builder()...build()`.
+> ⚠️ **There is no inline agent config.** Model, system, and tools live on the agent object, not the session. Always start with `client.beta().agents().create()` — the session takes either `.agent(agent.id())` or the typed `BetaManagedAgentsAgentParams.builder()...build()`.
 
 ### Minimal
 
@@ -116,7 +116,7 @@ client.beta().sessions().events().send(session.id(), EventSendParams.builder()
     .build());
 ```
 
-> 💡 **Stream-first:** Open the stream *before* (or concurrently with) sending the message. The stream only delivers events that occur after it opens - stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
+> 💡 **Stream-first:** Open the stream *before* (or concurrently with) sending the message. The stream only delivers events that occur after it opens — stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
 
 ---
 
@@ -239,7 +239,7 @@ var resource = client.beta().sessions().resources().add(session.id(), ResourceAd
     .build());
 System.out.println(resource.id()); // "sesrsc_01ABC..."
 
-// List resources on the session - entries are a discriminated union
+// List resources on the session — entries are a discriminated union
 var listed = client.beta().sessions().resources().list(session.id());
 for (var entry : listed.data()) {
     if (entry.isFile()) {
@@ -292,7 +292,7 @@ client.beta().sessions().delete(session.id());
 import com.anthropic.models.beta.agents.BetaManagedAgentsMcpToolsetParams;
 import com.anthropic.models.beta.agents.BetaManagedAgentsUrlmcpServerParams;
 
-// Agent declares MCP server (no auth here - auth goes in a vault)
+// Agent declares MCP server (no auth here — auth goes in a vault)
 var agent = client.beta().agents().create(AgentCreateParams.builder()
     .name("GitHub Assistant")
     .model("claude-opus-4-7")

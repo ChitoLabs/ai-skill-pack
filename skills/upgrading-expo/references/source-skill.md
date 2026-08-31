@@ -59,7 +59,7 @@ watchman watch-del-all
 
 ## Prebuild for Native Changes
 
-**First check if `ios/` and `android/` directories exist in the project.** If neither directory exists, the project uses Continuous Native Generation (CNG) and native projects are regenerated at build time - skip this section and "Clear caches for bare workflow" entirely.
+**First check if `ios/` and `android/` directories exist in the project.** If neither directory exists, the project uses Continuous Native Generation (CNG) and native projects are regenerated at build time — skip this section and "Clear caches for bare workflow" entirely.
 
 If upgrading requires native changes:
 
@@ -80,8 +80,8 @@ These steps only apply when `ios/` and/or `android/` directories exist in the pr
 ## Housekeeping
 
 - Review release notes for the target SDK version at https://expo.dev/changelog
-- If using Expo SDK 54 or later, ensure react-native-worklets is installed - this is required for react-native-reanimated to work.
-- Enable React Compiler in SDK 54+ by adding `"experiments": { "reactCompiler": true }` to app.json - it's stable and recommended
+- If using Expo SDK 54 or later, ensure react-native-worklets is installed — this is required for react-native-reanimated to work.
+- Enable React Compiler in SDK 54+ by adding `"experiments": { "reactCompiler": true }` to app.json — it's stable and recommended
 - Delete sdkVersion from `app.json` to let Expo manage it automatically
 - Remove implicit packages from `package.json`: `@babel/core`, `babel-preset-expo`, `expo-constants`.
 - If the babel.config.js only contains 'babel-preset-expo', delete the file

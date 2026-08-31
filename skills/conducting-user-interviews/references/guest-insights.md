@@ -375,7 +375,7 @@
 
 > "One of my big mantras was, 'We don't validate, we falsify. We are looking to be wrong.' Many PMs, many designers are not in that place. They do not want to be wrong. They're looking to validate, and that's user-centered performance."
 
-**Insight:** Research should be approached with a mindset of falsification-seeking to be proven wrong-rather than seeking validation for existing ideas.
+**Insight:** Research should be approached with a mindset of falsification—seeking to be proven wrong—rather than seeking validation for existing ideas.
 
 **Tactical advice:**
 - Adopt a 'falsify, don't validate' mindset during discovery.
@@ -570,7 +570,7 @@
 
 **Tactical advice:**
 - Ask questions from unexpected angles to uncover the root motivation.
-- Look for the 'emotional hooks'-the specific moments where a user feels frustrated or unsuccessful.
+- Look for the 'emotional hooks'—the specific moments where a user feels frustrated or unsuccessful.
 
 *Timestamp: 00:31:10*
 

@@ -300,3 +300,4 @@ h1, h2 { font-family: var(--font-display); font-weight: 800; font-variation-sett
 ```
 
 Those rules carry 70 % of the theme's identity. The rest is content fit.
+

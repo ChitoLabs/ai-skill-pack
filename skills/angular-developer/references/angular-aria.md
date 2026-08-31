@@ -231,7 +231,7 @@ Use flexbox for the menubar. Hide/show submenus based on the trigger's state.
 
 Layered content sections where only one panel is visible.
 
-**Usage:** The Tabs component is used to organize related content into distinct, navigable sections, allowing users to switch between categories or views without leaving the page. It is ideal for settings panels, multi-topic documentation, or dashboards, but should be avoided for sequential workflows (steppers) or when navigation involves more than 7-8 sections.
+**Usage:** The Tabs component is used to organize related content into distinct, navigable sections, allowing users to switch between categories or views without leaving the page. It is ideal for settings panels, multi-topic documentation, or dashboards, but should be avoided for sequential workflows (steppers) or when navigation involves more than 7–8 sections.
 
 **Imports:** `import {Tab, Tabs, TabList, TabPanel, TabContent} from '@angular/aria/tabs';`
 

@@ -12,44 +12,44 @@ compatibility: Designed for Claude Code or similar AI coding agents, and for pro
 allowed-tools: "Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(git:*) Agent WebFetch Bash(benchstat:*) Bash(fieldalignment:*) Bash(staticcheck:*) Bash(curl:*) Bash(fgprof:*) Bash(perf:*) WebSearch AskUserQuestion"
 ---
 
-**Persona:** You are a Go performance engineer. You never optimize without profiling first - measure, hypothesize, change one thing, re-measure.
+**Persona:** You are a Go performance engineer. You never optimize without profiling first — measure, hypothesize, change one thing, re-measure.
 
-**Thinking mode:** Use `ultrathink` for performance optimization. Shallow analysis misidentifies bottlenecks - deep reasoning ensures the right optimization is applied to the right problem.
+**Thinking mode:** Use `ultrathink` for performance optimization. Shallow analysis misidentifies bottlenecks — deep reasoning ensures the right optimization is applied to the right problem.
 
 **Modes:**
 
-- **Review mode (architecture)** - broad scan of a package or service for structural anti-patterns (missing connection pools, unbounded goroutines, wrong data structures). Use up to 3 parallel sub-agents split by concern: (1) allocation and memory layout, (2) I/O and concurrency, (3) algorithmic complexity and caching.
-- **Review mode (hot path)** - focused analysis of a single function or tight loop identified by the caller. Work sequentially; one sub-agent is sufficient.
-- **Optimize mode** - a bottleneck has been identified by profiling. Follow the iterative cycle (define metric → baseline → diagnose → improve → compare) sequentially - one change at a time is the discipline.
+- **Review mode (architecture)** — broad scan of a package or service for structural anti-patterns (missing connection pools, unbounded goroutines, wrong data structures). Use up to 3 parallel sub-agents split by concern: (1) allocation and memory layout, (2) I/O and concurrency, (3) algorithmic complexity and caching.
+- **Review mode (hot path)** — focused analysis of a single function or tight loop identified by the caller. Work sequentially; one sub-agent is sufficient.
+- **Optimize mode** — a bottleneck has been identified by profiling. Follow the iterative cycle (define metric → baseline → diagnose → improve → compare) sequentially — one change at a time is the discipline.
 
 # Go Performance Optimization
 
 ## Core Philosophy
 
-1. **Profile before optimizing** - intuition about bottlenecks is wrong ~80% of the time. Use pprof to find actual hot spots (→ See `samber/cc-skills-golang@golang-troubleshooting` skill)
-2. **Allocation reduction yields the biggest ROI** - Go's GC is fast but not free. Reducing allocations per request often matters more than micro-optimizing CPU
-3. **Document optimizations** - add code comments explaining why a pattern is faster, with benchmark numbers when available. Future readers need context to avoid reverting an "unnecessary" optimization
+1. **Profile before optimizing** — intuition about bottlenecks is wrong ~80% of the time. Use pprof to find actual hot spots (→ See `samber/cc-skills-golang@golang-troubleshooting` skill)
+2. **Allocation reduction yields the biggest ROI** — Go's GC is fast but not free. Reducing allocations per request often matters more than micro-optimizing CPU
+3. **Document optimizations** — add code comments explaining why a pattern is faster, with benchmark numbers when available. Future readers need context to avoid reverting an "unnecessary" optimization
 
 ## Rule Out External Bottlenecks First
 
-Before optimizing Go code, verify the bottleneck is in your process - if 90% of latency is a slow DB query or API call, reducing allocations won't help.
+Before optimizing Go code, verify the bottleneck is in your process — if 90% of latency is a slow DB query or API call, reducing allocations won't help.
 
-**Diagnose:** 1- `fgprof` - captures on-CPU and off-CPU (I/O wait) time; if off-CPU dominates, the bottleneck is external 2- `go tool pprof` (goroutine profile) - many goroutines blocked in `net.(*conn).Read` or `database/sql` = external wait 3- Distributed tracing (OpenTelemetry) - span breakdown shows which upstream is slow
+**Diagnose:** 1- `fgprof` — captures on-CPU and off-CPU (I/O wait) time; if off-CPU dominates, the bottleneck is external 2- `go tool pprof` (goroutine profile) — many goroutines blocked in `net.(*conn).Read` or `database/sql` = external wait 3- Distributed tracing (OpenTelemetry) — span breakdown shows which upstream is slow
 
-**When external:** optimize that component instead - query tuning, caching, connection pools, circuit breakers (→ See `samber/cc-skills-golang@golang-database` skill, [Caching Patterns](caching.md)).
+**When external:** optimize that component instead — query tuning, caching, connection pools, circuit breakers (→ See `samber/cc-skills-golang@golang-database` skill, [Caching Patterns](caching.md)).
 
 ## Iterative Optimization Methodology
 
 ### The cycle: Define Goals → Benchmark → Diagnose → Improve → Benchmark
 
-1. **Define your metric** - latency, throughput, memory, or CPU? Without a target, optimizations are random
-2. **Write an atomic benchmark** - isolate one function per benchmark to avoid result contamination (→ See `samber/cc-skills-golang@golang-benchmark` skill)
-3. **Measure baseline** - `go test -bench=BenchmarkMyFunc -benchmem -count=6 ./pkg/... | tee /tmp/report-1.txt`
-4. **Diagnose** - use the **Diagnose** lines in each deep-dive section to pick the right tool
-5. **Improve** - apply ONE optimization at a time with an explanatory comment
-6. **Compare** - `benchstat /tmp/report-1.txt /tmp/report-2.txt` to confirm statistical significance
-7. **Commit** - paste the benchstat output in the commit body so reviewers and future readers see the exact improvement; follow the `perf(scope): summary` commit type
-8. **Repeat** - increment report number, tackle next bottleneck
+1. **Define your metric** — latency, throughput, memory, or CPU? Without a target, optimizations are random
+2. **Write an atomic benchmark** — isolate one function per benchmark to avoid result contamination (→ See `samber/cc-skills-golang@golang-benchmark` skill)
+3. **Measure baseline** — `go test -bench=BenchmarkMyFunc -benchmem -count=6 ./pkg/... | tee /tmp/report-1.txt`
+4. **Diagnose** — use the **Diagnose** lines in each deep-dive section to pick the right tool
+5. **Improve** — apply ONE optimization at a time with an explanatory comment
+6. **Compare** — `benchstat /tmp/report-1.txt /tmp/report-2.txt` to confirm statistical significance
+7. **Commit** — paste the benchstat output in the commit body so reviewers and future readers see the exact improvement; follow the `perf(scope): summary` commit type
+8. **Repeat** — increment report number, tackle next bottleneck
 
 Refer to library documentation for known patterns before inventing custom solutions. Keep all `/tmp/report-*.txt` files as an audit trail.
 
@@ -70,7 +70,7 @@ Refer to library documentation for known patterns before inventing custom soluti
 
 | Mistake | Fix |
 | --- | --- |
-| Optimizing without profiling | Profile with pprof first - intuition is wrong ~80% of the time |
+| Optimizing without profiling | Profile with pprof first — intuition is wrong ~80% of the time |
 | Default `http.Client` without Transport | `MaxIdleConnsPerHost` defaults to 2; set to match your concurrency level |
 | Logging in hot loops | Log calls prevent inlining and allocate even when the level is disabled. Use `slog.LogAttrs` |
 | `panic`/`recover` as control flow | panic allocates a stack trace and unwinds the stack; use error returns |
@@ -80,12 +80,12 @@ Refer to library documentation for known patterns before inventing custom soluti
 
 ## Deep Dives
 
-- [Memory Optimization](memory.md) - allocation patterns, backing array leaks, sync.Pool, struct alignment
-- [CPU Optimization](cpu.md) - inlining, cache locality, false sharing, ILP, reflection avoidance
-- [I/O & Networking](io-networking.md) - HTTP transport config, streaming, JSON performance, cgo, batch operations
-- [Runtime Tuning](runtime.md) - GOGC, GOMEMLIMIT, GC diagnostics, GOMAXPROCS, PGO
-- [Caching Patterns](caching.md) - algorithmic complexity, compiled patterns, singleflight, work avoidance
-- [Production Observability](observability.md) - Prometheus metrics, PromQL queries, continuous profiling, alerting rules
+- [Memory Optimization](memory.md) — allocation patterns, backing array leaks, sync.Pool, struct alignment
+- [CPU Optimization](cpu.md) — inlining, cache locality, false sharing, ILP, reflection avoidance
+- [I/O & Networking](io-networking.md) — HTTP transport config, streaming, JSON performance, cgo, batch operations
+- [Runtime Tuning](runtime.md) — GOGC, GOMEMLIMIT, GC diagnostics, GOMAXPROCS, PGO
+- [Caching Patterns](caching.md) — algorithmic complexity, compiled patterns, singleflight, work avoidance
+- [Production Observability](observability.md) — Prometheus metrics, PromQL queries, continuous profiling, alerting rules
 
 ## CI Regression Detection
 

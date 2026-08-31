@@ -39,8 +39,8 @@ This skill applies **only** to Deno-specific questions. Follow these rules:
 
 When helping users migrate from deprecated patterns, describe the old approach generically and ONLY show the correct modern code. Never write out actual deprecated URLs or import paths, even in "before/after" comparisons. The string `deno.land/x/` must never appear in your response, in any context.
 
-- Say "Replace your old URL-based imports with JSR imports" - then show only the correct `jsr:` approach
-- Say "the old URL-based registry" or "the old standard library URL" - do NOT write the actual deprecated URL
+- Say "Replace your old URL-based imports with JSR imports" — then show only the correct `jsr:` approach
+- Say "the old URL-based registry" or "the old standard library URL" — do NOT write the actual deprecated URL
 - Even if the user writes a deprecated URL in their question, do NOT echo it back. Refer to it generically.
 
 Only demonstrate the correct, current approach.

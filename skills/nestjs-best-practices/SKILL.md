@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -47,55 +50,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/.github/workflows/branch-protection.yml` - preserved source companion file.
-- `references/.github/workflows/deploy.yml` - preserved source companion file.
-- `references/.gitignore` - preserved source companion file.
-- `references/AGENTS.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/metadata.json` - preserved source companion file.
-- `references/rules/_sections.md` - preserved source companion file.
-- `references/rules/_template.md` - preserved source companion file.
-- `references/rules/api-use-dto-serialization.md` - preserved source companion file.
-- `references/rules/api-use-interceptors.md` - preserved source companion file.
-- `references/rules/api-use-pipes.md` - preserved source companion file.
-- `references/rules/api-versioning.md` - preserved source companion file.
-- `references/rules/arch-avoid-circular-deps.md` - preserved source companion file.
-- `references/rules/arch-feature-modules.md` - preserved source companion file.
-- `references/rules/arch-module-sharing.md` - preserved source companion file.
-- `references/rules/arch-single-responsibility.md` - preserved source companion file.
-- `references/rules/arch-use-events.md` - preserved source companion file.
-- `references/rules/arch-use-repository-pattern.md` - preserved source companion file.
-- `references/rules/db-avoid-n-plus-one.md` - preserved source companion file.
-- `references/rules/db-use-migrations.md` - preserved source companion file.
-- `references/rules/db-use-transactions.md` - preserved source companion file.
-- `references/rules/devops-graceful-shutdown.md` - preserved source companion file.
-- `references/rules/devops-use-config-module.md` - preserved source companion file.
-- `references/rules/devops-use-logging.md` - preserved source companion file.
-- `references/rules/di-avoid-service-locator.md` - preserved source companion file.
-- `references/rules/di-interface-segregation.md` - preserved source companion file.
-- `references/rules/di-liskov-substitution.md` - preserved source companion file.
-- `references/rules/di-prefer-constructor-injection.md` - preserved source companion file.
-- `references/rules/di-scope-awareness.md` - preserved source companion file.
-- `references/rules/di-use-interfaces-tokens.md` - preserved source companion file.
-- `references/rules/error-handle-async-errors.md` - preserved source companion file.
-- `references/rules/error-throw-http-exceptions.md` - preserved source companion file.
-- `references/rules/error-use-exception-filters.md` - preserved source companion file.
-- `references/rules/micro-use-health-checks.md` - preserved source companion file.
-- `references/rules/micro-use-patterns.md` - preserved source companion file.
-- `references/rules/micro-use-queues.md` - preserved source companion file.
-- `references/rules/perf-async-hooks.md` - preserved source companion file.
-- `references/rules/perf-lazy-loading.md` - preserved source companion file.
-- `references/rules/perf-optimize-database.md` - preserved source companion file.
-- `references/rules/perf-use-caching.md` - preserved source companion file.
-- `references/rules/security-auth-jwt.md` - preserved source companion file.
-- `references/rules/security-rate-limiting.md` - preserved source companion file.
-- `references/rules/security-sanitize-output.md` - preserved source companion file.
-- `references/rules/security-use-guards.md` - preserved source companion file.
-- `references/rules/security-validate-all-input.md` - preserved source companion file.
-- `references/rules/test-e2e-supertest.md` - preserved source companion file.
-- `references/rules/test-mock-external-services.md` - preserved source companion file.
-- `references/rules/test-use-testing-module.md` - preserved source companion file.
-- `scripts/build-agents.ts` - preserved source companion file.
-- `scripts/build.sh` - preserved source companion file.
-- `scripts/package-lock.json` - preserved source companion file.
-- `scripts/package.json` - preserved source companion file.
+- `references/` - 48 preserved source companion files.
+- `scripts/` - 4 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

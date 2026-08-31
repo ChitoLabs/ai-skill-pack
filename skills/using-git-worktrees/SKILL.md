@@ -18,6 +18,10 @@ Use only after the user or repository policy explicitly permits creating or insp
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Repository policy owns placement, branch naming, ignore strategy, setup, cleanup, commits, and approval gates.
 - Do not edit ignore files, install dependencies, create commits, or remove worktrees implicitly.
 - A CodeGraph-dependent worktree must live under the user's home, preferably under `<repo-parent>/<repo-name>-worktrees/<name>`, never in a temporary directory.
@@ -28,6 +32,7 @@ Use only after the user or repository policy explicitly permits creating or insp
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Repository policy does not authorize a worktree | Stop with a proposal only. |
 | Current tree is dirty or baseline fails | Report it before creation; do not attribute it to new work. |
 | CodeGraph is required | Validate the approved home-based location and create a distinct local index. |

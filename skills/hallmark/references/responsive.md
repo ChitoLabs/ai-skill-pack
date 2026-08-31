@@ -136,3 +136,4 @@ Tables of data that won't fit: collapse to cards. Use `display: block` on `<tr>`
 - Ignoring `prefers-color-scheme` when the app claims to support dark mode.
 - Fixed pixel breakpoints that don't respect `rem`.
 - Tables of 10+ columns on mobile without a redesign.
+

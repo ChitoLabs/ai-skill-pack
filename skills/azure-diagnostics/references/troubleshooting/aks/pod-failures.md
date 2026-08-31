@@ -55,9 +55,9 @@ Fix: increase `resources.limits.memory` or optimize application memory usage. Ch
 
 Use the [IG base command pattern](references/inspektor-gadget.md) with `--k8s-namespace <namespace> --k8s-podname <pod-name>` and these gadgets:
 
-- `trace_exec` (timeout 30) - see what the container executes at startup
-- `trace_open` (timeout 30) - find missing configs/secrets (retval -2 = ENOENT, -13 = EACCES)
-- `snapshot_process` (timeout 5) - list running processes in the pod
+- `trace_exec` (timeout 30) — see what the container executes at startup
+- `trace_open` (timeout 30) — find missing configs/secrets (retval -2 = ENOENT, -13 = EACCES)
+- `snapshot_process` (timeout 5) — list running processes in the pod
 
 See [references/inspektor-gadget.md](references/inspektor-gadget.md).
 

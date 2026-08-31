@@ -4,7 +4,7 @@ platform: LinkedIn
 tags: linkedin, social-media, image-sizes, profile, cover, feed, articles, ads
 ---
 
-# LinkedIn Image & Video Sizes - 2025
+# LinkedIn Image & Video Sizes — 2025
 
 ## Profile & Cover
 
@@ -37,7 +37,7 @@ tags: linkedin, social-media, image-sizes, profile, cover, feed, articles, ads
 | Name | Size (px) | Aspect | Notes |
 |---|---|---|---|
 | Sponsored Content | 1200 × 627 | 1.91:1 | |
-| Carousel Ad | 1080 × 1080 | 1:1 | 2-10 cards |
+| Carousel Ad | 1080 × 1080 | 1:1 | 2–10 cards |
 | Spotlight Ad Logo | 100 × 100 | 1:1 | |
 
 ## Format & Technical Requirements

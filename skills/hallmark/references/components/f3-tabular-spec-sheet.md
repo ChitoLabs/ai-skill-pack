@@ -9,3 +9,4 @@ Each row is a feature; columns hold name, value, footnote. Hairline rules betwee
   <tr>...</tr>
 </table>
 ```
+

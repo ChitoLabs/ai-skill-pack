@@ -1,6 +1,6 @@
 # Global Rules
 
-> **MANDATORY** - These rules apply to ALL skills. Violations are unacceptable.
+> **MANDATORY** — These rules apply to ALL skills. Violations are unacceptable.
 
 ## Rule 1: Destructive Actions Require User Confirmation
 

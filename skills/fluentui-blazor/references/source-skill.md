@@ -3,13 +3,13 @@ name: fluentui-blazor
 description: Guide for using the Microsoft Fluent UI Blazor component library (Microsoft.FluentUI.AspNetCore.Components NuGet package) in Blazor applications. Use this when the user is building a Blazor app with Fluent UI components, setting up the library, using FluentUI components like FluentButton, FluentDataGrid, FluentDialog, FluentToast, FluentNavMenu, FluentTextField, FluentSelect, FluentAutocomplete, FluentDesignTheme, or any component prefixed with "Fluent". Also use when troubleshooting missing providers, JS interop issues, or theming.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/fluentui-blazor"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/fluentui-blazor"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/fluentui-blazor"
 ---
 
-# Fluent UI Blazor - Consumer Usage Guide
+# Fluent UI Blazor — Consumer Usage Guide
 
 This skill teaches how to correctly use the **Microsoft.FluentUI.AspNetCore.Components** (version 4) NuGet package in Blazor applications.
 
@@ -45,9 +45,9 @@ builder.Services.AddFluentUIComponents(options =>
 ```
 
 **ServiceLifetime rules:**
-- `ServiceLifetime.Scoped` - for Blazor Server / Interactive (default)
-- `ServiceLifetime.Singleton` - for Blazor WebAssembly standalone
-- `ServiceLifetime.Transient` - **throws `NotSupportedException`**
+- `ServiceLifetime.Scoped` — for Blazor Server / Interactive (default)
+- `ServiceLifetime.Singleton` — for Blazor WebAssembly standalone
+- `ServiceLifetime.Transient` — **throws `NotSupportedException`**
 
 ### 4. Icons require a separate NuGet package
 
@@ -70,17 +70,17 @@ Pattern: `Icons.[Variant].[Size].[Name]`
 
 Custom image: `Icon.FromImageUrl("/path/to/image.png")`
 
-**Never use string-based icon names** - icons are strongly-typed classes.
+**Never use string-based icon names** — icons are strongly-typed classes.
 
 ### 5. List component binding model
 
 `FluentSelect<TOption>`, `FluentCombobox<TOption>`, `FluentListbox<TOption>`, and `FluentAutocomplete<TOption>` do NOT work like `<InputSelect>`. They use:
 
-- `Items` - the data source (`IEnumerable<TOption>`)
-- `OptionText` - `Func<TOption, string?>` to extract display text
-- `OptionValue` - `Func<TOption, string?>` to extract the value string
-- `SelectedOption` / `SelectedOptionChanged` - for single selection binding
-- `SelectedOptions` / `SelectedOptionsChanged` - for multi-selection binding
+- `Items` — the data source (`IEnumerable<TOption>`)
+- `OptionText` — `Func<TOption, string?>` to extract display text
+- `OptionValue` — `Func<TOption, string?>` to extract the value string
+- `SelectedOption` / `SelectedOptionChanged` — for single selection binding
+- `SelectedOptions` / `SelectedOptionsChanged` — for multi-selection binding
 
 ```razor
 <FluentSelect Items="@countries"
@@ -92,7 +92,7 @@ Custom image: `Icon.FromImageUrl("/path/to/image.png")`
 
 **NOT** like this (wrong pattern):
 ```razor
-@* WRONG - do not use InputSelect pattern *@
+@* WRONG — do not use InputSelect pattern *@
 <FluentSelect @bind-Value="@selectedValue">
     <option value="1">One</option>
 </FluentSelect>
@@ -100,7 +100,7 @@ Custom image: `Icon.FromImageUrl("/path/to/image.png")`
 
 ### 6. FluentAutocomplete specifics
 
-- Use `ValueText` (NOT `Value` - it's obsolete) for the search input text
+- Use `ValueText` (NOT `Value` — it's obsolete) for the search input text
 - `OnOptionsSearch` is the required callback to filter options
 - Default is `Multiple="true"`
 
@@ -193,7 +193,7 @@ ToastService.ShowInfo("New update available");
 
 ### 9. Design tokens and themes work only after render
 
-Design tokens rely on JS interop. **Never set them in `OnInitialized`** - use `OnAfterRenderAsync`.
+Design tokens rely on JS interop. **Never set them in `OnInitialized`** — use `OnAfterRenderAsync`.
 
 ```razor
 <FluentDesignTheme Mode="DesignThemeModes.System"

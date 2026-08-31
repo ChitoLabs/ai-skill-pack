@@ -18,3 +18,4 @@ Closes the page like a letter  -  `Yours, the team. 2026.` Optional postscript l
 ```
 
 *Anti-pattern:* using Ft6 on a stat-led / B2B product page  -  voice mismatch reads as twee. Reserve for genuinely letter-shaped pages.
+

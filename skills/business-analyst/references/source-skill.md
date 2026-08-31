@@ -119,8 +119,8 @@ See [REFERENCE.md](REFERENCE.md) for detailed interview frameworks and technique
 - **[templates/product-brief.template.md](templates/product-brief.template.md)** - Product brief template
 - **[templates/research-report.template.md](templates/research-report.template.md)** - Research report template
 - **[resources/interview-frameworks.md](resources/interview-frameworks.md)** - Interview technique reference
-- **[scripts/discovery-checklist.sh](scripts/discovery-checklist.sh)** - Interactive discovery questions
-- **[scripts/validate-brief.sh](scripts/validate-brief.sh)** - Validate brief completeness
+- **[scripts/discovery-checklist.sh](../scripts/discovery-checklist.sh)** - Interactive discovery questions
+- **[scripts/validate-brief.sh](../scripts/validate-brief.sh)** - Validate brief completeness
 
 ## Workflow Process
 

@@ -267,3 +267,4 @@ Return the redesigned code, plus a short note explaining:
 - Why this combination fits the brief better than the original.
 - One thing you removed and why.
 - (If genre changed) why the new genre fits the user's stated kind of design.
+

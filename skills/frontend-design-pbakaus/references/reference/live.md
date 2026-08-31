@@ -27,7 +27,7 @@ Chat is overhead. No recap, no tutorial output, no pasting PRODUCT / DESIGN bodi
 ## Start
 
 ```bash
-node .pi/skills/impeccable/scripts/live.mjs
+node ../../scripts/live.mjs
 ```
 
 Output JSON: `{ ok, serverPort, serverToken, pageFiles, hasProduct, product, productPath, hasDesign, design, designPath, migrated }`. `pageFiles` is the list of HTML entries the live script was injected into. Keep PRODUCT.md and DESIGN.md in mind for variant generation; **DESIGN.md wins on visual decisions; PRODUCT.md wins on strategic/voice decisions.** When DESIGN.md is missing, identity is **not** absent; extract it from CSS variables, computed styles, and sibling components on the page (see Step 4 Phase A). Identity preservation is the default; departure from existing identity requires an explicit trigger from PRODUCT.md anti-references or the user's freeform prompt. If `migrated: true`, the loader auto-renamed legacy `.impeccable.md` to `PRODUCT.md`; mention this once and suggest `/impeccable document` for the matching DESIGN.md.
@@ -40,7 +40,7 @@ If output is `{ ok: false, error: "config_missing" | "config_invalid", path }`, 
 
 ```
 LOOP:
-  node .pi/skills/impeccable/scripts/live-poll.mjs   # default long timeout; no --timeout=
+  node ../../scripts/live-poll.mjs   # default long timeout; no --timeout=
   Read JSON; dispatch on "type"
 
   "generate"  → Handle Generate; reply done; LOOP
@@ -58,9 +58,9 @@ The live helper persists an append-only journal under `.impeccable/live/sessions
 Use these commands when the chat was interrupted, polling was missed, the helper restarted, or the browser reloaded:
 
 ```bash
-node .pi/skills/impeccable/scripts/live-status.mjs
-node .pi/skills/impeccable/scripts/live-resume.mjs --id SESSION_ID
-node .pi/skills/impeccable/scripts/live-complete.mjs --id SESSION_ID
+node ../../scripts/live-status.mjs
+node ../../scripts/live-resume.mjs --id SESSION_ID
+node ../../scripts/live-complete.mjs --id SESSION_ID
 ```
 
 - `live-status.mjs` prints connected helper state, active durable sessions, and queued pending events. It works even when the helper is down by reading the journal directly.
@@ -93,7 +93,7 @@ Reading annotations precisely:
 ### 2. Wrap the element
 
 ```bash
-node .pi/skills/impeccable/scripts/live-wrap.mjs --id EVENT_ID --count EVENT_COUNT --element-id "ELEMENT_ID" --classes "class1,class2" --tag "div" --text "TEXT_SNIPPET"
+node ../../scripts/live-wrap.mjs --id EVENT_ID --count EVENT_COUNT --element-id "ELEMENT_ID" --classes "class1,class2" --tag "div" --text "TEXT_SNIPPET"
 ```
 
 Flag mapping. Keep them separate, don't collapse into `--query`:
@@ -183,7 +183,7 @@ If you're unsure, you're in default mode. The cost of being wrong about default 
 
 Three variants → three DIFFERENT axes. The trio reads as *the same brand at three angles*. Do not introduce new fonts, new palette hues, or new aesthetic-family signals; those belong to departure mode.
 
-**While planning each variant, also name its 2-3 parameter knobs** (per the §7 budget table). Parameters are part of the design, not a decoration added afterward. If the variant explores density, expose a density knob. If it explores color commitment, expose a color-amount range. Deciding "what's tunable" during planning produces better knobs than retrofitting them onto finished HTML.
+**While planning each variant, also name its 2–3 parameter knobs** (per the §7 budget table). Parameters are part of the design, not a decoration added afterward. If the variant explores density, expose a density knob. If it explores color commitment, expose a color-amount range. Deciding "what's tunable" during planning produces better knobs than retrofitting them onto finished HTML.
 
 **Departure mode.** Each variant anchors to a different **aesthetic direction**, derived from the brand's stated voice and register in PRODUCT.md. Do NOT pick from a fixed catalog of lane categories. The right three directions for this brand are not the same as the right three for another brand, and picking from a list is itself the training-data reflex (the model selects "Swiss-grid, Terminal, Industrial-signage" every time because those are the furthest-from-editorial items in any enumerated list).
 
@@ -193,7 +193,7 @@ Instead, work from the brand:
 2. From those physical experiences, derive three visual directions that are genuinely different from each other AND from the current surface you're departing.
 3. Avoid the **reflex-reject lanes** in [brand.md](brand.md). Don't trade one monoculture for another. If you find yourself reaching for "Swiss-grid" or "Terminal" or "Industrial-signage" by reflex, you are pattern-matching a catalog in your training data, not reading the brand. Start over from the personality words.
 4. Each direction must be expressible in one concrete sentence that names a real-world referent ("a museum exhibition label system for a contemporary art gallery" not "clean and minimal"). If your sentence contains only adjectives, it's not concrete enough.
-5. **While planning each direction, also name its 2-3 parameter knobs** (per the §7 budget table). The same principle as default mode: decide "what's tunable" during planning, not after writing the HTML. A departure-mode hero with 0 parameters is not "bold creative vision," it's a missed opportunity for the user to fine-tune the direction they pick.
+5. **While planning each direction, also name its 2–3 parameter knobs** (per the §7 budget table). The same principle as default mode: decide "what's tunable" during planning, not after writing the HTML. A departure-mode hero with 0 parameters is not "bold creative vision," it's a missed opportunity for the user to fine-tune the direction they pick.
 
 #### Phase D: Squint test
 
@@ -279,7 +279,7 @@ For `styleMode: "scoped"`, author every `:scope` rule with a descendant combinat
 
 The wrap script already gives you a single-rooted JSX wrapper: a `<div data-impeccable-variants="…">` outer element with the marker comments tucked inside. Drop the variants block above into the "Variants: insert below this line" comment and the source stays valid TSX.
 
-### 7. Parameters (composition-sized, 0-4 per variant)
+### 7. Parameters (composition-sized, 0–4 per variant)
 
 Each variant can expose **coarse** knobs alongside the full HTML/CSS replacement. The browser docks a small panel to the right of the outline with one control per parameter. The user drags/clicks and sees instant feedback: there is zero regeneration cost because the knob toggles a CSS variable or data attribute that the variant's scoped CSS is already authored against.
 
@@ -287,14 +287,14 @@ Each variant can expose **coarse** knobs alongside the full HTML/CSS replacement
 
 **When to add.** As soon as the variant’s scoped CSS has a meaningful continuous or stepped axis: density, color amount, type scale, motion intensity, column weight, and so on. If you can imagine the user muttering “a bit tighter” or “a touch more accent” **without** wanting a full regeneration, wire that axis. **Not** micro-margins or one-off nudges; those are not parameters.
 
-**Freeform (`action` is `impeccable`) bias.** You did not load a sub-command reference, so you must **choose** signature axes yourself. Match the budget table: for a hero or large composition, that means **2-3 axes per variant**, not 1. Prefer knobs that sit on the dimensions where your three variants actually differ (if density varies, expose it as a `steps` knob; if color commitment varies, expose it as a `range`). A hero that ships with **0** params is almost always a mistake, not a judgment call. A hero with exactly **1** param is underweight unless the design is genuinely a fixed-point comparison. Start from the budget table, not from zero.
+**Freeform (`action` is `impeccable`) bias.** You did not load a sub-command reference, so you must **choose** signature axes yourself. Match the budget table: for a hero or large composition, that means **2–3 axes per variant**, not 1. Prefer knobs that sit on the dimensions where your three variants actually differ (if density varies, expose it as a `steps` knob; if color commitment varies, expose it as a `range`). A hero that ships with **0** params is almost always a mistake, not a judgment call. A hero with exactly **1** param is underweight unless the design is genuinely a fixed-point comparison. Start from the budget table, not from zero.
 
 **Budget scales with the element's visual weight, not token budget.** Knobs need real estate to read as tunable; three sliders on a single control are noise.
 
 - **Leaf / tiny**: a single button, icon, input, bare heading, solitary paragraph: **0 params.**
-- **Small composition**: labeled input, simple card, short callout (≤ ~5 visual children): **0-1** params when one dominant axis is obvious; otherwise **0.**
-- **Medium composition**: section component, nav cluster, dense card, short feature block (6-15 visual children): **target 2**; **1** is acceptable if the block is simple; **0** only when variants are truly fixed points.
-- **Large composition**: hero section, full page region, spread layout, strong internal structure (16+ visual children or multiple sub-sections): **target 2-3**; **up to 4** when several independent axes (e.g. structure `steps` + `density` + one accent) are all authored in scoped CSS.
+- **Small composition**: labeled input, simple card, short callout (≤ ~5 visual children): **0–1** params when one dominant axis is obvious; otherwise **0.**
+- **Medium composition**: section component, nav cluster, dense card, short feature block (6–15 visual children): **target 2**; **1** is acceptable if the block is simple; **0** only when variants are truly fixed points.
+- **Large composition**: hero section, full page region, spread layout, strong internal structure (16+ visual children or multiple sub-sections): **target 2–3**; **up to 4** when several independent axes (e.g. structure `steps` + `density` + one accent) are all authored in scoped CSS.
 
 **When in doubt, ask whether a dial exists before defaulting to zero.** The user can always request more variants, but the point of live mode is instant tuning without another Go. Crowding the panel is bad; **under-shipping** knobs on a dense composition is the more common failure for freeform. Count by **visual** children, not DOM depth; a shallow-but-wide hero is still large.
 
@@ -337,7 +337,7 @@ The carbonize cleanup step (see below) reads that comment and bakes the chosen v
 ### 8. Signal done
 
 ```bash
-node .pi/skills/impeccable/scripts/live-poll.mjs --reply EVENT_ID done --file RELATIVE_PATH
+node ../../scripts/live-poll.mjs --reply EVENT_ID done --file RELATIVE_PATH
 ```
 
 `RELATIVE_PATH` is relative to project root (`public/index.html`, `src/App.tsx`, etc.); the browser fetches source directly if the dev server lacks HMR.
@@ -349,7 +349,7 @@ Then run `live-poll.mjs` again immediately.
 If wrap or generation fails after the browser has flipped to GENERATING (e.g. wrap landed on the wrong source branch and you've already reverted it, or generation hit an unrecoverable error), tell the **browser** so its bar resets to PICKING:
 
 ```bash
-node .pi/skills/impeccable/scripts/live-poll.mjs --reply EVENT_ID error "Short reason"
+node ../../scripts/live-poll.mjs --reply EVENT_ID error "Short reason"
 ```
 
 Don't run `live-accept --discard` for this; that's a pure file mutator, the browser doesn't see it, and the bar gets stuck on the GENERATING dots forever (the user has to refresh). `--discard` is only correct when the **browser** initiated the discard (user clicked ✕ during CYCLING) and the agent is just running source-side cleanup the browser already triggered.
@@ -449,7 +449,7 @@ When the poll returns `exit`, proceed to cleanup. If the poll is still running a
 ## Cleanup
 
 ```bash
-node .pi/skills/impeccable/scripts/live-server.mjs stop
+node ../../scripts/live-server.mjs stop
 ```
 
 Stops the HTTP server and runs `live-inject.mjs --remove` to strip `localhost:…/live.js` from the HTML entry. To stop the server but keep the inject tag (for a quick restart), use `stop --keep-inject`. `.impeccable/live/config.json` persists as project config for future sessions.
@@ -535,7 +535,7 @@ If `config.cspChecked === true`, skip this entire section. You already asked thi
 Otherwise, run the detection helper:
 
 ```bash
-node .pi/skills/impeccable/scripts/detect-csp.mjs
+node ../../scripts/detect-csp.mjs
 ```
 
 Output: `{ shape, signals }` where `shape` is one of `append-arrays`, `append-string`, `middleware`, `meta-tag`, or `null`. The shape is named by *patch mechanism*, so one template covers many frameworks.
@@ -558,7 +558,7 @@ Use this phrasing so the experience is consistent across agents:
 >
 > ```diff
 > [file: <patchTarget>]
-> [exact diff, 2-5 lines]
+> [exact diff, 2–5 lines]
 > ```
 >
 > It's guarded by `NODE_ENV === "development"` so the extra entry only appears in dev and never reaches production. You can remove it any time by reverting this file. Apply? [y/n]

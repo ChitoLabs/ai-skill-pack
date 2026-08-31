@@ -3,17 +3,30 @@ name: csharp-docs
 description: "Trigger: add or review C# XML documentation comments. Document selected C# types using current documentation practices."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/csharp-docs"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/csharp-docs"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/csharp-docs"
 ---
 
 # C# Documentation Best Practices
 
 - Public members should be documented with XML comments.
 - It is encouraged to document internal members as well, especially if they are complex or not self-explanatory.
+
+## Activation Contract
+
+Use this skill when the user request matches `csharp-docs` or one of its declared triggers: add or review C# XML documentation comments. Document selected C# types using current documentation practices.
+
+Read the sections below before acting. This file is the portable runtime contract; the sections that follow carry the source-specific workflow.
+
+## Hard Rules
+
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 
 ## Guidance for all APIs
 

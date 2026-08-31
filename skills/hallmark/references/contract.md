@@ -24,3 +24,4 @@ Hallmark is a *taste* skill. It will not:
 - Implement or mutate authentication, authorization, payment processing, Stripe requests, webhooks, credentials, transactions, or other business logic.
 
 For those domains, Hallmark may design visual states and local non-production stubs only. Hand implementation off by domain or skill name, such as an authentication, payments, security, or backend skill, and require separate user approval before that implementation changes code or external systems.
+

@@ -1,12 +1,12 @@
 ---
 name: xlsx
-description: "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path - even casually (like \\\"the xlsx in my downloads\\\") - and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved."
+description: "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path \u2014 even casually (like \\\"the xlsx in my downloads\\\") \u2014 and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved."
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: openakita
+  author: anthropics
   version: 0.1
   skills_sh_url: "https://skills.sh/anthropics/skills/xlsx"
-  github_url: "https://github.com/openakita/openakita/tree/HEAD/skills/xlsx"
+  github_url: "https://github.com/anthropics/skills/tree/HEAD/skills/xlsx"
 ---
 
 # Requirements for Outputs
@@ -76,7 +76,7 @@ A user may ask you to create, edit, or analyze the contents of an .xlsx file. Yo
 
 ## Important Requirements
 
-**LibreOffice Required for Formula Recalculation**: You can assume LibreOffice is installed for recalculating formula values using the `scripts/recalc.py` script. The script automatically configures LibreOffice on first run, including in sandboxed environments where Unix sockets are restricted (handled by `scripts/office/soffice.py`)
+**LibreOffice Required for Formula Recalculation**: You can assume LibreOffice is installed for recalculating formula values using the `../scripts/recalc.py` script. The script automatically configures LibreOffice on first run, including in sandboxed environments where Unix sockets are restricted (handled by `../scripts/office/soffice.py`)
 
 ## Reading and analyzing data
 
@@ -211,7 +211,7 @@ wb.save('modified.xlsx')
 
 ## Recalculating formulas
 
-Excel files created or modified by openpyxl contain formulas as strings but not calculated values. Use the provided `scripts/recalc.py` script to recalculate formulas:
+Excel files created or modified by openpyxl contain formulas as strings but not calculated values. Use the provided `../scripts/recalc.py` script to recalculate formulas:
 
 ```bash
 python scripts/recalc.py <excel_file> [timeout_seconds]

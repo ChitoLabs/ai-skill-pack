@@ -170,7 +170,7 @@ curl -X PATCH https://api.clerk.com/v1/instance \
 />
 ```
 
-Full guide: `references/sync-host.md`
+Full guide: `sync-host.md`
 
 ## createClerkClient() for Vanilla JS / Service Workers
 
@@ -226,7 +226,7 @@ clerk.load({
 })
 ```
 
-Full guide: `references/create-clerk-client.md`
+Full guide: `create-clerk-client.md`
 
 ## Headless Extension (no popup, no side panel)
 
@@ -252,7 +252,7 @@ async function getAuthenticatedUser() {
 
 Requires `host_permissions` for the sync host domain in `package.json`.
 
-Full guide: `references/headless-extension.md`
+Full guide: `headless-extension.md`
 
 ## Content Scripts
 
@@ -279,7 +279,7 @@ async function main() {
 main()
 ```
 
-Full guide: `references/content-scripts.md`
+Full guide: `content-scripts.md`
 
 ## Stable CRX ID
 

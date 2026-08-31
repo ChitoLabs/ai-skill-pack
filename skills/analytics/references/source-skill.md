@@ -64,7 +64,7 @@ Event Name | Category | Properties | Trigger | Notes
 | System Events | Signup completed, purchase, subscription changed |
 | Custom Conversions | Goal completions, funnel stages |
 
-**For comprehensive event lists**: See [references/event-library.md](references/event-library.md)
+**For comprehensive event lists**: See [references/event-library.md](event-library.md)
 
 ---
 
@@ -109,7 +109,7 @@ checkout_payment_completed
 | purchase_completed | plan, value |
 | subscription_cancelled | reason |
 
-**For full event library by business type**: See [references/event-library.md](references/event-library.md)
+**For full event library by business type**: See [references/event-library.md](event-library.md)
 
 ---
 
@@ -151,7 +151,7 @@ gtag('event', 'signup_completed', {
 });
 ```
 
-**For detailed GA4 implementation**: See [references/ga4-implementation.md](references/ga4-implementation.md)
+**For detailed GA4 implementation**: See [references/ga4-implementation.md](ga4-implementation.md)
 
 ---
 
@@ -175,7 +175,7 @@ dataLayer.push({
 });
 ```
 
-**For detailed GTM implementation**: See [references/gtm-implementation.md](references/gtm-implementation.md)
+**For detailed GTM implementation**: See [references/gtm-implementation.md](gtm-implementation.md)
 
 ---
 
@@ -289,15 +289,15 @@ dataLayer.push({
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key analytics tools:
+For implementation, see the [tools registry](tools/REGISTRY.md). Key analytics tools:
 
 | Tool | Best For | MCP | Guide |
 |------|----------|:---:|-------|
-| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](../../tools/integrations/ga4.md) |
-| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](../../tools/integrations/mixpanel.md) |
-| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](../../tools/integrations/amplitude.md) |
-| **PostHog** | Open-source analytics, session replay | - | [posthog.md](../../tools/integrations/posthog.md) |
-| **Segment** | Customer data platform, routing | - | [segment.md](../../tools/integrations/segment.md) |
+| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](tools/integrations/ga4.md) |
+| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](tools/integrations/mixpanel.md) |
+| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](tools/integrations/amplitude.md) |
+| **PostHog** | Open-source analytics, session replay | - | [posthog.md](tools/integrations/posthog.md) |
+| **Segment** | Customer data platform, routing | - | [segment.md](tools/integrations/segment.md) |
 
 ---
 

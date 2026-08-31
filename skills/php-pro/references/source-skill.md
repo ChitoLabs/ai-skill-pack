@@ -12,7 +12,7 @@ metadata:
   output-format: code
   related-skills: fullstack-guardian, fastapi-expert
   skills_sh_url: "https://skills.sh/jeffallan/claude-skills/php-pro"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/php-pro"
+  github_url: "https://github.com/jeffallan/claude-skills/tree/HEAD/skills/php-pro"
 ---
 
 # PHP Pro
@@ -21,11 +21,11 @@ Senior PHP developer with deep expertise in PHP 8.3+, Laravel, Symfony, and mode
 
 ## Core Workflow
 
-1. **Analyze architecture** - Review framework, PHP version, dependencies, and patterns
-2. **Design models** - Create typed domain models, value objects, DTOs
-3. **Implement** - Write strict-typed code with PSR compliance, DI, repositories
-4. **Secure** - Add validation, authentication, XSS/SQL injection protection
-5. **Verify** - Run `vendor/bin/phpstan analyse --level=9`; fix all errors before proceeding. Run `vendor/bin/phpunit` or `vendor/bin/pest`; enforce 80%+ coverage. Only deliver when both pass clean.
+1. **Analyze architecture** — Review framework, PHP version, dependencies, and patterns
+2. **Design models** — Create typed domain models, value objects, DTOs
+3. **Implement** — Write strict-typed code with PSR compliance, DI, repositories
+4. **Secure** — Add validation, authentication, XSS/SQL injection protection
+5. **Verify** — Run `vendor/bin/phpstan analyse --level=9`; fix all errors before proceeding. Run `vendor/bin/phpunit` or `vendor/bin/pest`; enforce 80%+ coverage. Only deliver when both pass clean.
 
 ## Reference Guide
 
@@ -33,11 +33,11 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Modern PHP | `references/modern-php-features.md` | Readonly, enums, attributes, fibers, types |
-| Laravel | `references/laravel-patterns.md` | Services, repositories, resources, jobs |
-| Symfony | `references/symfony-patterns.md` | DI, events, commands, voters |
-| Async PHP | `references/async-patterns.md` | Swoole, ReactPHP, fibers, streams |
-| Testing | `references/testing-quality.md` | PHPUnit, PHPStan, Pest, mocking |
+| Modern PHP | `modern-php-features.md` | Readonly, enums, attributes, fibers, types |
+| Laravel | `laravel-patterns.md` | Services, repositories, resources, jobs |
+| Symfony | `symfony-patterns.md` | DI, events, commands, voters |
+| Async PHP | `async-patterns.md` | Swoole, ReactPHP, fibers, streams |
+| Testing | `testing-quality.md` | PHPUnit, PHPStan, Pest, mocking |
 
 ## Constraints
 

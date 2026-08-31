@@ -11,13 +11,13 @@ These errors occur **during** `azd up` execution:
 | Deploy failed | Build or Docker errors | Check build logs |
 | Package failed | Missing Dockerfile or deps | Verify Dockerfile exists and dependencies |
 | Quota exceeded | Subscription limits | Request increase or change region |
-| `PrincipalId '...' has type 'ServicePrincipal', which is different from specified PrincipalType 'User'` | Base template RBAC assigns roles with `principalType: 'User'` but deploying identity is a service principal (CI/CD) | Set `allowUserIdentityPrincipal: false` in the `storageEndpointConfig` variable in `infra/main.bicep`. Do NOT try clearing `AZURE_PRINCIPAL_ID` - azd repopulates it. See [Principal Type Mismatch](#principal-type-mismatch). |
+| `PrincipalId '...' has type 'ServicePrincipal', which is different from specified PrincipalType 'User'` | Base template RBAC assigns roles with `principalType: 'User'` but deploying identity is a service principal (CI/CD) | Set `allowUserIdentityPrincipal: false` in the `storageEndpointConfig` variable in `infra/main.bicep`. Do NOT try clearing `AZURE_PRINCIPAL_ID` — azd repopulates it. See [Principal Type Mismatch](#principal-type-mismatch). |
 | `ImagePullBackOff` or `azd up` hangs during provision for Container Apps | Container App references an image that doesn't exist in ACR yet | See [Container Apps Bootstrap Problem](#container-apps-bootstrap-problem) |
 | `unauthorized: authentication required` on `docker push` to ACR | ACR auth token expired or scoped incorrectly | See [ACR Authentication Failures](#acr-authentication-failures) |
 | `could not determine container registry endpoint` | Missing `AZURE_CONTAINER_REGISTRY_ENDPOINT` | See [Missing Container Registry Variables](#missing-container-registry-variables) |
 | `map has no entry for key "AZURE_CONTAINER_REGISTRY_MANAGED_IDENTITY_ID"` | Missing managed identity env vars | See [Missing Container Registry Variables](#missing-container-registry-variables) |
 | `map has no entry for key "MANAGED_IDENTITY_CLIENT_ID"` | Missing managed identity client ID | See [Missing Container Registry Variables](#missing-container-registry-variables) |
-| `Operation expired` / revision creation timeout (900s) | RBAC propagation delay - Container App's managed identity doesn't have `AcrPull` on ACR yet | See [Container App Revision Timeout](#container-app-revision-timeout) |
+| `Operation expired` / revision creation timeout (900s) | RBAC propagation delay — Container App's managed identity doesn't have `AcrPull` on ACR yet | See [Container App Revision Timeout](#container-app-revision-timeout) |
 | `found '2' resources tagged with 'azd-service-name: <name>'` | Previous deployment left duplicate-tagged resources in same RG | **Preferred**: Create fresh env with `azd env new <new-name> --no-prompt`, set subscription/location, redeploy. **Alternative**: Delete conflicting resources (requires `ask_user`). |
 | Literal `{{ .Env.* }}` in Terraform errors | azd does not interpolate template variables in `.tfvars.json` | See [Unresolved Terraform Template Variables](#unresolved-terraform-template-variables) |
 
@@ -31,7 +31,7 @@ These errors occur **during** `azd up` execution:
 1. Bicep creates the Container App with a system-assigned managed identity and a public placeholder image
 2. Bicep creates an `AcrPull` role assignment for that identity on ACR in a separate module using the two-phase deployment pattern
 3. `azd deploy` immediately pushes the real image and creates a new Container App revision
-4. The revision tries to pull the image from ACR, but the `AcrPull` role assignment hasn't propagated yet (can take 1-5 minutes)
+4. The revision tries to pull the image from ACR, but the `AcrPull` role assignment hasn't propagated yet (can take 1–5 minutes)
 5. The image pull fails repeatedly until the 900-second timeout is reached
 
 **Solution:**
@@ -124,7 +124,7 @@ for ($attempt = 1; $attempt -le 5; $attempt++) {
 
 **Cause:** The Bicep template creates the Container App referencing an ACR image, but that image doesn't exist until `azd deploy` builds and pushes it. This chicken-and-egg problem blocks provisioning.
 
-**Solution - use two-phase deployment:**
+**Solution — use two-phase deployment:**
 
 ```bash
 # Phase 1: Provision infrastructure (Container App uses placeholder image)
@@ -136,13 +136,13 @@ azd deploy --no-prompt
 
 > ⚠️ This requires the Bicep template to use a placeholder image parameter (e.g., `mcr.microsoft.com/azuredocs/containerapps-helloworld:latest`) so provisioning succeeds without the app image. If the Bicep hardcodes the ACR image reference, update it to accept a `containerImageName` parameter with a placeholder default before provisioning.
 
-> ⚠️ Do **NOT** repeatedly poll a hanging `azd up` - if there is no provisioning progress or you continue to see `ImagePullBackOff` events for several minutes during a Container Apps deployment, stop it and switch to the two-phase approach above.
+> ⚠️ Do **NOT** repeatedly poll a hanging `azd up` — if there is no provisioning progress or you continue to see `ImagePullBackOff` events for several minutes during a Container Apps deployment, stop it and switch to the two-phase approach above.
 
 ## ACR Authentication Failures
 
 **Symptom:** `docker push` fails with `unauthorized: authentication required` even after `az acr login` succeeds.
 
-**Solution - try these methods in order:**
+**Solution — try these methods in order:**
 
 ```bash
 # Method 1: AAD-based login (preferred)
@@ -164,7 +164,7 @@ docker login <acr-name>.azurecr.io -u $AcrUser -p $AcrPass
 docker push <acr-name>.azurecr.io/<image>:<tag>
 ```
 
-> 💡 **Tip:** Prefer `azd deploy` over manual `docker push` - azd handles ACR authentication automatically.
+> 💡 **Tip:** Prefer `azd deploy` over manual `docker push` — azd handles ACR authentication automatically.
 
 ## Missing Container Registry Variables
 
@@ -238,11 +238,11 @@ Error: Invalid value for variable "environment_name"
 
 Or Terraform silently uses the literal string, causing resource naming failures, state conflicts, and cascading errors that lead to deployment timeouts.
 
-**Cause:** azd reads `infra/main.tfvars.json`, substitutes `${VAR}` references using its built-in envsubst, and passes the resolved file to Terraform via `-var-file=`. Go-style `{{ .Env.* }}` variables are only processed in `azure.yaml` and service manifests - they are **NOT** interpolated in `.tfvars.json` or any Terraform variable files. If `azure-prepare` generated a `main.tfvars.json` with Go-style template expressions, those literal strings are passed to Terraform.
+**Cause:** azd reads `infra/main.tfvars.json`, substitutes `${VAR}` references using its built-in envsubst, and passes the resolved file to Terraform via `-var-file=`. Go-style `{{ .Env.* }}` variables are only processed in `azure.yaml` and service manifests — they are **NOT** interpolated in `.tfvars.json` or any Terraform variable files. If `azure-prepare` generated a `main.tfvars.json` with Go-style template expressions, those literal strings are passed to Terraform.
 
 **Solution:**
 
-1. **Fix the syntax** in `infra/main.tfvars.json` - replace Go-style `{{ .Env.* }}` with `${VAR}`:
+1. **Fix the syntax** in `infra/main.tfvars.json` — replace Go-style `{{ .Env.* }}` with `${VAR}`:
    ```json
    {
        "environment_name": "${AZURE_ENV_NAME}",

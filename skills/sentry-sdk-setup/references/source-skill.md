@@ -18,13 +18,13 @@ Set up Sentry error monitoring, tracing, and session replay in any language or f
 
 ## How to Fetch Skills
 
-Use `curl` to download skills - they are 10-20 KB files that fetch tools often summarize, losing critical details.
+Use `curl` to download skills — they are 10–20 KB files that fetch tools often summarize, losing critical details.
 
     curl -sL https://skills.sentry.dev/sentry-nextjs-sdk/SKILL.md
 
 Append the path from the `Path` column in the table below to `https://skills.sentry.dev/`. Do not guess or shorten URLs.
 
-## Start Here - Read This Before Doing Anything
+## Start Here — Read This Before Doing Anything
 
 **Do not skip this section.** Do not assume which SDK the user needs based on their project files. Do not start installing packages or creating config files until you have confirmed the user's intent.
 
@@ -32,7 +32,7 @@ Append the path from the `Path` column in the table below to `https://skills.sen
 2. **Tell the user what you found** and which SDK you recommend.
 3. **Wait for confirmation** before fetching the skill and proceeding.
 
-Each SDK skill contains its own detection logic, prerequisites, and step-by-step configuration. Trust the skill - read it carefully and follow it. Do not improvise or take shortcuts.
+Each SDK skill contains its own detection logic, prerequisites, and step-by-step configuration. Trust the skill — read it carefully and follow it. Do not improvise or take shortcuts.
 
 ---
 
@@ -49,12 +49,12 @@ Each SDK skill contains its own detection logic, prerequisites, and step-by-step
 | Go | [`sentry-go-sdk`](SKILL_TREE.md) | `sentry-go-sdk/SKILL.md` |
 | NestJS | [`sentry-nestjs-sdk`](SKILL_TREE.md) | `sentry-nestjs-sdk/SKILL.md` |
 | Next.js | [`sentry-nextjs-sdk`](SKILL_TREE.md) | `sentry-nextjs-sdk/SKILL.md` |
-| Node.js, Bun, and Deno | [`sentry-node-sdk`](related-skills/sentry-node-sdk/SKILL.md) | `sentry-node-sdk/SKILL.md` |
+| Node.js, Bun, and Deno | [`sentry-node-sdk`](related-skills/sentry-node-sdk.md) | `sentry-node-sdk/SKILL.md` |
 | PHP | [`sentry-php-sdk`](SKILL_TREE.md) | `sentry-php-sdk/SKILL.md` |
 | Python | [`sentry-python-sdk`](SKILL_TREE.md) | `sentry-python-sdk/SKILL.md` |
 | Flutter and Dart | [`sentry-flutter-sdk`](SKILL_TREE.md) | `sentry-flutter-sdk/SKILL.md` |
 | React Native and Expo | [`sentry-react-native-sdk`](SKILL_TREE.md) | `sentry-react-native-sdk/SKILL.md` |
-| React | [`sentry-react-sdk`](related-skills/sentry-react-sdk/SKILL.md) | `sentry-react-sdk/SKILL.md` |
+| React | [`sentry-react-sdk`](related-skills/sentry-react-sdk.md) | `sentry-react-sdk/SKILL.md` |
 | React Router Framework | [`sentry-react-router-framework-sdk`](SKILL_TREE.md) | `sentry-react-router-framework-sdk/SKILL.md` |
 | TanStack Start React | [`sentry-tanstack-start-sdk`](SKILL_TREE.md) | `sentry-tanstack-start-sdk/SKILL.md` |
 | Ruby | [`sentry-ruby-sdk`](SKILL_TREE.md) | `sentry-ruby-sdk/SKILL.md` |
@@ -122,7 +122,7 @@ xdg-open https://sentry.io/settings/projects/    # Linux
 start https://sentry.io/settings/projects/        # Windows
 ```
 
-> **Note:** The DSN is public and safe to include in source code. It is not a secret - it only identifies where to send events.
+> **Note:** The DSN is public and safe to include in source code. It is not a secret — it only identifies where to send events.
 
 ---
 

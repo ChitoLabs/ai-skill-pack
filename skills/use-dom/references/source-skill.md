@@ -18,20 +18,20 @@ DOM components allow web code to run verbatim in a webview on native platforms w
 
 Use DOM components when you need:
 
-- **Web-only libraries** - Charts (recharts, chart.js), syntax highlighters, rich text editors, or any library that depends on DOM APIs
-- **Migrating web code** - Bring existing React web components to native without rewriting
-- **Complex HTML/CSS layouts** - When CSS features aren't available in React Native
-- **iframes or embeds** - Embedding external content that requires a browser context
-- **Canvas or WebGL** - Web graphics APIs not available natively
+- **Web-only libraries** — Charts (recharts, chart.js), syntax highlighters, rich text editors, or any library that depends on DOM APIs
+- **Migrating web code** — Bring existing React web components to native without rewriting
+- **Complex HTML/CSS layouts** — When CSS features aren't available in React Native
+- **iframes or embeds** — Embedding external content that requires a browser context
+- **Canvas or WebGL** — Web graphics APIs not available natively
 
 ## When NOT to Use DOM Components
 
 Avoid DOM components when:
 
-- **Native performance is critical** - Webviews add overhead
-- **Simple UI** - React Native components are more efficient for basic layouts
-- **Deep native integration** - Use local modules instead for native APIs
-- **Layout routes** - `_layout` files cannot be DOM components
+- **Native performance is critical** — Webviews add overhead
+- **Simple UI** — React Native components are more efficient for basic layouts
+- **Deep native integration** — Use local modules instead for native APIs
+- **Layout routes** — `_layout` files cannot be DOM components
 
 ## Basic DOM Component
 
@@ -63,10 +63,10 @@ export default function WebChart({
 ## Rules for DOM Components
 
 1. **Must have `'use dom';` directive** at the top of the file
-2. **Single default export** - One React component per file
-3. **Own file** - Cannot be defined inline or combined with native components
-4. **Serializable props only** - Strings, numbers, booleans, arrays, plain objects
-5. **Include CSS in the component file** - DOM components run in isolated context
+2. **Single default export** — One React component per file
+3. **Own file** — Cannot be defined inline or combined with native components
+4. **Serializable props only** — Strings, numbers, booleans, arrays, plain objects
+5. **Include CSS in the component file** — DOM components run in isolated context
 
 ## The `dom` Prop
 
@@ -415,8 +415,8 @@ On web, the `dom` prop is ignored since no webview is needed.
 ## Tips
 
 - DOM components hot reload during development
-- Keep DOM components focused - don't put entire screens in webviews
+- Keep DOM components focused — don't put entire screens in webviews
 - Use native components for navigation chrome, DOM components for specialized content
-- Test on all platforms - web rendering may differ slightly from native webviews
-- Large DOM components may impact performance - profile if needed
-- The webview has its own JavaScript context - cannot directly share state with native
+- Test on all platforms — web rendering may differ slightly from native webviews
+- Large DOM components may impact performance — profile if needed
+- The webview has its own JavaScript context — cannot directly share state with native

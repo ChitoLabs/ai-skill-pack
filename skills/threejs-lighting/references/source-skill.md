@@ -3,10 +3,10 @@ name: threejs-lighting
 description: Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-lighting"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-lighting"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-lighting"
 ---
 
 # Three.js Lighting

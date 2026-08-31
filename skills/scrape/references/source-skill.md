@@ -9,9 +9,9 @@ metadata:
   github_url: "https://github.com/brightdata/skills/tree/HEAD/skills/scrape"
 ---
 
-# Bright Data - Scrape
+# Bright Data — Scrape
 
-Get clean content (markdown, HTML, JSON, screenshot) from one or more URLs via the Bright Data CLI. This skill owns the "fetch raw or lightly-structured content" job. For platform-specific structured data (Amazon, LinkedIn, TikTok, etc.), **stop and use `data-feeds` instead** - you'll get clean JSON without selector logic.
+Get clean content (markdown, HTML, JSON, screenshot) from one or more URLs via the Bright Data CLI. This skill owns the "fetch raw or lightly-structured content" job. For platform-specific structured data (Amazon, LinkedIn, TikTok, etc.), **stop and use `data-feeds` instead** — you'll get clean JSON without selector logic.
 
 ## Setup gate (run first)
 
@@ -19,24 +19,24 @@ Before any scrape, verify the CLI is installed and authenticated:
 
 ```bash
 if ! command -v bdata >/dev/null 2>&1; then
-    echo "bdata CLI not installed - see bright-data-best-practices/references/cli-setup.md"
+    echo "bdata CLI not installed — see bright-data-best-practices/references/cli-setup.md"
 elif ! bdata zones >/dev/null 2>&1; then
-    echo "bdata not authenticated - run: bdata login  (or: bdata login --device for SSH)"
+    echo "bdata not authenticated — run: bdata login  (or: bdata login --device for SSH)"
 fi
 ```
 
-If either check fails, halt and route the user to `skills/bright-data-best-practices/references/cli-setup.md`. Do not attempt the legacy `curl` fallback silently - ask the user first.
+If either check fails, halt and route the user to `skills/bright-data-best-practices/references/cli-setup.md`. Do not attempt the legacy `curl` fallback silently — ask the user first.
 
 ## Pick your path
 
 | Situation | Action |
 |---|---|
 | Single URL | `bdata scrape <url> -f markdown` |
-| Small list (≤ ~20 URLs) | shell loop, 1 at a time (see `references/patterns.md`) |
-| Larger list (dozens+) | `xargs -P 4` with parallelism cap (see `references/patterns.md`) |
-| Paginated listing | scrape page 1 → extract next-page URL → append → repeat (see `references/examples.md`) |
+| Small list (≤ ~20 URLs) | shell loop, 1 at a time (see `patterns.md`) |
+| Larger list (dozens+) | `xargs -P 4` with parallelism cap (see `patterns.md`) |
+| Paginated listing | scrape page 1 → extract next-page URL → append → repeat (see `examples.md`) |
 | JS-heavy / login-gated / interaction-required | escalate to `bdata browser` (see `brightdata-cli` skill) |
-| Amazon, LinkedIn, TikTok, Instagram, YouTube, Reddit, … | **stop - hand off to `data-feeds`** |
+| Amazon, LinkedIn, TikTok, Instagram, YouTube, Reddit, … | **stop — hand off to `data-feeds`** |
 | No URL yet, just a topic | **hand off to `search`** |
 
 ## Action
@@ -61,12 +61,12 @@ bdata scrape "https://example.com" --country de -f markdown
 
 ```
 
-Full flag reference: [`references/flags.md`](flags.md).
+Full flag reference: [`flags.md`](flags.md).
 
 ## Verification gate (run before claiming success)
 
-1. **Non-empty output:** `test -s "$out_path"` - or, for stdout, at least 200 bytes of content.
-2. **Not a block page** - grep the output for any of these signatures (case-insensitive):
+1. **Non-empty output:** `test -s "$out_path"` — or, for stdout, at least 200 bytes of content.
+2. **Not a block page** — grep the output for any of these signatures (case-insensitive):
    - `Access Denied`
    - `Just a moment`
    - `Attention Required`
@@ -84,14 +84,14 @@ Do not report success until all checks above pass.
 ## Red flags
 
 - Claiming success without inspecting the output.
-- Silencing errors with `2>/dev/null` - you'll miss auth failures and rate-limit errors.
-- Running `bdata scrape` on Amazon/LinkedIn/TikTok/Instagram/YouTube/Reddit URLs - these are supported by `data-feeds` and return structured data directly. Scraping loses the structure.
-- Scraping the same URL repeatedly in the same task - cache the first result.
+- Silencing errors with `2>/dev/null` — you'll miss auth failures and rate-limit errors.
+- Running `bdata scrape` on Amazon/LinkedIn/TikTok/Instagram/YouTube/Reddit URLs — these are supported by `data-feeds` and return structured data directly. Scraping loses the structure.
+- Scraping the same URL repeatedly in the same task — cache the first result.
 - Looping `bdata scrape` sequentially for large lists instead of using `xargs -P 4` (or similar) with a parallelism cap.
-- Using `curl` against `api.brightdata.com` directly - legacy path; only when the CLI isn't available.
+- Using `curl` against `api.brightdata.com` directly — legacy path; only when the CLI isn't available.
 
 ## References
 
-- [`references/flags.md`](flags.md) - every flag with when-to-use notes.
-- [`references/patterns.md`](patterns.md) - shell-loop batching, `xargs` parallelism, pagination recipe, retry/backoff, block-page recovery chain, legacy `curl` fallback.
-- [`references/examples.md`](examples.md) - (1) single page → markdown, (2) batch a list of URLs with parallelism cap, (3) paginated listing, (4) block-page recovery.
+- [`flags.md`](flags.md) — every flag with when-to-use notes.
+- [`patterns.md`](patterns.md) — shell-loop batching, `xargs` parallelism, pagination recipe, retry/backoff, block-page recovery chain, legacy `curl` fallback.
+- [`examples.md`](examples.md) — (1) single page → markdown, (2) batch a list of URLs with parallelism cap, (3) paginated listing, (4) block-page recovery.

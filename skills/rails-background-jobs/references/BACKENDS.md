@@ -1,8 +1,8 @@
-# Rails Background Jobs - Backend Setup
+# Rails Background Jobs — Backend Setup
 
 ## Solid Queue (Rails 8+)
 
-Solid Queue is database-backed - no Redis required. It ships with Rails 8 as the default.
+Solid Queue is database-backed — no Redis required. It ships with Rails 8 as the default.
 
 **Install:**
 
@@ -17,7 +17,7 @@ rails db:migrate
 config.active_job.queue_adapter = :solid_queue
 ```
 
-**Dashboard - Mission Control Jobs:**
+**Dashboard — Mission Control Jobs:**
 
 ```ruby
 # Gemfile

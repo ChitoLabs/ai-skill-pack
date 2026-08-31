@@ -25,10 +25,10 @@ metadata:
 
 | Reference | Description |
 |-----------|-------------|
-| `references/nuxt-middleware.md` | Route protection, clerkMiddleware() |
-| `references/server-api-routes.md` | Nitro server route auth |
-| `references/composables.md` | useAuth, useUser, useClerk |
-| `references/ssr-auth.md` | SSR hydration, server vs client |
+| `nuxt-middleware.md` | Route protection, clerkMiddleware() |
+| `server-api-routes.md` | Nitro server route auth |
+| `composables.md` | useAuth, useUser, useClerk |
+| `ssr-auth.md` | SSR hydration, server vs client |
 
 ## Setup
 
@@ -53,11 +53,11 @@ This single line auto-configures middleware, plugins, and component auto-imports
 
 ## Mental Model
 
-`@clerk/nuxt` auto-imports all Clerk components and composables - no explicit imports needed in `<script setup>`.
+`@clerk/nuxt` auto-imports all Clerk components and composables — no explicit imports needed in `<script setup>`.
 
-- **Composables** (`useAuth`, `useUser`) - client-side reactive, inside `<script setup>`
-- **Server routes** (`clerkClient`) - Nitro server routes, `event.context.auth`
-- **Middleware** (`clerkMiddleware`) - auto-registered, use `auth().protect()` to lock routes
+- **Composables** (`useAuth`, `useUser`) — client-side reactive, inside `<script setup>`
+- **Server routes** (`clerkClient`) — Nitro server routes, `event.context.auth`
+- **Middleware** (`clerkMiddleware`) — auto-registered, use `auth().protect()` to lock routes
 
 ## Minimal Pattern
 

@@ -1,15 +1,15 @@
-# Trace-to-Dataset Pipeline - Harvest Production Traces as Test Cases
+# Trace-to-Dataset Pipeline — Harvest Production Traces as Test Cases
 
 Extract production traces from App Insights using KQL, transform them into evaluation dataset format, and persist as versioned datasets. This is the core workflow for turning real-world agent failures into reproducible test cases.
 
 ## ⛔ Do NOT
 
-- Do NOT use `parse_json(customDimensions)` - `customDimensions` is already a `dynamic` column in App Insights KQL. Access properties directly: `customDimensions["gen_ai.response.id"]`.
+- Do NOT use `parse_json(customDimensions)` — `customDimensions` is already a `dynamic` column in App Insights KQL. Access properties directly: `customDimensions["gen_ai.response.id"]`.
 
 ## Related References
 
-- [Eval Correlation](../../trace/references/eval-correlation.md) (in `foundry-agent/trace/references/`) - look up eval scores by response/conversation ID via `customEvents`
-- [KQL Templates](../../trace/references/kql-templates.md) (in `foundry-agent/trace/references/`) - general trace query patterns and attribute mappings
+- [Eval Correlation](../../trace/references/eval-correlation.md) (in `foundry-agent/trace/references/`) — look up eval scores by response/conversation ID via `customEvents`
+- [KQL Templates](../../trace/references/kql-templates.md) (in `foundry-agent/trace/references/`) — general trace query patterns and attribute mappings
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ When a repo contains multiple agent roots, this workflow updates only the select
 
 > 💡 **Run all KQL queries** using **`monitor_resource_log_query`** (Azure MCP tool) against the App Insights resource. This is preferred over delegating to the `azure-kusto` skill.
 
-> ⚠️ **Always pass `subscription` explicitly** to Azure MCP tools - they don't extract it from resource IDs.
+> ⚠️ **Always pass `subscription` explicitly** to Azure MCP tools — they don't extract it from resource IDs.
 
 ## Overview
 
@@ -41,12 +41,12 @@ App Insights traces
 [4] Persist Dataset (local JSONL files)
     │
     ▼
-[5] Sync to Foundry (optional - upload to project-connected storage)
+[5] Sync to Foundry (optional — upload to project-connected storage)
 ```
 
 ## Key Concept: Linking Evaluation Results to Traces
 
-> 💡 **Evaluation results live in `customEvents`, not in `dependencies`.** Foundry writes eval scores to App Insights as `customEvents` with `name == "gen_ai.evaluation.result"`. Agent traces (spans) live in `dependencies`. The link between them is **`gen_ai.response.id`** - this field appears on both tables.
+> 💡 **Evaluation results live in `customEvents`, not in `dependencies`.** Foundry writes eval scores to App Insights as `customEvents` with `name == "gen_ai.evaluation.result"`. Agent traces (spans) live in `dependencies`. The link between them is **`gen_ai.response.id`** — this field appears on both tables.
 
 | Table | Contains | Join Key |
 |-------|----------|----------|
@@ -55,13 +55,13 @@ App Insights traces
 
 **To harvest traces with eval scores**, join `customEvents` → `dependencies` on `responseId`. The [Low-Eval Harvest](#low-eval-harvest--traces-with-poor-evaluation-scores) template below shows this pattern. For standalone eval lookups, see [Eval Correlation](../../trace/references/eval-correlation.md) (in `foundry-agent/trace/references/`).
 
-## Step 1 - Choose a Harvest Template
+## Step 1 — Choose a Harvest Template
 
 Select the appropriate KQL template based on user intent. These templates mirror common LangSmith "run rules" but offer more power through KQL's query language.
 
 > ⚠️ **Hosted agents:** The Foundry agent name (e.g., `hosted-agent-022-001`) only appears on `requests`, NOT on `dependencies`. For hosted agents, use the [Hosted Agent Harvest](#hosted-agent-harvest) template which joins via `requests.id` → `dependencies.operation_ParentId`. The templates below work directly for **prompt agents** where `gen_ai.agent.name` on `dependencies` matches the Foundry name.
 
-### Error Harvest - Failed Traces
+### Error Harvest — Failed Traces
 
 Captures all traces where the agent returned errors. Equivalent to LangSmith's `eq(error, True)` run rule.
 
@@ -89,7 +89,7 @@ dependencies
 | take 100
 ```
 
-### Low-Eval Harvest - Traces with Poor Evaluation Scores
+### Low-Eval Harvest — Traces with Poor Evaluation Scores
 
 Captures traces where evaluator scores fell below a threshold. Equivalent to LangSmith's `and(eq(feedback_key, "quality"), lt(feedback_score, 0.3))` run rule.
 
@@ -121,9 +121,9 @@ lowEvalResponses
 | take 100
 ```
 
-> 💡 **Tip:** Replace `<threshold>` with the pass threshold from your evaluator config. Common values: `3.0` for 1-5 ordinal scales, `0.5` for 0-1 continuous scales.
+> 💡 **Tip:** Replace `<threshold>` with the pass threshold from your evaluator config. Common values: `3.0` for 1–5 ordinal scales, `0.5` for 0–1 continuous scales.
 
-### Latency Harvest - Slow Responses
+### Latency Harvest — Slow Responses
 
 Captures traces where response latency exceeds a threshold. Equivalent to LangSmith's `gt(latency, 5000)` run rule.
 
@@ -151,7 +151,7 @@ dependencies
 
 > 💡 **Tip:** Replace `<threshold_ms>` with the latency threshold in milliseconds. Common values: `5000` (5s), `10000` (10s), `30000` (30s).
 
-### Combined Harvest - Multi-Criteria Filter
+### Combined Harvest — Multi-Criteria Filter
 
 Combines multiple filters in a single query. Equivalent to LangSmith's compound rule: `and(gt(latency, 2000), eq(error, true), has(tags, "prod"))`.
 
@@ -179,7 +179,7 @@ dependencies
 | take 100
 ```
 
-### Sampling - Control Dataset Size
+### Sampling — Control Dataset Size
 
 Add `| sample <N>` or `| take <N>` to any harvest query to control the number of traces extracted. Equivalent to LangSmith's `sampling_rate` parameter.
 
@@ -194,7 +194,7 @@ Add `| sample <N>` or `| take <N>` to any harvest query to control the number of
 // Run each harvest separately and combine
 ```
 
-### Hosted Agent Harvest - Two-Step Join Pattern
+### Hosted Agent Harvest — Two-Step Join Pattern
 
 For hosted agents, the Foundry agent name lives on `requests`, not `dependencies`. Use this two-step pattern:
 
@@ -221,14 +221,14 @@ dependencies
 
 > 💡 **When to use this pattern:** If the direct `dependencies` filter by `gen_ai.agent.name` returns no results, the agent is likely a hosted agent where `gen_ai.agent.name` on `dependencies` holds the code-level class name (e.g., `BingSearchAgent`), not the Foundry name. Switch to this `requests` → `dependencies` join.
 
-## Step 2 - Schema Transform
+## Step 2 — Schema Transform
 
 Transform harvested traces into JSONL dataset format. Each line in the JSONL file must contain:
 
 | Field | Required | Source |
 |-------|----------|--------|
-| `query` | ✅ | User input - extract from `gen_ai.input.messages` on `invoke_agent` dependency spans |
-| `response` | Optional | Agent output - extract from `gen_ai.output.messages` on `invoke_agent` dependency spans |
+| `query` | ✅ | User input — extract from `gen_ai.input.messages` on `invoke_agent` dependency spans |
+| `response` | Optional | Agent output — extract from `gen_ai.output.messages` on `invoke_agent` dependency spans |
 | `context` | Optional | Tool results or retrieved documents from the trace |
 | `ground_truth` | Optional | Expected correct answer (add during curation) |
 | `metadata` | Optional | Source info: `{"source": "trace", "conversationId": "...", "harvestRule": "error"}` |
@@ -266,7 +266,7 @@ Extract the `query` from the last user-role entry in `gen_ai.input.messages` and
 .foundry/datasets/<agent-name>-traces-candidates-<date>.jsonl
 ```
 
-## Step 3 - Human Review (Curation)
+## Step 3 — Human Review (Curation)
 
 > ⚠️ **MANDATORY:** Never auto-commit harvested traces to a dataset. Always show candidates to the user first.
 
@@ -283,7 +283,7 @@ Ask the user:
 - *"Would you like to add ground_truth reference answers for any of these?"*
 - *"What should I name this dataset version?"*
 
-## Step 4 - Persist Dataset (Local JSONL)
+## Step 4 — Persist Dataset (Local JSONL)
 
 Save approved candidates to `.foundry/datasets/<agent-name>-<source>-v<N>.jsonl`:
 
@@ -322,7 +322,7 @@ After creating a dataset:
 - **Version and tag** → [Dataset Versioning](dataset-versioning.md)
 - **Organize into splits** → [Dataset Organization](dataset-organization.md)
 
-## Step 5 - Sync Local Cache with Foundry (Optional)
+## Step 5 — Sync Local Cache with Foundry (Optional)
 
 Refresh or register the local cache in Foundry so it is available for server-side evaluations, shared access, and CI/CD pipelines. Reuse the local cache when it is current, and only refresh or push after user confirmation.
 
@@ -351,7 +351,7 @@ project_connection_create(
 )
 ```
 
-> 💡 **Tip:** The storage account must be in the same subscription or the user must have access. AAD auth is preferred - it uses the caller's identity.
+> 💡 **Tip:** The storage account must be in the same subscription or the user must have access. AAD auth is preferred — it uses the caller's identity.
 
 ### 5c. Upload JSONL to Blob Storage
 

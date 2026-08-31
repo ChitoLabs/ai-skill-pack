@@ -14,24 +14,24 @@ version: 1.0.0
 
 Use API routes when you need:
 
-- **Server-side secrets** - API keys, database credentials, or tokens that must never reach the client
-- **Database operations** - Direct database queries that shouldn't be exposed
-- **Third-party API proxies** - Hide API keys when calling external services (OpenAI, Stripe, etc.)
-- **Server-side validation** - Validate data before database writes
-- **Webhook endpoints** - Receive callbacks from services like Stripe or GitHub
-- **Rate limiting** - Control access at the server level
-- **Heavy computation** - Offload processing that would be slow on mobile
+- **Server-side secrets** — API keys, database credentials, or tokens that must never reach the client
+- **Database operations** — Direct database queries that shouldn't be exposed
+- **Third-party API proxies** — Hide API keys when calling external services (OpenAI, Stripe, etc.)
+- **Server-side validation** — Validate data before database writes
+- **Webhook endpoints** — Receive callbacks from services like Stripe or GitHub
+- **Rate limiting** — Control access at the server level
+- **Heavy computation** — Offload processing that would be slow on mobile
 
 ## When NOT to Use API Routes
 
 Avoid API routes when:
 
-- **Data is already public** - Use direct fetch to public APIs instead
-- **No secrets required** - Static data or client-safe operations
-- **Real-time updates needed** - Use WebSockets or services like Supabase Realtime
-- **Simple CRUD** - Consider Firebase, Supabase, or Convex for managed backends
-- **File uploads** - Use direct-to-storage uploads (S3 presigned URLs, Cloudflare R2)
-- **Authentication only** - Use Clerk, Auth0, or Firebase Auth instead
+- **Data is already public** — Use direct fetch to public APIs instead
+- **No secrets required** — Static data or client-safe operations
+- **Real-time updates needed** — Use WebSockets or services like Supabase Realtime
+- **Simple CRUD** — Consider Firebase, Supabase, or Convex for managed backends
+- **File uploads** — Use direct-to-storage uploads (S3 presigned URLs, Cloudflare R2)
+- **Authentication only** — Use Clerk, Auth0, or Firebase Auth instead
 
 ## File Structure
 
@@ -251,11 +251,11 @@ API routes run on Cloudflare Workers. Key limitations:
 
 ### Missing/Limited APIs
 
-- **No Node.js filesystem** - `fs` module unavailable
-- **No native Node modules** - Use Web APIs or polyfills
-- **Limited execution time** - 30 second timeout for CPU-intensive tasks
-- **No persistent connections** - WebSockets require Durable Objects
-- **fetch is available** - Use standard fetch for HTTP requests
+- **No Node.js filesystem** — `fs` module unavailable
+- **No native Node modules** — Use Web APIs or polyfills
+- **Limited execution time** — 30 second timeout for CPU-intensive tasks
+- **No persistent connections** — WebSockets require Durable Objects
+- **fetch is available** — Use standard fetch for HTTP requests
 
 ### Use Web APIs Instead
 
@@ -279,11 +279,11 @@ return new Response(JSON.stringify(data), {
 
 Since filesystem is unavailable, use cloud databases:
 
-- **Cloudflare D1** - SQLite at the edge
-- **Turso** - Distributed SQLite
-- **PlanetScale** - Serverless MySQL
-- **Supabase** - Postgres with REST API
-- **Neon** - Serverless Postgres
+- **Cloudflare D1** — SQLite at the edge
+- **Turso** — Distributed SQLite
+- **PlanetScale** — Serverless MySQL
+- **Supabase** — Postgres with REST API
+- **Neon** — Serverless Postgres
 
 Example with Turso:
 
@@ -368,6 +368,6 @@ export async function GET(request: Request) {
 - ALWAYS validate and sanitize user input
 - Use proper HTTP status codes (200, 201, 400, 401, 404, 500)
 - Handle errors gracefully with try/catch
-- Keep API routes focused - one responsibility per endpoint
+- Keep API routes focused — one responsibility per endpoint
 - Use TypeScript for type safety
 - Log errors server-side for debugging

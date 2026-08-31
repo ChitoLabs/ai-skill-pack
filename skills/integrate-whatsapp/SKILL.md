@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,80 +51,7 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `assets/dynamic-flow.json` - preserved source companion file.
-- `assets/sample-flow.json` - preserved source companion file.
-- `assets/send-interactive-buttons.json` - preserved source companion file.
-- `assets/send-interactive-catalog-message.json` - preserved source companion file.
-- `assets/send-interactive-cta-url.json` - preserved source companion file.
-- `assets/send-interactive-list.json` - preserved source companion file.
-- `assets/send-interactive-location-request.json` - preserved source companion file.
-- `assets/send-template-order-status-update.json` - preserved source companion file.
-- `assets/template-authentication-otp.json` - preserved source companion file.
-- `assets/template-marketing-media-header.json` - preserved source companion file.
-- `assets/template-utility-named.json` - preserved source companion file.
-- `assets/template-utility-order-status-update.json` - preserved source companion file.
-- `assets/webhooks-example.json` - preserved source companion file.
-- `references/detecting-whatsapp-connection.md` - preserved source companion file.
-- `references/getting-started.md` - preserved source companion file.
-- `references/package.json` - preserved source companion file.
-- `references/platform-api-reference.md` - preserved source companion file.
-- `references/setup-links.md` - preserved source companion file.
-- `references/templates-reference.md` - preserved source companion file.
-- `references/webhooks-event-types.md` - preserved source companion file.
-- `references/webhooks-overview.md` - preserved source companion file.
-- `references/webhooks-reference.md` - preserved source companion file.
-- `references/whatsapp-api-reference.md` - preserved source companion file.
-- `references/whatsapp-cloud-api-js.md` - preserved source companion file.
-- `references/whatsapp-flows-spec.md` - preserved source companion file.
-- `scripts/create-flow.js` - preserved source companion file.
-- `scripts/create-function.js` - preserved source companion file.
-- `scripts/create-template.mjs` - preserved source companion file.
-- `scripts/create.js` - preserved source companion file.
-- `scripts/delete-flow.js` - preserved source companion file.
-- `scripts/delete.js` - preserved source companion file.
-- `scripts/deploy-data-endpoint.js` - preserved source companion file.
-- `scripts/deploy-function.js` - preserved source companion file.
-- `scripts/get-data-endpoint.js` - preserved source companion file.
-- `scripts/get-encryption-status.js` - preserved source companion file.
-- `scripts/get-flow.js` - preserved source companion file.
-- `scripts/get-function.js` - preserved source companion file.
-- `scripts/get.js` - preserved source companion file.
-- `scripts/lib/args.mjs` - preserved source companion file.
-- `scripts/lib/cli.js` - preserved source companion file.
-- `scripts/lib/env.js` - preserved source companion file.
-- `scripts/lib/env.mjs` - preserved source companion file.
-- `scripts/lib/http.js` - preserved source companion file.
-- `scripts/lib/output.js` - preserved source companion file.
-- `scripts/lib/output.mjs` - preserved source companion file.
-- `scripts/lib/request.mjs` - preserved source companion file.
-- `scripts/lib/run.js` - preserved source companion file.
-- `scripts/lib/webhooks/args.js` - preserved source companion file.
-- `scripts/lib/webhooks/kapso-api.js` - preserved source companion file.
-- `scripts/lib/webhooks/webhook.js` - preserved source companion file.
-- `scripts/lib/whatsapp-flow.js` - preserved source companion file.
-- `scripts/list-connected-numbers.mjs` - preserved source companion file.
-- `scripts/list-flow-responses.js` - preserved source companion file.
-- `scripts/list-flows.js` - preserved source companion file.
-- `scripts/list-function-invocations.js` - preserved source companion file.
-- `scripts/list-function-logs.js` - preserved source companion file.
-- `scripts/list-platform-phone-numbers.mjs` - preserved source companion file.
-- `scripts/list-templates.mjs` - preserved source companion file.
-- `scripts/list.js` - preserved source companion file.
-- `scripts/openapi-explore.mjs` - preserved source companion file.
-- `scripts/publish-flow.js` - preserved source companion file.
-- `scripts/read-flow-json.js` - preserved source companion file.
-- `scripts/register-data-endpoint.js` - preserved source companion file.
-- `scripts/send-interactive.mjs` - preserved source companion file.
-- `scripts/send-template.mjs` - preserved source companion file.
-- `scripts/send-test-flow.js` - preserved source companion file.
-- `scripts/set-data-endpoint.js` - preserved source companion file.
-- `scripts/setup-encryption.js` - preserved source companion file.
-- `scripts/submit-template.mjs` - preserved source companion file.
-- `scripts/template-status.mjs` - preserved source companion file.
-- `scripts/test.js` - preserved source companion file.
-- `scripts/update-flow-json.js` - preserved source companion file.
-- `scripts/update-function.js` - preserved source companion file.
-- `scripts/update-template.mjs` - preserved source companion file.
-- `scripts/update.js` - preserved source companion file.
-- `scripts/upload-media.mjs` - preserved source companion file.
-- `scripts/upload-template-header-handle.mjs` - preserved source companion file.
+- `assets/` - 13 preserved source companion files.
+- `references/` - 12 preserved source companion files.
+- `scripts/` - 52 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

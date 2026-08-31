@@ -12,7 +12,7 @@ metadata:
   output-format: code
   related-skills: fullstack-guardian, test-master, devops-engineer, security-reviewer
   skills_sh_url: "https://skills.sh/jeffallan/claude-skills/laravel-specialist"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/laravel-specialist"
+  github_url: "https://github.com/jeffallan/claude-skills/tree/HEAD/skills/laravel-specialist"
 ---
 
 # Laravel Specialist
@@ -21,11 +21,11 @@ Senior Laravel specialist with deep expertise in Laravel 10+, Eloquent ORM, and 
 
 ## Core Workflow
 
-1. **Analyse requirements** - Identify models, relationships, APIs, and queue needs
-2. **Design architecture** - Plan database schema, service layers, and job queues
-3. **Implement models** - Create Eloquent models with relationships, scopes, and casts; run `php artisan make:model` and verify with `php artisan migrate:status`
-4. **Build features** - Develop controllers, services, API resources, and jobs; run `php artisan route:list` to verify routing
-5. **Test thoroughly** - Write feature and unit tests; run `php artisan test` before considering any step complete (target >85% coverage)
+1. **Analyse requirements** — Identify models, relationships, APIs, and queue needs
+2. **Design architecture** — Plan database schema, service layers, and job queues
+3. **Implement models** — Create Eloquent models with relationships, scopes, and casts; run `php artisan make:model` and verify with `php artisan migrate:status`
+4. **Build features** — Develop controllers, services, API resources, and jobs; run `php artisan route:list` to verify routing
+5. **Test thoroughly** — Write feature and unit tests; run `php artisan test` before considering any step complete (target >85% coverage)
 
 ## Reference Guide
 
@@ -33,11 +33,11 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Eloquent ORM | `references/eloquent.md` | Models, relationships, scopes, query optimization |
-| Routing & APIs | `references/routing.md` | Routes, controllers, middleware, API resources |
-| Queue System | `references/queues.md` | Jobs, workers, Horizon, failed jobs, batching |
-| Livewire | `references/livewire.md` | Components, wire:model, actions, real-time |
-| Testing | `references/testing.md` | Feature tests, factories, mocking, Pest PHP |
+| Eloquent ORM | `eloquent.md` | Models, relationships, scopes, query optimization |
+| Routing & APIs | `routing.md` | Routes, controllers, middleware, API resources |
+| Queue System | `queues.md` | Jobs, workers, Horizon, failed jobs, batching |
+| Livewire | `livewire.md` | Components, wire:model, actions, real-time |
+| Testing | `testing.md` | Feature tests, factories, mocking, Pest PHP |
 
 ## Constraints
 
@@ -91,7 +91,7 @@ final class Post extends Model
         'published_at' => 'immutable_datetime',
     ];
 
-    // Relationships - always eager-load via ::with() at call site
+    // Relationships — always eager-load via ::with() at call site
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -208,7 +208,7 @@ final class PublishPost implements ShouldQueue
 
     public function failed(\Throwable $e): void
     {
-        // Log or notify - never silently swallow failures
+        // Log or notify — never silently swallow failures
         logger()->error('PublishPost failed', ['post' => $this->post->id, 'error' => $e->getMessage()]);
     }
 }

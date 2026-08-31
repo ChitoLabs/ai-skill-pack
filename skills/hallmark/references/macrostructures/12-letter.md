@@ -23,3 +23,4 @@ Reference: Frank Chimero's site, founder farewell posts, indie newsletter front 
 > *"Hey there. This page is soft because the surface should be soft."*  -  Hallmark Hum  -  colloquial open + a principle
 
 ---
+

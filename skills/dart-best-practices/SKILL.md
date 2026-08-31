@@ -3,11 +3,11 @@ name: dart-best-practices
 description: "Trigger: write or review idiomatic Dart code and analyzer-friendly formatting. Apply focused modern Dart best practices."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: kevmoo
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/kevmoo/dash_skills/dart-best-practices"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dart-best-practices"
+  github_url: "https://github.com/kevmoo/dash_skills/tree/HEAD/skills/dart-best-practices"
 ---
 
 ## Activation Contract
@@ -18,6 +18,10 @@ Use this skill when:
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Preserve idiomatic Dart guidance from this skill; do not replace it with generic formatting advice.
 - Keep examples analyzer-friendly and avoid suggesting patterns that trigger common Dart lints without explaining the tradeoff.
 - Do not install packages, change analyzer configuration, or run project commands unless the user asks or approves.

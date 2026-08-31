@@ -33,3 +33,4 @@ Wordmark hard-left * a centred cluster of 4-6 links (some opening hover dropdown
 *Scroll behaviour (default):* transparent at rest over the hero, frosts (blur backdrop + hairline border + soft shadow) past ~24px, and tightens height ~8px. Always rAF-throttle the scroll handler.
 *Anti-pattern:* don't let the centre cluster collide with brand/CTA  -  if it can't sit centred with breathing room, drop to 3 links or route to N1a. Never ship a dropdown that opens on click only with no hover/focus affordance.
 *Mobile:* hide `.nav__center` below ~900px; brand + CTA (or hamburger) remain.
+

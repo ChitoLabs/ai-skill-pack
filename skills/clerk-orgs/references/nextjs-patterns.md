@@ -6,7 +6,7 @@ For other frameworks see `clerk-react-patterns`, `clerk-astro-patterns`, `clerk-
 
 ## Middleware: Role + Permission Protection
 
-`auth.protect()` accepts the same shape as `has()` - pass `{ role }`, `{ permission }`, or a callback - so middleware can enforce org authorization without any new API:
+`auth.protect()` accepts the same shape as `has()` — pass `{ role }`, `{ permission }`, or a callback — so middleware can enforce org authorization without any new API:
 
 ```typescript
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
@@ -24,7 +24,7 @@ export default clerkMiddleware(async (auth, req) => {
 })
 ```
 
-Matcher config is the standard one from `clerk-nextjs-patterns` - nothing org-specific about it.
+Matcher config is the standard one from `clerk-nextjs-patterns` — nothing org-specific about it.
 
 ## URL Slug Safety Invariant
 
@@ -42,7 +42,7 @@ export default async function OrgPage({ params }: { params: { slug: string } }) 
 }
 ```
 
-The same check applies to API routes and server actions - see below.
+The same check applies to API routes and server actions — see below.
 
 ## Server Actions: Scope Writes by `orgId`
 
@@ -59,7 +59,7 @@ export async function createProject(name: string) {
     throw new Error('Not authorized')
   }
 
-  // Pull orgId from the session, never from client input - prevents cross-org writes
+  // Pull orgId from the session, never from client input — prevents cross-org writes
   return db.projects.create({ data: { name, orgId, createdBy: userId } })
 }
 ```
@@ -103,4 +103,4 @@ export async function GET(
 - **Validate `orgSlug === params.slug` on every org-scoped surface.** The slug in the URL is an identifier; the active org in the session is the authority. Don't let them diverge.
 - **Bind `orgId` from `auth()` at the database layer.** Never let a client supply it.
 - **Use `auth.protect({ role / permission })` in middleware** for fast-path enforcement; rely on page-level checks for defense in depth.
-- **`redirect()` throws** - it doesn't return. Don't put code after it expecting to run.
+- **`redirect()` throws** — it doesn't return. Don't put code after it expecting to run.

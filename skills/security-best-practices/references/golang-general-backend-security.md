@@ -800,27 +800,27 @@ Always try to confirm:
 ## 6) Sources (accessed 2026-01-28)
 
 Primary Go documentation:
-- Go Security Policy - https://go.dev/doc/security/policy
-- Go Release History (security fixes in patch releases) - https://go.dev/doc/devel/release
-- Go 1.25 Release Notes - https://go.dev/doc/go1.25
-- net/http (server timeouts, MaxHeaderBytes, DefaultClient) - https://pkg.go.dev/net/http
-- html/template (auto-escaping and trusted-template assumptions) - https://pkg.go.dev/html/template
-- crypto/tls (MinVersion defaults, InsecureSkipVerify warnings) - https://pkg.go.dev/crypto/tls
-- crypto/rand (secure randomness, token helpers) - https://pkg.go.dev/crypto/rand
-- crypto/subtle (constant-time comparisons) - https://pkg.go.dev/crypto/subtle
-- os/exec (no shell by default; command execution guidance) - https://pkg.go.dev/os/exec
-- unsafe (bypasses type safety) - https://go.dev/src/unsafe/unsafe.go
-- net/http/pprof (debug endpoints) - https://pkg.go.dev/net/http/pprof
-- cmd/go (module authentication via go.sum/checksum DB; env vars like GOINSECURE) - https://pkg.go.dev/cmd/go
-- Module Mirror and Checksum Database Launched (Go blog) - https://go.dev/blog/module-mirror-launch
-- govulncheck documentation - https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck
-- Go Race Detector documentation - https://go.dev/doc/articles/race_detector
-- bcrypt (password hashing) - https://pkg.go.dev/golang.org/x/crypto/bcrypt
-- Go vulnerability entry example (multipart resource consumption) - https://pkg.go.dev/vuln/GO-2023-1569
+- Go Security Policy — https://go.dev/doc/security/policy
+- Go Release History (security fixes in patch releases) — https://go.dev/doc/devel/release
+- Go 1.25 Release Notes — https://go.dev/doc/go1.25
+- net/http (server timeouts, MaxHeaderBytes, DefaultClient) — https://pkg.go.dev/net/http
+- html/template (auto-escaping and trusted-template assumptions) — https://pkg.go.dev/html/template
+- crypto/tls (MinVersion defaults, InsecureSkipVerify warnings) — https://pkg.go.dev/crypto/tls
+- crypto/rand (secure randomness, token helpers) — https://pkg.go.dev/crypto/rand
+- crypto/subtle (constant-time comparisons) — https://pkg.go.dev/crypto/subtle
+- os/exec (no shell by default; command execution guidance) — https://pkg.go.dev/os/exec
+- unsafe (bypasses type safety) — https://go.dev/src/unsafe/unsafe.go
+- net/http/pprof (debug endpoints) — https://pkg.go.dev/net/http/pprof
+- cmd/go (module authentication via go.sum/checksum DB; env vars like GOINSECURE) — https://pkg.go.dev/cmd/go
+- Module Mirror and Checksum Database Launched (Go blog) — https://go.dev/blog/module-mirror-launch
+- govulncheck documentation — https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck
+- Go Race Detector documentation — https://go.dev/doc/articles/race_detector
+- bcrypt (password hashing) — https://pkg.go.dev/golang.org/x/crypto/bcrypt
+- Go vulnerability entry example (multipart resource consumption) — https://pkg.go.dev/vuln/GO-2023-1569
 
 OWASP Cheat Sheet Series (general web security):
-- Session Management - https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
-- CSRF Prevention - https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
-- SSRF Prevention - https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html
-- XSS Prevention - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-- HTTP Security Response Headers - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+- Session Management — https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
+- CSRF Prevention — https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+- SSRF Prevention — https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html
+- XSS Prevention — https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+- HTTP Security Response Headers — https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html

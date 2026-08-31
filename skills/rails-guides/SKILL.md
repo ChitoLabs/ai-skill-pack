@@ -3,11 +3,11 @@ name: rails-guides
 description: "Trigger: rails-guides, Official Rails documentation. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: lucianghinda
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/lucianghinda/superpowers-ruby/rails-guides"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/rails-guides"
+  github_url: "https://github.com/lucianghinda/superpowers-ruby/tree/HEAD/skills/rails-guides"
 ---
 
 ## Activation Contract
@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,47 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/action_cable_overview.md` - preserved source companion file.
-- `references/action_controller_advanced_topics.md` - preserved source companion file.
-- `references/action_controller_overview.md` - preserved source companion file.
-- `references/action_mailbox_basics.md` - preserved source companion file.
-- `references/action_mailer_basics.md` - preserved source companion file.
-- `references/action_text_overview.md` - preserved source companion file.
-- `references/action_view_helpers.md` - preserved source companion file.
-- `references/action_view_overview.md` - preserved source companion file.
-- `references/active_job_basics.md` - preserved source companion file.
-- `references/active_model_basics.md` - preserved source companion file.
-- `references/active_record_basics.md` - preserved source companion file.
-- `references/active_record_callbacks.md` - preserved source companion file.
-- `references/active_record_composite_primary_keys.md` - preserved source companion file.
-- `references/active_record_encryption.md` - preserved source companion file.
-- `references/active_record_migrations.md` - preserved source companion file.
-- `references/active_record_multiple_databases.md` - preserved source companion file.
-- `references/active_record_postgresql.md` - preserved source companion file.
-- `references/active_record_querying.md` - preserved source companion file.
-- `references/active_record_validations.md` - preserved source companion file.
-- `references/active_storage_overview.md` - preserved source companion file.
-- `references/active_support_core_extensions.md` - preserved source companion file.
-- `references/active_support_instrumentation.md` - preserved source companion file.
-- `references/api_app.md` - preserved source companion file.
-- `references/asset_pipeline.md` - preserved source companion file.
-- `references/association_basics.md` - preserved source companion file.
-- `references/autoloading_and_reloading_constants.md` - preserved source companion file.
-- `references/caching_with_rails.md` - preserved source companion file.
-- `references/command_line.md` - preserved source companion file.
-- `references/configuring.md` - preserved source companion file.
-- `references/debugging_rails_applications.md` - preserved source companion file.
-- `references/error_reporting.md` - preserved source companion file.
-- `references/form_helpers.md` - preserved source companion file.
-- `references/getting_started.md` - preserved source companion file.
-- `references/i18n.md` - preserved source companion file.
-- `references/initialization.md` - preserved source companion file.
-- `references/layouts_and_rendering.md` - preserved source companion file.
-- `references/rails_on_rack.md` - preserved source companion file.
-- `references/routing.md` - preserved source companion file.
-- `references/security.md` - preserved source companion file.
-- `references/testing.md` - preserved source companion file.
-- `references/threading_and_code_execution.md` - preserved source companion file.
-- `references/tuning_performance_for_deployment.md` - preserved source companion file.
-- `references/upgrading_ruby_on_rails.md` - preserved source companion file.
-- `references/working_with_javascript_in_rails.md` - preserved source companion file.
+- `references/` - 44 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

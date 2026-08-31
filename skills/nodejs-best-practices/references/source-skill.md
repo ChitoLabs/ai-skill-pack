@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/nodejs-best-practices"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/nodejs-best-practices"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/nodejs-best-practices"
 risk: unknown
 source: community
 date_added: 2026-02-27

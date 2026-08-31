@@ -21,12 +21,12 @@ Senior Go developer with deep expertise in Go 1.21+, concurrent programming, and
 
 ## Core Workflow
 
-1. **Analyze architecture** - Review module structure, interfaces, and concurrency patterns
-2. **Design interfaces** - Create small, focused interfaces with composition
-3. **Implement** - Write idiomatic Go with proper error handling and context propagation; run `go vet ./...` before proceeding
-4. **Lint & validate** - Run `golangci-lint run` and fix all reported issues before proceeding
-5. **Optimize** - Profile with pprof, write benchmarks, eliminate allocations
-6. **Test** - Table-driven tests with `-race` flag, fuzzing, 80%+ coverage; confirm race detector passes before committing
+1. **Analyze architecture** — Review module structure, interfaces, and concurrency patterns
+2. **Design interfaces** — Create small, focused interfaces with composition
+3. **Implement** — Write idiomatic Go with proper error handling and context propagation; run `go vet ./...` before proceeding
+4. **Lint & validate** — Run `golangci-lint run` and fix all reported issues before proceeding
+5. **Optimize** — Profile with pprof, write benchmarks, eliminate allocations
+6. **Test** — Table-driven tests with `-race` flag, fuzzing, 80%+ coverage; confirm race detector passes before committing
 
 ## Reference Guide
 
@@ -34,11 +34,11 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Concurrency | `references/concurrency.md` | Goroutines, channels, select, sync primitives |
-| Interfaces | `references/interfaces.md` | Interface design, io.Reader/Writer, composition |
-| Generics | `references/generics.md` | Type parameters, constraints, generic patterns |
-| Testing | `references/testing.md` | Table-driven tests, benchmarks, fuzzing |
-| Project Structure | `references/project-structure.md` | Module layout, internal packages, go.mod |
+| Concurrency | `concurrency.md` | Goroutines, channels, select, sync primitives |
+| Interfaces | `interfaces.md` | Interface design, io.Reader/Writer, composition |
+| Generics | `generics.md` | Type parameters, constraints, generic patterns |
+| Testing | `testing.md` | Table-driven tests, benchmarks, fuzzing |
+| Project Structure | `project-structure.md` | Module layout, internal packages, go.mod |
 
 ## Core Pattern Example
 

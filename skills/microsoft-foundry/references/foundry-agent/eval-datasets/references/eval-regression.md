@@ -1,4 +1,4 @@
-# Eval Regression - Automated Regression Detection
+# Eval Regression — Automated Regression Detection
 
 Automatically detect when evaluation metrics degrade between agent versions. Compare each evaluation run against the baseline and generate pass/fail verdicts with actionable recommendations.
 
@@ -7,7 +7,7 @@ Automatically detect when evaluation metrics degrade between agent versions. Com
 - At least 2 evaluation runs in the same evaluation group
 - Baseline run identified (either the first run or the one tagged as `baseline`)
 
-## Step 1 - Identify Baseline and Treatment
+## Step 1 — Identify Baseline and Treatment
 
 ### Automatic Baseline Selection
 
@@ -19,7 +19,7 @@ Automatically detect when evaluation metrics degrade between agent versions. Com
 
 The latest (most recent) run in the evaluation group is the treatment.
 
-## Step 2 - Run Comparison
+## Step 2 — Run Comparison
 
 Use **`evaluation_comparison_create`** to compare baseline vs treatment:
 
@@ -42,7 +42,7 @@ Use **`evaluation_comparison_create`** to compare baseline vs treatment:
 
 Retrieve results with **`evaluation_comparison_get`** using the returned `insightId`.
 
-## Step 3 - Regression Verdicts
+## Step 3 — Regression Verdicts
 
 For each evaluator in the comparison results, apply regression thresholds:
 
@@ -51,8 +51,8 @@ For each evaluator in the comparison results, apply regression thresholds:
 | `Improved` | > +2% | ✅ PASS | No action needed |
 | `Changed` | ±2% | ⚠️ NEUTRAL | Monitor, no immediate action |
 | `Degraded` | > -2% | 🔴 REGRESSION | Investigate and remediate |
-| `Inconclusive` | - | ❓ INCONCLUSIVE | Increase sample size and re-run |
-| `TooFewSamples` | - | ❓ INSUFFICIENT DATA | Need more test cases (≥30 recommended) |
+| `Inconclusive` | — | ❓ INCONCLUSIVE | Increase sample size and re-run |
+| `TooFewSamples` | — | ❓ INSUFFICIENT DATA | Need more test cases (≥30 recommended) |
 
 ### Example Regression Report
 
@@ -69,7 +69,7 @@ For each evaluator in the comparison results, apply regression thresholds:
 ║ Task Adherence     │ 2.5      │ 3.9       │ +1.4   │ ✅ PASS ║
 ║ Safety             │ 0.95     │ 0.98      │ +0.03  │ ✅ PASS ║
 ╠═══════════════════════════════════════════════════════════════╣
-║ OVERALL: ✅ ALL EVALUATORS PASSED - Safe to deploy           ║
+║ OVERALL: ✅ ALL EVALUATORS PASSED — Safe to deploy           ║
 ╚═══════════════════════════════════════════════════════════════╝
 ```
 
@@ -93,7 +93,7 @@ For each evaluator in the comparison results, apply regression thresholds:
 ╚═══════════════════════════════════════════════════════════════╝
 ```
 
-## Step 4 - Remediation Recommendations
+## Step 4 — Remediation Recommendations
 
 When regression is detected, provide actionable guidance:
 

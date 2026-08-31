@@ -2479,7 +2479,7 @@ module Stripe
      }
     def self.capture(charge, params = {}, opts = {}); end
 
-    # This method is no longer recommended-use the [Payment Intents API](https://docs.stripe.com/docs/api/payment_intents)
+    # This method is no longer recommended—use the [Payment Intents API](https://docs.stripe.com/docs/api/payment_intents)
     # to initiate a new payment instead. Confirmation of the PaymentIntent creates the Charge
     # object used to request payment.
     sig {

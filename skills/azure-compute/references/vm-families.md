@@ -1,6 +1,6 @@
 # VM Family Guide
 
-Select a VM family by matching the user's workload to the right category. Families describe hardware intent - not individual SKUs.
+Select a VM family by matching the user's workload to the right category. Families describe hardware intent — not individual SKUs.
 
 > **Source**: [Azure VM sizes overview](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview)
 >
@@ -50,7 +50,7 @@ Workload needs GPU?
 | Choice                    | Pro                              | Con                                            |
 | ------------------------- | -------------------------------- | ---------------------------------------------- |
 | B-series (burstable)      | Lowest cost                      | Throttled when credits exhausted               |
-| AMD (`a` suffix) vs Intel | ~5-15% cheaper                   | Some workloads assume Intel extensions         |
+| AMD (`a` suffix) vs Intel | ~5–15% cheaper                   | Some workloads assume Intel extensions         |
 | ARM (`p` suffix, Cobalt)  | Best price-performance for Linux | Windows not supported; check app compatibility |
 | Previous-gen (v4, v3)     | Sometimes cheaper                | Not recommended for new deployments            |
 | Spot VMs                  | Up to 90% discount               | Can be evicted with 30s notice                 |

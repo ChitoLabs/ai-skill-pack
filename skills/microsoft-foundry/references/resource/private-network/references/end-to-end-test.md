@@ -1,6 +1,6 @@
 # End-to-End Test (VNet Access Required)
 
-Continues from [post-deployment-validation.md](post-deployment-validation.md). Steps 1-3 there must be complete first.
+Continues from [post-deployment-validation.md](post-deployment-validation.md). Steps 1–3 there must be complete first.
 
 ## 4. VNet Access Setup
 
@@ -9,20 +9,20 @@ Continues from [post-deployment-validation.md](post-deployment-validation.md). S
 Use `AskUserQuestion`: **"Steps 1-3 are done. The remaining tests need VNet access. How do you want to proceed?"**
 Options:
 - `I have a Bastion VM / jump box`
-- `Set up a point-to-site VPN for me` - read [vpn-dns-setup.md](vpn-dns-setup.md)
+- `Set up a point-to-site VPN for me` — read [vpn-dns-setup.md](vpn-dns-setup.md)
 - `I have VPN / ExpressRoute already`
 - `Skip testing for now`
 
-**Bastion VM:** User has direct access to all private endpoints from the VM. Setup is complete - do NOT proceed to Step 5.
+**Bastion VM:** User has direct access to all private endpoints from the VM. Setup is complete — do NOT proceed to Step 5.
 
 ---
 
 ## 5. End-to-End Test (VPN users only)
 
 Three phases:
-1. **Network** - DNS resolution + port 443 reachability
-2. **Agent Lifecycle** - Create agent, thread, run, verify, cleanup
-3. **Isolation Proof** - Repeat with VPN off - expect 403
+1. **Network** — DNS resolution + port 443 reachability
+2. **Agent Lifecycle** — Create agent, thread, run, verify, cleanup
+3. **Isolation Proof** — Repeat with VPN off — expect 403
 
 > ⚠️ Chromium browsers may bypass VPN DNS via Secure DNS (DoH). If portal shows "Error loading agents" but CLI works, disable Secure DNS.
 
@@ -100,7 +100,7 @@ agents.delete_agent(agent.id)
 
 Report results to the user (which PEs passed, any failures) before proceeding to Phase 3.
 
-Ask user to disconnect VPN. Repeat Phase 2 - it should fail with 403. Report whether isolation is confirmed before proceeding to cross-check.
+Ask user to disconnect VPN. Repeat Phase 2 — it should fail with 403. Report whether isolation is confirmed before proceeding to cross-check.
 
 ### Requirements Cross-Check
 

@@ -473,3 +473,4 @@ This signals to future Hallmark runs and the audit workflow what was chosen and 
 - **Treating the abstract background as the hero.** It isn't. The headline is. The background is paper.
 - **Shipping the unmodified Storyset SVG.** That's tier D ungrounded  -  the library look. Customise the colour to your anchor hue at minimum; recompose if you can.
 - **A clipped-edge video on mobile.** The clip reads as broken on a 375-px viewport. Always collapse to stacked at < 60 rem.
+

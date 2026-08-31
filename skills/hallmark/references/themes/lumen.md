@@ -476,3 +476,4 @@ Disqualifiers  -  if any appears in a Lumen build, the build is not Lumen:
 - No two-cell stat rows.
 - No atmospheric blooms larger than the apparatus.
 - No blank leader-line callouts.
+

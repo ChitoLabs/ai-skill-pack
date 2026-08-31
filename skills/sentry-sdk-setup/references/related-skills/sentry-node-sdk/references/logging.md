@@ -1,4 +1,4 @@
-# Logging - Sentry Node.js SDK
+# Logging — Sentry Node.js SDK
 
 > Minimum SDK: `@sentry/node` ≥9.41.0 (stable GA)  
 > First experimental: ≥9.10.0 (via `_experiments.enableLogs`)  
@@ -14,9 +14,9 @@
 Sentry Logs are high-cardinality structured log entries that link directly to traces and errors. They let you answer *why* something broke, not just *what* broke.
 
 Key characteristics:
-- Sent as structured data - each attribute is individually searchable in Sentry UI
+- Sent as structured data — each attribute is individually searchable in Sentry UI
 - Automatically linked to the active trace (if tracing is enabled)
-- Buffered and batched (max 100 per buffer) - no per-log network overhead
+- Buffered and batched (max 100 per buffer) — no per-log network overhead
 - NOT a replacement for a logging library; designed to complement one
 
 ---
@@ -30,7 +30,7 @@ import * as Sentry from "@sentry/node";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
-  enableLogs: true,                   // REQUIRED - default: false
+  enableLogs: true,                   // REQUIRED — default: false
 
   beforeSendLog: (log) => {           // optional filter/transform
     if (log.level === "debug") return null;  // null = drop this log
@@ -88,7 +88,7 @@ Sentry.logger.fatal("Database unavailable", { host: "primary-db", port: 5432 });
 
 ---
 
-## Parameterized Messages - `Sentry.logger.fmt`
+## Parameterized Messages — `Sentry.logger.fmt`
 
 Use the `fmt` tagged template literal to create parameterized messages. Interpolated values are extracted as **individually searchable attributes** in Sentry.
 
@@ -146,21 +146,21 @@ Attributes become filterable columns in the Sentry Logs view.
 Set attributes on a scope once and they are automatically attached to every log emitted within that scope.
 
 ```typescript
-// Global scope - applies to all logs for the app's lifetime
+// Global scope — applies to all logs for the app's lifetime
 Sentry.getGlobalScope().setAttributes({
   service: "checkout-service",
   version: "2.1.0",
   region: "us-west-2",
 });
 
-// Isolation scope - unique per HTTP request (auto-created by HTTP integrations)
+// Isolation scope — unique per HTTP request (auto-created by HTTP integrations)
 Sentry.getIsolationScope().setAttributes({
   org_id: user.orgId,
   user_tier: user.tier,
   request_id: req.id,
 });
 
-// Current scope - single operation block
+// Current scope — single operation block
 Sentry.withScope((scope) => {
   scope.setAttribute("operation", "payment-processing");
   scope.setAttribute("payment_method", "stripe");

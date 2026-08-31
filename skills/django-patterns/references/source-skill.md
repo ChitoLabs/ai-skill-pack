@@ -3,10 +3,10 @@ name: django-patterns
 description: Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/django-patterns"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/django-patterns"
+  github_url: "https://github.com/affaan-m/everything-claude-code"
 origin: ECC
 ---
 

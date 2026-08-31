@@ -15,3 +15,4 @@ Wordmark hard-left, single CTA hard-right, vast empty space between, no link row
 ```
 
 *Anti-pattern:* adding 4 inline links between the wordmark and CTA "to fill the space". The space *is* the design; if you fill it, you've made N1 with extra steps.
+

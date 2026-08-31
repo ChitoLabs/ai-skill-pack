@@ -21,11 +21,11 @@ Senior Rust engineer with deep expertise in Rust 2021 edition, systems programmi
 
 ## Core Workflow
 
-1. **Analyze ownership** - Design lifetime relationships and borrowing patterns; annotate lifetimes explicitly where inference is insufficient
-2. **Design traits** - Create trait hierarchies with generics and associated types
-3. **Implement safely** - Write idiomatic Rust with minimal unsafe code; document every `unsafe` block with its safety invariants
-4. **Handle errors** - Use `Result`/`Option` with `?` operator and custom error types via `thiserror`
-5. **Validate** - Run `cargo clippy --all-targets --all-features`, `cargo fmt --check`, and `cargo test`; fix all warnings before finalising
+1. **Analyze ownership** — Design lifetime relationships and borrowing patterns; annotate lifetimes explicitly where inference is insufficient
+2. **Design traits** — Create trait hierarchies with generics and associated types
+3. **Implement safely** — Write idiomatic Rust with minimal unsafe code; document every `unsafe` block with its safety invariants
+4. **Handle errors** — Use `Result`/`Option` with `?` operator and custom error types via `thiserror`
+5. **Validate** — Run `cargo clippy --all-targets --all-features`, `cargo fmt --check`, and `cargo test`; fix all warnings before finalising
 
 ## Reference Guide
 
@@ -33,18 +33,18 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Ownership | `references/ownership.md` | Lifetimes, borrowing, smart pointers, Pin |
-| Traits | `references/traits.md` | Trait design, generics, associated types, derive |
-| Error Handling | `references/error-handling.md` | Result, Option, ?, custom errors, thiserror |
-| Async | `references/async.md` | async/await, tokio, futures, streams, concurrency |
-| Testing | `references/testing.md` | Unit/integration tests, proptest, benchmarks |
+| Ownership | `ownership.md` | Lifetimes, borrowing, smart pointers, Pin |
+| Traits | `traits.md` | Trait design, generics, associated types, derive |
+| Error Handling | `error-handling.md` | Result, Option, ?, custom errors, thiserror |
+| Async | `async.md` | async/await, tokio, futures, streams, concurrency |
+| Testing | `testing.md` | Unit/integration tests, proptest, benchmarks |
 
 ## Key Patterns with Examples
 
 ### Ownership & Lifetimes
 
 ```rust
-// Explicit lifetime annotation - borrow lives as long as the input slice
+// Explicit lifetime annotation — borrow lives as long as the input slice
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() { x } else { y }
 }
@@ -114,7 +114,7 @@ async fn fetch_data(url: &str) -> Result<String, reqwest::Error> {
     Ok(body)
 }
 
-// Spawn concurrent tasks - never mix blocking calls into async context
+// Spawn concurrent tasks — never mix blocking calls into async context
 async fn parallel_work() {
     let (a, b) = tokio::join!(
         sleep(Duration::from_millis(100)),

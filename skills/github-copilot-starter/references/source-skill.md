@@ -19,18 +19,18 @@ Ask the user for the following information if not provided:
 2. **Project Type**: (e.g., web app, API, mobile app, desktop app, library, etc.)
 3. **Additional Technologies**: (e.g., database, cloud provider, testing frameworks, etc.)
 4. **Development Style**: (strict standards, flexible, specific patterns)
-5. **GitHub Actions / Coding Agent**: Does the project use GitHub Actions? (yes/no - determines whether to generate `copilot-setup-steps.yml`)
+5. **GitHub Actions / Coding Agent**: Does the project use GitHub Actions? (yes/no — determines whether to generate `copilot-setup-steps.yml`)
 
 ## Configuration Files to Create
 
 Based on the provided stack, create the following files in the appropriate directories:
 
 ### 1. `.github/copilot-instructions.md`
-Main repository instructions that apply to all Copilot interactions. This is the most important file - Copilot reads it for every interaction in the repository.
+Main repository instructions that apply to all Copilot interactions. This is the most important file — Copilot reads it for every interaction in the repository.
 
 Use this structure:
 ```md
-# {Project Name} - Copilot Instructions
+# {Project Name} — Copilot Instructions
 
 ## Project Overview
 Brief description of what this project does and its primary purpose.
@@ -297,7 +297,7 @@ The plan consists of a Markdown document that describes the implementation plan,
 5. **Create language-specific instruction files** using awesome-copilot references with attribution
 6. **Generate reusable skills** tailored to project needs
 7. **Set up specialized agents**, fetching from awesome-copilot where applicable (especially for expert engineer agents matching the tech stack)
-8. **Create the GitHub Actions workflow for Coding Agent** (`copilot-setup-steps.yml`) - skip if user does not use GitHub Actions
+8. **Create the GitHub Actions workflow for Coding Agent** (`copilot-setup-steps.yml`) — skip if user does not use GitHub Actions
 9. **Validate** all files follow proper formatting and include necessary frontmatter
 
 ## Post-Setup Instructions

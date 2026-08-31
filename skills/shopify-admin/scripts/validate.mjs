@@ -17327,7 +17327,7 @@ var APICategory = {
   CONFIGURATION: "configuration",
   EXECUTION: "execution",
   GUIDANCE: "guidance"
-  // Procedural topics (onboarding, review checklists) - hand-maintained, no validation/search
+  // Procedural topics (onboarding, review checklists) — hand-maintained, no validation/search
 };
 
 // src/types/api-mapping.ts
@@ -17356,7 +17356,7 @@ var SHOPIFY_APIS = defineApis({
   },
   admin: {
     displayName: "Admin API",
-    description: "Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself - even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** - use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows - use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes).",
+    description: "Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself\u2014even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** \u2014use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows\u2014use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes).",
     category: APICategory.GRAPHQL,
     visibility: Visibility.PUBLIC,
     schemaSource: { shopifyDevPrefix: "admin" },
@@ -17671,7 +17671,7 @@ var SHOPIFY_APIS = defineApis({
   },
   "onboarding-merchant": {
     displayName: "Merchant Onboarding",
-    description: "Set up and connect a Shopify store from your AI assistant. Use when the user wants to: set up my Shopify store, connect my store, install Shopify plugin, get started with Shopify, manage my store, add products to my store, merchant onboarding, start selling online, Shopify setup help, create my first store, how do I set up an online store, import products, migrate from Square, migrate from WooCommerce, migrate from Etsy, migrate from Amazon, migrate from eBay, migrate from Wix, import from Google Merchant Center, migrate from Clover, migrate from Lightspeed, move products to Shopify, import catalog, replatform to Shopify. This is for store owners - not developers.",
+    description: "Set up and connect a Shopify store from your AI assistant. Use when the user wants to: set up my Shopify store, connect my store, install Shopify plugin, get started with Shopify, manage my store, add products to my store, merchant onboarding, start selling online, Shopify setup help, create my first store, how do I set up an online store, import products, migrate from Square, migrate from WooCommerce, migrate from Etsy, migrate from Amazon, migrate from eBay, migrate from Wix, import from Google Merchant Center, migrate from Clover, migrate from Lightspeed, move products to Shopify, import catalog, replatform to Shopify. This is for store owners \u2014 not developers.",
     category: APICategory.GUIDANCE,
     visibility: Visibility.PUBLIC,
     searchable: false,

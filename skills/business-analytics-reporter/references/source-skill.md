@@ -107,7 +107,7 @@ Weak Areas Identified:
 Consult the business frameworks reference to provide strategic recommendations:
 
 **Load business frameworks for context:**
-Refer to `references/business_frameworks.md` for:
+Refer to `business_frameworks.md` for:
 - Revenue growth strategies (market penetration, product development, etc.)
 - Operational excellence frameworks
 - Customer-centric strategies
@@ -147,7 +147,7 @@ Success Metrics: Monthly revenue growth rate, new customer acquisition, ARPU inc
 If requested, create interactive visualizations using Plotly to illustrate findings:
 
 **Consult visualization guide:**
-Refer to `references/visualization_guide.md` for:
+Refer to `visualization_guide.md` for:
 - Recommended chart types for different analyses
 - Code examples for creating charts
 - Best practices for business dashboards
@@ -189,7 +189,7 @@ Compile findings into a comprehensive report format.
 
 **Option A: Generate HTML Report**
 
-Use the report template from `assets/report_template.html`:
+Use the report template from `../assets/report_template.html`:
 
 ```python
 # Read the template
@@ -289,7 +289,7 @@ The analysis script calculates the following metrics automatically:
 
 ## Business Frameworks Reference
 
-When generating recommendations, leverage the frameworks documented in `references/business_frameworks.md`:
+When generating recommendations, leverage the frameworks documented in `business_frameworks.md`:
 
 1. **Revenue Growth Strategies**: Market penetration, product development, market development, diversification
 2. **Operational Excellence**: Process optimization, resource allocation, quality management
@@ -329,9 +329,9 @@ The analysis automatically detects these common business problems:
 2. Run analysis: `python scripts/analyze_business_data.py q4_sales.csv q4_report.json`
 3. Read results: `with open('q4_report.json') as f: report = json.load(f)`
 4. Interpret findings for the user in natural language
-5. Create visualizations using Plotly (refer to `references/visualization_guide.md`)
-6. Generate HTML report using `assets/report_template.html`
-7. Provide strategic recommendations using `references/business_frameworks.md`
+5. Create visualizations using Plotly (refer to `visualization_guide.md`)
+6. Generate HTML report using `../assets/report_template.html`
+7. Provide strategic recommendations using `business_frameworks.md`
 
 **Expected output:**
 - Clear explanation of current business performance

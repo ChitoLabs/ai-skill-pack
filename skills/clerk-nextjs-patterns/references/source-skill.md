@@ -12,7 +12,7 @@ metadata:
 
 # Next.js Patterns
 
-> **Version**: Check `package.json` for the SDK version - see `clerk` skill for the version table. Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts.
+> **Version**: Check `package.json` for the SDK version — see `clerk` skill for the version table. Core 2 differences are noted inline with `> **Core 2 ONLY (skip if current SDK):**` callouts.
 
 For basic setup, see `clerk-setup` skill.
 
@@ -30,11 +30,11 @@ For basic setup, see `clerk-setup` skill.
 
 | Reference | Description |
 |-----------|-------------|
-| `references/server-vs-client.md` | `await auth()` vs hooks |
-| `references/middleware-strategies.md` | Public-first vs protected-first, `proxy.ts` (Next.js <=15: `middleware.ts`) |
-| `references/server-actions.md` | Protect mutations |
-| `references/api-routes.md` | 401 vs 403 |
-| `references/caching-auth.md` | User-scoped caching |
+| `server-vs-client.md` | `await auth()` vs hooks |
+| `middleware-strategies.md` | Public-first vs protected-first, `proxy.ts` (Next.js <=15: `middleware.ts`) |
+| `server-actions.md` | Protect mutations |
+| `api-routes.md` | 401 vs 403 |
+| `caching-auth.md` | User-scoped caching |
 
 ## Mental Model
 
@@ -45,9 +45,9 @@ Server vs Client = different auth APIs:
 Never mix them. Server Components use server imports, Client Components use hooks.
 
 Key properties from `auth()`:
-- `isAuthenticated` - boolean, replaces the `!!userId` pattern
-- `sessionStatus` - `'active'` | `'pending'`, for detecting incomplete session tasks
-- `userId`, `orgId`, `orgSlug`, `has()`, `protect()` - unchanged
+- `isAuthenticated` — boolean, replaces the `!!userId` pattern
+- `sessionStatus` — `'active'` | `'pending'`, for detecting incomplete session tasks
+- `userId`, `orgId`, `orgSlug`, `has()`, `protect()` — unchanged
 
 > **Core 2 ONLY (skip if current SDK):** `isAuthenticated` and `sessionStatus` are not available. Check `!!userId` instead.
 
@@ -83,7 +83,7 @@ import { Show } from '@clerk/nextjs'
 **Authorization checks (B2B):**
 
 ```tsx
-// Feature-based (preferred - features can move between plans without redeploy)
+// Feature-based (preferred — features can move between plans without redeploy)
 <Show when={{ feature: 'analytics' }} fallback={<UpgradePrompt />}>
   <AnalyticsDashboard />
 </Show>
@@ -98,7 +98,7 @@ import { Show } from '@clerk/nextjs'
   <ProFeatures />
 </Show>
 
-// Role-based (use sparingly - prefer permission)
+// Role-based (use sparingly — prefer permission)
 <Show when={{ role: 'org:admin' }}>
   <AdminPanel />
 </Show>
@@ -171,7 +171,7 @@ export function DataFetcher() {
 }
 ```
 
-`getToken()` returns `null` when the user is not authenticated - always null-check before use.
+`getToken()` returns `null` when the user is not authenticated — always null-check before use.
 
 ### useSession() for session data
 
@@ -187,7 +187,7 @@ export function SessionInfo() {
 
   return (
     <p>
-      Session {session.id} - last active: {session.lastActiveAt.toISOString()}
+      Session {session.id} — last active: {session.lastActiveAt.toISOString()}
     </p>
   )
 }

@@ -94,9 +94,9 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ## Available DesignThemeModes
 
-- `DesignThemeModes.Light` - light theme
-- `DesignThemeModes.Dark` - dark theme
-- `DesignThemeModes.System` - follows OS preference
+- `DesignThemeModes.Light` — light theme
+- `DesignThemeModes.Dark` — dark theme
+- `DesignThemeModes.System` — follows OS preference
 
 ## Available OfficeColor presets
 

@@ -29,7 +29,7 @@ compatibility: "Requires SLEEK_API_KEY environment variable. Network access limi
 
 ## Prerequisites: API Key
 
-Create API keys at **https://sleek.design/dashboard/api-keys**. The full key value is shown only once at creation - store it in the `SLEEK_API_KEY` environment variable.
+Create API keys at **https://sleek.design/dashboard/api-keys**. The full key value is shown only once at creation — store it in the `SLEEK_API_KEY` environment variable.
 
 **Required plan**: Pro or higher (API access is gated)
 
@@ -57,7 +57,7 @@ Create a key with only the scopes needed for the task.
 
 ---
 
-## Quick Reference - All Endpoints
+## Quick Reference — All Endpoints
 
 | Method   | Path                                    | Scope             | Description       |
 | -------- | --------------------------------------- | ----------------- | ----------------- |
@@ -113,7 +113,7 @@ Content-Type: application/json
 { "name": "My New App" }
 ```
 
-Response `201` - same shape as a single project.
+Response `201` — same shape as a single project.
 
 #### Get / Delete project
 
@@ -133,7 +133,7 @@ GET /api/v1/projects/:projectId/components?limit=50&offset=0
 Authorization: Bearer $SLEEK_API_KEY
 ```
 
-Both list and get accept an optional `inlineIcons` query param (default `false`). When omitted, icons render as `<iconify-icon>` web components and the HTML pulls in the Iconify script - leave it off by default. Pass `?inlineIcons=true` only when the consumer needs self-contained SVGs in the HTML (for example, importing into tools that don't run scripts).
+Both list and get accept an optional `inlineIcons` query param (default `false`). When omitted, icons render as `<iconify-icon>` web components and the HTML pulls in the Iconify script — leave it off by default. Pass `?inlineIcons=true` only when the consumer needs self-contained SVGs in the HTML (for example, importing into tools that don't run scripts).
 
 Response `200`:
 
@@ -162,7 +162,7 @@ GET /api/v1/projects/:projectId/components/:componentId
 Authorization: Bearer $SLEEK_API_KEY
 ```
 
-Response `200` - same shape as a single item from the list endpoint:
+Response `200` — same shape as a single item from the list endpoint:
 
 ```json
 {
@@ -179,7 +179,7 @@ Response `200` - same shape as a single item from the list endpoint:
 
 ---
 
-### Chat - Send Message
+### Chat — Send Message
 
 This is the core action: describe what you want in `message.text` and the AI creates or modifies screens.
 
@@ -204,7 +204,7 @@ idempotency-key: <optional, max 255 chars>
 | `?wait=true/false`       | No       | Sync wait mode (default: false)               |
 | `idempotency-key` header | No       | Replay-safe re-sends                          |
 
-#### Response - async (default, `wait=false`)
+#### Response — async (default, `wait=false`)
 
 Status `202 Accepted`. `result` and `error` are absent until the run reaches a terminal state.
 
@@ -218,7 +218,7 @@ Status `202 Accepted`. `result` and `error` are absent until the run reaches a t
 }
 ```
 
-#### Response - sync (`wait=true`)
+#### Response — sync (`wait=true`)
 
 Blocks up to **300 seconds**. Returns `200` when completed, `202` if timed out.
 
@@ -242,7 +242,7 @@ Blocks up to **300 seconds**. Returns `200` when completed, `202` if timed out.
 
 ---
 
-### Chat - Poll Run Status
+### Chat — Poll Run Status
 
 Use this after async send to check progress.
 
@@ -251,7 +251,7 @@ GET /api/v1/projects/:projectId/chat/runs/:runId
 Authorization: Bearer $SLEEK_API_KEY
 ```
 
-Response - same shape as send message `data` object:
+Response — same shape as send message `data` object:
 
 ```json
 {
@@ -319,7 +319,7 @@ Content-Type: application/json
 | Field        | Default       | Notes                                                                 |
 | ------------ | ------------- | --------------------------------------------------------------------- |
 | `format`     | `png`         | `png` or `webp`                                                      |
-| `scale`      | `2`           | 1-3 (device pixel ratio)                                             |
+| `scale`      | `2`           | 1–3 (device pixel ratio)                                             |
 | `gap`        | `40`          | Pixels between components                                            |
 | `padding`       | `40`          | Uniform padding on all sides                                         |
 | `paddingX`      | _(optional)_  | Horizontal padding; overrides `padding` for left/right when provided |
@@ -368,7 +368,7 @@ Chat run-level errors (inside `data.error`):
 
 ## Prompting Sleek
 
-Sleek has its own AI that plans screen content, visual style, and layout. Pass the user's request to Sleek as-is - don't add details the user didn't ask for. If the user described specific screens and styling, include those. If they just said "build me a running app," send that and let Sleek decide the rest. Sleek produces richer designs when given room to plan, so avoid inventing screen content or layout details that the user didn't specify.
+Sleek has its own AI that plans screen content, visual style, and layout. Pass the user's request to Sleek as-is — don't add details the user didn't ask for. If the user described specific screens and styling, include those. If they just said "build me a running app," send that and let Sleek decide the rest. Sleek produces richer designs when given room to plan, so avoid inventing screen content or layout details that the user didn't specify.
 
 ---
 
@@ -382,15 +382,15 @@ Each project has its own theme, style, and design system. If the user wants mult
 
 ### 2. Send a chat message
 
-Describe what to build using `POST /api/v1/projects/:id/chat/messages`. You can use the user's words directly - Sleek's AI interprets natural language. You do not need to decompose the request into screens; send the full intent as a single message and let Sleek decide what screens to create.
+Describe what to build using `POST /api/v1/projects/:id/chat/messages`. You can use the user's words directly — Sleek's AI interprets natural language. You do not need to decompose the request into screens; send the full intent as a single message and let Sleek decide what screens to create.
 
-Chat messages are async by default - you get a `runId` and poll for completion with `GET /api/v1/projects/:id/chat/runs/:runId`. You can also use `?wait=true` for a blocking call (up to 300s; falls back to polling if it times out with `202`).
+Chat messages are async by default — you get a `runId` and poll for completion with `GET /api/v1/projects/:id/chat/runs/:runId`. You can also use `?wait=true` for a blocking call (up to 300s; falls back to polling if it times out with `202`).
 
 **Polling**: start at 2s interval, back off to 5s after 10s, give up after 5 minutes.
 
 **Editing a specific screen**: use `target.screenId` to direct changes to the right screen (uses the screen ID from operations, not the component ID).
 
-**One run at a time**: only one active run is allowed per project. If you get `409 CONFLICT`, wait for the current run to complete before sending the next message. Messages to different projects can run in parallel - use async polling (not `?wait=true`) when running multiple projects concurrently.
+**One run at a time**: only one active run is allowed per project. If you get `409 CONFLICT`, wait for the current run to complete before sending the next message. Messages to different projects can run in parallel — use async polling (not `?wait=true`) when running multiple projects concurrently.
 
 **Safe retries**: add an `idempotency-key` header (≤255 chars) to replay-safe re-sends. The server returns the existing run rather than creating a duplicate.
 
@@ -409,20 +409,20 @@ Save screenshots in the project directory (not a temporary folder) so the user c
 
 ## Implementing Designs
 
-When the user wants to implement the designs in code (not just preview them), **always fetch the component HTML code** - do not rely on screenshots alone.
+When the user wants to implement the designs in code (not just preview them), **always fetch the component HTML code** — do not rely on screenshots alone.
 
 Use `GET /api/v1/projects/:id/components/:componentId` to fetch each screen's code. The `componentId` comes from the chat run's `result.operations`.
 
 ### HTML prototypes
 
-The component `code` is a complete HTML document - save it directly to a `.html` file. No build step needed.
+The component `code` is a complete HTML document — save it directly to a `.html` file. No build step needed.
 
 ### Native frameworks (React Native, SwiftUI, etc.)
 
 Use both the HTML code and the screenshots together:
 
-- **HTML code** is the implementation reference - it contains the exact structure, layout, styling, colors, spacing, content, image URLs, and icon names.
-- **Screenshots** are the visual target - use them to verify your implementation matches the intended look.
+- **HTML code** is the implementation reference — it contains the exact structure, layout, styling, colors, spacing, content, image URLs, and icon names.
+- **Screenshots** are the visual target — use them to verify your implementation matches the intended look.
 
 The HTML tells you *how* to build it; the screenshot tells you *what* it should look like.
 
@@ -430,32 +430,32 @@ The HTML tells you *how* to build it; the screenshot tells you *what* it should 
 
 Sleek uses [Iconify](https://iconify.design) icons in the format `prefix:name` (e.g., `solar:heart-bold`, `material-symbols:search-rounded`, `lucide:settings`). The most common sets are **Solar**, **Hugeicons**, **Material Symbols** and **MDI**.
 
-**Use the exact icons from the HTML code** - do not substitute with a different icon set. Matching icons is important for design fidelity.
+**Use the exact icons from the HTML code** — do not substitute with a different icon set. Matching icons is important for design fidelity.
 
 When implementing icons:
 
-1. **Check if the project already has an icon system** that supports the same sets Sleek uses (Solar, Hugeicons, Material Symbols, MDI). If so, use it. Note: `@expo/vector-icons` does **not** support these sets - do not use it as a substitute.
+1. **Check if the project already has an icon system** that supports the same sets Sleek uses (Solar, Hugeicons, Material Symbols, MDI). If so, use it. Note: `@expo/vector-icons` does **not** support these sets — do not use it as a substitute.
 2. **Otherwise, fetch the SVGs from the Iconify API and embed them in the code:**
    ```
    GET https://api.iconify.design/{prefix}/{name}.svg
    ```
    Example: `https://api.iconify.design/solar/heart-bold.svg`
 
-   Collect all icon names from the HTML, fetch their SVGs, and save them as static assets or string constants in the codebase. For **React Native / Expo**, render them with `react-native-svg`'s `SvgXml` component - this works in Expo Go with no additional native dependencies.
+   Collect all icon names from the HTML, fetch their SVGs, and save them as static assets or string constants in the codebase. For **React Native / Expo**, render them with `react-native-svg`'s `SvgXml` component — this works in Expo Go with no additional native dependencies.
 
 #### Fonts
 
-The HTML includes Google Fonts via `<link>` tags in the `<head>`. Use the same fonts and weights when implementing in a native framework - extract the font family names and weights from the `<link>` tags.
+The HTML includes Google Fonts via `<link>` tags in the `<head>`. Use the same fonts and weights when implementing in a native framework — extract the font family names and weights from the `<link>` tags.
 
 #### Navigation
 
-The designs may include navigation elements like tab bars and headers. Update the project's navigation styling and structure to match the designs - don't just implement the screen content while leaving the default navigation untouched.
+The designs may include navigation elements like tab bars and headers. Update the project's navigation styling and structure to match the designs — don't just implement the screen content while leaving the default navigation untouched.
 
 ---
 
 ## Pagination
 
-All list endpoints accept `limit` (1-100, default 50) and `offset` (≥0). The response always includes `pagination.total` so you can page through all results.
+All list endpoints accept `limit` (1–100, default 50) and `offset` (≥0). The response always includes `pagination.total` so you can page through all results.
 
 ```http
 GET /api/v1/projects?limit=10&offset=20
@@ -467,7 +467,7 @@ GET /api/v1/projects?limit=10&offset=20
 
 ### Saving component HTML to files
 
-Component code can be large. When saving it to `.html` files, avoid writing the content through your text output - this is slow and wastes tokens. Instead, use shell commands to fetch the API response and write it directly to disk (e.g., pipe the response body into a file). This applies to both single and multiple components.
+Component code can be large. When saving it to `.html` files, avoid writing the content through your text output — this is slow and wastes tokens. Instead, use shell commands to fetch the API response and write it directly to disk (e.g., pipe the response body into a file). This applies to both single and multiple components.
 
 ---
 

@@ -34,7 +34,7 @@ USE FOR: analyze agent traces, search agent conversations, find failing traces, 
 | "What KQL do I need?" | [KQL Templates](references/kql-templates.md) |
 | "Auto-detect agent issues" / "Get automated insights" / "What's wrong with my agent?" | [Tracing Insights API](references/tracing-insights-api.md) |
 
-## Before Starting - Resolve App Insights Connection
+## Before Starting — Resolve App Insights Connection
 
 1. Resolve the target agent root, selected metadata file, and environment from `.foundry/agent-metadata*.yaml`.
 2. Check `environments.<env>.observability.applicationInsightsConnectionString` or `environments.<env>.observability.applicationInsightsResourceId` in the selected metadata file.

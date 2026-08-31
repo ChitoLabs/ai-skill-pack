@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -47,45 +50,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `assets/logo.png` - preserved source companion file.
-- `references/.cursor-plugin/plugin.json` - preserved source companion file.
-- `references/AGENTS.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/metadata.json` - preserved source companion file.
-- `references/rules/_contributing.md` - preserved source companion file.
-- `references/rules/_sections.md` - preserved source companion file.
-- `references/rules/_template.md` - preserved source companion file.
-- `references/rules/cluster-hash-tags.md` - preserved source companion file.
-- `references/rules/cluster-read-replicas.md` - preserved source companion file.
-- `references/rules/conn-blocking.md` - preserved source companion file.
-- `references/rules/conn-client-cache.md` - preserved source companion file.
-- `references/rules/conn-pipelining.md` - preserved source companion file.
-- `references/rules/conn-pooling.md` - preserved source companion file.
-- `references/rules/conn-timeouts.md` - preserved source companion file.
-- `references/rules/data-choose-structure.md` - preserved source companion file.
-- `references/rules/data-hash-field-expiry.md` - preserved source companion file.
-- `references/rules/data-incr.md` - preserved source companion file.
-- `references/rules/data-key-naming.md` - preserved source companion file.
-- `references/rules/data-transactions.md` - preserved source companion file.
-- `references/rules/json-partial-updates.md` - preserved source companion file.
-- `references/rules/json-vs-hash.md` - preserved source companion file.
-- `references/rules/observe-commands.md` - preserved source companion file.
-- `references/rules/observe-metrics.md` - preserved source companion file.
-- `references/rules/ram-limits.md` - preserved source companion file.
-- `references/rules/ram-ttl.md` - preserved source companion file.
-- `references/rules/rqe-dialect.md` - preserved source companion file.
-- `references/rules/rqe-field-types.md` - preserved source companion file.
-- `references/rules/rqe-index-creation.md` - preserved source companion file.
-- `references/rules/rqe-index-management.md` - preserved source companion file.
-- `references/rules/rqe-query-optimization.md` - preserved source companion file.
-- `references/rules/rqe-skip-initial-scan.md` - preserved source companion file.
-- `references/rules/security-acls.md` - preserved source companion file.
-- `references/rules/security-auth.md` - preserved source companion file.
-- `references/rules/security-network.md` - preserved source companion file.
-- `references/rules/semantic-cache-best-practices.md` - preserved source companion file.
-- `references/rules/semantic-cache-langcache-usage.md` - preserved source companion file.
-- `references/rules/stream-choosing-pattern.md` - preserved source companion file.
-- `references/rules/vector-algorithm-choice.md` - preserved source companion file.
-- `references/rules/vector-hybrid-search.md` - preserved source companion file.
-- `references/rules/vector-index-creation.md` - preserved source companion file.
-- `references/rules/vector-rag-pattern.md` - preserved source companion file.
+- `assets/` - 1 preserved source companion files.
+- `references/` - 41 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

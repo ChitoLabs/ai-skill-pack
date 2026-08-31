@@ -11,11 +11,11 @@ Determine when to recommend a Virtual Machine Scale Set (VMSS) over a single VM,
 
 A VMSS creates and manages a group of load-balanced, identically configured VM instances. Key capabilities:
 
-- **Autoscale** - automatically add/remove instances based on metrics or schedules
-- **High availability** - spread instances across fault domains and Availability Zones
-- **Load balancing** - integrate with Azure Load Balancer (L4) or Application Gateway (L7)
-- **Large scale** - up to 1,000 instances per scale set (marketplace images)
-- **No extra cost** - you pay only for the underlying VM instances, storage, and networking
+- **Autoscale** — automatically add/remove instances based on metrics or schedules
+- **High availability** — spread instances across fault domains and Availability Zones
+- **Load balancing** — integrate with Azure Load Balancer (L4) or Application Gateway (L7)
+- **Large scale** — up to 1,000 instances per scale set (marketplace images)
+- **No extra cost** — you pay only for the underlying VM instances, storage, and networking
 
 ## When to Recommend VMSS vs Single VM
 
@@ -52,7 +52,7 @@ VMSS supports two orchestration modes. **Flexible** is recommended for all new w
 | Pattern            | Trigger                                  | Example                                                      |
 | ------------------ | ---------------------------------------- | ------------------------------------------------------------ |
 | **Metric-based**   | CPU, memory, queue length, custom metric | Scale out when avg CPU > 70% for 5 min                       |
-| **Schedule-based** | Time of day, day of week                 | Scale to 10 instances Mon-Fri 8 AM; scale down to 2 at night |
+| **Schedule-based** | Time of day, day of week                 | Scale to 10 instances Mon–Fri 8 AM; scale down to 2 at night |
 | **Combined**       | Metric + schedule together               | Baseline schedule with metric burst capacity                 |
 | **Predictive**     | ML-forecasted demand (preview)           | Pre-scale before expected traffic spike                      |
 
@@ -73,7 +73,7 @@ VMSS supports two orchestration modes. **Flexible** is recommended for all new w
 
 ## Cost Estimation Tips
 
-- VMSS itself is **free** - cost is the sum of per-instance VM pricing
+- VMSS itself is **free** — cost is the sum of per-instance VM pricing
 - Estimate at **min** and **max** instance counts for autoscale budgets
 - Use **Spot instances** in VMSS for up to 90% savings on interruptible workloads
 - Combine with **Reservations** or **Savings Plans** on the baseline instance count

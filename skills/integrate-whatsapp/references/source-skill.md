@@ -109,8 +109,8 @@ node scripts/test.js --webhook-id <id>
 ```
 
 Always verify signatures. See:
-- `references/webhooks-overview.md`
-- `references/webhooks-reference.md`
+- `webhooks-overview.md`
+- `webhooks-reference.md`
 
 ## Send and read messages
 
@@ -168,7 +168,7 @@ await client.messages.sendText({
 ### Send a template message
 
 1. Discover IDs: `node scripts/list-platform-phone-numbers.mjs`
-2. Draft template payload from `assets/template-utility-order-status-update.json`
+2. Draft template payload from `../assets/template-utility-order-status-update.json`
 3. Create: `node scripts/create-template.mjs --business-account-id <WABA_ID> --file <payload.json>`
 4. Check status: `node scripts/template-status.mjs --business-account-id <WABA_ID> --name <name>`
 5. Send: `node scripts/send-template.mjs --phone-number-id <ID> --file <send-payload.json>`
@@ -236,7 +236,7 @@ Send-time:
 
 ## WhatsApp Flows
 
-Use Flows to build native WhatsApp forms. Read `references/whatsapp-flows-spec.md` before editing Flow JSON.
+Use Flows to build native WhatsApp forms. Read `whatsapp-flows-spec.md` before editing Flow JSON.
 
 ### Create and publish a flow
 
@@ -257,12 +257,12 @@ Use Flows to build native WhatsApp forms. Read `references/whatsapp-flows-spec.m
 Static flows (no data endpoint):
 - Use `version: "7.3"`
 - `routing_model` and `data_api_version` are optional
-- See `assets/sample-flow.json`
+- See `../assets/sample-flow.json`
 
 Dynamic flows (with data endpoint):
 - Use `version: "7.3"` with `data_api_version: "3.0"`
 - `routing_model` is required (defines valid screen transitions)
-- See `assets/dynamic-flow.json`
+- See `../assets/dynamic-flow.json`
 
 ### Data endpoint rules
 
@@ -308,7 +308,7 @@ async function handler(request, env) {
 
 | Script | Purpose | Required ID |
 |--------|---------|-------------|
-| `list-platform-phone-numbers.mjs` | Discover business_account_id + phone_number_id | - |
+| `list-platform-phone-numbers.mjs` | Discover business_account_id + phone_number_id | — |
 | `list-connected-numbers.mjs` | List WABA phone numbers | business_account_id |
 | `list-templates.mjs` | List templates (with filters) | business_account_id |
 | `template-status.mjs` | Check single template status | business_account_id |

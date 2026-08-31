@@ -1,10 +1,10 @@
-# Agent Tools - Simple Tools
+# Agent Tools — Simple Tools
 
 Add tools to agents to extend capabilities. This file covers tools that work without external connections. For tools requiring connections/RBAC setup, see:
-- [Web Search tool](tool-web-search.md) - real-time public web search with citations (default for web search)
-- [Bing Grounding tool](tool-bing-grounding.md) - web search via dedicated Bing resource (only when explicitly requested)
-- [Azure AI Search tool](tool-azure-ai-search.md) - private data grounding with vector search
-- [MCP tool](tool-mcp.md) - remote Model Context Protocol servers
+- [Web Search tool](tool-web-search.md) — real-time public web search with citations (default for web search)
+- [Bing Grounding tool](tool-bing-grounding.md) — web search via dedicated Bing resource (only when explicitly requested)
+- [Azure AI Search tool](tool-azure-ai-search.md) — private data grounding with vector search
+- [MCP tool](tool-mcp.md) — remote Model Context Protocol servers
 
 ## Code Interpreter
 
@@ -16,7 +16,7 @@ For code samples, see: [Code Interpreter tool documentation](https://learn.micro
 
 ## Function Calling
 
-Define custom functions the agent can invoke. Your app executes the function and returns results. Runs expire 10 minutes after creation - return tool outputs promptly.
+Define custom functions the agent can invoke. Your app executes the function and returns results. Runs expire 10 minutes after creation — return tool outputs promptly.
 
 > **Security:** Treat tool arguments as untrusted input. Don't pass secrets in tool output. Use `strict=True` for schema validation.
 

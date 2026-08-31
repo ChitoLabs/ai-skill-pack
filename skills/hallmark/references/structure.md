@@ -158,3 +158,4 @@ If the user shrugs and says "you pick", read the project's CSS for a `/* Hallmar
 If the user answers a vague tone word ("modern", "clean", "professional"), that is not a feeling. Re-ask with the domain trio.
 
 The fallback row at the bottom of the table is the *last* resort  -  only if no domain words appear and the user genuinely cannot pick. In practice, almost every brief contains a domain word; using the fallback usually means you didn't read carefully enough.
+

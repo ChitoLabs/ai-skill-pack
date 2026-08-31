@@ -783,7 +783,7 @@ Output:
 
 ### The `collection_checkboxes` Helper
 
-To generate a set of check boxes - for example, to support a `has_and_belongs_to_many` association - we can use [`collection_checkboxes`](https://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_checkboxes):
+To generate a set of check boxes — for example, to support a `has_and_belongs_to_many` association — we can use [`collection_checkboxes`](https://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_checkboxes):
 
 ```erb
 <%= form.collection_checkboxes :interest_ids, Interest.order(:name), :id, :name %>

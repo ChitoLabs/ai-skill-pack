@@ -42,7 +42,7 @@ This skill assumes the agent cannot use a browser UI. Prefer WP-CLI, logs, and H
    - WP-CLI profiling if available
 
 Read:
-- `references/measurement.md`
+- `measurement.md`
 
 ### 1) Generate a backend-only performance report (deterministic)
 
@@ -66,7 +66,7 @@ If you have WP-CLI access, prefer:
 It catches common production foot-guns (autoload bloat, SAVEQUERIES/WP_DEBUG, plugin counts, updates).
 
 Read:
-- `references/wp-cli-doctor.md`
+- `wp-cli-doctor.md`
 
 ### 3) Deep profiling (no browser required)
 
@@ -77,7 +77,7 @@ Preferred order:
 3. `wp profile eval` for targeted code paths.
 
 Read:
-- `references/wp-cli-profile.md`
+- `wp-cli-profile.md`
 
 ### 4) Query Monitor (backend-only usage)
 
@@ -87,22 +87,22 @@ Query Monitor is normally UI-driven, but it can be used headlessly via REST API 
 - Request REST responses and inspect headers (`x-qm-*`) and/or the `qm` property when using `?_envelope`.
 
 Read:
-- `references/query-monitor-headless.md`
+- `query-monitor-headless.md`
 
 ### 5) Fix by category (choose the dominant bottleneck)
 
 Use the profile output to pick *one* primary bottleneck category:
 
 - **DB queries** → reduce query count, fix N+1 patterns, improve indexes, avoid expensive meta queries.
-  - `references/database.md`
+  - `database.md`
 - **Autoloaded options** → identify the biggest autoloaded options and stop autoloading large blobs.
-  - `references/autoload-options.md`
+  - `autoload-options.md`
 - **Object cache misses** → introduce caching or fix cache key/group usage; add persistent object cache where appropriate.
-  - `references/object-cache.md`
+  - `object-cache.md`
 - **Remote HTTP calls** → add timeouts, caching, batching; avoid calling remote APIs on every request.
-  - `references/http-api.md`
+  - `http-api.md`
 - **Cron** → reduce due-now spikes, de-duplicate events, move heavy tasks out of request paths.
-  - `references/cron.md`
+  - `cron.md`
 
 ### 6) Verify (repeat the same measurement)
 

@@ -3,7 +3,7 @@ name: vercel-react-best-practices
 description: "Trigger: vercel-react-best-practices, React and Next.js performance optimization guidelines from Vercel Engineering. Preserve source workflow with portable agent instructions."
 license: MIT
 metadata:
-  author: vercel
+  author: vercel-labs
   version: 1.0.0
   skills_sh_url: "https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices"
   github_url: "https://github.com/vercel-labs/agent-skills/tree/HEAD/skills/react-best-practices"
@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -47,78 +50,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/AGENTS.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/metadata.json` - preserved source companion file.
-- `references/rules/_sections.md` - preserved source companion file.
-- `references/rules/_template.md` - preserved source companion file.
-- `references/rules/advanced-effect-event-deps.md` - preserved source companion file.
-- `references/rules/advanced-event-handler-refs.md` - preserved source companion file.
-- `references/rules/advanced-init-once.md` - preserved source companion file.
-- `references/rules/advanced-use-latest.md` - preserved source companion file.
-- `references/rules/async-api-routes.md` - preserved source companion file.
-- `references/rules/async-cheap-condition-before-await.md` - preserved source companion file.
-- `references/rules/async-defer-await.md` - preserved source companion file.
-- `references/rules/async-dependencies.md` - preserved source companion file.
-- `references/rules/async-parallel.md` - preserved source companion file.
-- `references/rules/async-suspense-boundaries.md` - preserved source companion file.
-- `references/rules/bundle-analyzable-paths.md` - preserved source companion file.
-- `references/rules/bundle-barrel-imports.md` - preserved source companion file.
-- `references/rules/bundle-conditional.md` - preserved source companion file.
-- `references/rules/bundle-defer-third-party.md` - preserved source companion file.
-- `references/rules/bundle-dynamic-imports.md` - preserved source companion file.
-- `references/rules/bundle-preload.md` - preserved source companion file.
-- `references/rules/client-event-listeners.md` - preserved source companion file.
-- `references/rules/client-localstorage-schema.md` - preserved source companion file.
-- `references/rules/client-passive-event-listeners.md` - preserved source companion file.
-- `references/rules/client-swr-dedup.md` - preserved source companion file.
-- `references/rules/js-batch-dom-css.md` - preserved source companion file.
-- `references/rules/js-cache-function-results.md` - preserved source companion file.
-- `references/rules/js-cache-property-access.md` - preserved source companion file.
-- `references/rules/js-cache-storage.md` - preserved source companion file.
-- `references/rules/js-combine-iterations.md` - preserved source companion file.
-- `references/rules/js-early-exit.md` - preserved source companion file.
-- `references/rules/js-flatmap-filter.md` - preserved source companion file.
-- `references/rules/js-hoist-regexp.md` - preserved source companion file.
-- `references/rules/js-index-maps.md` - preserved source companion file.
-- `references/rules/js-length-check-first.md` - preserved source companion file.
-- `references/rules/js-min-max-loop.md` - preserved source companion file.
-- `references/rules/js-request-idle-callback.md` - preserved source companion file.
-- `references/rules/js-set-map-lookups.md` - preserved source companion file.
-- `references/rules/js-tosorted-immutable.md` - preserved source companion file.
-- `references/rules/rendering-activity.md` - preserved source companion file.
-- `references/rules/rendering-animate-svg-wrapper.md` - preserved source companion file.
-- `references/rules/rendering-conditional-render.md` - preserved source companion file.
-- `references/rules/rendering-content-visibility.md` - preserved source companion file.
-- `references/rules/rendering-hoist-jsx.md` - preserved source companion file.
-- `references/rules/rendering-hydration-no-flicker.md` - preserved source companion file.
-- `references/rules/rendering-hydration-suppress-warning.md` - preserved source companion file.
-- `references/rules/rendering-resource-hints.md` - preserved source companion file.
-- `references/rules/rendering-script-defer-async.md` - preserved source companion file.
-- `references/rules/rendering-svg-precision.md` - preserved source companion file.
-- `references/rules/rendering-usetransition-loading.md` - preserved source companion file.
-- `references/rules/rerender-defer-reads.md` - preserved source companion file.
-- `references/rules/rerender-dependencies.md` - preserved source companion file.
-- `references/rules/rerender-derived-state-no-effect.md` - preserved source companion file.
-- `references/rules/rerender-derived-state.md` - preserved source companion file.
-- `references/rules/rerender-functional-setstate.md` - preserved source companion file.
-- `references/rules/rerender-lazy-state-init.md` - preserved source companion file.
-- `references/rules/rerender-memo-with-default-value.md` - preserved source companion file.
-- `references/rules/rerender-memo.md` - preserved source companion file.
-- `references/rules/rerender-move-effect-to-event.md` - preserved source companion file.
-- `references/rules/rerender-no-inline-components.md` - preserved source companion file.
-- `references/rules/rerender-simple-expression-in-memo.md` - preserved source companion file.
-- `references/rules/rerender-split-combined-hooks.md` - preserved source companion file.
-- `references/rules/rerender-transitions.md` - preserved source companion file.
-- `references/rules/rerender-use-deferred-value.md` - preserved source companion file.
-- `references/rules/rerender-use-ref-transient-values.md` - preserved source companion file.
-- `references/rules/server-after-nonblocking.md` - preserved source companion file.
-- `references/rules/server-auth-actions.md` - preserved source companion file.
-- `references/rules/server-cache-lru.md` - preserved source companion file.
-- `references/rules/server-cache-react.md` - preserved source companion file.
-- `references/rules/server-dedup-props.md` - preserved source companion file.
-- `references/rules/server-hoist-static-io.md` - preserved source companion file.
-- `references/rules/server-no-shared-module-state.md` - preserved source companion file.
-- `references/rules/server-parallel-fetching.md` - preserved source companion file.
-- `references/rules/server-parallel-nested-fetching.md` - preserved source companion file.
-- `references/rules/server-serialization.md` - preserved source companion file.
+- `references/` - 75 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

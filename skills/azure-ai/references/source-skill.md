@@ -55,13 +55,13 @@ When Azure MCP is enabled:
 
 For programmatic access to these services, see the condensed SDK guides:
 
-- **AI Search**: [Python](references/sdk/azure-search-documents-py.md) | [TypeScript](references/sdk/azure-search-documents-ts.md) | [.NET](references/sdk/azure-search-documents-dotnet.md)
-- **OpenAI**: [.NET](references/sdk/azure-ai-openai-dotnet.md)
-- **Vision**: [Python](references/sdk/azure-ai-vision-imageanalysis-py.md) | [Java](references/sdk/azure-ai-vision-imageanalysis-java.md)
-- **Transcription**: [Python](references/sdk/azure-ai-transcription-py.md)
-- **Translation**: [Python](references/sdk/azure-ai-translation-text-py.md) | [TypeScript](references/sdk/azure-ai-translation-ts.md)
-- **Document Intelligence**: [.NET](references/sdk/azure-ai-document-intelligence-dotnet.md) | [TypeScript](references/sdk/azure-ai-document-intelligence-ts.md)
-- **Content Safety**: [Python](references/sdk/azure-ai-contentsafety-py.md) | [TypeScript](references/sdk/azure-ai-contentsafety-ts.md) | [Java](references/sdk/azure-ai-contentsafety-java.md)
+- **AI Search**: [Python](sdk/azure-search-documents-py.md) | [TypeScript](sdk/azure-search-documents-ts.md) | [.NET](sdk/azure-search-documents-dotnet.md)
+- **OpenAI**: [.NET](sdk/azure-ai-openai-dotnet.md)
+- **Vision**: [Python](sdk/azure-ai-vision-imageanalysis-py.md) | [Java](sdk/azure-ai-vision-imageanalysis-java.md)
+- **Transcription**: [Python](sdk/azure-ai-transcription-py.md)
+- **Translation**: [Python](sdk/azure-ai-translation-text-py.md) | [TypeScript](sdk/azure-ai-translation-ts.md)
+- **Document Intelligence**: [.NET](sdk/azure-ai-document-intelligence-dotnet.md) | [TypeScript](sdk/azure-ai-document-intelligence-ts.md)
+- **Content Safety**: [Python](sdk/azure-ai-contentsafety-py.md) | [TypeScript](sdk/azure-ai-contentsafety-ts.md) | [Java](sdk/azure-ai-contentsafety-java.md)
 
 ## Service Details
 

@@ -15,15 +15,15 @@ The toolbox MCP endpoint is constructed from the **project endpoint** + **toolbo
 - The latest-version endpoint always serves the toolbox's `default_version`.
 - Use the specific-version endpoint to test a version before promoting it.
 - **Required header** on every request: `Foundry-Features: Toolboxes=V1Preview`
-- `?api-version=v1` query parameter is **required** - requests without it return HTTP 400.
+- `?api-version=v1` query parameter is **required** — requests without it return HTTP 400.
 
 ## MCP Protocol
 
-Toolboxes use **Model Context Protocol (MCP)** - JSON-RPC 2.0 over HTTP POST:
+Toolboxes use **Model Context Protocol (MCP)** — JSON-RPC 2.0 over HTTP POST:
 
-- **`initialize`** - Handshake to establish an MCP session. Returns a `mcp-session-id` header to include in subsequent requests.
-- **`tools/list`** - Returns all available tools with names, descriptions, and input schemas.
-- **`tools/call`** - Invokes a tool with arguments and returns structured results.
+- **`initialize`** — Handshake to establish an MCP session. Returns a `mcp-session-id` header to include in subsequent requests.
+- **`tools/list`** — Returns all available tools with names, descriptions, and input schemas.
+- **`tools/call`** — Invokes a tool with arguments and returns structured results.
 
 > `prompts/list` is **not supported** by the toolbox endpoint. Always pass `load_prompts=False` to MCP client constructors.
 
@@ -40,7 +40,7 @@ When a toolbox includes an OAuth-based MCP connection (e.g., GitHub OAuth), the 
 1. Catch MCP error code `-32006` from `tools/call` or during MCP session initialization.
 2. Extract the consent URL from the error message.
 3. Log the URL and surface it to the user (e.g., print to stdout or return in the agent response).
-4. After the user completes the OAuth flow in a browser, retry the call - subsequent calls succeed without re-prompting.
+4. After the user completes the OAuth flow in a browser, retry the call — subsequent calls succeed without re-prompting.
 
 > This is a one-time flow per user per OAuth connection in a project. The agent should not silently swallow this error.
 
@@ -90,7 +90,7 @@ curl -sS -X POST "$TOOLBOX_URL" \
   -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"<tool_name>","arguments":{"query":"test"}}}' | jq .
 ```
 
-> For a Python-based debug client, see the `_McpToolboxClient` class in the [BYO toolbox sample `main.py`](https://github.com/microsoft-foundry/foundry-samples/blob/main/samples/python/hosted-agents/bring-your-own/responses/bring-your-own-toolbox/main.py) - it implements `initialize`, `list_tools`, and `call_tool` using raw `httpx` calls.
+> For a Python-based debug client, see the `_McpToolboxClient` class in the [BYO toolbox sample `main.py`](https://github.com/microsoft-foundry/foundry-samples/blob/main/samples/python/hosted-agents/bring-your-own/responses/bring-your-own-toolbox/main.py) — it implements `initialize`, `list_tools`, and `call_tool` using raw `httpx` calls.
 
 ## Troubleshooting
 

@@ -88,25 +88,25 @@ Follow this workflow when handling Django development requests:
 
 Based on the task type, reference the appropriate bundled documentation:
 
-- **Models/ORM work** -> `references/models-and-orm.md`
+- **Models/ORM work** -> `models-and-orm.md`
   - Model design patterns and field choices
   - Relationship configurations (ForeignKey, ManyToMany)
   - Custom managers and QuerySet methods
   - Migration strategies
 
-- **View/API development** -> `references/views-and-urls.md` + `references/drf-guidelines.md`
+- **View/API development** -> `views-and-urls.md` + `drf-guidelines.md`
   - FBV vs CBV decision criteria
   - DRF serializers, viewsets, and routers
   - URL configuration patterns
   - Middleware and request/response handling
 
-- **Performance issues** -> `references/performance-optimization.md`
+- **Performance issues** -> `performance-optimization.md`
   - Query optimization techniques (select_related, prefetch_related)
   - Caching strategies (Redis, Memcached, database caching)
   - Database indexing and query profiling
   - Connection pooling and async patterns
 
-- **Production deployment** -> `references/production-deployment.md`
+- **Production deployment** -> `production-deployment.md`
   - Critical settings (DEBUG, SECRET_KEY, ALLOWED_HOSTS)
   - HTTPS and SSL/TLS configuration
   - Database and cache configuration
@@ -114,13 +114,13 @@ Based on the task type, reference the appropriate bundled documentation:
   - Error monitoring and logging
   - Deployment process and health checks
 
-- **Security concerns** -> `references/security-checklist.md`
+- **Security concerns** -> `security-checklist.md`
   - CSRF/XSS/SQL injection prevention
   - Authentication and authorization patterns
   - Secure configuration practices
   - Input validation and sanitization
 
-- **Testing tasks** -> `references/testing-strategies.md`
+- **Testing tasks** -> `testing-strategies.md`
   - Test structure and organization
   - Fixtures and factories
   - Mocking external dependencies
@@ -175,21 +175,21 @@ Before presenting the solution:
 
 These reference files provide detailed guidance beyond this SKILL.md overview:
 
-- **`references/models-and-orm.md`** (~11k words)
+- **`models-and-orm.md`** (~11k words)
   - Model field types and best practices
   - Relationship configurations (ForeignKey, OneToOne, ManyToMany)
   - Custom managers and QuerySet methods
   - Migration patterns and common pitfalls
   - Database-level constraints and indexes
 
-- **`references/views-and-urls.md`** (~17k words)
+- **`views-and-urls.md`** (~17k words)
   - Function-based vs class-based view trade-offs
   - CBV mixins and inheritance patterns
   - URL routing and reverse resolution
   - Middleware implementation
   - Request/response lifecycle
 
-- **`references/drf-guidelines.md`** (~18k words)
+- **`drf-guidelines.md`** (~18k words)
   - Serializer patterns (ModelSerializer, nested serializers)
   - ViewSet and router configurations
   - Pagination, filtering, and search
@@ -197,7 +197,7 @@ These reference files provide detailed guidance beyond this SKILL.md overview:
   - API versioning strategies
   - Performance optimization for APIs
 
-- **`references/testing-strategies.md`** (~18k words)
+- **`testing-strategies.md`** (~18k words)
   - Test organization and structure
   - Factory patterns vs fixtures
   - Testing views, models, and serializers
@@ -205,7 +205,7 @@ These reference files provide detailed guidance beyond this SKILL.md overview:
   - Test database optimization
   - CI/CD integration
 
-- **`references/security-checklist.md`** (~12k words)
+- **`security-checklist.md`** (~12k words)
   - CSRF protection implementation
   - XSS prevention techniques
   - SQL injection defense
@@ -213,7 +213,7 @@ These reference files provide detailed guidance beyond this SKILL.md overview:
   - Permission and authorization patterns
   - Secure settings configuration
 
-- **`references/performance-optimization.md`** (~14k words)
+- **`performance-optimization.md`** (~14k words)
   - Query optimization (select_related, prefetch_related, only, defer)
   - Database indexing strategies
   - Caching layers (Redis, Memcached, database cache)
@@ -221,7 +221,7 @@ These reference files provide detailed guidance beyond this SKILL.md overview:
   - Profiling and monitoring tools
   - Async views and background tasks
 
-- **`references/production-deployment.md`** (~20k words)
+- **`production-deployment.md`** (~20k words)
   - Critical settings (DEBUG, SECRET_KEY, ALLOWED_HOSTS)
   - Database configuration and connection pooling
   - HTTPS/SSL configuration and security headers
@@ -232,7 +232,7 @@ These reference files provide detailed guidance beyond this SKILL.md overview:
   - Logging and health checks
   - Zero-downtime deployment strategies
 
-- **`references/examples.md`** - Practical implementation examples
+- **`examples.md`** - Practical implementation examples
   - Model design with custom managers
   - N+1 query optimization
   - DRF API endpoint implementation

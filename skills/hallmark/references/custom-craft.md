@@ -624,3 +624,4 @@ Use these recipes verbatim when they fit, or strip them for technique when the b
 - **Untouched Figma export.** Run SVGOMG. Always.
 - **Generated raster shipped raw.** Post-process. Grain, crop, colour grade. The raw output reads as AI.
 - **Linear easing.** Add ease-out at minimum. The difference between "moving" and "alive".
+

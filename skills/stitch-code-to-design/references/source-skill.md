@@ -41,10 +41,10 @@ Read [skills/extract-static-html/SKILL.md](source-skill.md) for detailed instruc
 
 Expected output: A single file like `/path/to/extracted/standalone.html`.
 
-#### 2. Verify HTML (Optional - User-Driven)
+#### 2. Verify HTML (Optional — User-Driven)
 
 After extraction, inform the user of the output file path so they can manually
-verify in a browser if desired. **Do not block on verification** - proceed
+verify in a browser if desired. **Do not block on verification** — proceed
 directly to Step 3.
 
 If the user reports issues after reviewing, fix them before continuing.

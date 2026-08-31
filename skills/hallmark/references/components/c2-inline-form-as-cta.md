@@ -14,3 +14,4 @@ The CTA *is* the form  -  a single email input with a "Submit ->" beside it. No 
 .cta-form { display: grid; grid-template-columns: 1fr auto; border-bottom: 1px solid var(--color-ink); }
 .cta-form input { background: none; border: 0; padding: 0.7rem 0; min-height: 44px; }
 ```
+

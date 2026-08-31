@@ -46,7 +46,7 @@ Decide which bucket the question belongs to before searching:
 - Monitoring, logs, and troubleshooting
 - Migration
 
-If you need a quick starting point, load `references/topic-map.md` and jump to the closest section.
+If you need a quick starting point, load `topic-map.md` and jump to the closest section.
 
 ### 2. Search official GitHub docs first
 
@@ -101,4 +101,4 @@ Keep citations close to the claim they support.
 
 ## Bundled Reference
 
-Read `references/topic-map.md` only as a compact index of likely doc entry points. It is intentionally incomplete and should never replace the live GitHub docs as the final authority.
+Read `topic-map.md` only as a compact index of likely doc entry points. It is intentionally incomplete and should never replace the live GitHub docs as the final authority.

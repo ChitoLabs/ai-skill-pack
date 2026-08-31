@@ -10,3 +10,4 @@ A bordered, transparent button with a typographic verb ("Save changes").
 ```css
 .cta-outline { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.7rem 1.2rem; border: 1px solid var(--color-ink); min-height: 44px; }
 ```
+

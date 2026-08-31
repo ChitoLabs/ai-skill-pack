@@ -1,6 +1,6 @@
 # Azure VM Recommender
 
-Recommend Azure VM sizes, VM Scale Sets (VMSS), and configurations by analyzing workload type, performance requirements, scaling needs, and budget. No Azure subscription required - all data comes from public Microsoft documentation and the unauthenticated Retail Prices API.
+Recommend Azure VM sizes, VM Scale Sets (VMSS), and configurations by analyzing workload type, performance requirements, scaling needs, and budget. No Azure subscription required — all data comes from public Microsoft documentation and the unauthenticated Retail Prices API.
 
 ## When to Use This Skill
 
@@ -103,15 +103,15 @@ This step applies to both single VMs and VMSS since scale sets use the same VM S
 
 ### Step 4: Look Up Pricing
 
-Query the Azure Retail Prices API - [Retail Prices API Guide](../../retail-prices-api.md)
+Query the Azure Retail Prices API — [Retail Prices API Guide](../../retail-prices-api.md)
 
-> **Tip:** VMSS has no extra charge - pricing is per-VM instance. Use the same VM pricing from the API and multiply by the expected instance count to estimate VMSS cost. For autoscaling workloads, estimate cost at both the minimum and maximum instance count.
+> **Tip:** VMSS has no extra charge — pricing is per-VM instance. Use the same VM pricing from the API and multiply by the expected instance count to estimate VMSS cost. For autoscaling workloads, estimate cost at both the minimum and maximum instance count.
 
 ### Step 5: Validate Quota Availability
 
-> **GATE - Do not present recommendations until quota is validated.**
+> **GATE — Do not present recommendations until quota is validated.**
 
-If the user has an Azure subscription and region, follow the [VM Quota Validation Guide](../../vm-quotas.md) to check vCPU capacity for each candidate VM family. Skip this step if no subscription - add a note that quota should be checked before deployment.
+If the user has an Azure subscription and region, follow the [VM Quota Validation Guide](../../vm-quotas.md) to check vCPU capacity for each candidate VM family. Skip this step if no subscription — add a note that quota should be checked before deployment.
 
 | Outcome | Action |
 |---|---|
@@ -125,14 +125,14 @@ Include a "Quota Status" column (✅/⚠️/❌) in the recommendation table.
 
 ### Step 6: Present Recommendations
 
-Provide **2-3 options** with trade-offs:
+Provide **2–3 options** with trade-offs:
 
 | Column         | Purpose                                         |
 | -------------- | ----------------------------------------------- |
 | Hosting Model  | VM or VMSS (with orchestration mode if VMSS)    |
 | VM Size        | ARM SKU name (e.g., `Standard_D4s_v5`)          |
 | vCPUs / RAM    | Core specs                                      |
-| Instance Count | 1 for VM; min-max range for VMSS with autoscale |
+| Instance Count | 1 for VM; min–max range for VMSS with autoscale |
 | Estimated $/hr | Per-instance pay-as-you-go from API             |
 | Why            | Fit for the workload                            |
 | Trade-off      | What the user gives up                          |
@@ -154,15 +154,15 @@ For VMSS recommendations, also mention:
 
 | Scenario                        | Action                                                                         |
 | ------------------------------- | ------------------------------------------------------------------------------ |
-| API returns empty results       | Broaden filters - check `armRegionName`, `serviceName`, `armSkuName` spelling  |
+| API returns empty results       | Broaden filters — check `armRegionName`, `serviceName`, `armSkuName` spelling  |
 | User unsure of workload type    | Ask clarifying questions; default to General Purpose D-series                  |
 | Region not specified            | Use `eastus` as default; note prices vary by region                            |
 | Unclear if VM or VMSS needed    | Ask about scaling and instance count; default to single VM if unsure           |
-| User asks VMSS pricing directly | Use same VM pricing API - VMSS has no extra charge; multiply by instance count |
+| User asks VMSS pricing directly | Use same VM pricing API — VMSS has no extra charge; multiply by instance count |
 
 ## References
 
-- [VM Family Guide](../../vm-families.md) - Family-to-workload mapping and selection
-- [Retail Prices API Guide](../../retail-prices-api.md) - Query patterns, filters, and examples
-- [VMSS Guide](../../vmss-guide.md) - When to use VMSS, orchestration modes, and autoscale patterns
-- [VM Quota Validation Guide](../../vm-quotas.md) - vCPU quota checks, CLI commands, and capacity planning
+- [VM Family Guide](../../vm-families.md) — Family-to-workload mapping and selection
+- [Retail Prices API Guide](../../retail-prices-api.md) — Query patterns, filters, and examples
+- [VMSS Guide](../../vmss-guide.md) — When to use VMSS, orchestration modes, and autoscale patterns
+- [VM Quota Validation Guide](../../vm-quotas.md) — vCPU quota checks, CLI commands, and capacity planning

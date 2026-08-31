@@ -19,3 +19,4 @@ A nav formatted as a CLI prompt: `> studio --catalog --voice --get▮`. The "lin
 ```
 
 *Anti-pattern:* using `>` prompt vocabulary on a non-developer site (a wedding photographer's portfolio with a `> view --gallery` nav reads as set decoration). N8 belongs to genuine terminal / CLI brands only.
+

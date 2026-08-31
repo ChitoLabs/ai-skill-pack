@@ -14,6 +14,10 @@ Use when the user invokes Hallmark, asks for a greenfield page, UI audit, redesi
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Preserve routes, component ownership, copy intent, brand, and information architecture unless the user approves a file-level replacement plan.
 - Inspect design signals before edits: `DESIGN.md`, fonts, palette, motion libraries, spacing, framework, and representative components.
 - Never invent metrics, testimonials, logos, or factual claims. Use placeholders or ask for missing proof.
@@ -26,6 +30,7 @@ Use when the user invokes Hallmark, asks for a greenfield page, UI audit, redesi
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Audit request | Load `references/workflows/audit.md`, `references/anti-patterns.md`, and `references/slop-test.md` only; report findings without editing. |
 | Study request | Load `references/study.md` only; load `references/design-md.md` later only if the user approves design-system emission. |
 | Redesign request | Load `references/workflows/redesign.md`, then use `references/workflows/build.md` inside the approved redesign boundary. |
@@ -65,3 +70,4 @@ Return the operation, files changed or audited, evidence type, validation status
 - `references/study.md` - study and design DNA workflow.
 - `references/slop-test.md` - audit checks and final build quality gates with scoped recipe exemptions.
 - `references/contract.md` - handoff and scope rules.
+

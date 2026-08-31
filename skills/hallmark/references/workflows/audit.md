@@ -27,3 +27,4 @@ Audit *also* checks structural fingerprint: if the page uses the AI template (ce
 - **No stamp at all on a system-managed project** -> flag as `major: missing system reference`. Every page on a `design.md` project must stamp its allegiance to the system.
 
 Inversely, on a project *without* `design.md`, the standard diversification rule applies  -  flag pages that share macrostructure / theme with a previous Hallmark output as `minor: variety drift`.
+

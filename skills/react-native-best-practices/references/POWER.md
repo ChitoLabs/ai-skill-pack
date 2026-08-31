@@ -30,40 +30,40 @@ Load specific reference files from `references/` based on the task:
 
 ## JavaScript/React Performance (`js-*`)
 
-- **Debugging slow/janky UI or animations** → `references/js-measure-fps.md`
-- **Investigating re-render issues** → `references/js-profile-react.md` → `references/js-react-compiler.md`
-- **Optimizing list scrolling** → `references/js-lists-flatlist-flashlist.md`
-- **Reducing re-renders with state management** → `references/js-atomic-state.md`
-- **Using Concurrent React features** → `references/js-concurrent-react.md`
-- **Enabling automatic memoization** → `references/js-react-compiler.md`
-- **Optimizing animations** → `references/js-animations-reanimated.md`
-- **Fixing TextInput lag** → `references/js-uncontrolled-components.md`
-- **Hunting JavaScript memory leaks** → `references/js-memory-leaks.md`
+- **Debugging slow/janky UI or animations** → `js-measure-fps.md`
+- **Investigating re-render issues** → `js-profile-react.md` → `js-react-compiler.md`
+- **Optimizing list scrolling** → `js-lists-flatlist-flashlist.md`
+- **Reducing re-renders with state management** → `js-atomic-state.md`
+- **Using Concurrent React features** → `js-concurrent-react.md`
+- **Enabling automatic memoization** → `js-react-compiler.md`
+- **Optimizing animations** → `js-animations-reanimated.md`
+- **Fixing TextInput lag** → `js-uncontrolled-components.md`
+- **Hunting JavaScript memory leaks** → `js-memory-leaks.md`
 
 ## Native Performance (`native-*`)
 
-- **Measuring startup time (TTI)** → `references/native-measure-tti.md`
-- **Building native modules** → `references/native-turbo-modules.md`
-- **Understanding native threading** → `references/native-threading-model.md`
-- **Profiling native code** → `references/native-profiling.md`
-- **Setting up native tooling** → `references/native-platform-setup.md`
-- **Debugging view hierarchy** → `references/native-view-flattening.md`
-- **Native memory patterns** → `references/native-memory-patterns.md`
-- **Hunting native memory leaks** → `references/native-memory-leaks.md`
-- **Choosing native SDKs vs polyfills** → `references/native-sdks-over-polyfills.md`
-- **Fixing Android 16KB alignment** → `references/native-android-16kb-alignment.md`
+- **Measuring startup time (TTI)** → `native-measure-tti.md`
+- **Building native modules** → `native-turbo-modules.md`
+- **Understanding native threading** → `native-threading-model.md`
+- **Profiling native code** → `native-profiling.md`
+- **Setting up native tooling** → `native-platform-setup.md`
+- **Debugging view hierarchy** → `native-view-flattening.md`
+- **Native memory patterns** → `native-memory-patterns.md`
+- **Hunting native memory leaks** → `native-memory-leaks.md`
+- **Choosing native SDKs vs polyfills** → `native-sdks-over-polyfills.md`
+- **Fixing Android 16KB alignment** → `native-android-16kb-alignment.md`
 
 ## Bundle & App Size (`bundle-*`)
 
-- **Analyzing bundle size** → `references/bundle-analyze-js.md`
-- **Analyzing app size** → `references/bundle-analyze-app.md`
-- **Fixing barrel imports** → `references/bundle-barrel-exports.md`
-- **Enabling tree shaking** → `references/bundle-tree-shaking.md`
-- **Android code shrinking** → `references/bundle-r8-android.md`
-- **Optimizing Hermes bundle loading** → `references/bundle-hermes-mmap.md`
-- **Managing native assets** → `references/bundle-native-assets.md`
-- **Evaluating library size** → `references/bundle-library-size.md`
-- **Code splitting** → `references/bundle-code-splitting.md`
+- **Analyzing bundle size** → `bundle-analyze-js.md`
+- **Analyzing app size** → `bundle-analyze-app.md`
+- **Fixing barrel imports** → `bundle-barrel-exports.md`
+- **Enabling tree shaking** → `bundle-tree-shaking.md`
+- **Android code shrinking** → `bundle-r8-android.md`
+- **Optimizing Hermes bundle loading** → `bundle-hermes-mmap.md`
+- **Managing native assets** → `bundle-native-assets.md`
+- **Evaluating library size** → `bundle-library-size.md`
+- **Code splitting** → `bundle-code-splitting.md`
 
 ## Problem → Reference Mapping
 
@@ -71,16 +71,16 @@ Use this quick lookup when debugging specific issues:
 
 | Problem | Start With |
 |---------|-----------|
-| App feels slow/janky | `references/js-measure-fps.md` → `references/js-profile-react.md` |
-| Too many re-renders | `references/js-profile-react.md` → `references/js-react-compiler.md` |
-| Slow startup (TTI) | `references/native-measure-tti.md` → `references/bundle-analyze-js.md` |
-| Large app size | `references/bundle-analyze-app.md` → `references/bundle-r8-android.md` |
-| Memory growing | `references/js-memory-leaks.md` or `references/native-memory-leaks.md` |
-| Animation drops frames | `references/js-animations-reanimated.md` |
-| List scroll jank | `references/js-lists-flatlist-flashlist.md` |
-| TextInput lag | `references/js-uncontrolled-components.md` |
-| Native module slow | `references/native-turbo-modules.md` → `references/native-threading-model.md` |
-| Native library alignment issue | `references/native-android-16kb-alignment.md` |
+| App feels slow/janky | `js-measure-fps.md` → `js-profile-react.md` |
+| Too many re-renders | `js-profile-react.md` → `js-react-compiler.md` |
+| Slow startup (TTI) | `native-measure-tti.md` → `bundle-analyze-js.md` |
+| Large app size | `bundle-analyze-app.md` → `bundle-r8-android.md` |
+| Memory growing | `js-memory-leaks.md` or `native-memory-leaks.md` |
+| Animation drops frames | `js-animations-reanimated.md` |
+| List scroll jank | `js-lists-flatlist-flashlist.md` |
+| TextInput lag | `js-uncontrolled-components.md` |
+| Native module slow | `native-turbo-modules.md` → `native-threading-model.md` |
+| Native library alignment issue | `native-android-16kb-alignment.md` |
 
 ## Quick Reference Commands
 

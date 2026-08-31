@@ -24,8 +24,8 @@ page: <filename-without-extension>
 The body contains the full Stitch prompt, which must include:
 
 1. **One-line description** with vibe/atmosphere keywords
-2. **Design System block** (required) - copied from `DESIGN.md` Section 6
-3. **Page Structure** - numbered list of sections/components
+2. **Design System block** (required) — copied from `DESIGN.md` Section 6
+3. **Page Structure** — numbered list of sections/components
 
 ## Example
 

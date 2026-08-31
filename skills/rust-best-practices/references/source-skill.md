@@ -6,7 +6,7 @@ metadata:
   author: apollographql
   version: 1.1.0
   skills_sh_url: "https://www.skills.sh/apollographql/skills/rust-best-practices"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/rust-best-practices"
+  github_url: "https://github.com/apollographql/skills/tree/HEAD/skills/rust-best-practices"
 compatibility: Rust 1.70+, Cargo
 allowed-tools: "Bash(cargo:*) Bash(rustc:*) Bash(rustfmt:*) Bash(clippy:*) Read Write Edit Glob Grep"
 ---

@@ -1,4 +1,4 @@
-# RSpec Best Practices - Spec Templates
+# RSpec Best Practices — Spec Templates
 
 Purpose: compact, copy-paste ready spec templates and common matchers for this repo.
 

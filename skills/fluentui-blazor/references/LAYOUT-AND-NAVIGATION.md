@@ -108,12 +108,12 @@ Collapsible navigation menu with keyboard support.
 ```
 
 Key parameters:
-- `Width` - width in pixels (40px when collapsed)
-- `Collapsible` - enables expand/collapse toggle
-- `Expanded` / `ExpandedChanged` - bindable collapse state
-- `CollapsedChildNavigation` - shows flyout menus for groups when collapsed
-- `CustomToggle` - for mobile hamburger button patterns
-- `Title` - aria-label for accessibility
+- `Width` — width in pixels (40px when collapsed)
+- `Collapsible` — enables expand/collapse toggle
+- `Expanded` / `ExpandedChanged` — bindable collapse state
+- `CollapsedChildNavigation` — shows flyout menus for groups when collapsed
+- `CustomToggle` — for mobile hamburger button patterns
+- `Title` — aria-label for accessibility
 
 ### FluentNavGroup
 

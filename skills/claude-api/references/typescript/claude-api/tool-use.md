@@ -1,4 +1,4 @@
-# Tool Use - TypeScript
+# Tool Use — TypeScript
 
 For conceptual overview (tool definitions, tool choice, tips), see [shared/tool-use-concepts.md](../../shared/tool-use-concepts.md).
 
@@ -41,7 +41,7 @@ console.log(finalMessage.content);
 
 **Key benefits of the tool runner:**
 
-- No manual loop - the SDK handles calling tools and feeding results back
+- No manual loop — the SDK handles calling tools and feeding results back
 - Type-safe tool inputs via Zod schemas
 - Tool schemas are generated automatically from Zod definitions
 - Iteration stops automatically when Claude has no more tool calls
@@ -119,7 +119,7 @@ while (true) {
     process.stdout.write(delta);
   });
 
-  // finalMessage() resolves with the complete Message - no need to
+  // finalMessage() resolves with the complete Message — no need to
   // manually wire up .on("message") / .on("error") / .on("abort")
   const message = await stream.finalMessage();
 
@@ -151,9 +151,9 @@ while (true) {
 }
 ```
 
-> **Important:** Don't wrap `.on()` events in `new Promise()` to collect the final message - use `stream.finalMessage()` instead. The SDK handles all error/abort/completion states internally.
+> **Important:** Don't wrap `.on()` events in `new Promise()` to collect the final message — use `stream.finalMessage()` instead. The SDK handles all error/abort/completion states internally.
 
-> **Error handling in the loop:** Use the SDK's typed exceptions (e.g., `Anthropic.RateLimitError`, `Anthropic.APIError`) - see [Error Handling](./README.md#error-handling) for examples. Don't check error messages with string matching.
+> **Error handling in the loop:** Use the SDK's typed exceptions (e.g., `Anthropic.RateLimitError`, `Anthropic.APIError`) — see [Error Handling](./README.md#error-handling) for examples. Don't check error messages with string matching.
 
 > **SDK types:** Use `Anthropic.MessageParam`, `Anthropic.Tool`, `Anthropic.ToolUseBlock`, `Anthropic.ToolResultBlockParam`, `Anthropic.Message`, etc. for all API-related data structures. Don't redefine equivalent interfaces.
 
@@ -210,12 +210,12 @@ const response = await client.messages.create({
 
 ## Server-Side Tools
 
-Version-suffixed `type` literals; `name` is fixed per interface. Pass plain object literals - the `ToolUnion` type is satisfied structurally. **The `name`/`type` pair must match the interface**: mixing `str_replace_based_edit_tool` (20250728 name) with `text_editor_20250124` (which expects `str_replace_editor`) is a TS2322.
+Version-suffixed `type` literals; `name` is fixed per interface. Pass plain object literals — the `ToolUnion` type is satisfied structurally. **The `name`/`type` pair must match the interface**: mixing `str_replace_based_edit_tool` (20250728 name) with `text_editor_20250124` (which expects `str_replace_editor`) is a TS2322.
 
-**Don't type-annotate as `Tool[]`** - `Tool` is just the custom-tool variant. Let structural typing infer from the `tools` param, or annotate as `Anthropic.Messages.ToolUnion[]` if you must:
+**Don't type-annotate as `Tool[]`** — `Tool` is just the custom-tool variant. Let structural typing infer from the `tools` param, or annotate as `Anthropic.Messages.ToolUnion[]` if you must:
 
 ```typescript
-// ✓ let inference work - no annotation
+// ✓ let inference work — no annotation
 const response = await client.messages.create({
   model: "claude-opus-4-7",
   max_tokens: 16000,
@@ -228,7 +228,7 @@ const response = await client.messages.create({
   messages: [{ role: "user", content: "..." }],
 });
 
-// ✗ this is a TS2352 - Tool is the CUSTOM tool variant only
+// ✗ this is a TS2352 — Tool is the CUSTOM tool variant only
 // const tools: Anthropic.Tool[] = [{ type: "text_editor_20250728", ... }]
 ```
 
@@ -242,7 +242,7 @@ const response = await client.messages.create({
 | `WebFetchTool20260209` | `web_fetch` | `web_fetch_20260209` |
 | `CodeExecutionTool20260120` | `code_execution` | `code_execution_20260120` |
 
-**Don't mix beta and non-beta types**: if you call `client.beta.messages.create()`, the response `content` is `BetaContentBlock[]` - you cannot pass that to a non-beta `ContentBlockParam[]` without narrowing each element.
+**Don't mix beta and non-beta types**: if you call `client.beta.messages.create()`, the response `content` is `BetaContentBlock[]` — you cannot pass that to a non-beta `ContentBlockParam[]` without narrowing each element.
 
 ---
 
@@ -377,7 +377,7 @@ const response1 = await client.messages.create({
 });
 
 // Reuse container
-// container is nullable - set only when using server-side code execution
+// container is nullable — set only when using server-side code execution
 const containerId = response1.container!.id;
 
 const response2 = await client.messages.create({
@@ -455,7 +455,7 @@ For full implementation examples, use WebFetch:
 
 ## Structured Outputs
 
-### JSON Outputs (Zod - Recommended)
+### JSON Outputs (Zod — Recommended)
 
 ```typescript
 import Anthropic from "@anthropic-ai/sdk";
@@ -487,7 +487,7 @@ const response = await client.messages.parse({
   },
 });
 
-// parsed_output is null if parsing failed - assert or guard
+// parsed_output is null if parsing failed — assert or guard
 console.log(response.parsed_output!.name); // "Jane Doe"
 ```
 

@@ -6,17 +6,17 @@ Typography rendering details that make interfaces feel better.
 
 ### text-wrap: balance
 
-Distributes text evenly across lines, preventing orphaned words on headings and short text blocks. **Only works on blocks of 6 lines or fewer** (Chromium) or 10 lines or fewer (Firefox) - the balancing algorithm is computationally expensive, so browsers limit it to short text.
+Distributes text evenly across lines, preventing orphaned words on headings and short text blocks. **Only works on blocks of 6 lines or fewer** (Chromium) or 10 lines or fewer (Firefox) — the balancing algorithm is computationally expensive, so browsers limit it to short text.
 
 ```css
-/* Good - even line lengths on short text */
+/* Good — even line lengths on short text */
 h1, h2, h3 {
   text-wrap: balance;
 }
 ```
 
 ```css
-/* Bad - default wrapping leaves orphans */
+/* Bad — default wrapping leaves orphans */
 h1 {
   /* no text-wrap rule → "Read our
      blog" instead of balanced lines */
@@ -24,7 +24,7 @@ h1 {
 ```
 
 ```css
-/* Bad - balance on long paragraphs (silently ignored, wastes intent) */
+/* Bad — balance on long paragraphs (silently ignored, wastes intent) */
 .article-body p {
   text-wrap: balance;
 }
@@ -34,12 +34,12 @@ h1 {
 
 ### text-wrap: pretty
 
-Prevents orphaned words (a single word dangling on the last line) by adjusting line breaks throughout the paragraph. Unlike `balance`, it doesn't try to equalize line lengths - it just ensures the last line isn't embarrassingly short. Works on text of any length with no line-count limit.
+Prevents orphaned words (a single word dangling on the last line) by adjusting line breaks throughout the paragraph. Unlike `balance`, it doesn't try to equalize line lengths — it just ensures the last line isn't embarrassingly short. Works on text of any length with no line-count limit.
 
-This should be your **default for short-to-medium text** - paragraphs, descriptions, captions, list items, card text. For very long text (10+ lines), skip both `pretty` and `balance` - the browser's default wrapping is fine and you avoid unnecessary layout cost.
+This should be your **default for short-to-medium text** — paragraphs, descriptions, captions, list items, card text. For very long text (10+ lines), skip both `pretty` and `balance` — the browser's default wrapping is fine and you avoid unnecessary layout cost.
 
 ```css
-/* Good - descriptions, captions, short paragraphs */
+/* Good — descriptions, captions, short paragraphs */
 p, li, figcaption, blockquote {
   text-wrap: pretty;
 }
@@ -59,8 +59,8 @@ p, li, figcaption, blockquote {
 | Scenario | Use |
 | --- | --- |
 | Headings, titles where even distribution matters | `text-wrap: balance` |
-| Short-to-medium text - paragraphs, descriptions, captions, UI text | `text-wrap: pretty` |
-| Long text (10+ lines), code blocks, pre-formatted text | Neither - leave default |
+| Short-to-medium text — paragraphs, descriptions, captions, UI text | `text-wrap: pretty` |
+| Long text (10+ lines), code blocks, pre-formatted text | Neither — leave default |
 
 ## Font Smoothing (macOS)
 
@@ -75,19 +75,19 @@ html {
 ```
 
 ```tsx
-// Tailwind - apply to root layout
+// Tailwind — apply to root layout
 <html className="antialiased">
 ```
 
 ### Good vs. Bad
 
 ```css
-/* Good - applied once at the root */
+/* Good — applied once at the root */
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Bad - applied per-element, inconsistent */
+/* Bad — applied per-element, inconsistent */
 .heading {
   -webkit-font-smoothing: antialiased;
 }
@@ -126,7 +126,7 @@ When numbers update dynamically (counters, prices, timers, table columns), use t
 
 ### Caveat
 
-Some fonts (like Inter) change the visual appearance of numerals with this property - specifically, the digit `1` becomes wider and centered. This is expected behavior and usually desirable for alignment, but verify it looks right in your specific font.
+Some fonts (like Inter) change the visual appearance of numerals with this property — specifically, the digit `1` becomes wider and centered. This is expected behavior and usually desirable for alignment, but verify it looks right in your specific font.
 
 ```css
 /* With Inter font:

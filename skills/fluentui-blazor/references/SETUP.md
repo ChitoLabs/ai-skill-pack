@@ -64,14 +64,14 @@ builder.Services.AddFluentUIComponents();
     </FluentStack>
 </FluentLayout>
 
-@* Required providers - place after FluentLayout *@
+@* Required providers — place after FluentLayout *@
 <FluentToastProvider />
 <FluentDialogProvider />
 <FluentMessageBarProvider />
 <FluentTooltipProvider />
 <FluentKeyCodeProvider />
 
-@* Theme - place at root *@
+@* Theme — place at root *@
 <FluentDesignTheme Mode="DesignThemeModes.System"
                    OfficeColor="OfficeColor.Teams"
                    StorageName="mytheme" />
@@ -108,9 +108,9 @@ Add this to your `_Imports.razor`:
 ## Static Web Assets
 
 No manual `<link>` or `<script>` tags are needed. The library uses:
-- **CSS**: `reboot.css` (normalization) + component-scoped CSS - auto-loaded via static web assets
-- **JS**: `lib.module.js` - auto-loaded via Blazor's JS initializer system
-- Component-specific JS (e.g. DataGrid, Autocomplete) - lazy-loaded on demand
+- **CSS**: `reboot.css` (normalization) + component-scoped CSS — auto-loaded via static web assets
+- **JS**: `lib.module.js` — auto-loaded via Blazor's JS initializer system
+- Component-specific JS (e.g. DataGrid, Autocomplete) — lazy-loaded on demand
 
 All served from `_content/Microsoft.FluentUI.AspNetCore.Components/`.
 

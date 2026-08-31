@@ -1,6 +1,6 @@
-# Steps 8-10 - Re-Evaluate, Compare Versions, Iterate
+# Steps 8–10 — Re-Evaluate, Compare Versions, Iterate
 
-## Step 8 - Re-Evaluate
+## Step 8 — Re-Evaluate
 
 Use **`evaluation_agent_batch_eval_create`** with the **same `evaluationId`** as the baseline run. This places both runs in the same eval group for comparison. Use the same local test dataset (from the selected agent root's `.foundry/datasets/`) and evaluator bundle from the selected environment/evaluation suite. Update `agentVersion` to the new version.
 
@@ -10,7 +10,7 @@ Use **`evaluation_agent_batch_eval_create`** with the **same `evaluationId`** as
 
 Auto-poll for completion in a background terminal (same as [Step 2](evaluate-step.md)).
 
-## Step 9 - Compare Versions
+## Step 9 — Compare Versions
 
 > **Critical:** `displayName` is **required** in the `insightRequest`. Despite the MCP tool schema showing `displayName` as optional (`type: ["string", "null"]`), the API will reject requests without it with a BadRequest error. `state` must be `"NotStarted"`.
 
@@ -45,7 +45,7 @@ Use **`evaluation_comparison_create`** with a nested `insightRequest`:
 
 Then use **`evaluation_comparison_get`** (with the returned `insightId`) to retrieve comparison results. Present a summary showing which version performed better per evaluator, and recommend which version to keep.
 
-## Step 10 - Iterate or Finish
+## Step 10 — Iterate or Finish
 
 If more categories remain in the prioritized action table (from [Step 4](analyze-results.md)), loop back to **Step 5** (dive into next category) → **Step 6** (optimize) → **Step 7** (deploy) → **Step 8** (re-evaluate) → **Step 9** (compare).
 

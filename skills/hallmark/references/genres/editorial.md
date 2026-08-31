@@ -70,3 +70,4 @@ Output's CSS comment header reads:
 ```css
 /* Hallmark * genre: editorial * macrostructure: <name> * theme: <name> * enrichment: <tier> * nav: <N#> * footer: <Ft#> */
 ```
+

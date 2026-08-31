@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,46 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/LICENSE.txt` - preserved source companion file.
-- `references/csharp/claude-api.md` - preserved source companion file.
-- `references/curl/examples.md` - preserved source companion file.
-- `references/curl/managed-agents.md` - preserved source companion file.
-- `references/go/claude-api.md` - preserved source companion file.
-- `references/go/managed-agents/README.md` - preserved source companion file.
-- `references/java/claude-api.md` - preserved source companion file.
-- `references/java/managed-agents/README.md` - preserved source companion file.
-- `references/php/claude-api.md` - preserved source companion file.
-- `references/php/managed-agents/README.md` - preserved source companion file.
-- `references/python/claude-api/README.md` - preserved source companion file.
-- `references/python/claude-api/batches.md` - preserved source companion file.
-- `references/python/claude-api/files-api.md` - preserved source companion file.
-- `references/python/claude-api/streaming.md` - preserved source companion file.
-- `references/python/claude-api/tool-use.md` - preserved source companion file.
-- `references/python/managed-agents/README.md` - preserved source companion file.
-- `references/ruby/claude-api.md` - preserved source companion file.
-- `references/ruby/managed-agents/README.md` - preserved source companion file.
-- `references/shared/agent-design.md` - preserved source companion file.
-- `references/shared/error-codes.md` - preserved source companion file.
-- `references/shared/live-sources.md` - preserved source companion file.
-- `references/shared/managed-agents-api-reference.md` - preserved source companion file.
-- `references/shared/managed-agents-client-patterns.md` - preserved source companion file.
-- `references/shared/managed-agents-core.md` - preserved source companion file.
-- `references/shared/managed-agents-environments.md` - preserved source companion file.
-- `references/shared/managed-agents-events.md` - preserved source companion file.
-- `references/shared/managed-agents-memory.md` - preserved source companion file.
-- `references/shared/managed-agents-multiagent.md` - preserved source companion file.
-- `references/shared/managed-agents-onboarding.md` - preserved source companion file.
-- `references/shared/managed-agents-outcomes.md` - preserved source companion file.
-- `references/shared/managed-agents-overview.md` - preserved source companion file.
-- `references/shared/managed-agents-tools.md` - preserved source companion file.
-- `references/shared/managed-agents-webhooks.md` - preserved source companion file.
-- `references/shared/model-migration.md` - preserved source companion file.
-- `references/shared/models.md` - preserved source companion file.
-- `references/shared/prompt-caching.md` - preserved source companion file.
-- `references/shared/tool-use-concepts.md` - preserved source companion file.
-- `references/typescript/claude-api/README.md` - preserved source companion file.
-- `references/typescript/claude-api/batches.md` - preserved source companion file.
-- `references/typescript/claude-api/files-api.md` - preserved source companion file.
-- `references/typescript/claude-api/streaming.md` - preserved source companion file.
-- `references/typescript/claude-api/tool-use.md` - preserved source companion file.
-- `references/typescript/managed-agents/README.md` - preserved source companion file.
+- `references/` - 43 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

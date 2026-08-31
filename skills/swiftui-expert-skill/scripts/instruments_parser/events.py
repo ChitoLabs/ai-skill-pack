@@ -28,7 +28,7 @@ def list_logs(
 ) -> list[dict[str, Any]]:
     """Return os_log entries, optionally filtered. Case-insensitive contains.
 
-    `limit` counts *post-filter* matches - including the window filter - so
+    `limit` counts *post-filter* matches — including the window filter — so
     the caller gets N matching logs inside the window rather than the first
     N matching logs that might all fall outside it.
     """
@@ -116,7 +116,7 @@ def list_signposts(
     # also shows up as a row in `os-signpost-interval`. To avoid duplicates we
     # prefer the pre-paired schema for intervals and only mine `os-signpost`
     # for point events (and for begin/end pairing as a fallback when the
-    # interval schema is missing - older traces).
+    # interval schema is missing — older traces).
     intervals: list[dict[str, Any]] = []
     events: list[dict[str, Any]] = []
 

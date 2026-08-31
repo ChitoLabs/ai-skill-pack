@@ -3,14 +3,14 @@
   expr: rate(go_gc_duration_seconds_sum[5m]) / rate(go_gc_duration_seconds_count[5m]) > 0.01
   for: 10m
   annotations:
-    summary: "Average GC pause >10ms - reduce allocations or tune GOGC"
+    summary: "Average GC pause >10ms — reduce allocations or tune GOGC"
 
 # Goroutine leak
 - alert: GoroutineLeak
   expr: go_goroutines > 10000
   for: 5m
   annotations:
-    summary: "Goroutine count >10K - check for leaked goroutines"
+    summary: "Goroutine count >10K — check for leaked goroutines"
 
 # Memory approaching container limit
 - alert: MemoryNearLimit

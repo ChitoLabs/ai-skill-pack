@@ -17,13 +17,13 @@ Deploy to Azure using Azure Developer CLI (azd).
 
 | Step | Task | Command |
 |------|------|---------|
-| 1 | **Verify environment** | `azd env get-values` - Confirm AZURE_SUBSCRIPTION_ID and AZURE_LOCATION set |
+| 1 | **Verify environment** | `azd env get-values` — Confirm AZURE_SUBSCRIPTION_ID and AZURE_LOCATION set |
 | 2 | **Provision infrastructure** | `azd provision --no-prompt` |
-| 3 | **RBAC health check** *(Container Apps + ACR only)* | After provisioning, verify `AcrPull` role has propagated before deploying - see [Pre-Deploy Checklist](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check) |
+| 3 | **RBAC health check** *(Container Apps + ACR only)* | After provisioning, verify `AcrPull` role has propagated before deploying — see [Pre-Deploy Checklist](../../pre-deploy-checklist.md#container-apps--acr--pre-deploy-rbac-health-check) |
 | 4 | **Deploy application** | `azd deploy --no-prompt` |
-| 5 | **Post-Deploy** | [Post-Deployment Steps](post-deployment.md) - If using SQL + managed identity |
+| 5 | **Post-Deploy** | [Post-Deployment Steps](post-deployment.md) — If using SQL + managed identity |
 | 6 | **Verify** | See [Verification](verify.md) |
-| 7 | **Report** | Present deployed endpoint URLs to the user - see [Verification](verify.md) Step 3 |
+| 7 | **Report** | Present deployed endpoint URLs to the user — see [Verification](verify.md) Step 3 |
 
 > ⚠️ **Important:** For Container Apps that use a managed identity to pull from ACR, always run `azd provision` and `azd deploy` as **separate steps** (not `azd up`) and complete the RBAC health check between them. This ensures the managed identity `AcrPull` role assignment has propagated before the Container App revision attempts to pull the image.
 
@@ -42,7 +42,7 @@ Deploy to Azure using Azure Developer CLI (azd).
 
 ## Deployment Commands
 
-> ⚠️ `azd up` takes 5-15 min. Run with output **streamed visibly to the user** - do NOT run silently or suppress output. The user must see provisioning progress in real time.
+> ⚠️ `azd up` takes 5-15 min. Run with output **streamed visibly to the user** — do NOT run silently or suppress output. The user must see provisioning progress in real time.
 
 ### Full Deployment
 
@@ -74,8 +74,8 @@ azd deploy api --no-prompt
 
 ## References
 
-- [Pre-deploy Checklist](../../pre-deploy-checklist.md) - **REQUIRED**
-- [Post-Deployment Steps](post-deployment.md) - SQL + managed identity setup
+- [Pre-deploy Checklist](../../pre-deploy-checklist.md) — **REQUIRED**
+- [Post-Deployment Steps](post-deployment.md) — SQL + managed identity setup
 - [Azure Functions Deployment](functions-deploy.md)
 - [Verification](verify.md)
 - [Error Handling](errors.md)

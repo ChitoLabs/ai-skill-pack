@@ -3,10 +3,10 @@ name: enhance-prompt
 description: Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results.
 license: Apache-2.0
 metadata:
-  author: sickn33
+  author: google-labs-code
   version: 0.1
   skills_sh_url: "https://www.skills.sh/google-labs-code/stitch-skills/enhance-prompt"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/enhance-prompt"
+  github_url: "https://github.com/google-labs-code/stitch-skills/tree/HEAD/plugins/stitch-utilities/skills/enhance-prompt"
 allowed-tools:
   - "Read"
   - "Write"
@@ -145,7 +145,7 @@ Structure the enhanced prompt in this order:
 **Default:** Return the enhanced prompt as text for the user to copy.
 
 **Optional file output:** If the user requests, write to a file:
-- `next-prompt.md` - for use with the `stitch-loop` skill
+- `next-prompt.md` — for use with the `stitch-loop` skill
 - Custom filename specified by user
 
 ## Examples
@@ -203,8 +203,8 @@ Add a search bar to the header navigation.
 
 ## Tips for Best Results
 
-1. **Be specific early** - Vague inputs need more enhancement
-2. **Match the user's intent** - Don't over-design if they want simple
-3. **Keep it structured** - Numbered sections help Stitch understand hierarchy
-4. **Include the design system** - Consistency is key for multi-page projects
-5. **One change at a time for edits** - Don't bundle unrelated changes
+1. **Be specific early** — Vague inputs need more enhancement
+2. **Match the user's intent** — Don't over-design if they want simple
+3. **Keep it structured** — Numbered sections help Stitch understand hierarchy
+4. **Include the design system** — Consistency is key for multi-page projects
+5. **One change at a time for edits** — Don't bundle unrelated changes

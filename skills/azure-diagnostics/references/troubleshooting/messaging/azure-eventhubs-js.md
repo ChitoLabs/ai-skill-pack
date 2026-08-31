@@ -1,4 +1,4 @@
-# Azure Event Hubs SDK - JavaScript
+# Azure Event Hubs SDK — JavaScript
 
 Package: `@azure/event-hubs` | [README](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/eventhub/event-hubs/) | [Full Troubleshooting Guide](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/eventhub/event-hubs/TROUBLESHOOTING.md)
 
@@ -35,7 +35,7 @@ localStorage.debug = "azure:*:info";
 - **Socket exhaustion**: Treat clients as singletons. Each new client creates a new AMQP connection/socket. Always call `close()`.
 - **412 precondition failures**: Normal during subscription partition ownership negotiation.
 - **Partition ownership churn**: Expected when scaling instances. Should stabilize within minutes.
-- **High CPU**: Limit to 1.5-3 partitions per CPU core.
+- **High CPU**: Limit to 1.5–3 partitions per CPU core.
 - **Subscription stops receiving**: Often a symptom of an underlying race condition during error recovery. File a GitHub issue with DEBUG logs.
 - **WebSockets**: Pass `webSocketOptions` to client constructor to connect over port 443.
 
@@ -59,6 +59,6 @@ const consumerClient = new EventHubConsumerClient(
 ```
 
 **Common issues:**
-- **Soft delete / blob versioning**: Disable both on the storage account - they cause delays during load balancing.
+- **Soft delete / blob versioning**: Disable both on the storage account — they cause delays during load balancing.
 - **412 precondition failures**: Normal during partition ownership negotiation; not an error.
 - **Checkpoint frequency**: Call `updateCheckpoint()` per batch, not per event, to reduce storage calls.

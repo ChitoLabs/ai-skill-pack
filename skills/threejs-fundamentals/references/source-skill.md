@@ -3,10 +3,10 @@ name: threejs-fundamentals
 description: Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-fundamentals"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-fundamentals"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-fundamentals"
 ---
 
 # Three.js Fundamentals

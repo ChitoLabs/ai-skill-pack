@@ -3,10 +3,10 @@ name: threejs-interaction
 description: Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-interaction"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-interaction"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-interaction"
 ---
 
 # Three.js Interaction

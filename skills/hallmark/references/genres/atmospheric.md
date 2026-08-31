@@ -67,3 +67,4 @@ See [`component-cookbook.md`](../component-cookbook.md) § Navigation and § Foo
 ## Reference register
 
 The aesthetic to match: dark canvas with two warm blooms behind the content, plain-English heroic display, single warm accent on small surfaces. Hand-built, not stock-AI.
+

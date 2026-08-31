@@ -5,7 +5,7 @@
 Wrapping preserves the original error in a chain that callers can inspect with `errors.Is` and `errors.As`. Errors SHOULD be wrapped at each layer to build a readable chain.
 
 ```go
-// ✓ Good - wraps with context, preserves the chain
+// ✓ Good — wraps with context, preserves the chain
 func (s *UserService) GetUser(id string) (*User, error) {
     user, err := s.repo.FindByID(id)
     if err != nil {
@@ -20,16 +20,16 @@ func (s *UserService) GetUser(id string) (*User, error) {
 Use `%w` within your module to preserve the error chain. Use `%v` at public API / system boundaries to prevent callers from depending on internal error types.
 
 ```go
-// Internal layer - wrap to preserve chain
+// Internal layer — wrap to preserve chain
 func (r *repo) fetch(id string) error {
     return fmt.Errorf("querying database: %w", err)
 }
 
-// Public API boundary - break chain to hide internals
+// Public API boundary — break chain to hide internals
 func (s *PublicService) GetItem(id string) error {
     err := s.repo.fetch(id)
     if err != nil {
-        return fmt.Errorf("item unavailable: %v", err) // %v - callers cannot unwrap
+        return fmt.Errorf("item unavailable: %v", err) // %v — callers cannot unwrap
     }
     return nil
 }
@@ -37,31 +37,31 @@ func (s *PublicService) GetItem(id string) error {
 
 ## Inspecting Errors: `errors.Is` and `errors.As`
 
-### `errors.Is` - match against a sentinel value
+### `errors.Is` — match against a sentinel value
 
 ```go
-// ✗ Bad - direct comparison breaks on wrapped errors
+// ✗ Bad — direct comparison breaks on wrapped errors
 if err == sql.ErrNoRows {
 
-// ✓ Good - traverses the entire error chain
+// ✓ Good — traverses the entire error chain
 if errors.Is(err, sql.ErrNoRows) {
     return nil, ErrNotFound
 }
 ```
 
-### `errors.As / errors.AsType` - extract a typed error from the chain
+### `errors.As / errors.AsType` — extract a typed error from the chain
 
 ```go
-// ✗ Bad - type assertion breaks on wrapped errors
+// ✗ Bad — type assertion breaks on wrapped errors
 if ve, ok := err.(*ValidationError); ok {
 
-// ✓ Good - traverses the entire error chain
+// ✓ Good — traverses the entire error chain
 var ve *ValidationError
 if errors.As(err, &ve) {
     log.Printf("validation failed on field %s: %s", ve.Field, ve.Msg)
 }
 
-// ✓ Better (Go 1.26+) - same behavior, simpler syntax
+// ✓ Better (Go 1.26+) — same behavior, simpler syntax
 if ve, ok := errors.AsType[*ValidationError](err); ok {
     log.Printf("validation failed on field %s: %s", ve.Field, ve.Msg)
 }
@@ -69,7 +69,7 @@ if ve, ok := errors.AsType[*ValidationError](err); ok {
 
 ## Combining Errors with `errors.Join`
 
-`errors.Join` (Go 1.20+) combines multiple independent errors into one. The combined error works with `errors.Is` and `errors.As` - each inner error is inspectable.
+`errors.Join` (Go 1.20+) combines multiple independent errors into one. The combined error works with `errors.Is` and `errors.As` — each inner error is inspectable.
 
 ### Use case: validating multiple fields
 

@@ -417,7 +417,7 @@ Evaluation files use XML format with `<qa_pair>` elements:
 
 ## Running Evaluations
 
-The evaluation script (`scripts/evaluation.py`) supports three transport types:
+The evaluation script (`../../scripts/evaluation.py`) supports three transport types:
 
 **Important:**
 - **stdio transport**: The evaluation script automatically launches and manages the MCP server process for you. Do not run the server manually.

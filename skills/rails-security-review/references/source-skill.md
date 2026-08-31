@@ -19,7 +19,7 @@ Use this skill when the task is to review or harden Rails code from a security p
 ```
 BEFORE returning your security review, verify:
   1. The FIRST finding section in your output is "Authentication & Authorization"
-  2. SQL injection, XSS, or other findings come AFTER auth/authz - even if
+  2. SQL injection, XSS, or other findings come AFTER auth/authz — even if
      they feel more severe or were discovered first
   3. If no auth/authz issue exists, the report still opens with an explicit
      "Authentication & Authorization: no issues found" line BEFORE any other
@@ -32,7 +32,7 @@ BEFORE returning your security review, verify:
 |------|------------|
 | Auth | Permissions on every sensitive action |
 | Params | No `permit!`, whitelist only safe attributes |
-| Queries | Parameterized - no string interpolation in SQL |
+| Queries | Parameterized — no string interpolation in SQL |
 | Redirects | Constrained to relative paths or allowlist |
 | Output | No `html_safe`/`raw` on user content |
 | Secrets | Encrypted credentials, never in code or logs |
@@ -78,7 +78,7 @@ BEFORE returning your security review, verify:
 **High-severity (unscoped redirect):**
 
 ```ruby
-# Bad: user-controlled redirect - open redirect / phishing risk
+# Bad: user-controlled redirect — open redirect / phishing risk
 redirect_to params[:return_to]
 
 # Good: relative path only
@@ -94,7 +94,7 @@ redirect_to(SAFE_PATHS.include?(params[:return_to]) ? params[:return_to] : root_
 # Bad: privilege escalation risk
 params.require(:user).permit!
 
-# Good: explicit whitelist - never include role, admin, or privilege fields
+# Good: explicit whitelist — never include role, admin, or privilege fields
 params.require(:user).permit(:name, :email)
 ```
 

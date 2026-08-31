@@ -9,3 +9,4 @@ Numbered stages (`1.0 -> 2.0 -> 3.0`) flow vertically. Each stage has a heading,
   <li><span class="stage">2.0</span><h3>Plan.</h3><p>...</p></li>
 </ol>
 ```
+

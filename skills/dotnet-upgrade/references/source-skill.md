@@ -3,10 +3,10 @@ name: dotnet-upgrade
 description: Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/dotnet-upgrade"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/dotnet-upgrade"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/dotnet-upgrade"
 ---
 
 # Project Discovery & Assessment

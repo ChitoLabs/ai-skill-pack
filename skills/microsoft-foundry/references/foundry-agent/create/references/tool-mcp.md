@@ -10,7 +10,7 @@ Connect agents to remote MCP servers to extend capabilities with external tools 
 
 ## Authenticated Server Connections
 
-For authenticated MCP servers, create an `api_key` project connection to store credentials. Unauthenticated servers (public endpoints) don't need a connection - omit `project_connection_id`.
+For authenticated MCP servers, create an `api_key` project connection to store credentials. Unauthenticated servers (public endpoints) don't need a connection — omit `project_connection_id`.
 
 See [Project Connections](../../../project/connections.md) for connection management via Foundry MCP tools.
 
@@ -46,8 +46,8 @@ Agent Service only accepts **remote** MCP endpoints. To use a local server, depl
 ## Known Limitations
 
 - **100-second timeout** for non-streaming MCP tool calls
-- **Identity passthrough not supported in Teams** - agents published to Teams use project managed identity
-- **Network-secured Foundry** can't use private MCP servers in same vNET - only public endpoints
+- **Identity passthrough not supported in Teams** — agents published to Teams use project managed identity
+- **Network-secured Foundry** can't use private MCP servers in same vNET — only public endpoints
 
 ## Troubleshooting
 

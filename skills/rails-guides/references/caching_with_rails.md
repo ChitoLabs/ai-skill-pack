@@ -22,12 +22,12 @@ What is Caching?
 
 Caching means storing content generated during the request-response cycle and
 reusing it when responding to similar requests. It's like keeping your favorite
-coffee mug right on your desk instead of in the kitchen cabinet - it’s ready
+coffee mug right on your desk instead of in the kitchen cabinet — it’s ready
 when you need it, saving you time and effort.
 
 Caching is one of the most effective ways to boost an application's performance.
-It allows websites running on modest infrastructure - a single server with a
-single database - to sustain thousands of concurrent users.
+It allows websites running on modest infrastructure — a single server with a
+single database — to sustain thousands of concurrent users.
 
 Rails provides a set of caching features out of the box which allows you to not
 only cache data, but also to tackle challenges like cache expiration, cache
@@ -498,7 +498,7 @@ configuration](https://github.com/rails/solid_cache#cache-configuration) to
 
 ### Sharding the Cache
 
-If you need more scalability, Solid Cache supports sharding - splitting the
+If you need more scalability, Solid Cache supports sharding — splitting the
 cache across multiple databases. This spreads the load, making your cache even
 more powerful. To enable sharding, add multiple cache databases to your
 database.yml:

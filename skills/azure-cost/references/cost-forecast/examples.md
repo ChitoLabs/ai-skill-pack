@@ -26,7 +26,7 @@ Common forecast patterns with request bodies. Use the [SKILL.md workflow](../../
 }
 ```
 
-> 💡 **Tip:** Set `from` to the first of the month - the response contains `Actual` rows up to today and `Forecast` rows for remaining days.
+> 💡 **Tip:** Set `from` to the first of the month — the response contains `Actual` rows up to today and `Forecast` rows for remaining days.
 
 ---
 
@@ -122,4 +122,4 @@ Common forecast patterns with request bodies. Use the [SKILL.md workflow](../../
 | Resource Group | `/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.CostManagement/forecast` |
 | Billing Account | `/providers/Microsoft.Billing/billingAccounts/<id>/providers/Microsoft.CostManagement/forecast` |
 
-> 💡 **Tip:** These are path-only patterns - not complete URLs. Append `?api-version=2023-11-01` when constructing the full request URL.
+> 💡 **Tip:** These are path-only patterns — not complete URLs. Append `?api-version=2023-11-01` when constructing the full request URL.

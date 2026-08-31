@@ -1,4 +1,4 @@
-# Customize Guides - Selection Guides & Advanced Topics
+# Customize Guides — Selection Guides & Advanced Topics
 
 > Reference for: `models/deploy-model/customize/SKILL.md`
 

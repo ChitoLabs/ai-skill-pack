@@ -427,10 +427,10 @@ async function withTimeout(promise, ms) {
 Functional programming in JavaScript centers on pure functions, immutability, and composable transformations.
 
 Key topics covered in [references/advanced-patterns.md](advanced-patterns.md):
-- **Array methods** - `map`, `filter`, `reduce`, `find`, `findIndex`, `some`, `every`, `flatMap`, `Array.from`
-- **Higher-order functions** - custom `forEach`/`map`/`filter`, currying, partial application, memoization
-- **Composition and piping** - `compose`/`pipe` utilities with practical data transformation examples
-- **Pure functions and immutability** - immutable array/object operations, deep cloning with `structuredClone`
+- **Array methods** — `map`, `filter`, `reduce`, `find`, `findIndex`, `some`, `every`, `flatMap`, `Array.from`
+- **Higher-order functions** — custom `forEach`/`map`/`filter`, currying, partial application, memoization
+- **Composition and piping** — `compose`/`pipe` utilities with practical data transformation examples
+- **Pure functions and immutability** — immutable array/object operations, deep cloning with `structuredClone`
 
 ## Modern Class Features
 
@@ -462,11 +462,11 @@ Generators (`function*`) and async generators (`async function*`) enable lazy se
 ## Modern Operators
 
 ```javascript
-// Optional chaining - safe property access
+// Optional chaining — safe property access
 const city = user?.address?.city;
 const result = obj.method?.();
 
-// Nullish coalescing - default only for null/undefined (not 0 or "")
+// Nullish coalescing — default only for null/undefined (not 0 or "")
 const value = null ?? "default"; // 'default'
 const zero = 0 ?? "default";    // 0
 

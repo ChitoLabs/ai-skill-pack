@@ -3,16 +3,29 @@ name: csharp-nunit
 description: "Trigger: write or review NUnit unit tests or data-driven tests. Apply current NUnit practices to a defined test task."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: github
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://skills.sh/github/awesome-copilot/csharp-nunit"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/csharp-nunit"
+  github_url: "https://github.com/github/awesome-copilot/tree/HEAD/skills/csharp-nunit"
 ---
 
 # NUnit Best Practices
 
 Your goal is to help me write effective unit tests with NUnit, covering both standard and data-driven testing approaches.
+
+## Activation Contract
+
+Use this skill when the user request matches `csharp-nunit` or one of its declared triggers: write or review NUnit unit tests or data-driven tests. Apply current NUnit practices to a defined test task.
+
+Read the sections below before acting. This file is the portable runtime contract; the sections that follow carry the source-specific workflow.
+
+## Hard Rules
+
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 
 ## Project Setup
 

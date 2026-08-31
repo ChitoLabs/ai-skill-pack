@@ -6,7 +6,7 @@ metadata:
   author: sickn33
   version: 0.1
   skills_sh_url: "https://www.skills.sh/sickn33/antigravity-awesome-skills/docker-expert"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/docker-expert"
+  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/plugins/agentic-awesome-skills-claude/skills/docker-expert"
 category: devops
 risk: unknown
 source: community

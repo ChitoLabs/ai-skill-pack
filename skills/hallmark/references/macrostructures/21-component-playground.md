@@ -21,3 +21,4 @@ Reference: shadcn/ui, Tailwind UI, Once UI, MUI demos, Framer Motion examples.
 > *"From `npm install` to your first chart in eight lines."*  -  names the step count, makes a concrete promise
 
 ---
+

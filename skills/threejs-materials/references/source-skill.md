@@ -3,10 +3,10 @@ name: threejs-materials
 description: Three.js materials - PBR, basic, phong, shader materials, material properties. Use when styling meshes, working with textures, creating custom shaders, or optimizing material performance.
 license: Apache-2.0
 metadata:
-  author: sickn33
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-materials"
-  github_url: "https://github.com/sickn33/antigravity-awesome-skills/tree/HEAD/skills/threejs-materials"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-materials"
 ---
 
 # Three.js Materials

@@ -209,7 +209,7 @@ new Table({
 
 **Table width calculation:**
 
-Always use `WidthType.DXA` - `WidthType.PERCENTAGE` breaks in Google Docs.
+Always use `WidthType.DXA` — `WidthType.PERCENTAGE` breaks in Google Docs.
 
 ```javascript
 // Table width = sum of columnWidths = content width
@@ -219,7 +219,7 @@ columnWidths: [7000, 2360]  // Must sum to table width
 ```
 
 **Width rules:**
-- **Always use `WidthType.DXA`** - never `WidthType.PERCENTAGE` (incompatible with Google Docs)
+- **Always use `WidthType.DXA`** — never `WidthType.PERCENTAGE` (incompatible with Google Docs)
 - Table width must equal the sum of `columnWidths`
 - Cell `width` must match corresponding `columnWidth`
 - Cell `margins` are internal padding - they reduce content area, not add to cell width
@@ -591,5 +591,5 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 
 - **pandoc**: Text extraction
 - **docx**: `npm install -g docx` (new documents)
-- **LibreOffice**: PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
+- **LibreOffice**: PDF conversion (auto-configured for sandboxed environments via `../scripts/office/soffice.py`)
 - **Poppler**: `pdftoppm` for images

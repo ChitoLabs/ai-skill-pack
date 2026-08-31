@@ -123,7 +123,7 @@ For each issue found in findings:
 {ACTUAL_CODE_FROM_USER_FILES}
 \```
 
-#### Required Change (After - Dual-Boot with `NextRails.next?`)
+#### Required Change (After — Dual-Boot with `NextRails.next?`)
 \```ruby
 # Dual-boot compatible: uses NextRails.next? (NOT respond_to?)
 if NextRails.next?
@@ -142,7 +142,7 @@ end
 ```
 
 > **Note:** All code examples use `NextRails.next?` for dual-boot compatibility.
-> Never use `respond_to?` for version branching - it is hard to understand, hard to
+> Never use `respond_to?` for version branching — it is hard to understand, hard to
 > maintain, and obscures the intent of the code. See SKILL.md for details.
 
 #### Section 3: Step-by-Step Migration Plan
@@ -319,4 +319,4 @@ Add 50% if custom code warnings are present.
 **Related Files:**
 - Template: `templates/upgrade-report-template.md`
 - Version guides: `version-guides/upgrade-{FROM}-to-{TO}.md`
-- Testing checklist: `references/testing-checklist.md`
+- Testing checklist: `../testing-checklist.md`

@@ -1,6 +1,6 @@
 # Azure Authentication Best Practices
 
-> Source: [Microsoft - Passwordless connections for Azure services](https://learn.microsoft.com/azure/developer/intro/passwordless-overview) and [Azure Identity client libraries](https://learn.microsoft.com/dotnet/azure/sdk/authentication/).
+> Source: [Microsoft — Passwordless connections for Azure services](https://learn.microsoft.com/azure/developer/intro/passwordless-overview) and [Azure Identity client libraries](https://learn.microsoft.com/dotnet/azure/sdk/authentication/).
 
 **Table of Contents:** [Golden Rule](#golden-rule) · [Authentication by Environment](#authentication-by-environment) · [Why Not DefaultAzureCredential in Production?](#why-not-defaultazurecredential-in-production) · [Production Patterns](#production-patterns) · [Local Development Setup](#local-development-setup) · [Environment-Aware Pattern](#environment-aware-pattern) · [Security Checklist](#security-checklist) · [Further Reading](#further-reading)
 
@@ -19,10 +19,10 @@ Use **managed identities** and **Azure RBAC** in production. Reserve `DefaultAzu
 
 ## Why Not `DefaultAzureCredential` in Production?
 
-1. **Unpredictable fallback chain** - walks through multiple credential types, adding latency and making failures harder to diagnose.
-2. **Broad surface area** - checks environment variables, CLI tokens, and other sources that should not exist in production.
-3. **Non-deterministic** - which credential actually authenticates depends on the environment, making behavior inconsistent across deployments.
-4. **Performance** - each failed credential attempt adds network round-trips before falling back to the next.
+1. **Unpredictable fallback chain** — walks through multiple credential types, adding latency and making failures harder to diagnose.
+2. **Broad surface area** — checks environment variables, CLI tokens, and other sources that should not exist in production.
+3. **Non-deterministic** — which credential actually authenticates depends on the environment, making behavior inconsistent across deployments.
+4. **Performance** — each failed credential attempt adds network round-trips before falling back to the next.
 
 ## Production Patterns
 
@@ -32,8 +32,8 @@ Use **managed identities** and **Azure RBAC** in production. Reserve `DefaultAzu
 using Azure.Identity;
 
 var credential = Environment.GetEnvironmentVariable("AZURE_FUNCTIONS_ENVIRONMENT") == "Development"
-    ? new DefaultAzureCredential()                          // local dev - uses CLI/VS credentials
-    : new ManagedIdentityCredential();                      // production - deterministic, no fallback chain
+    ? new DefaultAzureCredential()                          // local dev — uses CLI/VS credentials
+    : new ManagedIdentityCredential();                      // production — deterministic, no fallback chain
 // For user-assigned identity: new ManagedIdentityCredential("<client-id>")
 ```
 
@@ -43,8 +43,8 @@ var credential = Environment.GetEnvironmentVariable("AZURE_FUNCTIONS_ENVIRONMENT
 import { DefaultAzureCredential, ManagedIdentityCredential } from "@azure/identity";
 
 const credential = process.env.NODE_ENV === "development"
-  ? new DefaultAzureCredential()                          // local dev - uses CLI/VS credentials
-  : new ManagedIdentityCredential();                      // production - deterministic, no fallback chain
+  ? new DefaultAzureCredential()                          // local dev — uses CLI/VS credentials
+  : new ManagedIdentityCredential();                      // production — deterministic, no fallback chain
 // For user-assigned identity: new ManagedIdentityCredential("<client-id>")
 ```
 
@@ -55,9 +55,9 @@ import os
 from azure.identity import DefaultAzureCredential, ManagedIdentityCredential
 
 credential = (
-    DefaultAzureCredential()                              # local dev - uses CLI/VS credentials
+    DefaultAzureCredential()                              # local dev — uses CLI/VS credentials
     if os.getenv("AZURE_FUNCTIONS_ENVIRONMENT") == "Development"
-    else ManagedIdentityCredential()                      # production - deterministic, no fallback chain
+    else ManagedIdentityCredential()                      # production — deterministic, no fallback chain
 )
 # For user-assigned identity: ManagedIdentityCredential(client_id="<client-id>")
 ```
@@ -69,8 +69,8 @@ import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.identity.ManagedIdentityCredentialBuilder;
 
 var credential = "Development".equals(System.getenv("AZURE_FUNCTIONS_ENVIRONMENT"))
-    ? new DefaultAzureCredentialBuilder().build()          // local dev - uses CLI/VS credentials
-    : new ManagedIdentityCredentialBuilder().build();      // production - deterministic, no fallback chain
+    ? new DefaultAzureCredentialBuilder().build()          // local dev — uses CLI/VS credentials
+    : new ManagedIdentityCredentialBuilder().build();      // production — deterministic, no fallback chain
 // For user-assigned identity: new ManagedIdentityCredentialBuilder().clientId("<client-id>").build()
 ```
 
@@ -78,15 +78,15 @@ var credential = "Development".equals(System.getenv("AZURE_FUNCTIONS_ENVIRONMENT
 
 `DefaultAzureCredential` is ideal for local dev because it automatically picks up credentials from developer tools:
 
-1. **Azure CLI** - `az login`
-2. **Azure Developer CLI** - `azd auth login`
-3. **Azure PowerShell** - `Connect-AzAccount`
-4. **Visual Studio / VS Code** - sign in via Azure extension
+1. **Azure CLI** — `az login`
+2. **Azure Developer CLI** — `azd auth login`
+3. **Azure PowerShell** — `Connect-AzAccount`
+4. **Visual Studio / VS Code** — sign in via Azure extension
 
 ```typescript
 import { DefaultAzureCredential } from "@azure/identity";
 
-// Local development only - uses CLI/PowerShell/VS Code credentials
+// Local development only — uses CLI/PowerShell/VS Code credentials
 const credential = new DefaultAzureCredential();
 ```
 

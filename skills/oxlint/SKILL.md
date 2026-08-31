@@ -1,23 +1,25 @@
 ---
 name: oxlint
-description: "Trigger: oxlint, Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Preserve source workflow with portable agent instructions."
+description: "Trigger: oxlint, Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: delexw
   adapter: LCubero
   version: 0.1
   skills_sh_url: "https://www.skills.sh/delexw/claude-code-misc/oxlint"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/oxlint"
+  github_url: "https://github.com/delexw/claude-code-misc/tree/HEAD/skills/oxlint"
 ---
 
 ## Activation Contract
 
-Use this skill when the user request matches `oxlint` or the preserved source description: Run and configure oxlint - the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
+Use this skill when the user request matches `oxlint` or the preserved source description: Run and configure oxlint — the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json devDependencies or an `.oxlintrc.json` / `oxlint.config.ts` config file). This includes when you need to lint code after making changes, fix linting errors, configure oxlint rules/plugins, set up or modify `.oxlintrc.json`, or migrate from ESLint.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |

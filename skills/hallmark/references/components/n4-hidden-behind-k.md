@@ -7,3 +7,4 @@ No visible nav. The user opens a command palette via `⌘K` to get anywhere. Des
 <button class="kbd-hint">⌘ K</button>
 <dialog class="palette">...</dialog>
 ```
+

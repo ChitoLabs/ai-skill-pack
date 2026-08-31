@@ -1,6 +1,6 @@
 ---
 name: clerk-expo-patterns
-description: 'Expo / React Native patterns with Clerk - SecureStore token cache, OAuth
+description: 'Expo / React Native patterns with Clerk — SecureStore token cache, OAuth
   deep linking, useAuth in native, Expo Router protected routes, push notifications
   with user context. Triggers on: expo clerk, clerk react native, SecureStore token
   cache, expo router auth, OAuth deep link clerk, mobile auth clerk.'
@@ -29,10 +29,10 @@ SDK: `@clerk/expo` v3+. Requires Expo 53+, React Native 0.73+.
 
 Clerk stores the session token in memory by default. In native apps:
 
-- **SecureStore** - encrypt token in device keychain (recommended for production)
-- **`tokenCache`** - prop on `<ClerkProvider>` that provides custom storage
-- **`useAuth`** - same API as web, works in any component
-- **OAuth** - requires `useSSO` + deep link scheme configured in `app.json`
+- **SecureStore** — encrypt token in device keychain (recommended for production)
+- **`tokenCache`** — prop on `<ClerkProvider>` that provides custom storage
+- **`useAuth`** — same API as web, works in any component
+- **OAuth** — requires `useSSO` + deep link scheme configured in `app.json`
 
 ## Minimal Setup
 
@@ -54,7 +54,7 @@ export default function RootLayout() {
 }
 ```
 
-> **CRITICAL**: Use `EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY` - not `NEXT_PUBLIC_`. Env vars inside `node_modules` are not inlined in production builds. Always pass `publishableKey` explicitly.
+> **CRITICAL**: Use `EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY` — not `NEXT_PUBLIC_`. Env vars inside `node_modules` are not inlined in production builds. Always pass `publishableKey` explicitly.
 
 ## Built-in Token Cache
 

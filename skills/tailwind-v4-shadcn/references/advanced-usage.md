@@ -37,7 +37,7 @@ Add new semantic colors beyond the default palette:
 
 ## Migration from Tailwind v3
 
-For complete v3 → v4 migration steps, see `references/migration-guide.md`.
+For complete v3 → v4 migration steps, see `migration-guide.md`.
 
 **Quick Summary**:
 - Remove `tailwind.config.js` (v4 uses CSS configuration)

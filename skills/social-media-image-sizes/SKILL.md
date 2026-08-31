@@ -11,12 +11,14 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `social-media-image-sizes` or the preserved source description: Check and resize images for social media platforms. Run scripts/check.js to validate any image against specs for Instagram, Facebook, X (Twitter), LinkedIn, TikTok, YouTube, Pinterest, Snapchat, and Threads - get a ranked match list with exact resize commands. Run scripts/resize.js to export a correctly-sized copy. Use when a user asks to validate image dimensions, resize an image for a platform, check if an image fits a spec, or prep assets for social media posting or ads.
+Use this skill when the user request matches `social-media-image-sizes` or the preserved source description: Check and resize images for social media platforms. Run scripts/check.js to validate any image against specs for Instagram, Facebook, X (Twitter), LinkedIn, TikTok, YouTube, Pinterest, Snapchat, and Threads — get a ranked match list with exact resize commands. Run scripts/resize.js to export a correctly-sized copy. Use when a user asks to validate image dimensions, resize an image for a platform, check if an image fits a spec, or prep assets for social media posting or ads.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -27,6 +29,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |

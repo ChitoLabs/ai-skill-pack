@@ -1,4 +1,4 @@
-# Microsoft Agent Framework - Best Practices for Hosted Agents
+# Microsoft Agent Framework — Best Practices for Hosted Agents
 
 Best practices when building hosted agents with Microsoft Agent Framework for deployment to Foundry Agent Service.
 
@@ -45,8 +45,8 @@ For **local development**, use `DefaultAzureCredential` from `azure.identity`. I
 Always use `load_dotenv(override=False)` so environment variables set by Foundry at runtime take precedence over local `.env` values.
 
 Required `.env` variables:
-- `FOUNDRY_PROJECT_ENDPOINT` - project endpoint URL
-- `FOUNDRY_MODEL_DEPLOYMENT_NAME` - model deployment name
+- `FOUNDRY_PROJECT_ENDPOINT` — project endpoint URL
+- `FOUNDRY_MODEL_DEPLOYMENT_NAME` — model deployment name
 
 ### Authentication
 
@@ -58,15 +58,15 @@ Agent names must: start/end with alphanumeric characters, may contain hyphens in
 
 ### Python: Virtual Environment
 
-Always use a virtual environment. Never use bare `python` or `pip` - use venv-activated versions or full paths (e.g., `.venv/bin/pip`).
+Always use a virtual environment. Never use bare `python` or `pip` — use venv-activated versions or full paths (e.g., `.venv/bin/pip`).
 
 ## Workflow Patterns
 
 Agent Framework supports single-agent and multi-agent workflow patterns using graph-based orchestration:
 
-- **Single Agent** - Basic agent with tools, RAG, or MCP integration
-- **Multi-Agent Workflow** - Graph-based orchestration connecting multiple agents and deterministic functions
-- **Advanced Patterns** - Reflection, switch-case, fan-out/fan-in, loop, human-in-the-loop
+- **Single Agent** — Basic agent with tools, RAG, or MCP integration
+- **Multi-Agent Workflow** — Graph-based orchestration connecting multiple agents and deterministic functions
+- **Advanced Patterns** — Reflection, switch-case, fan-out/fan-in, loop, human-in-the-loop
 
 For workflow samples and advanced patterns, search the [Agent Framework GitHub repo](https://github.com/microsoft/agent-framework).
 
@@ -78,7 +78,7 @@ Use [AI Toolkit for VS Code](https://marketplace.visualstudio.com/items?itemName
 2. Install `agent-dev-cli` (pre-release) for the `agentdev` command
 3. Key debug tasks: `agentdev run <entrypoint>.py --port 8087` starts the agent HTTP server, `debugpy --listen 127.0.0.1:5679` attaches the debugger, and the `ai-mlstudio.openTestTool` VS Code command opens the Agent Inspector UI
 
-For VS Code `launch.json` and `tasks.json` configuration templates, see [AI Toolkit Agent Inspector - Configure debugging manually](https://github.com/microsoft/vscode-ai-toolkit/blob/main/doc/agent-test-tool.md#configure-debugging-manually).
+For VS Code `launch.json` and `tasks.json` configuration templates, see [AI Toolkit Agent Inspector — Configure debugging manually](https://github.com/microsoft/vscode-ai-toolkit/blob/main/doc/agent-test-tool.md#configure-debugging-manually).
 
 ## Common Errors
 

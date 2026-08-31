@@ -31,11 +31,11 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Query Patterns | `references/query-patterns.md` | JOINs, CTEs, subqueries, recursive queries |
-| Window Functions | `references/window-functions.md` | ROW_NUMBER, RANK, LAG/LEAD, analytics |
-| Optimization | `references/optimization.md` | EXPLAIN plans, indexes, statistics, tuning |
-| Database Design | `references/database-design.md` | Normalization, keys, constraints, schemas |
-| Dialect Differences | `references/dialect-differences.md` | PostgreSQL vs MySQL vs SQL Server specifics |
+| Query Patterns | `query-patterns.md` | JOINs, CTEs, subqueries, recursive queries |
+| Window Functions | `window-functions.md` | ROW_NUMBER, RANK, LAG/LEAD, analytics |
+| Optimization | `optimization.md` | EXPLAIN plans, indexes, statistics, tuning |
+| Database Design | `database-design.md` | Normalization, keys, constraints, schemas |
+| Dialect Differences | `dialect-differences.md` | PostgreSQL vs MySQL vs SQL Server specifics |
 
 ## Quick-Reference Examples
 
@@ -58,7 +58,7 @@ WHERE rn = 1;                           -- latest completed order per customer
 
 ### Window Function Pattern
 ```sql
--- Running total and rank within partition - no self-join required
+-- Running total and rank within partition — no self-join required
 SELECT
     department_id,
     employee_id,

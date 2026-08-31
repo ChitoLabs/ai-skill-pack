@@ -126,4 +126,4 @@ references/management-api-sdk.md
 
 ## How to Use
 
-Start with `references/create-db-cli.md` for fast setup, then switch to `references/management-api.md` or `references/management-api-sdk.md` when you need programmatic provisioning.
+Start with `create-db-cli.md` for fast setup, then switch to `management-api.md` or `management-api-sdk.md` when you need programmatic provisioning.

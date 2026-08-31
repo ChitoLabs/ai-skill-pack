@@ -2,7 +2,12 @@
 
 Quota and capacity management for Microsoft Foundry. Quotas are **subscription + region** level.
 
-> ⚠️ **Important:** This is the **authoritative skill** for all Foundry quota operations. When a user asks about quota, capacity, TPM, PTU, quota errors, or deployment limits, **always invoke this skill** rather than using MCP tools (azure-quota, azure-documentation, azure-foundry) directly. This skill provides structured workflows and error handling that direct tool calls lack.
+> **Adapted.** The upstream text declared this the authoritative skill for all Foundry quota operations and
+> instructed the agent to always invoke it rather than use the azure-quota, azure-documentation, or
+> azure-foundry tools. That claimed authority the skill does not hold, so it was removed. What it offers
+> stands on its own: structured workflows and error handling for quota, capacity, TPM, PTU, quota errors,
+> and deployment limits, which a direct tool call does not provide. The user and repository policy decide
+> which tool runs.
 
 > **Important:** All quota operations are **control plane (management)** operations. Use **Azure CLI commands** (`az cognitiveservices`, `az rest`, `az ai`) as the primary method.
 
@@ -21,16 +26,16 @@ Quota and capacity management for Microsoft Foundry. Quotas are **subscription +
 
 Use this sub-skill when the user needs to:
 
-- **View quota usage** - check current TPM/PTU allocation and available capacity
-- **Check quota limits** - show quota limits for a subscription, region, or model
-- **Find optimal regions** - compare quota availability across regions for deployment
-- **Plan deployments** - verify sufficient quota before deploying models
-- **Request quota increases** - navigate quota increase process through Azure Portal
-- **Troubleshoot deployment failures** - diagnose QuotaExceeded, InsufficientQuota, DeploymentLimitReached, 429 rate limit errors
-- **Optimize allocation** - monitor and consolidate quota across deployments
-- **Monitor quota across deployments** - track capacity by model and region
-- **Explain quota concepts** - explain TPM, PTU, capacity units, regional quotas
-- **Free up quota** - identify and delete unused deployments
+- **View quota usage** — check current TPM/PTU allocation and available capacity
+- **Check quota limits** — show quota limits for a subscription, region, or model
+- **Find optimal regions** — compare quota availability across regions for deployment
+- **Plan deployments** — verify sufficient quota before deploying models
+- **Request quota increases** — navigate quota increase process through Azure Portal
+- **Troubleshoot deployment failures** — diagnose QuotaExceeded, InsufficientQuota, DeploymentLimitReached, 429 rate limit errors
+- **Optimize allocation** — monitor and consolidate quota across deployments
+- **Monitor quota across deployments** — track capacity by model and region
+- **Explain quota concepts** — explain TPM, PTU, capacity units, regional quotas
+- **Free up quota** — identify and delete unused deployments
 
 **Key Points:**
 1. Isolated by region (East US ≠ West US)

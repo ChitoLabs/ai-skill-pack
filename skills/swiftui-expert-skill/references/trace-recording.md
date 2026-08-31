@@ -1,10 +1,10 @@
 # Recording an Instruments Trace
 
-Use this reference when the user asks to record a new trace - either to
+Use this reference when the user asks to record a new trace — either to
 attach to a running app, launch one fresh, or capture a specific session
 of actions they'll perform interactively.
 
-The bundled `scripts/record_trace.py` wraps `xctrace record` with:
+The bundled `../scripts/record_trace.py` wraps `xctrace record` with:
 
 - The **SwiftUI** template by default (override with `--template`).
 - **Manual stop** via Ctrl+C, a stop-file, or `--time-limit`.
@@ -37,8 +37,8 @@ Useful for diagnosing cold-start hitches and view-creation cost.
 
 ### C) Agent-driven: start in background, stop via stop-file
 
-When you (the agent) are running non-interactively - e.g. via
-`Bash run_in_background` - use a stop-file so you can signal the
+When you (the agent) are running non-interactively — e.g. via
+`Bash run_in_background` — use a stop-file so you can signal the
 recording to end cleanly:
 
 ```bash
@@ -71,21 +71,21 @@ xctrace stops itself at the limit.
 ## Discovery helpers
 
 ```bash
-# List every connected device, simulator, and the host - JSON.
+# List every connected device, simulator, and the host — JSON.
 python3 "${SKILL_DIR}/scripts/record_trace.py" --list-devices
 
-# List all Instruments templates - JSON with a flat list + by-section map.
+# List all Instruments templates — JSON with a flat list + by-section map.
 python3 "${SKILL_DIR}/scripts/record_trace.py" --list-templates
 ```
 
 Device entries have `kind` (`devices`, `devices offline`, `simulators`),
-`name`, `os`, `udid`. Offline devices are known but unplugged / unpaired -
+`name`, `os`, `udid`. Offline devices are known but unplugged / unpaired —
 plug them in before recording.
 
 ## Picking a template
 
 > **Hard rule: the `SwiftUI` template only populates the SwiftUI lane on a
-> real device - a physical iOS/iPadOS device or the host Mac. On the iOS
+> real device — a physical iOS/iPadOS device or the host Mac. On the iOS
 > Simulator it records but the SwiftUI lane comes back empty.** If the
 > chosen UDID falls under the `simulators` kind from `--list-devices`,
 > switch to `Time Profiler`. It still gives you Time Profiler + Hangs +
@@ -123,16 +123,16 @@ python3 "${SKILL_DIR}/scripts/analyze_trace.py" --trace "$TRACE" --json-only
 ```
 
 If the user wanted a specific scope, combine with `--list-logs` /
-`--list-signposts` / `--window` from `references/trace-analysis.md`.
+`--list-signposts` / `--window` from `trace-analysis.md`.
 
 ## Failure modes to handle
 
-- **Device offline** - `--list-devices` shows it in `devices offline`.
+- **Device offline** — `--list-devices` shows it in `devices offline`.
   Ask the user to connect/unlock the device and retry.
-- **Output path exists** - the script refuses to overwrite. Either pick
+- **Output path exists** — the script refuses to overwrite. Either pick
   a new `--output` or delete the existing bundle.
-- **App not running (for `--attach`)** - xctrace exits with an error;
+- **App not running (for `--attach`)** — xctrace exits with an error;
   fall back to `--launch` or tell the user to open the app first.
-- **Signing / trust on device** - iOS requires a development build
+- **Signing / trust on device** — iOS requires a development build
   signed with the user's team. If xctrace returns a signing error, point
   the user to trust the developer profile on the device.

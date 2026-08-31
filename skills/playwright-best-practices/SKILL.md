@@ -3,7 +3,7 @@ name: playwright-best-practices
 description: "Trigger: write, debug, review, or maintain Playwright tests. Apply focused practices for the selected E2E, component, API, visual, accessibility, or CI test scope."
 license: MIT
 metadata:
-  author: currents.dev
+  author: currents-dev
   version: 1.1
   skills_sh_url: "https://www.skills.sh/currents-dev/playwright-best-practices-skill/playwright-best-practices"
   github_url: "https://github.com/currents-dev/playwright-best-practices-skill/tree/HEAD/"
@@ -17,6 +17,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,65 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/.agnix.toml` - preserved source companion file.
-- `references/.github/workflows/validate-skill.yml` - preserved source companion file.
-- `references/LICENSE.md` - preserved source companion file.
-- `references/README.md` - preserved source companion file.
-- `references/advanced/authentication-flows.md` - preserved source companion file.
-- `references/advanced/authentication.md` - preserved source companion file.
-- `references/advanced/clock-mocking.md` - preserved source companion file.
-- `references/advanced/mobile-testing.md` - preserved source companion file.
-- `references/advanced/multi-context.md` - preserved source companion file.
-- `references/advanced/multi-user.md` - preserved source companion file.
-- `references/advanced/network-advanced.md` - preserved source companion file.
-- `references/advanced/third-party.md` - preserved source companion file.
-- `references/architecture/pom-vs-fixtures.md` - preserved source companion file.
-- `references/architecture/test-architecture.md` - preserved source companion file.
-- `references/architecture/when-to-mock.md` - preserved source companion file.
-- `references/browser-apis/browser-apis.md` - preserved source companion file.
-- `references/browser-apis/iframes.md` - preserved source companion file.
-- `references/browser-apis/service-workers.md` - preserved source companion file.
-- `references/browser-apis/websockets.md` - preserved source companion file.
-- `references/core/annotations.md` - preserved source companion file.
-- `references/core/assertions-waiting.md` - preserved source companion file.
-- `references/core/configuration.md` - preserved source companion file.
-- `references/core/fixtures-hooks.md` - preserved source companion file.
-- `references/core/global-setup.md` - preserved source companion file.
-- `references/core/locators.md` - preserved source companion file.
-- `references/core/page-object-model.md` - preserved source companion file.
-- `references/core/projects-dependencies.md` - preserved source companion file.
-- `references/core/test-data.md` - preserved source companion file.
-- `references/core/test-suite-structure.md` - preserved source companion file.
-- `references/core/test-tags.md` - preserved source companion file.
-- `references/debugging/console-errors.md` - preserved source companion file.
-- `references/debugging/debugging.md` - preserved source companion file.
-- `references/debugging/error-testing.md` - preserved source companion file.
-- `references/debugging/flaky-tests.md` - preserved source companion file.
-- `references/frameworks/angular.md` - preserved source companion file.
-- `references/frameworks/nextjs.md` - preserved source companion file.
-- `references/frameworks/react.md` - preserved source companion file.
-- `references/frameworks/vue.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/ci-cd.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/docker.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/github-actions.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/gitlab.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/other-providers.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/parallel-sharding.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/performance.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/reporting.md` - preserved source companion file.
-- `references/infrastructure-ci-cd/test-coverage.md` - preserved source companion file.
-- `references/testing-patterns/accessibility.md` - preserved source companion file.
-- `references/testing-patterns/api-testing.md` - preserved source companion file.
-- `references/testing-patterns/browser-extensions.md` - preserved source companion file.
-- `references/testing-patterns/canvas-webgl.md` - preserved source companion file.
-- `references/testing-patterns/component-testing.md` - preserved source companion file.
-- `references/testing-patterns/drag-drop.md` - preserved source companion file.
-- `references/testing-patterns/electron.md` - preserved source companion file.
-- `references/testing-patterns/file-operations.md` - preserved source companion file.
-- `references/testing-patterns/file-upload-download.md` - preserved source companion file.
-- `references/testing-patterns/forms-validation.md` - preserved source companion file.
-- `references/testing-patterns/graphql-testing.md` - preserved source companion file.
-- `references/testing-patterns/i18n.md` - preserved source companion file.
-- `references/testing-patterns/performance-testing.md` - preserved source companion file.
-- `references/testing-patterns/security-testing.md` - preserved source companion file.
-- `references/testing-patterns/visual-regression.md` - preserved source companion file.
+- `references/` - 62 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

@@ -3,10 +3,10 @@ name: django-security
 description: Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: affaan-m
   version: 0.1
   skills_sh_url: "https://skills.sh/affaan-m/everything-claude-code/django-security"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/django-security"
+  github_url: "https://github.com/affaan-m/everything-claude-code"
 origin: ECC
 ---
 

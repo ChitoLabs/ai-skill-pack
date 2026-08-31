@@ -171,4 +171,4 @@ The auth library is constructing the callback URL from `localhost` instead of th
 
 ## Example
 
-See [`examples/google-oauth`](../../examples/google-oauth) for a complete working example with Next.js + NextAuth + Google OAuth using `--tld dev`.
+See [`examples/google-oauth`](examples/google-oauth) for a complete working example with Next.js + NextAuth + Google OAuth using `--tld dev`.

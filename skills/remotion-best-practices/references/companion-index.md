@@ -1,0 +1,42 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `rules/3d.md` - preserved source companion file.
+- `rules/assets/charts-bar-chart.tsx` - preserved source companion file.
+- `rules/assets/text-animations-typewriter.tsx` - preserved source companion file.
+- `rules/assets/text-animations-word-highlight.tsx` - preserved source companion file.
+- `rules/audio-visualization.md` - preserved source companion file.
+- `rules/audio.md` - preserved source companion file.
+- `rules/calculate-metadata.md` - preserved source companion file.
+- `rules/compositions.md` - preserved source companion file.
+- `rules/display-captions.md` - preserved source companion file.
+- `rules/ffmpeg.md` - preserved source companion file.
+- `rules/get-audio-duration.md` - preserved source companion file.
+- `rules/get-video-dimensions.md` - preserved source companion file.
+- `rules/get-video-duration.md` - preserved source companion file.
+- `rules/gifs.md` - preserved source companion file.
+- `rules/google-fonts.md` - preserved source companion file.
+- `rules/html-in-canvas.md` - preserved source companion file.
+- `rules/images.md` - preserved source companion file.
+- `rules/import-srt-captions.md` - preserved source companion file.
+- `rules/light-leaks.md` - preserved source companion file.
+- `rules/local-fonts.md` - preserved source companion file.
+- `rules/lottie.md` - preserved source companion file.
+- `rules/maplibre.md` - preserved source companion file.
+- `rules/measuring-dom-nodes.md` - preserved source companion file.
+- `rules/measuring-text.md` - preserved source companion file.
+- `rules/parameters.md` - preserved source companion file.
+- `rules/sequencing.md` - preserved source companion file.
+- `rules/sfx.md` - preserved source companion file.
+- `rules/silence-detection.md` - preserved source companion file.
+- `rules/subtitles.md` - preserved source companion file.
+- `rules/tailwind.md` - preserved source companion file.
+- `rules/text-animations.md` - preserved source companion file.
+- `rules/timing.md` - preserved source companion file.
+- `rules/transcribe-captions.md` - preserved source companion file.
+- `rules/transitions.md` - preserved source companion file.
+- `rules/transparent-videos.md` - preserved source companion file.
+- `rules/trimming.md` - preserved source companion file.
+- `rules/videos.md` - preserved source companion file.
+- `rules/voiceover.md` - preserved source companion file.

@@ -2,409 +2,173 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
-const apply = process.argv.includes("--write");
-const catalogPath = path.join(root, "manifests", "skills-catalog.json");
-const publicationPath = path.join(
-  root,
-  "manifests",
-  "skill-sanitize-upgrade-manifest.json",
-);
-const ambiguousPublishers = new Set(["site"]);
+const generate = process.argv.includes("--generate");
+const skillsRoot = path.join(root, "skills");
+const errors = [];
 
-const stats = {
-  mode: apply ? "apply" : "dry-run",
-  skills: 0,
-  proposedCorrections: [],
-  appliedCorrections: 0,
-  unresolved: [],
-  errors: [],
+function unquote(value) {
+  const trimmed = value.trim();
+  if ((trimmed.startsWith('"') && trimmed.endsWith('"')) || (trimmed.startsWith("'") && trimmed.endsWith("'"))) {
+    return trimmed.slice(1, -1);
+  }
+  return trimmed;
+}
+
+function parseEntry(name) {
+  const relativePath = `skills/${name}/SKILL.md`;
+  const filePath = path.join(root, ...relativePath.split("/"));
+  if (!fs.existsSync(filePath)) {
+    errors.push(`${relativePath}: missing entry point`);
+    return null;
+  }
+
+  const content = fs.readFileSync(filePath, "utf8");
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+  if (!match) {
+    errors.push(`${relativePath}: missing YAML-like frontmatter`);
+    return null;
+  }
+
+  const lines = match[1].split(/\r?\n/);
+  const top = {};
+  const metadata = {};
+  let inMetadata = false;
+  for (const line of lines) {
+    if (/^metadata:\s*$/.test(line)) {
+      inMetadata = true;
+      continue;
+    }
+    const field = line.match(inMetadata ? /^  ([A-Za-z0-9_-]+):\s*(.*?)\s*$/ : /^([A-Za-z0-9_-]+):\s*(.*?)\s*$/);
+    if (field) (inMetadata ? metadata : top)[field[1]] = unquote(field[2]);
+  }
+
+  for (const key of ["name", "description", "license"]) {
+    if (!top[key]) errors.push(`${relativePath}: missing ${key}`);
+  }
+  for (const key of ["author", "version"]) {
+    if (!metadata[key]) errors.push(`${relativePath}: missing metadata.${key}`);
+  }
+  if (top.name !== name) errors.push(`${relativePath}: name '${top.name ?? ""}' does not match folder '${name}'`);
+  if (metadata.author === "LCubero") errors.push(`${relativePath}: adapter LCubero must not be represented as author`);
+
+  const sourceUrls = [metadata.github_url, metadata.skills_sh_url, metadata.homepage].filter(Boolean);
+  for (const url of sourceUrls) {
+    try {
+      const parsed = new URL(url);
+      if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error("unsupported protocol");
+    } catch {
+      errors.push(`${relativePath}: invalid source URL '${url}'`);
+    }
+  }
+
+  return {
+    name,
+    path: `skills/${name}/`,
+    description: top.description ?? "",
+    license: top.license ?? "",
+    author: metadata.author ?? "",
+    adapter: metadata.adapter || null,
+    version: metadata.version ?? "",
+    github_url: metadata.github_url || null,
+    skills_sh_url: metadata.skills_sh_url || null,
+    homepage: metadata.homepage || null,
+  };
+}
+
+function markdown(value) {
+  return String(value)
+    .replace(/[\u2013\u2014]/gu, "-")
+    .replaceAll("|", "\\|")
+    .replaceAll("\r", " ")
+    .replaceAll("\n", " ");
+}
+
+function sourceUrl(entry) {
+  return entry.github_url ?? entry.skills_sh_url ?? entry.homepage;
+}
+
+function render(entries) {
+  const unknown = entries.filter((entry) => entry.author === "unknown").map((entry) => entry.name);
+  const catalog = {
+    repository: "ChitoLabs/ai-skill-pack",
+    source_of_truth: "skills/*/SKILL.md",
+    total_skills: entries.length,
+    attribution_policy: {
+      author: "Preserved from metadata.author without inference",
+      adapter: "Preserved independently from metadata.adapter",
+      unknown_author: "Retained as unknown",
+    },
+    validation: {
+      entry_points: entries.length,
+      entries_with_source_url: entries.filter((entry) => sourceUrl(entry)).length,
+      entries_with_author: entries.filter((entry) => entry.author).length,
+      entries_with_unknown_author: unknown.length,
+      unknown_author_skills: unknown,
+    },
+    skills: entries,
+  };
+  const inventory = {
+    repository: "ChitoLabs/ai-skill-pack",
+    source_of_truth: "skills/*/SKILL.md",
+    publication_scope: "Top-level skill entry points",
+    total_skills: entries.length,
+    published_skills: entries.map((entry) => entry.name),
+  };
+
+  const catalogRows = entries.map((entry) => `| [${markdown(entry.name)}](../${entry.path}) | ${markdown(entry.description)} | ${markdown(entry.license)} |`).join("\n");
+  const sourceRows = entries.map((entry) => {
+    const url = sourceUrl(entry);
+    return `| [${markdown(entry.name)}](../${entry.path}) | ${markdown(entry.author)} | ${markdown(entry.adapter ?? "Not specified")} | ${url ? `[Source](${url})` : "Not supplied"} |`;
+  }).join("\n");
+  const unknownText = unknown.length ? unknown.map((name) => `\`${name}\``).join(", ") : "None";
+
+  return new Map([
+    ["README.md", `# AI Skill Pack\n\nA portable collection of **${entries.length} skills** adapted for agents that support folder-based skills with a \`SKILL.md\` entry point.\n\n## Use\n\nCopy the skill folders you need from \`skills/\` into your runtime's skill directory. Review each skill's instructions, dependencies, permissions, and license before use.\n\n## Publication Contract\n\n- \`skills/*/SKILL.md\` is the sole publication source of truth.\n- Catalogs and manifests are deterministic views of those ${entries.length} entry points.\n- \`metadata.author\` is preserved as supplied. It is never inferred from a publisher, distributor, curator, adapter, source URL, or repository owner.\n- \`metadata.adapter\` remains separate from authorship.\n- Unknown authors remain \`unknown\`.\n\n## Repository Layout\n\n| Path | Purpose |\n| --- | --- |\n| \`skills/\` | Published skill folders. |\n| [\`docs/skills-catalog.md\`](docs/skills-catalog.md) | Human-readable skill index. |\n| [\`docs/source-list.md\`](docs/source-list.md) | Source and attribution index. |\n| [\`manifests/skills-catalog.json\`](manifests/skills-catalog.json) | Machine-readable catalog. |\n| [\`manifests/publication-inventory.json\`](manifests/publication-inventory.json) | Deterministic publication inventory. |\n| [\`scripts/maintain-attribution.mjs\`](scripts/maintain-attribution.mjs) | Read-only validation by default, with explicit artifact generation. |\n\n## License\n\nThe MIT license covers repository packaging, generated documentation, curation, and adaptation work. Individual skills retain their supplied licenses, notices, and terms.\n`],
+    ["docs/skills-catalog.md", `# Skills Catalog\n\nAlphabetical index of all ${entries.length} published skill entry points. Generated from \`skills/*/SKILL.md\`.\n\n| Skill | Description | License |\n| --- | --- | --- |\n${catalogRows}\n`],
+    ["docs/source-list.md", `# Source and Attribution List\n\nAttribution for all ${entries.length} published skills is reproduced from each skill's frontmatter. Source hosting, publication, distribution, curation, adaptation, or repository ownership is not treated as authorship evidence.\n\n| Skill | Author | Adapter | Source |\n| --- | --- | --- | --- |\n${sourceRows}\n`],
+    ["docs/audit-summary.md", `# Publication Audit Summary\n\n## Result\n\n- Published entry points: ${entries.length}\n- Entry points with valid source URLs: ${entries.filter((entry) => sourceUrl(entry)).length}\n- Entry points without a supplied source URL: ${entries.filter((entry) => !sourceUrl(entry)).length}\n- Entry points with an author value: ${entries.length}\n- Entries with \`author: unknown\`: ${unknown.length}\n- Publication source of truth: \`skills/*/SKILL.md\`\n\n## Attribution Boundary\n\nThe audit preserves \`metadata.author\` exactly as supplied. It does not infer authorship from skills.sh publishers, distributors, curators, adapters, GitHub repository owners, or URLs. \`metadata.adapter\` is represented separately. Missing source URLs remain explicitly unsupplied rather than being invented.\n\nUnknown authors: ${unknownText}.\n\n## Validation\n\nRun \`node scripts/maintain-attribution.mjs\` for a read-only consistency check. Use \`--generate\` only to rebuild derived publication artifacts from the current skill entry points.\n`],
+    ["docs/what-was-done.md", `# What Was Done\n\nThe publication layer was rebuilt from the user-owned replacement under \`skills/\`.\n\n## Changes\n\n- Treated the ${entries.length} top-level \`skills/*/SKILL.md\` files as the sole publication source.\n- Removed obsolete command-era publication artifacts.\n- Regenerated concise catalogs and manifests in deterministic name order.\n- Replaced attribution mutation with a read-only validator that preserves supplied authors, including \`unknown\`.\n- Kept adapter attribution separate from original authorship.\n\n## Boundary\n\nSkill contents were not normalized or rewritten by publication generation. No dependencies were installed, and no files were staged, committed, or pushed.\n`],
+    ["manifests/skills-catalog.json", `${JSON.stringify(catalog, null, 2).replace(/[\u2013\u2014]/gu, "-")}\n`],
+    ["manifests/publication-inventory.json", `${JSON.stringify(inventory, null, 2)}\n`],
+  ]);
+}
+
+const names = fs.readdirSync(skillsRoot, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name)
+  .sort((a, b) => a.localeCompare(b, "en"));
+const entries = names.map(parseEntry).filter(Boolean);
+const uniqueNames = new Set(entries.map((entry) => entry.name));
+if (uniqueNames.size !== entries.length) errors.push("skills: duplicate frontmatter names");
+if (entries.length !== 492) errors.push(`skills: expected 492 entry points, found ${entries.length}`);
+
+const artifacts = render(entries);
+for (const [relativePath, expected] of artifacts) {
+  const filePath = path.join(root, ...relativePath.split("/"));
+  if (generate) {
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, expected, "utf8");
+  } else if (!fs.existsSync(filePath)) {
+    errors.push(`${relativePath}: missing generated artifact`);
+  } else if (fs.readFileSync(filePath, "utf8") !== expected) {
+    errors.push(`${relativePath}: stale generated artifact`);
+  }
+}
+
+for (const relativePath of artifacts.keys()) {
+  const content = fs.readFileSync(path.join(root, ...relativePath.split("/")), "utf8");
+  if (/[\u2013\u2014]/u.test(content)) errors.push(`${relativePath}: forbidden Unicode dash`);
+  if (/[ \t]+$/m.test(content)) errors.push(`${relativePath}: trailing whitespace`);
+  if (/(?:[A-Za-z]:\\|\/Users\/|\\Users\\)/i.test(content)) errors.push(`${relativePath}: private local path`);
+}
+
+const result = {
+  mode: generate ? "generate" : "validate",
+  source_of_truth: "skills/*/SKILL.md",
+  skills: entries.length,
+  unknown_authors: entries.filter((entry) => entry.author === "unknown").length,
+  artifacts: [...artifacts.keys()],
+  errors,
 };
-const plannedFiles = new Map();
-
-function readJson(filePath) {
-  try {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
-  } catch (error) {
-    stats.errors.push(`${path.relative(root, filePath)}: invalid JSON: ${error.message}`);
-    return null;
-  }
-}
-
-function isObject(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
-function requireString(record, key, context, { nullable = false } = {}) {
-  const value = record[key];
-  if (nullable && value === null) return;
-  if (typeof value !== "string" || value.length === 0) {
-    stats.errors.push(`${context}.${key}: expected ${nullable ? "string or null" : "non-empty string"}`);
-  }
-}
-
-function validateUnique(records, key, context) {
-  const seen = new Set();
-  for (const record of records) {
-    const value = record?.[key];
-    if (typeof value !== "string") continue;
-    if (seen.has(value)) stats.errors.push(`${context}: duplicate ${key} '${value}'`);
-    seen.add(value);
-  }
-}
-
-function validateCatalog(catalog) {
-  if (!isObject(catalog)) return stats.errors.push("skills-catalog.json: expected object");
-  if (!Array.isArray(catalog.skills)) return stats.errors.push("skills-catalog.json.skills: expected array");
-  if (!isObject(catalog.validation)) stats.errors.push("skills-catalog.json.validation: expected object");
-  if (typeof catalog.total_skills !== "number") stats.errors.push("skills-catalog.json.total_skills: expected number");
-  validateUnique(catalog.skills, "name", "skills-catalog.json.skills");
-  for (const [index, record] of catalog.skills.entries()) {
-    const context = `skills-catalog.json.skills[${index}]`;
-    if (!isObject(record)) {
-      stats.errors.push(`${context}: expected object`);
-      continue;
-    }
-    for (const key of ["name", "path", "source_url", "author"]) requireString(record, key, context);
-  }
-}
-
-function validatePublication(publication) {
-  if (!isObject(publication)) return stats.errors.push("skill-sanitize-upgrade-manifest.json: expected object");
-  if (!Array.isArray(publication.included_records)) {
-    return stats.errors.push("skill-sanitize-upgrade-manifest.json.included_records: expected array");
-  }
-  validateUnique(publication.included_records, "skill", "skill-sanitize-upgrade-manifest.json.included_records");
-  for (const [index, record] of publication.included_records.entries()) {
-    const context = `skill-sanitize-upgrade-manifest.json.included_records[${index}]`;
-    if (!isObject(record)) {
-      stats.errors.push(`${context}: expected object`);
-      continue;
-    }
-    for (const key of ["skill", "source_skill", "author", "author_action", "status"]) {
-      requireString(record, key, context);
-    }
-    requireString(record, "github_url", context, { nullable: true });
-    requireString(record, "skills_sh_url", context, { nullable: true });
-    if (record.author_action === "set-to-LCubero") {
-      stats.errors.push(`${context}.author_action: obsolete attribution default is forbidden`);
-    }
-  }
-}
-
-function frontmatterValue(content, key) {
-  const match = content.match(new RegExp(`^\\s{2}${key}:\\s*(.+?)\\s*$`, "m"));
-  if (!match) return null;
-  return match[1].trim().replace(/^(?:"([^"]*)"|'([^']*)')$/, "$1$2");
-}
-
-function skillsShPublisher(url) {
-  if (!url) return null;
-  try {
-    const parsed = new URL(url);
-    if (!/^(www\.)?skills\.sh$/i.test(parsed.hostname)) return null;
-    const publisher = parsed.pathname.split("/").filter(Boolean)[0] ?? null;
-    return publisher && !ambiguousPublishers.has(publisher.toLowerCase())
-      ? publisher
-      : null;
-  } catch {
-    return null;
-  }
-}
-
-function githubOwner(url) {
-  if (!url) return null;
-  try {
-    const parsed = new URL(url);
-    if (parsed.hostname.toLowerCase() !== "github.com") return null;
-    return parsed.pathname.split("/").filter(Boolean)[0] ?? null;
-  } catch {
-    return null;
-  }
-}
-
-function addMetadataUrl(content, key, url) {
-  const versionLine = /^(\s{2}version:[^\r\n]*)(\r?\n)/m;
-  if (!versionLine.test(content)) return content;
-  return content.replace(versionLine, `$1$2  ${key}: "${url}"$2`);
-}
-
-function replaceAuthor(content, author) {
-  return content.replace(
-    /^(\s{2}author:)\s*[^\r\n]+$/m,
-    `$1 ${author}`,
-  );
-}
-
-function propose(kind, target, detail) {
-  stats.proposedCorrections.push({ kind, target, detail });
-}
-
-function planFile(filePath, content, detail) {
-  if (fs.readFileSync(filePath, "utf8") === content) return;
-  plannedFiles.set(filePath, content);
-  propose("file", path.relative(root, filePath).replaceAll(path.sep, "/"), detail);
-}
-
-function atomicWrite(filePath, content) {
-  const tempPath = `${filePath}.${process.pid}.${Math.random().toString(16).slice(2)}.tmp`;
-  const mode = fs.statSync(filePath).mode;
-  try {
-    fs.writeFileSync(tempPath, content, { mode });
-    fs.renameSync(tempPath, filePath);
-  } finally {
-    if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
-  }
-}
-
-function nestedSkillFiles(directory) {
-  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    const entryPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) return nestedSkillFiles(entryPath);
-    if (entry.name !== "SKILL.md") return [];
-    const relative = path.relative(path.join(root, "skills"), entryPath);
-    return relative.split(path.sep).length > 2 ? [entryPath] : [];
-  });
-}
-
-const diskCatalog = readJson(catalogPath);
-const diskPublication = readJson(publicationPath);
-if (diskCatalog) validateCatalog(diskCatalog);
-if (diskPublication) validatePublication(diskPublication);
-
-const isV3Publication = diskPublication?.source_manifest === "authorized-v3-source-pack";
-
-if (stats.errors.length === 0 && isV3Publication) {
-  const catalogByName = new Map(diskCatalog.skills.map((record) => [record.name, record]));
-  const publicationByName = new Map(
-    diskPublication.included_records.map((record) => [record.skill, record]),
-  );
-  const skillNames = fs
-    .readdirSync(path.join(root, "skills"), { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
-  stats.skills = skillNames.length;
-
-  for (const name of skillNames) {
-    const skillPath = path.join(root, "skills", name, "SKILL.md");
-    const catalogEntry = catalogByName.get(name);
-    const publicationEntry = publicationByName.get(name);
-    if (!fs.existsSync(skillPath)) {
-      stats.errors.push(`${name}: missing SKILL.md`);
-      continue;
-    }
-    if (!catalogEntry || !publicationEntry) {
-      stats.errors.push(`${name}: missing central catalog or publication record`);
-      continue;
-    }
-    if (!catalogEntry.source_url) stats.errors.push(`${name}: missing publication source link`);
-    if (!catalogEntry.author || catalogEntry.author === "LCubero") {
-      stats.errors.push(`${name}: invalid publication author`);
-    }
-    if (catalogEntry.author !== publicationEntry.author) {
-      stats.errors.push(`${name}: catalog and publication authors differ`);
-    }
-    const skillContent = fs.readFileSync(skillPath, "utf8");
-    const skillAuthor = frontmatterValue(skillContent, "author");
-    if (skillAuthor === "LCubero") stats.errors.push(`${name}: adapter is listed as top-level author`);
-    if (skillAuthor !== catalogEntry.author) {
-      stats.errors.push(`${name}: top-level and catalog authors differ`);
-    }
-
-    const sourcePath = path.join(root, "skills", name, "references", "source-skill.md");
-    if (fs.existsSync(sourcePath)) {
-      const sourceContent = fs.readFileSync(sourcePath, "utf8");
-      if (frontmatterValue(sourceContent, "author") === "LCubero") {
-        planFile(sourcePath, replaceAuthor(sourceContent, catalogEntry.author), `synchronize author to ${catalogEntry.author}`);
-      }
-    }
-    if (catalogEntry.author === "unknown") stats.unresolved.push(`skills/${name}/SKILL.md`);
-  }
-
-  for (const companionPath of nestedSkillFiles(path.join(root, "skills"))) {
-    const content = fs.readFileSync(companionPath, "utf8");
-    if (frontmatterValue(content, "author") !== "LCubero") continue;
-    const nestedName = frontmatterValue(content, "name");
-    const author = catalogByName.get(nestedName)?.author
-      ?? skillsShPublisher(frontmatterValue(content, "skills_sh_url"))
-      ?? githubOwner(frontmatterValue(content, "github_url"))
-      ?? "unknown";
-    planFile(companionPath, replaceAuthor(content, author), `remove unsupported adapter authorship`);
-  }
-
-  if (diskCatalog.total_skills !== skillNames.length) {
-    stats.errors.push(`skills-catalog.json.total_skills: expected ${skillNames.length}`);
-  }
-  if (diskCatalog.skills.length !== skillNames.length) {
-    stats.errors.push(`skills-catalog.json.skills: expected ${skillNames.length} records`);
-  }
-  if (diskPublication.included_records.length !== skillNames.length) {
-    stats.errors.push(`skill-sanitize-upgrade-manifest.json.included_records: expected ${skillNames.length} records`);
-  }
-  if (apply && stats.errors.length === 0) {
-    for (const [filePath, content] of plannedFiles) atomicWrite(filePath, content);
-    stats.appliedCorrections = stats.proposedCorrections.length;
-  }
-} else if (stats.errors.length === 0) {
-  const nextCatalog = structuredClone(diskCatalog);
-  const nextPublication = structuredClone(diskPublication);
-  const diskCatalogByName = new Map(diskCatalog.skills.map((record) => [record.name, record]));
-  const diskPublicationByName = new Map(
-    diskPublication.included_records.map((record) => [record.skill, record]),
-  );
-  const nextCatalogByName = new Map(nextCatalog.skills.map((record) => [record.name, record]));
-  const nextPublicationByName = new Map(
-    nextPublication.included_records.map((record) => [record.skill, record]),
-  );
-  const skillNames = fs
-    .readdirSync(path.join(root, "skills"), { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
-  stats.skills = skillNames.length;
-
-  if (diskCatalog.total_skills !== skillNames.length) {
-    stats.errors.push(`skills-catalog.json.total_skills: expected ${skillNames.length}`);
-  }
-  if (diskCatalog.skills.length !== skillNames.length) {
-    stats.errors.push(`skills-catalog.json.skills: expected ${skillNames.length} records`);
-  }
-  if (diskPublication.included_records.length !== skillNames.length) {
-    stats.errors.push(`skill-sanitize-upgrade-manifest.json.included_records: expected ${skillNames.length} records`);
-  }
-
-  for (const name of skillNames) {
-    const skillPath = path.join(root, "skills", name, "SKILL.md");
-    const diskCatalogEntry = diskCatalogByName.get(name);
-    const diskPublicationEntry = diskPublicationByName.get(name);
-    const nextCatalogEntry = nextCatalogByName.get(name);
-    const nextPublicationEntry = nextPublicationByName.get(name);
-    if (!fs.existsSync(skillPath)) {
-      stats.errors.push(`${name}: missing SKILL.md`);
-      continue;
-    }
-    if (!diskCatalogEntry || !diskPublicationEntry) {
-      stats.errors.push(`${name}: missing central catalog or publication record`);
-      continue;
-    }
-
-    let skillContent = fs.readFileSync(skillPath, "utf8");
-    const sourcePath = path.join(root, "skills", name, "references", "source-skill.md");
-    let sourceContent = fs.existsSync(sourcePath) ? fs.readFileSync(sourcePath, "utf8") : null;
-    const sourceAuthor = sourceContent ? frontmatterValue(sourceContent, "author") : null;
-    const explicitSourceAuthor = sourceAuthor && !["LCubero", "unknown", "site"].includes(sourceAuthor)
-      ? sourceAuthor
-      : null;
-    let skillsShUrl = frontmatterValue(skillContent, "skills_sh_url");
-    let githubUrl = frontmatterValue(skillContent, "github_url");
-    const candidateUrls = [
-      diskPublicationEntry.skills_sh_url,
-      diskPublicationEntry.github_url,
-      diskCatalogEntry.source_url,
-    ].filter(Boolean);
-
-    if (!skillsShUrl) {
-      const candidate = candidateUrls.find((url) => skillsShPublisher(url));
-      if (candidate) {
-        skillContent = addMetadataUrl(skillContent, "skills_sh_url", candidate);
-        skillsShUrl = candidate;
-        propose("metadata", `skills/${name}/SKILL.md`, "add verified skills.sh URL");
-      }
-    }
-    if (!githubUrl) {
-      const candidate = candidateUrls.find((url) => {
-        try {
-          return new URL(url).hostname.toLowerCase() === "github.com";
-        } catch {
-          return false;
-        }
-      });
-      if (candidate) {
-        skillContent = addMetadataUrl(skillContent, "github_url", candidate);
-        githubUrl = candidate;
-        propose("metadata", `skills/${name}/SKILL.md`, "add verified GitHub URL");
-      }
-    }
-
-    const currentAuthor = frontmatterValue(skillContent, "author");
-    const publisher = skillsShPublisher(skillsShUrl);
-    const ambiguousCurrentAuthor = currentAuthor === "site";
-    const author = currentAuthor === "LCubero" || currentAuthor === "unknown" || ambiguousCurrentAuthor
-      ? explicitSourceAuthor ?? publisher ?? "unknown"
-      : currentAuthor;
-    if (!author) {
-      stats.errors.push(`${name}: missing author`);
-      continue;
-    }
-    if (currentAuthor !== author) {
-      skillContent = replaceAuthor(skillContent, author);
-      propose("metadata", `skills/${name}/SKILL.md`, `author ${currentAuthor ?? "missing"} -> ${author}`);
-    }
-    if (author === "unknown") stats.unresolved.push(`skills/${name}/SKILL.md`);
-
-    if (sourceContent && frontmatterValue(sourceContent, "author") !== author) {
-      sourceContent = replaceAuthor(sourceContent, author);
-      planFile(sourcePath, sourceContent, `synchronize author to ${author}`);
-    }
-    planFile(skillPath, skillContent, `synchronize author and source metadata`);
-
-    if (diskCatalogEntry.author !== author) {
-      propose("manifest", `manifests/skills-catalog.json#${name}`, `author ${diskCatalogEntry.author} -> ${author}`);
-      nextCatalogEntry.author = author;
-    }
-    if (diskPublicationEntry.author !== author) {
-      propose("manifest", `manifests/skill-sanitize-upgrade-manifest.json#${name}`, `author ${diskPublicationEntry.author} -> ${author}`);
-      nextPublicationEntry.author = author;
-    }
-    const expectedAction = author === "unknown"
-      ? "corrected-to-unknown"
-      : diskPublicationEntry.author_action;
-    if (diskPublicationEntry.author_action !== expectedAction) {
-      propose("manifest", `manifests/skill-sanitize-upgrade-manifest.json#${name}`, `author_action -> ${expectedAction}`);
-      nextPublicationEntry.author_action = expectedAction;
-    }
-    for (const [key, value] of [["skills_sh_url", skillsShUrl], ["github_url", githubUrl]]) {
-      const expected = value ?? null;
-      if (diskPublicationEntry[key] !== expected) {
-        propose("manifest", `manifests/skill-sanitize-upgrade-manifest.json#${name}`, `${key} -> ${expected}`);
-        nextPublicationEntry[key] = expected;
-      }
-    }
-    if (!skillsShUrl && !githubUrl) stats.errors.push(`${name}: missing official source link`);
-  }
-
-  for (const companionPath of nestedSkillFiles(path.join(root, "skills"))) {
-    const content = fs.readFileSync(companionPath, "utf8");
-    if (/^\s{2}author:\s*LCubero\s*$/m.test(content)) {
-      const author = skillsShPublisher(frontmatterValue(content, "skills_sh_url")) ?? "unknown";
-      planFile(companionPath, replaceAuthor(content, author), `remove false author in companion skill`);
-    }
-  }
-
-  nextCatalog.validation.entries_with_author = nextCatalog.skills.filter(
-    (record) => typeof record.author === "string" && record.author.length > 0,
-  ).length;
-  nextCatalog.validation.entries_with_unknown_author = nextCatalog.skills.filter(
-    (record) => record.author === "unknown",
-  ).length;
-  nextCatalog.validation.unknown_author_skills = nextCatalog.skills
-    .filter((record) => record.author === "unknown")
-    .map((record) => record.name);
-
-  const nextCatalogText = `${JSON.stringify(nextCatalog, null, 2)}\n`;
-  const nextPublicationText = `${JSON.stringify(nextPublication, null, 2)}\n`;
-  if (fs.readFileSync(catalogPath, "utf8") !== nextCatalogText) plannedFiles.set(catalogPath, nextCatalogText);
-  if (fs.readFileSync(publicationPath, "utf8") !== nextPublicationText) plannedFiles.set(publicationPath, nextPublicationText);
-
-  if (apply && stats.errors.length === 0) {
-    for (const [filePath, content] of plannedFiles) atomicWrite(filePath, content);
-    stats.appliedCorrections = stats.proposedCorrections.length;
-  }
-}
-
-if (!apply && stats.proposedCorrections.length > 0) {
-  stats.errors.push(`${stats.proposedCorrections.length} unapplied corrections detected`);
-}
-
-console.log(JSON.stringify(stats, null, 2));
-if (stats.errors.length > 0) process.exitCode = 1;
+console.log(JSON.stringify(result, null, 2));
+if (errors.length) process.exitCode = 1;

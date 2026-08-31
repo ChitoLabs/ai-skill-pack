@@ -114,3 +114,4 @@ Once `design.md` exists, [build workflow: Preflight and Design Authority](workfl
 ## Why opt-in (not auto-emit)
 
 Briefs iterate. The first build is rarely the settled design. Auto-emitting `design.md` on every default build would either churn the file across iterations or lock a weak system before the user has reviewed it. Opt-in mirrors how design teams actually work  -  formalise the system after the patterns hold, not on day one. The CTA in the preview block keeps the feature discoverable without forcing it.
+

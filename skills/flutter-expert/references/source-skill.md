@@ -12,7 +12,7 @@ metadata:
   output-format: code
   related-skills: react-native-expert, test-master, fullstack-guardian
   skills_sh_url: "https://skills.sh/jeffallan/claude-skills/flutter-expert"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/flutter-expert"
+  github_url: "https://github.com/jeffallan/claude-skills/tree/HEAD/skills/flutter-expert"
 ---
 
 # Flutter Expert
@@ -30,14 +30,14 @@ Senior mobile engineer building high-performance cross-platform applications wit
 
 ## Core Workflow
 
-1. **Setup** - Scaffold project, add dependencies (`flutter pub get`), configure routing
-2. **State** - Define Riverpod providers or Bloc/Cubit classes; verify with `flutter analyze`
+1. **Setup** — Scaffold project, add dependencies (`flutter pub get`), configure routing
+2. **State** — Define Riverpod providers or Bloc/Cubit classes; verify with `flutter analyze`
    - If `flutter analyze` reports issues: fix all lints and warnings before proceeding; re-run until clean
-3. **Widgets** - Build reusable, const-optimized components; run `flutter test` after each feature
+3. **Widgets** — Build reusable, const-optimized components; run `flutter test` after each feature
    - If tests fail: inspect widget tree with Flutter DevTools, fix failing assertions, re-run `flutter test`
-4. **Test** - Write widget and integration tests; confirm with `flutter test --coverage`
+4. **Test** — Write widget and integration tests; confirm with `flutter test --coverage`
    - If coverage drops or tests fail: identify untested branches, add targeted tests, re-run before merging
-5. **Optimize** - Profile with Flutter DevTools (`flutter run --profile`), eliminate jank, reduce rebuilds
+5. **Optimize** — Profile with Flutter DevTools (`flutter run --profile`), eliminate jank, reduce rebuilds
    - If jank persists: check rebuild counts in the Performance overlay, isolate expensive `build()` calls, apply `const` or move state closer to consumers
 
 ## Reference Guide
@@ -46,12 +46,12 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
-| Riverpod | `references/riverpod-state.md` | State management, providers, notifiers |
-| Bloc | `references/bloc-state.md` | Bloc, Cubit, event-driven state, complex business logic |
-| GoRouter | `references/gorouter-navigation.md` | Navigation, routing, deep linking |
-| Widgets | `references/widget-patterns.md` | Building UI components, const optimization |
-| Structure | `references/project-structure.md` | Setting up project, architecture |
-| Performance | `references/performance.md` | Optimization, profiling, jank fixes |
+| Riverpod | `riverpod-state.md` | State management, providers, notifiers |
+| Bloc | `bloc-state.md` | Bloc, Cubit, event-driven state, complex business logic |
+| GoRouter | `gorouter-navigation.md` | Navigation, routing, deep linking |
+| Widgets | `widget-patterns.md` | Building UI components, const optimization |
+| Structure | `project-structure.md` | Setting up project, architecture |
+| Performance | `performance.md` | Optimization, profiling, jank fixes |
 
 ## Code Examples
 
@@ -68,7 +68,7 @@ class CounterNotifier extends StateNotifier<int> {
   void increment() => state = state + 1; // new instance, never mutate
 }
 
-// consuming widget - use ConsumerWidget, not StatefulWidget
+// consuming widget — use ConsumerWidget, not StatefulWidget
 class CounterView extends ConsumerWidget {
   const CounterView({super.key});
 
@@ -80,7 +80,7 @@ class CounterView extends ConsumerWidget {
 }
 ```
 
-### Before / After - State Management
+### Before / After — State Management
 
 ```dart
 // ❌ WRONG: app-wide state in setState

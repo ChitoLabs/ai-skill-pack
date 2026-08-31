@@ -141,7 +141,7 @@ let data = await fetchData() // Potential suspension
 2. **State can change** - mutable state may be modified during suspension
 3. **Actor reentrancy** - other tasks can access actor during suspension
 
-The same entry-isolation rule applies to any unstructured task: choose startup isolation by what the synchronous prefix needs. If nothing before the first `await` needs the main actor-whether that first operation is `Task.sleep`, an actor hop, a `print`, or a Sendable computation-prefer `Task { @concurrent in ... }` and hop back with `MainActor.run` only for the UI mutation. If the synchronous prefix already needs main actor for one statement, keep nearby cheap lines on main with it instead of splitting them out.
+The same entry-isolation rule applies to any unstructured task: choose startup isolation by what the synchronous prefix needs. If nothing before the first `await` needs the main actor—whether that first operation is `Task.sleep`, an actor hop, a `print`, or a Sendable computation—prefer `Task { @concurrent in ... }` and hop back with `MainActor.run` only for the UI mutation. If the synchronous prefix already needs main actor for one statement, keep nearby cheap lines on main with it instead of splitting them out.
 
 ### Actor reentrancy example
 
@@ -223,9 +223,9 @@ Task { @concurrent in
     await MainActor.run { updateUI() }
 }
 
-// ✅ Synchronous prefix DOES contain main-actor work - keep inheritance
+// ✅ Synchronous prefix DOES contain main-actor work — keep inheritance
 Task {
-    print("debug")              // trivial, non-main - rides along
+    print("debug")              // trivial, non-main — rides along
     self.isLoading = true       // needs @MainActor, before any await
     await fetchData()
 }
@@ -515,7 +515,7 @@ Instead of asking "what thread should this run on?" ask "what isolation domain s
 
 - Recommending GCD queue hopping when actor isolation already expresses the ownership model.
 - Debugging correctness by thread ID instead of by isolation and ordering.
-- Treating `await` as a blocking call - it suspends the task, freeing the thread.
+- Treating `await` as a blocking call — it suspends the task, freeing the thread.
 - Mapping each `Task` to a conceptual thread.
 - Picking task entry isolation by the enclosing context instead of by the task's synchronous prefix. A `Task { ... }` from `@MainActor` whose first `await` immediately hops away (with no main-actor work before it) should usually be `Task { @concurrent in ... }`.
 

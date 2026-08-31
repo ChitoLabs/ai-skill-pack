@@ -9,7 +9,7 @@ metadata:
 
 # Azure Diagnostics
 
-> **AUTHORITATIVE GUIDANCE - MANDATORY COMPLIANCE**
+> **AUTHORITATIVE GUIDANCE — MANDATORY COMPLIANCE**
 >
 > This document is the **official source** for debugging and troubleshooting Azure production issues. Follow these instructions to diagnose and resolve common Azure service problems systematically.
 
@@ -54,9 +54,9 @@ Activate this skill when user wants to:
 
 | Service | Common Issues | Reference |
 |---------|---------------|-----------|
-| **Container Apps** | Image pull failures, cold starts, health probes, port mismatches | [container-apps/](references/container-apps/README.md) |
-| **App Service** | High CPU, deployment failures, crashes, slow responses, TLS/custom domains | [app-service/](references/app-service/README.md) |
-| **Function Apps** | App details, invocation failures, timeouts, binding errors, cold starts, missing app settings | [functions/](references/functions/README.md) |
+| **Container Apps** | Image pull failures, cold starts, health probes, port mismatches | [container-apps/](container-apps/README.md) |
+| **App Service** | High CPU, deployment failures, crashes, slow responses, TLS/custom domains | [app-service/](app-service/README.md) |
+| **Function Apps** | App details, invocation failures, timeouts, binding errors, cold starts, missing app settings | [functions/](functions/README.md) |
 | **AKS** | Cluster access, nodes, `kube-system`, scheduling, crash loops, ingress, DNS, upgrades | [AKS Troubleshooting](troubleshooting/aks/aks-troubleshooting.md) |
 | **Messaging** | Event Hubs & Service Bus SDK errors, AMQP failures, message lock, connectivity | [Messaging Troubleshooting](troubleshooting/messaging/README.md) |
 
@@ -114,7 +114,7 @@ mcp_azure_mcp_monitor
     query: "<KQL-query>"
 ```
 
-See [kql-queries.md](references/kql-queries.md) for common diagnostic queries.
+See [kql-queries.md](kql-queries.md) for common diagnostic queries.
 
 ---
 
@@ -144,8 +144,8 @@ az monitor activity-log list -g RG --max-events 20
 
 ## References
 
-- [KQL Query Library](references/kql-queries.md)
-- [Azure Resource Graph Queries](references/azure-resource-graph.md)
-- [App Service Troubleshooting](references/app-service/README.md)
-- [Function Apps Troubleshooting](references/functions/README.md)
+- [KQL Query Library](kql-queries.md)
+- [Azure Resource Graph Queries](azure-resource-graph.md)
+- [App Service Troubleshooting](app-service/README.md)
+- [Function Apps Troubleshooting](functions/README.md)
 - [Messaging Troubleshooting](troubleshooting/messaging/README.md)

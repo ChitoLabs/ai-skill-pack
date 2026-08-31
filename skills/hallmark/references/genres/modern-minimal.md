@@ -69,3 +69,4 @@ See [`component-cookbook.md`](../component-cookbook.md) § Navigation and § Foo
 ## Reference register (for the LLM, not credited to anyone)
 
 The aesthetic to match: confident sans display, clean white canvas, two-column hero, pill CTAs, mono accent. The user knows what this looks like when they see it. Do not name external sites in the output.
+

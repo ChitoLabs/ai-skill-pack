@@ -3,10 +3,10 @@ name: make-interfaces-feel-better
 description: Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, typography, micro-interactions, enter/exit animations, or any visual detail work. Triggers on UI polish, design details, "make it feel better", "feels off", stagger animations, border radius, optical alignment, font smoothing, tabular numbers, image outlines, box shadows.
 license: Apache-2.0
 metadata:
-  author: julianromli
+  author: jakubkrehel
   version: 0.1
   skills_sh_url: "https://www.skills.sh/jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better"
-  github_url: "https://github.com/julianromli/ai-skills/tree/HEAD/skills/make-interfaces-feel-better"
+  github_url: "https://github.com/jakubkrehel/make-interfaces-feel-better/tree/HEAD/skills/make-interfaces-feel-better"
 ---
 
 # Details that make interfaces feel better
@@ -38,7 +38,7 @@ Layer multiple transparent `box-shadow` values for natural depth. Shadows adapt 
 
 ### 4. Interruptible Animations
 
-Use CSS transitions for interactive state changes - they can be interrupted mid-animation. Reserve keyframes for staged sequences that run once.
+Use CSS transitions for interactive state changes — they can be interrupted mid-animation. Reserve keyframes for staged sequences that run once.
 
 ### 5. Split and Stagger Enter Animations
 
@@ -50,7 +50,7 @@ Use a small fixed `translateY` instead of full height. Exits should be softer th
 
 ### 7. Contextual Icon Animations
 
-Animate icons with `opacity`, `scale`, and `blur` instead of toggling visibility. Use exactly these values: scale from `0.25` to `1`, opacity from `0` to `1`, blur from `4px` to `0px`. If the project has `motion` or `framer-motion` in `package.json`, use `transition: { type: "spring", duration: 0.3, bounce: 0 }` - bounce must always be `0`. If no motion library is installed, keep both icons in the DOM (one absolute-positioned) and cross-fade with CSS transitions using `cubic-bezier(0.2, 0, 0, 1)` - this gives both enter and exit animations without any dependency.
+Animate icons with `opacity`, `scale`, and `blur` instead of toggling visibility. Use exactly these values: scale from `0.25` to `1`, opacity from `0` to `1`, blur from `4px` to `0px`. If the project has `motion` or `framer-motion` in `package.json`, use `transition: { type: "spring", duration: 0.3, bounce: 0 }` — bounce must always be `0`. If no motion library is installed, keep both icons in the DOM (one absolute-positioned) and cross-fade with CSS transitions using `cubic-bezier(0.2, 0, 0, 1)` — this gives both enter and exit animations without any dependency.
 
 ### 8. Font Smoothing
 
@@ -66,11 +66,11 @@ Use `text-wrap: balance` on headings. Use `text-wrap: pretty` for body text to a
 
 ### 11. Image Outlines
 
-Add a subtle `1px` outline with low opacity to images for consistent depth. The color must be pure black in light mode (`rgba(0, 0, 0, 0.1)`) and pure white in dark mode (`rgba(255, 255, 255, 0.1)`) - never a near-black like slate, zinc, or any tinted neutral. A tinted outline picks up the surface color underneath it and reads as dirt on the image edge.
+Add a subtle `1px` outline with low opacity to images for consistent depth. The color must be pure black in light mode (`rgba(0, 0, 0, 0.1)`) and pure white in dark mode (`rgba(255, 255, 255, 0.1)`) — never a near-black like slate, zinc, or any tinted neutral. A tinted outline picks up the surface color underneath it and reads as dirt on the image edge.
 
 ### 12. Scale on Press
 
-A subtle `scale(0.96)` on click gives buttons tactile feedback. Always use `0.96`. Never use a value smaller than `0.95` - anything below feels exaggerated. Add a `static` prop to disable it when motion would be distracting.
+A subtle `scale(0.96)` on click gives buttons tactile feedback. Always use `0.96`. Never use a value smaller than `0.95` — anything below feels exaggerated. Add a `static` prop to disable it when motion would be distracting.
 
 ### 13. Skip Animation on Page Load
 
@@ -82,7 +82,7 @@ Always specify exact properties: `transition-property: scale, opacity`. Tailwind
 
 ### 15. Use `will-change` Sparingly
 
-Only for `transform`, `opacity`, `filter` - properties the GPU can composite. Never use `will-change: all`. Only add when you notice first-frame stutter.
+Only for `transform`, `opacity`, `filter` — properties the GPU can composite. Never use `will-change: all`. Only add when you notice first-frame stutter.
 
 ### 16. Minimum Hit Area
 
@@ -105,7 +105,7 @@ Interactive elements need at least 40×40px hit area. Extend with a pseudo-eleme
 
 ## Review Output Format
 
-Always present changes as a markdown table with **Before** and **After** columns. Include every change you made - not just a subset. Never list findings as separate "Before:" / "After:" lines outside of a table. Group changes by principle using a heading above each table, and keep each row focused on a single diff so the reader can scan the whole list quickly.
+Always present changes as a markdown table with **Before** and **After** columns. Include every change you made — not just a subset. Never list findings as separate "Before:" / "After:" lines outside of a table. Group changes by principle using a heading above each table, and keep each row focused on a single diff so the reader can scan the whole list quickly.
 
 ### Example
 
@@ -125,9 +125,9 @@ Always present changes as a markdown table with **Before** and **After** columns
 | Before | After |
 | --- | --- |
 | `<button className="...">` | Added `active:scale-[0.96] transition-transform` |
-| `scale(0.9)` on press | Raised to `scale(0.96)` - anything below `0.95` feels exaggerated |
+| `scale(0.9)` on press | Raised to `scale(0.96)` — anything below `0.95` feels exaggerated |
 
-Rows should cite the specific file and the specific property that changed when it isn't obvious from the snippet. If a principle was reviewed but nothing needed to change, omit that table entirely - empty tables add noise.
+Rows should cite the specific file and the specific property that changed when it isn't obvious from the snippet. If a principle was reviewed but nothing needed to change, omit that table entirely — empty tables add noise.
 
 ## Review Checklist
 
@@ -142,13 +142,13 @@ Rows should cite the specific file and the specific property that changed when i
 - [ ] Images have subtle outlines
 - [ ] Buttons use scale on press where appropriate
 - [ ] AnimatePresence uses `initial={false}` for default-state elements
-- [ ] No `transition: all` - only specific properties
+- [ ] No `transition: all` — only specific properties
 - [ ] `will-change` only on transform/opacity/filter, never `all`
 - [ ] Interactive elements have at least 40×40px hit area
 
 ## Reference Files
 
-- [typography.md](typography.md) - Text wrapping, font smoothing, tabular numbers
-- [surfaces.md](surfaces.md) - Border radius, optical alignment, shadows, image outlines
-- [animations.md](animations.md) - Interruptible animations, enter/exit transitions, icon animations, scale on press
-- [performance.md](performance.md) - Transition specificity, `will-change` usage
+- [typography.md](typography.md) — Text wrapping, font smoothing, tabular numbers
+- [surfaces.md](surfaces.md) — Border radius, optical alignment, shadows, image outlines
+- [animations.md](animations.md) — Interruptible animations, enter/exit transitions, icon animations, scale on press
+- [performance.md](performance.md) — Transition specificity, `will-change` usage

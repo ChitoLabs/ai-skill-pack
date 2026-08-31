@@ -83,7 +83,7 @@ If additional details are needed to narrow to a specific solution row, ask the u
 
 **Extension-backed commands include:** `az vm user update`, `az vm user reset-ssh`, `az vm user reset-remote-desktop`, `az vm run-command invoke`, and any operation that installs or invokes a VM extension.
 
-Run the pre-flight checks from [references/cannot-connect-to-vm.md - Pre-Flight Safety Checks](references/cannot-connect-to-vm.md#pre-flight-safety-checks) and evaluate:
+Run the pre-flight checks from [references/cannot-connect-to-vm.md — Pre-Flight Safety Checks](references/cannot-connect-to-vm.md#pre-flight-safety-checks) and evaluate:
 
 | Check | Required Value | If Failed |
 | ----- | -------------- | --------- |
@@ -98,7 +98,7 @@ Run the pre-flight checks from [references/cannot-connect-to-vm.md - Pre-Flight 
 1. **Stop.** Do NOT attempt any extension-backed remediation.
 2. **Inform the user** which check(s) failed and what the current state is.
 3. **Suggest non-agent alternatives:** Serial Console, offline repair VM, or Portal-based actions.
-4. If the state appears transient (e.g., VM just started), wait 30-60 seconds and **re-run the pre-flight checks** - do not run the extension command until all checks pass.
+4. If the state appears transient (e.g., VM just started), wait 30–60 seconds and **re-run the pre-flight checks** — do not run the extension command until all checks pass.
 
 ### Phase 3: Fetch Documentation
 
@@ -121,7 +121,7 @@ Combine the fetched documentation with the quick commands from the reference fil
 2. **Provide the immediate diagnostic/fix commands** from the reference file's Quick Commands section
 3. **Summarize the key resolution steps** from the fetched documentation
 4. **If the user is logged into Azure**, offer to run diagnostic CLI commands to confirm the root cause before applying fixes
-5. **Recommend next steps** - what to verify after the fix, and what to do if it doesn't work
+5. **Recommend next steps** — what to verify after the fix, and what to do if it doesn't work
 
 ### Phase 5: Escalation (if needed)
 
@@ -129,7 +129,7 @@ If the symptom doesn't match any solution in the reference file, or the fix does
 
 1. Check Azure Resource Health: `az vm get-instance-view --name <vm> -g <rg> --query "instanceView.statuses" -o table`
 2. Offer to restart the VM (requires user approval): `az vm restart --name <vm> -g <rg>`
-3. Offer to redeploy the VM (requires user approval - moves to new host): `az vm redeploy --name <vm> -g <rg>`
+3. Offer to redeploy the VM (requires user approval — moves to new host): `az vm redeploy --name <vm> -g <rg>`
 4. Fetch the comprehensive guide: [Troubleshoot RDP connections](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-connection) or [Troubleshoot SSH connections](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection)
 
 ---
@@ -150,4 +150,4 @@ If the symptom doesn't match any solution in the reference file, or the fix does
 
 ## References
 
-- [Cannot Connect to VM - Symptom Router](references/cannot-connect-to-vm.md)
+- [Cannot Connect to VM — Symptom Router](references/cannot-connect-to-vm.md)

@@ -697,7 +697,7 @@ AsyncStream { continuation in
     // Missing: continuation.finish()
 }
 
-// ❌ Wrapping a single-value API in a stream - use a regular async function instead
+// ❌ Wrapping a single-value API in a stream — use a regular async function instead
 func fetchUser() -> AsyncStream<User> { ... } // Overkill for one result
 ```
 

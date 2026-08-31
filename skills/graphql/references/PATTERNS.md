@@ -78,9 +78,9 @@ except SpecificError as e:
 
 ### Common Integration Points
 
-- Configuration: `assets/config.yaml`
-- Validation: `scripts/validate.py`
-- Documentation: `references/GUIDE.md`
+- Configuration: `../assets/config.yaml`
+- Validation: `../scripts/validate.py`
+- Documentation: `GUIDE.md`
 
 ---
 

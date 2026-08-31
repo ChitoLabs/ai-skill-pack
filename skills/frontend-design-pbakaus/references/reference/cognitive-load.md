@@ -49,7 +49,7 @@ Evaluate the interface against these 8 items:
 - [ ] **Working memory**: Does the user need to remember information from a previous screen to act on the current one?
 - [ ] **Progressive disclosure**: Is complexity revealed only when the user needs it?
 
-**Scoring**: Count the failed items. 0-1 failures = low cognitive load (good). 2-3 = moderate (address soon). 4+ = high cognitive load (critical fix needed).
+**Scoring**: Count the failed items. 0–1 failures = low cognitive load (good). 2–3 = moderate (address soon). 4+ = high cognitive load (critical fix needed).
 
 ---
 
@@ -59,13 +59,13 @@ Evaluate the interface against these 8 items:
 
 At any decision point, count the number of distinct options, actions, or pieces of information a user must simultaneously consider:
 - **≤4 items**: Within working memory limits, manageable
-- **5-7 items**: Pushing the boundary; consider grouping or progressive disclosure
+- **5–7 items**: Pushing the boundary; consider grouping or progressive disclosure
 - **8+ items**: Overloaded; users will skip, misclick, or abandon
 
 **Practical applications**:
 - Navigation menus: ≤5 top-level items (group the rest under clear categories)
 - Form sections: ≤4 fields visible per group before a visual break
-- Action buttons: 1 primary, 1-2 secondary, group the rest in a menu
+- Action buttons: 1 primary, 1–2 secondary, group the rest in a menu
 - Dashboard widgets: ≤4 key metrics visible without scrolling
 - Pricing tiers: ≤3 options (more causes analysis paralysis)
 
@@ -91,7 +91,7 @@ At any decision point, count the number of distinct options, actions, or pieces 
 
 ### 5. The Visual Noise Floor
 **Problem**: Every element has the same visual weight; nothing stands out.
-**Fix**: Establish clear hierarchy: one primary element, 2-3 secondary, everything else muted.
+**Fix**: Establish clear hierarchy: one primary element, 2–3 secondary, everything else muted.
 
 ### 6. The Inconsistent Pattern
 **Problem**: Similar actions work differently in different places.

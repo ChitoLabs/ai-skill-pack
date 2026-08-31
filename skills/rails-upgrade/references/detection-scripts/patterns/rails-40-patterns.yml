@@ -33,7 +33,7 @@ upgrade_findings:
         - "app/"
         - "lib/"
         - "config/"
-      explanation: "The strong_parameters gem is built into Rails 4.0 - require calls will fail"
+      explanation: "The strong_parameters gem is built into Rails 4.0 — require calls will fail"
       fix: "Remove require 'strong_parameters' calls entirely"
       variable_name: "REQUIRE_STRONG_PARAMS"
 
@@ -63,7 +63,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "app/models/"
-      explanation: "Rails 4.0 removed :conditions from associations - use a lambda with where() instead"
+      explanation: "Rails 4.0 removed :conditions from associations — use a lambda with where() instead"
       fix: "Move conditions into a lambda: has_many :items, -> { where(active: true) }"
       variable_name: "ASSOCIATION_CONDITIONS"
 
@@ -73,7 +73,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "app/models/"
-      explanation: "Rails 4.0 removed :order from associations - use a lambda with order() instead"
+      explanation: "Rails 4.0 removed :order from associations — use a lambda with order() instead"
       fix: "Move order into a lambda: has_many :items, -> { order('position ASC') }"
       variable_name: "ASSOCIATION_ORDER"
 
@@ -83,7 +83,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "app/models/"
-      explanation: "Rails 4.0 removed :extend from associations - use extending() inside a lambda"
+      explanation: "Rails 4.0 removed :extend from associations — use extending() inside a lambda"
       fix: "Move extend into a lambda: has_many :items, -> { extending SomeExtension }"
       variable_name: "ASSOCIATION_EXTEND"
 
@@ -93,7 +93,7 @@ upgrade_findings:
       exclude: ""
       search_paths:
         - "app/models/"
-      explanation: "Rails 4.0 removed :uniq from associations - use a lambda with distinct"
+      explanation: "Rails 4.0 removed :uniq from associations — use a lambda with distinct"
       fix: "Move uniq into a lambda: has_many :items, -> { distinct }, through: :joins"
       variable_name: "ASSOCIATION_UNIQ"
 
@@ -147,7 +147,7 @@ upgrade_findings:
       search_paths:
         - "app/models/"
       explanation: "Rails 4.0 removed :readonly from has_many :through associations"
-      fix: "Remove the readonly option - it is no longer supported"
+      fix: "Remove the readonly option — it is no longer supported"
       variable_name: "ASSOCIATION_READONLY"
 
     - name: "Ruby 1.8 version requirement"
@@ -157,7 +157,7 @@ upgrade_findings:
       search_paths:
         - "Gemfile"
         - ".ruby-version"
-      explanation: "Rails 4.0 requires Ruby 1.9.3+ (2.0+ recommended) - it will not boot on Ruby 1.8"
+      explanation: "Rails 4.0 requires Ruby 1.9.3+ (2.0+ recommended) — it will not boot on Ruby 1.8"
       fix: "Upgrade Ruby to 1.9.3+ (2.1+ recommended)"
       variable_name: "RUBY_VERSION"
 
@@ -243,7 +243,7 @@ upgrade_findings:
       search_paths:
         - "app/models/"
         - "config/"
-      explanation: "Rails 4.0 changed cache_timestamp_format from :number to :nsec - stored cache keys may no longer match"
+      explanation: "Rails 4.0 changed cache_timestamp_format from :number to :nsec — stored cache keys may no longer match"
       fix: "Invalidate stored cache keys after upgrading, or set self.cache_timestamp_format = :number to preserve old format"
       variable_name: "CACHE_KEY_FORMAT"
 
@@ -350,7 +350,7 @@ dependencies:
   protected_attributes:
     check: false
     gem_name: "protected_attributes"
-    message: "Temporary bridge gem for attr_accessible - migrate to Strong Parameters then remove"
+    message: "Temporary bridge gem for attr_accessible — migrate to Strong Parameters then remove"
     url: "https://github.com/rails/protected_attributes"
 
   rails_observers:
@@ -362,7 +362,7 @@ dependencies:
   activerecord_deprecated_finders:
     check: false
     gem_name: "activerecord-deprecated_finders"
-    message: "Temporary bridge gem for find_all_by_* - migrate to where/find_by then remove"
+    message: "Temporary bridge gem for find_all_by_* — migrate to where/find_by then remove"
     url: "https://github.com/rails/activerecord-deprecated_finders"
 
   actionpack_action_caching:

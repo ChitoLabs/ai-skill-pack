@@ -88,6 +88,6 @@ Deno.serve(async (req: Request) => {
 ## Constraints & Gotchas
 - No Node.js APIs (fs, net, etc.) in V8 isolate runtimes
 - No native modules or binaries (use WASM for compute-heavy work)
-- Limited CPU time per request - offload heavy work to queues
+- Limited CPU time per request — offload heavy work to queues
 - Cold starts are near-zero for isolates but real for Lambda@Edge
 - Database connections: use HTTP-based clients, not TCP connection pools

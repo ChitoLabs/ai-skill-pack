@@ -6,7 +6,7 @@ metadata:
   author: "Stanislav [MADTeacher] Chernyshev"
   version: 2.0
   skills_sh_url: "https://skills.sh/madteacher/mad-agents-skills/flutter-testing"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/flutter-testing"
+  github_url: "https://github.com/madteacher/mad-agents-skills/tree/HEAD/flutter-testing"
 ---
 
 # Flutter Testing
@@ -46,13 +46,13 @@ tests because they create false confidence and slow future changes.
 
 | Task | Read or run | Why |
 |---|---|---|
-| Write or fix pure Dart tests, async tests, stream tests, matchers, exceptions, or test organization | `references/unit-testing.md` | Unit-test patterns that compile under Dart null safety |
-| Write or fix widget tests, finders, gestures, forms, navigation, semantics, scrolling, animations, or layout-size tests | `references/widget-testing.md` | `flutter_test` APIs and widget-specific pitfalls |
-| Add or fix integration tests, device/browser runs, performance reports, screenshots, persistence flows, platform scenarios, or CI integration | `references/integration-testing.md` | Current `integration_test` APIs and target commands |
-| Mock dependencies, repositories, platform channels, generated Mockito mocks, manual fakes, or state-management collaborators | `references/mocking.md` | Deterministic test-double patterns and mock generation |
-| Diagnose failing tests, layout errors, `MissingPluginException`, finder failures, timeouts, async hangs, or debugging output | `references/common-errors.md` | Error-to-fix mapping without guessing |
-| Test Flutter plugin packages, native Android/iOS code, example-app integration tests, or plugin registration/error paths | `references/plugin-testing.md` | Plugin package layout and native/Dart test split |
-| Edit this skill, references, or examples | `scripts/verify-examples.sh` | Deterministic smoke check for stale patterns and broken links |
+| Write or fix pure Dart tests, async tests, stream tests, matchers, exceptions, or test organization | `unit-testing.md` | Unit-test patterns that compile under Dart null safety |
+| Write or fix widget tests, finders, gestures, forms, navigation, semantics, scrolling, animations, or layout-size tests | `widget-testing.md` | `flutter_test` APIs and widget-specific pitfalls |
+| Add or fix integration tests, device/browser runs, performance reports, screenshots, persistence flows, platform scenarios, or CI integration | `integration-testing.md` | Current `integration_test` APIs and target commands |
+| Mock dependencies, repositories, platform channels, generated Mockito mocks, manual fakes, or state-management collaborators | `mocking.md` | Deterministic test-double patterns and mock generation |
+| Diagnose failing tests, layout errors, `MissingPluginException`, finder failures, timeouts, async hangs, or debugging output | `common-errors.md` | Error-to-fix mapping without guessing |
+| Test Flutter plugin packages, native Android/iOS code, example-app integration tests, or plugin registration/error paths | `plugin-testing.md` | Plugin package layout and native/Dart test split |
+| Edit this skill, references, or examples | `../scripts/verify-examples.sh` | Deterministic smoke check for stale patterns and broken links |
 
 ## Mandatory Validation
 

@@ -7,7 +7,7 @@ metadata:
   version: 1.0.0
   argument-hint: <file-or-pattern>
   skills_sh_url: "https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines"
-  github_url: "https://github.com/xingyu4j/skills/tree/HEAD/skills/web-design-guidelines"
+  github_url: "https://github.com/vercel-labs/agent-skills/tree/HEAD/skills/web-design-guidelines"
 ---
 
 # Web Interface Guidelines

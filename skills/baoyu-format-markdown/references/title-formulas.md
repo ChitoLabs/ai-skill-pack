@@ -13,7 +13,7 @@
 | 5 | Contrast | Small cause → big result, or expectation vs reality | "One doc replaced three months of AI tuning" |
 | 6 | Result First | Lead with a surprising outcome, hook reader to find out why | "After using this method, nobody could tell it was AI" |
 | 7 | Rhetorical Question | Ask a question that creates an unfinished feeling | "Why can people spot your AI writing at a glance?" |
-| 8 | Empathy | Touch pain points, trigger shared frustration or relief | "Three months fighting AI flavor - I finally broke free" |
+| 8 | Empathy | Touch pain points, trigger shared frustration or relief | "Three months fighting AI flavor — I finally broke free" |
 
 ### When to pick each formula
 
@@ -35,7 +35,7 @@ Not every title needs a hook. Straightforward titles work well as alternatives:
 - **Descriptive**: clearly state the topic and scope
 - **Declarative**: state the main conclusion or thesis directly
 
-These provide balance - readers who prefer clarity over curiosity will appreciate them.
+These provide balance — readers who prefer clarity over curiosity will appreciate them.
 
 ## Title Principles
 
@@ -44,7 +44,7 @@ These provide balance - readers who prefer clarity over curiosity will appreciat
 - **Negation > affirmation**: "you're doing it wrong" beats "the right way"
 - **Conversational**: like chatting with a friend, not an academic paper
 - **Max ~30 characters**: longer titles get truncated in feeds
-- **Accurate, not clickbait**: the article must deliver what the title promises - titles can be bold but the content must back them up
+- **Accurate, not clickbait**: the article must deliver what the title promises — titles can be bold but the content must back them up
 
 ## Prohibited Patterns
 

@@ -20,5 +20,5 @@ Maps common bug shapes to the highest-value first failing spec.
 ## When the Boundary Is Unclear
 
 1. Write the spec at the highest visible symptom boundary first.
-2. Run it - if it fails for the wrong reason (e.g., factory error), move down a layer.
+2. Run it — if it fails for the wrong reason (e.g., factory error), move down a layer.
 3. The correct boundary is where the failure message directly names the missing behavior.

@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,28 +51,5 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/best-practices/RULE.md` - preserved source companion file.
-- `references/best-practices/dependencies.md` - preserved source companion file.
-- `references/best-practices/packages.md` - preserved source companion file.
-- `references/best-practices/structure.md` - preserved source companion file.
-- `references/boundaries/RULE.md` - preserved source companion file.
-- `references/caching/RULE.md` - preserved source companion file.
-- `references/caching/gotchas.md` - preserved source companion file.
-- `references/caching/remote-cache.md` - preserved source companion file.
-- `references/ci/RULE.md` - preserved source companion file.
-- `references/ci/github-actions.md` - preserved source companion file.
-- `references/ci/patterns.md` - preserved source companion file.
-- `references/ci/vercel.md` - preserved source companion file.
-- `references/cli/RULE.md` - preserved source companion file.
-- `references/cli/commands.md` - preserved source companion file.
-- `references/command/turborepo.md` - preserved source companion file.
-- `references/configuration/RULE.md` - preserved source companion file.
-- `references/configuration/global-options.md` - preserved source companion file.
-- `references/configuration/gotchas.md` - preserved source companion file.
-- `references/configuration/tasks.md` - preserved source companion file.
-- `references/environment/RULE.md` - preserved source companion file.
-- `references/environment/gotchas.md` - preserved source companion file.
-- `references/environment/modes.md` - preserved source companion file.
-- `references/filtering/RULE.md` - preserved source companion file.
-- `references/filtering/patterns.md` - preserved source companion file.
-- `references/watch/RULE.md` - preserved source companion file.
+- `references/` - 25 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

@@ -1,4 +1,4 @@
-# Metrics - Sentry Node.js SDK
+# Metrics — Sentry Node.js SDK
 
 > Minimum SDK: `@sentry/node` ≥10.25.0 (stable `Sentry.metrics.*` API)  
 > `enableMetrics` top-level option: ≥10.24.0 (default: `true`)  
@@ -12,9 +12,9 @@
 Sentry Metrics let you track counters, current values, and value distributions. They appear in Sentry alongside related errors and can be correlated with traces.
 
 Key characteristics:
-- Metrics are **enabled by default** - no configuration required for basic use
+- Metrics are **enabled by default** — no configuration required for basic use
 - Buffered in memory (max 1000 entries) and sent periodically
-- High-cardinality attributes **degrade backend performance** - keep attribute cardinality low
+- High-cardinality attributes **degrade backend performance** — keep attribute cardinality low
 - Use `Sentry.logger.*` (not metrics) when you need per-user or per-request detail
 
 ---
@@ -28,7 +28,7 @@ import * as Sentry from "@sentry/node";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
-  // Metrics are enabled by default - no config needed
+  // Metrics are enabled by default — no config needed
 
   // To disable entirely:
   // enableMetrics: false,
@@ -44,7 +44,7 @@ Sentry.init({
 
 ## Metrics API
 
-Three methods. No `increment()` or `set()` - those do not exist in v10:
+Three methods. No `increment()` or `set()` — those do not exist in v10:
 
 ```typescript
 Sentry.metrics.count(name, value?, options?)
@@ -75,20 +75,20 @@ function distribution(name: string, value: number, options?: MetricOptions): voi
 
 | Method         | Underlying Type | Use For                                          |
 |----------------|-----------------|--------------------------------------------------|
-| `count`        | counter         | Event frequency - requests, errors, signups      |
-| `gauge`        | gauge           | Current snapshot value - queue depth, CPU %      |
-| `distribution` | distribution    | Value histograms/ranges - latencies, file sizes  |
+| `count`        | counter         | Event frequency — requests, errors, signups      |
+| `gauge`        | gauge           | Current snapshot value — queue depth, CPU %      |
+| `distribution` | distribution    | Value histograms/ranges — latencies, file sizes  |
 
 ```typescript
-// count - how many times something happened
+// count — how many times something happened
 Sentry.metrics.count("user.signups", 1);
 Sentry.metrics.count("api.errors", 1, { attributes: { endpoint: "/checkout" } });
 
-// gauge - what the current state is
+// gauge — what the current state is
 Sentry.metrics.gauge("queue.depth", 42);
 Sentry.metrics.gauge("memory.usage", 512, { unit: "megabyte" });
 
-// distribution - spread of a measured value
+// distribution — spread of a measured value
 Sentry.metrics.distribution("api.latency", 187.5, { unit: "millisecond" });
 Sentry.metrics.distribution("payload.size", 1024, { unit: "byte" });
 ```
@@ -153,12 +153,12 @@ Sentry.metrics.distribution("db.query_time", 45.3, {
 Keep attribute values bounded. High-cardinality attributes (per-user IDs, request UUIDs) cause performance issues in Sentry's metrics backend.
 
 ```typescript
-// ❌ HIGH CARDINALITY - avoid as metric attributes
+// ❌ HIGH CARDINALITY — avoid as metric attributes
 Sentry.metrics.count("page.view", 1, {
   attributes: { user_id: "uuid-abc-123" },   // millions of unique values
 });
 
-// ✅ LOW CARDINALITY - bounded enums and sets
+// ✅ LOW CARDINALITY — bounded enums and sets
 Sentry.metrics.count("page.view", 1, {
   attributes: {
     page: "/dashboard",
@@ -169,7 +169,7 @@ Sentry.metrics.count("page.view", 1, {
 });
 ```
 
-Use `Sentry.logger.*` for per-user or per-request data - logs handle high cardinality gracefully.
+Use `Sentry.logger.*` for per-user or per-request data — logs handle high cardinality gracefully.
 
 ---
 
@@ -178,7 +178,7 @@ Use `Sentry.logger.*` for per-user or per-request data - logs handle high cardin
 Set attributes on a scope and they auto-attach to all metrics emitted within it:
 
 ```typescript
-// Global scope - applies to all metrics app-wide
+// Global scope — applies to all metrics app-wide
 Sentry.getGlobalScope().setAttributes({
   service: "payments",
   deploy_env: "production",

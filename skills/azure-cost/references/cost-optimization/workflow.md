@@ -1,6 +1,6 @@
 # Cost Optimization Workflow
 
-Use this workflow when the user wants to **reduce their costs** - find waste, orphaned resources, rightsizing opportunities.
+Use this workflow when the user wants to **reduce their costs** — find waste, orphaned resources, rightsizing opportunities.
 
 > **Important:** Always present the total bill and cost breakdown (from the [Cost Query Workflow](../cost-query/workflow.md)) alongside optimization recommendations.
 
@@ -9,7 +9,7 @@ Use this workflow when the user wants to **reduce their costs** - find waste, or
 **Required Tools:**
 - Azure CLI installed and authenticated (`az login`)
 - Azure CLI extensions: `costmanagement`, `resource-graph`
-- Azure Quick Review (azqr) installed - See [Azure Quick Review](./azure-quick-review.md)
+- Azure Quick Review (azqr) installed — See [Azure Quick Review](./azure-quick-review.md)
 
 **Required Permissions:**
 - Cost Management Reader role
@@ -67,12 +67,12 @@ Wait for user response before proceeding.
 - User reports a cost spike, unusual cluster utilization, or wants budget alerts
 
 **Tool Selection:**
-- **Prefer MCP first**: Use `azure__aks` for AKS operations (list clusters, get node pools, inspect configuration) - it provides richer metadata and is consistent with AKS skill conventions in this repo
+- **Prefer MCP first**: Use `azure__aks` for AKS operations (list clusters, get node pools, inspect configuration) — it provides richer metadata and is consistent with AKS skill conventions in this repo
 - **Fall back to CLI**: Use `az aks` and `kubectl` only when the specific operation cannot be performed via the MCP surface
 
 **Reference files (load only what is needed for the request):**
-- [Cost Analysis Add-on](./azure-aks-cost-addon.md) - enable namespace-level cost visibility
-- [Anomaly Investigation](./azure-aks-anomalies.md) - cost spikes, scaling events, budget alerts
+- [Cost Analysis Add-on](./azure-aks-cost-addon.md) — enable namespace-level cost visibility
+- [Anomaly Investigation](./azure-aks-anomalies.md) — cost spikes, scaling events, budget alerts
 
 > **Note**: For general subscription-wide cost optimization (including AKS resource groups), continue with Step 2. For AKS-focused analysis, follow the instructions in the relevant reference file above.
 
@@ -163,7 +163,7 @@ Fetch current pricing from official Azure pricing pages using `fetch_webpage`:
 - App Service: https://azure.microsoft.com/pricing/details/app-service/
 - Log Analytics: https://azure.microsoft.com/pricing/details/monitor/
 
-> **Important**: Check for free tier allowances - many Azure services have generous free limits.
+> **Important**: Check for free tier allowances — many Azure services have generous free limits.
 
 ## Step 6: Collect Utilization Metrics
 

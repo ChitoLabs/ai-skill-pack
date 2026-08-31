@@ -1,6 +1,6 @@
 # Azure Region Availability Reference
 
-> **AUTHORITATIVE SOURCE** - Consult this file BEFORE recommending any region.
+> **AUTHORITATIVE SOURCE** — Consult this file BEFORE recommending any region.
 >
 > Official reference: https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table
 
@@ -50,7 +50,7 @@ It has limited quota in some regions, to get available regions with enough quota
 
 ### Azure OpenAI
 
-⚠️ **Very limited - varies by model**
+⚠️ **Very limited — varies by model**
 
 | Region | GPT-4o | GPT-4 | GPT-3.5 | Embeddings |
 |--------|:------:|:-----:|:-------:|:----------:|
@@ -68,7 +68,7 @@ It has limited quota in some regions, to get available regions with enough quota
 
 ## Services Available in Most Regions
 
-These services are available in all major Azure regions - no special consideration needed:
+These services are available in all major Azure regions — no special consideration needed:
 
 - **Container Apps**
 - **Azure Functions**

@@ -3,10 +3,10 @@ name: swift-testing-expert
 description: "Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting patterns, and XCTest migration. Use when writing new Swift tests, modernizing XCTest suites, debugging flaky tests, or improving test quality and maintainability in Apple-platform or Swift server projects."
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: avdlee
   version: 0.1
   skills_sh_url: "https://skills.sh/avdlee/swift-testing-agent-skill/swift-testing-expert"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/swift-testing-expert"
+  github_url: "https://github.com/avdlee/swift-testing-agent-skill/tree/HEAD/swift-testing-expert"
 ---
 
 # Swift Testing
@@ -42,16 +42,16 @@ Use this skill to write, review, migrate, and debug Swift tests with modern Swif
 
 ## Routing map (read the right reference fast)
 
-- Test building blocks and suite organization -> `references/fundamentals.md`
-- `#expect`, `#require`, and throw expectations -> `references/expectations.md`
-- Traits, tags, and Xcode test-plan filtering -> `references/traits-and-tags.md`
-- Parameterized test design and combinatorics -> `references/parameterized-testing.md`
-- Default parallel execution, `.serialized`, isolation strategy -> `references/parallelization-and-isolation.md`
-- Test speed, determinism, and flakiness prevention -> `references/performance-and-best-practices.md`
-- Async waiting and callback bridging -> `references/async-testing-and-waiting.md`
-- XCTest coexistence and migration workflow -> `references/migration-from-xctest.md`
-- Test navigator/report workflows and diagnostics -> `references/xcode-workflows.md`
-- Index and quick navigation -> `references/_index.md`
+- Test building blocks and suite organization -> `fundamentals.md`
+- `#expect`, `#require`, and throw expectations -> `expectations.md`
+- Traits, tags, and Xcode test-plan filtering -> `traits-and-tags.md`
+- Parameterized test design and combinatorics -> `parameterized-testing.md`
+- Default parallel execution, `.serialized`, isolation strategy -> `parallelization-and-isolation.md`
+- Test speed, determinism, and flakiness prevention -> `performance-and-best-practices.md`
+- Async waiting and callback bridging -> `async-testing-and-waiting.md`
+- XCTest coexistence and migration workflow -> `migration-from-xctest.md`
+- Test navigator/report workflows and diagnostics -> `xcode-workflows.md`
+- Index and quick navigation -> `_index.md`
 
 ## Common pitfalls -> next best move
 
@@ -73,13 +73,13 @@ Use this skill to write, review, migrate, and debug Swift tests with modern Swif
 
 ## References
 
-- `references/_index.md`
-- `references/fundamentals.md`
-- `references/expectations.md`
-- `references/traits-and-tags.md`
-- `references/parameterized-testing.md`
-- `references/parallelization-and-isolation.md`
-- `references/performance-and-best-practices.md`
-- `references/async-testing-and-waiting.md`
-- `references/migration-from-xctest.md`
-- `references/xcode-workflows.md`
+- `_index.md`
+- `fundamentals.md`
+- `expectations.md`
+- `traits-and-tags.md`
+- `parameterized-testing.md`
+- `parallelization-and-isolation.md`
+- `performance-and-best-practices.md`
+- `async-testing-and-waiting.md`
+- `migration-from-xctest.md`
+- `xcode-workflows.md`

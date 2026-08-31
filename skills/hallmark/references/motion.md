@@ -107,3 +107,4 @@ Functional motion (progress bars, loading spinners, skeletons) still runs  -  ju
 - Custom cursors.
 - Scroll-driven animations without a reduced-motion fallback.
 - Infinite loops (other than functional loaders)  -  they pull the eye and never let go.
+

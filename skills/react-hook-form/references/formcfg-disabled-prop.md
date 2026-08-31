@@ -7,9 +7,9 @@ tags: formcfg, register, disabled, validation, footgun
 
 ## Understand That register's disabled Prop Clears the Value
 
-Passing `disabled: true` to `register` (or to `useController`/`Controller`) makes the field's value become `undefined` in the form state and skips its validation. This is the documented behavior - RHF treats a disabled field as "not part of submission." It is **not** the same as `<input disabled>` for purely visual disabling. If you only want the input greyed out, use the plain HTML attribute. Use `register('name', { disabled: true })` only when you intentionally want the field excluded from submission and validation.
+Passing `disabled: true` to `register` (or to `useController`/`Controller`) makes the field's value become `undefined` in the form state and skips its validation. This is the documented behavior — RHF treats a disabled field as "not part of submission." It is **not** the same as `<input disabled>` for purely visual disabling. If you only want the input greyed out, use the plain HTML attribute. Use `register('name', { disabled: true })` only when you intentionally want the field excluded from submission and validation.
 
-**Incorrect (using register's disabled option for visual disabling - the user's typed value disappears from form state):**
+**Incorrect (using register's disabled option for visual disabling — the user's typed value disappears from form state):**
 
 ```typescript
 function CheckoutForm() {

@@ -11,3 +11,4 @@ The label or heading sits *below* the section's content. Inverts hierarchy.
 ```
 
 ---
+

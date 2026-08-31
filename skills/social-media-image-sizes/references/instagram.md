@@ -4,7 +4,7 @@ platform: Instagram
 tags: instagram, social-media, image-sizes, feed, stories, reels, carousel, ads
 ---
 
-# Instagram Image & Video Sizes - 2025
+# Instagram Image & Video Sizes — 2025
 
 ## Profile
 
@@ -20,7 +20,7 @@ tags: instagram, social-media, image-sizes, feed, stories, reels, carousel, ads
 | Square Post | 1080 × 1080 | 1:1 | 30 MB | |
 | Landscape Post | 1080 × 566 | 1.91:1 | 30 MB | |
 
-> **Best practice:** Use **4:5 portrait (1080×1350)** for feed posts - portrait content occupies more screen real estate and consistently drives higher engagement.
+> **Best practice:** Use **4:5 portrait (1080×1350)** for feed posts — portrait content occupies more screen real estate and consistently drives higher engagement.
 
 ## Stories & Reels
 
@@ -30,7 +30,7 @@ tags: instagram, social-media, image-sizes, feed, stories, reels, carousel, ads
 | Reel | 1080 × 1920 | 9:16 | Cover photo: 1080×1920 |
 | Reel Cover Thumbnail | 420 × 654 | 1:1.55 | Shown in grid as 1:1 crop |
 
-> **Safe zone:** Leave ~250 px padding top and bottom - Instagram's UI (profile pic, CTA buttons) occupies those areas.
+> **Safe zone:** Leave ~250 px padding top and bottom — Instagram's UI (profile pic, CTA buttons) occupies those areas.
 
 ## Carousel Posts
 

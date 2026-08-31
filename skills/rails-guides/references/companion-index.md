@@ -1,0 +1,48 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `action_cable_overview.md` - preserved source companion file.
+- `action_controller_advanced_topics.md` - preserved source companion file.
+- `action_controller_overview.md` - preserved source companion file.
+- `action_mailbox_basics.md` - preserved source companion file.
+- `action_mailer_basics.md` - preserved source companion file.
+- `action_text_overview.md` - preserved source companion file.
+- `action_view_helpers.md` - preserved source companion file.
+- `action_view_overview.md` - preserved source companion file.
+- `active_job_basics.md` - preserved source companion file.
+- `active_model_basics.md` - preserved source companion file.
+- `active_record_basics.md` - preserved source companion file.
+- `active_record_callbacks.md` - preserved source companion file.
+- `active_record_composite_primary_keys.md` - preserved source companion file.
+- `active_record_encryption.md` - preserved source companion file.
+- `active_record_migrations.md` - preserved source companion file.
+- `active_record_multiple_databases.md` - preserved source companion file.
+- `active_record_postgresql.md` - preserved source companion file.
+- `active_record_querying.md` - preserved source companion file.
+- `active_record_validations.md` - preserved source companion file.
+- `active_storage_overview.md` - preserved source companion file.
+- `active_support_core_extensions.md` - preserved source companion file.
+- `active_support_instrumentation.md` - preserved source companion file.
+- `api_app.md` - preserved source companion file.
+- `asset_pipeline.md` - preserved source companion file.
+- `association_basics.md` - preserved source companion file.
+- `autoloading_and_reloading_constants.md` - preserved source companion file.
+- `caching_with_rails.md` - preserved source companion file.
+- `command_line.md` - preserved source companion file.
+- `configuring.md` - preserved source companion file.
+- `debugging_rails_applications.md` - preserved source companion file.
+- `error_reporting.md` - preserved source companion file.
+- `form_helpers.md` - preserved source companion file.
+- `getting_started.md` - preserved source companion file.
+- `i18n.md` - preserved source companion file.
+- `initialization.md` - preserved source companion file.
+- `layouts_and_rendering.md` - preserved source companion file.
+- `rails_on_rack.md` - preserved source companion file.
+- `routing.md` - preserved source companion file.
+- `security.md` - preserved source companion file.
+- `testing.md` - preserved source companion file.
+- `threading_and_code_execution.md` - preserved source companion file.
+- `tuning_performance_for_deployment.md` - preserved source companion file.
+- `upgrading_ruby_on_rails.md` - preserved source companion file.
+- `working_with_javascript_in_rails.md` - preserved source companion file.

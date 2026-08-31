@@ -26,3 +26,4 @@ A rounded full-pill nav, *visibly detached* from the page edges, sitting ~`var(-
 ```
 
 *Anti-pattern:* a "pill" that's ~95 % viewport-wide is just a full-width nav with rounded ends  -  defeats the point. The pill must be visibly detached and content-sized; if your link list pushes it past ~720 px, drop a link or switch to N1.
+

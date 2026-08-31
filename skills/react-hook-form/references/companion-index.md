@@ -1,0 +1,54 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `../assets/templates/_template.md` - preserved source companion file.
+- `AGENTS.md` - preserved source companion file.
+- `README.md` - preserved source companion file.
+- `_sections.md` - preserved source companion file.
+- `adv-devtools-performance.md` - preserved source companion file.
+- `adv-formprovider-memo.md` - preserved source companion file.
+- `adv-testing-wrapper.md` - preserved source companion file.
+- `array-complete-default-objects.md` - preserved source companion file.
+- `array-separate-crud-operations.md` - preserved source companion file.
+- `array-unique-fieldarray-per-name.md` - preserved source companion file.
+- `array-use-field-id-as-key.md` - preserved source companion file.
+- `array-virtualization-formprovider.md` - preserved source companion file.
+- `ctrl-avoid-double-registration.md` - preserved source companion file.
+- `ctrl-controller-field-props.md` - preserved source companion file.
+- `ctrl-local-state-combination.md` - preserved source companion file.
+- `ctrl-single-usecontroller-per-component.md` - preserved source companion file.
+- `ctrl-usecontroller-isolation.md` - preserved source companion file.
+- `formcfg-async-default-values.md` - preserved source companion file.
+- `formcfg-default-values.md` - preserved source companion file.
+- `formcfg-disabled-prop.md` - preserved source companion file.
+- `formcfg-revalidate-mode.md` - preserved source companion file.
+- `formcfg-should-unregister.md` - preserved source companion file.
+- `formcfg-useeffect-dependency.md` - preserved source companion file.
+- `formcfg-validation-mode.md` - preserved source companion file.
+- `formstate-async-submit-lifecycle.md` - preserved source companion file.
+- `formstate-avoid-isvalid-with-onsubmit.md` - preserved source companion file.
+- `formstate-destructure-formstate.md` - preserved source companion file.
+- `formstate-getfieldstate-for-single-field.md` - preserved source companion file.
+- `formstate-subscribe-to-specific-fields.md` - preserved source companion file.
+- `formstate-useformstate-isolation.md` - preserved source companion file.
+- `integ-mui-controller-pattern.md` - preserved source companion file.
+- `integ-shadcn-form-import.md` - preserved source companion file.
+- `integ-shadcn-select-wiring.md` - preserved source companion file.
+- `integ-value-transform.md` - preserved source companion file.
+- `metadata.json` - preserved source companion file.
+- `sub-avoid-watch-in-render.md` - preserved source companion file.
+- `sub-deep-subscription.md` - preserved source companion file.
+- `sub-subscribe-outside-react.md` - preserved source companion file.
+- `sub-useformcontext-sparingly.md` - preserved source companion file.
+- `sub-usewatch-default-value.md` - preserved source companion file.
+- `sub-usewatch-over-watch.md` - preserved source companion file.
+- `sub-usewatch-with-getvalues.md` - preserved source companion file.
+- `sub-watch-specific-fields.md` - preserved source companion file.
+- `valid-delay-error.md` - preserved source companion file.
+- `valid-dynamic-schema-factory.md` - preserved source companion file.
+- `valid-error-message-strategy.md` - preserved source companion file.
+- `valid-inline-vs-resolver.md` - preserved source companion file.
+- `valid-native-validation.md` - preserved source companion file.
+- `valid-resolver-caching.md` - preserved source companion file.
+- `valid-server-errors.md` - preserved source companion file.

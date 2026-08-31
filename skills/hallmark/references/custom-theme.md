@@ -365,3 +365,4 @@ The vibe names two hues: *moss* (greenish, ~140°) and *soft pink* (warm, ~350°
 5. **Does not bypass [Preview and Approval](workflows/build.md#phase-7-preview-and-approval).** The custom palette and pairing surface in plain text before code so the user can redirect early.
 
 If any of those five lines is bent, the custom output is over-invented. Audit it; redirect.
+

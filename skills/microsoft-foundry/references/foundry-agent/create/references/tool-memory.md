@@ -6,7 +6,7 @@ Managed long-term memory for Foundry agents. Enables agent continuity across ses
 
 - A [Foundry project](https://learn.microsoft.com/azure/ai-foundry/how-to/create-projects) with authorization configured
 - A **chat model deployment** (e.g., `gpt-5.2`)
-- An **embedding model deployment** (e.g., `text-embedding-3-small`) - see [Check Embedding Model](#check-embedding-model) below
+- An **embedding model deployment** (e.g., `text-embedding-3-small`) — see [Check Embedding Model](#check-embedding-model) below
 - Python packages: `pip install azure-ai-projects azure-identity`
 
 ### Check Embedding Model
@@ -18,7 +18,7 @@ Use `foundry_models_list` MCP tool to list all deployments and look for an embed
 | Result | Action |
 |--------|--------|
 | ✅ Embedding model found | Note the deployment name and proceed |
-| ❌ No embedding model | Deploy one before enabling memory - see below |
+| ❌ No embedding model | Deploy one before enabling memory — see below |
 
 ### Deploy Embedding Model
 
@@ -68,7 +68,7 @@ Step 4: Test with conversation
 | `user_profile_enabled` | Build and maintain user profile |
 | `user_profile_details` | Control what data gets stored (e.g., `"Avoid sensitive data such as age, financials, location, credentials"`) |
 
-> 💡 **Tip:** Use `user_profile_details` to control what the agent stores - e.g., `"flight carrier preference and dietary restrictions"` for a travel agent, or exclude sensitive data.
+> 💡 **Tip:** Use `user_profile_details` to control what the agent stores — e.g., `"flight carrier preference and dietary restrictions"` for a travel agent, or exclude sensitive data.
 
 ### Scope
 
@@ -77,7 +77,7 @@ The `scope` parameter partitions memory per user:
 | Scope Value | Behavior |
 |-------------|----------|
 | `{{$userId}}` | Auto-extracts TID+OID from auth token (recommended) |
-| `"user_123"` | Static identifier - you manage user mapping |
+| `"user_123"` | Static identifier — you manage user mapping |
 
 ### Memory Store Operations
 
@@ -87,7 +87,7 @@ The `scope` parameter partitions memory per user:
 | List | List all memory stores in the project |
 | Update | Update memory store description or configuration |
 | Delete scope | Delete memories for a specific user scope |
-| Delete store | Delete entire memory store (irreversible - all scopes lost) |
+| Delete store | Delete entire memory store (irreversible — all scopes lost) |
 
 > ⚠️ **Warning:** Deleting a memory store removes all memories across all scopes. Agents with attached memory stores lose access to historical context.
 
@@ -99,7 +99,7 @@ The `scope` parameter partitions memory per user:
 | Memories don't appear after conversation | Updates are debounced or still processing | Increase wait time or call update API with `update_delay=0` |
 | Memory search returns no results | Scope mismatch between update and search | Use same scope value for storing and retrieving memories |
 | Agent response ignores stored memory | Agent not configured with memory search tool | Confirm agent definition includes `MemorySearchTool` with correct store name |
-| No embedding model available | Embedding deployment missing | Deploy an embedding model - see Check Embedding Model section |
+| No embedding model available | Embedding deployment missing | Deploy an embedding model — see Check Embedding Model section |
 
 ## References
 

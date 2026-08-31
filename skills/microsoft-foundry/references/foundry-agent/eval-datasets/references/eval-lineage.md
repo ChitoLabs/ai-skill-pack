@@ -1,4 +1,4 @@
-# Eval Lineage - Full Traceability from Production to Deployment
+# Eval Lineage — Full Traceability from Production to Deployment
 
 Track the complete chain from production traces through dataset creation, evaluation runs, comparisons, and deployment decisions. Enables "why was this deployed?" audit queries and compliance reporting.
 

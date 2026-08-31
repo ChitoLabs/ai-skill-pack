@@ -3,10 +3,10 @@ name: threejs-geometry
 description: Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.
 license: Apache-2.0
 metadata:
-  author: midudev
+  author: cloudai-x
   version: 0.1
   skills_sh_url: "https://skills.sh/cloudai-x/threejs-skills/threejs-geometry"
-  github_url: "https://github.com/midudev/autoskills/tree/HEAD/packages/autoskills/skills-registry/threejs-geometry"
+  github_url: "https://github.com/cloudai-x/threejs-skills/tree/HEAD/skills/threejs-geometry"
 ---
 
 # Three.js Geometry

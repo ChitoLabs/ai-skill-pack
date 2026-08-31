@@ -83,8 +83,8 @@ Resources provisioned?
     ├── Query role assignments on target resources
     ├── Compare against expected roles from plan
     │   ├── All roles present and correct → ✅ Pass
-    │   ├── Missing roles → ❌ Fail - add to Bicep, redeploy
-    │   └── Wrong scope or generic roles → ⚠️ Warning - fix and redeploy
+    │   ├── Missing roles → ❌ Fail — add to Bicep, redeploy
+    │   └── Wrong scope or generic roles → ⚠️ Warning — fix and redeploy
     └── Record results in deployment verification
 ```
 

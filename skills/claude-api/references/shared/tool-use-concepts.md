@@ -6,7 +6,7 @@ This file covers the conceptual foundations of tool use with the Claude API. For
 
 ### Tool Definition Structure
 
-> **Note:** When using the Tool Runner (beta), tool schemas are generated automatically from your function signatures (Python), Zod schemas (TypeScript), annotated classes (Java), `jsonschema` struct tags (Go), or `BaseTool` subclasses (Ruby). The raw JSON schema format below is for the manual approach - including PHP's `BetaRunnableTool`, which wraps a run closure around a hand-written schema - or SDKs without tool runner support.
+> **Note:** When using the Tool Runner (beta), tool schemas are generated automatically from your function signatures (Python), Zod schemas (TypeScript), annotated classes (Java), `jsonschema` struct tags (Go), or `BaseTool` subclasses (Ruby). The raw JSON schema format below is for the manual approach — including PHP's `BetaRunnableTool`, which wraps a run closure around a hand-written schema — or SDKs without tool runner support.
 
 Each tool requires a name, description, and JSON Schema for its inputs:
 
@@ -35,7 +35,7 @@ Each tool requires a name, description, and JSON Schema for its inputs:
 **Best practices for tool definitions:**
 
 - Use clear, descriptive names (e.g., `get_weather`, `search_database`, `send_email`)
-- Write detailed descriptions - Claude uses these to decide when to use the tool
+- Write detailed descriptions — Claude uses these to decide when to use the tool
 - Include descriptions for each property
 - Use `enum` for parameters with a fixed set of values
 - Mark truly required parameters in `required`; make others optional with defaults
@@ -59,11 +59,11 @@ Any `tool_choice` value can also include `"disable_parallel_tool_use": true` to 
 
 ### Tool Runner vs Manual Loop
 
-**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically - it calls the API, detects tool use requests, executes your tool functions, feeds results back to Claude, and repeats until Claude stops calling tools. Available in Python, TypeScript, Java, Go, Ruby, and PHP SDKs (beta). The Python SDK also provides MCP conversion helpers (`anthropic.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner - see `python/claude-api/tool-use.md` for details.
+**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically — it calls the API, detects tool use requests, executes your tool functions, feeds results back to Claude, and repeats until Claude stops calling tools. Available in Python, TypeScript, Java, Go, Ruby, and PHP SDKs (beta). The Python SDK also provides MCP conversion helpers (`anthropic.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner — see `python/claude-api/tool-use.md` for details.
 
 **Manual Agentic Loop:** Use when you need fine-grained control over the loop (e.g., custom logging, conditional tool execution, human-in-the-loop approval). Loop until `stop_reason == "end_turn"`, always append the full `response.content` to preserve tool_use blocks, and ensure each `tool_result` includes the matching `tool_use_id`.
 
-**Stop reasons for server-side tools:** When using server-side tools (code execution, web search, etc.), the API runs a server-side sampling loop. If this loop reaches its default limit of 10 iterations, the response will have `stop_reason: "pause_turn"`. To continue, re-send the user message and assistant response and make another API request - the server will resume where it left off. Do NOT add an extra user message like "Continue." - the API detects the trailing `server_tool_use` block and knows to resume automatically.
+**Stop reasons for server-side tools:** When using server-side tools (code execution, web search, etc.), the API runs a server-side sampling loop. If this loop reaches its default limit of 10 iterations, the response will have `stop_reason: "pause_turn"`. To continue, re-send the user message and assistant response and make another API request — the server will resume where it left off. Do NOT add an extra user message like "Continue." — the API detects the trailing `server_tool_use` block and knows to resume automatically.
 
 ```python
 # Handle pause_turn in your agentic loop
@@ -72,7 +72,7 @@ if response.stop_reason == "pause_turn":
         {"role": "user", "content": user_query},
         {"role": "assistant", "content": response.content},
     ]
-    # Make another API request - server resumes automatically
+    # Make another API request — server resumes automatically
     response = client.messages.create(
         model="claude-opus-4-7", messages=messages, tools=tools
     )
@@ -94,13 +94,13 @@ When Claude uses a tool, the response contains a `tool_use` block. You must:
 
 **Error handling in tool results:** When a tool execution fails, set `"is_error": true` and provide an informative error message. Claude will typically acknowledge the error and either try a different approach or ask for clarification.
 
-**Multiple tool calls:** Claude can request multiple tools in a single response. Handle them all before continuing - send all results back in a single `user` message.
+**Multiple tool calls:** Claude can request multiple tools in a single response. Handle them all before continuing — send all results back in a single `user` message.
 
 ---
 
 ## Server-Side Tools: Code Execution
 
-The code execution tool lets Claude run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure - you don't execute anything client-side. Just include the tool definition and Claude handles the rest.
+The code execution tool lets Claude run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure — you don't execute anything client-side. Just include the tool definition and Claude handles the rest.
 
 ### Key Facts
 
@@ -112,7 +112,7 @@ The code execution tool lets Claude run code in a secure, sandboxed container. U
 
 ### Tool Definition
 
-The tool requires no schema - just declare it in the `tools` array:
+The tool requires no schema — just declare it in the `tools` array:
 
 ```json
 {
@@ -149,10 +149,10 @@ Reuse containers across requests to maintain state (files, installed packages, v
 
 The response contains interleaved text and tool result blocks:
 
-- `text` - Claude's explanation
-- `server_tool_use` - What Claude is doing
-- `bash_code_execution_tool_result` - Code execution output (check `return_code` for success/failure)
-- `text_editor_code_execution_tool_result` - File operation results
+- `text` — Claude's explanation
+- `server_tool_use` — What Claude is doing
+- `bash_code_execution_tool_result` — Code execution output (check `return_code` for success/failure)
+- `text_editor_code_execution_tool_result` — File operation results
 
 > **Security:** Always sanitize filenames with `os.path.basename()` / `path.basename()` before writing downloaded files to disk to prevent path traversal attacks. Write files to a dedicated output directory.
 
@@ -160,7 +160,7 @@ The response contains interleaved text and tool result blocks:
 
 ## Server-Side Tools: Web Search and Web Fetch
 
-Web search and web fetch let Claude search the web and retrieve page content. They run server-side - just include the tool definitions and Claude handles queries, fetching, and result processing automatically.
+Web search and web fetch let Claude search the web and retrieve page content. They run server-side — just include the tool definitions and Claude handles queries, fetching, and result processing automatically.
 
 ### Tool Definitions
 
@@ -173,7 +173,7 @@ Web search and web fetch let Claude search the web and retrieve page content. Th
 
 ### Dynamic Filtering (Opus 4.7 / Opus 4.6 / Sonnet 4.6)
 
-The `web_search_20260209` and `web_fetch_20260209` versions support **dynamic filtering** - Claude writes and executes code to filter search results before they reach the context window, improving accuracy and token efficiency. Dynamic filtering is built into these tool versions and activates automatically; you do not need to separately declare the `code_execution` tool or pass any beta header.
+The `web_search_20260209` and `web_fetch_20260209` versions support **dynamic filtering** — Claude writes and executes code to filter search results before they reach the context window, improving accuracy and token efficiency. Dynamic filtering is built into these tool versions and activates automatically; you do not need to separately declare the `code_execution` tool or pass any beta header.
 
 ```json
 {
@@ -192,7 +192,7 @@ Without dynamic filtering, the previous `web_search_20250305` version is also av
 
 ## Server-Side Tools: Programmatic Tool Calling
 
-With standard tool use, each tool call is a round trip: Claude calls, the result enters Claude's context, Claude reasons, then calls the next tool. Chained calls accumulate latency and tokens - most of that intermediate data is never needed again.
+With standard tool use, each tool call is a round trip: Claude calls, the result enters Claude's context, Claude reasons, then calls the next tool. Chained calls accumulate latency and tokens — most of that intermediate data is never needed again.
 
 Programmatic tool calling lets Claude compose those calls into a script. The script runs in the code execution container; when it invokes a tool, the container pauses, the call executes, and the result returns to the running code (not to Claude's context). The script processes it with normal control flow. Only the final output returns to Claude. Use it when chaining many tool calls or when intermediate results are large and should be filtered before reaching the context window.
 
@@ -204,7 +204,7 @@ For full documentation, use WebFetch:
 
 ## Server-Side Tools: Tool Search
 
-The tool search tool lets Claude dynamically discover tools from large libraries without loading all definitions into the context window. Use it when you have many tools but only a few are relevant to any given request. Discovered tool schemas are appended to the request, not swapped in - this preserves the prompt cache (see `agent-design.md` §Caching for Agents).
+The tool search tool lets Claude dynamically discover tools from large libraries without loading all definitions into the context window. Use it when you have many tools but only a few are relevant to any given request. Discovered tool schemas are appended to the request, not swapped in — this preserves the prompt cache (see `agent-design.md` §Caching for Agents).
 
 For full documentation, use WebFetch:
 
@@ -244,7 +244,7 @@ For full documentation, use WebFetch:
 
 ## Context Editing
 
-Context editing clears stale tool results and thinking blocks from the transcript as a long-running agent accumulates turns. Unlike compaction (which summarizes), context editing prunes - the cleared content is removed, not replaced. Use it when old tool outputs are no longer relevant and you want to keep the transcript lean without losing the conversation structure. Thresholds for what to clear are configurable.
+Context editing clears stale tool results and thinking blocks from the transcript as a long-running agent accumulates turns. Unlike compaction (which summarizes), context editing prunes — the cleared content is removed, not replaced. Use it when old tool outputs are no longer relevant and you want to keep the transcript lean without losing the conversation structure. Thresholds for what to clear are configurable.
 
 For full documentation, use WebFetch:
 
@@ -258,12 +258,12 @@ The memory tool enables Claude to store and retrieve information across conversa
 
 ### Key Facts
 
-- Client-side tool - you control storage via your implementation
+- Client-side tool — you control storage via your implementation
 - Supports commands: `view`, `create`, `str_replace`, `insert`, `delete`, `rename`
 - Operates on files in a `/memories` directory
 - The Python, TypeScript, and Java SDKs provide helper classes/functions for implementing the memory backend
 
-> **Security:** Never store API keys, passwords, tokens, or other secrets in memory files. Be cautious with personally identifiable information (PII) - check data privacy regulations (GDPR, CCPA) before persisting user data. The reference implementations have no built-in access control; in multi-user systems, implement per-user memory directories and authentication in your tool handlers.
+> **Security:** Never store API keys, passwords, tokens, or other secrets in memory files. Be cautious with personally identifiable information (PII) — check data privacy regulations (GDPR, CCPA) before persisting user data. The reference implementations have no built-in access control; in multi-user systems, implement per-user memory directories and authentication in your tool handlers.
 
 For full implementation examples, use WebFetch:
 
@@ -273,7 +273,7 @@ For full implementation examples, use WebFetch:
 
 ## Structured Outputs
 
-Structured outputs constrain Claude's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool - it enhances the Messages API response format and/or tool parameter validation.
+Structured outputs constrain Claude's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool — it enhances the Messages API response format and/or tool parameter validation.
 
 Two features are available:
 
@@ -319,7 +319,7 @@ The Python and TypeScript SDKs automatically handle unsupported constraints by r
 2. **Use specific tool names**: `get_current_weather` is better than `weather`
 3. **Validate inputs**: Always validate tool inputs before execution
 4. **Handle errors gracefully**: Return informative error messages so Claude can adapt
-5. **Limit tool count**: Too many tools can confuse the model - keep the set focused
+5. **Limit tool count**: Too many tools can confuse the model — keep the set focused
 6. **Test tool interactions**: Verify Claude uses tools correctly in various scenarios
 
 For detailed tool use documentation, use WebFetch:

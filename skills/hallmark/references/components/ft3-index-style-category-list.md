@@ -10,3 +10,4 @@ Three or four short columns, each headed by a category in small caps, holding 4-
   <div><p class="caps">Resources</p><ul>...</ul></div>
 </footer>
 ```
+

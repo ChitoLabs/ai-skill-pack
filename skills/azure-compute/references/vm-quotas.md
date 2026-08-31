@@ -25,7 +25,7 @@ See [vm-families.md](./vm-families.md) for quota resource names per VM family. U
 
 ### Option A: `az vm list-usage` (Recommended for VM quotas)
 
-No extension required. Returns **both current usage and limit in a single call** for all VM families in a region - equivalent to running `az quota usage show` and `az quota list` together for VM vCPU quotas.
+No extension required. Returns **both current usage and limit in a single call** for all VM families in a region — equivalent to running `az quota usage show` and `az quota list` together for VM vCPU quotas.
 
 ```bash
 # All VM family quotas in a region
@@ -46,7 +46,7 @@ Prerequisite: `az extension add --name quota`
 | 1. Discover names | `az quota list --scope /subscriptions/<sub-id>/providers/Microsoft.Compute/locations/<region> -o table` | Find quota resource name for the VM family |
 | 2. Check usage | `az quota usage show --resource-name <name> --scope ...` | Current vCPU consumption |
 | 3. Check limit | `az quota show --resource-name <name> --scope ...` | Maximum allowed vCPUs |
-| 4. Check regional | Repeat steps 2-3 with `--resource-name cores` | Total regional vCPU cap |
+| 4. Check regional | Repeat steps 2–3 with `--resource-name cores` | Total regional vCPU cap |
 
 ### Calculate Capacity
 
@@ -89,5 +89,5 @@ For scale sets, validate against **autoscale maximum**: `vCPUs per VM × Max Ins
 ## Related Resources
 
 - Invoke the **azure-quotas** skill for complete quota CLI workflows across all Azure providers
-- [VM Family Guide](vm-families.md) - Family-to-workload mapping
+- [VM Family Guide](vm-families.md) — Family-to-workload mapping
 - [Azure VM quotas documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/quotas)

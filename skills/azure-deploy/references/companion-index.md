@@ -1,0 +1,44 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `auth-best-practices.md` - preserved source companion file.
+- `global-rules.md` - preserved source companion file.
+- `live-role-verification.md` - preserved source companion file.
+- `pre-deploy-checklist.md` - preserved source companion file.
+- `recipes/README.md` - preserved source companion file.
+- `recipes/azcli/README.md` - preserved source companion file.
+- `recipes/azcli/errors.md` - preserved source companion file.
+- `recipes/azcli/verify.md` - preserved source companion file.
+- `recipes/azd/README.md` - preserved source companion file.
+- `recipes/azd/ef-migrations.md` - preserved source companion file.
+- `recipes/azd/errors.md` - preserved source companion file.
+- `recipes/azd/functions-deploy.md` - preserved source companion file.
+- `recipes/azd/post-deployment.md` - preserved source companion file.
+- `recipes/azd/scripts/apply-migrations.ps1` - preserved source companion file.
+- `recipes/azd/scripts/apply-migrations.sh` - preserved source companion file.
+- `recipes/azd/scripts/grant-and-migrate.ps1` - preserved source companion file.
+- `recipes/azd/scripts/grant-and-migrate.sh` - preserved source companion file.
+- `recipes/azd/sql-entra-auth.md` - preserved source companion file.
+- `recipes/azd/sql-managed-identity.md` - preserved source companion file.
+- `recipes/azd/verify.md` - preserved source companion file.
+- `recipes/bicep/README.md` - preserved source companion file.
+- `recipes/bicep/errors.md` - preserved source companion file.
+- `recipes/bicep/verify.md` - preserved source companion file.
+- `recipes/cicd/README.md` - preserved source companion file.
+- `recipes/cicd/errors.md` - preserved source companion file.
+- `recipes/cicd/examples/azdo-azd.yml` - preserved source companion file.
+- `recipes/cicd/examples/azdo-multistage.yml` - preserved source companion file.
+- `recipes/cicd/examples/github-azd.yml` - preserved source companion file.
+- `recipes/cicd/examples/github-bicep.yml` - preserved source companion file.
+- `recipes/cicd/verify.md` - preserved source companion file.
+- `recipes/terraform/README.md` - preserved source companion file.
+- `recipes/terraform/errors.md` - preserved source companion file.
+- `recipes/terraform/verify.md` - preserved source companion file.
+- `region-availability.md` - preserved source companion file.
+- `sdk/azd-deployment.md` - preserved source companion file.
+- `sdk/azure-identity-dotnet.md` - preserved source companion file.
+- `sdk/azure-identity-java.md` - preserved source companion file.
+- `sdk/azure-identity-py.md` - preserved source companion file.
+- `sdk/azure-identity-ts.md` - preserved source companion file.
+- `troubleshooting.md` - preserved source companion file.

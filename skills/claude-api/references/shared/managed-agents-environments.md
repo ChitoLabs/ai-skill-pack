@@ -1,8 +1,8 @@
-# Managed Agents - Environments & Resources
+# Managed Agents — Environments & Resources
 
 ## Environments
 
-Creating a session requires an `environment_id`. Environments are **reusable configuration templates** for spinning up containers in Anthropic's infrastructure - you might create different environments for different use cases (e.g. data visualization vs web development, with different package sets). Anthropic handles scaling, container lifecycle, and work orchestration.
+Creating a session requires an `environment_id`. Environments are **reusable configuration templates** for spinning up containers in Anthropic's infrastructure — you might create different environments for different use cases (e.g. data visualization vs web development, with different package sets). Anthropic handles scaling, container lifecycle, and work orchestration.
 
 **Environment names must be unique.** Creating an environment with an existing name returns 409.
 
@@ -47,15 +47,15 @@ const env = await client.beta.environments.create({
 | Get              | `GET`    | `/v1/environments/{id}`                    | |
 | Update           | `POST`   | `/v1/environments/{id}`                    | Changes apply only to **new** containers; existing sessions keep their original config |
 | Delete           | `DELETE` | `/v1/environments/{id}`                    | Returns 204. |
-| Archive          | `POST`   | `/v1/environments/{id}/archive`            | Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive - terminal state. |
+| Archive          | `POST`   | `/v1/environments/{id}/archive`            | Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive — terminal state. |
 
 ---
 
 ## Resources
 
-Attach files, GitHub repositories, and memory stores to a session. **Session creation blocks until all resources are mounted** - the container won't go `running` until every file and repo is in place. Max **999 file resources** per session. Multiple GitHub repositories per session are supported. For `type: "memory_store"` resources (persistent cross-session memory - max 8 per session), see `shared/managed-agents-memory.md`.
+Attach files, GitHub repositories, and memory stores to a session. **Session creation blocks until all resources are mounted** — the container won't go `running` until every file and repo is in place. Max **999 file resources** per session. Multiple GitHub repositories per session are supported. For `type: "memory_store"` resources (persistent cross-session memory — max 8 per session), see `shared/managed-agents-memory.md`.
 
-### File Uploads (input - host → agent)
+### File Uploads (input — host → agent)
 
 Upload a file first via the Files API, then reference by `file_id` + `mount_path`:
 
@@ -75,9 +75,9 @@ const session = await client.beta.sessions.create({
 });
 ```
 
-**`mount_path` is required** and must be absolute. Parent directories are created automatically. Agent working directory defaults to `/workspace`. Files are mounted read-only - the agent writes modified versions to new paths.
+**`mount_path` is required** and must be absolute. Parent directories are created automatically. Agent working directory defaults to `/workspace`. Files are mounted read-only — the agent writes modified versions to new paths.
 
-### Session outputs (output - agent → host)
+### Session outputs (output — agent → host)
 
 The agent can write files to `/mnt/session/outputs/` during a session. These are automatically captured by the Files API and can be listed and downloaded afterwards:
 
@@ -96,19 +96,19 @@ for await (const f of client.beta.files.list({
 **Requirements:**
 - The `write` tool (or `bash`) must be enabled for the agent to create output files.
 - Session-scoped `files.list` / `files.download` captures outputs written to `/mnt/session/outputs/`.
-- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: ["managed-agents-2026-04-01"]` explicitly (or both headers on raw HTTP) - without it the API may reject `scope_id` as an unknown field. Requires `@anthropic-ai/sdk` ≥ 0.88.0 / `anthropic` (Python) ≥ 0.92.0 - older versions don't type `scope_id`. The `ant` CLI does **not** expose this flag yet; use the SDK or curl.
-- Pass the session ID returned by `sessions.create()` verbatim (e.g. `sesn_011CZx...`) - the API validates the prefix.
-- There's a brief indexing lag (~1-3s) between `session.status_idle` and output files appearing in `files.list`. Retry once or twice if empty.
+- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: ["managed-agents-2026-04-01"]` explicitly (or both headers on raw HTTP) — without it the API may reject `scope_id` as an unknown field. Requires `@anthropic-ai/sdk` ≥ 0.88.0 / `anthropic` (Python) ≥ 0.92.0 — older versions don't type `scope_id`. The `ant` CLI does **not** expose this flag yet; use the SDK or curl.
+- Pass the session ID returned by `sessions.create()` verbatim (e.g. `sesn_011CZx...`) — the API validates the prefix.
+- There's a brief indexing lag (~1–3s) between `session.status_idle` and output files appearing in `files.list`. Retry once or twice if empty.
 
-> **Fallback when `scope_id` filtering is unavailable** (older SDK, or endpoint returns an error): send a follow-up `user.message` asking the agent to `read` each file under `/mnt/session/outputs/` and return the contents. The agent streams the file bodies back as `agent.message` text. This works for text files only and costs output tokens - use it to unblock, not as the primary path.
+> **Fallback when `scope_id` filtering is unavailable** (older SDK, or endpoint returns an error): send a follow-up `user.message` asking the agent to `read` each file under `/mnt/session/outputs/` and return the contents. The agent streams the file bodies back as `agent.message` text. This works for text files only and costs output tokens — use it to unblock, not as the primary path.
 
 This gives you a bidirectional file bridge: upload reference data in, download agent artifacts out.
 
 ### GitHub Repositories
 
-Clones a GitHub repository into the session container during initialization, before the agent begins execution. The agent can read, edit, commit, and push via `bash` (`git`). Multiple repositories per session are supported - add one `resources` entry per repo. Repositories are cached, so future sessions that use the same repository start faster.
+Clones a GitHub repository into the session container during initialization, before the agent begins execution. The agent can read, edit, commit, and push via `bash` (`git`). Multiple repositories per session are supported — add one `resources` entry per repo. Repositories are cached, so future sessions that use the same repository start faster.
 
-Repositories are attached for the lifetime of the session - to change which repositories are mounted, create a new session. You **can** rotate a repository's `authorization_token` on a running session via `client.beta.sessions.resources.update(resource_id, {session_id, authorization_token})`; the resource `id` is returned at session creation and by `resources.list()`.
+Repositories are attached for the lifetime of the session — to change which repositories are mounted, create a new session. You **can** rotate a repository's `authorization_token` on a running session via `client.beta.sessions.resources.update(resource_id, {session_id, authorization_token})`; the resource `id` is returned at session creation and by `resources.list()`.
 
 **Fields:**
 
@@ -121,17 +121,17 @@ Repositories are attached for the lifetime of the session - to change which repo
 | `checkout` | ❌ | `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Defaults to the repo's default branch. |
 
 **Token permission levels** (fine-grained PATs):
-- `Contents: Read` - clone only
-- `Contents: Read and write` - push changes and create pull requests
+- `Contents: Read` — clone only
+- `Contents: Read and write` — push changes and create pull requests
 
-**How auth works:** `authorization_token` is never placed inside the container. `git pull` / `git push` and GitHub REST calls against the attached repository are routed through an Anthropic-side git proxy that injects the token after the request leaves the sandbox. Code running in the container - including anything the agent writes - cannot read or exfiltrate it.
+**How auth works:** `authorization_token` is never placed inside the container. `git pull` / `git push` and GitHub REST calls against the attached repository are routed through an Anthropic-side git proxy that injects the token after the request leaves the sandbox. Code running in the container — including anything the agent writes — cannot read or exfiltrate it.
 
-> ‼️ **To generate pull requests** you also need GitHub **MCP server** access - the `github_repository` resource gives filesystem + git access only. See `shared/managed-agents-tools.md` → MCP Servers. The PR workflow is: edit files in the mounted repo → push branch via `bash` (authenticated via the git proxy using `authorization_token`) → create PR via the MCP `create_pull_request` tool (authenticated via the vault).
+> ‼️ **To generate pull requests** you also need GitHub **MCP server** access — the `github_repository` resource gives filesystem + git access only. See `shared/managed-agents-tools.md` → MCP Servers. The PR workflow is: edit files in the mounted repo → push branch via `bash` (authenticated via the git proxy using `authorization_token`) → create PR via the MCP `create_pull_request` tool (authenticated via the vault).
 
 **TypeScript:**
 
 ```ts
-// 1. Create the agent - declare GitHub MCP (no auth here)
+// 1. Create the agent — declare GitHub MCP (no auth here)
 const agent = await client.beta.agents.create(
   {
     name: 'GitHub Agent',
@@ -146,7 +146,7 @@ const agent = await client.beta.agents.create(
   },
 );
 
-// 2. Start a session - attach vault for MCP auth + mount the repo
+// 2. Start a session — attach vault for MCP auth + mount the repo
 const session = await client.beta.sessions.create({
   agent: agent.id,
   environment_id: envId,

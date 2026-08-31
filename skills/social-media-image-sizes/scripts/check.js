@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * check.js - validate an image against social media platform specs
+ * check.js — validate an image against social media platform specs
  *
  * Usage:
  *   node check.js <image-path> [--platform <slug>] [--filter perfect|close|usable|too-small]

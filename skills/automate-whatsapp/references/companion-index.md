@@ -1,0 +1,44 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `../assets/agent-remote-sandbox-github-repo-example.json` - preserved source companion file.
+- `../assets/function-decide-route-interactive-buttons.json` - preserved source companion file.
+- `../assets/functions-example.json` - preserved source companion file.
+- `../assets/package.json` - preserved source companion file.
+- `../assets/workflow-agent-simple.json` - preserved source companion file.
+- `../assets/workflow-api-template-wait-agent.json` - preserved source companion file.
+- `../assets/workflow-customer-support-intake-agent.json` - preserved source companion file.
+- `../assets/workflow-decision.json` - preserved source companion file.
+- `../assets/workflow-interactive-buttons-decide-ai.json` - preserved source companion file.
+- `../assets/workflow-interactive-buttons-decide-function.json` - preserved source companion file.
+- `../assets/workflow-linear.json` - preserved source companion file.
+- `agent-remote-sandbox.md` - preserved source companion file.
+- `execution-context.md` - preserved source companion file.
+- `function-contracts.md` - preserved source companion file.
+- `functions-payloads.md` - preserved source companion file.
+- `functions-reference.md` - preserved source companion file.
+- `graph-contract.md` - preserved source companion file.
+- `local-workflow-source.md` - preserved source companion file.
+- `node-types.md` - preserved source companion file.
+- `triggers.md` - preserved source companion file.
+- `workflow-overview.md` - preserved source companion file.
+- `workflow-reference.md` - preserved source companion file.
+- `../scripts/create-function.js` - preserved source companion file.
+- `../scripts/create-trigger.js` - preserved source companion file.
+- `../scripts/create-workflow.js` - preserved source companion file.
+- `../scripts/delete-trigger.js` - preserved source companion file.
+- `../scripts/deploy-function.js` - preserved source companion file.
+- `../scripts/edit-graph.js` - preserved source companion file.
+- `../scripts/get-context-value.js` - preserved source companion file.
+- `../scripts/get-execution-event.js` - preserved source companion file.
+- `../scripts/get-execution.js` - preserved source companion file.
+- `../scripts/get-function.js` - preserved source companion file.
+- `../scripts/get-graph.js` - preserved source companion file.
+- `../scripts/get-workflow.js` - preserved source companion file.
+- `../scripts/invoke-function.js` - preserved source companion file.
+- `../scripts/lib/functions/args.js` - preserved source companion file.
+- `../scripts/lib/functions/kapso-api.js` - preserved source companion file.
+- `../scripts/lib/workflows/args.js` - preserved source companion file.
+- `../scripts/lib/workflows/kapso-api.js` - preserved source companion file.
+- `../scripts/lib/workflows/result.js` - preserved source companion file.

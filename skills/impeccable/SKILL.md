@@ -14,6 +14,10 @@ Use when the user asks to plan, design, redesign, document, audit, critique, pol
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
+- Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
+- Keep all generated artifacts inside the user-requested workspace unless the user explicitly names another destination.
 - Preserve product truth, working behavior, native affordances, implementation boundaries, and factual copy unless the user approves a replacement scope.
 - Use only ordinary repository inspection, file editing, browser, and terminal capabilities that are actually available.
 - Do not claim access to bundled scripts, detectors, hooks, live servers, provider integrations, automatic repair, or helper-managed state. None are distributed here.

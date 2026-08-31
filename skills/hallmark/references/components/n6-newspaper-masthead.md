@@ -22,3 +22,4 @@ Full-width header, large centred wordmark on the top row, thin issue/date line a
 ```
 
 *Anti-pattern:* using N6 on a SaaS dashboard or a developer-tool product page. The masthead vocabulary belongs to long-form / editorial sites; on a B2B product, it reads as costume.
+

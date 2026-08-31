@@ -56,8 +56,8 @@
 
 | Stage | Model | SKU | Capacity | Extras |
 |-------|-------|-----|----------|--------|
-| Dev | gpt-4o-mini | Standard | 1K TPM | - |
-| Staging | gpt-4o | GlobalStandard | 10K TPM | - |
+| Dev | gpt-4o-mini | Standard | 1K TPM | — |
+| Staging | gpt-4o | GlobalStandard | 10K TPM | — |
 | Production | gpt-4o | GlobalStandard | 50K TPM | Dynamic Quota + Spillover |
 
 ### Cost Optimization

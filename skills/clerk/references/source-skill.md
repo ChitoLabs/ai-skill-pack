@@ -17,10 +17,10 @@ Check `package.json` to determine the Clerk SDK version. This determines which p
 
 | Package | Core 2 (LTS until Jan 2027) | Current |
 |---------|----------------------------|---------|
-| `@clerk/nextjs` | v5-v6 | v7+ |
-| `@clerk/react` or `@clerk/clerk-react` | v5-v6 | v7+ |
-| `@clerk/expo` or `@clerk/clerk-expo` | v1-v2 | v3+ |
-| `@clerk/react-router` | v1-v2 | v3+ |
+| `@clerk/nextjs` | v5–v6 | v7+ |
+| `@clerk/react` or `@clerk/clerk-react` | v5–v6 | v7+ |
+| `@clerk/expo` or `@clerk/clerk-expo` | v1–v2 | v3+ |
+| `@clerk/react-router` | v1–v2 | v3+ |
 | `@clerk/tanstack-react-start` | < v0.26.0 | v0.26.0+ |
 
 **Default to current** if the version is unclear or the project is new. Core 2 packages use `@clerk/clerk-react` and `@clerk/clerk-expo` (with `clerk-` prefix); current packages use `@clerk/react` and `@clerk/expo`.

@@ -1,6 +1,6 @@
 ---
 name: n8n-workflow-patterns
-description: Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services - even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
+description: Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services — even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
 license: Apache-2.0
 metadata:
   author: czlonkowski
@@ -198,8 +198,8 @@ Main Flow → [Success Path]
 
 The SplitInBatches node splits a large dataset into smaller chunks for processing. Understanding its outputs is critical:
 
-- `main[0]` = **done** - fires ONCE after all batches complete
-- `main[1]` = **each batch** - fires per batch (this is the loop body)
+- `main[0]` = **done** — fires ONCE after all batches complete
+- `main[1]` = **each batch** — fires per batch (this is the loop body)
 
 ```
 Prepare Items → SplitInBatches → [main[1]: Process Batch] → (loops back)
@@ -258,15 +258,15 @@ if (looksLikeRequest) {
 
 ### Google Sheets
 
-- **NEVER use `append`** on sheets with formula columns - it breaks formulas. Use Google Sheets API `values.update` (PUT) via HTTP Request node with a `googleApi` credential
-- **Write numbers, not strings** for formula-dependent columns - string "4.98" breaks `ADD()` formulas. Use `parseFloat()` in a Code node
+- **NEVER use `append`** on sheets with formula columns — it breaks formulas. Use Google Sheets API `values.update` (PUT) via HTTP Request node with a `googleApi` credential
+- **Write numbers, not strings** for formula-dependent columns — string "4.98" breaks `ADD()` formulas. Use `parseFloat()` in a Code node
 - **Per-item execution trap**: Google Sheets nodes execute once per input item. If you need a single bulk write, aggregate items into one in a Code node first
-- **UNFORMATTED_VALUE returns numbers**, not text like "N/A" - filter explicitly in Code nodes
+- **UNFORMATTED_VALUE returns numbers**, not text like "N/A" — filter explicitly in Code nodes
 
 ### Google Drive
 
-- **`convertToGoogleDocument: true` creates a Google Doc (text)**, NOT a Google Sheet - to upload a CSV for download, omit this option entirely
-- **CSV download link format**: `https://drive.google.com/uc?id={fileId}&export=download` - use instead of `/view` links
+- **`convertToGoogleDocument: true` creates a Google Doc (text)**, NOT a Google Sheet — to upload a CSV for download, omit this option entirely
+- **CSV download link format**: `https://drive.google.com/uc?id={fileId}&export=download` — use instead of `/view` links
 
 ### Bidirectional Threshold Checking
 
@@ -276,7 +276,7 @@ When comparing values (prices, quantities, metrics), always check both direction
 // ❌ Only catches increases
 if (diff > threshold) { flag(); }
 
-// ✅ Catches both spikes AND crashes - both are data-quality signals
+// ✅ Catches both spikes AND crashes — both are data-quality signals
 if (Math.abs(diff) > threshold) { flag(); }
 ```
 

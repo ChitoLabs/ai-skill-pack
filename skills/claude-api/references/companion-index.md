@@ -1,0 +1,47 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `LICENSE.txt` - preserved source companion file.
+- `csharp/claude-api.md` - preserved source companion file.
+- `curl/examples.md` - preserved source companion file.
+- `curl/managed-agents.md` - preserved source companion file.
+- `go/claude-api.md` - preserved source companion file.
+- `go/managed-agents/README.md` - preserved source companion file.
+- `java/claude-api.md` - preserved source companion file.
+- `java/managed-agents/README.md` - preserved source companion file.
+- `php/claude-api.md` - preserved source companion file.
+- `php/managed-agents/README.md` - preserved source companion file.
+- `python/claude-api/README.md` - preserved source companion file.
+- `python/claude-api/batches.md` - preserved source companion file.
+- `python/claude-api/files-api.md` - preserved source companion file.
+- `python/claude-api/streaming.md` - preserved source companion file.
+- `python/claude-api/tool-use.md` - preserved source companion file.
+- `python/managed-agents/README.md` - preserved source companion file.
+- `ruby/claude-api.md` - preserved source companion file.
+- `ruby/managed-agents/README.md` - preserved source companion file.
+- `shared/agent-design.md` - preserved source companion file.
+- `shared/error-codes.md` - preserved source companion file.
+- `shared/live-sources.md` - preserved source companion file.
+- `shared/managed-agents-api-reference.md` - preserved source companion file.
+- `shared/managed-agents-client-patterns.md` - preserved source companion file.
+- `shared/managed-agents-core.md` - preserved source companion file.
+- `shared/managed-agents-environments.md` - preserved source companion file.
+- `shared/managed-agents-events.md` - preserved source companion file.
+- `shared/managed-agents-memory.md` - preserved source companion file.
+- `shared/managed-agents-multiagent.md` - preserved source companion file.
+- `shared/managed-agents-onboarding.md` - preserved source companion file.
+- `shared/managed-agents-outcomes.md` - preserved source companion file.
+- `shared/managed-agents-overview.md` - preserved source companion file.
+- `shared/managed-agents-tools.md` - preserved source companion file.
+- `shared/managed-agents-webhooks.md` - preserved source companion file.
+- `shared/model-migration.md` - preserved source companion file.
+- `shared/models.md` - preserved source companion file.
+- `shared/prompt-caching.md` - preserved source companion file.
+- `shared/tool-use-concepts.md` - preserved source companion file.
+- `typescript/claude-api/README.md` - preserved source companion file.
+- `typescript/claude-api/batches.md` - preserved source companion file.
+- `typescript/claude-api/files-api.md` - preserved source companion file.
+- `typescript/claude-api/streaming.md` - preserved source companion file.
+- `typescript/claude-api/tool-use.md` - preserved source companion file.
+- `typescript/managed-agents/README.md` - preserved source companion file.

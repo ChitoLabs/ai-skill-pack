@@ -750,30 +750,30 @@ Always try to confirm:
 
 Primary Vue documentation:
 
-* Vue Docs: Security - `https://vuejs.org/guide/best-practices/security` ([Vue.js][1])
-* Vue Docs: Template Syntax (security warning about in-DOM templates) - `https://vuejs.org/guide/essentials/template-syntax` ([Vue.js][13])
-* Vue Docs: Production Deployment - `https://vuejs.org/guide/best-practices/production-deployment` ([Vue.js][3])
-* Vue Docs: Feature Flags - `https://link.vuejs.org/feature-flags` ([Vue.js][7])
+* Vue Docs: Security — `https://vuejs.org/guide/best-practices/security` ([Vue.js][1])
+* Vue Docs: Template Syntax (security warning about in-DOM templates) — `https://vuejs.org/guide/essentials/template-syntax` ([Vue.js][13])
+* Vue Docs: Production Deployment — `https://vuejs.org/guide/best-practices/production-deployment` ([Vue.js][3])
+* Vue Docs: Feature Flags — `https://link.vuejs.org/feature-flags` ([Vue.js][7])
 
 Vite documentation (common Vue tooling):
 
-* Vite Docs: Env Variables and Modes (VITE_* exposure + security notes) - `https://vite.dev/guide/env-and-mode` ([vitejs][2])
-* Vite Docs: CLI (`vite preview` not designed for production) - `https://vite.dev/guide/cli` ([vitejs][5])
-* Vite Docs: Server Options (`server.host` can listen on public addresses) - `https://vite.dev/config/server-options` ([vitejs][14])
+* Vite Docs: Env Variables and Modes (VITE_* exposure + security notes) — `https://vite.dev/guide/env-and-mode` ([vitejs][2])
+* Vite Docs: CLI (`vite preview` not designed for production) — `https://vite.dev/guide/cli` ([vitejs][5])
+* Vite Docs: Server Options (`server.host` can listen on public addresses) — `https://vite.dev/config/server-options` ([vitejs][14])
 
 OWASP and web platform hardening references:
 
-* OWASP Cheat Sheet Series: XSS Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html` ([Vue.js][1])
-* OWASP Cheat Sheet Series: CSRF Prevention - `https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][9])
-* OWASP Cheat Sheet Series: Authorization - `https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][8])
-* OWASP Cheat Sheet Series: HTTP Headers - `https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][4])
-* HTML5 Security Cheat Sheet (referenced by Vue) - `https://html5sec.org/` ([Vue.js][1])
+* OWASP Cheat Sheet Series: XSS Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html` ([Vue.js][1])
+* OWASP Cheat Sheet Series: CSRF Prevention — `https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][9])
+* OWASP Cheat Sheet Series: Authorization — `https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][8])
+* OWASP Cheat Sheet Series: HTTP Headers — `https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html` ([OWASP Cheat Sheet Series][4])
+* HTML5 Security Cheat Sheet (referenced by Vue) — `https://html5sec.org/` ([Vue.js][1])
 
 Browser/platform references:
 
-* MDN: `rel="noopener"` - `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener` ([MDN Web Docs][12])
-* MDN: Subresource Integrity - `https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity` ([MDN Web Docs][11])
-* web.dev: Trusted Types - `https://web.dev/trusted-types/` ([web.dev][10])
+* MDN: `rel="noopener"` — `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener` ([MDN Web Docs][12])
+* MDN: Subresource Integrity — `https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity` ([MDN Web Docs][11])
+* web.dev: Trusted Types — `https://web.dev/trusted-types/` ([web.dev][10])
 
 [1]: https://vuejs.org/guide/best-practices/security "https://vuejs.org/guide/best-practices/security"
 [2]: https://vite.dev/guide/env-and-mode "https://vite.dev/guide/env-and-mode"

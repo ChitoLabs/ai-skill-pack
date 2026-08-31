@@ -14,20 +14,20 @@ Load the smallest set of references that fits the task. Do not load every refere
 ## Workflow
 
 1. Confirm the target framework, SDK, and current app model.
-2. Open [references/stack-selection.md](references/stack-selection.md) first for new apps or major refactors.
-3. Open [references/program-and-pipeline.md](references/program-and-pipeline.md) next for `Program.cs`, DI, configuration, middleware, routing, logging, and static assets.
+2. Open [references/stack-selection.md](stack-selection.md) first for new apps or major refactors.
+3. Open [references/program-and-pipeline.md](program-and-pipeline.md) next for `Program.cs`, DI, configuration, middleware, routing, logging, and static assets.
 4. Open exactly one primary app-model reference:
-   - [references/ui-blazor.md](references/ui-blazor.md)
-   - [references/ui-razor-pages.md](references/ui-razor-pages.md)
-   - [references/ui-mvc.md](references/ui-mvc.md)
-   - [references/apis-minimal-and-controllers.md](references/apis-minimal-and-controllers.md)
+   - [references/ui-blazor.md](ui-blazor.md)
+   - [references/ui-razor-pages.md](ui-razor-pages.md)
+   - [references/ui-mvc.md](ui-mvc.md)
+   - [references/apis-minimal-and-controllers.md](apis-minimal-and-controllers.md)
 5. Add cross-cutting references only as needed:
-   - [references/data-state-and-services.md](references/data-state-and-services.md)
-   - [references/security-and-identity.md](references/security-and-identity.md)
-   - [references/realtime-grpc-and-background-work.md](references/realtime-grpc-and-background-work.md)
-   - [references/testing-performance-and-operations.md](references/testing-performance-and-operations.md)
-6. Open [references/versioning-and-upgrades.md](references/versioning-and-upgrades.md) before introducing new platform APIs into an older solution or when migrating between major versions.
-7. Use [references/source-map.md](references/source-map.md) when you need the Microsoft Learn section that corresponds to a task not already covered by the focused references.
+   - [references/data-state-and-services.md](data-state-and-services.md)
+   - [references/security-and-identity.md](security-and-identity.md)
+   - [references/realtime-grpc-and-background-work.md](realtime-grpc-and-background-work.md)
+   - [references/testing-performance-and-operations.md](testing-performance-and-operations.md)
+6. Open [references/versioning-and-upgrades.md](versioning-and-upgrades.md) before introducing new platform APIs into an older solution or when migrating between major versions.
+7. Use [references/source-map.md](source-map.md) when you need the Microsoft Learn section that corresponds to a task not already covered by the focused references.
 
 ## Default Operating Assumptions
 
@@ -40,19 +40,19 @@ Load the smallest set of references that fits the task. Do not load every refere
 
 ## Reference Guide
 
-- [references/_sections.md](references/_sections.md): Quick index and reading order.
-- [references/stack-selection.md](references/stack-selection.md): Choose the right ASP.NET Core application model and template.
-- [references/program-and-pipeline.md](references/program-and-pipeline.md): Structure `Program.cs`, services, middleware, routing, configuration, logging, and static assets.
-- [references/ui-blazor.md](references/ui-blazor.md): Build Blazor Web Apps, choose render modes, and use components, forms, and JS interop correctly.
-- [references/ui-razor-pages.md](references/ui-razor-pages.md): Build page-focused server-rendered apps with handlers, model binding, and conventions.
-- [references/ui-mvc.md](references/ui-mvc.md): Build controller/view applications with clear separation of concerns.
-- [references/apis-minimal-and-controllers.md](references/apis-minimal-and-controllers.md): Build HTTP APIs with Minimal APIs or controllers, including validation and response patterns.
-- [references/data-state-and-services.md](references/data-state-and-services.md): Use EF Core, `DbContext`, options, `IHttpClientFactory`, session, temp data, and app state responsibly.
-- [references/security-and-identity.md](references/security-and-identity.md): Apply authentication, authorization, Identity, secrets, data protection, CORS, CSRF, and HTTPS guidance.
-- [references/realtime-grpc-and-background-work.md](references/realtime-grpc-and-background-work.md): Use SignalR, gRPC, and hosted services.
-- [references/testing-performance-and-operations.md](references/testing-performance-and-operations.md): Add integration tests, browser tests, caching, compression, health checks, rate limits, and deployment concerns.
-- [references/versioning-and-upgrades.md](references/versioning-and-upgrades.md): Handle target frameworks, breaking changes, obsolete APIs, and migrations.
-- [references/source-map.md](references/source-map.md): Map the official ASP.NET Core documentation tree to the references in this skill.
+- [references/_sections.md](_sections.md): Quick index and reading order.
+- [references/stack-selection.md](stack-selection.md): Choose the right ASP.NET Core application model and template.
+- [references/program-and-pipeline.md](program-and-pipeline.md): Structure `Program.cs`, services, middleware, routing, configuration, logging, and static assets.
+- [references/ui-blazor.md](ui-blazor.md): Build Blazor Web Apps, choose render modes, and use components, forms, and JS interop correctly.
+- [references/ui-razor-pages.md](ui-razor-pages.md): Build page-focused server-rendered apps with handlers, model binding, and conventions.
+- [references/ui-mvc.md](ui-mvc.md): Build controller/view applications with clear separation of concerns.
+- [references/apis-minimal-and-controllers.md](apis-minimal-and-controllers.md): Build HTTP APIs with Minimal APIs or controllers, including validation and response patterns.
+- [references/data-state-and-services.md](data-state-and-services.md): Use EF Core, `DbContext`, options, `IHttpClientFactory`, session, temp data, and app state responsibly.
+- [references/security-and-identity.md](security-and-identity.md): Apply authentication, authorization, Identity, secrets, data protection, CORS, CSRF, and HTTPS guidance.
+- [references/realtime-grpc-and-background-work.md](realtime-grpc-and-background-work.md): Use SignalR, gRPC, and hosted services.
+- [references/testing-performance-and-operations.md](testing-performance-and-operations.md): Add integration tests, browser tests, caching, compression, health checks, rate limits, and deployment concerns.
+- [references/versioning-and-upgrades.md](versioning-and-upgrades.md): Handle target frameworks, breaking changes, obsolete APIs, and migrations.
+- [references/source-map.md](source-map.md): Map the official ASP.NET Core documentation tree to the references in this skill.
 
 ## Execution Notes
 

@@ -1,6 +1,6 @@
 # Prisma Client Setup
 
-Generate and instantiate Prisma Client for Prisma's standard SQL provider workflow. For MongoDB, follow the provider-specific notes in `references/mongodb.md` instead of copying the SQL adapter example below.
+Generate and instantiate Prisma Client for Prisma's standard SQL provider workflow. For MongoDB, follow the provider-specific notes in `mongodb.md` instead of copying the SQL adapter example below.
 
 ## 1. Install dependencies
 

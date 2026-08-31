@@ -12,3 +12,4 @@ A thin vertical strip on the left edge  -  wordmark rotated, plus 2-3 dot-indica
 ```css
 .nav-rail { position: fixed; left: 0; top: 0; bottom: 0; width: 3rem; padding: var(--space-md); writing-mode: vertical-rl; }
 ```
+

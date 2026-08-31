@@ -33,7 +33,7 @@ Two files, case-insensitive. The loader looks at the project root by default and
 Load both in one call:
 
 ```bash
-node .pi/skills/impeccable/scripts/load-context.mjs
+node ../scripts/load-context.mjs
 ```
 
 Consume the full JSON output. Never pipe through `head`, `tail`, `grep`, or `jq`. The output's `contextDir` field tells you where the files were resolved from.
@@ -63,11 +63,11 @@ Apply to every design, both registers. Match implementation complexity to the ae
 ### Color
 
 - Use OKLCH. Reduce chroma as lightness approaches 0 or 100; high chroma at extremes looks garish.
-- Never use `#000` or `#fff`. Tint every neutral toward the brand hue (chroma 0.005-0.01 is enough).
+- Never use `#000` or `#fff`. Tint every neutral toward the brand hue (chroma 0.005–0.01 is enough).
 - Pick a **color strategy** before picking colors. Four steps on the commitment axis:
   - **Restrained**: tinted neutrals + one accent ≤10%. Product default; brand minimalism.
-  - **Committed**: one saturated color carries 30-60% of the surface. Brand default for identity-driven pages.
-  - **Full palette**: 3-4 named roles, each used deliberately. Brand campaigns; product data viz.
+  - **Committed**: one saturated color carries 30–60% of the surface. Brand default for identity-driven pages.
+  - **Full palette**: 3–4 named roles, each used deliberately. Brand campaigns; product data viz.
   - **Drenched**: the surface IS the color. Brand heroes, campaign pages.
 - The "one accent ≤10%" rule is Restrained only. Committed / Full palette / Drenched exceed it on purpose. Don't collapse every design to Restrained by reflex.
 
@@ -81,7 +81,7 @@ Before choosing, write one sentence of physical scene: who uses this, where, und
 
 ### Typography
 
-- Cap body line length at 65-75ch.
+- Cap body line length at 65–75ch.
 - Hierarchy through scale + weight contrast (≥1.25 ratio between steps). Avoid flat scales.
 
 ### Layout
@@ -165,7 +165,7 @@ If the first word is `craft`, setup still runs first, but [reference/craft.md](r
 **Pin** creates a standalone shortcut so `/<command>` invokes `/impeccable <command>` directly. **Unpin** removes it. The script writes to every harness directory present in the project.
 
 ```bash
-node .pi/skills/impeccable/scripts/pin.mjs <pin|unpin> <command>
+node ../scripts/pin.mjs <pin|unpin> <command>
 ```
 
 Valid `<command>` is any command from the table above. Report the script's result concisely. Confirm the new shortcut on success, relay stderr verbatim on error.

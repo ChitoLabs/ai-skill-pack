@@ -49,7 +49,7 @@ If you are creating a new block, prefer scaffolding rather than hand-rolling str
 - If you need Interactivity API from day 1, use the interactive template.
 
 Read:
-- `references/creating-new-blocks.md`
+- `creating-new-blocks.md`
 
 After scaffolding:
 
@@ -70,7 +70,7 @@ WordPress 6.9 enforces `apiVersion: 3` in the block.json schema. Blocks with api
 - Third-party scripts attached to a specific `window` may have scoping issues.
 
 Read:
-- `references/block-json.md` (apiVersion and schema details)
+- `block-json.md` (apiVersion and schema details)
 
 ### 3) Pick the right block model
 
@@ -85,7 +85,7 @@ Read:
 Make changes in the block’s `block.json`, then confirm registration matches metadata.
 
 For field-by-field guidance, read:
-- `references/block-json.md`
+- `block-json.md`
 
 Common pitfalls:
 
@@ -102,7 +102,7 @@ Prefer PHP registration using metadata, especially when:
 - you need conditional asset loading
 
 Read and apply:
-- `references/registration.md`
+- `registration.md`
 
 ### 6) Implement edit/save/render patterns
 
@@ -113,8 +113,8 @@ Follow wrapper attribute best practices:
 - Dynamic render (PHP): `get_block_wrapper_attributes()`
 
 Read:
-- `references/supports-and-wrappers.md`
-- `references/dynamic-rendering.md` (if dynamic)
+- `supports-and-wrappers.md`
+- `dynamic-rendering.md` (if dynamic)
 
 ### 7) Inner blocks (block composition)
 
@@ -124,7 +124,7 @@ If your block is a “container” that nests other blocks, treat Inner Blocks a
 - Keep migrations in mind if you change inner markup.
 
 Read:
-- `references/inner-blocks.md`
+- `inner-blocks.md`
 
 ### 8) Attributes and serialization
 
@@ -134,7 +134,7 @@ Before changing attributes:
 - avoid the deprecated `meta` attribute source
 
 Read:
-- `references/attributes-and-serialization.md`
+- `attributes-and-serialization.md`
 
 ### 9) Migrations and deprecations (avoid "Invalid block")
 
@@ -144,7 +144,7 @@ If you change saved markup or attributes:
 2. Provide `save` for old versions and an optional `migrate` to normalize attributes.
 
 Read:
-- `references/deprecations.md`
+- `deprecations.md`
 
 ### 10) Tooling and verification commands
 
@@ -154,7 +154,7 @@ Prefer whatever the repo already uses:
 - `wp-env` (common) → use for local WP + E2E
 
 Read:
-- `references/tooling-and-testing.md`
+- `tooling-and-testing.md`
 
 ## Verification
 
@@ -168,9 +168,9 @@ Read:
 
 If something fails, start here:
 
-- `references/debugging.md` (common failures + fastest checks)
-- `references/attributes-and-serialization.md` (attributes not saving)
-- `references/deprecations.md` (invalid block after change)
+- `debugging.md` (common failures + fastest checks)
+- `attributes-and-serialization.md` (attributes not saving)
+- `deprecations.md` (invalid block after change)
 
 ## Escalation
 

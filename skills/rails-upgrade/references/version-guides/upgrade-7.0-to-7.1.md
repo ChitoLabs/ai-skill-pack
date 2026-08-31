@@ -177,17 +177,17 @@ config.active_record.legacy_connection_handling = true
 
 **Fix:**
 ```ruby
-# BEFORE (Rails 7.0) - causes error in 7.1
+# BEFORE (Rails 7.0) — causes error in 7.1
 config.active_record.legacy_connection_handling = false
 
-# AFTER (Rails 7.1) - remove the line entirely
-# (delete this configuration - it no longer exists)
+# AFTER (Rails 7.1) — remove the line entirely
+# (delete this configuration — it no longer exists)
 ```
 
 **Dual-boot compatible:**
 ```ruby
 if NextRails.next?
-  # Do nothing - legacy_connection_handling is removed in 7.1
+  # Do nothing — legacy_connection_handling is removed in 7.1
 else
   config.active_record.legacy_connection_handling = false
 end
@@ -413,7 +413,7 @@ grep -rn "legacy_connection_handling" config/
 Delete every occurrence found. For dual-boot compatibility:
 ```ruby
 if NextRails.next?
-  # Do nothing - removed in 7.1
+  # Do nothing — removed in 7.1
 else
   config.active_record.legacy_connection_handling = false
 end

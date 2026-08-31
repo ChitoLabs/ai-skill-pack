@@ -61,6 +61,6 @@ app/
 
 ## CRITICAL
 
-- Always check `isLoaded` before checking `isSignedIn` - Clerk needs time to restore the session from the token cache
+- Always check `isLoaded` before checking `isSignedIn` — Clerk needs time to restore the session from the token cache
 - Returning `null` while loading prevents a flash of the sign-in screen
 - Use `<Redirect>` from `expo-router`, not `router.push` in effects, to avoid React render warnings

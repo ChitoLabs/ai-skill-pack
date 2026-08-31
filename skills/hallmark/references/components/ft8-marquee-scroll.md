@@ -23,3 +23,4 @@ A horizontal infinite-scroll line of repeating tagline + dot separator: `STUDIO 
 *Anti-pattern:* using Ft8 on editorial / quiet contexts  -  the motion reads as loud. Pair only with playful / sport / manifesto voices, and always honour `prefers-reduced-motion: reduce`.
 
 ---
+

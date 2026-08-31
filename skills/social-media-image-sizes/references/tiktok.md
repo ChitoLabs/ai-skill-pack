@@ -4,7 +4,7 @@ platform: TikTok
 tags: tiktok, social-media, video-sizes, ads, profile
 ---
 
-# TikTok Image & Video Sizes - 2025
+# TikTok Image & Video Sizes — 2025
 
 ## Profile
 
@@ -25,7 +25,7 @@ tags: tiktok, social-media, video-sizes, ads, profile
 
 | Name | Size (px) | Aspect | Notes |
 |---|---|---|---|
-| In-Feed Ad | 1080 × 1920 | 9:16 | 5-60 seconds |
+| In-Feed Ad | 1080 × 1920 | 9:16 | 5–60 seconds |
 | TopView Ad | 1080 × 1920 | 9:16 | Up to 60 seconds; first thing users see on open |
 | Spark Ad | 1080 × 1920 | 9:16 | Boosts existing organic content |
 
@@ -33,7 +33,7 @@ tags: tiktok, social-media, video-sizes, ads, profile
 
 - **Video formats:** MP4 or MOV recommended
 - **Codec:** H.264 or H.265
-- **Frame rate:** 23-60 fps
+- **Frame rate:** 23–60 fps
 - **Bitrate:** ≥ 516 kbps
 - **Max video file size:** 287.6 MB (iOS app), 72 MB (Android), 500 MB (web upload)
 - **Landscape (16:9)** is also accepted but performs significantly worse than full-screen 9:16

@@ -75,7 +75,7 @@ const { data, totalCount } = await clerk.organizations.getOrganizationInvitation
 })
 ```
 
-Returns a `PaginatedResourceResponse<OrganizationInvitation[]>` - access the array via `data` and the total via `totalCount`.
+Returns a `PaginatedResourceResponse<OrganizationInvitation[]>` — access the array via `data` and the total via `totalCount`.
 
 Full status enum: `'pending' | 'accepted' | 'revoked' | 'expired'`. Skipping `status` defaults to `['pending']`.
 
@@ -102,7 +102,7 @@ const invitation = await clerk.organizations.getOrganizationInvitation({
 
 ## Built-in Invitation UI
 
-Zero-code path - `<OrganizationProfile />` includes a full members tab with invite / revoke / role change:
+Zero-code path — `<OrganizationProfile />` includes a full members tab with invite / revoke / role change:
 
 ```tsx
 import { OrganizationProfile } from '@clerk/nextjs'
@@ -142,7 +142,7 @@ See `clerk-webhooks` skill for webhook setup + signature verification.
 
 ## Key Rules
 
-- `inviterUserId` is NOT optional in a human-initiated flow. Don't omit it - track who sent each invite.
+- `inviterUserId` is NOT optional in a human-initiated flow. Don't omit it — track who sent each invite.
 - Invitations with `status: 'expired'` need to be recreated; they can't be re-sent.
 - The caller needs `org:sys_memberships:manage`. Default `org:admin` has this; `org:member` does not.
 - Revoke by `invitationId`, not by email. Email alone is ambiguous when you've had multiple invites to the same address.

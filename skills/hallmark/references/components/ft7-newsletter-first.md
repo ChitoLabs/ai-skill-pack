@@ -25,3 +25,4 @@ The form (label + input + submit) is the *primary* element of the footer; everyt
 ```
 
 *Anti-pattern:* Ft7 when the page never said "subscribe" above the fold. The footer is an honest *conclusion*; if you didn't ask, don't ambush. Drop to Ft2 instead.
+

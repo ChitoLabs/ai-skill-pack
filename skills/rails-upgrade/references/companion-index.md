@@ -1,0 +1,47 @@
+# Companion Index
+
+Every preserved source companion this skill carries, listed so `SKILL.md` stays a runtime contract rather than a file manifest.
+
+- `CHANGELOG.md` - preserved source companion file.
+- `breaking-changes-by-version.md` - preserved source companion file.
+- `deprecation-warnings.md` - preserved source companion file.
+- `detection-scripts/patterns/rails-40-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-41-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-42-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-50-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-51-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-52-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-60-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-70-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-71-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-72-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-80-patterns.yml` - preserved source companion file.
+- `detection-scripts/patterns/rails-81-patterns.yml` - preserved source companion file.
+- `examples/multi-hop-upgrade.md` - preserved source companion file.
+- `examples/simple-upgrade.md` - preserved source companion file.
+- `gem-compatibility.md` - preserved source companion file.
+- `multi-hop-strategy.md` - preserved source companion file.
+- `staying-current.md` - preserved source companion file.
+- `templates/app-update-preview-template.md` - preserved source companion file.
+- `templates/upgrade-report-template.md` - preserved source companion file.
+- `testing-checklist.md` - preserved source companion file.
+- `version-guides/upgrade-3.2-to-4.0.md` - preserved source companion file.
+- `version-guides/upgrade-4.0-to-4.1.md` - preserved source companion file.
+- `version-guides/upgrade-4.1-to-4.2.md` - preserved source companion file.
+- `version-guides/upgrade-4.2-to-5.0.md` - preserved source companion file.
+- `version-guides/upgrade-5.0-to-5.1.md` - preserved source companion file.
+- `version-guides/upgrade-5.1-to-5.2.md` - preserved source companion file.
+- `version-guides/upgrade-5.2-to-6.0.md` - preserved source companion file.
+- `version-guides/upgrade-6.0-to-6.1.md` - preserved source companion file.
+- `version-guides/upgrade-6.1-to-7.0.md` - preserved source companion file.
+- `version-guides/upgrade-7.0-to-7.1.md` - preserved source companion file.
+- `version-guides/upgrade-7.1-to-7.2.md` - preserved source companion file.
+- `version-guides/upgrade-7.2-to-8.0.md` - preserved source companion file.
+- `version-guides/upgrade-8.0-to-8.1.md` - preserved source companion file.
+- `workflows/app-update-preview-workflow.md` - preserved source companion file.
+- `workflows/boot-smoke-test-workflow.md` - preserved source companion file.
+- `workflows/ci-sync-workflow.md` - preserved source companion file.
+- `workflows/direct-detection-workflow.md` - preserved source companion file.
+- `workflows/gem-compatibility-workflow.md` - preserved source companion file.
+- `workflows/test-suite-verification-workflow.md` - preserved source companion file.
+- `workflows/upgrade-report-workflow.md` - preserved source companion file.

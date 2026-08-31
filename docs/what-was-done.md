@@ -1,17 +1,15 @@
 # What Was Done
 
-The public package was destructively replaced with the authorized v3 sources.
+The publication layer was rebuilt from the user-owned replacement under `skills/`.
 
-## Actions
+## Changes
 
-- Recreated `skills/` from the authorized v3 source pack.
-- Recreated `commands/` from the v3 command collection.
-- Published 466 skill folders, each with a `SKILL.md` entry point.
-- Published 3 command files: `hallmark`, `i-have-adhd`, and `impeccable`.
-- Kept `grill-me` as a skill without publishing a command for it.
-- Excluded the identified compiled cache and operating-system metadata junk.
-- Regenerated the human-readable catalogs and structured manifests from the final v3 state.
+- Treated the 492 top-level `skills/*/SKILL.md` files as the sole publication source.
+- Removed obsolete command-era publication artifacts.
+- Regenerated concise catalogs and manifests in deterministic name order.
+- Replaced attribution mutation with a read-only validator that preserves supplied authors, including `unknown`.
+- Kept adapter attribution separate from original authorship.
 
-## Boundaries
+## Boundary
 
-The source collection was not modified. No dependencies were installed, and no files were staged, committed, or pushed.
+Skill contents were not normalized or rewritten by publication generation. No dependencies were installed, and no files were staged, committed, or pushed.

@@ -49,11 +49,11 @@ If this is a full site repo, pick the specific plugin/theme before changing code
 - **Expose CPT/taxonomy in `wp/v2`:**
   - Use `show_in_rest => true` + `rest_base` if needed.
   - Optionally provide `rest_controller_class`.
-  - Read `references/custom-content-types.md`.
+  - Read `custom-content-types.md`.
 - **Custom endpoints:**
   - Use `register_rest_route()` on `rest_api_init`.
   - Prefer a controller class (`WP_REST_Controller` subclass) for anything non-trivial.
-  - Read `references/routes-and-endpoints.md` and `references/schema.md`.
+  - Read `routes-and-endpoints.md` and `schema.md`.
 
 ### 2) Register routes safely (namespaces, methods, permissions)
 
@@ -63,7 +63,7 @@ If this is a full site repo, pick the specific plugin/theme before changing code
 - Return data via `rest_ensure_response()` or `WP_REST_Response`.
 - Return errors via `WP_Error` with an explicit `status`.
 
-Read `references/routes-and-endpoints.md`.
+Read `routes-and-endpoints.md`.
 
 ### 3) Validate/sanitize request args
 
@@ -71,7 +71,7 @@ Read `references/routes-and-endpoints.md`.
 - Prefer JSON Schema validation with `rest_validate_value_from_schema` then `rest_sanitize_value_from_schema`.
 - Never read `$_GET`/`$_POST` directly inside endpoints; use `WP_REST_Request`.
 
-Read `references/schema.md`.
+Read `schema.md`.
 
 ### 4) Responses, fields, and links
 
@@ -81,7 +81,7 @@ Read `references/schema.md`.
 - If you need unfiltered post content (e.g., ToC plugins injecting HTML), request `?context=edit` to access `content.raw` (auth required). Pair with `_fields=content.raw` to keep responses small.
 - Add related resource links via `WP_REST_Response::add_link()`.
 
-Read `references/responses-and-fields.md`.
+Read `responses-and-fields.md`.
 
 ### 5) Authentication and authorization
 
@@ -89,7 +89,7 @@ Read `references/responses-and-fields.md`.
 - For external clients: application passwords (basic auth) or an auth plugin.
 - Use capability checks in `permission_callback` (authorization), not just “logged in”.
 
-Read `references/authentication.md`.
+Read `authentication.md`.
 
 ### 6) Client-facing behavior (discovery, pagination, embeds)
 
@@ -97,7 +97,7 @@ Read `references/authentication.md`.
 - Support `_fields`, `_embed`, `_method`, `_envelope`, pagination headers.
 - Remember `per_page` is capped at 100.
 
-Read `references/discovery-and-params.md`.
+Read `discovery-and-params.md`.
 
 ## Verification
 

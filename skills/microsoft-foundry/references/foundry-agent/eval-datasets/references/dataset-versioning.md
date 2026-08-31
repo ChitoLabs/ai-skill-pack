@@ -1,4 +1,4 @@
-# Dataset Versioning - Version Management & Tagging
+# Dataset Versioning — Version Management & Tagging
 
 Manage dataset versions with naming conventions, tagging, and version pinning for reproducible evaluations. This workflow formalizes dataset lifecycle management using existing MCP tools and local conventions.
 
@@ -15,9 +15,9 @@ Use the pattern `<agent-name>-<source>-v<N>`:
 `<agent-name>` already refers to the environment-specific deployed Foundry agent name. If that value includes the environment key, do **not** append the environment again.
 
 **Full examples:**
-- `support-bot-prod-traces-v1` - first production dataset from trace harvesting
-- `support-bot-dev-synthetic-v2` - second synthetic dataset
-- `support-bot-prod-combined-v5` - fifth production dataset combining traces + manual examples
+- `support-bot-prod-traces-v1` — first production dataset from trace harvesting
+- `support-bot-dev-synthetic-v2` — second synthetic dataset
+- `support-bot-prod-combined-v5` — fifth production dataset combining traces + manual examples
 
 ## Tagging Conventions
 
@@ -130,7 +130,7 @@ Keep `stage` stable for the dataset family (`seed`, `traces`, `curated`, or `pro
 
 > ⚠️ **DO NOT stop here.** After creating a new dataset version, continue to the Dataset Update Loop below.
 
-## Dataset Update Loop - Eval → Analyze → Optimize → Re-Eval
+## Dataset Update Loop — Eval → Analyze → Optimize → Re-Eval
 
 When a dataset is updated (new rows, better coverage, new failure modes), run this loop to validate the agent against the harder test suite:
 
@@ -141,7 +141,7 @@ When a dataset is updated (new rows, better coverage, new failure modes), run th
 [2] Compare: eval on v1 vs eval on v2 (same agent, different datasets)
     │
     ▼
-[3] Analyze score changes - expect some drops (harder tests ≠ worse agent)
+[3] Analyze score changes — expect some drops (harder tests ≠ worse agent)
     │
     ▼
 [4] Optimize agent prompt based on NEW failure patterns only
@@ -157,7 +157,7 @@ When a dataset is updated (new rows, better coverage, new failure modes), run th
 
 - **Never remove dataset rows to recover scores.** If eval scores drop after a dataset update, the dataset is likely exposing real gaps. Removing hard cases defeats the purpose.
 - **Never weaken evaluators to recover scores.** Do not lower thresholds, remove evaluators, or switch to easier scoring when scores drop on an expanded dataset.
-- **Distinguish dataset difficulty from agent regression.** A score drop on a harder dataset is expected and healthy - it means test coverage improved. Only flag as regression when the same dataset + same evaluators produce worse scores on a new agent version.
+- **Distinguish dataset difficulty from agent regression.** A score drop on a harder dataset is expected and healthy — it means test coverage improved. Only flag as regression when the same dataset + same evaluators produce worse scores on a new agent version.
 - **Optimize for NEW failure patterns only.** When optimizing the agent prompt after a dataset update, target the newly added test cases. Do not re-optimize for cases that were already passing.
 
 ## Comparing Versions

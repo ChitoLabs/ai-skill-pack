@@ -1,4 +1,4 @@
-# Azure AI Vision Image Analysis - Python SDK Quick Reference
+# Azure AI Vision Image Analysis — Python SDK Quick Reference
 
 > Condensed from **azure-ai-vision-imageanalysis-py**. Full patterns (dense captions, smart crops, people detection)
 > in the **azure-ai-vision-imageanalysis-py** plugin skill if installed.

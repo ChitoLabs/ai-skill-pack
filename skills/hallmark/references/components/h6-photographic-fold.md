@@ -14,3 +14,4 @@ Single full-bleed image fills the viewport. Caption sits in a corner.
 .hero-photo .bleed { width: 100%; height: 100%; object-fit: cover; }
 .hero-photo .caption { position: absolute; bottom: var(--space-md); right: var(--space-md); }
 ```
+

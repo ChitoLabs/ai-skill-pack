@@ -25,10 +25,10 @@ Handle OCR-heavy inputs where text must be recovered from images or scanned page
 
 1. Decide whether plain OCR, structured extraction, or document-specific parsing is needed.
 2. Preprocess noisy inputs before extraction when skew, blur, or shadows are present.
-3. Use `scripts/ocr_processor.py` for core OCR tasks.
+3. Use `../scripts/ocr_processor.py` for core OCR tasks.
 4. Use the focused helpers when the input is specialized:
-   - `scripts/business_card_scanner.py`
-   - `scripts/receipt_scanner.py`
+   - `../scripts/business_card_scanner.py`
+   - `../scripts/receipt_scanner.py`
 5. Return confidence caveats when the source is low quality, rotated, handwritten, or multilingual.
 
 ## Guardrails

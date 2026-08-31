@@ -53,7 +53,7 @@ jedis.set("http://www.verylongurlkey.com/store/products/product.html?id=8361",
 ```
 
 **Key naming tips:**
-- Keep keys short but readable-they consume memory
+- Keep keys short but readable—they consume memory
 - Consider key prefixes for multi-tenant applications
 - Extract short identifiers from URLs or long strings rather than using the whole thing
 - For large binary values, consider using a hash digest as the key instead of the value itself

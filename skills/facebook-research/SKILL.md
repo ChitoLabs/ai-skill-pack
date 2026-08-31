@@ -18,6 +18,8 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
@@ -48,31 +51,6 @@ Return the completed action, files or commands used, verification evidence, bloc
 ## References
 
 - `references/source-skill.md` - preserved upstream skill body and domain workflow.
-- `references/_postplus_shared/00-core/shared-collection/scripts/collection_actor_run.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-collection/scripts/lib/hosted_collection_bridge.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/download_videos_from_manifest_with_ytdlp.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/creative_format.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/execution_approval.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/hosted_billing_summary.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/hosted_execution_protocol.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/hosted_media_generation_bridge.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/local_skill_cli.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/network_runtime.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/postplus_cli_config.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/postplus_cloud_client.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/postplus_workspace_runtime.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/lib/skill_runtime.mjs` - preserved source companion file.
-- `references/_postplus_shared/00-core/shared-runtime/scripts/postplus_workspace.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/build_collection_plan.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/collect_public_posts.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/discover_public_urls_with_mcp.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/lib/facebook_urls.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/lib/public_content_common.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/normalize_public_posts.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/parse_collection_brief.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/poll_public_content_collection.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/render_collection_summary.mjs` - preserved source companion file.
-- `references/internal/public-content/scripts/run_public_content_collection.mjs` - preserved source companion file.
-- `references/normalized-schema.md` - preserved source companion file.
-- `scripts/poll_facebook_post_collection.mjs` - preserved source companion file.
-- `scripts/run_facebook_post_collection.mjs` - preserved source companion file.
+- `references/` - 26 preserved source companion files.
+- `scripts/` - 2 preserved source companion files.
+- `references/companion-index.md` - the complete list of those files.

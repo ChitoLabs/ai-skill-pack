@@ -5,7 +5,7 @@
 An error MUST be handled exactly once: either log it or return it, never both. Doing both causes duplicate log entries and makes debugging harder.
 
 ```go
-// ✗ Bad - logs AND returns (duplicate noise)
+// ✗ Bad — logs AND returns (duplicate noise)
 func processOrder(id string) error {
     err := chargeCard(id)
     if err != nil {
@@ -15,7 +15,7 @@ func processOrder(id string) error {
     return nil
 }
 
-// ✓ Good - return with context, let the caller decide
+// ✓ Good — return with context, let the caller decide
 func processOrder(id string) error {
     err := chargeCard(id)
     if err != nil {
@@ -26,7 +26,7 @@ func processOrder(id string) error {
     return nil
 }
 
-// ✓ Good - handle at the top level (HTTP handler, main, etc.)
+// ✓ Good — handle at the top level (HTTP handler, main, etc.)
 func handleOrder(w http.ResponseWriter, r *http.Request) {
     err := processOrder(r.FormValue("id"))
     if err != nil {
@@ -42,10 +42,10 @@ func handleOrder(w http.ResponseWriter, r *http.Request) {
 
 ### When to panic
 
-Panic MUST only be used for truly unrecoverable states - programmer errors, impossible conditions, or corrupt invariants. NEVER use panic for expected failures like network timeouts or missing files.
+Panic MUST only be used for truly unrecoverable states — programmer errors, impossible conditions, or corrupt invariants. NEVER use panic for expected failures like network timeouts or missing files.
 
 ```go
-// ✓ Acceptable - programmer error in initialization
+// ✓ Acceptable — programmer error in initialization
 func MustCompileRegex(pattern string) *regexp.Regexp {
     re, err := regexp.Compile(pattern)
     if err != nil {
@@ -54,7 +54,7 @@ func MustCompileRegex(pattern string) *regexp.Regexp {
     return re
 }
 
-// ✗ Bad - panic for a normal failure
+// ✗ Bad — panic for a normal failure
 func GetUser(id string) *User {
     user, err := db.Find(id)
     if err != nil {
@@ -89,16 +89,16 @@ For structured panic recovery with `samber/oops`, see the `samber/cc-skills-gola
 
 ## Why Use `samber/oops`
 
-- **Stack traces** - you see `"connection refused"` but need to know where it originated
-- **Structured context** - user ID, tenant ID, or request metadata attached to the error
-- **Error codes** - machine-readable identifiers for monitoring dashboards
-- **Public/private separation** - safe message to show end users
+- **Stack traces** — you see `"connection refused"` but need to know where it originated
+- **Structured context** — user ID, tenant ID, or request metadata attached to the error
+- **Error codes** — machine-readable identifiers for monitoring dashboards
+- **Public/private separation** — safe message to show end users
 - ...
 
 `samber/oops` is a **drop-in replacement** that fills these gaps. Every `oops` error implements the standard `error` interface, works with `errors.Is`/`errors.As`, and adds structured attributes:
 
 ```go
-// ✗ Before - standard errors, no context
+// ✗ Before — standard errors, no context
 func (s *OrderService) CreateOrder(ctx context.Context, req CreateOrderReq) error {
     err := s.db.Insert(ctx, req.Order)
     if err != nil {
@@ -107,7 +107,7 @@ func (s *OrderService) CreateOrder(ctx context.Context, req CreateOrderReq) erro
     return nil
 }
 
-// ✓ After - samber/oops, rich context for debugging
+// ✓ After — samber/oops, rich context for debugging
 func (s *OrderService) CreateOrder(ctx context.Context, req CreateOrderReq) error {
     err := s.db.Insert(ctx, req.Order)
     if err != nil {
@@ -122,7 +122,7 @@ func (s *OrderService) CreateOrder(ctx context.Context, req CreateOrderReq) erro
 }
 ```
 
-When this error is logged, you get the stack trace, user ID, order ID, domain, error code, and the full error chain - all structured and machine-parseable.
+When this error is logged, you get the stack trace, user ID, order ID, domain, error code, and the full error chain — all structured and machine-parseable.
 
 ## Logging Errors with `slog`
 

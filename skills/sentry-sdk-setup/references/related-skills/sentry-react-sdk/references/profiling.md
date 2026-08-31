@@ -1,8 +1,8 @@
-# Browser Profiling - Sentry React SDK
+# Browser Profiling — Sentry React SDK
 
 > Minimum SDK: `@sentry/react` ≥10.27.0+ (Beta)
 
-> ⚠️ **Beta status** - breaking changes may occur. Browser support is limited to Chromium-based browsers only.
+> ⚠️ **Beta status** — breaking changes may occur. Browser support is limited to Chromium-based browsers only.
 
 ---
 
@@ -10,12 +10,12 @@
 
 Sentry's browser profiler uses the [JS Self-Profiling API](https://wicg.github.io/js-self-profiling/) to capture:
 
-- **JavaScript call stacks** - function names and source file locations (deobfuscated via source maps)
-- **CPU time per function** - how much time is spent in each function
-- **Flame graphs** - aggregated across real user sessions, not just local dev
-- **Linked profiles** - every profile is attached to a trace, enabling navigation from span → flame graph in the Sentry UI
+- **JavaScript call stacks** — function names and source file locations (deobfuscated via source maps)
+- **CPU time per function** — how much time is spent in each function
+- **Flame graphs** — aggregated across real user sessions, not just local dev
+- **Linked profiles** — every profile is attached to a trace, enabling navigation from span → flame graph in the Sentry UI
 
-Sampling rate: **100Hz (10ms intervals)** - contrast with Chrome DevTools at 1000Hz (1ms). Less granular, but runs unobtrusively in production.
+Sampling rate: **100Hz (10ms intervals)** — contrast with Chrome DevTools at 1000Hz (1ms). Less granular, but runs unobtrusively in production.
 
 ---
 
@@ -30,7 +30,7 @@ Sampling rate: **100Hz (10ms intervals)** - contrast with Chrome DevTools at 100
 
 > ⚠️ **Sampling bias:** Profile data is collected **only** from Chromium users. Firefox and Safari sessions are silently not profiled. Consider this when drawing performance conclusions.
 
-In unsupported browsers, `browserProfilingIntegration()` **silently no-ops** - no errors thrown, no overhead.
+In unsupported browsers, `browserProfilingIntegration()` **silently no-ops** — no errors thrown, no overhead.
 
 ---
 
@@ -128,7 +128,7 @@ app.Use(async (context, next) => {
 npm install @sentry/react --save
 ```
 
-### SDK Initialization - Trace Mode (recommended)
+### SDK Initialization — Trace Mode (recommended)
 
 Trace mode automatically attaches profiles to all sampled spans. Use this for general production coverage:
 
@@ -143,10 +143,10 @@ Sentry.init({
     Sentry.browserProfilingIntegration(),
   ],
 
-  // Tracing - profiles are only collected when a transaction is also sampled
+  // Tracing — profiles are only collected when a transaction is also sampled
   tracesSampleRate: 1.0,
 
-  // Profiling - fraction of sessions to profile
+  // Profiling — fraction of sessions to profile
   profileSessionSampleRate: 1.0,
 
   // "trace" = automatically attach profiles to all active spans
@@ -154,7 +154,7 @@ Sentry.init({
 });
 ```
 
-### SDK Initialization - Manual Mode
+### SDK Initialization — Manual Mode
 
 Manual mode lets you profile specific user flows or code paths explicitly:
 
@@ -186,16 +186,16 @@ Sentry.uiProfiler.stopProfiler();
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `tracesSampleRate` | `number` | - | 0.0-1.0 - fraction of transactions traced; profiles only attach to traced transactions |
-| `profileSessionSampleRate` | `number` | - | 0.0-1.0 - session-level sampling decision for profiling |
-| `profileLifecycle` | `"trace"` | - | Set to `"trace"` for Trace mode; omit for Manual mode |
-| `tracePropagationTargets` | `(string\|RegExp)[]` | - | URLs where distributed trace headers are injected |
+| `tracesSampleRate` | `number` | — | 0.0–1.0 — fraction of transactions traced; profiles only attach to traced transactions |
+| `profileSessionSampleRate` | `number` | — | 0.0–1.0 — session-level sampling decision for profiling |
+| `profileLifecycle` | `"trace"` | — | Set to `"trace"` for Trace mode; omit for Manual mode |
+| `tracePropagationTargets` | `(string\|RegExp)[]` | — | URLs where distributed trace headers are injected |
 
 ---
 
 ## How Profiles Attach to Traces
 
-Profiles are **not independent** from tracing - they attach to transactions:
+Profiles are **not independent** from tracing — they attach to transactions:
 
 1. `tracesSampleRate` determines whether a transaction is traced at all
 2. `profileSessionSampleRate` determines whether the **session** opts into profiling
@@ -227,15 +227,15 @@ In the Sentry UI, open a trace and click **"Profile"** to view the flame graph f
 | Stack traces | Deobfuscated via source maps | Minified names unless local |
 | Data scope | Aggregated across all sessions | Single local session |
 | Browser coverage | Chromium only | Any browser with DevTools |
-| Overhead | Low (production-safe) | Higher - not production-safe |
+| Overhead | Low (production-safe) | Higher — not production-safe |
 
 > ⚠️ **Chrome DevTools conflict:** When `browserProfilingIntegration` is active, Chrome DevTools profiles incorrectly show profiling overhead mixed into rendering work. Disable the integration when doing local DevTools profiling sessions.
 
 ---
 
-## Source Maps - Critical for Useful Profiles
+## Source Maps — Critical for Useful Profiles
 
-Without source maps, flame graphs show **minified function names** like `e`, `t`, `r` - effectively unreadable.
+Without source maps, flame graphs show **minified function names** like `e`, `t`, `r` — effectively unreadable.
 
 With source maps uploaded to Sentry, flame graphs show **original function names** and file paths from your source code.
 
@@ -274,7 +274,7 @@ See the main SKILL.md **Source Maps Setup** section for Webpack/CRA configuratio
 | Limitation | Detail |
 |-----------|--------|
 | **Beta status** | API is experimental; breaking changes possible between releases |
-| **Chromium only** | No Firefox, no Safari, no iOS - data is biased |
+| **Chromium only** | No Firefox, no Safari, no iOS — data is biased |
 | **Requires header** | `Document-Policy: js-profiling` must be served; some hosts don't allow custom headers |
 | **Compound sampling** | Profiles only captured when transaction is also sampled |
 | **10ms granularity** | Very short functions (<10ms) may not appear in profiles |
@@ -288,8 +288,8 @@ See the main SKILL.md **Source Maps Setup** section for Webpack/CRA configuratio
 | Issue | Solution |
 |-------|----------|
 | No profiles appearing in Sentry | Verify `Document-Policy: js-profiling` header is present on document responses |
-| Profiles exist but show minified names | Source maps not uploaded - configure `sentryVitePlugin` or `sentryWebpackPlugin` |
-| Profiling data only from some users | Expected - only Chromium users are profiled; Firefox/Safari silently no-op |
+| Profiles exist but show minified names | Source maps not uploaded — configure `sentryVitePlugin` or `sentryWebpackPlugin` |
+| Profiling data only from some users | Expected — only Chromium users are profiled; Firefox/Safari silently no-op |
 | Chrome DevTools shows inflated rendering times | Disable `browserProfilingIntegration` during local DevTools sessions |
 | `profileSessionSampleRate` has no effect | Ensure `browserProfilingIntegration()` is listed after `browserTracingIntegration()` in the integrations array |
 | Profiling on static host not working | Verify your host supports custom response headers; GitHub Pages and some CDNs do not |

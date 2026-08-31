@@ -43,7 +43,7 @@ WP-CLI commands can be destructive. Before running anything that writes:
 3. Make a backup when performing risky operations.
 
 Read:
-- `references/safety.md`
+- `safety.md`
 
 ### 1) Inspect WP-CLI and site targeting (deterministic)
 
@@ -65,21 +65,21 @@ Follow a safe sequence:
 4. Flush caches/rewrite if needed
 
 Read:
-- `references/search-replace.md`
+- `search-replace.md`
 
 #### B) Plugin/theme operations
 
 Use `wp plugin *` / `wp theme *` and confirm you’re acting on the intended site (and network) first.
 
 Read:
-- `references/packages-and-updates.md`
+- `packages-and-updates.md`
 
 #### C) Cron and queues
 
 Inspect cron state and run individual events for debugging rather than “run everything blindly”.
 
 Read:
-- `references/cron-and-cache.md`
+- `cron-and-cache.md`
 
 #### D) Multisite operations
 
@@ -89,7 +89,7 @@ Multisite changes can affect many sites. Always decide whether you’re operatin
 - network-wide (`--network` / iterating sites)
 
 Read:
-- `references/multisite.md`
+- `multisite.md`
 
 ### 3) Automation patterns (scripts + wp-cli.yml)
 
@@ -100,7 +100,7 @@ For repeatable ops, prefer:
 - CI jobs that run read-only checks by default
 
 Read:
-- `references/automation.md`
+- `automation.md`
 
 ## Verification
 
@@ -121,7 +121,7 @@ Read:
   - wrong flags or changing serialized data unsafely
 
 See:
-- `references/debugging.md`
+- `debugging.md`
 
 ## Escalation
 

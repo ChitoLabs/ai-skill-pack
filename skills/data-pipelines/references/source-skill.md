@@ -331,10 +331,10 @@ models:
 For detailed patterns and implementation guidance on specific domains, read the
 relevant file from the `references/` folder:
 
-- `references/airflow-patterns.md` - DAG design patterns, sensors, dynamic DAGs, backfill strategies
-- `references/dbt-patterns.md` - model layering, macros, packages, CI/CD for dbt
-- `references/spark-tuning.md` - memory config, shuffle optimization, partitioning, caching
-- `references/streaming-architecture.md` - Kafka, Flink, exactly-once, late data, windowing
+- `airflow-patterns.md` - DAG design patterns, sensors, dynamic DAGs, backfill strategies
+- `dbt-patterns.md` - model layering, macros, packages, CI/CD for dbt
+- `spark-tuning.md` - memory config, shuffle optimization, partitioning, caching
+- `streaming-architecture.md` - Kafka, Flink, exactly-once, late data, windowing
 
 Only load a references file if the current task requires it - they are long and
 will consume context.

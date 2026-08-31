@@ -1,6 +1,6 @@
 ---
 name: nuxt-ui
-description: "Trigger: nuxt-ui, Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming. Preserve source workflow with portable agent instructions."
+description: "Trigger: nuxt-ui, Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Preserve source workflow with portable agent instructions."
 license: Apache-2.0
 metadata:
   author: nuxt
@@ -12,12 +12,14 @@ metadata:
 
 ## Activation Contract
 
-Use this skill when the user request matches `nuxt-ui` or the preserved source description: Build UIs with @nuxt/ui v4 - 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, customizing themes to match a brand, building forms, or composing layouts like dashboards, docs sites, and chat interfaces.
+Use this skill when the user request matches `nuxt-ui` or the preserved source description: Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, customizing themes to match a brand, building forms, or composing layouts like dashboards, docs sites, and chat interfaces.
 
 Before acting, read `references/source-skill.md` and any relevant companion files listed in References. Treat those files as the source-specific workflow and this file as the portable runtime contract.
 
 ## Hard Rules
 
+- Defer to the user, to repository policy, and to any managed workflow that owns the current phase, gate, artifact, review, or verdict. Never claim workflow authority or create a parallel plan, review, or verdict.
+- Every path is relative to this skill: never absolute, never a runtime install directory, never another skill. Name a companion skill, never depend on one; if it is not installed, say so and continue with this skill's own references or the closest manual fallback.
 - Preserve the source skill's domain behavior, prerequisites, warnings, and output expectations.
 - Do not install, deploy, authenticate, mutate remote services, or run destructive commands unless the preserved workflow requires it and the user has approved the action.
 - Use capability wording: available file editing tool, available shell/terminal tool, available browser tool, and if persistent memory is available.
@@ -28,6 +30,7 @@ Before acting, read `references/source-skill.md` and any relevant companion file
 
 | Condition | Action |
 |---|---|
+| A named companion skill is not installed | Say so, then continue with this skill's own references or the closest manual fallback. |
 | Relevant companion file exists | Read it before implementing that part of the workflow. |
 | Required tool, account, token, or runtime is unavailable | Stop and ask for the missing prerequisite or provide a manual fallback. |
 | The task could modify external systems | Explain the action and wait for user approval before execution. |
