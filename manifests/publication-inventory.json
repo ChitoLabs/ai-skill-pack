@@ -1,8 +1,16 @@
 {
   "repository": "ChitoLabs/ai-skill-pack",
-  "source_of_truth": "skills/*/SKILL.md",
+  "publication_sources": {
+    "skills": "skills/*/SKILL.md",
+    "taxonomy": "skill-categories.json",
+    "overrides": "catalog-overrides.json"
+  },
   "publication_scope": "Top-level skill entry points",
   "total_skills": 492,
+  "taxonomy": {
+    "schema_version": 1,
+    "taxonomy_version": "2026-08-30"
+  },
   "published_skills": [
     "a11y",
     "accessibility",

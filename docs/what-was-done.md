@@ -1,15 +1,10 @@
 # What Was Done
 
-The publication layer was rebuilt from the user-owned replacement under `skills/`.
+The publication layer was rebuilt from three versioned inputs: 492 top-level `skills/*/SKILL.md` entry points, `skill-categories.json`, and `catalog-overrides.json`.
 
-## Changes
+- Added a category-based human discovery catalog with concise capability summaries, separate triggers, and licenses.
+- Added deterministic taxonomy, override, and freshness validation.
+- Preserved supplied source, author, adapter, version, and license data.
+- Kept generation read-only by default and limited writes to derived publication artifacts.
 
-- Treated the 492 top-level `skills/*/SKILL.md` files as the sole publication source.
-- Removed obsolete command-era publication artifacts.
-- Regenerated concise catalogs and manifests in deterministic name order.
-- Replaced attribution mutation with a read-only validator that preserves supplied authors, including `unknown`.
-- Kept adapter attribution separate from original authorship.
-
-## Boundary
-
-Skill contents were not normalized or rewritten by publication generation. No dependencies were installed, and no files were staged, committed, or pushed.
+Skill contents were not rewritten.

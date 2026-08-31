@@ -1,30 +1,62 @@
 # AI Skill Pack
 
-A portable collection of **492 skills** adapted for agents that support folder-based skills with a `SKILL.md` entry point.
+**492 generic, portable adaptations of upstream skills.** Generic adaptation means a portable `SKILL.md` structure and neutral runtime instructions; tools and dependencies can still vary by skill.
 
-## Use
+Compatibility means a runtime can discover and load skills through the listed folder convention, not that every external tool or dependency is installed.
 
-Copy the skill folders you need from `skills/` into your runtime's skill directory. Review each skill's instructions, dependencies, permissions, and license before use.
+Gentle AI and repo-harness can orchestrate these skills as workflow layers, but they are not skill-loading runtimes.
+
+## Install One Skill
+
+```sh
+# From the root of a cloned repository:
+mkdir -p ~/.agents/skills
+cp -R skills/systematic-debugging ~/.agents/skills/
+```
+
+## Global Installation
+
+Recommended shared path: `~/.agents/skills/`
+
+| Runtime | Shared path support | Runtime-specific path |
+| --- | :---: | --- |
+| OpenCode | Yes | Not needed |
+| Pi | Yes | Not needed |
+| Codex CLI | Yes | Not needed |
+| Gemini CLI | Yes | Not needed |
+| Claude Code | No | `~/.claude/skills/` |
+| AGY CLI | No | `~/.gemini/antigravity-cli/skills/` |
+
+## Project Installation
+
+Recommended shared path: `.agents/skills/`
+
+| Runtime | Shared path support | Runtime-specific path |
+| --- | :---: | --- |
+| OpenCode | Yes | Not needed |
+| Pi | Yes | Not needed |
+| Codex CLI | Yes | Not needed |
+| Gemini CLI | Yes | Not needed |
+| AGY CLI | Yes | Not needed |
+| Claude Code | No | `.claude/skills/` |
+
+AGY uses a runtime-specific global path, while project-local `.agents/skills/` is supported.
+
+## Browse
+
+| Resource | Purpose |
+| --- | --- |
+| [Skills catalog](docs/skills-catalog.md) | Browse by category, summary, trigger, and license. |
+| [Source list](docs/source-list.md) | Check upstream author, adapter, and source. |
+| [Taxonomy](skill-categories.json) | Review the versioned category mapping. |
+| [Machine catalog](manifests/skills-catalog.json) | Consume structured skill metadata. |
 
 ## Publication Contract
 
-- `skills/*/SKILL.md` is the sole publication source of truth.
-- Catalogs and manifests are deterministic views of those 492 entry points.
-- `metadata.author` is preserved as supplied. It is never inferred from a publisher, distributor, curator, adapter, source URL, or repository owner.
-- `metadata.adapter` remains separate from authorship.
-- Unknown authors remain `unknown`.
-
-## Repository Layout
-
-| Path | Purpose |
-| --- | --- |
-| `skills/` | Published skill folders. |
-| [`docs/skills-catalog.md`](docs/skills-catalog.md) | Human-readable skill index. |
-| [`docs/source-list.md`](docs/source-list.md) | Source and attribution index. |
-| [`manifests/skills-catalog.json`](manifests/skills-catalog.json) | Machine-readable catalog. |
-| [`manifests/publication-inventory.json`](manifests/publication-inventory.json) | Deterministic publication inventory. |
-| [`scripts/maintain-attribution.mjs`](scripts/maintain-attribution.mjs) | Read-only validation by default, with explicit artifact generation. |
+- Publication uses three inputs: `skills/*/SKILL.md` for skill metadata and content, `skill-categories.json` for category assignments, and `catalog-overrides.json` for reviewed summary and trigger corrections.
+- Generated documentation and manifests are deterministic views.
+- Author, adapter, source, and license metadata remain separate.
 
 ## License
 
-The MIT license covers repository packaging, generated documentation, curation, and adaptation work. Individual skills retain their supplied licenses, notices, and terms.
+Review each skill's dependencies, permissions, and license before use. The MIT license covers repository packaging, generated documentation, curation, and adaptation work; individual skills retain their supplied licenses, notices, and terms.

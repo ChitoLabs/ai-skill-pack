@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "override_version": "2026-08-30",
+  "overrides": {
+    "a11y": {
+      "summary": "Apply WCAG 2.2 and WAI-ARIA 1.2 accessibility practices to web interfaces.",
+      "evidence": "Frontmatter identifies web accessibility guidance based on WCAG 2.2 and WAI-ARIA 1.2."
+    },
+    "adapt": {
+      "summary": "Adapt interfaces across mobile, tablet, desktop, touch, and safe-area layouts.",
+      "evidence": "Frontmatter lists responsive adaptation targets across device sizes, touch, and safe areas."
+    },
+    "baoyu-infographic": {
+      "summary": "Generate structured prompts for raster infographics.",
+      "triggers": [
+        "baoyu-infographic",
+        "infographic",
+        "visual summary",
+        "信息图",
+        "可视化"
+      ],
+      "evidence": "Frontmatter lists five aliases before the summary sentence."
+    },
+    "bash-linux": {
+      "summary": "Operate Bash and Linux terminals for shell commands, scripts, and system tasks.",
+      "evidence": "Frontmatter identifies Bash and Linux terminal capability."
+    },
+    "brainstorming": {
+      "summary": "Clarify ideas and compare design alternatives before implementation.",
+      "evidence": "Frontmatter aliases describe idea exploration and design comparison."
+    },
+    "business-analyst": {
+      "summary": "Conduct product discovery and analyze business requirements.",
+      "evidence": "Frontmatter identifies product discovery and requirements analysis capability."
+    },
+    "bun-development": {
+      "summary": "Develop JavaScript and TypeScript applications with the Bun runtime.",
+      "evidence": "Frontmatter describes Bun development and contains a noisy inline source link."
+    },
+    "business-intelligence": {
+      "summary": "Design business intelligence dashboards, visualizations, reports, and executive insights.",
+      "evidence": "Frontmatter lists dashboard design, data visualization, reporting automation, and executive insight capabilities."
+    },
+    "data-pipelines": {
+      "summary": "Build data pipelines, ETL or ELT workflows, and transformation layers.",
+      "evidence": "Frontmatter states these capabilities using activation prose."
+    },
+    "conducting-user-interviews": {
+      "summary": "Conduct effective customer and user interviews.",
+      "evidence": "Frontmatter identifies support for running better customer and user interviews."
+    },
+    "docx": {
+      "summary": "Create, read, edit, and transform Word documents.",
+      "evidence": "Frontmatter lists Word document operations using activation prose."
+    },
+    "fabric-lakehouse": {
+      "summary": "Explain Microsoft Fabric Lakehouse features for software and AI systems.",
+      "evidence": "Frontmatter describes Fabric Lakehouse context using activation prose."
+    },
+    "expo-cicd-workflows": {
+      "summary": "Write EAS workflow YAML for Expo continuous integration and delivery.",
+      "evidence": "Frontmatter identifies understanding and writing EAS workflow YAML for Expo projects."
+    },
+    "handoff": {
+      "summary": "Write a redacted continuation document for another agent or session.",
+      "triggers": [
+        "handoff",
+        "resume later",
+        "transfer context"
+      ],
+      "evidence": "Frontmatter lists three aliases before the summary sentence."
+    },
+    "i-have-adhd": {
+      "summary": "Shape replies for ADHD readers with action-first structure.",
+      "triggers": [
+        "i-have-adhd",
+        "adhd mode",
+        "ADHD-friendly output"
+      ],
+      "evidence": "Frontmatter lists three aliases before the summary sentence."
+    },
+    "interface-design": {
+      "summary": "Design dashboards, admin panels, apps, tools, and interactive products.",
+      "evidence": "Frontmatter lists interface design capabilities using wrapper prose."
+    },
+    "paddleocr-text-recognition": {
+      "summary": "Extract text from images, scans, screenshots, and scanned PDFs.",
+      "evidence": "Frontmatter lists supported OCR inputs using activation prose."
+    },
+    "pdf": {
+      "summary": "Create, read, edit, convert, and inspect PDF files.",
+      "evidence": "Frontmatter delegates PDF operations using activation prose; the skill body documents these operations."
+    },
+    "postgresql-table-design": {
+      "summary": "Design and review PostgreSQL schemas and tables.",
+      "evidence": "Frontmatter states PostgreSQL schema design and review using activation prose."
+    },
+    "python-executor": {
+      "summary": "Execute Python code in a safe sandboxed environment.",
+      "evidence": "Frontmatter describes sandboxed Python execution and contains a noisy inline source link."
+    },
+    "research": {
+      "summary": "Investigate questions and save cited findings as Markdown.",
+      "triggers": [
+        "research",
+        "primary-source investigation",
+        "docs lookup"
+      ],
+      "evidence": "Frontmatter lists three aliases before the summary sentence."
+    },
+    "react-native-best-practices": {
+      "summary": "Optimize React Native performance across rendering, startup, bundles, memory, and animations.",
+      "evidence": "Frontmatter lists React Native performance work across FPS, TTI, bundle size, memory leaks, re-renders, and animations."
+    },
+    "requesting-code-review": {
+      "summary": "Request code review without replacing managed approval or delivery decisions.",
+      "evidence": "Frontmatter defines delegated behavior inside managed review and receipt workflows."
+    },
+    "social-media-generator": {
+      "summary": "Create social media content for Twitter, Instagram, LinkedIn, and Facebook.",
+      "evidence": "Frontmatter lists supported social platforms using activation prose."
+    },
+    "senior-architect": {
+      "summary": "Design and review software architecture with modern engineering practices.",
+      "evidence": "Frontmatter identifies a senior software architecture toolkit and modern practices."
+    },
+    "senior-fullstack": {
+      "summary": "Build and review full-stack systems with modern engineering practices.",
+      "evidence": "Frontmatter identifies a senior full-stack toolkit and modern practices."
+    },
+    "subagent-driven-development": {
+      "summary": "Implement delegated tasks through repository-local subagent workflows.",
+      "evidence": "Frontmatter defines repository-local delegated implementation activation."
+    },
+    "systematic-debugging": {
+      "summary": "Debug reproducible defects with root-cause evidence and one hypothesis at a time.",
+      "evidence": "Frontmatter lists debugging triggers and the required evidence-driven method."
+    },
+    "teach": {
+      "summary": "Build stateful lessons, references, and learning records in a project.",
+      "triggers": [
+        "teach",
+        "learn a concept",
+        "learning workspace"
+      ],
+      "evidence": "Frontmatter lists three aliases before the summary sentence."
+    },
+    "telegram-bot-builder": {
+      "summary": "Build practical Telegram bots for automation, support, and integrations.",
+      "evidence": "Frontmatter is truncated after 'from'; the body documents practical Telegram bot construction."
+    },
+    "telegram-mini-app": {
+      "summary": "Build Telegram Mini Apps as complete web applications within Telegram.",
+      "evidence": "Frontmatter identifies Telegram Mini App construction but ends with the truncated clause 'that run'."
+    },
+    "verification-before-completion": {
+      "summary": "Supply completion evidence without replacing the managed verification or delivery decision.",
+      "evidence": "Frontmatter defines evidence supply boundaries inside active managed workflows."
+    },
+    "zendesk": {
+      "summary": "Integrate Zendesk services into support and automation workflows.",
+      "evidence": "Frontmatter identifies Zendesk integration capability."
+    }
+  }
+}

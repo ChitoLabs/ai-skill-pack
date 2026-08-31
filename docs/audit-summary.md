@@ -3,18 +3,12 @@
 ## Result
 
 - Published entry points: 492
+- Taxonomy assignments: 492
+- Taxonomy categories: 15
 - Entry points with valid source URLs: 482
-- Entry points without a supplied source URL: 10
-- Entry points with an author value: 492
 - Entries with `author: unknown`: 10
-- Publication source of truth: `skills/*/SKILL.md`
-
-## Attribution Boundary
-
-The audit preserves `metadata.author` exactly as supplied. It does not infer authorship from skills.sh publishers, distributors, curators, adapters, GitHub repository owners, or URLs. `metadata.adapter` is represented separately. Missing source URLs remain explicitly unsupplied rather than being invented.
-
-Unknown authors: `bun`, `rails-background-jobs`, `rails-bug-triage`, `rails-code-review`, `rails-migration-safety`, `rails-security-review`, `rails-stack-conventions`, `rails-tdd-slices`, `rspec-best-practices`, `rspec-service-testing`.
+- Publication inputs: `skills/*/SKILL.md` metadata and content, `skill-categories.json` categories, and `catalog-overrides.json` reviewed summary and trigger corrections
 
 ## Validation
 
-Run `node scripts/maintain-attribution.mjs` for a read-only consistency check. Use `--generate` only to rebuild derived publication artifacts from the current skill entry points.
+Run `node scripts/maintain-attribution.mjs` for a deterministic, read-only consistency and freshness check. URL syntax is validated offline; network reachability is not checked. Use `--generate` only to rebuild root publication artifacts, never skill content.
