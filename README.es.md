@@ -18,10 +18,10 @@ Ruta compartida recomendada cuando sea compatible: `~/.agents/skills/`
 | [Claude Code](https://code.claude.com/docs/en/skills) | `~/.claude/skills/` | Sin descubrimiento automático documentado |
 | [Pi](https://pi.dev/docs/latest/skills#locations) | `~/.pi/agent/skills/` | Sí |
 | [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `~/.gemini/antigravity-cli/skills/` | Sin compatibilidad global documentada |
-| Codex CLI | No se indica aquí | Sí |
-| Gemini CLI | No se indica aquí | Sí |
+| [Codex CLI](https://developers.openai.com/codex/build-skills/) | `~/.agents/skills/` | Sí |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/cli/skills.md) | `~/.gemini/skills/` | Sí |
 
-Usa el directorio nativo de cada runtime si deseas una instalación aislada. OpenCode y Pi también descubren automáticamente la ruta compartida recomendada. Actualmente, Claude Code solo documenta su directorio personal nativo para skills globales.
+Usa el directorio nativo de cada runtime si deseas una instalación aislada. OpenCode, Pi, Codex CLI y Gemini CLI descubren automáticamente la ruta compartida recomendada. Actualmente, Claude Code solo documenta su directorio personal nativo para skills globales.
 
 AGY CLI documenta los skills globales como archivos de comandos en Markdown. Por lo tanto, su directorio nativo no es un destino con compatibilidad inmediata garantizada para todos los paquetes `SKILL.md` de este repositorio. Esta ruta corresponde únicamente a Antigravity CLI (`agy`), no a las ubicaciones distintas de la aplicación o del IDE Antigravity.
 
