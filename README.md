@@ -18,14 +18,9 @@ Recommended shared path, when supported: `~/.agents/skills/`
 | [Claude Code](https://code.claude.com/docs/en/skills) | `~/.claude/skills/` | No documented automatic discovery |
 | [Pi](https://pi.dev/docs/latest/skills#locations) | `~/.pi/agent/skills/` | Yes |
 | [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `~/.gemini/antigravity-cli/skills/` | No documented global support |
-| [Codex CLI](https://developers.openai.com/codex/build-skills/) | Personal: `~/.agents/skills/`<br>Installer and compatibility: `~/.codex/skills/` | Yes |
+| [Codex CLI](https://developers.openai.com/codex/build-skills/) | `~/.codex/skills/` | No |
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/cli/skills.md) | `~/.gemini/skills/` | Yes |
 
-Use each runtime's native directory when you want an isolated installation. OpenCode, Pi, Codex CLI, and Gemini CLI discover the recommended shared path automatically. Claude Code currently documents only its native personal directory for global skills.
-
-For Codex CLI 0.95.0+, `~/.agents/skills/` is the current documented personal path. The official `$skill-installer` currently installs to `$CODEX_HOME/skills/`, which defaults to `~/.codex/skills/`; Codex retains that path for backward compatibility.
-
-AGY CLI documents global skills as Markdown command files. Its native directory is therefore not a guaranteed drop-in destination for every `SKILL.md` package in this repository. This path applies only to Antigravity CLI (`agy`), not to the distinct Antigravity app or IDE locations.
 
 > **Pi users: avoid installing all 492 skills globally.** Pi automatically discovers `~/.agents/skills/` and always adds each visible skill's name, description, and `SKILL.md` location to the system prompt. Full instructions still load only on demand, but the metadata catalog creates substantial recurring context overhead. Use `pi --no-skills`, optionally with `--skill <path>` for selected skills. Alternatively, set `disable-model-invocation: true` in selected `SKILL.md` frontmatter to omit them from the model-advertised catalog while keeping them manually callable through `/skill:name` when skill commands are enabled. The value must be the YAML boolean `true`, not the quoted text `"true"`. See Pi's official [skill locations](https://pi.dev/docs/latest/skills#locations) and [frontmatter reference](https://pi.dev/docs/latest/skills#frontmatter).
 
@@ -33,16 +28,14 @@ AGY CLI documents global skills as Markdown command files. Its native directory 
 
 Recommended shared path: `.agents/skills/`
 
-| Runtime | Shared path support | Runtime-specific path |
-| --- | :---: | --- |
-| OpenCode | Yes | Not needed |
-| Pi | Yes | Not needed |
-| Codex CLI | Yes | Not needed |
-| Gemini CLI | Yes | Not needed |
-| AGY CLI | Yes | Not needed |
-| Claude Code | No | `.claude/skills/` |
-
-AGY uses a runtime-specific global path, while project-local `.agents/skills/` is supported.
+| Runtime | Project skill directory | Shared `.agents/skills/` support |
+| --- | --- | :---: |
+| [OpenCode](https://opencode.ai/docs/skills/) | `.opencode/skills/` | Yes |
+| [Claude Code](https://code.claude.com/docs/en/skills) | `.claude/skills/` | No |
+| [Pi](https://pi.dev/docs/latest/skills#locations) | `.pi/skills/` | Yes |
+| [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `.agents/skills/` | Yes |
+| [Codex CLI](https://developers.openai.com/codex/build-skills/) | `.codex/skills/` | Yes |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/cli/skills.md) | `.gemini/skills/` | Yes |
 
 ## Browse
 
