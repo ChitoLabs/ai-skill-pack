@@ -10,16 +10,22 @@ Gentle AI and repo-harness can orchestrate these skills as workflow layers, but 
 
 ## Global Installation
 
-Recommended shared path: `~/.agents/skills/`
+Recommended shared path, when supported: `~/.agents/skills/`
 
-| Runtime | Shared path support | Runtime-specific path |
-| --- | :---: | --- |
-| OpenCode | Yes | Not needed |
-| Pi | Yes | Not needed |
-| Codex CLI | Yes | Not needed |
-| Gemini CLI | Yes | Not needed |
-| Claude Code | No | `~/.claude/skills/` |
-| AGY CLI | No | `~/.gemini/antigravity-cli/skills/` |
+| Runtime | Native global directory | Shared `~/.agents/skills/` support |
+| --- | --- | :---: |
+| [OpenCode](https://opencode.ai/docs/skills/) | `~/.config/opencode/skills/` | Yes |
+| [Claude Code](https://code.claude.com/docs/en/skills) | `~/.claude/skills/` | No documented automatic discovery |
+| [Pi](https://pi.dev/docs/latest/skills#locations) | `~/.pi/agent/skills/` | Yes |
+| [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `~/.gemini/antigravity-cli/skills/` | No documented global support |
+| Codex CLI | Not listed here | Yes |
+| Gemini CLI | Not listed here | Yes |
+
+Use each runtime's native directory when you want an isolated installation. OpenCode and Pi also discover the recommended shared path automatically. Claude Code currently documents only its native personal directory for global skills.
+
+AGY CLI documents global skills as Markdown command files. Its native directory is therefore not a guaranteed drop-in destination for every `SKILL.md` package in this repository. This path applies only to Antigravity CLI (`agy`), not to the distinct Antigravity app or IDE locations.
+
+> **Pi users: avoid installing all 492 skills globally.** Pi automatically discovers `~/.agents/skills/` and always adds each visible skill's name, description, and `SKILL.md` location to the system prompt. Full instructions still load only on demand, but the metadata catalog creates substantial recurring context overhead. Use `pi --no-skills`, optionally with `--skill <path>` for selected skills. Alternatively, set `disable-model-invocation: true` in selected `SKILL.md` frontmatter to omit them from the model-advertised catalog while keeping them manually callable through `/skill:name` when skill commands are enabled. The value must be the YAML boolean `true`, not the quoted text `"true"`. See Pi's official [skill locations](https://pi.dev/docs/latest/skills#locations) and [frontmatter reference](https://pi.dev/docs/latest/skills#frontmatter).
 
 ## Project Installation
 
