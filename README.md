@@ -12,16 +12,18 @@ Gentle AI and repo-harness can orchestrate these skills as workflow layers, but 
 
 Recommended shared path, when supported: `~/.agents/skills/`
 
-| Runtime | Native global directory | Shared `~/.agents/skills/` support |
+| Runtime | Global skill directories | Shared `~/.agents/skills/` support |
 | --- | --- | :---: |
 | [OpenCode](https://opencode.ai/docs/skills/) | `~/.config/opencode/skills/` | Yes |
 | [Claude Code](https://code.claude.com/docs/en/skills) | `~/.claude/skills/` | No documented automatic discovery |
 | [Pi](https://pi.dev/docs/latest/skills#locations) | `~/.pi/agent/skills/` | Yes |
 | [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `~/.gemini/antigravity-cli/skills/` | No documented global support |
-| [Codex CLI](https://developers.openai.com/codex/build-skills/) | `~/.agents/skills/` | Yes |
+| [Codex CLI](https://developers.openai.com/codex/build-skills/) | Personal: `~/.agents/skills/`<br>Installer and compatibility: `~/.codex/skills/` | Yes |
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/cli/skills.md) | `~/.gemini/skills/` | Yes |
 
 Use each runtime's native directory when you want an isolated installation. OpenCode, Pi, Codex CLI, and Gemini CLI discover the recommended shared path automatically. Claude Code currently documents only its native personal directory for global skills.
+
+For Codex CLI 0.95.0+, `~/.agents/skills/` is the current documented personal path. The official `$skill-installer` currently installs to `$CODEX_HOME/skills/`, which defaults to `~/.codex/skills/`; Codex retains that path for backward compatibility.
 
 AGY CLI documents global skills as Markdown command files. Its native directory is therefore not a guaranteed drop-in destination for every `SKILL.md` package in this repository. This path applies only to Antigravity CLI (`agy`), not to the distinct Antigravity app or IDE locations.
 

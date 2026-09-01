@@ -12,16 +12,18 @@ Gentle AI y repo-harness pueden orquestar estos skills como capas de flujo de tr
 
 Ruta compartida recomendada cuando sea compatible: `~/.agents/skills/`
 
-| Runtime | Directorio global nativo | Compatibilidad con `~/.agents/skills/` compartido |
+| Runtime | Directorios globales de skills | Compatibilidad con `~/.agents/skills/` compartido |
 | --- | --- | :---: |
 | [OpenCode](https://opencode.ai/docs/skills/) | `~/.config/opencode/skills/` | Sí |
 | [Claude Code](https://code.claude.com/docs/en/skills) | `~/.claude/skills/` | Sin descubrimiento automático documentado |
 | [Pi](https://pi.dev/docs/latest/skills#locations) | `~/.pi/agent/skills/` | Sí |
 | [Antigravity CLI (`agy`)](https://antigravity.google/docs/cli/plugins/) | `~/.gemini/antigravity-cli/skills/` | Sin compatibilidad global documentada |
-| [Codex CLI](https://developers.openai.com/codex/build-skills/) | `~/.agents/skills/` | Sí |
+| [Codex CLI](https://developers.openai.com/codex/build-skills/) | Personal: `~/.agents/skills/`<br>Instalador y compatibilidad: `~/.codex/skills/` | Sí |
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/cli/skills.md) | `~/.gemini/skills/` | Sí |
 
 Usa el directorio nativo de cada runtime si deseas una instalación aislada. OpenCode, Pi, Codex CLI y Gemini CLI descubren automáticamente la ruta compartida recomendada. Actualmente, Claude Code solo documenta su directorio personal nativo para skills globales.
+
+En Codex CLI 0.95.0 o posterior, `~/.agents/skills/` es la ruta personal documentada actualmente. El `$skill-installer` oficial instala actualmente en `$CODEX_HOME/skills/`, cuya ruta predeterminada es `~/.codex/skills/`; Codex conserva esa ruta por compatibilidad con versiones anteriores.
 
 AGY CLI documenta los skills globales como archivos de comandos en Markdown. Por lo tanto, su directorio nativo no es un destino con compatibilidad inmediata garantizada para todos los paquetes `SKILL.md` de este repositorio. Esta ruta corresponde únicamente a Antigravity CLI (`agy`), no a las ubicaciones distintas de la aplicación o del IDE Antigravity.
 
